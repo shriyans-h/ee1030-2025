@@ -18,6 +18,7 @@
 \usepackage{comment}
 \usepackage{tkz-euclide} 
 \usepackage{longtable,multirow,array,hhline}
+\renewcommand{\vec}[1]{\mathbf{#1}}
 
 \definecolor{codeblue}{rgb}{0,0,1}
 
@@ -52,22 +53,20 @@
 
 \begin{frame}{Question}
 The position vector of the point which divides the join of points 
-\[
-2\mathbf{a} - 3\mathbf{b} \text{ and } \mathbf{a} + \mathbf{b}
-\]
-in the ratio \( 3:1 \) is \underline{\hspace{2cm}}.
+$2\vec{a} - 3\vec{b}$  and  $\vec{a} + \vec{b}$
+in the ratio $3:1$ is \underline{\hspace{2cm}}.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
 \[
-P = 2\mathbf a - 3\mathbf b = \brak{2\\-3}, \quad 
-Q = \mathbf a + \mathbf b = \brak{1\\1}.
+P = 2\vec a - 3\vec b = \brak{2\\-3}, \quad 
+Q = \vec a + \vec b = \brak{1\\1}.
 \]
 \end{frame}
 
 \begin{frame}{Equation}
 Using section formula,
-the point \(R\) dividing \(PQ\) in ratio \(3:1\) is:
+the point $R$ dividing $PQ$ in ratio $3:1$ is:
 \[
 R=\frac{3Q+1P}{3+1}.
 \]
