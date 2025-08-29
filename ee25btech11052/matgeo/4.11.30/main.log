@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.31)  29 AUG 2025 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.31)  30 AUG 2025 01:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1905,24 +1905,22 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 60--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--65
+Underfull \hbox (badness 10000) in paragraph at lines 60--64
 
  []
 
 <figs/equations_solution.png, id=31, 408.3255pt x 326.9013pt>
 File: figs/equations_solution.png Graphic file (type png)
 <use figs/equations_solution.png>
-Package pdftex.def Info: figs/equations_solution.png  used on input line 69.
+Package pdftex.def Info: figs/equations_solution.png  used on input line 124.
 (pdftex.def)             Requested size: 364.1953pt x 291.57472pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}
 
- <./figs/equations_solution.png>] (./main.aux)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}
+
+] [2 <./figs/equations_solution.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1931,22 +1929,24 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52945 strings out of 474222
- 1254635 string characters out of 5748733
- 1928975 words of memory out of 5000000
- 74390 multiletter control sequences out of 15000+600000
- 621907 words of font info for 167 fonts, out of 8000000 for 9000
+ 52962 strings out of 474222
+ 1254962 string characters out of 5748733
+ 1943975 words of memory out of 5000000
+ 74400 multiletter control sequences out of 15000+600000
+ 625949 words of font info for 173 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,6n,109p,1194b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on main.pdf (1 page, 124265 bytes).
+ 109i,19n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/txfonts/txexa.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 136034 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

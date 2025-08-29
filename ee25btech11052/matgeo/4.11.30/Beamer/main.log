@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.31)  29 AUG 2025 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.31)  30 AUG 2025 01:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -981,16 +981,27 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
  [2
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<figs/equations_solution.png, id=82, 408.3255pt x 326.9013pt>
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 123.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 123.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 123.
+
+ [3
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-mathit.enc}] [4
+
+]
+<figs/equations_solution.png, id=139, 408.3255pt x 326.9013pt>
 File: figs/equations_solution.png Graphic file (type png)
 <use figs/equations_solution.png>
-Package pdftex.def Info: figs/equations_solution.png  used on input line 114.
+Package pdftex.def Info: figs/equations_solution.png  used on input line 169.
 (pdftex.def)             Requested size: 245.83282pt x 196.81567pt.
-
-Overfull \vbox (37.43843pt too high) detected at line 114
- []
-
-[3
+ [5
 
  <./figs/equations_solution.png>]
 \tf@nav=\write6
@@ -1011,20 +1022,24 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22877 strings out of 474222
- 433216 string characters out of 5748733
- 1931975 words of memory out of 5000000
- 44658 multiletter control sequences out of 15000+600000
- 586709 words of font info for 60 fonts, out of 8000000 for 9000
+ 22889 strings out of 474222
+ 433479 string characters out of 5748733
+ 1935975 words of memory out of 5000000
+ 44663 multiletter control sequences out of 15000+600000
+ 592134 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,14n,123p,380b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (3 pages, 153447 bytes).
+ 128i,21n,123p,380b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (5 pages, 218262 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 8 named destinations out of 1000 (max. 500000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 12 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
