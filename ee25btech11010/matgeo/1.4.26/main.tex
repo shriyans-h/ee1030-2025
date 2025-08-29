@@ -1,0 +1,80 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{longtable,multirow,array,hhline}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\solution}{\textbf{Solution: }}
+
+% Define brak for matrices
+\newcommand{\brak}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{1.4.26}
+\author{EE25BTECH11010 - Arsh Dhoke}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+
+\parindent 0px
+\textbf{Question:} \\
+The position vector of the point which divides the join of points $2\vec{a} - 3\vec{b}$ and $\vec{a} + \vec{b}$ in the ratio $3:1$ is \underline{\hspace{2cm}}.
+
+\solution \\
+
+\begin{align}
+P &= 2\vec{a} - 3\vec{b}
+   = \brak{2\\-3}, \\
+Q &= \vec{a} + \vec{b}
+   = \brak{1\\1}.
+\end{align}
+
+Using section formula, the point $R$ dividing $PQ$ in ratio $3:1$ is
+\begin{align}
+R &= \frac{3Q + 1P}{3+1}. \\
+R
+&= \frac{1}{4}\Big(3\brak{1\\1}+\brak{2\\-3}\Big) \\[6pt]
+&= \frac{1}{4}\brak{3+2\\3-3} \\[6pt]
+&= \frac{1}{4}\brak{5\\0} \\[6pt]
+&= \brak{\dfrac{5}{4}\\0}.
+\end{align}
+
+\begin{align}
+\boxed{\,R = \brak{\dfrac{5}{4}\\0}\,}
+\end{align}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[height=0.5\textheight, keepaspectratio]{figs/q1.png}
+\caption{Graph for question 1}
+\end{figure}
+
+\end{document}

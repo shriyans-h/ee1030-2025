@@ -1,0 +1,276 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{tfrupee}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{tkz-euclide} 
+\usepackage{longtable,multirow,array,hhline}
+
+\definecolor{codeblue}{rgb}{0,0,1}
+
+\lstdefinestyle{CStyle}{
+  language=C,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color{orange},
+  commentstyle=\color{green!50!black},
+  numbers=none,
+  breaklines=true,
+  frame=single, % THIS adds the box
+  showstringspaces=false,
+  tabsize=2
+}
+
+\lstset{style=CStyle}
+
+
+\newcommand{\brak}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\title{1.4.26}
+\subtitle{Vector Section Formula}
+\author{EE25BTECH11010 - Arsh Dhoke}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Question}
+The position vector of the point which divides the join of points 
+\[
+2\mathbf{a} - 3\mathbf{b} \text{ and } \mathbf{a} + \mathbf{b}
+\]
+in the ratio \( 3:1 \) is \underline{\hspace{2cm}}.
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+\[
+P = 2\mathbf a - 3\mathbf b = \brak{2\\-3}, \quad 
+Q = \mathbf a + \mathbf b = \brak{1\\1}.
+\]
+\end{frame}
+
+\begin{frame}{Equation}
+Using section formula,
+the point \(R\) dividing \(PQ\) in ratio \(3:1\) is:
+\[
+R=\frac{3Q+1P}{3+1}.
+\]
+\begin{align*}
+R &= \frac{1}{4}\Big(3\brak{1\\1}+\brak{2\\-3}\Big) \\
+  &= \frac{1}{4}\brak{3+2\\3-3} \\
+  &= \frac{1}{4}\brak{5\\0} \\
+  &= \brak{\dfrac{5}{4}\\0}.
+\end{align*}
+\[
+\boxed{R=\brak{\dfrac{5}{4}\\0}}
+\]
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code - Section formula}
+
+    \begin{lstlisting}
+#include <stdio.h>
+
+void sectionFormula(int m, int n, float a, float b, float *x) {
+    *x = (m * b + n * a) / (float)(m + n);
+}
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+
+    \begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define values for a and b
+a = 2  # Example value
+b = 3  # Example value
+
+# Define points as NumPy arrays
+P = np.array([2*a, -3*b])  # Point P
+Q = np.array([a, b])       # Point Q
+
+# Ratio m:n
+m = 3
+n = 1
+
+# Section formula for internal division
+R = (m * Q + n * P) / (m + n)
+
+# Print the result
+print("Position vector of the point R:", R)
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+
+    \begin{lstlisting}
+
+# Plotting
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='black', linewidth=0.8)
+plt.axvline(0, color='black', linewidth=0.8)
+
+# Plot P, Q, and R
+plt.scatter(*P, color='blue', label='P (2a, -3b)')
+plt.scatter(*Q, color='green', label='Q (a, b)')
+plt.scatter(*R, color='red', label=f'R (ratio {m}:{n})')
+
+# Draw line between P and Q
+plt.plot([P[0], Q[0]], [P[1], Q[1]], color='gray', linestyle='--')
+
+# Annotate points
+plt.text(P[0]+0.2, P[1]+0.2, 'P')
+plt.text(Q[0]+0.2, Q[1]+0.2, 'Q')
+plt.text(R[0]+0.2, R[1]+0.2, 'R')
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+
+    \begin{lstlisting}
+
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Section Formula Visualization')
+plt.legend()
+plt.grid(True)
+plt.savefig("/home/arsh-dhoke/ee1030-2025/ee25btech11010/matgeo/1.4.26/figs/q1.png")
+plt.show()
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python+ C Code}
+
+    \begin{lstlisting}
+
+import ctypes
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the shared library
+lib = ctypes.CDLL("./libsection_int.so")
+
+# Define argument and return types
+lib.sectionFormula.argtypes = [
+    ctypes.c_int, ctypes.c_int,
+    ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double),
+    ctypes.POINTER(ctypes.c_double)
+]
+lib.sectionFormula.restype = None
+
+# Values for a and b
+a = 2
+b = 3
+
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python+ C Code}
+
+    \begin{lstlisting}
+    
+# Points P and Q
+P = (ctypes.c_double * 2)(2 * a, -3 * b)
+Q = (ctypes.c_double * 2)(a, b)
+R = (ctypes.c_double * 2)(0.0, 0.0)
+
+# Ratio m:n
+m, n = 3, 1
+
+# Call the C function
+lib.sectionFormula(m, n, P, Q, R)
+
+# Convert to NumPy arrays for plotting
+P_np = np.array([P[0], P[1]])
+Q_np = np.array([Q[0], Q[1]])
+R_np = np.array([R[0], R[1]])
+
+print("Position vector of the point R (from C):", R_np)
+
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python+ C Code}
+
+    \begin{lstlisting}
+
+# Plotting
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='black', linewidth=0.8)
+plt.axvline(0, color='black', linewidth=0.8)
+
+# Plot P, Q, and R
+plt.scatter(*P_np, color='blue', label='P (2a, -3b)')
+plt.scatter(*Q_np, color='green', label='Q (a, b)')
+plt.scatter(*R_np, color='red', label=f'R (ratio {m}:{n})')
+
+# Draw line between P and Q
+plt.plot([P_np[0], Q_np[0]], [P_np[1], Q_np[1]], color='gray', linestyle='--')
+
+# Annotate points
+plt.text(P_np[0]+0.2, P_np[1]+0.2, 'P')
+plt.text(Q_np[0]+0.2, Q_np[1]+0.2, 'Q')
+plt.text(R_np[0]+0.2, R_np[1]+0.2, 'R')
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python+ C Code}
+
+    \begin{lstlisting}
+
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Section Formula Visualization (Using C & Python)')
+plt.legend()
+plt.grid(True)
+plt.axis('equal')
+
+# Save the plot
+plt.savefig("/home/arsh-dhoke/ee1030-2025/ee25btech11010/matgeo/1.4.26/figs/q1.png")
+
+# Show plot
+plt.show()
+
+
+      \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Plot}
+\centering
+\includegraphics[height=0.7\textheight, keepaspectratio]{figs/q1.png}
+\end{frame}
+
+\end{document}
