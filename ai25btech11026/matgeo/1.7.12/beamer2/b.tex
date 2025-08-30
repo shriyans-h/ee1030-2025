@@ -98,23 +98,44 @@
 \begin{frame}{Theoretical Solution}
 \textbf{Solution:} \\
 \begin{align}
-\vec{A} &= \myvec{-3\\-14}, \quad
-\vec{B} = \myvec{a\\-5}
+\vec P=\myvec{5\\4},\qquad
+\vec Q=\myvec{7\\k},\qquad
+\vec R=\myvec{9\\-2}
 \end{align}
 
+ \textbf{Collinearity via rank}
+Three points \(P,Q,R\) are collinear iff
 \begin{align}
-\|\vec{A}-\vec{B}\| &= 9 \\[2mm]
-\implies \left\|\myvec{-3\\-14} - \myvec{a\\-5}\right\| &= 9 \\[1mm]
-\implies \left\|\myvec{-3-a\\-9}\right\| &= 9 \\[1mm]
-\implies (-3-a)^2 + (-9)^2 &= 9^2 \\[1mm]
-(a+3)^2 + 81 &= 81 \\[1mm]
-(a+3)^2 &= 0 \\[1mm]
-a &= -3
+\operatorname{rank}\!\myvec{\; \vec Q-\vec P \;\; \vec R-\vec P \;}=1.
+\end{align}
+Compute the direction columns:
+\begin{align}
+\vec Q-\vec P=\myvec{7-5\\k-4}=\myvec{2\\k-4},\qquad
+\vec R-\vec P=\myvec{9-5\\-2-4}=\myvec{4\\-6}.
+\end{align}
+Hence the collinearity matrix is
+\begin{align}
+M=\myvec{\,2 & 4\\begin{align}2pt] k-4 & -6\,}.
 \end{align}
 
+\textbf{Row reduction (rank\,=\,1)}
+\end{frame}
+\begin{frame}{Theoretical Solution}
 \begin{align}
-\boxed{\,a = -3\,}
+\myvec{\,2 & 4\\ k-4 & -6\,}
+\;\xrightarrow{\,R_1\leftarrow \tfrac12 R_1\,}\;
+\myvec{\,1 & 2\\k-4 & -6\,}
+\;\xrightarrow{\,R_2\leftarrow R_2-(k-4)R_1\,}\;
+\myvec{\,1 & 2\\0 & 2(1-k)\,}.
 \end{align}
+For rank\((M)=1\), the second row must be the zero row:
+\begin{align}
+2(1-k)=0 \;\;\Rightarrow\;\; k=1.
+\end{align}
+
+\textbf{Conclusion}
+For \(k=\boxed{1}\), the three points \(P(5,4),\,Q(7,k),\,R(9,-2)\) are collinear.
+
 
 \end{frame}
 
@@ -216,7 +237,7 @@ print("Graph saved as collinear_points.png")
 
 \begin{frame}{Plot}
     \centering
-    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{beamer2/figs/assignment2.jpeg}     
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{beamer2/figs/WhatsApp Image 2025-08-30 at 10.07.08.jpeg}     
 \end{frame}
 
 
