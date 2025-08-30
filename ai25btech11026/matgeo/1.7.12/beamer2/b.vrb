@@ -1,0 +1,11 @@
+\frametitle{Python Code }
+    \begin{lstlisting}
+# Save plot as picture
+plt.savefig("collinear_points.png", dpi=300)
+
+# Show the plot
+plt.show()
+
+print("Graph saved as collinear_points.png")
+     \end{lstlisting}
+
