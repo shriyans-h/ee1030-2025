@@ -90,34 +90,33 @@
  by X axis.
 \end{frame}
 
-\begin{frame}{Condition}
-\begin{align*}
-Let \; \vec{A} = \myvec{1\\-3}, \vec{B} = \myvec{$x$\\0} \; and \; \vec{C} = \myvec{4\\5}
-\end{align*}
+\begin{frame}{Equation}
+Let $\vec{A}$ = \myvec{1\\-3}, $\vec{B}$ = \myvec{$x$\\0} and $\vec{C}$ = \myvec{4\\5}\\
 
 As the points $\vec{A,B,C}$ are collinear
 The matrix 
 \begin{align*}
 \myvec{ \vec{B}-\vec{A} & \vec{C}-\vec{A} }^\top
+\textt{has \, rank \, 1.}
 \end{align*}
-has rank 1.
+
+\textbf{Equation Used:}
+\begin{align*}
+    \Vec{B}=\frac{\Vec{A}+k\Vec{C}}{1+k}
+\end{align*}
+
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
 \begin{align}
 \myvec{ \vec{B}-\vec{A} & \vec{C}-\vec{A} }^\top = \myvec{3&x-1\\8&3}^\top
 \end{align}
-
 \begin{align}
 \myvec{ \vec{B}-\vec{A} & \vec{C}-\vec{A} }^\top = \myvec{3&8\\x-1&3}
 \end{align}
-
 \begin{align}
 \myvec{3&8\\x-1&3}\xleftrightarrow{R_{2}\rightarrow8R_{2}-3R_{1}} \myvec{3&8\\8(x-1)-9&0}
 \end{align}
-\end{frame}
-
-\begin{frame}{Finding $x$}
 Since the rank of the above matrix is 1,
 \begin{align}
     8(x-1)-9 = 0
@@ -129,27 +128,21 @@ Since the rank of the above matrix is 1,
 
 \begin{frame}{Ratio}
 Assume the ratio $\vec{B}$ divides $\vec{A}$  and $\vec{C}$ be k:1
-
 \begin{align}
     k = \frac{\myvec{\vec{A} - \vec{B}}^\top \myvec{\vec{B} - \vec{C}}}{\norm{\myvec{\vec{B} - \vec{C}}}^2}
 \end{align}
-
 \begin{align}
     k = \frac{1095}{1825}
 \end{align}
-
 \begin{align}
     k = \frac{3}{5}
 \end{align}
-
 \centering
 \begin{large}Hence the ratio is 3:5.\end{large}
-
 \end{frame}
 
 \begin{frame}[fragile]{C code}
 \begin{lstlisting}
-
 #include <stdio.h>
 // Structure for a 2D point/vector
 
@@ -171,8 +164,6 @@ Point sectionFormula(Point A, Point B, double m, double n) {
 
 \begin{frame}[fragile]{Call C.py}
 \begin{lstlisting}
-    
-
 import ctypes
 
 # Load the shared library
@@ -241,9 +232,6 @@ plt.show()
 \end{lstlisting}
 \end{frame}
 
-
-
-
 \begin{frame}{Plot}
     \begin{figure}
         \centering
@@ -252,6 +240,4 @@ plt.show()
         \label{fig:graph.png}
     \end{figure}
 \end{frame}
-
-
 \end{document}
