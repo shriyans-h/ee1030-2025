@@ -1,0 +1,143 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}  
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+
+\begin{document}
+
+
+\textbf{Question 1.3.4} \\
+If $ A(1, 3) $, $ B(4, 2) $, $ C(x, 5) $, and $ D(x, 4) $ are the vertices of a parallelogram $ABCD$, then the value of $x$ is \underline{\hspace{2cm}}. \hfill (10, 2012)
+
+\vspace{1em}
+\textbf{Solution:}
+
+In a parallelogram, opposite sides are equal and parallel. Since $ABCD$ is a parallelogram, vectors $ \vec{AB} $ and $ \vec{CD} $ must be equal.
+
+\begin{align}
+\vec{AB} = \vec{B} -\vec{A} = \myvec{4 - 1, 2 - 3} = \myvec{3, -1}
+\end{align}
+\begin{align}
+\vec{CD} = \vec{D} - \vec{C} = \myvec{x - x, 4 - 5} = \myvec{0, -1}
+\end{align}
+
+Clearly, $ \vec{AB} \neq \vec{CD} $, so let's try using diagonals. In a parallelogram, the diagonals bisect each other.
+
+Midpoint of diagonal $AC$:
+\begin{align}
+\Vec{M_{AC}} = \myvec{\frac{1 + x}{2} \\ \frac{3 + 5}{2} } = \myvec{ \frac{1 + x}{2}\\ 4 }
+\end{align}
+
+Midpoint of diagonal $BD$:
+\begin{align}
+\vec{M_{BD}} = \myvec{\frac{4 + x}{2} \\ \frac{2 + 4}{2} } = \myvec{ \frac{4 + x}{2}\\ 3 }
+\end{align}
+
+Equating midpoints:
+\begin{align}
+\frac{1 + x}{2} = \frac{4 + x}{2} \quad \text{and} \quad 4 = 3
+\end{align}
+
+The second equation is false, so diagonals do not bisect each other. Let's try using opposite sides again, but this time equating $ \vec{AD} $ and $ \vec{BC} $:
+
+\begin{align}
+\vec{AD} = \vec{D} -\vec{A} = \begin{myvec}
+    {x-1 \\ 4-3 } \end{myvec} =\begin{myvec}
+        {x-1 \\ 1}
+    \end{myvec}
+ \end{align}   
+ \begin{align}
+\vec{BC} =\vec{C} -\vec{B} = \begin{myvec}
+    {x - 4 \\ 5 - 2} \end{myvec} =\begin{myvec}
+         {x - 4 \\ 3}
+     \end{myvec}
+\end{align}
+
+Equating vectors:
+\begin{align}
+x - 1 = x - 4 \quad \text{and} \quad 1 = 3
+\end{align}
+
+Again, contradiction. So let's try using the property that opposite sides are equal in length.
+
+\begin{align}
+\text{Length of } \vec{AD}: \quad |AD| &= \sqrt{(x - 1)^2 + (4 - 3)^2} = \sqrt{(x - 1)^2 + 1} \\
+\text{Length of } \vec{BC}: \quad |BC| &= \sqrt{(x - 4)^2 + (5 - 2)^2} = \sqrt{(x - 4)^2 + 9}
+\end{align}
+
+Equating lengths:
+\begin{align}
+\sqrt{(x - 1)^2 + 1} = \sqrt{(x - 4)^2 + 9}
+\end{align}
+
+Squaring both sides:
+\begin{align}
+(x - 1)^2 + 1 = (x - 4)^2 + 9
+\end{align}
+\begin{align}
+x^2 - 2x + 1 + 1 = x^2 - 8x + 16 + 9
+\end{align}
+\begin{align}
+x^2 - 2x + 2 = x^2 - 8x + 25
+\end{align}
+
+Subtract $x^2$ from both sides:
+
+\begin{align}
+-2x + 2 = -8x + 25
+\end{align}
+
+\begin{align}
+6x = 23 \Rightarrow x = \frac{23}{6}
+\end{align}
+
+\textbf{Answer:} $ \boxed{\frac{23}{6}} $
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=0.6\textheight, keepaspectratio]{Figure1.png}
+    \label{figure_1}
+\end{figure}
+
+\end{document}
