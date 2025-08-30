@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.2)  29 AUG 2025 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.2)  30 AUG 2025 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**pdflatex main.tex
+**main.tex
 (./main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
@@ -1913,9 +1913,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
+<Fig1.png, id=31, 631.35875pt x 848.16875pt>
+File: Fig1.png Graphic file (type png)
+<use Fig1.png>
+Package pdftex.def Info: Fig1.png  used on input line 113.
+(pdftex.def)             Requested size: 109.25969pt x 146.77518pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./main.aux)
+] [2 <./Fig1.png>]
+(./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 
 Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -1926,13 +1935,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52163 strings out of 476091
- 1232743 string characters out of 5794082
+ 52180 strings out of 476091
+ 1232983 string characters out of 5794082
  1862330 words of memory out of 5000000
- 71741 multiletter control sequences out of 15000+600000
+ 71754 multiletter control sequences out of 15000+600000
  577501 words of font info for 165 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 102i,13n,104p,1203b,882s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,104p,1194b,883s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1940,10 +1949,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 43909 bytes).
+Output written on main.pdf (2 pages, 100758 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 84 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
