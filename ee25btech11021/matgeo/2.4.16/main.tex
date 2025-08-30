@@ -1,0 +1,217 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+ \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+
+\title{2.4.16}
+\author{EE25BTECH11021 - Dhanush Sagar
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+
+
+
+We consider the vectors
+\begin{align*}
+\vec{A} = \myvec{0\\7\\-10}, \qquad
+\vec{B} = \myvec{1\\6\\-6}, \qquad
+\vec{C} = \myvec{4\\9\\-6}.
+\end{align*}
+
+\section*{ PROOF OF: $\vec{A},\vec{B},\vec{C}$ are not collinear (rank method)}
+Form the difference vectors $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$.
+
+\begin{align}
+\vec{B}-\vec{A} &= \myvec{1-0\\[4pt]6-7\\[4pt]-6-(-10)}
+\end{align}
+
+\begin{align}
+\vec{B}-\vec{A} &= \myvec{1\\-1\\4}
+\end{align}
+
+\begin{align}
+\vec{C}-\vec{A} &= \myvec{4-0\\[4pt]9-7\\[4pt]-6-(-10)}
+\end{align}
+
+\begin{align}
+\vec{C}-\vec{A} &= \myvec{4\\2\\4}
+\end{align}
+
+Place these as columns in the $3\times 2$ matrix $M$.
+
+\begin{align}
+M &= \begin{pmatrix} \vec{B}-\vec{A} & \vec{C}-\vec{A} \end{pmatrix}
+\end{align}
+
+\begin{align}
+M &= \begin{pmatrix}
+1 & 4\\[4pt]
+-1 & 2\\[4pt]
+4 & 4
+\end{pmatrix}
+\end{align}
+
+Compute the $2\times2$ minor using rows $1$ and $2$.
+
+\begin{align}
+\det\begin{pmatrix}1 & 4\\[4pt] -1 & 2\end{pmatrix}
+&= 1\cdot 2 - 4\cdot(-1)
+\end{align}
+
+\begin{align}
+\det\begin{pmatrix}1 & 4\\[4pt] -1 & 2\end{pmatrix}
+&= 2 + 4 = 6 \neq 0
+\end{align}
+
+Hence $\operatorname{rank}(M)=2$, so $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$ are linearly independent.  
+Therefore $\vec{A},\vec{B},\vec{C}$ are not collinear and determine a triangle.
+
+\section*{a) verification for isosceles triangles}
+\begin{align}
+\vec{AB} &= \vec{B}-\vec{A} = \myvec{1\\-1\\4},
+\end{align}
+
+\begin{align}
+\vec{BC} &= \vec{C}-\vec{B} = \myvec{4-1\\[4pt]9-6\\[4pt]-6-(-6)}
+\end{align}
+
+\begin{align}
+\vec{BC} &= \myvec{3\\3\\0},
+\end{align}
+
+\begin{align}
+\vec{CA} &= \vec{A}-\vec{C} = \myvec{0-4\\[4pt]7-9\\[4pt]-10-(-6)}
+\end{align}
+
+\begin{align}
+\vec{CA} &= \myvec{-4\\-2\\-4}.
+\end{align}
+
+
+\begin{align}
+\|\vec{AB}\|^2 &= (\vec{B}-\vec{A})^T(\vec{B}-\vec{A})
+\end{align}
+
+\begin{align}
+\|\vec{AB}\|^2 &= 1^2 + (-1)^2 + 4^2
+\end{align}
+
+\begin{align}
+\|\vec{AB}\|^2 &= 18
+\end{align}
+
+\begin{align}
+\|\vec{BC}\|^2 &= (\vec{C}-\vec{B})^T(\vec{C}-\vec{B})
+\end{align}
+
+\begin{align}
+\|\vec{BC}\|^2 &= 3^2 + 3^2 + 0^2
+\end{align}
+
+\begin{align}
+\|\vec{BC}\|^2 &= 18
+\end{align}
+
+\begin{align}
+\|\vec{CA}\|^2 &= (\vec{A}-\vec{C})^T(\vec{A}-\vec{C})
+\end{align}
+
+\begin{align}
+\|\vec{CA}\|^2 &= (-4)^2 + (-2)^2 + (-4)^2
+\end{align}
+
+\begin{align}
+\|\vec{CA}\|^2 &= 36
+\end{align}
+
+
+
+\begin{align}
+\|\vec{AB}\| &= \|\vec{BC}\| = 3\sqrt{2}, \\
+\|\vec{CA}\| &= 6
+\end{align}
+
+Therefore the non-collinear vectors $\vec{A},\vec{B},\vec{C}$ determine a triangle, and since two sides are equal, that triangle is \textbf{isosceles} (with equal sides $\vec{AB}$ and $\vec{BC}$).
+
+\section*{B)veification for right angled triangle (matrix / inner-product test)}
+To show the triangle is right-angled, compute the inner product of two adjacent side vectors $\vec{AB}$ and $\vec{BC}$.
+
+\begin{align}
+(\vec{AB})^T(\vec{BC}) &= \myvec{1&-1&4}\myvec{3\\3\\0}
+\end{align}
+
+\begin{align}
+(\vec{AB})^T(\vec{BC}) &= 1\cdot 3 + (-1)\cdot 3 + 4\cdot 0
+\end{align}
+
+\begin{align}
+(\vec{AB})^T(\vec{BC}) &= 3 - 3 + 0 = 0.
+\end{align}
+
+Since the inner product is zero, $\vec{AB}\perp\vec{BC}$ and therefore the angle $\angle ABC$ is a right angle; the triangle is \textbf{right-angled at $B$}.
+
+
+
+\noindent\textbf{Final statement:} The non-collinear vectors $\vec{A},\vec{B},\vec{C}$ determine a triangle which is both \textbf{isosceles} (with $\|\vec{AB}\|=\|\vec{BC}\|$) and \textbf{right-angled} (with $\vec{AB}\perp\vec{BC}$); hence the triangle is a \emph{right isosceles} triangle with the right angle at vertex $B$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
+    \caption{}
+    \label{fig:}
+\end{figure}
+
+\end{document}
+
