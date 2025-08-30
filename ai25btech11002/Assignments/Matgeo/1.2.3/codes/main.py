@@ -16,8 +16,7 @@ O = np.array([0,0,0]).reshape(-1,1)
 A = np.array([1,-2,1]).reshape(-1,1)
 B = np.array([-2,4,5]).reshape(-1,1)
 C = np.array([1,-6,-7]).reshape(-1,1)
-
-R=A+B+C
+R = np.array([0,-4,-1]).reshape(-1, 1)
 
 
 fig = plt.figure(figsize=(8, 6))
