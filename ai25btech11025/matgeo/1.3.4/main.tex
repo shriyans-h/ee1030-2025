@@ -1,12 +1,11 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
-%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
-%\usepackage{tfrupee} % Include tfrupee package
+
 
 \setlength{\headheight}{1cm} % Set the height of the header box
 \setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
-
+ \usepackage[a4paper,margin=10mm, onecolumn]{geometry}
 \usepackage{gvv-book}
 \usepackage{gvv}
 \usepackage{cite}
@@ -23,12 +22,11 @@
 \usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
-\usepackage{listings}
-% \usepackage{gvv}                                        
-\def\inputGnumericTable{}                                 
+\usepackage{listings}                                       
+\def\inputGnumericTable{}                                
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
-\usepackage{array}  
+\usepackage{array}                                            
 \usepackage{longtable}                                       
 \usepackage{calc}                                             
 \usepackage{multirow}                                         
@@ -42,10 +40,7 @@
 \tikzstyle{input} = [coordinate]
 \tikzstyle{output} = [coordinate]
 
-
 \begin{document}
-
-
 
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
@@ -159,3 +154,4 @@ Subtract $x^2$ from both sides:
 \end{figure}
 
 \end{document}
+
