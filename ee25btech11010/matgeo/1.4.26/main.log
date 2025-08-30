@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  30 AUG 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  30 AUG 2025 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1319,7 +1319,7 @@ dist/fonts/enc/dvips/base/8r.enc}
 <figs/q1.png, id=28, 433.62pt x 433.62pt>
 File: figs/q1.png Graphic file (type png)
 <use figs/q1.png>
-Package pdftex.def Info: figs/q1.png  used on input line 87.
+Package pdftex.def Info: figs/q1.png  used on input line 95.
 (pdftex.def)             Requested size: 270.31049pt x 270.3012pt.
  [2 <./figs/q1.png>] (./main.aux)
  ***********
@@ -1339,7 +1339,7 @@ Package rerunfilecheck Info: Checksums for `main.out':
 Here is how much of TeX's memory you used:
  30494 strings out of 474222
  596855 string characters out of 5748734
- 1953975 words of memory out of 5000000
+ 1951975 words of memory out of 5000000
  52098 multiletter control sequences out of 15000+600000
  619761 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1350,7 +1350,7 @@ exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb>
-Output written on main.pdf (2 pages, 63713 bytes).
+Output written on main.pdf (2 pages, 64084 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
