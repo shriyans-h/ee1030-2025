@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  30 AUG 2025 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  30 AUG 2025 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main
 (./main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -12,18 +12,7 @@ L3 programming layer <2024-01-22>
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: cls)
 
-Enter file name: main.tex
-(./main.tex
-
-! LaTeX Error: Two \documentclass or \documentstyle commands.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 \documentclass[journal,12pt,onecolumn]{
-                                           IEEEtran}
-? 
+Enter file name: 
 (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -1496,23 +1485,14 @@ dist/fonts/enc/dvips/base/8r.enc}
 l.111 \end{document}
                     
 ? 
- <./figs/graph.png>]
-
-! LaTeX hooks Error: Missing \PopDefaultHookLabel.
-(hooks)              The label 'IEEEtran' was pushed but never popped.
-(hooks)              Something is wrong.
-
-Type <return> to continue.
- ...                                              
-                                                  
-l.111 \end{document}
-                    
-? 
-(./main.aux)
+ <./figs/graph.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package rerunfilecheck Warning: File `main.out' has changed.
@@ -1522,26 +1502,21 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) )
-(\end occurred when \ifx on line 4 was incomplete) 
+ ) 
 Here is how much of TeX's memory you used:
- 30640 strings out of 476139
- 600856 string characters out of 5794454
+ 30629 strings out of 476139
+ 600684 string characters out of 5794454
  1944975 words of memory out of 5000000
- 51999 multiletter control sequences out of 15000+600000
+ 51990 multiletter control sequences out of 15000+600000
  578842 words of font info for 84 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 116i,18n,117p,1190b,320s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
+ 101i,18n,103p,1168b,320s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on main.pdf (1 page, 79157 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
