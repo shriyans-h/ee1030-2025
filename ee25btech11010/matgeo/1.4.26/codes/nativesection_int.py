@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define values for a and b
-a = 2  # Example value
-b = 3  # Example value
+a = 1  # Example value
+b = 0  # Example value
 
 # Define points as NumPy arrays
 P = np.array([2*a, -3*b])  # Point P

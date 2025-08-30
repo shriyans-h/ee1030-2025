@@ -14,8 +14,8 @@ lib.sectionFormula.argtypes = [
 lib.sectionFormula.restype = None
 
 # Values for a and b
-a = 2
-b = 3
+a = 1
+b = 0
 
 # Points P and Q
 P = (ctypes.c_double * 2)(2 * a, -3 * b)

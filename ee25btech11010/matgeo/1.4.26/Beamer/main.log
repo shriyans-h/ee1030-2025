@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  29 AUG 2025 20:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  30 AUG 2025 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1494,10 +1494,12 @@ LaTeX Font Info:    Font shape `OT1/txss/b/n' will be
 ] [3
 
 ]
-Overfull \vbox (7.03897pt too high) detected at line 82
+Overfull \vbox (7.03897pt too high) detected at line 83
  []
 
 [4
+
+] [5
 
 ]
 \openout4 = `main.vrb'.
@@ -1507,22 +1509,16 @@ LaTeX Font Info:    Trying to load font information for OT1+txtt on input line
 3.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-))
-[5
+)) [6
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (5.10513pt too high) detected at line 123
+Overfull \vbox (5.10513pt too high) detected at line 129
  []
 
-[6
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [7
+[7
 
 ]
 \openout4 = `main.vrb'.
@@ -1532,16 +1528,16 @@ Overfull \vbox (5.10513pt too high) detected at line 123
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb)
-Overfull \vbox (5.10513pt too high) detected at line 194
- []
-
-[9
+ (./main.vrb) [9
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [10
+ (./main.vrb)
+Overfull \vbox (5.10513pt too high) detected at line 200
+ []
+
+[10
 
 ]
 \openout4 = `main.vrb'.
@@ -1554,12 +1550,17 @@ Overfull \vbox (5.10513pt too high) detected at line 194
  (./main.vrb) [12
 
 ]
-<figs/q1.png, id=373, 433.62pt x 433.62pt>
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [13
+
+]
+<figs/q1.png, id=401, 433.62pt x 433.62pt>
 File: figs/q1.png Graphic file (type png)
 <use figs/q1.png>
-Package pdftex.def Info: figs/q1.png  used on input line 273.
+Package pdftex.def Info: figs/q1.png  used on input line 279.
 (pdftex.def)             Requested size: 181.62291pt x 181.61989pt.
- [13
+ [14
 
  <./figs/q1.png>]
 \tf@nav=\write7
@@ -1570,7 +1571,6 @@ Package pdftex.def Info: figs/q1.png  used on input line 273.
 
 \tf@snm=\write9
 \openout9 = `main.snm'.
-
 
 (./main.aux)
  ***********
@@ -1588,8 +1588,8 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34285 strings out of 474222
- 696404 string characters out of 5748734
+ 34287 strings out of 474222
+ 696423 string characters out of 5748734
  2157975 words of memory out of 5000000
  55693 multiletter control sequences out of 15000+600000
  585062 words of font info for 96 fonts, out of 8000000 for 9000
@@ -1603,10 +1603,10 @@ ype1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 txfonts/txtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (13 pages, 105099 bytes).
+Output written on main.pdf (14 pages, 107208 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 478 PDF objects out of 1000 (max. 8388607)
+ 402 compressed objects within 5 object streams
+ 29 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

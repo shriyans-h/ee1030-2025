@@ -59,8 +59,8 @@ in the ratio $3:1$ is \underline{\hspace{2cm}}.
 
 \begin{frame}{Theoretical Solution}
 \[
-P = 2\vec a - 3\vec b = \brak{2\\-3}, \quad 
-Q = \vec a + \vec b = \brak{1\\1}.
+P = 2\vec a - 3\vec b = \brak{2a\\-3b}, \quad 
+Q = \vec a + \vec b = \brak{a\\b}.
 \]
 \end{frame}
 
@@ -71,15 +71,21 @@ the point $R$ dividing $PQ$ in ratio $3:1$ is:
 R=\frac{3Q+1P}{3+1}.
 \]
 \begin{align*}
-R &= \frac{1}{4}\Big(3\brak{1\\1}+\brak{2\\-3}\Big) \\
-  &= \frac{1}{4}\brak{3+2\\3-3} \\
-  &= \frac{1}{4}\brak{5\\0} \\
-  &= \brak{\dfrac{5}{4}\\0}.
+R &= \frac{1}{4}\Big(3\brak{a\\b}+\brak{2a\\-3b}\Big) \\
+  &= \frac{1}{4}\brak{3a+2a\\3b-3b} \\
+  &= \frac{1}{4}\brak{5a\\0} \\
+  &= \brak{\dfrac{5a}{4}\\0}.
 \end{align*}
 \[
-\boxed{R=\brak{\dfrac{5}{4}\\0}}
+\boxed{R=\brak{\dfrac{5a}{4}\\0}}
 \]
+
 \end{frame}
+
+\begin{frame}{Choosing values of a and b}
+Let a=1 and b=0.
+\end{frame}
+
 
 \begin{frame}[fragile]
     \frametitle{C Code - Section formula}
@@ -102,8 +108,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define values for a and b
-a = 2  # Example value
-b = 3  # Example value
+a = 1  # Example value
+b = 0  # Example value
 
 # Define points as NumPy arrays
 P = np.array([2*a, -3*b])  # Point P
@@ -186,8 +192,8 @@ lib.sectionFormula.argtypes = [
 lib.sectionFormula.restype = None
 
 # Values for a and b
-a = 2
-b = 3
+a = 1
+b = 0
 
 
     \end{lstlisting}
