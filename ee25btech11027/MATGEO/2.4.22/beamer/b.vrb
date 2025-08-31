@@ -1,0 +1,10 @@
+\frametitle{Python Code}
+
+    \begin{lstlisting}
+plt.title('Midpoint using C + Python')
+plt.savefig("/media/indhiresh-s/New Volume/Matrix/ee1030-2025/ee25btech11027/MATGEO/2.4.22/figs/figure1.png")
+plt.show()
+
+
+
+    \end{lstlisting}

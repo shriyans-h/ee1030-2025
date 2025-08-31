@@ -1,0 +1,303 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{2.4.22}
+\date{August, 2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{INDHIRESH S - EE25BTECH11027}
+
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+\begin{frame}{Question}
+ Find the equation of a plane which bisects perpendicularly the line joining the points $A(2, 3, 4)$ and $B(4, 5, 8)$ at right angles.\\
+\end{frame}
+\begin{frame}{allowframebreaks}
+\frametitle{Equation}
+
+    \centering
+    
+    \label{tab:parameters}
+  Let,
+\begin{align}
+    \Vec{A}=\myvec{2\\3\\4}\;\;and\;\;\Vec{B}=\myvec{4\\5\\8}
+\end{align}
+   
+\end{frame}
+
+
+\begin{frame}{Theoretical Solution}
+Given that the plane is a perpendicular bisector to the line joining points A and B. Since it is a perpendicular bisector to the line joining points A and B , the midpoint of the line joining points A and B lies on the plane.\\
+Let the midpoint of points A and B be C. Then
+\begin{align}
+norm({\Vec{C}-\Vec{A}})=norm({\Vec{C}-\Vec{B}})
+\end{align}
+\begin{align}
+    \sqrt{(\Vec{C}-\Vec{A})^T(\Vec{C}-\Vec{A})}=\sqrt{(\Vec{C}-\Vec{B})^T(\Vec{C}-\Vec{B})}
+\end{align}
+\begin{align}
+    (\Vec{C}-\Vec{A})^T(\Vec{C}-\Vec{A})=(\Vec{C}-\Vec{B})^T(\Vec{C}-\Vec{B})
+\end{align}
+
+
+\end{frame}
+\begin{frame}
+\frametitle{Theoretical Solution}
+Let,
+\begin{align}
+    C=\myvec{x \\ y \\ z}
+\end{align}
+\begin{align}
+    \brak{\myvec{x \\ y \\ z}-\myvec{2\\3\\4}}^T\brak{\myvec{x \\ y \\ z}-\myvec{2\\3\\4}}=\brak{\myvec{x \\ y \\ z}-\myvec{4\\5\\8}^T}\brak{\myvec{x \\ y \\ z}-\myvec{4\\5\\8}}
+\end{align}
+\begin{align}
+    \myvec{x-2\\y-3\\z-4}^T\myvec{x-2\\y-3\\z-4}=\myvec{x-4\\y-5\\z-8}^T\myvec{x-4\\y-5\\z-8}
+\end{align}
+
+
+\end{frame}
+\begin{frame}
+\frametitle{Theoretical Solution}
+\begin{align}
+(x-2)^2+(y-3)^2+(z-4)^2=(x-4)^2+(y-5)^2+(z-8)^2
+\end{align}
+\begin{align}
+    x^2+4-4x+y^2+9-6y+z^2+16-8z=x^2+16-8x+y^2+25-10y+z^2+64-16z
+\end{align}
+\begin{align}
+   4x+4y+8z=76
+\end{align}
+
+\begin{align}
+     x+y+2z=19
+\end{align}
+
+
+\end{frame}
+\begin{frame}
+\frametitle{Theoretical Solution}
+Now the equation of plane is :
+\begin{align}
+     x+y+2z=19
+\end{align}
+In matrix form:
+\begin{align}
+     \myvec{1\\1\\2}^T\Vec{R}=19
+\end{align}
+Where \textbf{R} is the equation of the plane
+
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+    \frametitle{C Code - Midpoint formula }
+
+    \begin{lstlisting}
+#include<stdio.h>
+void midpoint(float* out, float* A, float* B) {
+    out[0] = (A[0] + B[0]) / 2.0f; // X-coordinate
+    out[1] = (A[1] + B[1]) / 2.0f; // Y-coordinate
+    out[2] = (A[2] + B[2]) / 2.0f; // Z-coordinate
+}
+
+
+
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+import numpy as np
+import ctypes
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Load C library
+libmid = ctypes.CDLL('./plane.so')
+
+# Define arrays (float32)
+A = np.array([2.0, 3.0, 4.0], dtype=np.float32)
+B = np.array([4.0, 5.0, 8.0], dtype=np.float32)
+M = np.zeros(3, dtype=np.float32)
+
+# Set argtypes/restype for C function
+libmid.midpoint.argtypes = [ctypes.POINTER(ctypes.c_float),
+                            ctypes.POINTER(ctypes.c_float),
+                            ctypes.POINTER(ctypes.c_float)]
+libmid.midpoint.restype = None
+
+
+
+
+
+
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+# Call C function to compute midpoint
+libmid.midpoint(M.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
+                A.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
+                B.ctypes.data_as(ctypes.POINTER(ctypes.c_float)))
+
+print("Midpoint:", M)
+
+# Prepare plane x + y + z = 10
+xx, yy = np.meshgrid(np.linspace(0, 6, 20), np.linspace(0, 8, 20))
+zz = 10 - xx - yy
+
+# Plot
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Plane
+ax.plot_surface(xx, yy, zz, alpha=0.3, color='cyan')
+
+
+
+
+
+
+
+
+
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+
+    \begin{lstlisting}
+# Points and line
+ax.scatter(*A, color='red', s=60, label='A(2,3,4)')
+ax.scatter(*B, color='green', s=60, label='B(4,5,8)')
+ax.scatter(*M, color='purple', s=100, marker='*', label='M(3,4,6)')
+ax.plot([A[0], B[0]],    # x coordinates
+        [A[1], B[1]],    # y coordinates
+        [A[2], B[2]],    # z coordinates
+        color='blue', linewidth=2, label='Line AB')
+ax.text(*A, 'A(2,3,4)', fontsize=9, color='red')
+ax.text(*B, 'B(4,5,8)', fontsize=9, color='green')
+ax.text(*M, 'M(3,4,6)', fontsize=9, color='purple')
+
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('Z-axis')
+ax.legend()
+
+
+
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+
+    \begin{lstlisting}
+plt.title('Midpoint using C + Python')
+plt.savefig("/media/indhiresh-s/New Volume/Matrix/ee1030-2025/ee25btech11027/MATGEO/2.4.22/figs/figure1.png")
+plt.show()
+
+
+
+    \end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}{Plot}
+    \begin{center}
+        \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{figs/figure1.png}
+    \end{center}
+\end{frame}
+
+
+
+
+\end{document}
