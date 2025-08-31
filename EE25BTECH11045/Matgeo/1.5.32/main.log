@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  31 AUG 2025 07:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  31 AUG 2025 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,32 +1405,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-Runaway argument?
- 
-! Paragraph ended before \align was complete.
-<to be read again> 
-                   \par 
-l.96 
-     
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.96 
-     
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.96 
-     
-? 
-! Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.96 
-     
-? 
 
 ! LaTeX Error: Environment large undefined.
 
@@ -1438,17 +1412,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 \begin{large}
+l.115 \begin{large}
                    Hence the ratio is 3:5.\end{large}
 ? 
 
-! LaTeX Error: \begin{align} on input line 88 ended by \end{large}.
+! LaTeX Error: \begin{document} ended by \end{large}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 ...{large}Hence the ratio is 3:5.\end{large}
+l.115 ...{large}Hence the ratio is 3:5.\end{large}
                                                   
 ? 
 
@@ -1458,13 +1432,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 \begin{figure}
+l.118 \begin{figure}
                     [H]
 ? 
 <figs/graph.png, id=7, 397.485pt x 356.83313pt>
 File: figs/graph.png Graphic file (type png)
 <use figs/graph.png>
-Package pdftex.def Info: figs/graph.png  used on input line 116.
+Package pdftex.def Info: figs/graph.png  used on input line 120.
 (pdftex.def)             Requested size: 6553.62498pt x 5890.53612pt.
 
 ! Package caption Error: \caption outside float.
@@ -1473,17 +1447,17 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.117  \caption
+l.121  \caption
                *{Plot of Intersection of AB by X-axis}
 ? 
 
-! LaTeX Error: \begin{align} on input line 88 ended by \end{figure}.
+! LaTeX Error: \begin{document} ended by \end{figure}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \end{figure}
+l.123 \end{figure}
                   
 ? 
 
@@ -1494,35 +1468,24 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.120 \end{document}
+l.124 \end{document}
                     
 ? 
 ! Undefined control sequence.
 <argument> \thepage 
                     
-l.120 \end{document}
+l.124 \end{document}
                     
 ? 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}
 ! Undefined control sequence.
 <write> \newlabel{fig:graph.png}{{}{\thepage 
-                                             }{}{equation.8}{}}
-l.120 \end{document}
+                                             }{}{equation.10}{}}
+l.124 \end{document}
                     
 ? 
- <./figs/graph.png>]
-
-! LaTeX Error: \begin{align} on input line 88 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 \end{document}
-                    
-? 
-(./main.aux)
+ <./figs/graph.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1539,30 +1502,25 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 88 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 30631 strings out of 476139
- 600697 string characters out of 5794454
- 1947975 words of memory out of 5000000
+ 30633 strings out of 476139
+ 600718 string characters out of 5794454
+ 1951975 words of memory out of 5000000
  51990 multiletter control sequences out of 15000+600000
  580218 words of font info for 86 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 101i,18n,103p,1172b,354s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on main.pdf (1 page, 79766 bytes).
+ 101i,18n,103p,1172b,320s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (1 page, 81328 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

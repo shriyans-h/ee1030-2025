@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  31 AUG 2025 07:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  31 AUG 2025 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1822,39 +1822,40 @@ dvips/lm/lm-mathsy.enc}]
 ! Undefined control sequence.
 <argument> ...c {3&8\\x-1&3}&\xlongleftrightarrow 
                                                   {R_{2}\rightarrow 8R_{2}-3...
-l.123 \end{frame}
+l.124 \end{frame}
                  
 ? 
 ! Undefined control sequence.
 <argument> ...c {3&8\\x-1&3}&\xlongleftrightarrow 
                                                   {R_{2}\rightarrow 8R_{2}-3...
-l.123 \end{frame}
+l.124 \end{frame}
                  
 ? 
 ! Undefined control sequence.
-<argument> ...8\\8(x-1)-9&0}&\xlongleftrightarrow 
-                                                  {R_{1}\rightarrow \frac {R...
-l.123 \end{frame}
+<argument>  \implies \xleftrightarrow 
+                                      {R_{1}\rightarrow \frac {R_{1}}{3}}\my...
+l.124 \end{frame}
                  
 ? 
 ! Undefined control sequence.
-<argument> ...8\\8(x-1)-9&0}&\xlongleftrightarrow 
-                                                  {R_{1}\rightarrow \frac {R...
-l.123 \end{frame}
+<argument>  \implies \xleftrightarrow 
+                                      {R_{1}\rightarrow \frac {R_{1}}{3}}\my...
+l.124 \end{frame}
                  
 ? 
 [4
 
 ]
-
-! Package xkeyval Error: `Theoretical solution' undefined in families `beamerfr
-ame'.
-
-See the xkeyval package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132 \end{frame}
+! Undefined control sequence.
+<argument>  \implies \xleftrightarrow 
+                                      {R_{2}\rightarrow R_{2}-\brak {8x-17}R...
+l.138 \end{frame}
+                 
+? 
+! Undefined control sequence.
+<argument>  \implies \xleftrightarrow 
+                                      {R_{2}\rightarrow R_{2}-\brak {8x-17}R...
+l.138 \end{frame}
                  
 ? 
 [5
@@ -1875,7 +1876,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (37.72923pt too high) detected at line 191
+Overfull \vbox (37.72923pt too high) detected at line 198
  []
 
 [8
@@ -1884,7 +1885,7 @@ Overfull \vbox (37.72923pt too high) detected at line 191
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 216
+Overfull \vbox (1.72923pt too high) detected at line 223
  []
 
 [9
@@ -1893,14 +1894,14 @@ Overfull \vbox (1.72923pt too high) detected at line 216
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 238
+Overfull \vbox (13.72923pt too high) detected at line 245
  []
 
 [10
 
 ]
 
-LaTeX Warning: File `figs/graph.png' not found on input line 247.
+LaTeX Warning: File `figs/graph.png' not found on input line 254.
 
 
 ! Package pdftex.def Error: File `figs/graph.png' not found: using draft settin
@@ -1910,7 +1911,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 \end{frame}
+l.254 \end{frame}
                  
 ? 
 [11
@@ -1944,10 +1945,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58129 strings out of 476139
- 1378173 string characters out of 5794454
- 2372822 words of memory out of 5000000
- 79142 multiletter control sequences out of 15000+600000
+ 58130 strings out of 476139
+ 1378188 string characters out of 5794454
+ 2372823 words of memory out of 5000000
+ 79143 multiletter control sequences out of 15000+600000
  602163 words of font info for 78 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
  101i,17n,117p,1172b,1280s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1956,12 +1957,13 @@ pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (11 pages, 177661 bytes).
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmtt10.pfb>
+Output written on main.pdf (11 pages, 182590 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
+ 402 PDF objects out of 1000 (max. 8388607)
+ 335 compressed objects within 4 object streams
  24 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
