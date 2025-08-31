@@ -160,89 +160,80 @@ Compute the $2\times2$ minor using rows $1$ and $2$.
 Hence $\operatorname{rank}(M)=2$, so $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$ are linearly independent.  
 Therefore $\vec{A},\vec{B},\vec{C}$ are not collinear and determine a triangle.
 
-\section*{a) verification for isosceles triangles}
-\begin{align}
-\vec{AB} &= \vec{B}-\vec{A} = \myvec{1\\-1\\4},
-\end{align}
+
 
 \end{frame}
 \begin{frame}{solution A }
 
+\textbf{verification of Isosceles triangle  via perpendicular bisector:}
+\begin{align}
+\text{Midpoint } \vec{M} \text{ of } \overline{AC}
+&= \frac{\vec{A}+\vec{C}}{2}
+= \frac{1}{2}\myvec{0+4\\7+9\\-10+(-6)}
+= \myvec{2\\8\\-8},
+\end{align}
+
+\begin{align}
+\vec{MB} &= \vec{B}-\vec{M}
+= \myvec{1-2\\6-8\\-6-(-8)}
+= \myvec{-1\\-2\\2},\\
+\vec{AC} &= \vec{C}-\vec{A}
+= \myvec{4-0\\9-7\\-6-(-10)}
+= \myvec{4\\2\\4}.
+\end{align}
+\begin{align}
+\vec{MB}^\top \vec{AC}
+&= \myvec{-1 & -2 & 2}\myvec{4\\2\\4}
+= (-1)\cdot 4 + (-2)\cdot 2 + 2\cdot 4\\
+= -4 -4 + 8
+= 0.
+\end{align}
+
+\end{frame}
+\begin{frame}{solution}
+Thus $\vec{MB}\perp \vec{AC}$ and $\vec{M}$ is the midpoint of $AC$, so the line through $\vec{M}$ in the direction of $\vec{MB}$ is the \emph{perpendicular bisector} of $AC$ and passes through $\vec{B}$.
+
+By the perpendicular-bisector property, points on it are equidistant from $A$ and $C$, hence
+\begin{align}
+\|\vec{AB}\|=\|\vec{BC}\|.
+\end{align}
+Therefore, the triangle is \emph{isosceles} with equal sides $AB$ and $BC$.
+
+
+\begin{align}
+\vec{MB}^\top \vec{AC}
+&= \myvec{-1 & -2 & 2}\myvec{4\\2\\4}
+= (-1)\cdot 4 + (-2)\cdot 2 + 2\cdot 4
+= -4 -4 + 8
+= 0.
+\end{align}
+Thus $\vec{MB}\perp \vec{AC}$ and $\vec{M}$ is the midpoint of $AC$, so the line through $\vec{M}$ in the direction of $\vec{MB}$ is the \emph{perpendicular bisector} of $AC$ and passes through $\vec{B}$.
+By the perpendicular-bisector property, points on it are equidistant from $A$ and $C$, hence
+\end{frame}
+\begin{frame}{solution}
+
+\begin{align}
+\|\vec{AB}\|=\|\vec{BC}\|.
+\end{align}
+Therefore, the triangle is \emph{isosceles} with equal sides $AB$ and $BC$.
+
+\textbf{ B)veification for right angled triangle (matrix / inner-product test)}
+To show the triangle is right-angled, compute the inner product of two adjacent side vectors $\vec{AB}$ and $\vec{BC}$.
+
+\begin{align}
+\vec{AB} &= \vec{B}-\vec{A} = \myvec{1\\-1\\4},
+\end{align}
+
 \begin{align}
 \vec{BC} &= \vec{C}-\vec{B} = \myvec{4-1\\[4pt]9-6\\[4pt]-6-(-6)}
 \end{align}
+\end{frame}
+
+\begin{frame}{solution}
 
 \begin{align}
 \vec{BC} &= \myvec{3\\3\\0},
 \end{align}
-
-\begin{align}
-\vec{CA} &= \vec{A}-\vec{C} = \myvec{0-4\\[4pt]7-9\\[4pt]-10-(-6)}
-\end{align}
-
-\begin{align}
-\vec{CA} &= \myvec{-4\\-2\\-4}.
-\end{align}
-
-\end{frame}
-\begin{frame}{solution}
-
-\begin{align}
-\|\vec{AB}\|^2 &= (\vec{B}-\vec{A})^T(\vec{B}-\vec{A})
-\end{align}
-
-\begin{align}
-\|\vec{AB}\|^2 &= 1^2 + (-1)^2 + 4^2
-\end{align}
-
-\begin{align}
-\|\vec{AB}\|^2 &= 18
-\end{align}
-
-\begin{align}
-\|\vec{BC}\|^2 &= (\vec{C}-\vec{B})^T(\vec{C}-\vec{B})
-\end{align}
-
-\begin{align}
-\|\vec{BC}\|^2 &= 3^2 + 3^2 + 0^2
-\end{align}
-
-\begin{align}
-\|\vec{BC}\|^2 &= 18
-\end{align}
-
-\end{frame}
-\begin{frame}{solution}
-
-\begin{align}
-\|\vec{CA}\|^2 &= (\vec{A}-\vec{C})^T(\vec{A}-\vec{C})
-\end{align}
-
-\begin{align}
-\|\vec{CA}\|^2 &= (-4)^2 + (-2)^2 + (-4)^2
-\end{align}
-
-\begin{align}
-\|\vec{CA}\|^2 &= 36
-\end{align}
-
-
-
-\begin{align}
-\|\vec{AB}\| &= \|\vec{BC}\| = 3\sqrt{2}, \\
-\|\vec{CA}\| &= 6
-\end{align}
-
-Therefore the non-collinear vectors $\vec{A},\vec{B},\vec{C}$ determine a triangle, and since two sides are equal, that triangle is \textbf{isosceles} (with equal sides $\vec{AB}$ and $\vec{BC}$).
-
-\end{frame}
-\begin{frame}{solution (B)}
-
-\section* {B)veification for right angled triangle (matrix / inner-product test)}
-To show the triangle is right-angled, compute the inner product of two adjacent side vectors $\vec{AB}$ and $\vec{BC}$.
-\
-
-    
 
 
 \begin{align}
@@ -261,7 +252,7 @@ Since the inner product is zero, $\vec{AB}\perp\vec{BC}$ and therefore the angle
 
 
 
-\noindent\textbf{Final statement:} The non-collinear vectors $\vec{A},\vec{B},\vec{C}$ determine a triangle which is both \textbf{isosceles} (with $\|\vec{AB}\|=\|\vec{BC}\|$) and \textbf{right-angled} (with $\vec{AB}\perp\vec{BC}$); hence the triangle is a \emph{right isosceles} triangle with the right angle at vertex $B$.
+
 \end{frame}
 %---------------- C Source Code ----------------
 \begin{frame}[fragile]{C Source Code:gen point.c}
