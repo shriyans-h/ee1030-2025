@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  31 AUG 2025 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  31 AUG 2025 22:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1132,13 +1132,13 @@ thkerncmss.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 108.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 108.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 108.
 
  [4
 
@@ -1146,15 +1146,13 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 
 ] [6
 
-] [7
-
 ]
-<figs/fig_vector.png, id=79, 462.528pt x 346.896pt>
+<figs/fig_vector.png, id=100, 462.528pt x 346.896pt>
 File: figs/fig_vector.png Graphic file (type png)
 <use figs/fig_vector.png>
-Package pdftex.def Info: figs/fig_vector.png  used on input line 162.
+Package pdftex.def Info: figs/fig_vector.png  used on input line 150.
 (pdftex.def)             Requested size: 239.60567pt x 179.70413pt.
- [8
+ [7
 
  <./figs/fig_vector.png>]
 \openout4 = `main.vrb'.
@@ -1189,13 +1187,13 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 9.
 
-) [9
+) [8
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-[10
+[9
 
 ]
 \openout4 = `main.vrb'.
@@ -1203,10 +1201,15 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
  (./main.vrb (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ))
-Overfull \vbox (9.39334pt too high) detected at line 220
+Overfull \vbox (9.39334pt too high) detected at line 208
  []
 
-[11
+[10
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [11
 
 ]
 \openout4 = `main.vrb'.
@@ -1216,21 +1219,16 @@ Overfull \vbox (9.39334pt too high) detected at line 220
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [13
-
-]
-\openout4 = `main.vrb'.
-
  (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 274
+Overfull \vbox (0.11983pt too high) detected at line 262
  []
 
-[14
+[13
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [15
+ (./main.vrb) [14
 
 ]
 \tf@nav=\write6
@@ -1260,32 +1258,39 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  6FD80E09810130F6F31C72C50F95418C;933.
+(rerunfilecheck)             Before: 6FD80E09810130F6F31C72C50F95418C;933
+(rerunfilecheck)             After:  5D61B3EED042C17A7A2C77CD1EE34A0B;933.
  ) 
 Here is how much of TeX's memory you used:
- 27427 strings out of 474222
- 513654 string characters out of 5748734
- 2101975 words of memory out of 5000000
- 49085 multiletter control sequences out of 15000+600000
+ 27436 strings out of 474222
+ 513773 string characters out of 5748734
+ 2100975 words of memory out of 5000000
+ 49094 multiletter control sequences out of 15000+600000
  566707 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,19n,131p,426b,1503s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pf
-b>
-Output written on main.pdf (15 pages, 175843 bytes).
+ 128i,15n,131p,426b,1503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Outline0.3.3.8} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Outline0.3.2.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss109
+5.pfb>
+Output written on main.pdf (14 pages, 166513 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 205 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
  40 named destinations out of 1000 (max. 500000)
- 60 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
