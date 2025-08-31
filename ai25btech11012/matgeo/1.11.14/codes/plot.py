@@ -4,8 +4,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+
+data = np.loadtxt("values.dat", skiprows=1)  
+
+xc = data[0]
+yc = data[1]
+zc = data[2]
+
 # Define the unit vector
-u = np.array([6/7, -3/7, 2/7])
+u = np.array([xc,yc,zc])
 
 # Origin
 O = np.array([0, 0, 0])
