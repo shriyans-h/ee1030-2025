@@ -115,14 +115,14 @@ Compute the direction columns:
 \end{align}
 Hence the collinearity matrix is
 \begin{align}
-M=\myvec{\,2 & 4\\begin{align}2pt] k-4 & -6\,}.
+M=\myvec{\,2 & 4\\ k-4 & -6\,}.
 \end{align}
 
 \textbf{Row reduction (rank\,=\,1)}
 \end{frame}
 \begin{frame}{Theoretical Solution}
 \begin{align}
-\myvec{\,2 & 4\\ k-4 & -6\,}
+\myvec{\,2 & 4\\k-4 & -6\,}
 \;\xrightarrow{\,R_1\leftarrow \tfrac12 R_1\,}\;
 \myvec{\,1 & 2\\k-4 & -6\,}
 \;\xrightarrow{\,R_2\leftarrow R_2-(k-4)R_1\,}\;
@@ -185,59 +185,57 @@ int main() {
     \frametitle{Python Code }
     \begin{lstlisting}
     
-import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Points
-x1, y1 = 5, 4
-x2, y2 = 7, 1  # k = 1 (solution)
-x3, y3 = 9, -2
+# Given points
+P = (5, 4)
+R = (9, -2)
 
-# Create figure
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
- \end{lstlisting}
+# Find k using collinearity condition
+slope_PR = (R[1] - P[1]) / (R[0] - P[0])
+k = slope_PR * (7 - 5) + 4
+Q = (7, k)
 
-\end{frame}
-\begin{frame}[fragile]
-    \frametitle{Python Code }
-    \begin{lstlisting}
-# Plot the points in 3D (z = 0 for 2D points)
-ax.scatter([x1, x2, x3], [y1, y2, y3], [0, 0, 0], c='r', s=100, label='Points')
-
-# Draw line through the points
-xs = np.array([x1, x2, x3])
-ys = np.array([y1, y2, y3])
-zs = np.array([0, 0, 0])
-ax.plot(xs, ys, zs, label='Collinear Line')
-
-# Labels and title
-ax.set_xlabel('X axis')
-ax.set_ylabel('Y axis')
-ax.set_zlabel('Z axis')
-ax.set_title('3D Visualization of Collinear Points')
-ax.legend()
+# Plotting the points and line
+plt.figure(figsize=(6,6))
+plt.plot([P[0], Q[0], R[0]], [P[1], Q[1], R[1]], 'ro')  # points
+plt.plot([P[0], Q[0], R[0]], [P[1], Q[1], R[1]], 'b-')  # line
 \end{lstlisting}
-
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Python Code }
     \begin{lstlisting}
-# Save plot as picture
+        
+   
+# Annotating points
+plt.text(P[0]+0.1, P[1], f"P{P}")
+plt.text(Q[0]+0.1, Q[1], f"Q{Q}")
+plt.text(R[0]+0.1, R[1], f"R{R}")
+
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.grid(True)
+plt.title("Collinear Points Diagram")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+
+# Save as image
 plt.savefig("collinear_points.png", dpi=300)
-
-# Show the plot
 plt.show()
-
-print("Graph saved as collinear_points.png")
-     \end{lstlisting}
-
+\end{lstlisting}
 \end{frame}
+\begin{frame}[fragile]
+    \frametitle{Python Code }
+    \begin{lstlisting}
+print("Value of k:", k)
+print("Graph saved as 'collinear_points.png'")
+ \end{lstlisting}
+\end{frame}
+
 
 \begin{frame}{Plot}
     \centering
-    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{beamer2/figs/WhatsApp Image 2025-08-30 at 10.07.08.jpeg}     
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{beamer/figs/ASSIGN2.jpeg}     
 \end{frame}
 
 

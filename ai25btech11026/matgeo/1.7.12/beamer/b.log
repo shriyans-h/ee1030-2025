@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.16)  30 AUG 2025 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.16)  31 AUG 2025 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2087,7 +2087,7 @@ l.5     printf("The value of k is: %d\n"
 
  (./b.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-15.
+17.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/ts1
 lmtt.fd
@@ -2100,7 +2100,148 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 lm/lm-ts1.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb)
+ (./b.vrb
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 plt.text(P[0]+0.1, P[1], f"
+                               P{P}")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 plt.text(P[0]+0.1, P[1], f"P{P}"
+                                    )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 plt.text(Q[0]+0.1, Q[1], f"
+                               Q{Q}")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 plt.text(Q[0]+0.1, Q[1], f"Q{Q}"
+                                    )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 plt.text(R[0]+0.1, R[1], f"
+                               R{R}")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 plt.text(R[0]+0.1, R[1], f"R{R}"
+                                    )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 plt.title("
+                Collinear Points Diagram")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 plt.title("Collinear Points Diagram"
+                                         )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 plt.xlabel("
+                 x-axis")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 plt.xlabel("x-axis"
+                        )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 plt.ylabel("
+                 y-axis")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 plt.ylabel("y-axis"
+                        )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 plt.savefig("
+                  collinear_points.png", dpi=300)
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 plt.savefig("collinear_points.png"
+                                       , dpi=300)
+? 
+)
 
 [8
 
@@ -2115,8 +2256,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 plt.savefig("
-                 collinear_points.png", dpi=300)
+l.3 print("
+           Value of k:", k)
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2125,8 +2266,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 plt.savefig("collinear_points.png"
-                                      , dpi=300)
+l.3 print("Value of k:"
+                       , k)
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2135,8 +2276,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 print("
-           Graph saved as collinear_points.png")
+l.4 print("
+           Graph saved as 'collinear_points.png'")
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2145,8 +2286,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 print("Graph saved as collinear_points.png"
-                                               )
+l.4 print("Graph saved as 'collinear_points.png'"
+                                                 )
 ? 
 )
 
@@ -2154,18 +2295,17 @@ l.9 print("Graph saved as collinear_points.png"
 
 ]
 
-LaTeX Warning: File `beamer2/figs/WhatsApp Image 2025-08-30 at 10.07.08.jpeg' n
-ot found on input line 241.
+LaTeX Warning: File `beamer/figs/ASSIGN2.jpeg' not found on input line 239.
 
 
-! Package pdftex.def Error: File `beamer2/figs/WhatsApp Image 2025-08-30 at 10.
-07.08.jpeg' not found: using draft setting.
+! Package pdftex.def Error: File `beamer/figs/ASSIGN2.jpeg' not found: using dr
+aft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.241 \end{frame}
+l.239 \end{frame}
                  
 ? 
 
@@ -2198,10 +2338,10 @@ Package rerunfilecheck Info: Checksums for `b.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59381 strings out of 467800
- 1465882 string characters out of 5417814
- 2377425 words of memory out of 5000000
- 87028 multiletter control sequences out of 15000+600000
+ 59356 strings out of 467800
+ 1464706 string characters out of 5417814
+ 2354425 words of memory out of 5000000
+ 87003 multiletter control sequences out of 15000+600000
  668492 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,19n,123p,1169b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2219,7 +2359,7 @@ rmux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
 /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publi
 c/lm/lmsy8.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/f
 onts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (10 pages, 197888 bytes).
+Output written on b.pdf (10 pages, 194402 bytes).
 PDF statistics:
  379 PDF objects out of 1000 (max. 8388607)
  312 compressed objects within 4 object streams

@@ -1,36 +1,34 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Points
-x1, y1 = 5, 4
-x2, y2 = 7, 1  # k = 1 (solution)
-x3, y3 = 9, -2
+# Given points
+P = (5, 4)
+R = (9, -2)
 
-# Create figure
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# Find k using collinearity condition
+slope_PR = (R[1] - P[1]) / (R[0] - P[0])
+k = slope_PR * (7 - 5) + 4
+Q = (7, k)
 
-# Plot the points in 3D (z = 0 for 2D points)
-ax.scatter([x1, x2, x3], [y1, y2, y3], [0, 0, 0], c='r', s=100, label='Points')
+# Plotting the points and line
+plt.figure(figsize=(6,6))
+plt.plot([P[0], Q[0], R[0]], [P[1], Q[1], R[1]], 'ro')  # points
+plt.plot([P[0], Q[0], R[0]], [P[1], Q[1], R[1]], 'b-')  # line
 
-# Draw line through the points
-xs = np.array([x1, x2, x3])
-ys = np.array([y1, y2, y3])
-zs = np.array([0, 0, 0])
-ax.plot(xs, ys, zs, label='Collinear Line')
+# Annotating points
+plt.text(P[0]+0.1, P[1], f"P{P}")
+plt.text(Q[0]+0.1, Q[1], f"Q{Q}")
+plt.text(R[0]+0.1, R[1], f"R{R}")
 
-# Labels and title
-ax.set_xlabel('X axis')
-ax.set_ylabel('Y axis')
-ax.set_zlabel('Z axis')
-ax.set_title('3D Visualization of Collinear Points')
-ax.legend()
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.grid(True)
+plt.title("Collinear Points Diagram")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
 
-# Save plot as picture
+# Save as image
 plt.savefig("collinear_points.png", dpi=300)
-
-# Show the plot
 plt.show()
 
-print("Graph saved as collinear_points.png")
+print("Value of k:", k)
+print("Graph saved as 'collinear_points.png'")
