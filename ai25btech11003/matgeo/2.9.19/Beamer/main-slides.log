@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  31 AUG 2025 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  31 AUG 2025 13:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,7 +1790,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 155
+Overfull \vbox (1.72923pt too high) detected at line 162
  []
 
 [5
@@ -1799,7 +1799,7 @@ Overfull \vbox (1.72923pt too high) detected at line 155
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 179
+Overfull \vbox (1.72923pt too high) detected at line 186
  []
 
 [6
@@ -1824,7 +1824,7 @@ Overfull \vbox (1.72923pt too high) detected at line 179
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 271
+Overfull \vbox (1.72923pt too high) detected at line 278
  []
 
 [10
@@ -1849,7 +1849,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (1.72923pt too high) detected at line 333
+Overfull \vbox (1.72923pt too high) detected at line 340
  []
 
 [13
@@ -1864,7 +1864,7 @@ Overfull \vbox (1.72923pt too high) detected at line 333
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 374
+Overfull \vbox (1.72923pt too high) detected at line 381
  []
 
 [15
@@ -1878,7 +1878,7 @@ Overfull \vbox (1.72923pt too high) detected at line 374
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 415
+Overfull \vbox (1.72923pt too high) detected at line 422
  []
 
 [17
@@ -1903,7 +1903,7 @@ Overfull \vbox (1.72923pt too high) detected at line 415
 <figs/fig1.png, id=604, 624.1719pt x 642.2394pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 485.
+Package pdftex.def Info: figs/fig1.png  used on input line 492.
 (pdftex.def)             Requested size: 202.52011pt x 208.38234pt.
  [21
 
@@ -1949,7 +1949,7 @@ sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main-slides.pdf (21 pages, 609005 bytes).
+Output written on main-slides.pdf (21 pages, 609059 bytes).
 PDF statistics:
  692 PDF objects out of 1000 (max. 8388607)
  590 compressed objects within 6 object streams
