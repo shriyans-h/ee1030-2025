@@ -1,11 +1,11 @@
 \frametitle{Python Code (2/2: Plot)}
 \begin{lstlisting}[language=Python]
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure(figsize=(8,6))
 ax = fig.add_subplot(111, projection='3d')
-
 ax.scatter(*A, color='black', s=80)
 ax.text(A[0]+0.5, A[1]+0.5, A[2]+0.5, "A(3,6,9)")
-
 ax.scatter(*B, color='blue', s=80)
 ax.text(B[0]+0.5, B[1]+0.5, B[2]+0.5, "B(10,20,30)")
 

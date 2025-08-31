@@ -74,44 +74,66 @@ are the vertices of a right-angled triangle using matrices.
 
 \textbf{Solution:} \\
 
-Let the position vectors of the points be
-$$
-\vec{A} = \begin{bmatrix}3\\6\\9\end{bmatrix}, \quad
-\vec{B} = \begin{bmatrix}10\\20\\30\end{bmatrix}, \quad
-\vec{C} = \begin{bmatrix}24\\-41\\5\end{bmatrix}.
-$$
+% Positions
+\begin{equation}
+\vec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix},\quad
+\vec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix},\quad
+\vec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}.
+\tag{1}
+\end{equation}
 
-The vectors representing the sides of the triangle are
-$$
-\vec{AB} = \vec{B}-\vec{A} = \begin{bmatrix}7\\14\\21\end{bmatrix}, \quad
-\vec{BC} = \vec{C}-\vec{B} = \begin{bmatrix}14\\-61\\-25\end{bmatrix}, \quad
-\vec{AC} = \vec{C}-\vec{A} = \begin{bmatrix}21\\-47\\-4\end{bmatrix}.
-$$
+% Side (difference) vectors — no AB/BC/AC notation
+\begin{equation}
+\vec{B}-\vec{A}
+=\begin{bmatrix}10-3\\20-6\\30-9\end{bmatrix}
+=\begin{bmatrix}7\\14\\21\end{bmatrix},
+\quad
+\vec{C}-\vec{B}
+=\begin{bmatrix}24-10\\-41-20\\5-30\end{bmatrix}
+=\begin{bmatrix}14\\-61\\-25\end{bmatrix},
+\quad
+\vec{C}-\vec{A}
+=\begin{bmatrix}24-3\\-41-6\\5-9\end{bmatrix}
+=\begin{bmatrix}21\\-47\\-4\end{bmatrix}.
+\tag{2}
+\end{equation}
 
-Check for right angles using the matrix multiplication form:
+% Dot products (matrix form), expanded
+\begin{equation}
+(\vec{B}-\vec{A})^{\!T}(\vec{C}-\vec{A})
+=
+\begin{bmatrix}7&14&21\end{bmatrix}
+\begin{bmatrix}21\\-47\\-4\end{bmatrix}
+=
+7\cdot21+14\cdot(-47)+21\cdot(-4)
+=-595 \neq 0.
+\tag{3}
+\end{equation}
 
-$$
-\vec{AB}^T \vec{AC} 
-= \begin{bmatrix}7 & 14 & 21\end{bmatrix}
-  \begin{bmatrix}21\\-47\\-4\end{bmatrix}
-= 7\cdot21 + 14\cdot(-47) + 21\cdot(-4) = -595 \neq 0
-$$
+\begin{equation}
+(\vec{B}-\vec{A})^{\!T}(\vec{C}-\vec{B})
+=
+\begin{bmatrix}7&14&21\end{bmatrix}
+\begin{bmatrix}14\\-61\\-25\end{bmatrix}
+=
+7\cdot14+14\cdot(-61)+21\cdot(-25)
+=-1281 \neq 0.
+\tag{4}
+\end{equation}
 
-$$
-\vec{AB}^T \vec{BC} 
-= \begin{bmatrix}7 & 14 & 21\end{bmatrix}
-  \begin{bmatrix}14\\-61\\-25\end{bmatrix}
-= 7\cdot14 + 14\cdot(-61) + 21\cdot(-25) = -1281 \neq 0
-$$
+\begin{equation}
+(\vec{C}-\vec{A})^{\!T}(\vec{C}-\vec{B})
+=
+\begin{bmatrix}21&-47&-4\end{bmatrix}
+\begin{bmatrix}14\\-61\\-25\end{bmatrix}
+=
+21\cdot14+(-47)\cdot(-61)+(-4)\cdot(-25)
+=3261 \neq 0.
+\tag{5}
+\end{equation}
 
-$$
-\vec{AC}^T \vec{BC} 
-= \begin{bmatrix}21 & -47 & -4\end{bmatrix}
-  \begin{bmatrix}14\\-61\\-25\end{bmatrix}
-= 21\cdot14 + (-47)\cdot(-61) + (-4)\cdot(-25) = 3261 \neq 0
-$$
+Since none of the products is zero, no angle of the triangle is $90^\circ$.
 
-Since none of these products is zero, no angle of the triangle is $90^\circ$.
 
 \bigskip
 

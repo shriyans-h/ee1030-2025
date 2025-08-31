@@ -97,49 +97,82 @@ are the vertices of a right-angled triangle using matrices.
 \end{block}
 \end{frame}
 
-%----------------- Process -----------------
-\begin{frame}{Process}
-\textbf{Step 1: Represent points as vectors}
-$\vec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix}, \;
-\vec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix}, \;
-\vec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}$
+%----------------- Process Frame 1 -----------------
+\begin{frame}{Process (Step 1)}
+\textbf{Step 1: Represent points as vectors} \\
+\begin{equation}
+\vec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix}, \quad
+\vec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix}, \quad
+\vec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}
+\end{equation}
 
-\textbf{Step 2: Compute side vectors}
-$\vec{AB}=\vec{B}-\vec{A}, \quad
-\vec{BC}=\vec{C}-\vec{B}, \quad
-\vec{AC}=\vec{C}-\vec{A}$
+\textbf{Step 2: Compute first difference vector} \\
+\begin{equation}
+\vec{B}-\vec{A} =
+\begin{bmatrix}10-3\\20-6\\30-9\end{bmatrix} =
+\begin{bmatrix}7\\14\\21\end{bmatrix}
+\end{equation}
+\end{frame}
 
+%----------------- Process Frame 2 -----------------
+\begin{frame}{Process (Step 2)}
+\textbf{Step 2 (continued): Compute remaining difference vectors} \\
+\begin{equation}
+\vec{C}-\vec{B} =
+\begin{bmatrix}24-10\\-41-20\\5-30\end{bmatrix} =
+\begin{bmatrix}14\\-61\\-25\end{bmatrix}
+\end{equation}
 
-\textbf{Step 3: Use dot product test}
-$\vec{u}\cdot \vec{v} = 0 \;\;\Rightarrow\;\; \text{Vectors are perpendicular}$
+\begin{equation}
+\vec{C}-\vec{A} =
+\begin{bmatrix}24-3\\-41-6\\5-9\end{bmatrix} =
+\begin{bmatrix}21\\-47\\-4\end{bmatrix}
+\end{equation}
 
+\textbf{Step 3: Use dot product test} \\
+\begin{equation}
+(\vec{X}-\vec{Y}) \cdot (\vec{Z}-\vec{W}) = 0 
+\;\;\Rightarrow\;\; \text{Vectors are perpendicular}
+\end{equation}
 \end{frame}
 
 %----------------- Final Answer -----------------
 \begin{frame}{Conclusion}
-Dot product results:
-$\vec{AB}\cdot \vec{AC} = -595,\quad
-\vec{AB}\cdot \vec{BC} = -1281,\quad
-\vec{AC}\cdot \vec{BC} = 3261$
+Dot product results: \\
+\begin{equation}
+(\vec{B}-\vec{A}) \cdot (\vec{C}-\vec{A}) = -595
+\end{equation}
 
+\begin{equation}
+(\vec{B}-\vec{A}) \cdot (\vec{C}-\vec{B}) = -1281
+\end{equation}
+
+\begin{equation}
+(\vec{C}-\vec{A}) \cdot (\vec{C}-\vec{B}) = 3261
+\end{equation}
 
 Since none are zero, the points \textbf{do not form a right-angled triangle}.
 \end{frame}
+
 
 %----------------- C Code -----------------
 \begin{frame}[fragile]{C Code}
 \begin{lstlisting}[language=C]
 #include <stdio.h>
-
 int main() {
-    double AB[3] = {B[0]-A[0], B[1]-A[1], B[2]-A[2]};
-    double AC[3] = {C[0]-A[0], C[1]-A[1], C[2]-A[2]};
-    double BC[3] = {C[0]-B[0], C[1]-B[1], C[2]-B[2]};
-    double ABdotAC = AB[0]*AC[0]+AB[1]*AC[1]+AB[2]*AC[2];
-    double ABdotBC = AB[0]*BC[0]+AB[1]*BC[1]+AB[2]*BC[2];
-    double ACdotBC = AC[0]*BC[0]+AC[1]*BC[1]+AC[2]*BC[2];
-
-    if(ABdotAC==0 || ABdotBC==0 || ACdotBC==0)
+    double A[3] = {3, 6, 9};
+    double B[3] = {10, 20, 30};
+    double C[3] = {24, -41, 5};
+    double dot1 = (B[0]-A[0])*(C[0]-A[0]) +
+                  (B[1]-A[1])*(C[1]-A[1]) +
+                  (B[2]-A[2])*(C[2]-A[2]);
+    double dot2 = (B[0]-A[0])*(C[0]-B[0]) +
+                  (B[1]-A[1])*(C[1]-B[1]) +
+                  (B[2]-A[2])*(C[2]-B[2]);
+    double dot3 = (C[0]-A[0])*(C[0]-B[0]) +
+                  (C[1]-A[1])*(C[1]-B[1]) +
+                  (C[2]-A[2])*(C[2]-B[2]);
+    if(dot1==0 || dot2==0 || dot3==0)
         printf("Right-angled triangle\n");
     else
         printf("Not right-angled\n");
@@ -148,24 +181,22 @@ int main() {
 \end{lstlisting}
 \end{frame}
 
+
 %----------------- Python Code (Part 1) -----------------
 \begin{frame}[fragile]{Python Code (1/2)}
 \begin{lstlisting}[language=Python]
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 A = np.array([3, 6, 9])
 B = np.array([10, 20, 30])
 C = np.array([24, -41, 5])
-AB = B - A
-AC = C - A
-BC = C - B
-AB_dot_AC = np.dot(AB, AC)
-AB_dot_BC = np.dot(AB, BC)
-AC_dot_BC = np.dot(AC, BC)
 
-if AB_dot_AC==0 or AB_dot_BC==0 or AC_dot_BC==0:
+# Dot products computed directly
+dot1 = np.dot(B-A, C-A)
+dot2 = np.dot(B-A, C-B)
+dot3 = np.dot(C-A, C-B)
+
+if dot1 == 0 or dot2 == 0 or dot3 == 0:
     print("Right-angled triangle")
 else:
     print("Not right-angled")
@@ -175,12 +206,12 @@ else:
 %----------------- Python Code (Part 2) -----------------
 \begin{frame}[fragile]{Python Code (2/2: Plot)}
 \begin{lstlisting}[language=Python]
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure(figsize=(8,6))
 ax = fig.add_subplot(111, projection='3d')
-
 ax.scatter(*A, color='black', s=80)
 ax.text(A[0]+0.5, A[1]+0.5, A[2]+0.5, "A(3,6,9)")
-
 ax.scatter(*B, color='blue', s=80)
 ax.text(B[0]+0.5, B[1]+0.5, B[2]+0.5, "B(10,20,30)")
 
@@ -194,6 +225,7 @@ ax.plot([B[0],C[0]], [B[1],C[1]], [B[2],C[2]], color='red', linestyle='--')
 plt.show()
 \end{lstlisting}
 \end{frame}
+
 
 %----------------- Plot Image -----------------
 \begin{frame}{Triangle in 3D}
