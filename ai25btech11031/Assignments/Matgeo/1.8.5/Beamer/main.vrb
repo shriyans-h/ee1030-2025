@@ -1,0 +1,9 @@
+\frametitle{Python Code}
+\begin{verbatim}
+print("Vector form equation of locus P satisfies:")
+print("2 * (P · P) - 2 * (A+B) · P + |A|^2 + |B|^2 = K^2")
+print("where")
+print(f"A + B = ({AplusB[0]:.1f}, {AplusB[1]:.1f}, {AplusB[2]:.1f}),")
+print(f"|A|^2 = {A_dot:.1f}, |B|^2 = {B_dot:.1f}")
+
+    \end{verbatim}
