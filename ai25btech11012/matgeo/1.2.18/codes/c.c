@@ -38,7 +38,7 @@ int main()
 		printf("Error opening file!\n");
 		return 1;
 	}
-	fprintf(file, "x\ty");
+	fprintf(file, "x\ty\n");
 	fprintf(file, "%d\t", M[0][3]);
 	fprintf(file, "%d\t", M[1][3]);
 	
