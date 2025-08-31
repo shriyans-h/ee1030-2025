@@ -56,16 +56,13 @@
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
-\textbf{Question:}  
-Find the coordinates of a point $A$ where $AB$ is a diameter of the circle with center  
-$(3, -1)$ and the point $B$ is $(2, 6)$.
+
+
+\textbf{Question}:\\
+ Find the point $A$ where $AB$ is a diameter of a circle with center $(3,-1)$ and the point $B$ is $(2,6)$
+
 \bigskip
 
-\textbf{Solution:}
-let $C$ be the center of circle
-\bigskip
-
- 
 \begin{tabular}[12pt]{ |c| c| c|} 
     \hline
     {Point} & {Vector} \\ 
@@ -74,61 +71,55 @@ let $C$ be the center of circle
     \hline
     C & $ \myvec{3 \\ -1} $   \\
     \hline  
-    \end{tabular}
-\bigskip
-\begin{document}
-
-Given points:
-\[
-\begin{tabular}{c}
-A(x,y)\\
-B(2,6)\\
-C(3,-1) 
 \end{tabular}
+
+\bigskip
+
+\textbf{Using rank of matrix:}
+\bigskip
+Three points \( \vec{A}, \vec{C}, \vec{B} \) are collinear if
+\[
+\rank{\begin{pmatrix} \vec{C} - \vec{A} & \vec{B} - \vec{A} \end{pmatrix}} = 1
 \]
-As $C$ is the center of the circle, it divides $AB$ in $1:1$ ratio.  
-If $P$ divides $QR$ in $k:1$ ratio, then
 
 \[
-P = \frac{kR + 1(Q)}{k+1}
+\vec{C} - \vec{A} = \myvec{3 - x\\ -1 - y}, \quad
+\vec{B} - \vec{A} = \myvec{2 - x\\ 6 - y}
 \]
 
-Now,
+Form matrix:
 \[
-C =  \begin{pmatrix}
-\frac{A+B} {2} 
+\begin{pmatrix}
+3 - x & 2 - x \\
+-1 - y & 6 - y
 \end{pmatrix}
 \]
 
+Apply row operation:
 \[
-2 \begin{pmatrix} 3 \\ -1 \end{pmatrix}
-=
-\begin{pmatrix} x \\ y \end{pmatrix}
-+
-\begin{pmatrix} 2 \\ 6 \end{pmatrix}
+R_2 \rightarrow (3 - x)R_2 - (-1 - y)R_1
 \]
 
 \[
-\begin{pmatrix} 6 \\ -2 \end{pmatrix}
-=
-\begin{pmatrix} x+2 \\ y+6 \end{pmatrix}
+(3 - x)(6 - y) + (1 + y)(2 - x) = 0
+\Rightarrow 20 - y - 7x = 0 \Rightarrow \boxed{7x + y = 20}
+\]
+
+\bigskip
+
+\textbf{Using midpoint formula:}
+\[
+\vec{C} = \frac{\vec{A} + \vec{B}}{2} \Rightarrow \vec{A} = 2\vec{C} - \vec{B}
 \]
 
 \[
-x+2 = 6 \;\;\Rightarrow\;\; x=4
+\vec{A} = 2\myvec{3\\-1} - \myvec{2\\6} = \myvec{6\\-2} - \myvec{2\\6} = \boxed{\vec{A} = \myvec{4\\-8}}
 \]
 
-\[
-y+6 = -2 \;\;\Rightarrow\;\; y=-8
-\]
-Hence,
-\[
-(x,y)=(4,-8)
-\]
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{figs/fig.png}
-    \caption{Caption}
+    \caption{}
     \label{fig:placeholder}
 \end{figure}
 \end{document}

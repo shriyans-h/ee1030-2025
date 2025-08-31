@@ -1,47 +1,81 @@
-\let\negmedspace\undefined
-\let\negthickspace\undefined
-\documentclass[journal]{IEEEtran}
-\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
-\usepackage{tfrupee} % Include tfrupee package
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
 
-\setlength{\headheight}{1cm} % Set the height of the header box
-\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
-
-\usepackage{gvv-book}
-\usepackage{gvv}
-\usepackage{cite}
+\usetheme{Madrid}
+\usecolortheme{default}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
 \usepackage{txfonts}
+\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{enumitem}
-\usepackage{mathtools}
-\usepackage{gensymb}
-\usepackage{comment}
-\usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
-\usepackage{listings}
-% \usepackage{gvv}                                        
-\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}                                
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow}                                         
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
-\usepackage{lscape}
-\begin{document}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
 
-\bibliographystyle{IEEEtran}
-\vspace{3cm}
+\setbeamertemplate{page number in head/foot}[totalframenumber]
 
-\title{1.5.16}
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{1.5.16}
+\date{August  2025}
 \author{EE25btech11028 - J.Navya sri}
 % \maketitle
 % \newpage
@@ -56,16 +90,15 @@
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
-\textbf{Question:}  
-Find the coordinates of a point $A$ where $AB$ is a diameter of the circle with center  
-$(3, -1)$ and the point $B$ is $(2, 6)$.
+
+
+\begin{document}
+
+\textbf{Question:} \\
+Find the point $A$ where $AB$ is a diameter of a circle with center $(3,-1)$ and the point $B$ is $(2,6)$
+
 \bigskip
 
-\textbf{Solution:}
-let $C$ be the center of circle
-\bigskip
-
- 
 \begin{tabular}[12pt]{ |c| c| c|} 
     \hline
     {Point} & {Vector} \\ 
@@ -74,75 +107,56 @@ let $C$ be the center of circle
     \hline
     C & $ \myvec{3 \\ -1} $   \\
     \hline  
-    \end{tabular}
-\bigskip
-\begin{document}
-
-Given points:
-\[
-\begin{tabular}{c}
-A(x,y)\\
-B(2,6)\\
-C(3,-1) 
 \end{tabular}
+
+\bigskip
+
+\textbf{Using rank of matrix:}
+\bigskip
+Three points \( \vec{A}, \vec{C}, \vec{B} \) are collinear if
+\[
+\rank{\begin{pmatrix} \vec{C} - \vec{A} & \vec{B} - \vec{A} \end{pmatrix}} = 1
 \]
-As $C$ is the center of the circle, it divides $AB$ in $1:1$ ratio.  
-If $P$ divides $QR$ in $k:1$ ratio, then
 
 \[
-P = \frac{kR + 1(Q)}{k+1}
+\vec{C} - \vec{A} = \myvec{3 - x\\ -1 - y}, \quad
+\vec{B} - \vec{A} = \myvec{2 - x\\ 6 - y}
 \]
 
-Now,
+Form matrix:
 \[
-C =  \begin{pmatrix}
-\frac{A+B} {2} 
+\begin{pmatrix}
+3 - x & 2 - x \\
+-1 - y & 6 - y
 \end{pmatrix}
 \]
 
+Apply row operation:
 \[
-2 \begin{pmatrix} 3 \\ -1 \end{pmatrix}
-=
-\begin{pmatrix} x \\ y \end{pmatrix}
-+
-\begin{pmatrix} 2 \\ 6 \end{pmatrix}
+R_2 \rightarrow (3 - x)R_2 - (-1 - y)R_1
 \]
 
 \[
-\begin{pmatrix} 6 \\ -2 \end{pmatrix}
-=
-\begin{pmatrix} x+2 \\ y+6 \end{pmatrix}
+(3 - x)(6 - y) + (1 + y)(2 - x) = 0
+\Rightarrow 20 - y - 7x = 0 \Rightarrow \boxed{7x + y = 20}
+\]
+
+\bigskip
+
+\textbf{Using midpoint formula:}
+\[
+\vec{C} = \frac{\vec{A} + \vec{B}}{2} \Rightarrow \vec{A} = 2\vec{C} - \vec{B}
 \]
 
 \[
-x+2 = 6 \;\;\Rightarrow\;\; x=4
+\vec{A} = 2\myvec{3\\-1} - \myvec{2\\6} = \myvec{6\\-2} - \myvec{2\\6} = \boxed{\vec{A} = \myvec{4\\-8}}
 \]
 
-\[
-y+6 = -2 \;\;\Rightarrow\;\; y=-8
-\]
-Hence,
-\[
-(x,y)=(4,-8)
-\]
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{figs/fig.png}
-    \caption{Caption}
+    \caption{}
     \label{fig:placeholder}
 \end{figure}
 \end{document}
 
-Midpoint of $A(4, -8)$ and $B(2, 6)$ is  
-\[
-\left( \frac{4+2}{2}, \; \frac{-8+6}{2} \right) = (3, -1)
-
-\]
-
-\begin{figure} [H]
-    \centering
-    \includegraphics[width=0.8\columnwidth]{figs/fig.png}
-    
-    \label{fig:placeholder}
-\end{figure}
-\end{document}
