@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  1 SEP 2025 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  1 SEP 2025 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,7 +1819,7 @@ l/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 <figs/fig.png, id=231, 462.528pt x 346.896pt>
 File: figs/fig.png Graphic file (type png)
 <use figs/fig.png>
-Package pdftex.def Info: figs/fig.png  used on input line 172.
+Package pdftex.def Info: figs/fig.png  used on input line 176.
 (pdftex.def)             Requested size: 277.84358pt x 208.38268pt.
 
 
@@ -1870,7 +1870,7 @@ ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-Output written on main.pdf (8 pages, 151981 bytes).
+Output written on main.pdf (8 pages, 152045 bytes).
 PDF statistics:
  314 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams
