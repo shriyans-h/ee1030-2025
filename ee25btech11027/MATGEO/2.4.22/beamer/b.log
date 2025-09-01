@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  30 AUG 2025 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  1 SEP 2025 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**b.tex
 (./b.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1740,12 +1740,15 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
+Overfull \vbox (1.26852pt too high) detected at line 133
+ []
+
+
 
 [4
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Overfull \hbox (0.99683pt too wide) detected at line 136
-[]
+Overfull \vbox (0.32997pt too high) detected at line 153
  []
 
 
@@ -1753,11 +1756,6 @@ Overfull \hbox (0.99683pt too wide) detected at line 136
 [5
 
 ]
-Overfull \hbox (85.90875pt too wide) detected at line 154
-[]
- []
-
-
 
 [6
 
@@ -1773,7 +1771,28 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 3.
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
+)
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC·).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 // Compute plane constant: d = -(N Â· 
+                                           M)
+? H
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+? 
+)
+Overfull \vbox (1.72923pt too high) detected at line 224
+ []
+
+
 
 [8
 
@@ -1781,49 +1800,55 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `b.vrb'.
 
  (./b.vrb
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-9.
 
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-Overfull \vbox (1.72923pt too high) detected at line 219
- []
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 lib = ctypes.CDLL("
+                       ./libgeometry.so")   # use "geometry.dll" on Windows
+? 
 
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 lib = ctypes.CDLL("./libgeometry.so"
+                                        )   # use "geometry.dll" on Windows
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...= ctypes.CDLL("./libgeometry.so")   # use "
+                                                  geometry.dll" on Windows
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...("./libgeometry.so")   # use "geometry.dll"
+                                                   on Windows
+? 
+)
 
 [9
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 print("
-           Midpoint:", M)
-? H
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 print("Midpoint:"
-                     , M)
-? 
-)
-Overfull \vbox (1.72923pt too high) detected at line 252
+ (./b.vrb)
+Overfull \vbox (1.72923pt too high) detected at line 272
  []
 
 
@@ -1841,6 +1866,11 @@ Overfull \vbox (1.72923pt too high) detected at line 252
 \openout4 = `b.vrb'.
 
  (./b.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+6.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
@@ -1848,9 +1878,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 plt.savefig("
-                 /media/indhiresh-s/New Volume/Matrix/ee1030-2025/ee25btech1...
-
+l.10 ax.text(A[0], A[1], A[2], "
+                                A(2,3,4)", color='red')
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -1859,22 +1888,191 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 ...5btech11027/MATGEO/2.4.22/figs/figure1.png"
-                                                  )
+l.10 ax.text(A[0], A[1], A[2], "A(2,3,4)"
+                                         , color='red')
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ax.text(B[0], B[1], B[2], "
+                                B(4,5,8)", color='green')
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ax.text(B[0], B[1], B[2], "B(4,5,8)"
+                                         , color='green')
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ax.text(M[0], M[1], M[2], "
+                                M(3,4,6)", color='purple')
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 ax.text(M[0], M[1], M[2], "M(3,4,6)"
+                                         , color='purple')
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20         color='blue', label="
+                                  Line AB")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20         color='blue', label="Line AB"
+                                          )
 ? 
 )
 
 [12
 
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+\openout4 = `b.vrb'.
+
+ (./b.vrb
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ax.set_xlabel("
+                    X-axis")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 ax.set_xlabel("X-axis"
+                           )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ax.set_ylabel("
+                    Y-axis")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ax.set_ylabel("Y-axis"
+                           )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ax.set_zlabel("
+                    Z-axis")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ax.set_zlabel("Z-axis"
+                           )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ax.set_title("
+                   Required Plane")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ax.set_title("Required Plane"
+                                  )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 plt.savefig("
+                  /media/indhiresh-s/New Volume/Matrix/ee1030-2025/ee25btech...
+
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...btech11027/MATGEO/2.4.22/figs/figure1.png"
+                                                  )
+? 
+)
+
+[13
+
 ]
-<figs/figure1.png, id=373, 462.528pt x 346.896pt>
+<figs/figure1.png, id=402, 462.528pt x 346.896pt>
 File: figs/figure1.png Graphic file (type png)
 <use figs/figure1.png>
-Package pdftex.def Info: figs/figure1.png  used on input line 298.
+Package pdftex.def Info: figs/figure1.png  used on input line 356.
 (pdftex.def)             Requested size: 277.84358pt x 208.38268pt.
 
 
-[13
+[14
 
  <./figs/figure1.png>]
 \tf@nav=\write7
@@ -1905,13 +2103,13 @@ Package rerunfilecheck Info: Checksums for `b.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59103 strings out of 473197
- 1433582 string characters out of 5718605
- 2563221 words of memory out of 5000000
- 81348 multiletter control sequences out of 15000+600000
+ 59124 strings out of 473197
+ 1433806 string characters out of 5718605
+ 2534221 words of memory out of 5000000
+ 81366 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
@@ -1919,10 +2117,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (13 pages, 253683 bytes).
+Output written on b.pdf (14 pages, 253203 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 30 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,38 +1,54 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Points
-A = np.array([2, 3, 4])
-B = np.array([4, 5, 8])
-M = (A + B) / 2
+# Input points
+A = np.array([2.0, 3.0, 4.0], dtype=np.double)
+B = np.array([4.0, 5.0, 8.0], dtype=np.double)
+M = (A + B) / 2.0   # Midpoint
 
-# Plane x + y + z = 10
-xx, yy = np.meshgrid(np.linspace(0,6,20), np.linspace(0,8,20))
-zz = 10 - xx - yy
+# Normal vector (AB) and plane constant
+N = B - A
+d = -(N[0]*M[0] + N[1]*M[1] + N[2]*M[2])
 
+# Plane equation function
+def plane_z(x, y):
+    return (-N[0] * x - N[1] * y - d) / N[2]
+
+# Create a small plane patch around M
+span = 1.5
+xx, yy = np.meshgrid(
+    np.linspace(M[0] - span, M[0] + span, 10),
+    np.linspace(M[1] - span, M[1] + span, 10)
+)
+zz = plane_z(xx, yy)
+
+# Plot
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-# Plot plane
-ax.plot_surface(xx, yy, zz, alpha=0.3, color='cyan')
+# Plot and label points
+ax.scatter(*A, color='red', s=100)
+ax.text(A[0], A[1], A[2], "A(2,3,4)", color='red')
 
-# Points and line
-ax.scatter(*A, color='red', s=60, label='A(2,3,4)')
-ax.scatter(*B, color='green', s=60, label='B(4,5,8)')
-ax.scatter(*M, color='purple', s=100, marker='*', label='M(3,4,6)')
-ax.plot([A[0], B[0]],    # x coordinates
-        [A[1], B[1]],    # y coordinates
-        [A[2], B[2]],    # z coordinates
-        color='blue', linewidth=2, label='Line AB')
-ax.text(*A, 'A(2,3,4)', fontsize=9, color='red')
-ax.text(*B, 'B(4,5,8)', fontsize=9, color='green')
-ax.text(*M, 'M(3,4,6)', fontsize=9, color='purple')
+ax.scatter(*B, color='green', s=100)
+ax.text(B[0], B[1], B[2], "B(4,5,8)", color='green')
 
-ax.set_xlabel('X-axis')
-ax.set_ylabel('Y-axis')
-ax.set_zlabel('Z-axis')
+ax.scatter(*M, color='purple', s=200, marker='*')
+ax.text(M[0], M[1], M[2], "M(3,4,6)", color='purple')
+
+# Line AB
+ax.plot([A[0], B[0]], [A[1], B[1]], [A[2], B[2]],
+        color='blue', label="Line AB")
+
+# Plane patch
+ax.plot_surface(xx, yy, zz, alpha=0.4, color='cyan')
+
+# Axes labels and title
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.set_title("Required Plane")
 ax.legend()
-plt.title('Midpoint using C + Python')
 plt.savefig("/media/indhiresh-s/New Volume/Matrix/ee1030-2025/ee25btech11027/MATGEO/2.4.22/figs/figure1.png")
+
 plt.show()

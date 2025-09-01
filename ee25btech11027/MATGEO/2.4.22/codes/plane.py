@@ -1,56 +1,73 @@
-import numpy as np
 import ctypes
+import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Load C library
-libmid = ctypes.CDLL('./plane.so')
+# Load compiled C library
+lib = ctypes.CDLL("./plane.so")   # use "geometry.dll" on Windows
 
-# Define arrays (float32)
-A = np.array([2.0, 3.0, 4.0], dtype=np.float32)
-B = np.array([4.0, 5.0, 8.0], dtype=np.float32)
-M = np.zeros(3, dtype=np.float32)
+# Define argument and return types
+lib.midpoint.argtypes = [np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3),
+                         np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3),
+                         np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3)]
 
-# Set argtypes/restype for C function
-libmid.midpoint.argtypes = [ctypes.POINTER(ctypes.c_float),
-                            ctypes.POINTER(ctypes.c_float),
-                            ctypes.POINTER(ctypes.c_float)]
-libmid.midpoint.restype = None
+lib.normal.argtypes = [np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3),
+                       np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3),
+                       np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3)]
 
-# Call C function to compute midpoint
-libmid.midpoint(M.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-                A.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-                B.ctypes.data_as(ctypes.POINTER(ctypes.c_float)))
+lib.plane_constant.argtypes = [np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3),
+                               np.ctypeslib.ndpointer(dtype=np.double, ndim=1, shape=3)]
+lib.plane_constant.restype = ctypes.c_double
 
-print("Midpoint:", M)
+# Input points
+A = np.array([2.0, 3.0, 4.0], dtype=np.double)
+B = np.array([4.0, 5.0, 8.0], dtype=np.double)
+M = np.zeros(3, dtype=np.double)
+N = np.zeros(3, dtype=np.double)
 
-# Prepare plane x + y + z = 10
-xx, yy = np.meshgrid(np.linspace(0, 6, 20), np.linspace(0, 8, 20))
-zz = 10 - xx - yy
+# Call C functions
+lib.midpoint(A, B, M)
+lib.normal(A, B, N)
+d = lib.plane_constant(N, M)
 
-# Plot
+# Plane equation function
+def plane_z(x, y):
+    return (-N[0] * x - N[1] * y - d) / N[2]
+
+# Create small plane patch around M
+span = 1.5
+xx, yy = np.meshgrid(
+    np.linspace(M[0] - span, M[0] + span, 10),
+    np.linspace(M[1] - span, M[1] + span, 10)
+)
+zz = plane_z(xx, yy)
+
+# --- Plotting ---
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-# Plane
-ax.plot_surface(xx, yy, zz, alpha=0.3, color='cyan')
+# Mark and label points
+ax.scatter(*A, color='red', s=100)
+ax.text(A[0], A[1], A[2], "A(2,3,4)", color='red')
 
-# Points and line
-ax.scatter(*A, color='red', s=60, label='A(2,3,4)')
-ax.scatter(*B, color='green', s=60, label='B(4,5,8)')
-ax.scatter(*M, color='purple', s=100, marker='*', label='M(3,4,6)')
-ax.plot([A[0], B[0]],    # x coordinates
-        [A[1], B[1]],    # y coordinates
-        [A[2], B[2]],    # z coordinates
-        color='blue', linewidth=2, label='Line AB')
-ax.text(*A, 'A(2,3,4)', fontsize=9, color='red')
-ax.text(*B, 'B(4,5,8)', fontsize=9, color='green')
-ax.text(*M, 'M(3,4,6)', fontsize=9, color='purple')
+ax.scatter(*B, color='green', s=100)
+ax.text(B[0], B[1], B[2], "B(4,5,8)", color='green')
 
-ax.set_xlabel('X-axis')
-ax.set_ylabel('Y-axis')
-ax.set_zlabel('Z-axis')
+ax.scatter(*M, color='purple', s=200, marker='*')
+ax.text(M[0], M[1], M[2], "M(3,4,6)", color='purple')
+
+# Line AB
+ax.plot([A[0], B[0]], [A[1], B[1]], [A[2], B[2]],
+        color='blue', label="Line AB")
+
+# Plane patch
+ax.plot_surface(xx, yy, zz, alpha=0.4, color='cyan')
+
+# Labels and title
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.set_title("Required plane")
 ax.legend()
-plt.title('Midpoint using C + Python')
+plt.savefig
 plt.savefig("/media/indhiresh-s/New Volume/Matrix/ee1030-2025/ee25btech11027/MATGEO/2.4.22/figs/figure1.png")
 plt.show()

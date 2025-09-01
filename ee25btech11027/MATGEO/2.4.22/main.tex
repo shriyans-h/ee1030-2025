@@ -85,51 +85,68 @@ Let,
     \Vec{A}=\myvec{2\\3\\4}\;\;and\;\;\Vec{B}=\myvec{4\\5\\8}
 \end{align}
 Given that the plane is a perpendicular bisector to the line joining points A and B. Since it is a perpendicular bisector to the line joining points A and B , the midpoint of the line joining points A and B lies on the plane.\\
-Let the midpoint of points A and B be C. Then
+Let the midpoint of points \textbf{A} and \textbf{B} be \textbf{X}. Then
 \begin{align}
-norm({\Vec{C}-\Vec{A}})=norm({\Vec{C}-\Vec{B}})
+||\Vec{X}-\Vec{A}||^2=||\Vec{X}-\Vec{B}||^2
 \end{align}
 \begin{align}
-    \sqrt{(\Vec{C}-\Vec{A})^T(\Vec{C}-\Vec{A})}=\sqrt{(\Vec{C}-\Vec{B})^T(\Vec{C}-\Vec{B})}
+    ||\Vec{X}||^2+||\Vec{A}||^2-2||\Vec{X}||\;||\Vec{A}||= ||\Vec{X}||^2+||\Vec{B}||^2-2||\Vec{X}||\;||\Vec{B}||
 \end{align}
 \begin{align}
-    (\Vec{C}-\Vec{A})^T(\Vec{C}-\Vec{A})=(\Vec{C}-\Vec{B})^T(\Vec{C}-\Vec{B})
-\end{align}
-Let,
-\begin{align}
-    C=\myvec{x \\ y \\ z}
-\end{align}
-\begin{align}
-    \brak{\myvec{x \\ y \\ z}-\myvec{2\\3\\4}}^T\brak{\myvec{x \\ y \\ z}-\myvec{2\\3\\4}}=\brak{\myvec{x \\ y \\ z}-\myvec{4\\5\\8}^T}\brak{\myvec{x \\ y \\ z}-\myvec{4\\5\\8}}
-\end{align}
-\begin{align}
-    \myvec{x-2\\y-3\\z-4}^T\myvec{x-2\\y-3\\z-4}=\myvec{x-4\\y-5\\z-8}^T\myvec{x-4\\y-5\\z-8}
-\end{align}
-\begin{align}
-(x-2)^2+(y-3)^2+(z-4)^2=(x-4)^2+(y-5)^2+(z-8)^2
-\end{align}
-\begin{align}
-    x^2+4-4x+y^2+9-6y+z^2+16-8z=x^2+16-8x+y^2+25-10y+z^2+64-16z
-\end{align}
-\begin{align}
-   4x+4y+8z=76
+    ||\Vec{A}||^2-2||\Vec{X}||\;||\Vec{A}||=||\Vec{B}||^2-2||\Vec{X}||\;||\Vec{B}||
 \end{align}
 
 \begin{align}
-     x+y+2z=19
+   ||\Vec{A}||^2-||\Vec{B}||^2=2\Vec{X^T}\Vec{A}-2\Vec{X^T}\Vec{B}
 \end{align}
-
-Now the equation of plane is :
 \begin{align}
-     x+y+2z=19
+    ||\Vec{A}||^2-||\Vec{B}||^2=2\Vec{X^T}(\Vec{A}-\Vec{B})
 \end{align}
-In matrix form:
+which can be written as :
 \begin{align}
-     \myvec{1\\1\\2}^T\Vec{R}=19
+    ||\Vec{A}||^2-||\Vec{B}||^2=2(\Vec{A}-\Vec{B})^T\Vec{X}
 \end{align}
-Where \textbf{R} is the equation of the plane\\\\
+\begin{align}
+ (\Vec{A}-\Vec{B})^T\Vec{X}=\frac{||\Vec{A}||^2-||\Vec{B}||^2}{2}
+\end{align}
+Now,
+\begin{align}
+    \Vec{A}-\Vec{B}=\myvec{2\\3\\4}-\myvec{4\\5\\8}
+\end{align}
+\begin{align}
+   \Vec{A}-\Vec{B}=\myvec{-2\\-2\\-4}
+\end{align}
+And
+\begin{align}
+     ||\Vec{A}||=\sqrt{\Vec{A^T}\Vec{A}}
+\end{align}
+\begin{align}
+    ||\Vec{A}||=\sqrt{2(2)+3(3)+4(4)}
+\end{align}
+\begin{align}
+    ||\Vec{A}||=\sqrt{29}
+\end{align}
 
-
+\begin{align}
+     ||\Vec{B}||=\sqrt{\Vec{B^T}\Vec{B}}
+\end{align}
+\begin{align}
+     ||\Vec{B}||=\sqrt{4(4)+5(5)+8(8)}
+\end{align}
+\begin{align}
+    ||\Vec{B}||=\sqrt{105}
+\end{align}
+Now substituting the respective value in Eq.8:
+\begin{align}
+     \myvec{-2\\-2\\-4}^T\Vec{X}=\frac{29-105}{2}
+\end{align}
+\begin{align}
+    \myvec{1\\1\\2}^T\Vec{X}=19
+\end{align}
+Hence the equation of the plane is given by:
+\begin{align}
+    \myvec{1\\1\\2}^T\Vec{X}=19
+\end{align}
 
 From the figure it is clearly verified that the theoretical solution matches with the computational solution.\\
 \begin{figure}[h]
