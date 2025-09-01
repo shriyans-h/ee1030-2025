@@ -98,17 +98,18 @@ are the vertices of a right-angled triangle using matrices.
 \end{frame}
 
 %----------------- Process Frame 1 -----------------
+%----------------- Process Frame 1 -----------------
 \begin{frame}{Process (Step 1)}
 \textbf{Step 1: Represent points as vectors} \\
 \begin{equation}
-\vec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix}, \quad
-\vec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix}, \quad
-\vec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}
+\myvec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix}, \quad
+\myvec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix}, \quad
+\myvec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}
 \end{equation}
 
 \textbf{Step 2: Compute first difference vector} \\
 \begin{equation}
-\vec{B}-\vec{A} =
+\myvec{B}-\myvec{A} =
 \begin{bmatrix}10-3\\20-6\\30-9\end{bmatrix} =
 \begin{bmatrix}7\\14\\21\end{bmatrix}
 \end{equation}
@@ -118,20 +119,20 @@ are the vertices of a right-angled triangle using matrices.
 \begin{frame}{Process (Step 2)}
 \textbf{Step 2 (continued): Compute remaining difference vectors} \\
 \begin{equation}
-\vec{C}-\vec{B} =
+\myvec{C}-\myvec{B} =
 \begin{bmatrix}24-10\\-41-20\\5-30\end{bmatrix} =
 \begin{bmatrix}14\\-61\\-25\end{bmatrix}
 \end{equation}
 
 \begin{equation}
-\vec{C}-\vec{A} =
+\myvec{C}-\myvec{A} =
 \begin{bmatrix}24-3\\-41-6\\5-9\end{bmatrix} =
 \begin{bmatrix}21\\-47\\-4\end{bmatrix}
 \end{equation}
 
 \textbf{Step 3: Use dot product test} \\
 \begin{equation}
-(\vec{X}-\vec{Y}) \cdot (\vec{Z}-\vec{W}) = 0 
+(\myvec{X}-\myvec{Y}) \cdot (\myvec{Z}-\myvec{W}) = 0 
 \;\;\Rightarrow\;\; \text{Vectors are perpendicular}
 \end{equation}
 \end{frame}
@@ -140,19 +141,20 @@ are the vertices of a right-angled triangle using matrices.
 \begin{frame}{Conclusion}
 Dot product results: \\
 \begin{equation}
-(\vec{B}-\vec{A}) \cdot (\vec{C}-\vec{A}) = -595
+(\myvec{B}-\myvec{A}) \cdot (\myvec{C}-\myvec{A}) = -595
 \end{equation}
 
 \begin{equation}
-(\vec{B}-\vec{A}) \cdot (\vec{C}-\vec{B}) = -1281
+(\myvec{B}-\myvec{A}) \cdot (\myvec{C}-\myvec{B}) = -1281
 \end{equation}
 
 \begin{equation}
-(\vec{C}-\vec{A}) \cdot (\vec{C}-\vec{B}) = 3261
+(\myvec{C}-\myvec{A}) \cdot (\myvec{C}-\myvec{B}) = 3261
 \end{equation}
 
 Since none are zero, the points \textbf{do not form a right-angled triangle}.
 \end{frame}
+
 
 
 %----------------- C Code -----------------

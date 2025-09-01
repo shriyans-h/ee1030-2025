@@ -76,23 +76,23 @@ are the vertices of a right-angled triangle using matrices.
 
 % Positions
 \begin{equation}
-\vec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix},\quad
-\vec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix},\quad
-\vec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}.
+\myvec{A}=\begin{bmatrix}3\\6\\9\end{bmatrix},\quad
+\myvec{B}=\begin{bmatrix}10\\20\\30\end{bmatrix},\quad
+\myvec{C}=\begin{bmatrix}24\\-41\\5\end{bmatrix}.
 \tag{1}
 \end{equation}
 
 % Side (difference) vectors — no AB/BC/AC notation
 \begin{equation}
-\vec{B}-\vec{A}
+\myvec{B}-\myvec{A}
 =\begin{bmatrix}10-3\\20-6\\30-9\end{bmatrix}
 =\begin{bmatrix}7\\14\\21\end{bmatrix},
 \quad
-\vec{C}-\vec{B}
+\myvec{C}-\myvec{B}
 =\begin{bmatrix}24-10\\-41-20\\5-30\end{bmatrix}
 =\begin{bmatrix}14\\-61\\-25\end{bmatrix},
 \quad
-\vec{C}-\vec{A}
+\myvec{C}-\myvec{A}
 =\begin{bmatrix}24-3\\-41-6\\5-9\end{bmatrix}
 =\begin{bmatrix}21\\-47\\-4\end{bmatrix}.
 \tag{2}
@@ -100,7 +100,7 @@ are the vertices of a right-angled triangle using matrices.
 
 % Dot products (matrix form), expanded
 \begin{equation}
-(\vec{B}-\vec{A})^{\!T}(\vec{C}-\vec{A})
+(\myvec{B}-\myvec{A})^{\!T}(\myvec{C}-\myvec{A})
 =
 \begin{bmatrix}7&14&21\end{bmatrix}
 \begin{bmatrix}21\\-47\\-4\end{bmatrix}
@@ -111,7 +111,7 @@ are the vertices of a right-angled triangle using matrices.
 \end{equation}
 
 \begin{equation}
-(\vec{B}-\vec{A})^{\!T}(\vec{C}-\vec{B})
+(\myvec{B}-\myvec{A})^{\!T}(\myvec{C}-\myvec{B})
 =
 \begin{bmatrix}7&14&21\end{bmatrix}
 \begin{bmatrix}14\\-61\\-25\end{bmatrix}
@@ -122,7 +122,7 @@ are the vertices of a right-angled triangle using matrices.
 \end{equation}
 
 \begin{equation}
-(\vec{C}-\vec{A})^{\!T}(\vec{C}-\vec{B})
+(\myvec{C}-\myvec{A})^{\!T}(\myvec{C}-\myvec{B})
 =
 \begin{bmatrix}21&-47&-4\end{bmatrix}
 \begin{bmatrix}14\\-61\\-25\end{bmatrix}
@@ -133,7 +133,6 @@ are the vertices of a right-angled triangle using matrices.
 \end{equation}
 
 Since none of the products is zero, no angle of the triangle is $90^\circ$.
-
 
 \bigskip
 
