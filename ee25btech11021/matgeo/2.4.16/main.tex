@@ -59,138 +59,79 @@
 \renewcommand{\thetable}{\theenumi}
 
 
-\textbf{Question}\\
-\text{given points are}
+\textbf{Question} \\
+Verify the following:\\  
+(a) $(0,7,-10), (1,6,-6)$ and $(4,9,-6)$ are the vertices of an isosceles triangle.  \\
+(b) $(0,7,10), (-1,6,6)$ and $(-4,9,6)$ are the vertices of a right-angled triangle.  
+
+
+\textbf{Solution a}\\
+% ---------- Part (a) ----------
+\textbf{Property:} In an isosceles triangle, the perpendicular bisector of a side passes through the opposite vertex.
+
+\begin{align}
+\vec{A} = \myvec{0\\7\\-10},  
+\vec{B} = \myvec{1\\6\\-6},  
+\vec{C} = \myvec{4\\9\\-6}
+\end{align}
+\text{Midpoint of side } AC: 
+\begin{align}
+ \vec{M} = \frac{\vec{A}+\vec{C}}{2} 
+= \frac{\myvec{0\\7\\-10}+\myvec{4\\9\\-6}}{2} 
+= \myvec{2\\8\\-8}
+\end{align}
+\text{Direction vector of side } AC: 
+\begin{align}
+ \vec{C}-\vec{A} = \myvec{4\\9\\-6}-\myvec{0\\7\\-10} 
+= \myvec{4\\2\\4}
+\end{align}
+\text{Vector from midpoint to } B:
+\begin{align}
+\vec{B}-\vec{M} = \myvec{1\\6\\-6}-\myvec{2\\8\\-8} 
+= \myvec{-1\\-2\\2}
+\end{align}
+\begin{align}
+(\vec{C}-\vec{A})^\top(\vec{B}-\vec{M}) 
+= \myvec{4&2&4}\myvec{-1\\-2\\2} = -4-4+8=0
+\end{align}
 \begin{align*}
-\vec{A} = \myvec{0\\7\\-10}, \qquad
-\vec{B} = \myvec{1\\6\\-6}, \qquad
-\vec{C} = \myvec{4\\9\\-6}.
+ \vec{B} \text{ lies on the perpendicular bisector of side } AC.\\
+ \therefore AB = BC \implies \triangle ABC \text{ is isosceles.}
 \end{align*}
-\textbf{solution}\\
-We consider the vectors
+\textbf{Solution b}\\
+\textbf{Property:} If two sides of a triangle are perpendicular, then the included angle is a right angle.
+\begin{align}
+\vec{A} = \myvec{0\\7\\10},  
+\vec{B} = \myvec{-1\\6\\6},  
+\vec{C} = \myvec{-4\\9\\6}
+\end{align}
+\begin{align}
+\vec{A}-\vec{B} = \myvec{0\\7\\10}-\myvec{-1\\6\\6} 
+= \myvec{1\\1\\4}
+\end{align}
+\begin{align}
+\vec{C}-\vec{B} = \myvec{-4\\9\\6}-\myvec{-1\\6\\6} 
+= \myvec{-3\\3\\0}
+\end{align}
+\begin{align}
+(\vec{A}-\vec{B})^\top(\vec{C}-\vec{B}) 
+= \myvec{1&1&4}\myvec{-3\\3\\0} = -3+3+0=0
+\end{align}
 \begin{align*}
-\vec{A} = \myvec{0\\7\\-10}, \qquad
-\vec{B} = \myvec{1\\6\\-6}, \qquad
-\vec{C} = \myvec{4\\9\\-6}.
+\implies \vec{A}-\vec{B} \perp \vec{C}-\vec{B}  \Rightarrow  
+\triangle ABC \text{ is right-angled at } B.
 \end{align*}
-
-\section*{ PROOF OF: $\vec{A},\vec{B},\vec{C}$ are not collinear (rank method)}
-Form the difference vectors $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$.
-
-\begin{align}
-\vec{B}-\vec{A} &= \myvec{1-0\\[4pt]6-7\\[4pt]-6-(-10)}
-\end{align}
-
-\begin{align}
-\vec{B}-\vec{A} &= \myvec{1\\-1\\4}
-\end{align}
-
-\begin{align}
-\vec{C}-\vec{A} &= \myvec{4-0\\[4pt]9-7\\[4pt]-6-(-10)}
-\end{align}
-
-\begin{align}
-\vec{C}-\vec{A} &= \myvec{4\\2\\4}
-\end{align}
-
-Place these as columns in the $3\times 2$ matrix $M$.
-
-\begin{align}
-M &= \begin{pmatrix} \vec{B}-\vec{A} & \vec{C}-\vec{A} \end{pmatrix}
-\end{align}
-
-\begin{align}
-M &= \begin{pmatrix}
-1 & 4\\[4pt]
--1 & 2\\[4pt]
-4 & 4
-\end{pmatrix}
-\end{align}
-
-Compute the $2\times2$ minor using rows $1$ and $2$.
-
-\begin{align}
-\det\begin{pmatrix}1 & 4\\[4pt] -1 & 2\end{pmatrix}
-&= 1\cdot 2 - 4\cdot(-1)
-\end{align}
-
-\begin{align}
-\det\begin{pmatrix}1 & 4\\[4pt] -1 & 2\end{pmatrix}
-&= 2 + 4 = 6 \neq 0
-\end{align}
-
-Hence $\operatorname{rank}(M)=2$, so $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$ are linearly independent.  
-Therefore $\vec{A},\vec{B},\vec{C}$ are not collinear and determine a triangle.
-
-\section*{a) verification for isosceles triangles}
-\textbf{Isosceles via perpendicular bisector:}
-\begin{align}
-\text{Midpoint } \vec{M} \text{ of } \overline{AC}
-&= \frac{\vec{A}+\vec{C}}{2}
-= \frac{1}{2}\myvec{0+4\\7+9\\-10+(-6)}
-= \myvec{2\\8\\-8},
-\end{align}
-\begin{align}
-\vec{MB} &= \vec{B}-\vec{M}
-= \myvec{1-2\\6-8\\-6-(-8)}
-= \myvec{-1\\-2\\2},\\
-\vec{AC} &= \vec{C}-\vec{A}
-= \myvec{4-0\\9-7\\-6-(-10)}
-= \myvec{4\\2\\4}.
-\end{align}
-\begin{align}
-\vec{MB}^\top \vec{AC}
-&= \myvec{-1 & -2 & 2}\myvec{4\\2\\4}
-= (-1)\cdot 4 + (-2)\cdot 2 + 2\cdot 4
-= -4 -4 + 8
-= 0.
-\end{align}
-Thus $\vec{MB}\perp \vec{AC}$ and $\vec{M}$ is the midpoint of $AC$, so the line through $\vec{M}$ in the direction of $\vec{MB}$ is the \emph{perpendicular bisector} of $AC$ and passes through $\vec{B}$.
-By the perpendicular-bisector property, points on it are equidistant from $A$ and $C$, hence
-\begin{align}
-\|\vec{AB}\|=\|\vec{BC}\|.
-\end{align}
-Therefore, the triangle is \emph{isosceles} with equal sides $AB$ and $BC$.
-
-\section*{B)veification for right angled triangle (matrix / inner-product test)}
-To show the triangle is right-angled, compute the inner product of two adjacent side vectors $\vec{AB}$ and $\vec{BC}$.
-
-\begin{align}
-\vec{AB} &= \vec{B}-\vec{A} = \myvec{1\\-1\\4},
-\end{align}
-
-\begin{align}
-\vec{BC} &= \vec{C}-\vec{B} = \myvec{4-1\\[4pt]9-6\\[4pt]-6-(-6)}
-\end{align}
-
-\begin{align}
-\vec{BC} &= \myvec{3\\3\\0},
-\end{align}
-
-\begin{align}
-(\vec{AB})^T(\vec{BC}) &= \myvec{1&-1&4}\myvec{3\\3\\0}
-\end{align}
-
-\begin{align}
-(\vec{AB})^T(\vec{BC}) &= 1\cdot 3 + (-1)\cdot 3 + 4\cdot 0
-\end{align}
-
-\begin{align}
-(\vec{AB})^T(\vec{BC}) &= 3 - 3 + 0 = 0.
-\end{align}
-
-Since the inner product is zero, $\vec{AB}\perp\vec{BC}$ and therefore the angle $\angle ABC$ is a right angle; the triangle is \textbf{right-angled at $B$}.
-
-
-
-\noindent\textbf{Final statement:} The non-collinear vectors $\vec{A},\vec{B},\vec{C}$ determine a triangle which is both \textbf{isosceles} (with $\|\vec{AB}\|=\|\vec{BC}\|$) and \textbf{right-angled} (with $\vec{AB}\perp\vec{BC}$); hence the triangle is a \emph{right isosceles} triangle with the right angle at vertex $B$.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
-    \caption{}
-    \label{fig:}
+    \includegraphics[width=0.8\columnwidth]{figs/fig1.png}
+    \caption{isosceles triangle(a)}
+    \label{fig:fig1}
 \end{figure}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/fig2.png}
+    \caption{}
+    \label{fig:fig2}
+\end{figure}
 \end{document}
 
