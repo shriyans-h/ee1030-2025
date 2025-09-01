@@ -72,43 +72,63 @@ If
 \]
 find a unit vector perpendicular to both the vectors $\vec{a}$ and $\vec{b}$.\\
 \textbf{Solution:}\\
-A vector perpendicular to both $\vec{a}$ and $\vec{b}$ is given by
-\[
-\vec{n} = \vec{a} \times \vec{b}.
-\]
+We need a vector $\vec{n}$ such that
+\begin{equation}
+\vec{n} \cdot \vec{a} = 0, \quad \vec{n} \cdot \vec{b} = 0
+\end{equation}
+where
+\begin{equation}
+\vec{a} = \myvec{1 \\ -7 \\ 7}, \quad 
+\vec{b} = \myvec{3 \\ -2 \\ 2}.
+\end{equation}
 
-\[
-\vec{n} =
-\begin{vmatrix}
-\hat{i} & \hat{j} & \hat{k} \\
-1 & -7 & 7 \\
-3 & -2 & 2
-\end{vmatrix}.
-\]
+Let
+\begin{equation}
+\vec{n} = \myvec{x \\ y \\ z}.
+\end{equation}
 
-Expanding,
-\[
-\vec{n} = \myvec{0 \\ 19 \\ 19}.
-\]
+Orthogonality conditions
+\begin{align}
+\vec{n} \cdot \vec{a} &= x - 7y + 7z = 0 \label{eq:1} \\
+\vec{n} \cdot \vec{b} &= 3x - 2y + 2z = 0 \label{eq:2}
+\end{align}
 
-The magnitude is
-\[
-|\vec{n}| = \sqrt{0^2 + 19^2 + 19^2} = 19\sqrt{2}.
-\]
+Solve equations
 
-Hence the required unit vector is
-\[
-\hat{n} = \frac{\vec{n}}{|\vec{n}|}
-= \frac{1}{19\sqrt{2}} \myvec{0 \\ 19 \\ 19}
+From \eqref{eq:1},
+\begin{equation}
+x = 7y - 7z. \label{eq:3}
+\end{equation}
+
+Substitute \eqref{eq:3} into \eqref{eq:2}:
+\begin{align}
+3(7y - 7z) - 2y + 2z &= 0 \\
+21y - 21z - 2y + 2z &= 0 \\
+19y - 19z &= 0 \\
+y &= z. \label{eq:4}
+\end{align}
+
+From \eqref{eq:3} and \eqref{eq:4}:
+\begin{equation}
+x = 7y - 7y = 0.
+\end{equation}
+
+Thus,
+\begin{equation}
+\vec{n} = \myvec{0 \\ y \\ y} = y \myvec{0 \\ 1 \\ 1}.
+\end{equation}
+
+Normalize
+\begin{equation}
+\hat{n} = \frac{\myvec{0 \\ 1 \\ 1}}{\sqrt{0^2 + 1^2 + 1^2}}
 = \myvec{0 \\ \tfrac{1}{\sqrt{2}} \\ \tfrac{1}{\sqrt{2}}}.
-\]
+\end{equation}
 
-Therefore, a unit vector perpendicular to both $\vec{a}$ and $\vec{b}$ is
-\[
+Hence, a unit vector perpendicular to both $\vec{a}$ and $\vec{b}$ is
+\begin{equation}
 \hat{n} = \frac{1}{\sqrt{2}}(\hat{j} + \hat{k}),
-\]
+\end{equation}
 or its negative.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\columnwidth]{figs/image.png}
