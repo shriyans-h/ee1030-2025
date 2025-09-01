@@ -37,16 +37,24 @@ void findQuadrilateral(Point A, Point B, Point C, Point D) {
         return;
     }
 
+    int AB_len = lengthSq(AB);
+    int BC_len = lengthSq(BC);
+    int CD_len = lengthSq(CD);
+    int DA_len = lengthSq(DA);
+
     // check right angle using dot product
     if (dot(AB, BC) == 0) {
-        // check if adjacent sides equal (square)
-        if (lengthSq(AB) == lengthSq(BC)) {
+        if (AB_len == BC_len) {
             printf("The quadrilateral is a Square.\n");
         } else {
             printf("The quadrilateral is a Rectangle.\n");
         }
     } else {
-        // if only parallelogram
-        printf("The quadrilateral is a Parallelogram.\n");
+        // if all sides equal but not right angle -> rhombus
+        if (AB_len == BC_len && BC_len == CD_len && CD_len == DA_len) {
+            printf("The quadrilateral is a Rhombus.\n");
+        } else {
+            printf("The quadrilateral is a Parallelogram.\n");
+        }
     }
 }
