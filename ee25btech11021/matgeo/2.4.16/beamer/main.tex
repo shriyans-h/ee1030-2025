@@ -81,175 +81,75 @@
 
 %---------------- Problem Statement ----------------
 \begin{frame}{Problem Statement}
-  \begin{itemize}
-    \item Given two points
-    \begin{align*}
-    \vec{A} = \myvec{0\\7\\-10}, \qquad
-\vec{B} = \myvec{1\\6\\-6}, \qquad
-\vec{C} = \myvec{4\\9\\-6}.
-    \end{align*}
-    \item(a) prove the given points forms isosceles triangle
-    \item (b) prove the given points forms right angled triangle
-   
-  \end{itemize}
+ Verify the following:\\  
+(a) $(0,7,-10), (1,6,-6)$ and $(4,9,-6)$ are the vertices of an isosceles triangle.  \\
+(b) $(0,7,10), (-1,6,6)$ and $(-4,9,6)$ are the vertices of a right-angled triangle.
 \end{frame}
 
 %---------------- Mathematical Formula ----------------
 \begin{frame}{solution}
  
 
-\textbf{solution :}
-We consider the vectors
+\textbf{Solution a}\\
+% ---------- Part (a) ----------
+\textbf{Property:} In an isosceles triangle, the perpendicular bisector of a side passes through the opposite vertex.
+
+\begin{align}
+\vec{A} = \myvec{0\\7\\-10},  
+\vec{B} = \myvec{1\\6\\-6},  
+\vec{C} = \myvec{4\\9\\-6}
+\end{align}
+\text{Midpoint of side } AC: 
+\begin{align}
+ \vec{M} = \frac{\vec{A}+\vec{C}}{2} 
+= \frac{\myvec{0\\7\\-10}+\myvec{4\\9\\-6}}{2} 
+= \myvec{2\\8\\-8}
+\end{align}
+\text{Direction vector of side } AC: 
+\begin{align}
+ \vec{C}-\vec{A} = \myvec{4\\9\\-6}-\myvec{0\\7\\-10} 
+= \myvec{4\\2\\4}
+\end{align}
+\end{frame}
+\begin{frame}{solution}
+\text{Vector from midpoint to } B:
+\begin{align}
+\vec{B}-\vec{M} = \myvec{1\\6\\-6}-\myvec{2\\8\\-8} 
+= \myvec{-1\\-2\\2}
+\end{align}
+\begin{align}
+(\vec{C}-\vec{A})^\top(\vec{B}-\vec{M}) 
+= \myvec{4&2&4}\myvec{-1\\-2\\2} = -4-4+8=0
+\end{align}
 \begin{align*}
-\vec{A} = \myvec{0\\7\\-10}, \qquad
-\vec{B} = \myvec{1\\6\\-6}, \qquad
-\vec{C} = \myvec{4\\9\\-6}.
+ \vec{B} \text{ lies on the perpendicular bisector of side } AC.\\
+ \therefore AB = BC \implies \triangle ABC \text{ is isosceles.}
 \end{align*}
-
-\section*{ PROOF OF: $\vec{A},\vec{B},\vec{C}$ are not collinear (rank method)}
-Form the difference vectors $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$.
-
+\textbf{Solution b}\\
+\textbf{Property:} If two sides of a triangle are perpendicular, then the included angle is a right angle.
 \begin{align}
-\vec{B}-\vec{A} &= \myvec{1-0\\[4pt]6-7\\[4pt]-6-(-10)}
+\vec{A} = \myvec{0\\7\\10},  
+\vec{B} = \myvec{-1\\6\\6},  
+\vec{C} = \myvec{-4\\9\\6}
 \end{align}
-
-\begin{align}
-\vec{B}-\vec{A} &= \myvec{1\\-1\\4}
-\end{align}
-
 \end{frame}
 \begin{frame}{solution}
-
 \begin{align}
-\vec{C}-\vec{A} &= \myvec{4-0\\[4pt]9-7\\[4pt]-6-(-10)}
-\end{align}
-
-\begin{align}
-\vec{C}-\vec{A} &= \myvec{4\\2\\4}
-\end{align}
-
-Place these as columns in the $3\times 2$ matrix $M$.
-
-\begin{align}
-M &= \begin{pmatrix} \vec{B}-\vec{A} & \vec{C}-\vec{A} \end{pmatrix}
-\end{align}
-
-\begin{align}
-M &= \begin{pmatrix}
-1 & 4\\[4pt]
--1 & 2\\[4pt]
-4 & 4
-\end{pmatrix}
-\end{align}
-
-\end{frame}
-\begin{frame}{solution}
-
-Compute the $2\times2$ minor using rows $1$ and $2$.
-
-\begin{align}
-\det\begin{pmatrix}1 & 4\\[4pt] -1 & 2\end{pmatrix}
-&= 1\cdot 2 - 4\cdot(-1)
-\end{align}
-
-\begin{align}
-\det\begin{pmatrix}1 & 4\\[4pt] -1 & 2\end{pmatrix}
-&= 2 + 4 = 6 \neq 0
-\end{align}
-
-Hence $\operatorname{rank}(M)=2$, so $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$ are linearly independent.  
-Therefore $\vec{A},\vec{B},\vec{C}$ are not collinear and determine a triangle.
-
-
-
-\end{frame}
-\begin{frame}{solution A }
-
-\textbf{verification of Isosceles triangle  via perpendicular bisector:}
-\begin{align}
-\text{Midpoint } \vec{M} \text{ of } \overline{AC}
-&= \frac{\vec{A}+\vec{C}}{2}
-= \frac{1}{2}\myvec{0+4\\7+9\\-10+(-6)}
-= \myvec{2\\8\\-8},
-\end{align}
-
-\begin{align}
-\vec{MB} &= \vec{B}-\vec{M}
-= \myvec{1-2\\6-8\\-6-(-8)}
-= \myvec{-1\\-2\\2},\\
-\vec{AC} &= \vec{C}-\vec{A}
-= \myvec{4-0\\9-7\\-6-(-10)}
-= \myvec{4\\2\\4}.
+\vec{A}-\vec{B} = \myvec{0\\7\\10}-\myvec{-1\\6\\6} 
+= \myvec{1\\1\\4}
 \end{align}
 \begin{align}
-\vec{MB}^\top \vec{AC}
-&= \myvec{-1 & -2 & 2}\myvec{4\\2\\4}
-= (-1)\cdot 4 + (-2)\cdot 2 + 2\cdot 4\\
-= -4 -4 + 8
-= 0.
+\vec{C}-\vec{B} = \myvec{-4\\9\\6}-\myvec{-1\\6\\6} 
+= \myvec{-3\\3\\0}
 \end{align}
-
-\end{frame}
-\begin{frame}{solution}
-Thus $\vec{MB}\perp \vec{AC}$ and $\vec{M}$ is the midpoint of $AC$, so the line through $\vec{M}$ in the direction of $\vec{MB}$ is the \emph{perpendicular bisector} of $AC$ and passes through $\vec{B}$.
-
-By the perpendicular-bisector property, points on it are equidistant from $A$ and $C$, hence
 \begin{align}
-\|\vec{AB}\|=\|\vec{BC}\|.
+(\vec{A}-\vec{B})^\top(\vec{C}-\vec{B}) 
+= \myvec{1&1&4}\myvec{-3\\3\\0} = -3+3+0=0
 \end{align}
-Therefore, the triangle is \emph{isosceles} with equal sides $AB$ and $BC$.
-
-
-\begin{align}
-\vec{MB}^\top \vec{AC}
-&= \myvec{-1 & -2 & 2}\myvec{4\\2\\4}
-= (-1)\cdot 4 + (-2)\cdot 2 + 2\cdot 4
-= -4 -4 + 8
-= 0.
-\end{align}
-Thus $\vec{MB}\perp \vec{AC}$ and $\vec{M}$ is the midpoint of $AC$, so the line through $\vec{M}$ in the direction of $\vec{MB}$ is the \emph{perpendicular bisector} of $AC$ and passes through $\vec{B}$.
-By the perpendicular-bisector property, points on it are equidistant from $A$ and $C$, hence
-\end{frame}
-\begin{frame}{solution}
-
-\begin{align}
-\|\vec{AB}\|=\|\vec{BC}\|.
-\end{align}
-Therefore, the triangle is \emph{isosceles} with equal sides $AB$ and $BC$.
-
-\textbf{ B)veification for right angled triangle (matrix / inner-product test)}
-To show the triangle is right-angled, compute the inner product of two adjacent side vectors $\vec{AB}$ and $\vec{BC}$.
-
-\begin{align}
-\vec{AB} &= \vec{B}-\vec{A} = \myvec{1\\-1\\4},
-\end{align}
-
-\begin{align}
-\vec{BC} &= \vec{C}-\vec{B} = \myvec{4-1\\[4pt]9-6\\[4pt]-6-(-6)}
-\end{align}
-\end{frame}
-
-\begin{frame}{solution}
-
-\begin{align}
-\vec{BC} &= \myvec{3\\3\\0},
-\end{align}
-
-
-\begin{align}
-(\vec{AB})^T(\vec{BC}) &= \myvec{1&-1&4}\myvec{3\\3\\0}
-\end{align}
-
-\begin{align}
-(\vec{AB})^T(\vec{BC}) &= 1\cdot 3 + (-1)\cdot 3 + 4\cdot 0
-\end{align}
-
-\begin{align}
-(\vec{AB})^T(\vec{BC}) &= 3 - 3 + 0 = 0.
-\end{align}
-
-Since the inner product is zero, $\vec{AB}\perp\vec{BC}$ and therefore the angle $\angle ABC$ is a right angle; the triangle is \textbf{right-angled at $B$}.
-
+\begin{align*}
+\implies \vec{A}-\vec{B} \perp \vec{C}-\vec{B}  \Rightarrow  
+\triangle ABC \text{ is right-angled at } B.
+\end{align*}
 
 
 
@@ -257,64 +157,94 @@ Since the inner product is zero, $\vec{AB}\perp\vec{BC}$ and therefore the angle
 %---------------- C Source Code ----------------
 \begin{frame}[fragile]{C Source Code:gen point.c}
 \begin{verbatim}
+
 #include <stdio.h>
-// Function to write points into a file
-void generate_points(const char *filename) {
+
+// Function to write first set of points (isosceles triangle)
+void generate_points_isosceles(const char *filename) {
     FILE *fp = fopen(filename, "w");
     if (fp == NULL) {
         printf("Error opening file!\n");
         return;
-    }// Points A, B, C
+    }
+
     double A[3] = {0, 7, -10};
     double B[3] = {1, 6, -6};
     double C[3] = {4, 9, -6};
+   
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]{C Source Code:gen point.c}
+\begin{verbatim}
     fprintf(fp, "%lf %lf %lf\n", A[0], A[1], A[2]);
     fprintf(fp, "%lf %lf %lf\n", B[0], B[1], B[2]);
     fprintf(fp, "%lf %lf %lf\n", C[0], C[1], C[2]);
     fclose(fp);
 }
+
+// Function to write second set of points (right-angled triangle)
+void generate_points_right(const char *filename) {
+    FILE *fp = fopen(filename, "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
 \end{verbatim}
 \end{frame}
 
 %---------------- Python solve.py ----------------
 \begin{frame}[fragile]{Python Script: solve triangle.py}
 \begin{verbatim}
+
+
 import ctypes
 import numpy as np
 
-# Load the shared object
+# Load shared object
 lib = ctypes.CDLL("./gen_points.so")
 
-# Call the C function to generate points.dat
-lib.generate_points(b"points.dat")
+# Call C functions
+lib.generate_points_isosceles(b"iso_points.dat")
+lib.generate_points_right(b"right_points.dat")
 
-# Load points from file
-points = np.loadtxt("points.dat")
-A, B, C = points
-
-# Function to compute squared distance
-def dist2(P, Q):
-    return np.sum((P - Q) ** 2)
-    \end{verbatim}
+# Load points
+iso_points = np.loadtxt("iso_points.dat")
+right_points = np.loadtxt("right_points.dat")
+\end{verbatim}
 \end{frame}
-
 \begin{frame}[fragile]{Python Script: solve triangle.py}
 \begin{verbatim}
-# Squared lengths
+# Distance squared function
+def dist2(P, Q):
+    return np.sum((P - Q) ** 2)
+
+# --------- Part (a) Isosceles Triangle -----------
+A, B, C = iso_points
 AB2 = dist2(A, B)
 BC2 = dist2(B, C)
 CA2 = dist2(C, A)
 
-print("Squared lengths:")
-print("AB^2 =", AB2, " BC^2 =", BC2, " CA^2 =", CA2)
-
-# Check isosceles (two sides equal)
+print("Isosceles Triangle Check:")
+print("AB^2 =", AB2, "BC^2 =", BC2, "CA^2 =", CA2)
 isosceles = (AB2 == BC2) or (BC2 == CA2) or (CA2 == AB2)
-print("Isosceles Triangle:", isosceles)
+print("Isosceles:", isosceles)
+print()
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]{Python Script: solve triangle.py}
+\begin{verbatim}
+# --------- Part (b) Right Angled Triangle ---------
+P, Q, R = right_points
+PQ2 = dist2(P, Q)
+QR2 = dist2(Q, R)
+RP2 = dist2(R, P)
 
-# Check right angle (Pythagoras theorem)
-right_angle = (AB2 + BC2 == CA2) or (BC2 + CA2 == AB2) or (CA2 + AB2 == BC2)
-print("Right Angled Triangle:", right_angle)
+print("Right Angled Triangle Check:")
+print("PQ^2 =", PQ2, "QR^2 =", QR2, "RP^2 =", RP2)
+right_angle = (PQ2 + QR2 == RP2) or (QR2 + RP2 == PQ2) or (RP2 + PQ2 == QR2)
+print("Right Angled:", right_angle)
+
 \end{verbatim}
 \end{frame}
 
@@ -322,41 +252,62 @@ print("Right Angled Triangle:", right_angle)
 \begin{frame}[fragile]{Python Script: plot triangle.py}
 \begin{verbatim}
 import sys
-sys.path.insert(0, '/home/dhanush-sagar/matgeo/codes/CoordGeo')
+sys.path.insert(0,  '/home/dhanush-sagar/matgeo/codes/CoordGeo')
 import numpy as np
 import matplotlib.pyplot as plt
+
 
 # Local imports
 from line.funcs import *
 from triangle.funcs import *
 from conics.funcs import circ_gen
 
-# Load points
-points = np.loadtxt("points.dat")
-A, B, C = points
-# Plot triangle
-tri_coords = np.vstack((A, B, C, A))  # close loop
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# Load both sets of points
+iso_points = np.loadtxt("iso_points.dat")
+right_points = np.loadtxt("right_points.dat")
+
+# ---- Plot Isosceles Triangle ----
+fig1 = plt.figure()
 \end{verbatim}
 \end{frame}
-
 \begin{frame}[fragile]{Python Script: plot triangle.py}
 \begin{verbatim}
-
-ax.plot(tri_coords[:,0], tri_coords[:,1], tri_coords[:,2], 'b-o', label='Triangle ABC')
-
-# Mark points
-ax.text(A[0], A[1], A[2], "A", color='red')
-ax.text(B[0], B[1], B[2], "B", color='red')
-ax.text(C[0], C[1], C[2], "C", color='red')
-
-ax.set_xlabel('X-axis')
-ax.set_ylabel('Y-axis')
-ax.set_zlabel('Z-axis')
-ax.legend()
-plt.savefig("triangle_plot.png")
+ax1 = fig1.add_subplot(111, projection='3d')
+A, B, C = iso_points
+tri_iso = np.vstack((A, B, C, A))
+ax1.plot(tri_iso[:,0], tri_iso[:,1], tri_iso[:,2], 'b-o', label='Isosceles Triangle')
+ax1.text(A[0], A[1], A[2], "A", color='red')
+ax1.text(B[0], B[1], B[2], "B", color='red')
+ax1.text(C[0], C[1], C[2], "C", color='red')
+ax1.set_title("Isosceles Triangle")
+ax1.set_xlabel("X-axis")
+ax1.set_ylabel("Y-axis")
+ax1.set_zlabel("Z-axis")
+plt.legend()
+plt.savefig("isosceles_triangle.png")
 plt.show()
+
+# ---- Plot Right-Angled Triangle ----
+fig2 = plt.figure()
+\end{verbatim}
+\end{frame}
+\begin{frame}[fragile]{Python Script: plot triangle.py}
+\begin{verbatim}
+ax2 = fig2.add_subplot(111, projection='3d')
+P, Q, R = right_points
+tri_right = np.vstack((P, Q, R, P))
+ax2.plot(tri_right[:,0], tri_right[:,1], tri_right[:,2], 'g-o', label='Right-Angled Triangle')
+ax2.text(P[0], P[1], P[2], "P", color='red')
+ax2.text(Q[0], Q[1], Q[2], "Q", color='red')
+ax2.text(R[0], R[1], R[2], "R", color='red')
+ax2.set_title("Right-Angled Triangle")
+ax2.set_xlabel("X-axis")
+ax2.set_ylabel("Y-axis")
+ax2.set_zlabel("Z-axis")
+plt.legend()
+plt.savefig("right_triangle.png")
+plt.show()
+
 
 \end{verbatim}
 \end{frame}
@@ -371,5 +322,13 @@ plt.show()
  \end{figure}
   
 \end{frame}
-
+\begin{frame}{Result Plot}
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.8\columnwidth]{figs/fig2.png}
+     \caption*{}
+     \label{fig:fig1}
+ \end{figure}
+  
+\end{frame}
 \end{document}
