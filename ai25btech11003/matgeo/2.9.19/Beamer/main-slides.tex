@@ -93,22 +93,84 @@ projection of $\overrightarrow{b}$ along $\overrightarrow{a}$ is equal to the pr
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
-Given: $\norm{\vec{a}} = 1, \, \norm{\vec{b}} = 2, \, \norm{\vec{c}} = 3$\\
+Given: 
+\begin{equation}
+\norm{\vec{a}} = 1, \, \norm{\vec{b}} = 2, \, \norm{\vec{c}} = 3\\
+\end{equation}
 
-$\vec{b}^T\dfrac{\vec{a}}{\norm{\vec{a}}} = \vec{c}^T\dfrac{\vec{a}}{\norm{\vec{a}}}$\\
+\begin{equation}
+\text{The projection of} \, \vec{b} \, \text{along} \, \vec{a} = \vec{b}^T\dfrac{\vec{a}}{\norm{\vec{a}}^2}\vec{a}    
+\end{equation}
 
-Since $\vec{b}$ and $\vec{c}$ are perpendicular: $\vec{b}^T\vec{c} = 0$ \\
+\begin{equation}
+\text{The projection of} \, \vec{c} \, \text{along} \, \vec{a} = \vec{c}^T\dfrac{\vec{a}}{\norm{\vec{a}}^2}\vec{a}    
+\end{equation}
 
-Let $\vec{v} = 3\vec{a} - 2\vec{b} + 2\vec{c}$
 
-$\norm{\vec{v}}^2 = (3\vec{a} - 2\vec{b} + 2\vec{c})^T(3\vec{a} - 2\vec{b} + 2\vec{c})$
+\begin{equation}
+\vec{b}^T\dfrac{\vec{a}}{\norm{\vec{a}}}\vec{a} = \vec{c}^T\dfrac{\vec{a}}{\norm{\vec{a}}}\vec{a}\\
+\end{equation}
 
-$=\, 9\norm{\vec{a}}^2 + 4\norm{\vec{b}}^2 + 4\norm{\vec{c}}^2 -12(\vec{a}^T\vec{b}) + -12(\vec{a}^T\vec{b}) - 8(\vec{b}^T\vec{c})
-= 9 + 16 + 36$
+\begin{equation}
+\text{Since, } \norm{\vec{a}} = 1
+\Rightarrow \quad
+\therefore \, \, \vec{b}^T\vec{a} = \vec{c}^T\vec{a}
+\end{equation}
+
+Since $\vec{b}$ and $\vec{c}$ are perpendicular: 
+\begin{equation}
+\vec{b}^T\vec{c} = 0\\
+\end{equation}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Theoretical Solution}
+\begin{equation}
+\text{Let} \, \,\vec{v} = 3\vec{a} - 2\vec{b} + 2\vec{c}
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = (3\vec{a} - 2\vec{b} + 2\vec{c})^T(3\vec{a} - 2\vec{b} + 2\vec{c})
+\end{equation}
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9(\vec{a}^T\vec{a}) -6(\vec{a}^T\vec{b}) +6(\vec{a}^T\vec{c}) - 6(\vec{b}^T\vec{a}) + 4(\vec{b}^T\vec{b}) -4(\vec{b}^T\vec{c})+ 6(\vec{c}^T\vec{a}) - 4(\vec{c}^T\vec{b}) + 4(\vec{c}^T\vec{c})\\
+\end{equation}
+
+
+\begin{equation}
+    \text{Since} \,  \vec{a}^T\vec{b} = \vec{b}^T\vec{a} \, \text{\&}
+\, \vec{a}^T\vec{c} = \vec{c}^T\vec{a}
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9(\vec{a}^T\vec{a}) + 4(\vec{b}^T\vec{b}) + 4(\vec{c}^T\vec{c}) - 12(\vec{a}^T\vec{b}) + 12(\vec{a}^T\vec{c}) - 8(\vec{b}^T\vec{c})
+\end{equation}\\
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Theoretical  Solution}
+From Equation 1 \& 6,
+\begin{equation}
+\vec{a}^T\vec{a} = \norm{\vec{a}}^2 = 1, \,\,
+\vec{b}^T\vec{b} = \norm{\vec{b}}^2 = 4, \,\,
+\vec{c}^T\vec{c} = \norm{\vec{c}}^2 = 9, \,\,
+\vec{b}^T\vec{c} = 0
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9 + 16 + 36
+\end{equation}
+
 
 \begin{align}
     \centering
-\Rightarrow
+    \norm{\vec{v}}^2 = 61 
+    \quad \Rightarrow \quad
     \norm{\vec{v}} = \sqrt{61}
 \end{align}
 
@@ -117,7 +179,6 @@ $=\, 9\norm{\vec{a}}^2 + 4\norm{\vec{b}}^2 + 4\norm{\vec{c}}^2 -12(\vec{a}^T\vec
 \boxed{\norm{3\vec{a} - 2\vec{b} + 2\vec{c}} = \sqrt{61}}
 \end{align}
 \end{frame}
-
 
 \begin{frame}[fragile]
     \frametitle{Python + C Code}
