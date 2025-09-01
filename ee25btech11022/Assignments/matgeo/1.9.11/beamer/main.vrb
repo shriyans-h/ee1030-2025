@@ -1,12 +1,13 @@
 \frametitle{Python-Code}
 \begin{lstlisting}
-plt.axhline(0, color='gray', ls='--', label='x-axis')
+plt.plot([pt1[0], pt2[0]], [pt1[1], pt2[1]], 'b--', label='Segment')
+plt.title(f'Points with positive k: {k:.2f}')
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Division of segment AB by X-axis')
-plt.legend()
+plt.legend(loc='best')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
 
 \end{lstlisting}
