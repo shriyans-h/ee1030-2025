@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  30 AUG 2025 22:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  1 SEP 2025 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1529,14 +1529,42 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <17.28> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 16.
 
 
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ... the cross-product of the two vectors \vec
+                                                  {a} and \vec{b}, we use th...
+
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...roduct of the two vectors \vec{a} and \vec
+                                                  {b}, we use the following ...
+
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-<Figs/Figure_4.png, id=50, 756.8275pt x 648.92438pt>
+<Figs/Figure_4.png, id=46, 756.8275pt x 648.92438pt>
 File: Figs/Figure_4.png Graphic file (type png)
 <use Figs/Figure_4.png>
-Package pdftex.def Info: Figs/Figure_4.png  used on input line 50.
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 56.
 (pdftex.def)             Requested size: 272.99881pt x 234.07797pt.
 
 
@@ -1559,13 +1587,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52718 strings out of 473190
- 1265392 string characters out of 5715800
- 1843709 words of memory out of 5000000
- 75198 multiletter control sequences out of 15000+600000
+ 52720 strings out of 473190
+ 1265492 string characters out of 5715800
+ 1842709 words of memory out of 5000000
+ 75202 multiletter control sequences out of 15000+600000
  602667 words of font info for 147 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,18n,109p,1194b,1021s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,109p,1194b,1031s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texliv
@@ -1573,10 +1601,10 @@ e/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 281169 bytes).
+Output written on main.pdf (2 pages, 280862 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

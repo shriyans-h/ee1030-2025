@@ -9,20 +9,11 @@ import numpy.linalg as LA
 vecA = np.array([2,1,3])
 
 vecB = np.array([3,5,-2])
-
-vecA = vecA.T
-
-innerproduct = np.linalg.matmul(vecA,vecB)
-
-normA = np.linalg.norm(vecA)
-
-normB = np.linalg.norm(vecB)
-
-crossprod = normA*normA*normB*normB - innerproduct*innerproduct
-
-crossprod = math.sqrt(crossprod)
-
+crossprod = np.cross(vecA,vecB)
 print(crossprod)
+
+mod = np.linalg.norm(crossprod)
+print(mod)
 
 # Create a 3D plot
 fig = plt.figure(figsize=(8, 8))
