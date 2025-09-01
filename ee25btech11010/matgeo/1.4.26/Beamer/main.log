@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  31 AUG 2025 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  1 SEP 2025 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1778,13 +1778,18 @@ dvips/lm/lm-mathex.enc}] [4
 
 ] [5
 
-] [6
-
 ]
+<figs/q1.png, id=179, 433.62pt x 433.62pt>
+File: figs/q1.png Graphic file (type png)
+<use figs/q1.png>
+Package pdftex.def Info: figs/q1.png  used on input line 128.
+(pdftex.def)             Requested size: 182.3375pt x 182.3353pt.
+ [6
+
+ <./figs/q1.png>]
 \openout4 = `main.vrb'.
 
-
-(./main.vrb
+ (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 3.
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
@@ -1795,7 +1800,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (25.72923pt too high) detected at line 171
+Overfull \vbox (25.72923pt too high) detected at line 169
  []
 
 [8
@@ -1809,7 +1814,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 197
+Overfull \vbox (13.72923pt too high) detected at line 195
  []
 
 [9
@@ -1824,7 +1829,7 @@ Overfull \vbox (13.72923pt too high) detected at line 197
 
 
 (./main.vrb)
-Overfull \vbox (25.72923pt too high) detected at line 242
+Overfull \vbox (25.72923pt too high) detected at line 240
  []
 
 [11
@@ -1833,7 +1838,7 @@ Overfull \vbox (25.72923pt too high) detected at line 242
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 268
+Overfull \vbox (1.72923pt too high) detected at line 266
  []
 
 [12
@@ -1842,7 +1847,7 @@ Overfull \vbox (1.72923pt too high) detected at line 268
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 294
+Overfull \vbox (13.72923pt too high) detected at line 292
  []
 
 [13
@@ -1853,14 +1858,6 @@ Overfull \vbox (13.72923pt too high) detected at line 294
  (./main.vrb) [14
 
 ]
-<figs/q1.png, id=437, 433.62pt x 433.62pt>
-File: figs/q1.png Graphic file (type png)
-<use figs/q1.png>
-Package pdftex.def Info: figs/q1.png  used on input line 321.
-(pdftex.def)             Requested size: 182.3375pt x 182.3353pt.
- [15
-
- <./figs/q1.png>]
 \tf@nav=\write8
 \openout8 = `main.nav'.
 
@@ -1889,23 +1886,23 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57006 strings out of 474222
- 1356534 string characters out of 5748734
+ 56998 strings out of 474222
+ 1356379 string characters out of 5748734
  2389784 words of memory out of 5000000
- 78232 multiletter control sequences out of 15000+600000
+ 78227 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,17n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmtt10.pfb>
-Output written on main.pdf (15 pages, 186016 bytes).
+Output written on main.pdf (14 pages, 182844 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 37 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
