@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.20)  29 AUG 2025 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.20)  1 SEP 2025 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -934,7 +934,7 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count366
 \l__pdf_internal_box=\box127
 )
-(./main.aux)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
@@ -955,7 +955,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1013,8 +1012,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 72.
-
-(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1099,12 +1096,15 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count373
- (./main.nav) [1
+
+No file main.nav.
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
@@ -1150,14 +1150,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout8 = `main.snm'.
 
  (./main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26811 strings out of 476034
- 515250 string characters out of 5792864
+ 26796 strings out of 476034
+ 515135 string characters out of 5792864
  1860388 words of memory out of 6000000
- 46714 multiletter control sequences out of 15000+600000
+ 46707 multiletter control sequences out of 15000+600000
  520224 words of font info for 60 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  128i,15n,131p,398b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1169,7 +1178,7 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (4 pages, 140280 bytes).
+Output written on main.pdf (4 pages, 140623 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream

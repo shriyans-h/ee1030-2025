@@ -58,7 +58,7 @@ ax.text(*R, ' R', color='y', fontsize=10)
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_zlabel('Z-axis')
-ax.set_title('Points A, B, C and their resultant R')
+ax.set_title('Vectors A, B, C and their resultant R')
 ax.legend()
 ax.grid(True)
 
