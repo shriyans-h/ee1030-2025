@@ -1,0 +1,17 @@
+\frametitle{Python: plot.py}
+\begin{lstlisting}[language=Python]
+xmin, ymin = all_pts.min(axis=0) - 1.0
+xmax, ymax = all_pts.max(axis=0) + 1.0
+plt.xlim(xmin, xmax)
+plt.ylim(ymin, ymax)
+
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True)
+plt.legend()
+plt.title("Triangles BDC (solid), BD'C' (dashed) and Parallelogram A'BC'D'")
+plt.tight_layout()
+
+# save and show
+plt.savefig("parallelogram_plot.png", dpi=200)
+plt.show()
+ \end{lstlisting}

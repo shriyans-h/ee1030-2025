@@ -1,0 +1,107 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a4paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}  % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{3.2.4}
+\author{ee25btech11063-vejith}
+
+\maketitle
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\textbf{Question}:\\
+Construct the triangle BD$^{\prime}$C$^{\prime}$ similar to $\triangle$BDC with scale factor $\frac{4}{3}$.Draw the line segment D$^{\prime}$A$^{\prime}$. parallel to DA where A$^p$ prime lies on extended side BA.Is A$^{\prime}$BC$^{\prime}$D$^{\prime}$ a parallelogram?\\ 
+\textbf{solution}
+\begin{table}[h!]    
+  \centering
+  \input{tables/table5.tex}
+  \caption{Variables Used}
+  \label{}
+\end{table}\\
+consider $\triangle$BDC.constructs a $\triangle$BD$^{\prime}C^{\prime}$
+ with scale factor $\frac{4}{3}$.\\
+This means 
+\begin{align}
+  \triangle BD^{\prime}C^{\prime} \sim \triangle BDC.\\
+\frac{BD^{\prime}}{BD} \;=\; \frac{BC^{\prime}}{BC} \;=\; \frac{D^{\prime}C^{\prime}}{DC} \;=\; \frac{4}{3}.
+\end{align}
+
+So D$^{\prime}$ lies on extension of BD and C$^{\prime}$.\\
+\textbf{Construct A$^{\prime}$}\\
+Draw D$^{\prime}$A$^{\prime}$ $\parallel$ DA with A$^{\prime}$ on extension of BA.\\ \\
+\textbf{Check the parallelogram property}\\
+1.By construction    D$^{\prime}$A$^{\prime}$ $\parallel$ DA.\\
+But since DA $\parallel$ C$^{\prime}$B(by similarity of triangles),we get:
+\begin{align}
+    D{^\prime}A^{\prime} \parallel BC^{\prime}.
+\end{align}
+2.A$^{\prime}$ lies on extended BA,we have :
+\begin{align}
+    A^{\prime}B \parallel D^{\prime}C^{\prime}.
+\end{align}
+Thus:
+\begin{align}
+    A^{\prime}B \parallel D^{\prime}C^{\prime}.\\
+D{^\prime}A^{\prime} \parallel BC^{\prime}.
+\end{align}
+so,opposite sides are parallel.\\
+$\implies$A$^{\prime}$BC$^{\prime}$D$^{\prime}$ is a parallelogram
+\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\columnwidth]{figs/01.png}
+    \label{fig-1}
+\end{figure}
+
+
+
+\end{document}
+
+
