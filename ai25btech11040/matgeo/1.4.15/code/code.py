@@ -10,6 +10,15 @@ points = [p, q, r]
 x = [a[0] for a in points]
 y = [a[1] for a in points]
 
+if (r[0][0] > 0 and r[1][0] > 0):
+    print("Q1")
+if (r[0][0] > 0 and r[1][0] < 0):
+    print("Q4")
+if (r[0][0] < 0 and r[1][0] > 0):
+    print("Q2")
+if (r[0][0] < 0 and r[1][0] < 0):
+    print("Q3")
+
 fig, ax = plt.subplots()
 
 ax.set_xlabel('X axis')
