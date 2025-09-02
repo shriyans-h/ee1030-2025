@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  2 SEP 2025 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  2 SEP 2025 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1532,14 +1532,17 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./main.aux
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 86.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 86.
@@ -1635,6 +1638,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 86.
+
+(./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -1710,9 +1715,7 @@ tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count415
-
-No file main.nav.
-
+ (./main.nav)
 
 [1
 
@@ -1913,7 +1916,7 @@ Overfull \vbox (13.72923pt too high) detected at line 178
 [7
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<Figs/Figure_4.png, id=234, 756.8275pt x 648.92438pt>
+<Figs/Figure_4.png, id=236, 756.8275pt x 648.92438pt>
 File: Figs/Figure_4.png Graphic file (type png)
 <use Figs/Figure_4.png>
 Package pdftex.def Info: Figs/Figure_4.png  used on input line 188.
@@ -1987,6 +1990,9 @@ Overfull \vbox (43.26459pt too high) detected at line 285
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
+runsystem(latexminted cleantemp  --timestamp 20250902152222 FAD58DE7366495DB465
+0CFEFAC2FCD61)...executed safely (allowed).
+
  (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
@@ -1994,22 +2000,16 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59074 strings out of 473190
- 1437382 string characters out of 5715800
+ 59116 strings out of 473190
+ 1437756 string characters out of 5715800
  2530022 words of memory out of 5000000
- 81317 multiletter control sequences out of 15000+600000
+ 81351 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2022,7 +2022,7 @@ ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (13 pages, 421814 bytes).
+Output written on main.pdf (13 pages, 421982 bytes).
 PDF statistics:
  464 PDF objects out of 1000 (max. 8388607)
  389 compressed objects within 4 object streams
