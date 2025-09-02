@@ -107,60 +107,28 @@
 \vec{A} = \myvec{2 \\ -5} \\ \vec{B} = \myvec{5 \\ 2}
 \end{align}
 
-The point \(P\), dividing the segment \(AB\) in the ratio \(2:3\) internally, has the position vector
-
+Now the matrix form for $\vec{A}$ and $\vec{B}$ is :
 \begin{align}
-    \vec{P} = \frac{\frac{2}{3} \vec{B} + \vec{A}}{1 + \frac{2}{3}} 
+    \myvec{\vec{A} & \vec{B}} = \myvec{2 & 5 \\ -5 & 2}
+\end{align}
+The point \(P\) dividing the segment \(AB\) in the ratio 2:3 internally , has the position vector :
+\begin{align}
+\vec{P} = \frac{ 3\vec{A} +2\vec{B} }{3+2} 
 \end{align}
 \end{frame}
 \begin{frame}
-
-Thus by the formula \\
+Thus by using the section formula \\
 \begin{align} 
-\vec{P}=\frac{\frac{2}{3}\myvec{5 \\ 2}+\myvec{2\\-5}}{1+\frac{2}{3}}\\
-	\vec{P}= \frac{2 \myvec{5 \\ 2} + 3\myvec{2 \\ -5}}{5} \\ \vec{P}= \frac{\myvec{10 \\ 4} + \myvec{6 \\ -15}}{5} \\  \therefore \vec{P}= \frac{\myvec{16 \\ -11}}{5}.
+\vec{P}= \frac{1}{5} \cdot \myvec{\vec{A} & \vec{B}}\myvec{3 \\ 2}\\
+\vec{P}= \frac{1}{5} \cdot \myvec{2 & 5 \\ -5 & 2}\myvec{3 \\ 2}\\
+\vec{P}= \frac{1}{5} \cdot \myvec{6 + 10\\ -15 + 4}\\
+\therefore \vec{P}= \frac{\myvec{16 \\ -11}}{5}.
 \end{align}
-\end{frame}
-\begin{frame}
+
 Therefore the co-ordinates of \(P\) are \[
 \left(\dfrac{16}{5}, -\dfrac{11}{5}\right).
 \]
 \\
-\textbf{Solution (Matrix Approach)}
-
-The section formula in vector form:
-\begin{align*}
-(m+n)\vec{P} = m\vec{B} + n\vec{A}.
-\end{align*}
-
-
-Here  m=2, n=3, m+n=5. 
-
-\begin{align}
-5\myvec{x\\y} = 2\myvec{5\\2} + 3\myvec{2\\-5} \\
-5\myvec{x\\y}= \myvec{10\\4} + \myvec{6\\-15} = \myvec{16\\-11}.
-\end{align}
-\end{frame}
-\begin{frame}
-This gives the matrix equation:
-\begin{align}
-\myvec{5 & 0 \\ 0 & 5}\myvec{x\\y} = \myvec{16\\-11}. 
-\end{align}
-Augmented matrix:\\ [4pt]
-\begin{align}
-\myvec{
-5 & 0 & 16 \\[4pt]
-0 & 5 & -11}
-&\xrightarrow{R_1 \rightarrow \tfrac{1}{5}R_1}
-\myvec{
-1 & 0 & \tfrac{16}{5} \\[4pt]
-0 & 5 & -11}
-\xrightarrow{R_2 \rightarrow \tfrac{1}{5}R_2}
-\myvec{
-1 & 0 & \tfrac{16}{5} \\[4pt]
-0 & 1 & -\tfrac{11}{5}}\\
-&\Rightarrow \myvec{x\\y} = \myvec{\tfrac{16}{5}\\[4pt]-\tfrac{11}{5}} = \myvec{3.2\\-2.2}.
-\end{align}\\
 
 Since \(x>0\) and \(y<0\), \(P\) lies in the \textbf{IV (fourth) quadrant}.
 
