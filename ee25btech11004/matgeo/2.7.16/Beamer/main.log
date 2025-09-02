@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  1 SEP 2025 17:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  2 SEP 2025 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1800,7 +1800,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \end{frame}
+l.116 \end{frame}
                  
 ? 
 
@@ -1810,22 +1810,83 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \end{frame}
+l.116 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Extra }, or forgotten $.
+\beamer@doifinframe ...ar \par Where \vec {X_{ij}}
+                                                   = \myvec {$x_i$ \\ $x_j$}...
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.116 \end{frame}
                  
 ? 
 
 
 [4
 
-]
-
-[5
-
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 \openout4 = `main.vrb'.
 
 
-(./main.vrb
+(./main.vrb)
+
+[5
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmtt.fd
@@ -1844,7 +1905,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 185
+Overfull \vbox (13.72923pt too high) detected at line 178
  []
 
 
@@ -1852,13 +1913,13 @@ Overfull \vbox (13.72923pt too high) detected at line 185
 [7
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<Figs/Figure_4.png, id=232, 756.8275pt x 648.92438pt>
+<Figs/Figure_4.png, id=234, 756.8275pt x 648.92438pt>
 File: Figs/Figure_4.png Graphic file (type png)
 <use Figs/Figure_4.png>
-Package pdftex.def Info: Figs/Figure_4.png  used on input line 195.
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 188.
 (pdftex.def)             Requested size: 273.83728pt x 234.79091pt.
 
-Overfull \vbox (43.26459pt too high) detected at line 195
+Overfull \vbox (43.26459pt too high) detected at line 188
  []
 
 
@@ -1876,7 +1937,7 @@ Overfull \vbox (43.26459pt too high) detected at line 195
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 242
+Overfull \vbox (1.72923pt too high) detected at line 235
  []
 
 
@@ -1900,16 +1961,16 @@ Overfull \vbox (1.72923pt too high) detected at line 242
 ]
 File: Figs/Figure_4.png Graphic file (type png)
 <use Figs/Figure_4.png>
-Package pdftex.def Info: Figs/Figure_4.png  used on input line 292.
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 285.
 (pdftex.def)             Requested size: 273.83728pt x 234.79091pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
 er}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.292 \end{frame}
+l.285 \end{frame}
                  
-Overfull \vbox (43.26459pt too high) detected at line 292
+Overfull \vbox (43.26459pt too high) detected at line 285
  []
 
 
@@ -1945,10 +2006,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59078 strings out of 473190
- 1437548 string characters out of 5715800
+ 59074 strings out of 473190
+ 1437382 string characters out of 5715800
  2530022 words of memory out of 5000000
- 81323 multiletter control sequences out of 15000+600000
+ 81317 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1958,12 +2019,13 @@ e/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/tex
 mf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
-/lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (13 pages, 401772 bytes).
+/lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (13 pages, 421814 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
+ 464 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
  29 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -23,24 +23,20 @@ The vectors are
 \vec{b} = \myvec{3\\5\\-2}
 \end{align}
 
-To calculate the cross-product of the two vectors \vec{a} and \vec{b}, we use the following determinant:\\
+To calculate the cross-product of the two vectors \vec{a} and \vec{b}, we use the following determinant:
+\begin{center}
+\myvec{|\vec{A_{11}} \vec{B_{23}}| \\ |\vec{A_{11}}   \vec{B_{23}}| \\ |\vec{A_{11}} \vec{B_{23}}| }
+\end{center}
 
-\[
-\begin{vmatrix}
-\hat{i} & \hat{j} & \hat{k}\\
-2&1&3\\
-3&5&-2\\
-\end{vmatrix}
-\]
+
+Where \vec{X_{ij}} = \myvec{$x_i$ \\ $x_j$}.
+
+
 \vspace{1cm}
+Expanding the determinants, we get: 
+\myvec{ ((-2) - 15) \\ ((-4) - 9) \\ (10-3)} = \myvec{-17\\13\\7} \\
 
 
-Expanding the determinant, we get: 
-
-\begin{align}
-\hat{i}((-2) - 15) - \hat{j}((-4) - 9) + \hat{k}(10-3)\\
-= -17\hat{i} + 13\hat{j} + 7\hat{k}
-\end{align}
 
 We need to find the modulus of this vector, which is done by:
 \begin{align}
