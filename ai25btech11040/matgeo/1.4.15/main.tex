@@ -1,4 +1,6 @@
-\documentclass{beamer}
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{geometry}
 \usepackage{amsmath}
 \usepackage{gvv}
 
@@ -8,28 +10,25 @@
 
 \begin{document}
 
-\frame{\titlepage}
+\maketitle
 
-\begin{frame}
-    \frametitle{Question: }
-    The point which divides the line segment joining the points $\mathbf{P}(7, -6)$ and $\mathbf{Q}(3, 4)$ in the ratio $1 : 2$ internally lies in which quadrant?
-\end{frame}
+\section{Question: }
+The point which divides the line segment joining the points $\mathbf{P}(7, -6)$ and $\mathbf{Q}(3, 4)$ in the ratio $1 : 2$ internally lies in which quadrant?
 
-\begin{frame}
-    \frametitle{Solution: }
-    The point $\mathbf{C}$ that divides points $\mathbf{P}$ and $\mathbf{Q}$ in the ratio $l : m$ is
-    \begin{align}
-        \mathbf{C} = \frac{m\mathbf{P} + l\mathbf{Q}}{l+m}                                                                                 \\
-        \therefore \text{The point $\mathbf{R}$ dividing $\mathbf{P}$ and $\mathbf{Q}$ in that ratio is } \mathbf{R} = \myvec{\frac{17}{3} \\-\frac{8}{3}}
-    \end{align}
-    Clearly this point lies in the 4$^\text{th}$ quadrant.
-\end{frame}
+\section{Solution: }
+The point $\mathbf{C}$ that divides points $\mathbf{P}$ and $\mathbf{Q}$ in the ratio $l : m$ is
+\begin{align}
+    \mathbf{C} = \frac{m\mathbf{P} + l\mathbf{Q}}{l+m}
+\end{align}
+\begin{align}
+    \therefore \text{The point $\mathbf{R}$ dividing $\mathbf{P}$ and $\mathbf{Q}$ in that ratio is } \mathbf{R} = \myvec{\frac{17}{3} -\frac{8}{3}}
+\end{align}
+Clearly this point lies in the 4$^\text{th}$ quadrant.
 
-\begin{frame}
-    \frametitle{Plot: }
-    \begin{figure}
-        \includegraphics[scale=0.5]{figs/plot.png}
-    \end{figure}
-\end{frame}
+\pagebreak
+\section{Plot: }
+\begin{figure}[H]
+    \includegraphics[scale=1]{figs/plot.png}
+\end{figure}
 
 \end{document}

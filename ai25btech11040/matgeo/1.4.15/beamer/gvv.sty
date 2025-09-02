@@ -1,6 +1,6 @@
 %\usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
 %\usepackage[left=1.5in,right=1in]{geometry}
-%\usepackage{geometry}
+% \usepackage{geometry}
 %\makeatletter%
 %\textheight     243.5mm
 %\textwidth      183.0mm
@@ -30,6 +30,7 @@
 \usepackage{multicol}
 \usepackage{ifthen}%
 \usepackage{amsmath}%
+\usepackage{amsthm}
 \usepackage{color}%
 \usepackage{float}%
 \usepackage{graphicx}%
@@ -51,7 +52,7 @@
 \usepackage{breakurl}%
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 
-\newcommand{\solution}{\noindent \textbf{Solution: }}
+\renewcommand{\solution}{\noindent \textbf{Solution: }}
 \providecommand{\mbf}{\mathbf}
 \providecommand{\rank}{\text{rank}}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
@@ -71,14 +72,14 @@
   \end{array}\right)
 }
 \theoremstyle{remark}
-\newtheorem{rem}{Remark}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
+% \newtheorem{rem}{Remark}
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{problem}{Problem}
+% \newtheorem{proposition}{Proposition}[section]
+% \newtheorem{lemma}{Lemma}[section]
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{example}{Example}[section]
+% \newtheorem{definition}[problem]{Definition}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
