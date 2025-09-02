@@ -1,8 +1,9 @@
+
 // code.c
 #define NUM_POINTS 4
 
-void get_points(double *arr) {
-    double points[NUM_POINTS][3] = {
+void get_points(double* arr) {
+    double pts[NUM_POINTS][3] = {
         {1, -1, 2},
         {3,  4, -2},
         {0,  3,  2},
@@ -10,11 +11,10 @@ void get_points(double *arr) {
     };
     for (int i = 0; i < NUM_POINTS; ++i)
         for (int j = 0; j < 3; ++j)
-            arr[i*3 + j] = points[i][j];
+            arr[i*3 + j] = pts[i][j];
 }
 
-void get_dir_vectors(double *v1, double *v2) {
-    // v1: AB; v2: CD
+void get_dir_vectors(double* v1, double* v2) {
     v1[0] = 3 - 1;
     v1[1] = 4 - (-1);
     v1[2] = -2 - 2;
