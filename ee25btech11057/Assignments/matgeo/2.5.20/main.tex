@@ -100,7 +100,7 @@ where we used $x=y$ and $z=0$.
 
 Now denote the coefficient vector of $3\vec a-2\vec b+2\vec c$ relative to $(\vec a,\vec b,\vec c)$ by
 \begin{align}
-\mathbf{u}=\begin{pmatrix}3\\-2\\2\end{pmatrix}.
+\mathbf{u}=\myvec {3\\-2\\2}.
 \end{align}
 Then the squared norm is the quadratic form
 \begin{align}
@@ -108,42 +108,18 @@ Then the squared norm is the quadratic form
 = \mathbf{u}^\top G\,\mathbf{u}.
 \end{align}
 
-Compute $G\mathbf{u}$ (this step may be viewed as simple row-combination / row-operation arithmetic):
 \begin{align}
-G\mathbf{u}
+\mathbf{u}^\top G\, \mathbf{u}
 =\myvec
+{3 & -2 & 2}
+\myvec
 {1 & x & x\\
 x & 4 & 0\\
 x & 0 & 9}
 \myvec 
 {3\\-2\\2 }
-=
-\myvec
-{1\cdot 3 + x\cdot(-2)+x\cdot 2\\
-x\cdot 3 + 4\cdot(-2) +0\cdot 2\\
-x\cdot 3 +0\cdot(-2)+9\cdot 2}
-=
-\myvec {3\\3x-8\\3x+18} .
+=9 -6x +16 +6x +36 =61
 \end{align}
-
-Now take the inner product with 
-\begin{align}
-\mathbf{u}^\top=(3,-2,2)
-\end{align} :
-\begin{align}
-\mathbf{u}^\top (G\mathbf{u})
-= (3,-2,2)\cdot (3,\,3x-8,\,3x+18)
-\end{align}
-\begin{align}
-=3\cdot 3 + (-2)(3x-8) + 2(3x+18).
-\end{align}
-\begin{align}
-=9 -6x +16 +6x +36 
-\end{align}
-\begin{align}
-= 9+16+36 +(-6x+6x)=61.
-\end{align}
-Crucially the terms in $x$ cancel out, so the value does not depend on $x$.
 
 Therefore
 \begin{align}
@@ -151,14 +127,12 @@ Therefore
 \quad\Longrightarrow\quad
 \boxed{\bigl\lVert 3\vec a-2\vec b+2\vec c\bigr\rVert=\sqrt{61}}.
 \end{align}
-
+\pagebreak
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.9\columnwidth]{figs/fig3.png} 
    \caption*{Fig: Representation of vectors}
   \label{Fig3}
 \end{figure}
-
-
 
 \end{document}
