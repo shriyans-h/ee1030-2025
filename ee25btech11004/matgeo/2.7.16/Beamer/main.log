@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  30 AUG 2025 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  2 SEP 2025 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1532,14 +1532,17 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./main.aux
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 86.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 86.
@@ -1635,6 +1638,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 86.
+
+(./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -1710,80 +1715,78 @@ tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count415
-
-No file main.nav.
-
+ (./main.nav)
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-3.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-93.
+92.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-93.
+92.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 93.
+(Font)              <10.95> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 93.
+(Font)              <8> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 93.
+(Font)              <6> on input line 92.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
-3.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
-3.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
-3.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
-3.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
-3.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 93.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 93.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 93.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 93.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 93.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 93.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 92.
 
 
 [2
@@ -1794,23 +1797,99 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Extra }, or forgotten $.
+\beamer@doifinframe ...ar \par Where \vec {X_{ij}}
+                                                   = \myvec {$x_i$ \\ $x_j$}...
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.116 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.116 \end{frame}
+                 
+? 
+
+
 [4
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-135.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmss.fd
-File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-[5
-
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
 
-(./main.vrb
+(./main.vrb)
+
+[5
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmtt.fd
@@ -1829,51 +1908,42 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (1.72923pt too high) detected at line 188
+Overfull \vbox (13.72923pt too high) detected at line 182
  []
 
 
 
 [7
 
-]
-<Figs/Figure_3.2.png, id=236, 511.9125pt x 428.60126pt>
-File: Figs/Figure_3.2.png Graphic file (type png)
-<use Figs/Figure_3.2.png>
-Package pdftex.def Info: Figs/Figure_3.2.png  used on input line 198.
-(pdftex.def)             Requested size: 273.83728pt x 229.26997pt.
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<Figs/Figure_4.png, id=236, 756.8275pt x 648.92438pt>
+File: Figs/Figure_4.png Graphic file (type png)
+<use Figs/Figure_4.png>
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 192.
+(pdftex.def)             Requested size: 273.83728pt x 234.79091pt.
 
-Overfull \vbox (37.74365pt too high) detected at line 198
+Overfull \vbox (43.26459pt too high) detected at line 192
  []
 
 
 
 [8
 
- <./Figs/Figure_3.2.png>]
-<Figs/Figure_3.1.png, id=268, 506.89375pt x 418.56375pt>
-File: Figs/Figure_3.1.png Graphic file (type png)
-<use Figs/Figure_3.1.png>
-Package pdftex.def Info: Figs/Figure_3.1.png  used on input line 207.
-(pdftex.def)             Requested size: 273.83728pt x 226.12323pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
-er}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.207 \end{frame}
-                 
-Overfull \vbox (34.59691pt too high) detected at line 207
- []
-
-
-
-[9
-
- <./Figs/Figure_3.1.png>]
+ <./Figs/Figure_4.png>]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
+
+[9
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (1.72923pt too high) detected at line 239
+ []
+
+
 
 [10
 
@@ -1892,60 +1962,23 @@ Overfull \vbox (34.59691pt too high) detected at line 207
 [12
 
 ]
-\openout4 = `main.vrb'.
+File: Figs/Figure_4.png Graphic file (type png)
+<use Figs/Figure_4.png>
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 289.
+(pdftex.def)             Requested size: 273.83728pt x 234.79091pt.
 
- (./main.vrb)
+pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
+er}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.289 \end{frame}
+                 
+Overfull \vbox (43.26459pt too high) detected at line 289
+ []
+
+
 
 [13
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 319
- []
-
-
-
-[14
-
-]
-File: Figs/Figure_3.2.png Graphic file (type png)
-<use Figs/Figure_3.2.png>
-Package pdftex.def Info: Figs/Figure_3.2.png  used on input line 329.
-(pdftex.def)             Requested size: 273.83728pt x 229.26997pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
-er}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.329 \end{frame}
-                 
-Overfull \vbox (37.74365pt too high) detected at line 329
- []
-
-
-
-[15
-
-]
-File: Figs/Figure_3.1.png Graphic file (type png)
-<use Figs/Figure_3.1.png>
-Package pdftex.def Info: Figs/Figure_3.1.png  used on input line 338.
-(pdftex.def)             Requested size: 273.83728pt x 226.12323pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
-er}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.338 \end{frame}
-                 
-Overfull \vbox (34.59691pt too high) detected at line 338
- []
-
-
-
-[16
 
 ]
 \tf@nav=\write7
@@ -1957,6 +1990,9 @@ Overfull \vbox (34.59691pt too high) detected at line 338
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
+runsystem(latexminted cleantemp  --timestamp 20250902215214 FAD58DE7366495DB465
+0CFEFAC2FCD61)...executed safely (allowed).
+
  (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
@@ -1964,25 +2000,19 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59124 strings out of 473190
- 1438337 string characters out of 5715800
- 2507022 words of memory out of 5000000
- 81356 multiletter control sequences out of 15000+600000
- 600874 words of font info for 79 fonts, out of 8000000 for 9000
+ 59116 strings out of 473190
+ 1437756 string characters out of 5715800
+ 2530022 words of memory out of 5000000
+ 81351 multiletter control sequences out of 15000+600000
+ 600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,16n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/tex
@@ -1991,12 +2021,11 @@ nts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (16 pages, 558635 bytes).
+ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (13 pages, 422013 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 471 compressed objects within 5 object streams
- 36 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
