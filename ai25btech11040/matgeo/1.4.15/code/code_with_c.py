@@ -1,30 +1,16 @@
 import numpy as np
-import ctypes
+from ctypes import *
 
-p = np.array([[7], [-6]])
-q = np.array([[3], [4]])
+p = np.array([7, -6])
+q = np.array([3, 4])
 
-lib = ctypes.CDLL('./code.so')
-lib.point_x.argtypes = [ctypes.c_double] * 4
-lib.point_y.argtypes = [ctypes.c_double] * 4
+lib = CDLL('./code.so')
+lib.dividing_point.argtypes = [c_double] * 6
 
-lib.point_x.restype = ctypes.c_double
-lib.point_y.restype = ctypes.c_double
+lib.dividing_point.restype = c_int
 
-x = lib.point_x(p[0][0], q[0][0], 1, 2)
-y = lib.point_y(p[1][0], q[1][0], 1, 2)
+l = 1
+m = 2
 
-r = np.array([[x], [y]])
-
-points = [p, q, r]
-x = [a[0] for a in points]
-y = [a[1] for a in points]
-
-if (r[0][0] > 0 and r[1][0] > 0):
-    print("Q1")
-if (r[0][0] > 0 and r[1][0] < 0):
-    print("Q4")
-if (r[0][0] < 0 and r[1][0] > 0):
-    print("Q2")
-if (r[0][0] < 0 and r[1][0] < 0):
-    print("Q3")
+quadrant = lib.dividing_point(p[0], q[0], p[1], q[1], l, m)
+print(f"Q{quadrant}")

@@ -4,7 +4,10 @@ import numpy as np
 p = np.array([[7], [-6]])
 q = np.array([[3], [4]])
 
-r = (p*2 + q*1)/3
+l = 1
+m = 2
+
+r = (p*m + q*l)/(l+m)
 
 points = [p, q, r]
 x = [a[0] for a in points]
