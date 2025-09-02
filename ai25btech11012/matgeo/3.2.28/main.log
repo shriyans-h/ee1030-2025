@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  2 SEP 2025 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  2 SEP 2025 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1983,11 +1983,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54413 strings out of 473190
- 1297510 string characters out of 5715801
+ 54411 strings out of 473190
+ 1297496 string characters out of 5715801
  1879554 words of memory out of 5000000
  76844 multiletter control sequences out of 15000+600000
- 624012 words of font info for 169 fonts, out of 8000000 for 9000
+ 622675 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,10n,109p,1194b,1018s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
@@ -1995,13 +1995,12 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-di
-st/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 56848 bytes).
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dis
+t/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (1 page, 50672 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
