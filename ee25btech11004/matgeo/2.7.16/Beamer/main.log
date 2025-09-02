@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  2 SEP 2025 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  2 SEP 2025 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1908,7 +1908,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 178
+Overfull \vbox (13.72923pt too high) detected at line 182
  []
 
 
@@ -1919,10 +1919,10 @@ Overfull \vbox (13.72923pt too high) detected at line 178
 <Figs/Figure_4.png, id=236, 756.8275pt x 648.92438pt>
 File: Figs/Figure_4.png Graphic file (type png)
 <use Figs/Figure_4.png>
-Package pdftex.def Info: Figs/Figure_4.png  used on input line 188.
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 192.
 (pdftex.def)             Requested size: 273.83728pt x 234.79091pt.
 
-Overfull \vbox (43.26459pt too high) detected at line 188
+Overfull \vbox (43.26459pt too high) detected at line 192
  []
 
 
@@ -1940,7 +1940,7 @@ Overfull \vbox (43.26459pt too high) detected at line 188
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 235
+Overfull \vbox (1.72923pt too high) detected at line 239
  []
 
 
@@ -1964,16 +1964,16 @@ Overfull \vbox (1.72923pt too high) detected at line 235
 ]
 File: Figs/Figure_4.png Graphic file (type png)
 <use Figs/Figure_4.png>
-Package pdftex.def Info: Figs/Figure_4.png  used on input line 285.
+Package pdftex.def Info: Figs/Figure_4.png  used on input line 289.
 (pdftex.def)             Requested size: 273.83728pt x 234.79091pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
 er}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 \end{frame}
+l.289 \end{frame}
                  
-Overfull \vbox (43.26459pt too high) detected at line 285
+Overfull \vbox (43.26459pt too high) detected at line 289
  []
 
 
@@ -1990,7 +1990,7 @@ Overfull \vbox (43.26459pt too high) detected at line 285
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250902152222 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250902215214 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -2022,7 +2022,7 @@ ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (13 pages, 421982 bytes).
+Output written on main.pdf (13 pages, 422013 bytes).
 PDF statistics:
  464 PDF objects out of 1000 (max. 8388607)
  389 compressed objects within 4 object streams
