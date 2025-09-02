@@ -40,8 +40,8 @@
 
 \bibliographystyle{IEEEtran}
 
-\title{1.9.11}
-\author{EE25BTECH11022 - sankeerthan}
+\title{2.4.18}
+\author{EE25BTECH11022 - sankeertthan}
 % \maketitle
 % \newpage
 % \bigskip
@@ -49,48 +49,37 @@
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
 
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\renewcommand{\thetable}{\theenumi}
 
-\textbf{Question}: if the distance between the points $\brak{k,-2}$ and $\brak{3,-6}$ is $10$ units, find the positive value of k.
+\textbf{Question}: show that the line through the points \brak{1,-1,2} , \brak{3,4,-2} is perpendicular to the line through the  points  \brak{0,3,2} and \brak{3,5,6}
 
 \textbf{solution}:
-Let the given points be
- \begin{align}
- \vec{A} = \myvec{k \\ -2}, \vec{B} = \myvec{3 \\ -6} 
- \end{align}
-The direction vector of the segment joining A and B is given by:
 \begin{align}
-\vec{B} - \vec{A} = \myvec{3 - k \\ -6 -(-2)} = \myvec{3-k \\ -4} 
+let \Vec{A} =\brak{1,-1,2},\Vec{B} =\brak{3,4,-2},\Vec{C} =\brak{0,3,2},\Vec{D} =\brak{3,5,6}
 \end{align}
-The length of the segment is the magnitude of the direction vector:
- \begin{align}
-\vec{B} - \vec{A} = \myvec{3 - k \\ -6 -(-2)} = \myvec{3-k \\ -4} 
-\end{align}
-The distance between points $\vec{A}$ and $\vec{B}$ is given as,
-d = $\|\vec{B-A}\|$ = 10
+Direction vector of line joining points $\Vec{A}$ and $\Vec{B}$ is
 \begin{align}
-\|\vec{B-A}\| = \sqrt{\brak{\vec{B}-\vec{A}}^\top \brak{\vec{B}-\vec{A}}}  \\
-\brak{\vec{B}-\vec{A}}^\top \brak{\vec{B}-\vec{A}} = \|\vec{B-A}\|^2
-\brak{\vec{B}-\vec{A}}^\top \brak{\vec{B}-\vec{A}} = (10)^2
+    \Vec{B}-\Vec{A} &= \myvec{3-1 \\ 4-(-1) \\ -2-2}\\
+    &= \myvec{2 \\ 5 \\-4}\\
+\end{align}
+Direction vector of line joining points $\Vec{C}$ and $\Vec{D}$ is
+\begin{align}
+    \Vec{C}-\Vec{D} &= \myvec{3-0 \\ 5-3 \\ 6-2}\\
+    &= \myvec{3 \\ 2 \\4}\\
 \end{align}
 \begin{align}
-100 &=\myvec{3-k  \ -4}\myvec{3-k \\ -4}\\
-100 &=(3-k)\times(3-k)+(-4)\times(-4) \\
-100 &=(3-k)^2 + 16 \\
-(3-k)^2 &= 84 \\
-3-k &=\pm \sqrt{84} \\
-k &= 3+\sqrt{84} ,3-\sqrt{84}
+\myvec{\vec{B}-\vec{A}}^\top\myvec{\vec{D}-\vec{C}} &= \myvec{2 \ \ 5 \ \ -4}\myvec{3 \\ 2 \\4}\\
+ &= 2\brak{3}+5\brak{2}+\brak{-4}\brak{4}\\
+ &=6+10-16\\
+ &=0\\
+ \myvec{\vec{B}-\vec{A}}^\top\myvec{\vec{D}-\vec{C}} = 0
 \end{align}
-
-Therefore, the positive value of k is $3+\sqrt{84} \approx 12.17$
+Therefore, the lines joining points $\Vec{A}$,$\Vec{B}$ and $\Vec{C}$,$\Vec{D}$ are perpendicular 
 
 \begin{figure}
-   \centering
-   \includegraphics[width=1\columnwidth]{figs/points.png}
-   \caption{Plot of line segment \textbf{AB}}
-   \label{}
+    \centering
+    \includegraphics[width=\linewidth]{figs/points.png}
+    \caption{}
 \end{figure}
 \end{document}
