@@ -9,7 +9,7 @@
 \usepackage{tikz}
 
 
-\title{2.6.21 Matgeo}
+\title{3.2.28 Matgeo}
 \author{AI25BTECH11012 - Garige Unnathi}
 \date{}
 
@@ -20,52 +20,37 @@
 % Question frame
 \begin{frame}
 \frametitle{Question}
-Find if a triangle ABC can be constructed in which AB = 5cm, $\angle \textbf{A}$ = $45^\circ$ and BC+AC= 5cm.
+Find if a triangle ABC can be constructed in which \textbf{B - A} = 5cm, $\angle \textbf{A}$ = $45^\circ$ and \textbf{(C - B)}+\textbf{(C - A)}= 5cm.
 \end{frame}
 
 
 % Solution steps
 \begin{frame}
-\frametitle{Solution}
-The area of a triangle ABC is given by :
+\frametitle{Given}
 Given that : 
 
 \begin{align*}
-  a + b = 5 cm
+ \textbf{B - A} = c \quad  \textbf{(C - B)} = a \quad \textbf{(C - A)} = b\\
+  a + b = 5 cm\\
+  c = 5cm
 \end{align*}
-
-We need to find b. Using the Law of Cosines, we have:
-
-
-\begin{align}
- a^2 &= b^2 + c^2 - 2bc \cos(A) \\
- a^2 &= b^2 + 25 - \frac{10b}{\sqrt{2}}
- \end{align}
-
-
 
 
 \end{frame}
-
-
-
 \begin{frame}
 \frametitle{Solution}
-We know a = 5 - b ,substituting we get :
+Using the triangle inequality, for any triangle ABC :
+
+
 
 \begin{align}
- (5 - b)^2 &= b^2 + 25 - \frac{10b}{\sqrt{2}}\\
+    \textbf{B - A}<(\textbf{C - B})+(\textbf{C - A}).\\
+    c < a+b
  \end{align}
 
-solving the equation we get :
-\begin{align}
-b = 0
-\end{align}
 
+Which is not true.\\
 
-
-\bigskip
 Hence we cannot form a triangle with the given conditions.
-
 \end{frame}
 \end{document}
