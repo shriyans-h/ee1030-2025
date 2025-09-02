@@ -1,17 +1,20 @@
 \frametitle{Python: plot.py}
 \begin{lstlisting}[language=Python]
-xmin, ymin = all_pts.min(axis=0) - 1.0
-xmax, ymax = all_pts.max(axis=0) + 1.0
-plt.xlim(xmin, xmax)
-plt.ylim(ymin, ymax)
+# plot points and annotate (only names, no coordinates)
+pts = {"A":A,"B":B,"C":C,"D":D,"D'":Dp,"C'":Cp,"A'":Ap}
+for name,p in pts.items():
+    plt.scatter(p[0], p[1], s=60, zorder=5)
+    plt.text(p[0]+0.08, p[1]+0.08, f"{name}", fontsize=10, fontweight="bold")
 
 plt.gca().set_aspect('equal', adjustable='box')
 plt.grid(True)
 plt.legend()
-plt.title("Triangles BDC (solid), BD'C' (dashed) and Parallelogram A'BC'D'")
+plt.title("Parallelograms ABCD and A' B C' D' with scaled triangle BD'C'")
 plt.tight_layout()
 
-# save and show
-plt.savefig("parallelogram_plot.png", dpi=200)
+# --- Save the figure ---
+plt.savefig("parallelogram_with_scaling.png", dpi=300)
+
 plt.show()
- \end{lstlisting}
+
+\end{lstlisting}
