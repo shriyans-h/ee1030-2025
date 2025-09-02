@@ -1,0 +1,15 @@
+\frametitle{Python Code}
+    \begin{lstlisting}
+ # Add vector magnitude labels
+    ax.text(a[0]/2, a[1]/2 - 0.3, f'|a| = {np.linalg.norm(a):.1f}',
+            fontsize=10, ha='center', color='red', weight='bold')
+    ax.text(b[0]/2 - 0.3, b[1]/2, f'|b| = {np.linalg.norm(b):.1f}',
+            fontsize=10, ha='center', color='blue', weight='bold')
+    ax.text(c[0]/2, c[1]/2 + 0.3, f'|c| = {np.linalg.norm(c):.1f}',
+            fontsize=10, ha='center', color='green', weight='bold')
+
+    # Set equal aspect ratio and grid
+    ax.set_aspect('equal')
+    ax.grid(True, alpha=0.3)
+    ax.legend(loc='upper right', fontsize=11)
+    \end{lstlisting}

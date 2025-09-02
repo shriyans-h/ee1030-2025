@@ -1,0 +1,138 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} 
+\usepackage{tfrupee} 
+
+\setlength{\headheight}{1cm} 
+\setlength{\headsep}{0mm}     
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{3.2.19}
+\author{AI25BTECH11003 - Bhavesh Gaikwad}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} 
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}: Two sides of a triangle are of lengths 5cm and 1.5cm. The length of the third side of the triangle cannot be\\
+a) 3.6 cm\\
+b) 4.1 cm\\
+c) 3.8 cm\\
+d) 3.4 cm\\
+
+\textbf{Solution:}\\
+
+Let the vector along side AB be $\vec{a}$ \\
+Let the vector along side BC be $\vec{b}$ \\
+Let the vector along side AC be $\vec{c}$ \\
+Let the angle between $\vec{a} \, and \, \vec{b}$ be $\theta$.\\
+
+Given: 
+\begin{equation}
+    \norm{\vec{a}} = 5, \, \, \norm{\vec{b}} = 1.5
+\end{equation}\\
+
+By Triangle Law of Vector Addition,
+\begin{equation}
+    \vec{a} + \vec{b} = \vec{c}
+\end{equation}
+
+\begin{equation}
+\vec{c}^T\vec{c} = (\vec{a}+\vec{b})^T(\vec{a}+\vec{b})    
+\end{equation}
+
+\begin{equation}
+    \vec{c}^T\vec{c} = (\vec{a}^T\vec{a}) + (\vec{b}^T\vec{b}) + (\vec{a}^T\vec{b}) + (\vec{b}^T\vec{a})
+\end{equation}
+
+We know that,
+\begin{equation}
+    \vec{a}^T\vec{a}= \norm{\vec{a}}^2 = 25, \, \,
+    \vec{b}^T\vec{b} = \norm{\vec{b}}^2 = 2.25, \, \,
+    \vec{c}^T\vec{c}=\norm{\vec{c}}^2, \, \,
+   \vec{a}^T\vec{b}=\vec{b}^T\vec{a}=\norm{\vec{a}}\norm{\vec{b}}\cos{(\theta)}
+\end{equation}
+
+From Equation 0.4 and 0.5, 
+\begin{equation}
+    \norm{\vec{c}}^2 = 27.25 + 15\cos{(\theta)}
+\end{equation}
+
+Since '$\theta$' is the angle between two vectors, Therefore 
+\begin{equation}
+\theta \, \epsilon \, (0,\pi)    
+\end{equation}
+
+\newpage
+
+The maximum value of $\norm{\vec{c}}^2$ will occur when $\cos{(\theta)}=1$ OR $\theta = 0$
+\begin{equation}
+    \text{Therefore the maximum value of} \norm{\vec{c}}^2 \, is \, 42.25. \\
+    \Rightarrow \, \text{The maximum value of} \norm{\vec{c}} is \, 6.5.
+\end{equation}\\
+
+The minimum value of $\norm{\vec{c}}^2$ will occur when $\cos{(\theta)}=-1$ OR $\theta = \pi$
+\begin{equation}
+    \text{Therefore the minimum value of} \norm{\vec{c}}^2 \, is \, 12.25. \\
+    \Rightarrow \, \text{The minimum value of} \norm{\vec{c}} is \, 3.5.
+\end{equation}
+
+\begin{equation}
+    \therefore \text{The Range of} \, \norm{\vec{c}} \, \text{for triangle to exist: } \norm{\vec{c}} \, \epsilon \, (3.5, 6.5).
+\end{equation}
+
+From option D of the Question, $\norm{\vec{c}}$ = 3.4 cm\\
+But by Equation 0.10, $\norm{\vec{c}} \neq 3.4$, Since $\norm{\vec{c}} > $  3.5
+
+\begin{align}
+    \boxed{\text{Option D of the Question is Incorrect and} \norm{\vec{c}} \neq 3.4 \, cm}
+\end{align}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/fig1.png}
+    \caption{Vector Representation}
+    \label{fig:fig/fig1.png}
+\end{figure}
+\end{document}  
