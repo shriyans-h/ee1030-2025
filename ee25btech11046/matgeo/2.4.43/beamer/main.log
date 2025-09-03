@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.11)  2 SEP 2025 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.11)  3 SEP 2025 08:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1827,8 +1827,8 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  128i,15n,122p,1172b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/publi
+c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/u
+sr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/publi
 c/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/
@@ -1836,7 +1836,7 @@ fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 o10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-Output written on main.pdf (5 pages, 204994 bytes).
+Output written on main.pdf (5 pages, 204872 bytes).
 PDF statistics:
  228 PDF objects out of 1000 (max. 8388607)
  183 compressed objects within 2 object streams
