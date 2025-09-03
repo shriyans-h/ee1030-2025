@@ -13,7 +13,6 @@ plt.title("Fig:2.8.15")
 
 fig.savefig("../figs/vector2.png")
 fig.show()
-#plt.savefig('figs/triangle/ang-bisect.pdf')
-#subprocess.run(shlex.split("termux-open figs/triangle/ang-bisect.pdf"))
+#.run(shlex.split("termux-open figs/triangle/ang-bisect.pdf"))
 
     \end{lstlisting}

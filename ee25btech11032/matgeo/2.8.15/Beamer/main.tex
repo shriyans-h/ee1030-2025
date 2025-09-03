@@ -103,37 +103,30 @@ Let $\vec{A} - \vec{O}$ be represented as $\vec{R}$
 
 \end{frame}
 
-\begin{frame}{Theory}
-
-If $l$ , $m$ and $n$ are the direction cosines of a given vector then , 
-\begin{align}
-    l^2 + m^2 + n^2 = 1 
-\end{align}
-
-\end{frame}
 \begin{frame}{Theoretical Solution}
 
 \begin{align}
-    \vec{R} = \norm{\vec{R}} \myvec{l \\ m \\ n}
+    \vec{R} = \norm{\vec{R}} \vec{m}
+\end{align}
+where, let $\vec{m}$ be the unit vector in direction of $\vec{R}$. 
+
+
+\begin{align}
+    \vec{m} = \myvec{\cos(60\degree) \\ \cos(45\degree) \\ m_3 }
 \end{align}
 
 \begin{align}
-    l = \cos{60\degree} = \frac{1}{2} , m = \cos{45\degree} = \frac{1}{\sqrt{2}}
+    \vec{m}^{\top}\vec{m} = 1
 \end{align}
 \end{frame}
-
 \begin{frame}{Theoretical Solution}
-\begin{align}
-    l^2 + m^2 + n^2 &= 1\\
-    \implies \frac{1}{4} + \frac{1}{2} + n^2  &= 1\\
-    \implies n &= \pm \frac{1}{2}
+  \begin{align}
+    \cos^2(60\degree) + \cos^2(45\degree) + m_3^2 &= 1 \\ 
+    m_3 &=\pm \frac{1}{2}  
 \end{align}
 
 \begin{align}
-    \vec{R} = 10\myvec{\frac{1}{2} \\ \frac{1}{\sqrt{2}} \\ \pm \frac{1}{2}}
-\end{align}
-\begin{align}
-    \vec{R} = \myvec{5 \\ 5\sqrt{2} \\ +5} \text{ or } \vec{R} = \myvec{5 \\ 5\sqrt{2} \\ -5} 
+    \therefore \vec{R} = 10\myvec{\frac{1}{2} \\ \frac{1}{\sqrt{2}} \\ \pm \frac{1}{2}}
 \end{align}
 \end{frame}
 \begin{frame}{Theoretical Solution}
@@ -389,8 +382,7 @@ plt.title("Fig:2.8.15")
 
 fig.savefig("../figs/vector2.png")
 fig.show()
-#plt.savefig('figs/triangle/ang-bisect.pdf')
-#subprocess.run(shlex.split("termux-open figs/triangle/ang-bisect.pdf"))
+#.run(shlex.split("termux-open figs/triangle/ang-bisect.pdf"))
 
     \end{lstlisting}
 \end{frame}
