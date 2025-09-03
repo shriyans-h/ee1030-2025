@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.11)  2 SEP 2025 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.11)  3 SEP 2025 08:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1655,10 +1655,10 @@ LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-<figs/plot_c.jpg, id=32, 722.7pt x 578.16pt>
+<figs/plot_c.jpg, id=31, 722.7pt x 578.16pt>
 File: figs/plot_c.jpg Graphic file (type jpg)
 <use figs/plot_c.jpg>
-Package pdftex.def Info: figs/plot_c.jpg  used on input line 52.
+Package pdftex.def Info: figs/plot_c.jpg  used on input line 51.
 (pdftex.def)             Requested size: 364.1953pt x 291.35536pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1669,7 +1669,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  51844 strings out of 476091
  1226538 string characters out of 5794081
- 1875330 words of memory out of 5000000
+ 1874330 words of memory out of 5000000
  71429 multiletter control sequences out of 15000+600000
  579219 words of font info for 166 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1682,10 +1682,10 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 108645 bytes).
+Output written on main.pdf (2 pages, 108417 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  10 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
