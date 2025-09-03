@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  2 SEP 2025 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  3 SEP 2025 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1840,14 +1840,10 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}] [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathex.enc}]
-Overfull \vbox (1.3342pt too high) detected at line 149
- []
-
-[4
+dvips/lm/lm-mathex.enc}] [4
 
 ]
-<../figs/Figure_1.png, id=148, 462.528pt x 346.896pt>
+<../figs/Figure_1.png, id=147, 462.528pt x 346.896pt>
 File: ../figs/Figure_1.png Graphic file (type png)
 <use ../figs/Figure_1.png>
 Package pdftex.def Info: ../figs/Figure_1.png  used on input line 158.
@@ -1875,22 +1871,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  56550 strings out of 474222
  1353284 string characters out of 5748734
- 2186018 words of memory out of 5000000
+ 2185018 words of memory out of 5000000
  77820 multiletter control sequences out of 15000+600000
  598809 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1172b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,18n,123p,1172b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (5 pages, 154375 bytes).
+hare/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (5 pages, 135809 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 222 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  12 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
