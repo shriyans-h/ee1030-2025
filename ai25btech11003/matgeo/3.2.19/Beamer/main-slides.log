@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  2 SEP 2025 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  3 SEP 2025 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main-slides.tex
+**main-slodes.tex
 (./main-slides.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1707,86 +1707,129 @@ dvips/lm/lm-rm.enc}] [2
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
 .
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-2.
+4.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-2.
+4.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 2.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 2.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 4
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 4
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 4
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 4
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 2.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 2.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 2.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 4.
 ) [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc}]
 \openout4 = `main-slides.vrb'.
 
- (./main-slides.vrb) [4
+ (./main-slides.vrb
+<figs/fig1.png, id=118, 295.9055pt x 281.853pt>
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 4.
+(pdftex.def)             Requested size: 342.2953pt x 326.07236pt.
+)
+Overfull \vbox (134.54604pt too high) detected at line 132
+ []
+
+[4
+
+ <./figs/fig1.png>]
+\openout4 = `main-slides.vrb'.
+
+ (./main-slides.vrb
+<figs/fig2.png, id=151, 295.9055pt x 281.853pt>
+File: figs/fig2.png Graphic file (type png)
+<use figs/fig2.png>
+Package pdftex.def Info: figs/fig2.png  used on input line 14.
+(pdftex.def)             Requested size: 171.14764pt x 163.02757pt.
+)
+Overfull \vbox (79.23042pt too high) detected at line 157
+ []
+
+[5
+
+ <./figs/fig2.png>]
+\openout4 = `main-slides.vrb'.
+
+ (./main-slides.vrb
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 15.
+(pdftex.def)             Requested size: 102.68962pt x 97.81139pt.
+)
+Overfull \vbox (14.01424pt too high) detected at line 181
+ []
+
+[6
 
 ]
 \openout4 = `main-slides.vrb'.
 
- (./main-slides.vrb) [5
+ (./main-slides.vrb
+<figs/fig4.png, id=211, 295.9055pt x 281.853pt>
+File: figs/fig4.png Graphic file (type png)
+<use figs/fig4.png>
+Package pdftex.def Info: figs/fig4.png  used on input line 13.
+(pdftex.def)             Requested size: 136.91603pt x 130.41948pt.
+)
+Overfull \vbox (57.75146pt too high) detected at line 203
+ []
 
-]
+[7
+
+ <./figs/fig4.png>]
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb
@@ -1797,36 +1840,21 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-12.
+6.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [6
+))
+Overfull \vbox (1.72923pt too high) detected at line 227
+ []
+
+[8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}]
 \openout4 = `main-slides.vrb'.
 
-
-(./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 225
- []
-
-[7
-
-]
-\openout4 = `main-slides.vrb'.
-
- (./main-slides.vrb) [8
-
-]
-\openout4 = `main-slides.vrb'.
-
- (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 268
- []
-
-[9
+ (./main-slides.vrb) [9
 
 ]
 \openout4 = `main-slides.vrb'.
@@ -1836,11 +1864,8 @@ Overfull \vbox (1.72923pt too high) detected at line 268
 ]
 \openout4 = `main-slides.vrb'.
 
- (./main-slides.vrb)
-Overfull \vbox (73.72923pt too high) detected at line 311
- []
 
-[11
+(./main-slides.vrb) [11
 
 ]
 \openout4 = `main-slides.vrb'.
@@ -1853,14 +1878,23 @@ Overfull \vbox (73.72923pt too high) detected at line 311
  (./main-slides.vrb) [13
 
 ]
-<figs/fig1.png, id=407, 559.3698pt x 571.1739pt>
+\openout4 = `main-slides.vrb'.
+
+
+(./main-slides.vrb)
+Overfull \vbox (1.72923pt too high) detected at line 344
+ []
+
+[14
+
+]
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 357.
-(pdftex.def)             Requested size: 204.07011pt x 208.37651pt.
- [14
+Package pdftex.def Info: figs/fig1.png  used on input line 350.
+(pdftex.def)             Requested size: 218.777pt x 208.38731pt.
+ [15
 
- <./figs/fig1.png>]
+]
 \tf@nav=\write8
 \openout8 = `main-slides.nav'.
 
@@ -1870,8 +1904,7 @@ Package pdftex.def Info: figs/fig1.png  used on input line 357.
 \tf@snm=\write10
 \openout10 = `main-slides.snm'.
 
-
-(./main-slides.aux)
+ (./main-slides.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1890,25 +1923,23 @@ Package rerunfilecheck Info: Checksums for `main-slides.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57098 strings out of 474222
- 1357965 string characters out of 5748734
- 2412300 words of memory out of 5000000
- 78329 multiletter control sequences out of 15000+600000
- 599736 words of font info for 78 fonts, out of 8000000 for 9000
+ 57154 strings out of 474222
+ 1359076 string characters out of 5748734
+ 2377300 words of memory out of 5000000
+ 78375 multiletter control sequences out of 15000+600000
+ 599450 words of font info for 85 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1179b,1534s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1179b,1520s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/txfonts/txsyc.pfb>
-Output written on main-slides.pdf (14 pages, 311358 bytes).
+blic/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/txfonts/txsya.pfb>
+Output written on main-slides.pdf (15 pages, 203034 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 415 compressed objects within 5 object streams
- 30 named destinations out of 1000 (max. 500000)
- 84 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 521 PDF objects out of 1000 (max. 8388607)
+ 436 compressed objects within 5 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  2 SEP 2025 15:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  3 SEP 2025 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1873,64 +1873,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 66
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 68
 .
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 6
-6.
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 6
-6.
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
-6.
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-
- []
-
-<figs/fig1.png, id=49, 559.3698pt x 571.1739pt>
+<figs/fig1.png, id=31, 295.9055pt x 281.853pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 134.
-(pdftex.def)             Requested size: 364.1953pt x 371.89485pt.
-[2] [3 <./figs/fig1.png>] (./main.aux)
+Package pdftex.def Info: figs/fig1.png  used on input line 90.
+(pdftex.def)             Requested size: 109.25969pt x 104.06894pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}
+
+ <./figs/fig1.png>]
+<figs/fig2.png, id=53, 295.9055pt x 281.853pt>
+File: figs/fig2.png Graphic file (type png)
+<use figs/fig2.png>
+Package pdftex.def Info: figs/fig2.png  used on input line 108.
+(pdftex.def)             Requested size: 182.09764pt x 173.45683pt.
+ [2 <./figs/fig2.png>]
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 129.
+(pdftex.def)             Requested size: 72.83794pt x 69.37929pt.
+<figs/fig4.png, id=63, 295.9055pt x 281.853pt>
+File: figs/fig4.png Graphic file (type png)
+<use figs/fig4.png>
+Package pdftex.def Info: figs/fig4.png  used on input line 148.
+(pdftex.def)             Requested size: 182.09764pt x 173.45683pt.
+ [3 <./figs/fig4.png>]
+(./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1949,24 +1952,24 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52951 strings out of 474222
- 1254575 string characters out of 5748734
- 1934975 words of memory out of 5000000
- 74387 multiletter control sequences out of 15000+600000
- 623283 words of font info for 169 fonts, out of 8000000 for 9000
+ 52972 strings out of 474222
+ 1254942 string characters out of 5748734
+ 1937975 words of memory out of 5000000
+ 74402 multiletter control sequences out of 15000+600000
+ 622145 words of font info for 168 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,13n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,13n,109p,1194b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 170922 bytes).
+ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on main.pdf (3 pages, 98556 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 23 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

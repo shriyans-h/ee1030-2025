@@ -63,76 +63,93 @@ d) 3.4 cm\\
 
 \textbf{Solution:}\\
 
-Let the vector along side AB be $\vec{a}$ \\
-Let the vector along side BC be $\vec{b}$ \\
-Let the vector along side AC be $\vec{c}$ \\
-Let the angle between $\vec{a} \, and \, \vec{b}$ be $\theta$.\\
+Let a=5 cm, b=1.5 cm, and c be the third side. For each option we test:
 
-Given: 
-\begin{equation}
-    \norm{\vec{a}} = 5, \, \, \norm{\vec{b}} = 1.5
-\end{equation}\\
+\begin{align}
+1.\quad &a + b > c,\\
+2.\quad &a + c > b,\\
+3.\quad &b + c > a.
+\end{align}
 
-By Triangle Law of Vector Addition,
-\begin{equation}
-    \vec{a} + \vec{b} = \vec{c}
-\end{equation}
+If all three hold, the triangle exists; otherwise it does not.
 
-\begin{equation}
-\vec{c}^T\vec{c} = (\vec{a}+\vec{b})^T(\vec{a}+\vec{b})    
-\end{equation}
+\bigskip
 
-\begin{equation}
-    \vec{c}^T\vec{c} = (\vec{a}^T\vec{a}) + (\vec{b}^T\vec{b}) + (\vec{a}^T\vec{b}) + (\vec{b}^T\vec{a})
-\end{equation}
+Option (A): c = 3.6 cm
 
-We know that,
-\begin{equation}
-    \vec{a}^T\vec{a}= \norm{\vec{a}}^2 = 25, \, \,
-    \vec{b}^T\vec{b} = \norm{\vec{b}}^2 = 2.25, \, \,
-    \vec{c}^T\vec{c}=\norm{\vec{c}}^2, \, \,
-   \vec{a}^T\vec{b}=\vec{b}^T\vec{a}=\norm{\vec{a}}\norm{\vec{b}}\cos{(\theta)}
-\end{equation}
+\begin{align}
+5 + 1.5 &> 3.6 \quad\Rightarrow\quad 6.5 > 3.6\quad\checkmark,\\
+5 + 3.6 &> 1.5 \quad\Rightarrow\quad 8.6 > 1.5\quad\checkmark,\\
+1.5 + 3.6 &> 5 \quad\Rightarrow\quad 5.1 > 5\quad\checkmark.
+\end{align}
 
-From Equation 0.4 and 0.5, 
-\begin{equation}
-    \norm{\vec{c}}^2 = 27.25 + 15\cos{(\theta)}
-\end{equation}
+All conditions satisfied $\;\Rightarrow$ triangle exists.
 
-Since '$\theta$' is the angle between two vectors, Therefore 
-\begin{equation}
-\theta \, \epsilon \, (0,\pi)    
-\end{equation}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.3\columnwidth]{figs/fig1.png}
+\caption{Triangle}
+\label{fig:figs/fig1.png}
+\end{figure}
+
+
+Option (B): c = 4.1 cm
+
+\begin{align}
+5 + 1.5 &> 4.1 \quad\Rightarrow\quad 6.5 > 4.1\quad\checkmark,\\
+5 + 4.1 &> 1.5 \quad\Rightarrow\quad 9.1 > 1.5\quad\checkmark,\\
+1.5 + 4.1 &> 5 \quad\Rightarrow\quad 5.6 > 5\quad\checkmark.
+\end{align}
+
+All conditions satisfied $\;\Rightarrow$ triangle exists.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\columnwidth]{figs/fig2.png}
+\caption{Triangle}
+\label{fig:figs/fig2.png}
+\end{figure}
+
+\bigskip
 
 \newpage
 
-The maximum value of $\norm{\vec{c}}^2$ will occur when $\cos{(\theta)}=1$ OR $\theta = 0$
-\begin{equation}
-    \text{Therefore the maximum value of} \norm{\vec{c}}^2 \, is \, 42.25. \\
-    \Rightarrow \, \text{The maximum value of} \norm{\vec{c}} is \, 6.5.
-\end{equation}\\
-
-The minimum value of $\norm{\vec{c}}^2$ will occur when $\cos{(\theta)}=-1$ OR $\theta = \pi$
-\begin{equation}
-    \text{Therefore the minimum value of} \norm{\vec{c}}^2 \, is \, 12.25. \\
-    \Rightarrow \, \text{The minimum value of} \norm{\vec{c}} is \, 3.5.
-\end{equation}
-
-\begin{equation}
-    \therefore \text{The Range of} \, \norm{\vec{c}} \, \text{for triangle to exist: } \norm{\vec{c}} \, \epsilon \, (3.5, 6.5).
-\end{equation}
-
-From option D of the Question, $\norm{\vec{c}}$ = 3.4 cm\\
-But by Equation 0.10, $\norm{\vec{c}} \neq 3.4$, Since $\norm{\vec{c}} > $  3.5
+Option (C): c = 3.8 cm
 
 \begin{align}
-    \boxed{\text{Option D of the Question is Incorrect and} \norm{\vec{c}} \neq 3.4 \, cm}
+5 + 1.5 &> 3.8 \quad\Rightarrow\quad 6.5 > 3.8\quad\checkmark,\\
+5 + 3.8 &> 1.5 \quad\Rightarrow\quad 8.8 > 1.5\quad\checkmark,\\
+1.5 + 3.8 &> 5 \quad\Rightarrow\quad 5.3 > 5\quad\checkmark.
 \end{align}
 
+All conditions satisfied $\;\Rightarrow$ triangle exists.
+
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\columnwidth]{figs/fig1.png}
-    \caption{Vector Representation}
-    \label{fig:fig/fig1.png}
+\centering
+\includegraphics[width=0.2\columnwidth]{figs/fig1.png}
+\caption{Triangle}
+\label{fig:figs/fig3.png}
 \end{figure}
+
+\bigskip
+
+Option (D): c = 3.4 cm
+
+\begin{align}
+5 + 1.5 &> 3.4 \quad\Rightarrow\quad 6.5 > 3.4\quad\checkmark,\\
+5 + 3.4 &> 1.5 \quad\Rightarrow\quad 8.4 > 1.5\quad\checkmark,\\
+1.5 + 3.4 &> 5 \quad\Rightarrow\quad 4.9 > 5\quad\times.
+\end{align}
+
+Condition 3 fails $\;\Rightarrow$ triangle does \emph{not} exist.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\columnwidth]{figs/fig4.png}
+\caption{Triangle}
+\label{fig:figs/fig4.png}
+\end{figure}
+
+$$\boxed{\therefore \, \text{Option D is Incorrect.}}$$
+
 \end{document}  
