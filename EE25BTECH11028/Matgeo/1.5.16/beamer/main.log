@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  31 AUG 2025 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  3 SEP 2025 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1497,322 +1497,6 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-83.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
-File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-
-! Package xcolor Error: Undefined color `.'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\Acrobatmenu ...actionraw >>}\relax \Hy@colorlink 
-                                                  \@menucolor #2\close@pdfli...
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\Acrobatmenu ...actionraw >>}\relax \Hy@colorlink 
-                                                  \@menucolor #2\close@pdfli...
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\Acrobatmenu ...actionraw >>}\relax \Hy@colorlink 
-                                                  \@menucolor #2\close@pdfli...
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\Acrobatmenu ...actionraw >>}\relax \Hy@colorlink 
-                                                  \@menucolor #2\close@pdfli...
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-
-! Package xcolor Error: Undefined color `.'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-<recently read> \Hy@colorlink 
-                              
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-! Undefined control sequence.
-\close@pdflink ->\Hy@endcolorlink 
-                                  \Hy@VerboseLinkStop \pdfendlink 
-l.83 {\let\newpage\relax\maketitle
-                                  }
-? 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rm.enc}
-
-
-\providecommand \oddpage@label [2]{}
-\@writefile{nav}{\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}}
-\@writefile{nav}{\headcommand {\beamer@framepages {1}{1}}}
-
-]
-Overfull \vbox (11.0pt too high) has occurred while \output is active []
-
 runsystem(command -v pygmentize && touch main.aex)...disabled (restricted).
 
 
@@ -1824,53 +1508,58 @@ See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 \begin{document}
+l.86 \begin{document}
                      
 ? 
-(./main.aux)
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+86.
+(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 95.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-95.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+86.
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 86.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-95.
+86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 86.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-95.
+86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 95.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 9
-5.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 86.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 8
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1928,58 +1617,56 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 95.
-
-(./main.out) (./main.out)
+Package hyperref Info: Link coloring OFF on input line 86.
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 95.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 95.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 95.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 95.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 86.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 95.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 86.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 95.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 95.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 86.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 95.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 95.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 86.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 95.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 95.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 95.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 86.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 95.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 95.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 95.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 95.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 95.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 95.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 95.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 95.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 86.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 95.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -2006,83 +1693,361 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count412
- (./main.nav)
+
+No file main.nav.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-8.
+4.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-98.
+94.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-98.
+94.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 98.
+(Font)              <10.95> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 98.
+(Font)              <8> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 98.
+(Font)              <6> on input line 94.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
-8.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
-8.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
-8.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
-8.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
-8.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 94.
+ [2
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-mathsy.enc}] [3
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 116.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 128.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 116.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 128.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 116.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 128.
 
- [2{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figs/fig.png, id=91, 1606.0pt x 1069.9975pt>
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \end{frame}
+                 
+? 
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.128 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 \end{frame}
+                 
+? 
+! Missing { inserted.
+<inserted text> 
+                {
+l.128 \end{frame}
+                 
+? 
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.128 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \end{frame}
+                 
+? 
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.128 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 \end{frame}
+                 
+? 
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.128 \end{frame}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 \end{frame}
+                 
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.128 \end{frame}
+                 
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.128 \end{frame}
+                 
+? 
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.128 \end{frame}
+                 
+? 
+! Missing { inserted.
+<inserted text> 
+                {
+l.128 \end{frame}
+                 
+? 
+[4
+
+] [5
+
+] [6
+
+]
+<figs/fig.png, id=200, 1606.0pt x 1069.9975pt>
 File: figs/fig.png Graphic file (type png)
 <use figs/fig.png>
-Package pdftex.def Info: figs/fig.png  used on input line 157.
+Package pdftex.def Info: figs/fig.png  used on input line 173.
 (pdftex.def)             Requested size: 171.14764pt x 114.02655pt.
- [3] [4 <./figs/fig.png>]
+ [7
+
+ <./figs/fig.png>]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+2.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [8
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+13.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+[9
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [10
+
+]
+\openout4 = `main.vrb'.
+
+
+(./main.vrb)
+Overfull \vbox (37.72923pt too high) detected at line 260
+ []
+
+[11
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (49.72923pt too high) detected at line 302
+ []
+
+[12
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [13
+
+]
+<beamer/fig.png, id=402, 1606.0pt x 1069.9975pt>
+File: beamer/fig.png Graphic file (type png)
+<use beamer/fig.png>
+Package pdftex.def Info: beamer/fig.png  used on input line 325.
+(pdftex.def)             Requested size: 171.14764pt x 114.02655pt.
+ [14
+
+ <./beamer/fig.png>]
 \tf@nav=\write8
 \openout8 = `main.nav'.
 
@@ -2097,28 +2062,38 @@ Package pdftex.def Info: figs/fig.png  used on input line 157.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56405 strings out of 474222
- 1351028 string characters out of 5748733
- 2177967 words of memory out of 5000000
- 77680 multiletter control sequences out of 15000+600000
- 596684 words of font info for 76 fonts, out of 8000000 for 9000
+ 57029 strings out of 474222
+ 1357280 string characters out of 5748733
+ 2418967 words of memory out of 5000000
+ 78269 multiletter control sequences out of 15000+600000
+ 599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,16n,123p,1172b,698s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
-bx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (4 pages, 253083 bytes).
+ 128i,15n,123p,1172b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (14 pages, 454868 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 9 named destinations out of 1000 (max. 500000)
- 84 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

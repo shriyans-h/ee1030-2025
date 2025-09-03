@@ -1,4 +1,4 @@
-\let\negmedspace\undefined
+ \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
@@ -41,6 +41,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
+
 \title{1.5.16}
 \author{EE25btech11028 - J.Navya sri}
 % \maketitle
@@ -52,15 +53,10 @@
 \renewcommand{\thetable}{\theenumi}
 \setlength{\intextsep}{10pt} % Space between text and floats
 
+\textbf{Question:} Find the point \(A\) if \(AB\) is a diameter of the circle with center \(C=(3,-1)\) and point \(B=(2,6)\).
+\bigskip
 
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\renewcommand{\thetable}{\theenumi}
-
-
-\textbf{Question}:\\
- Find the point $A$ where $AB$ is a diameter of a circle with center $(3,-1)$ and the point $B$ is $(2,6)$
-
+\textbf{Solution:}
 \bigskip
 
 \begin{tabular}[12pt]{ |c| c| c|} 
@@ -71,49 +67,55 @@
     \hline
     C & $ \myvec{3 \\ -1} $   \\
     \hline  
-\end{tabular}
+    \end{tabular}
 
 \bigskip
 
-\textbf{Using rank of matrix:}
+\textbf{Section Formula:}
+
+If a point \(P\) divides the line joining \(A\) and \(B\) internally in the ratio \(m:n\), then
+\[
+\vec P = \frac{k\vec B + \vec A}{k+1}
+= \begin{pmatrix}\vec A & \vec B\end{pmatrix}
+\myvec{\tfrac{1}{k+1}\\[6pt]\tfrac{k}{k+1}}
+\]
+
+Here, \(C\) is the midpoint of \(AB\), i.e.\ ratio \(1:1\).
+\[
+\vec{C} = \frac{\vec{A}+\vec{B}}{2}
+= \begin{pmatrix}\vec A & \vec B\end{pmatrix}
+\myvec{\tfrac{1}{2}\\[6pt]\tfrac{1}{2}}.
+\]
+
+Substitute values:
+\[
+\myvec{3\\-1} =
+\begin{pmatrix}\vec A & \myvec{2\\6}\end{pmatrix}
+\myvec{\tfrac{1}{2}\\[6pt]\tfrac{1}{2}}.
+\]
+
+\[
+2\myvec{3\\-1}=\vec A+\myvec{2\\6}
+\quad\Rightarrow\quad
+\vec A=2\myvec{3\\-1}-\myvec{2\\6}=\myvec{4\\-8}.
+\]
+
 \bigskip
-Three points \( \vec{A}, \vec{C}, \vec{B} \) are collinear if
+
+\textbf{Rank Verification:}
+
+Check collinearity of \(A,B,C\):
 \[
-\rank{\begin{pmatrix} \vec{C} - \vec{A} & \vec{B} - \vec{A} \end{pmatrix}} = 1
+\begin{pmatrix}\vec C-\vec A & \vec B-\vec A\end{pmatrix}
+=\begin{pmatrix}3-4 & 2-4\\ -1-(-8) & 6-(-8)\end{pmatrix}
+=\begin{pmatrix}-1 & -2\\ 7 & 14\end{pmatrix} = 0
 \]
 
-\[
-\vec{C} - \vec{A} = \myvec{3 - x\\ -1 - y}, \quad
-\vec{B} - \vec{A} = \myvec{2 - x\\ 6 - y}
-\]
 
-Form matrix:
-\[
-\begin{pmatrix}
-3 - x & 2 - x \\
--1 - y & 6 - y
-\end{pmatrix}
-\]
-
-Apply row operation:
-\[
-R_2 \rightarrow (3 - x)R_2 - (-1 - y)R_1
-\]
+Thus, rank \(=1\) and points are collinear.
 
 \[
-(3 - x)(6 - y) + (1 + y)(2 - x) = 0
-\Rightarrow 20 - y - 7x = 0 \Rightarrow \boxed{7x + y = 20}
-\]
-
-\bigskip
-
-\textbf{Using midpoint formula:}
-\[
-\vec{C} = \frac{\vec{A} + \vec{B}}{2} \Rightarrow \vec{A} = 2\vec{C} - \vec{B}
-\]
-
-\[
-\vec{A} = 2\myvec{3\\-1} - \myvec{2\\6} = \myvec{6\\-2} - \myvec{2\\6} = \boxed{\vec{A} = \myvec{4\\-8}}
+\boxed{\vec A=\myvec{4\\-8}}
 \]
 
 \begin{figure}[H]
@@ -124,16 +126,4 @@ R_2 \rightarrow (3 - x)R_2 - (-1 - y)R_1
 \end{figure}
 \end{document}
 
-Midpoint of $A(4, -8)$ and $B(2, 6)$ is  
-\[
-\left( \frac{4+2}{2}, \; \frac{-8+6}{2} \right) = (3, -1)
 
-\]
-
-\begin{figure} [H]
-    \centering
-    \includegraphics[width=0.8\columnwidth]{figs/fig.png}
-    
-    \label{fig:placeholder}
-\end{figure}
-\end{document}
