@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 %\usepackage{advdate}
+\usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{subcaption}
 \usepackage{enumitem}
@@ -22,6 +23,7 @@
   \end{beamercolorbox}}%
   \vskip0pt%
 }
+\setbeamertemplate{navigation symbols}{}
 
 \providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
 \providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
@@ -40,19 +42,19 @@
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\abs}[1]{\vert#1\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
 \providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\mean}[1]{E[ #1 ]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-%\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\vec{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \vec{Solution: }}
 \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-\let\vec\mathbf
 
 \lstset{
 %language=C,
@@ -104,7 +106,7 @@ columns=fullflexible
 \end{frame}
 
 \begin{frame}
-\frametitle{Problem Statement}
+\frametitle{Question}
 
 Find the coordinates of a point on Y axis which is at a distance of \( 5\sqrt{2} \) from the point \( P(3, -2, 5) \).
 
@@ -115,60 +117,47 @@ Find the coordinates of a point on Y axis which is at a distance of \( 5\sqrt{2}
 \begin{frame}
 \frametitle{Solution}
 
-Let the required point on Y axis be \( Q = \begin{pmatrix} 0 \\ y \\ 0 \end{pmatrix} \).
+Let the required point on Y axis be \(\vec{Q} = \begin{pmatrix}0 \\ y \\ 0\end{pmatrix}\).
 
-\vspace{1em}
-
-Distance between \( Q \) and \( P = \begin{pmatrix} 3 \\ -2 \\ 5 \end{pmatrix} \) is:
-
+So,
 \[
-|PQ| = \sqrt{(0-3)^2 + (y+2)^2 + (0-5)^2}
+\vec{P} - \vec{Q} = 
+\begin{pmatrix} 3 \\ -2 \\ 5 \end{pmatrix} - 
+\begin{pmatrix} 0 \\ y \\ 0 \end{pmatrix} = 
+\begin{pmatrix} 3 \\ -2 - y \\ 5 \end{pmatrix}
 \]
 
-Given that \( |PQ| = 5\sqrt{2} \), we have:
-
+The desired distance is:
 \[
-\sqrt{9 + (y+2)^2 + 25} = 5\sqrt{2}
+d = \|\vec{P} - \vec{Q}\| = 5\sqrt{2}
 \]
 
-\end{frame}
-
-\begin{frame}
-\frametitle{Solution}
-
-Simplifying,
-
+So,
 \[
-\sqrt{34 + (y+2)^2} = 5\sqrt{2}
+(\vec{P} - \vec{Q})^T (\vec{P} - \vec{Q}) = 3^2 + (-2 - y)^2 + 5^2 = 9 + (y + 2)^2 + 25
 \]
-
 \[
-34 + (y+2)^2 = 50
+9 + (y+2)^2 + 25 = 50
 \]
-
 \[
 (y+2)^2 = 16
 \]
-
 \[
 y + 2 = \pm 4
 \]
-
-Hence,
-
 \[
-y = 2 \quad \text{or} \quad y = -6
+\text{Thus, } y = 2 \text{ or } y = -6
 \]
 
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Answer}
 
-The required points on the Y-axis are:
-
+The required coordinates are:
 \[
-Q_1 = \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}, \quad Q_2 = \begin{pmatrix} 0 \\ -6 \\ 0 \end{pmatrix}
+\vec{Q_1} = \myvec{0 \\ 2 \\ 0} \qquad \text{and} \qquad \vec{Q_2} = \myvec{0 \\ -6 \\ 0}
 \]
 
 \end{frame}
