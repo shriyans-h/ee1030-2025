@@ -70,7 +70,7 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Construct the triangle BD$^{\prime}$C$^{\prime}$ similar to $\triangle$BDC with scale factor $\frac{4}{3}$.Draw the line segment D$^{\prime}$A$^{\prime}$. parallel to DA where A$^p$ prime lies on extended side BA.Is A$^{\prime}$BC$^{\prime}$D$^{\prime}$ a parallelogram?
+Construct the triangle BD$^{\prime}$C$^{\prime}$ similar to $\triangle$BDC with scale factor $\frac{4}{3}$.Draw the line segment D$^{\prime}$A$^{\prime}$ parallel to DA where A$^p$rime lies on extended side BA.Is A$^{\prime}$BC$^{\prime}$D$^{\prime}$ a parallelogram?
 \end{frame}
 
 \begin{frame}{Description}
@@ -89,7 +89,7 @@ consider $\triangle$BDC.constructs a $\triangle$BD$^{\prime}C^{\prime}$
 This means 
 \begin{align}
   \triangle BD^{\prime}C^{\prime} \sim \triangle BDC.\\
-\frac{\vec{D^{\prime}}-\vec{B}}{\vec{D}-\vec{B}} \;=\; \frac{\vec{C^{\prime}}-\vec{B}}{\vec{C}-\vec{B}} \;=\; \frac{\vec{C^{\prime}}-\vec{D^{\prime}}}{\vec{C}-\vec{D}} \;=\; \frac{4}{3}.\\
+\frac{\norm{\vec{D^{\prime}}-\vec{B}}}{\norm{\vec{D}-\vec{B}}} \;=\; \frac{\norm{\vec{C^{\prime}}-\vec{B}}}{\norm{\vec{C}-\vec{B}}} \;=\; \frac{\norm{\vec{C^{\prime}}-\vec{D^{\prime}}}}{\norm{\vec{C}-\vec{D}}} \;=\; \frac{4}{3}.\\
 \Vec{D^{\prime}}=\Vec{B}+\frac{4}{3}(\Vec{D}-\Vec{B})\\
 \Vec{D^{\prime}}=\myvec{-4/3\\4}\\
 \Vec{C^{\prime}}=\Vec{B}+\frac{4}{3}(\Vec{C}-\Vec{B})\\
@@ -102,24 +102,35 @@ Mark $\vec{D^{\prime}}$ and $\vec{A^{\prime}}$ parallel to $\vec{D}-\vec{A}$ wit
 
 \begin{frame}{Solution}
 \begin{align}
+\vec{A^{\prime}-D^{\prime}}=\lambda(\vec{A}-\vec{D})\\
+\vec{A^{\prime}}=\myvec{-4/3\\4}+\lambda(\myvec{0\\-3})\\
+\implies \vec{A^{\prime}}=\myvec{-4/3\\4-3\lambda}
+\end{align}
+ $\vec{A^{\prime}}$ lies on line through $\vec{B}-\vec{A}$ so,
+ \begin{align}
+ \vec{A^{\prime}}=\vec{B}+\mu(\vec{A}-\vec{B})\\
+ \implies \vec{A^{\prime}}=\myvec{-4\mu\\0}\\
+ \end{align}
+ From equation (0.9) and (0.11)
+ \begin{align}
+ \lambda=4/3 \text{and} \mu=1/3
+ \end{align}
+    \end{frame}
+    \begin{frame}{Solution}
+\begin{align}
+ \implies \vec{A^{\prime}}=\myvec{-4/3\\0}\\
     \Vec{B}-\Vec{A}=\myvec{4\\0}-\myvec{0\\0}=\myvec{4\\0}\\
     \Vec{C}-\Vec{D}=\myvec{4\\3}-\myvec{0\\3}=\myvec{4\\0}\\
 \implies \Vec{B}-\Vec{A}=\Vec{C}-\Vec{D}
 \end{align}
-
-\begin{align}
-    \Vec{D}-\Vec{A}=\myvec{0\\3}-\myvec{0\\0}=\myvec{0\\3}\\
-    \Vec{C}-\vec{B}=\myvec{4\\3}-\myvec{4\\0}=\myvec{0\\3}\\
-\implies   \Vec{D}-\Vec{A}=  \Vec{C}-\vec{B}
-\end{align}
-$\implies$ ABCD is a Parallelogram\\ 
-\end{frame}
+    \end{frame}
+    
 \begin{frame}{Solution}
 \textbf{Check the parallelogram property of A$^{\prime}$BC$^{\prime}$D$^{\prime}$ }\\
 \begin{align}
     \vec{B}-\vec{A^{\prime}}=-t(\vec{A}-\vec{B})\\
     \vec{D^{\prime}}-\vec{C^{\prime}}=k(\vec{C}-\vec{D})\\
-    \text{From 9 }\Vec{B}-\Vec{A}=\Vec{C}-\Vec{D}\\
+    \text{From 0.17 }\Vec{B}-\Vec{A}=\Vec{C}-\Vec{D}\\
 \implies \vec{B}-\vec{A^{\prime}}=-t(\vec{A}-\vec{B})=t(\vec{C}-\vec{D})=\frac{t}{k}\vec{D^{\prime}}-\vec{C^{\prime}}\\
 \implies \vec{B}-\vec{A^{\prime}} \parallel \vec{D^{\prime}}-\vec{C^{\prime}}
 \end{align}
@@ -246,60 +257,63 @@ int main(void) {
 
 \begin{frame}[fragile]{Python: plot.py}
 \begin{lstlisting}[language=Python]
-   import numpy as np
+  import numpy as np
 import matplotlib.pyplot as plt
 
-# --- Define a slanted parallelogram ABCD
+# --- Given vertices
 A = np.array([0.0, 0.0])
 B = np.array([4.0, 0.0])
-D = np.array([1.5, 3.0])      # slanted
-C = B + D - A                 # ensures ABCD is a parallelogram
+C = np.array([4.0, 3.0])
+D = np.array([0.0, 3.0])
 
-k = 4.0 / 3.0  # scale factor for BD'C' ~ BDC
+k = 4.0 / 3.0  # scale factor
 
-# --- Compute D' and C' by homothety about B
-Dp = B + k * (D - B)   # D' = B + k*(D - B)
-Cp = B + k * (C - B)   # C' = B + k*(C - B)
+# --- Compute C' and D' (scaled triangle BDC)
+Dp = B + k * (D - B)   # D'
+Cp = B + k * (C - B)   # C'
 
-# --- Build A' so that A'BC'D' is parallelogram
+# --- A' must be such that A'BC'D' is a parallelogram
+# In a parallelogram: A' = B + D' - C'
 Ap = B + Dp - Cp
+
+# --- Collect points
+points = {"A":A, "B":B, "C":C, "D":D, "D'":Dp, "C'":Cp, "A'":Ap}
+
+# --- Print coordinates
+print("Corrected coordinates:")
+for name, p in points.items():
+    print(f"{name:3} = ({p[0]:.6f}, {p[1]:.6f})")
 
 # --- Plotting
 plt.figure(figsize=(8,6))
 
-# original ABCD (parallelogram)
-poly_ABCD = np.vstack([A,B,C,D,A])
-plt.plot(poly_ABCD[:,0], poly_ABCD[:,1], 'b-', linewidth=2, label="ABCD (original parallelogram)")
-
-# scaled triangle B-D'-C'
-plt.plot([B[0], Dp[0], Cp[0], B[0]], [B[1], Dp[1], Cp[1], B[1]],
-         'r--', linewidth=1.5, label="Δ B D' C'")
-
-# parallelogram A'-B-C'-D'
-poly_par = np.vstack([Ap, B, Cp, Dp, Ap])
-plt.plot(poly_par[:,0], poly_par[:,1], 'g-o', linewidth=2, label="A' B C' D' (parallelogram)")
+# Original quadrilateral ABCD
+plt.plot([A[0],B[0],C[0],D[0],A[0]], [A[1],B[1],C[1],D[1],A[1]], 
+         'b-', linewidth=1.5, label="ABCD")
 \end{lstlisting}
-\end{frame}  
+\end{frame} 
+
 \begin{frame}[fragile]{Python: plot.py}
 \begin{lstlisting}[language=Python]
-# plot points and annotate (only names, no coordinates)
-pts = {"A":A,"B":B,"C":C,"D":D,"D'":Dp,"C'":Cp,"A'":Ap}
-for name,p in pts.items():
+# Triangle B-D'-C'
+plt.plot([B[0],Dp[0],Cp[0],B[0]], [B[1],Dp[1],Cp[1],B[1]], 
+         'r--', linewidth=1.5, label="Δ B D' C'")
+
+# Parallelogram A'-B-C'-D'
+plt.plot([Ap[0],B[0],Cp[0],Dp[0],Ap[0]], [Ap[1],B[1],Cp[1],Dp[1],Ap[1]], 
+         'g-o', linewidth=2, label="Parallelogram A' B C' D'")
+
+# Labels
+for name, p in points.items():
     plt.scatter(p[0], p[1], s=60, zorder=5)
-    plt.text(p[0]+0.08, p[1]+0.08, f"{name}", fontsize=10, fontweight="bold")
+    plt.text(p[0]+0.1, p[1]+0.1, f"{name} ({p[0]:.2f},{p[1]:.2f})", fontsize=9)
 
 plt.gca().set_aspect('equal', adjustable='box')
 plt.grid(True)
 plt.legend()
-plt.title("Parallelograms ABCD and A' B C' D' with scaled triangle BD'C'")
-plt.tight_layout()
-
-# --- Save the figure ---
-plt.savefig("parallelogram_with_scaling.png", dpi=300)
-
+plt.title("Parallelogram A' B C' D' with scaled triangle BD'C'")
 plt.show()
-
 \end{lstlisting}
-\end{frame}  
-
-\end{document}
+\end{frame}
+ \end{document}
+ 
