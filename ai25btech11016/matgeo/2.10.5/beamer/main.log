@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.18)  1 SEP 2025 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.18)  3 SEP 2025 17:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1720,6 +1720,40 @@ dvips/lm/lm-mathsy.enc}]
 [4
 
 ]
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 143.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 143.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 143.
+
+
+
+[5
+
+]
+
+[6
+
+]
+
+[7
+
+]
+
+[8
+
+]
+
+[9
+
+]
+
+[10
+
+]
 \openout4 = `main.vrb'.
 
  (./main.vrb
@@ -1729,14 +1763,14 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[5
+[11
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
 
-[6
+[12
 
 ]
 \openout4 = `main.vrb'.
@@ -1764,7 +1798,7 @@ l.9 lib = ctypes.CDLL("./libortho.so"
 ? 
 )
 
-[7
+[13
 
 ]
 \openout4 = `main.vrb'.
@@ -1792,7 +1826,7 @@ l.15 print("Orthocenter D ="
 ? 
 )
 
-[8
+[14
 
 ]
 \openout4 = `main.vrb'.
@@ -1885,7 +1919,7 @@ l.12 ...0], C[0]], [A[1], C[1]], 'r--', label="AC"
 ? 
 )
 
-[9
+[15
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
@@ -1913,14 +1947,14 @@ l.13 /2.10.5/figs/2.10.5.png"
 ? 
 )
 
-[10
+[16
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
 
-[11
+[17
 
 ]
 \openout4 = `main.vrb'.
@@ -1948,14 +1982,14 @@ l.9 ...rror("Lines are parallel, no intersection."
 ? 
 )
 
-[12
+[18
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
 
-[13
+[19
 
 ]
 \openout4 = `main.vrb'.
@@ -2042,12 +2076,12 @@ l.14 ...0], C[0]], [A[1], C[1]], 'r--', label="AC"
                                                   )
 ? 
 )
-Overfull \vbox (1.72923pt too high) detected at line 332
+Overfull \vbox (1.72923pt too high) detected at line 416
  []
 
 
 
-[14
+[20
 
 ]
 \openout4 = `main.vrb'.
@@ -2076,21 +2110,21 @@ l.12 ...5btech11016/Matgeo/2.10.5/figs/2.10.5.png"
 ? 
 )
 
-[15
+[21
 
 ]
-<figs/2.10.5.jpg, id=459, 481.8pt x 481.8pt>
+<figs/2.10.5.jpg, id=626, 481.8pt x 481.8pt>
 File: figs/2.10.5.jpg Graphic file (type jpg)
 <use figs/2.10.5.jpg>
-Package pdftex.def Info: figs/2.10.5.jpg  used on input line 358.
+Package pdftex.def Info: figs/2.10.5.jpg  used on input line 442.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
-Overfull \vbox (49.37308pt too high) detected at line 358
+Overfull \vbox (49.37308pt too high) detected at line 442
  []
 
 
 
-[16
+[22
 
  <./figs/2.10.5.jpg>]
 \tf@nav=\write7
@@ -2121,23 +2155,25 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59216 strings out of 473197
- 1435054 string characters out of 5718605
+ 59233 strings out of 473197
+ 1435244 string characters out of 5718605
  2557210 words of memory out of 5000000
- 81444 multiletter control sequences out of 15000+600000
- 595074 words of font info for 76 fonts, out of 8000000 for 9000
+ 81449 multiletter control sequences out of 15000+600000
+ 600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (16 pages, 201007 bytes).
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmtt10.pfb>
+Output written on main.pdf (22 pages, 242528 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 722 PDF objects out of 1000 (max. 8388607)
+ 621 compressed objects within 7 object streams
+ 46 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -87,7 +87,7 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Find the area of a triangle formed by the points  $A(5,2)$, $B(4,7)$ and $C(7,-4)$.
+Find the area of a triangle formed by the points  $A(5,2)$, $B(4,7)$ and $C(7,-4)$
 
 \end{frame}
 
@@ -95,17 +95,21 @@ Find the area of a triangle formed by the points  $A(5,2)$, $B(4,7)$ and $C(7,-4
 
 \begin{frame}{Theoretical Solution }
 
- \begin{align}
-\vec{B - A} &= \myvec{-1 \\ 5}
+\begin{align}
+\vec{B} - \vec{A} &= \myvec{-1 \\ 5}
 \end{align}
 \begin{align}
-\vec{C - A} = \myvec{2 \\ -6} 
+\vec{C} - \vec{A} & = \myvec{2 \\ -6} 
 \end{align}
 
 \begin{align}
-\text{Area of the triangle ABC} &= \tfrac{1}{2} \big| \Big| (\vec{B - A}) \times (\vec{C - A}) \Big| \big| \\
-&= \tfrac{1}{2} \big|  \Big| \myvec{-1 \\ 5 } \times \myvec{2 \\ -6 } \Big| \big| \nonumber\\
-&=2 \nonumber
+\norm{\vec{(B-A)} \times \vec{(C-A)}} = \norm{\,\myvec{|\vec{A_{23}} & \vec{B_{23}}| \\ |\vec{A_{31}} & \vec{B_{31}}| \\ |\vec{A_{12}} & \vec{B_{12}}|}\,} 
+&=4 \nonumber\\\
+\end{align} 
+\begin{align}
+\text{Area of the triangle ABC} &= \tfrac{1}{2} 
+\norm{(\vec{B} - \vec{A}) \times (\vec{C} - \vec{A}) } \\
+&=2 
 \end{align}
 \end{frame}
 \begin{frame}{Conclusion}

@@ -23,5 +23,5 @@ plt.legend()
 plt.xlabel("x-axis")
 plt.ylabel("y-axis")
 
-plt.savefig("/sdcard/Matrix/ee1030-2025/ai25btech11016/Matgeo/1.2.24/figs/1.7.2.png"")
+plt.savefig("/sdcard/Matrix/ee1030-2025/ai25btech11016/Matgeo/1.2.24/figs/1.7.2.png")
 plt.show()

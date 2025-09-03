@@ -67,45 +67,46 @@ If A(1, 2), O(0, 0), and C(a, 6) are collinear, then the value of a is
 \solution \\
 The given points are
 \begin{align}
-A = (1,2), \quad O = (0,0), \quad C = (a,6).
+A = (1,2) \quad O = (0,0) \quad C = (a,6)
 \end{align}
 
 \begin{align}    
- \vec{A} - \vec{O} = \myvec{1 \\ 2},\\ 
- \vec{C} -\vec{O} = \myvec{a \\ 6}.
+ \vec{A} - \vec{O} = \myvec{1 \\ 2}\\ 
+ \vec{C} -\vec{O} = \myvec{a \\ 6}
 \end{align}
 
 
 Construct the matrix
 \begin{align} 
-M = \myvec{1 & a \\ 2 & 6}.
+M = \myvec{1 & a \\ 2 & 6}
 \end{align}
 
 For the points to be collinear, the two vectors $\Vec{OA}$ and $\vec{OC}$ must be linearly dependent.  
 This means
 \begin{align}
-\operatorname{rank}(M) = 1 \quad \Leftrightarrow \quad \det(M) = 0. \
+\operatorname{rank}(M) = 1 \quad \Leftrightarrow \quad \det(M) = 0 \
 \end{align}
 
 
 \begin{align}
 \myvec{1 & a \\ 2 & 6}
 &\xrightarrow{\;R_2 \gets R_2 - 2R_1\;}
-\myvec{1 & a \\ 0 & 6 - 2a}.
+\myvec{1 & a \\ 0 & 6 - 2a}
+
 \end{align}
 
 
 For the rank to drop,
 \begin{align}
 6 - 2a &= 0 \\
-a &= 3. 
+a &= 3
 \end{align}
 
-When $a=3$,
+When $a=3$
 \[
 \myvec{1 & 3 \\ 0 & 0}
 \]
-is the reduced row-echelon form (rank $=1$).
+is the reduced row-echelon form (rank $=1$)
 
 
 
@@ -113,7 +114,7 @@ is the reduced row-echelon form (rank $=1$).
 The given points are collinear when
 
 \begin{align}
-a &= 3.
+a &= 3
 \end{align}
 
 \begin{figure}[H]

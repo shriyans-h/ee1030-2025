@@ -72,7 +72,7 @@ The point $D$, then, is the \underline{\hspace{1cm}} of $\triangle ABC$.
 Consider the equation,
 
 \begin{align}
-\myvec{A - D} \cdot \myvec{B - C}
+(\vec{A}- \vec{D} )^{T} (\vec{B}- \vec{C})
 &=0
 \end{align}
 This implies line joining A and D is perpendicular to line joining B and C
@@ -80,7 +80,7 @@ This implies line joining A and D is perpendicular to line joining B and C
 
 Consider the equation,
 \begin{align}
-\myvec{B - D} \cdot \myvec{C - A}
+(\vec{B}- \vec{D})^{T}(\vec{C}- \vec{A})
 &=0
 \end{align}
 This implies line joining B and D is perpendicular to line joining A and C
@@ -92,6 +92,87 @@ side AC is perpendicular to BD\\
 The altitudes(The perpendiculars drawn from a vertex to opposite sides) are concurrent at Orthocentre.\\
 \textbf{Therefore,}\\
 D must be Orthocentre of $\triangle ABC$\\
+\textbf{Verification by example:}
+
+
+\textbf{Let us take the points}\\
+$\vec{A}=\myvec{1\\1},
+\vec{B}=\myvec{5\\1}, 
+\vec{C}=\myvec{3\\4}, 
+\vec{D}=\myvec{3\\\tfrac{7}{3}}.$
+
+
+\textbf{Checking the First condition:}
+\begin{align}
+(\vec{A}- \vec{D} )^{T} (\vec{B}- \vec{C})
+&=0\\
+L.H.S&=\Bigg(\myvec{1\\1}- \myvec{3\\\tfrac{7}{3}}\Bigg )^{T} \Bigg(\myvec{5\\1}- \myvec{3\\4}\Bigg)\\
+&=\myvec{-2\\\tfrac{-4}{3}} ^{T} \myvec{2\\-3}\\
+&=0\\
+&=R.H.S\\
+L.H.S&=R.H.S
+\end{align}
+\textbf{Checking the Second condition:}
+\begin{align}
+(\vec{B}- \vec{D} )^{T} (\vec{C}- \vec{A})
+&=0\\
+L.H.S&=\Bigg(\myvec{5\\1}- \myvec{3\\\tfrac{7}{3}}\Bigg )^{T} \Bigg(\myvec{3\\4}- \myvec{1\\1}\Bigg)\\\nonumber
+&=\myvec{2\\\tfrac{-4}{3}} ^{T} \myvec{2\\3}\\\nonumber
+&=0\\\nonumber
+&=R.H.S\\
+L.H.S&=R.H.S
+\end{align}
+\textbf{Let's take two points F and E which are foot of perpendiculars of altitudes drawn from vertices A and B respectively.}
+
+\textbf{1.}The normal vector of    $\vec{F}-\vec{A}$ is\\ 
+\begin{align}
+\vec{n}&=\myvec{2\\-3}
+\end{align}
+The equation of the altitude from A (i.e AF) is
+\begin{align}
+\vec{n}^{T}(\vec{x-A})&=0\\
+\myvec{2\\-3}^{T}(\vec{x}-\myvec{1\\1})&=0\\
+\myvec{2&-3}(\vec{x}-\myvec{1\\1})&=0\\
+\myvec{2&-3}(\vec{x})&=-1\\
+\end{align}
+
+\textbf{2.}The normal vector of    $\vec{E}-\vec{B}$ is\\ 
+\begin{align}
+\vec{n}&=\myvec{2\\3}
+\end{align}
+The equation of the altitude from B (i.e BE) is
+\begin{align}
+\vec{n}^{T}(\vec{x-B})&=0\\
+\myvec{2\\3}^{T}(\vec{x}-\myvec{5\\1})&=0\\
+\myvec{2&3}(\vec{x}-\myvec{5\\1})&=0\\
+\myvec{2&3}(\vec{x})&=13\\
+\end{align}
+The intersection point of altitudes \textbf{orthocenter:H} can be obtained by solving the above two equations
+
+\begin{align}
+\myvec{2 & -3 \\ 2 & 3}\vec{x} = \myvec{-1 \\ 13}
+\end{align}
+
+\begin{align}
+\myvec{2 & -3 & -1 \\ 2 & 3 & 13}
+&\xrightarrow{\;R_2 \gets R_2 - R_1\;}
+\myvec{2 & -3 & -1 \\ 0 & 6 & 14} \\
+&\xrightarrow{\;R_2 \gets \tfrac{1}{6}R_2\;}
+\myvec{2 & -3 & -1 \\ 0 & 1 & \tfrac{7}{3}} \\
+&\xrightarrow{\;R_1 \gets R_1 + 3R_2\;}
+\myvec{2 & 0 & 6 \\ 0 & 1 & \tfrac{7}{3}} \\
+&\xrightarrow{\;R_1 \gets \tfrac{1}{2}R_1\;}
+\myvec{1 & 0 & 3 \\ 0 & 1 & \tfrac{7}{3}}
+\end{align}
+which gives,
+\begin{align}
+H&=\myvec{3\\\tfrac{7}{3}}
+\end{align}
+
+Therefore,\\
+The D we have taken matches with the orthocenter H of the given triangle
+
+
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.5]{figs/2.10.5.jpg}
