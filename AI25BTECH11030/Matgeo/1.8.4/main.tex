@@ -1,40 +1,45 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\documentclass{article}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
 \usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\usepackage{xcolor}
-%\usepackage{txfonts}
-\usepackage{listings}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{mathtools}
-\usepackage{gensymb}
-\usepackage{comment}
-\usepackage{caption}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
+\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}     
-\usepackage{xparse}
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow}
-\usepackage{multicol}
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
-\usepackage{lscape}
-\usepackage{tabularx}
-\usepackage{array}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{graphicx}
 \usepackage{float}
-\usepackage{esvect}
-\renewcommand{\vec}{\vv}
+\usepackage{multicol}
+\usepackage[a4paper, left = 1.5cm, right = 1.5cm]{geometry}
 
 %\newtheorem{theorem}{Theorem}[section]
 %\newtheorem{theorem}{Theorem}[section]
@@ -56,44 +61,73 @@ Find the coordinates of a point on Y axis which is at a distance of \( 5\sqrt{2}
 
 \textbf{Solution:}
 
-Let the required point on Y axis be \(\vec{Q} = \begin{pmatrix}0 \\ y \\ 0\end{pmatrix}\).
+Given point:
+\begin{align}
+\vec{P} &= \begin{pmatrix} 3 \\ -2 \\ 5 \end{pmatrix}
+\end{align}
 
-So,
-\[
-\vec{P} - \vec{Q} = 
-\begin{pmatrix} 3 \\ -2 \\ 5 \end{pmatrix} - 
-\begin{pmatrix} 0 \\ y \\ 0 \end{pmatrix} = 
-\begin{pmatrix} 3 \\ -2 - y \\ 5 \end{pmatrix}
-\]
+We seek a point on the Y-axis:
+\begin{align}
+\vec{Q} &= y\,\vec{e}_2 = \begin{pmatrix} 0 \\ y \\ 0 \end{pmatrix}
+\end{align}
 
-The desired distance is:
-\[
-d = \|\vec{P} - \vec{Q}\| = 5\sqrt{2}
-\]
+Let the standard basis vectors be:
+\begin{align}
+\vec{e}_1 &= \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
+\vec{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
+\vec{e}_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+\end{align}
 
-So,
-\[
-(\vec{P} - \vec{Q})^T (\vec{P} - \vec{Q}) = 3^2 + (-2 - y)^2 + 5^2 = 9 + (y + 2)^2 + 25
-\]
-\[
-9 + (y+2)^2 + 25 = 50
-\]
-\[
-(y+2)^2 = 16
-\]
-\[
-y + 2 = \pm 4
-\]
-\[
-\text{Thus, } y = 2 \text{ or } y = -6
-\]
+The required distance:
+\begin{align}
+\|\vec{P} - \vec{Q}\| &= d = 5\sqrt{2}
+\end{align}
+
+So, equating squared norms:
+\begin{align}
+\|\vec{P} - y\vec{e}_2\|^2 &= d^2 \\
+(\vec{P} - y\vec{e}_2)^T (\vec{P} - y\vec{e}_2) &= d^2 \\
+\vec{P}^T \vec{P} - 2y \vec{P}^T \vec{e}_2 + y^2 \vec{e}_2^T \vec{e}_2 &= d^2 \\
+\vec{P}^T \vec{P} - 2y (\vec{P} \cdot \vec{e}_2) + y^2 &= d^2
+\end{align}
+
+Rearrange:
+\begin{align}
+y^2 - 2(\vec{P} \cdot \vec{e}_2) y + (\vec{P}^T \vec{P} - d^2) = 0
+\end{align}
+
+With values:
+\begin{align}
+\vec{P}^T \vec{P} &= 3^2 + (-2)^2 + 5^2 = 38 \\
+\vec{P} \cdot \vec{e}_2 &= -2 \\
+d^2 &= (5\sqrt{2})^2 = 50
+\end{align}
+
+So:
+\begin{align}
+y^2 + 4y - 12 = 0
+\end{align}
+
+Quadratic formula:
+\begin{align}
+y &= \frac{-4 \pm \sqrt{4^2 - 4 \cdot 1 \cdot (-12)}}{2} \\
+  &= \frac{-4 \pm \sqrt{16 + 48}}{2} \\
+  &= \frac{-4 \pm 8}{2}
+\end{align}
+
+Thus,
+\begin{align}
+y_1 &= 2, \qquad y_2 = -6
+\end{align}
 \vspace{2mm}
 \textbf{Answer:}
 \\
-The required coordinates are:
-\[
-\vec{Q_1} = \myvec{0 \\ 2 \\ 0} \qquad \text{and} \qquad \vec{Q_2} = \myvec{0 \\ -6 \\ 0}
-\]
+
+Therefore, the required points on the Y-axis are:
+\begin{align}
+\vec{Q}_1 &= \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}, \qquad
+\vec{Q}_2 = \begin{pmatrix} 0 \\ -6 \\ 0 \end{pmatrix}
+\end{align}
 
 
 \textbf{Graph:}
