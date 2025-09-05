@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  3 SEP 2025 04:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  5 SEP 2025 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1252,14 +1252,14 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 
 [2
 
-]
+] (./tables/table.tex
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 70.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 70.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 70.
- [3
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 3.
+) [3
 
 ] [4
 
@@ -1269,7 +1269,7 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (33.52945pt too high) detected at line 159
+Overfull \vbox (33.52945pt too high) detected at line 147
  []
 
 [6
@@ -1280,7 +1280,7 @@ Overfull \vbox (33.52945pt too high) detected at line 159
  (./main.vrb (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ))
-Overfull \vbox (9.52945pt too high) detected at line 178
+Overfull \vbox (9.52945pt too high) detected at line 166
  []
 
 [7
@@ -1294,7 +1294,7 @@ Overfull \vbox (9.52945pt too high) detected at line 178
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (9.52945pt too high) detected at line 221
+Overfull \vbox (9.52945pt too high) detected at line 209
  []
 
 [9
@@ -1312,12 +1312,6 @@ Type  H <return>  for immediate help.
                                                   
 l.11         'k--', label="PQ ⟂ 
                                   AB,CD")
-? continue
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
 ? R
 OK, entering \nonstopmode...
 
@@ -1341,10 +1335,10 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 <figs/3.png, id=301, 462.528pt x 346.896pt>
 File: figs/3.png Graphic file (type png)
 <use figs/3.png>
-Package pdftex.def Info: figs/3.png  used on input line 248.
+Package pdftex.def Info: figs/3.png  used on input line 236.
 (pdftex.def)             Requested size: 256.72147pt x 192.55072pt.
 
-Overfull \vbox (9.48013pt too high) detected at line 248
+Overfull \vbox (9.48013pt too high) detected at line 236
  []
 
 [11
@@ -1360,14 +1354,17 @@ Overfull \vbox (9.48013pt too high) detected at line 248
 \openout8 = `main.snm'.
 
  (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32328 strings out of 476091
- 672728 string characters out of 5794081
+ 32335 strings out of 476091
+ 672839 string characters out of 5794081
  2018330 words of memory out of 5000000
- 51944 multiletter control sequences out of 15000+600000
+ 51947 multiletter control sequences out of 15000+600000
  524931 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1169b,1398s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1377,14 +1374,13 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt10.pfb>
-Output written on main.pdf (11 pages, 182912 bytes).
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (11 pages, 175045 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 24 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
