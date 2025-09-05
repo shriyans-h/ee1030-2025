@@ -98,59 +98,64 @@ According to the question,\\
 \begin{align}
     \text{Equation of line $L_1$:}\ \myvec{1&1}\myvec{x\\y}=4
 \end{align}
+\begin{center}
+    $\implies n_1^{\top} \vec{x} = c_1$
+\end{center}
 and
 \begin{align}
     \text{Equation of line $L_2$:}\ \myvec{4&3}\myvec{x\\y}=10
 \end{align}
-Any point $\vec{P}$ on line $L_1$ is given by ,
-\begin{align}
-    \vec{P} = \myvec{k\\4-k} 
-\end{align}
+\begin{center}
+    $\implies n_2^{\top} \vec{x} = c_2$
+\end{center}
 \end{frame}
 
 \begin{frame}{Formulae}
-The distance $\lambda$ of a vector $\vec{P}$ from the line $\vec{n}^{\top}\vec{x}=c$ is given by ,
+The distance $\lambda$ of a vector $\vec{P}$ from the line $\vec{n_2}^{\top}\vec{x}=c_2$ is given by ,
 \begin{align}
-    \lambda = \frac{\abs{\vec{n}^{\top}\vec{P} - c}}{\norm{\vec{n}}}  
+    \lambda = \frac{\abs{\vec{n_2}^{\top}\vec{P} - c_2}}{\norm{\vec{n_2}}}  
 \end{align}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
 
+\begin{align}
+    \lambda\norm{\vec{n_2}} = \abs{\vec{n_2}^{\top}\vec{P} - c_2} 
+\end{align}
+\begin{align}
+    \implies\vec{n_2}^{\top}\vec{P} = c_2 \pm \lambda\norm{n_2}
+\end{align}
+Also, as $\vec{P}$ lies on line $L_1$,
+\begin{align}
+    \vec{n_1}^{\top}\vec{P} = c_1
+\end{align}
+On putting eqns $\brak{5}$ and $\brak{6}$ in matrix form we will get,
+\begin{align}
+    \myvec{n_1 & n_2}^\top\vec{P}=\myvec{c_1\\c_2\pm\lambda\norm{\vec{n_2}}}
+\end{align}
 where,
 \begin{align*}
-    \vec{n}^\top = \myvec{4&3}\ ,c = 10\ \text{and}\ \lambda=1
-\end{align*}\\
-\bigskip
+    \lambda = 1
+\end{align*}
 
-\begin{align}
-    \implies \lambda\norm{\vec{n}} = \abs{\vec{n}^{\top}\vec{P} - c}
-\end{align}
-Also,
-\begin{align}
-    \norm{\vec{n}}=\sqrt{\vec{n}^{\top}\vec{n}} = \sqrt{25} = 5
-\end{align}
-\begin{align}
-    \vec{n}^{\top}\vec{P} = k + 12
-\end{align}
 \end{frame}
 
 
 \begin{frame}{Theoretical Solution}
+On substituting the values we will get,
 \begin{align}
-    \implies 5 = \abs{k + 12 - 10}
+    \myvec{1&1\\4&3}\vec{P}=\myvec{4\\10\pm5}
 \end{align}
+with the augmented matrix followed by row reduction 
 \begin{align}
-    \implies 5 = \abs{k + 2}
+	R_2 = R_2 - 4 R_1\rightarrow{}\myvec{1&1 &\vrule &  4&\\ 0&-1 & \vrule& -6\pm5&} \\  
+	R_2 = -R_2\rightarrow{}\myvec{1&1&\vrule& 4& \\ 0&1 & \vrule &6\mp5} \nonumber \\
+	R_1 = R_1-R_2\rightarrow{}\myvec{1&0 & \vrule &-2\pm5&\\ 0&1& \vrule &6\mp5}\nonumber
 \end{align}
-\begin{align}
-    \implies k = 3, -7
-\end{align}
-Therefore the points on $L_1$ which lie at a unit distance from the line $L_2$ are ,
+Therefore the points on $L_1$ which lie at a unit distance from the line $L_2$ are
 \begin{align*}
-    \myvec{3\\1} \ \text{and} \ \myvec{-7\\11}
+    \vec{P}=\myvec{3\\1} \ \text{and} \ \vec{P}=\myvec{-7\\11}
 \end{align*}
-
 \end{frame}
 
 \begin{frame}{Plot}
