@@ -1,0 +1,115 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+ \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+
+\title{2.7.33}
+\author{EE25BTECH11021 - Dhanush Sagar
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question:} \\
+Find the value of $p$ if
+\[
+(2\hat{i} + 6\hat{j} + 27\hat{k}) \times (\hat{i} + 3\hat{j} + p\hat{k}) = 0.
+\]
+
+\textbf{Solution:} \\
+The given vectors are
+\begin{align}
+\vec{A} = \myvec{2 \\ 6 \\ 27}, 
+\vec{B} = \myvec{1 \\ 3 \\ p}.
+\end{align}
+
+Since
+\begin{align}
+\vec{A} \times \vec{B} = 0,
+\end{align}
+the vectors $\vec{A}$ and $\vec{B}$ are linearly dependent. Therefore, there exists a scalar $t$ such that
+\begin{align}
+\vec{B} &= t \vec{A}.
+\end{align}
+
+Substituting the components,
+\begin{align}
+\myvec{1 \\ 3 \\ p} &= t \myvec{2 \\ 6 \\ 27}.
+\end{align}
+
+From the first coordinate,
+\begin{align}
+1 &= 2t  \Rightarrow  t = \tfrac{1}{2}.
+\end{align}
+
+From the second coordinate,
+\begin{align}
+3 &= 6t  \Rightarrow  t = \tfrac{1}{2},
+\end{align}
+which is consistent with the first.
+
+Finally, from the third coordinate,
+\begin{align}
+p &= 27t = 27 \cdot \tfrac{1}{2} = \tfrac{27}{2}.
+\end{align}
+
+\textbf{Final Answer:}
+\begin{align}
+\boxed{p = \tfrac{27}{2}}
+\end{align}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/fig1.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\end{document}
