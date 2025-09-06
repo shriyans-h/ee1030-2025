@@ -1,0 +1,164 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.8.31}
+\author{EE25BTECH11044 - Sai Hasini Pappula}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}
+Given $A(1,-2)$, $B(2,3)$, $C(a,2)$ and $D(-4,-3)$ which form a parallelogram. Using only matrices and norms (no coordinate geometry formulas), find $a$ and the height when $AB$ is taken as base. 
+
+\bigskip
+
+\textbf{Solution}
+
+Represent the points as column vectors:
+\begin{equation}
+A=\myvec{1\\-2},\quad B=\myvec{2\\3},\quad C=\myvec{a\\2},\quad D=\myvec{-4\\-3}.
+\end{equation}
+
+Parallelogram condition (diagonals bisect): 
+\begin{equation}
+A+C=B+D.
+\end{equation}
+Hence
+\begin{equation}
+\myvec{1\\-2}+\myvec{a\\2}=\myvec{2\\3}+\myvec{-4\\-3}.
+\end{equation}
+Compute the right-hand side and equate:
+\begin{equation}
+\myvec{1+a\\0}=\myvec{-2\\0}\quad\Longrightarrow\quad a=-3.
+\end{equation}
+Thus
+\begin{equation}
+C=\myvec{-3\\2}.
+\end{equation}
+
+\bigskip
+
+Now let the base vector and the AC vector be
+\begin{equation}
+\mathbf{u}=AB=B-A=\myvec{1\\5},\qquad
+\mathbf{v}=AC=C-A=\myvec{-4\\4}.
+\end{equation}
+
+Form the orthogonal projector onto $\mathbf{u}$ (matrix form):
+\begin{equation}
+P_{\mathbf{u}}=\frac{\mathbf{u}\mathbf{u}^\top}{\mathbf{u}^\top\mathbf{u}}.
+\end{equation}
+
+The component of $\mathbf{v}$ orthogonal to $\mathbf{u}$ is
+\begin{equation}
+\mathbf{w}=(I-P_{\mathbf{u}})\,\mathbf{v}.
+\end{equation}
+
+The height $h$ (distance from $C$ to line through $AB$) is the norm of $\mathbf{w}$:
+\begin{equation}
+\label{eq:height-norm}
+h=\|\mathbf{w}\|=\big\|(I-P_{\mathbf{u}})\mathbf{v}\big\|.
+\end{equation}
+
+Compute the scalar products needed:
+\begin{align}
+\mathbf{u}^\top\mathbf{u}&=1^2+5^2=26, \\
+\mathbf{u}^\top\mathbf{v}&=(-4)\cdot1 + 4\cdot5 = -4+20=16.
+\end{align}
+
+Thus the projector acting on $\mathbf{v}$ is
+\begin{equation}
+P_{\mathbf{u}}\mathbf{v}=\frac{\mathbf{u}(\mathbf{u}^\top\mathbf{v})}{\mathbf{u}^\top\mathbf{u}}
+=\frac{16}{26}\,\mathbf{u}=\frac{8}{13}\,\myvec{1\\5}
+=\myvec{\tfrac{8}{13}\\[4pt]\tfrac{40}{13}}.
+\end{equation}
+
+So
+\begin{equation}
+\mathbf{w}=\mathbf{v}-P_{\mathbf{u}}\mathbf{v}
+=\myvec{-4\\4}-\myvec{\tfrac{8}{13}\\[4pt]\tfrac{40}{13}}
+=\myvec{-\tfrac{60}{13}\\[4pt]\tfrac{12}{13}}.
+\end{equation}
+
+Therefore the height is
+\begin{align}
+h=\|\mathbf{w}\|
+&= \sqrt{\Big(-\tfrac{60}{13}\Big)^{\!2}+\Big(\tfrac{12}{13}\Big)^{\!2}}
+= \frac{\sqrt{60^2+12^2}}{13}
+= \frac{\sqrt{3744}}{13} \nonumber\\[4pt]
+&= \frac{12\sqrt{26}}{13} \;=\; \frac{24}{\sqrt{26}}.
+\end{align}
+
+\bigskip
+
+\noindent\textbf{Final results:}
+\begin{equation}
+\boxed{a=-3},\qquad \boxed{h=\dfrac{24}{\sqrt{26}}=\dfrac{12\sqrt{26}}{13}}.
+\end{equation}
+
+\bigskip
+
+\begin{center}
+    \includegraphics[width=0.8\columnwidth]{figs/fig4.png}
+\end{center}
+
+\end{document}
+
