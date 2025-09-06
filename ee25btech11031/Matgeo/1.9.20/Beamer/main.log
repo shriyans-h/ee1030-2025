@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.13)  5 SEP 2025 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.13)  6 SEP 2025 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1082,12 +1082,6 @@ Type  H <return>  for immediate help.
                                                   
 l.51 ...{\solution}{\noindent \textbf{Solution: }}
                                                   
-? \
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
 ? 
 
 ! LaTeX cmd Error: Invalid argument type 'g' in command '\system' (requires
@@ -1696,13 +1690,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 104.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 104.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 104.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1799,6 +1793,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 104.
+
+(./main.out) (./main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
 
@@ -1885,15 +1881,14 @@ erthousand on input line 104.
 LaTeX Info: Redefining \ohm on input line 104.
 Package gensymb Info: Using \textohm for \ohm on input line 104.
 Package gensymb Info: Using \textmu for \micro on input line 104.
-
-No file main.nav.
-[1
+ (./main.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 10.
- (/usr/share/texmf/tex/latex/lm/omllmm.fd
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -2018,7 +2013,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
  (./main.vrb) [11
 
 ]
-<Figs/plot(py+C).png, id=345, 462.528pt x 346.896pt>
+<Figs/plot(py+C).png, id=347, 462.528pt x 346.896pt>
 File: Figs/plot(py+C).png Graphic file (type png)
 <use Figs/plot(py+C).png>
 Package pdftex.def Info: Figs/plot(py+C).png  used on input line 281.
@@ -2047,7 +2042,7 @@ Package pdftex.def Info: Figs/plot(py+C).png  used on input line 281.
  (./main.vrb) [16
 
 ]
-<Figs/plot(py).png, id=490, 462.528pt x 346.896pt>
+<Figs/plot(py).png, id=491, 462.528pt x 346.896pt>
 File: Figs/plot(py).png Graphic file (type png)
 <use Figs/plot(py).png>
 Package pdftex.def Info: Figs/plot(py).png  used on input line 368.
@@ -2069,21 +2064,14 @@ Package pdftex.def Info: Figs/plot(py).png  used on input line 368.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58616 strings out of 474222
- 1384646 string characters out of 5748733
+ 58666 strings out of 474222
+ 1385084 string characters out of 5748733
  2346236 words of memory out of 5000000
- 79798 multiletter control sequences out of 15000+600000
+ 79840 multiletter control sequences out of 15000+600000
  600860 words of font info for 81 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,16n,123p,1172b,1470s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2095,7 +2083,7 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/txsya.pfb>
-Output written on main.pdf (17 pages, 216486 bytes).
+Output written on main.pdf (17 pages, 216734 bytes).
 PDF statistics:
  581 PDF objects out of 1000 (max. 8388607)
  491 compressed objects within 5 object streams
