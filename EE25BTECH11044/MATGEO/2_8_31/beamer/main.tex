@@ -94,77 +94,117 @@ Given points $A(1,-2)$, $B(2,3)$, $C(a,2)$ and $D(-4,-3)$ which form a parallelo
 \end{block}
 \end{frame}
 
-% --- Frame 2: Solution step 1 ---
-\begin{frame}{Solution: Step 1}
+% --- Frame 2: Step 1 ---
+\begin{frame}{Step 1: Represent the Vectors}
 Represent the points as vectors:
 \begin{equation}
-A=\myvec{1\\-2},\quad B=\myvec{2\\3},\quad C=\myvec{a\\2},\quad D=\myvec{-4\\-3}.
+\vec A=\begin{pmatrix}1\\-2\end{pmatrix},\quad 
+\vec B=\begin{pmatrix}2\\3\end{pmatrix},\quad 
+\vec C=\begin{pmatrix}a\\2\end{pmatrix},\quad 
+\vec D=\begin{pmatrix}-4\\-3\end{pmatrix}.
 \end{equation}
 
-Condition for parallelogram:
+Condition for parallelogram (diagonals bisect):
 \begin{equation}
-A+C=B+D.
-\end{equation}
-
-Substituting:
-\begin{equation}
-\myvec{1\\-2}+\myvec{a\\2}=\myvec{2\\3}+\myvec{-4\\-3}.
+\vec A+\vec C=\vec B+\vec D.
 \end{equation}
 \end{frame}
 
-% --- Frame 3: Solution step 2 ---
-\begin{frame}{Solution: Step 2}
+% --- Frame 3: Step 2 ---
+\begin{frame}{Step 2: Solve for $a$}
+Substituting:
+\begin{equation}
+\begin{pmatrix}1\\-2\end{pmatrix}+\begin{pmatrix}a\\2\end{pmatrix}
+=\begin{pmatrix}2\\3\end{pmatrix}+\begin{pmatrix}-4\\-3\end{pmatrix}.
+\end{equation}
+
 Simplify RHS:
 \begin{equation}
-\myvec{2\\3}+\myvec{-4\\-3}=\myvec{-2\\0}.
+\begin{pmatrix}2\\3\end{pmatrix}+\begin{pmatrix}-4\\-3\end{pmatrix}
+=\begin{pmatrix}-2\\0\end{pmatrix}.
 \end{equation}
 
 Thus:
 \begin{equation}
-\myvec{1+a\\0}=\myvec{-2\\0}.
+\begin{pmatrix}1+a\\0\end{pmatrix}=\begin{pmatrix}-2\\0\end{pmatrix}.
 \end{equation}
 
 So,
 \begin{equation}
-1+a=-2 \quad \Longrightarrow \quad a=-3.
+1+a=-2 \;\;\Longrightarrow\;\; a=-3.
 \end{equation}
 
-Hence:
+Hence,
 \begin{equation}
-C=\myvec{-3\\2}.
+\vec C=\begin{pmatrix}-3\\2\end{pmatrix}.
 \end{equation}
 \end{frame}
 
-% --- Frame 4: Solution step 3 ---
-\begin{frame}{Solution: Step 3}
+% --- Frame 4: Step 3 ---
+\begin{frame}{Step 3: Base and Side Vectors}
 Base vector:
 \begin{equation}
-\mathbf{u}=AB=B-A=\myvec{1\\5}, \quad \|\mathbf{u}\|=\sqrt{26}.
+\vec{AB}=\vec B-\vec A=\begin{pmatrix}1\\5\end{pmatrix}.
 \end{equation}
 
-Vector:
+Side vector:
 \begin{equation}
-\mathbf{v}=AC=C-A=\myvec{-4\\4}.
+\vec{AD}=\vec D-\vec A=\begin{pmatrix}-5\\-1\end{pmatrix}.
+\end{equation}
+\end{frame}
+
+% --- Frame 5: Step 4 ---
+\begin{frame}{Step 4: Projection of $\vec{AD}$ on $\vec{AB}$}
+Projection of $\vec{AD}$ on $\vec{AB}$:
+\begin{equation}
+\operatorname{proj}_{\vec{AB}}(\vec{AD})
+=\frac{\vec{AB}^\top\vec{AD}}{\vec{AB}^\top\vec{AB}}\;\vec{AB}.
 \end{equation}
 
-Height using projection:
+Compute inner products:
 \begin{equation}
-\mathbf{w}=(I-\tfrac{\mathbf{u}\mathbf{u}^\top}{\mathbf{u}^\top\mathbf{u}})\mathbf{v}.
+\vec{AB}^\top\vec{AD}=1(-5)+5(-1)=-10,
+\qquad
+\vec{AB}^\top\vec{AB}=1^2+5^2=26.
 \end{equation}
 
 So,
 \begin{equation}
-h=\|\mathbf{w}\|=\frac{24}{\sqrt{26}}=\frac{12\sqrt{26}}{13}.
+\operatorname{proj}_{\vec{AB}}(\vec{AD})
+=\frac{-10}{26}\begin{pmatrix}1\\5\end{pmatrix}
+=\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}.
 \end{equation}
 \end{frame}
 
-% --- Frame 5: Final Answer ---
-\begin{frame}{Final Answer}
-\[
-\boxed{a=-3},\quad \boxed{h=\dfrac{24}{\sqrt{26}}=\dfrac{12\sqrt{26}}{13}}
-\]
+% --- Frame 6: Step 5 ---
+\begin{frame}{Step 5: Perpendicular Component}
+Perpendicular component:
+\begin{equation}
+\vec r=\vec{AD}-\operatorname{proj}_{\vec{AB}}(\vec{AD})
+=\begin{pmatrix}-5\\-1\end{pmatrix}
+-\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}
+=\begin{pmatrix}-\tfrac{60}{13}\\[4pt]\tfrac{12}{13}\end{pmatrix}.
+\end{equation}
+
+Height:
+\begin{equation}
+h=\|\vec r\|
+=\sqrt{\left(-\tfrac{60}{13}\right)^2+\left(\tfrac{12}{13}\right)^2}.
+\end{equation}
 \end{frame}
 
+% --- Frame 7: Final Answer ---
+\begin{frame}{Final Answer}
+\[
+h=\frac{\sqrt{3744}}{13}
+=\frac{12\sqrt{26}}{13}
+=\frac{24}{\sqrt{26}}
+\]
+
+\[
+\boxed{a=-3},\qquad \boxed{h=\tfrac{12\sqrt{26}}{13}}
+\]
+\end{frame}
 % --- Frame: C Code (Part 1) ---
 \begin{frame}[fragile]{C Code (1/2)}
 \begin{lstlisting}[language=C]

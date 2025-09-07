@@ -64,96 +64,90 @@
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
-
-\textbf{Question}
-Given $A(1,-2)$, $B(2,3)$, $C(a,2)$ and $D(-4,-3)$ which form a parallelogram. Using only matrices and norms (no coordinate geometry formulas), find $a$ and the height when $AB$ is taken as base. 
+\textbf{Question.}  
+Given $A(1,-2)$, $B(2,3)$, $C(a,2)$, and $D(-4,-3)$ which form a parallelogram.  
+Find the value of $a$ and the height of the parallelogram when $AB$ is taken as the base.  
+Use only vector projections and norms.
 
 \bigskip
 
-\textbf{Solution}
-
-Represent the points as column vectors:
+\textbf{Solution.}  
+Represent the points as vectors:
 \begin{equation}
-A=\myvec{1\\-2},\quad B=\myvec{2\\3},\quad C=\myvec{a\\2},\quad D=\myvec{-4\\-3}.
+\vec A=\begin{pmatrix}1\\-2\end{pmatrix},\quad 
+\vec B=\begin{pmatrix}2\\3\end{pmatrix},\quad
+\vec C=\begin{pmatrix}a\\2\end{pmatrix},\quad
+\vec D=\begin{pmatrix}-4\\-3\end{pmatrix}.
 \end{equation}
 
-Parallelogram condition (diagonals bisect): 
+Since the diagonals of a parallelogram bisect each other,
 \begin{equation}
-A+C=B+D.
+\vec A+\vec C = \vec B+\vec D.
 \end{equation}
-Hence
+That is,
 \begin{equation}
-\myvec{1\\-2}+\myvec{a\\2}=\myvec{2\\3}+\myvec{-4\\-3}.
+\begin{pmatrix}1\\-2\end{pmatrix}+\begin{pmatrix}a\\2\end{pmatrix}
+=\begin{pmatrix}2\\3\end{pmatrix}+\begin{pmatrix}-4\\-3\end{pmatrix}
+=\begin{pmatrix}-2\\0\end{pmatrix}.
 \end{equation}
-Compute the right-hand side and equate:
+Equating components gives
 \begin{equation}
-\myvec{1+a\\0}=\myvec{-2\\0}\quad\Longrightarrow\quad a=-3.
+1+a=-2 \quad \implies \quad a=-3.
 \end{equation}
 Thus
 \begin{equation}
-C=\myvec{-3\\2}.
+\vec C=\begin{pmatrix}-3\\2\end{pmatrix}.
 \end{equation}
 
-\bigskip
-
-Now let the base vector and the AC vector be
+Now define the base and side vectors:
 \begin{equation}
-\mathbf{u}=AB=B-A=\myvec{1\\5},\qquad
-\mathbf{v}=AC=C-A=\myvec{-4\\4}.
+\vec{AB}=\vec B-\vec A=\begin{pmatrix}1\\5\end{pmatrix}, \qquad
+\vec{AD}=\vec D-\vec A=\begin{pmatrix}-5\\-1\end{pmatrix}.
 \end{equation}
 
-Form the orthogonal projector onto $\mathbf{u}$ (matrix form):
+The projection of $\vec{AD}$ on $\vec{AB}$ is
 \begin{equation}
-P_{\mathbf{u}}=\frac{\mathbf{u}\mathbf{u}^\top}{\mathbf{u}^\top\mathbf{u}}.
+\operatorname{proj}_{\vec{AB}}(\vec{AD})
+=\frac{\vec{AB}^\top\vec{AD}}{\vec{AB}^\top\vec{AB}}\,\vec{AB}.
 \end{equation}
-
-The component of $\mathbf{v}$ orthogonal to $\mathbf{u}$ is
+Compute:
 \begin{equation}
-\mathbf{w}=(I-P_{\mathbf{u}})\,\mathbf{v}.
+\vec{AB}^\top\vec{AD}=1(-5)+5(-1)=-10, \qquad
+\vec{AB}^\top\vec{AB}=1^2+5^2=26.
 \end{equation}
-
-The height $h$ (distance from $C$ to line through $AB$) is the norm of $\mathbf{w}$:
-\begin{equation}
-\label{eq:height-norm}
-h=\|\mathbf{w}\|=\big\|(I-P_{\mathbf{u}})\mathbf{v}\big\|.
-\end{equation}
-
-Compute the scalar products needed:
-\begin{align}
-\mathbf{u}^\top\mathbf{u}&=1^2+5^2=26, \\
-\mathbf{u}^\top\mathbf{v}&=(-4)\cdot1 + 4\cdot5 = -4+20=16.
-\end{align}
-
-Thus the projector acting on $\mathbf{v}$ is
-\begin{equation}
-P_{\mathbf{u}}\mathbf{v}=\frac{\mathbf{u}(\mathbf{u}^\top\mathbf{v})}{\mathbf{u}^\top\mathbf{u}}
-=\frac{16}{26}\,\mathbf{u}=\frac{8}{13}\,\myvec{1\\5}
-=\myvec{\tfrac{8}{13}\\[4pt]\tfrac{40}{13}}.
-\end{equation}
-
 So
 \begin{equation}
-\mathbf{w}=\mathbf{v}-P_{\mathbf{u}}\mathbf{v}
-=\myvec{-4\\4}-\myvec{\tfrac{8}{13}\\[4pt]\tfrac{40}{13}}
-=\myvec{-\tfrac{60}{13}\\[4pt]\tfrac{12}{13}}.
+\operatorname{proj}_{\vec{AB}}(\vec{AD})
+=\frac{-10}{26}\begin{pmatrix}1\\5\end{pmatrix}
+=\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}.
 \end{equation}
 
-Therefore the height is
-\begin{align}
-h=\|\mathbf{w}\|
-&= \sqrt{\Big(-\tfrac{60}{13}\Big)^{\!2}+\Big(\tfrac{12}{13}\Big)^{\!2}}
-= \frac{\sqrt{60^2+12^2}}{13}
-= \frac{\sqrt{3744}}{13} \nonumber\\[4pt]
-&= \frac{12\sqrt{26}}{13} \;=\; \frac{24}{\sqrt{26}}.
-\end{align}
+Subtracting, the perpendicular component is
+\begin{equation}
+\vec r=\vec{AD}-\operatorname{proj}_{\vec{AB}}(\vec{AD})
+=\begin{pmatrix}-5\\-1\end{pmatrix}
+-\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}
+=\begin{pmatrix}-\tfrac{60}{13}\\[4pt]\tfrac{12}{13}\end{pmatrix}.
+\end{equation}
+
+The required height is the norm of $\vec r$:
+\begin{equation}
+h=\|\vec r\|
+=\sqrt{\left(-\tfrac{60}{13}\right)^2+\left(\tfrac{12}{13}\right)^2}.
+\end{equation}
+\begin{equation}
+h=\frac{\sqrt{3744}}{13}
+=\frac{12\sqrt{26}}{13}
+=\frac{24}{\sqrt{26}}.
+\end{equation}
 
 \bigskip
 
-\noindent\textbf{Final results:}
+\noindent
+\textbf{Final Answer:}
 \begin{equation}
-\boxed{a=-3},\qquad \boxed{h=\dfrac{24}{\sqrt{26}}=\dfrac{12\sqrt{26}}{13}}.
+\boxed{\,a=-3\,,\qquad h=\tfrac{12\sqrt{26}}{13}=\tfrac{24}{\sqrt{26}}\,}
 \end{equation}
-
 \bigskip
 
 \begin{center}

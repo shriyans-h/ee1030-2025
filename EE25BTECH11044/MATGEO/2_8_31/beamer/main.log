@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.15)  7 SEP 2025 03:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.15)  7 SEP 2025 20:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1743,23 +1743,52 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}] [2
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [3
-
-]
+re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 159.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 159.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 159.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
- [4
+ [2
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 141.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 141.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 141.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 141.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 141.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 141.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 141.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 141.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 141.
+
+ [3
+
+] [4
 
 ] [5
+
+] [6
+
+] [7
 
 ]
 \openout4 = `main.vrb'.
@@ -1775,34 +1804,34 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [6
+)) [8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-[7
+[9
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-)) [8
+)) [10
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [9
+ (./main.vrb) [11
 
 ]
-<figs/fig4.png, id=293, 302.63063pt x 251.94125pt>
+<figs/fig4.png, id=348, 302.63063pt x 251.94125pt>
 File: figs/fig4.png Graphic file (type png)
 <use figs/fig4.png>
-Package pdftex.def Info: figs/fig4.png  used on input line 266.
+Package pdftex.def Info: figs/fig4.png  used on input line 306.
 (pdftex.def)             Requested size: 239.60567pt x 199.4735pt.
- [10
+ [12
 
  <./figs/fig4.png>]
 \tf@nav=\write8
@@ -1830,11 +1859,11 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57045 strings out of 474222
- 1357700 string characters out of 5748733
- 2345252 words of memory out of 5000000
- 78293 multiletter control sequences out of 15000+600000
- 602468 words of font info for 79 fonts, out of 8000000 for 9000
+ 57093 strings out of 474222
+ 1358373 string characters out of 5748733
+ 2345253 words of memory out of 5000000
+ 78333 multiletter control sequences out of 15000+600000
+ 628783 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1625s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
@@ -1842,12 +1871,13 @@ pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (10 pages, 208949 bytes).
+ic/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmtt10.pfb>
+Output written on main.pdf (12 pages, 235273 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
- 21 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 366 compressed objects within 4 object streams
+ 25 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
