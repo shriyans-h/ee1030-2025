@@ -88,80 +88,72 @@ Let the plane meet the coordinate axes at
 \end{align*}
 Define
 \begin{align*}
-    M = \mathrm{diag}(a,b,c), 
+    \vec{M} = \mathrm{diag}(a,b,c), 
 \quad 
-e = \myvec{1 \\ 1 \\ 1}.
+\vec{e} = \myvec{1 \\ 1 \\ 1}.
 \end{align*}
 
 The normal vector of the plane is given by
 \begin{align}
-n &= M^{-1} e 
+\vec{n} &= \vec{M}^{-1} \vec{e} 
 = \myvec{ \tfrac{1}{a} \\[6pt] \tfrac{1}{b} \\[6pt] \tfrac{1}{c} }
 \end{align}
 
 The squared norm of the normal vector is
 \begin{align}
-\|n\|^2 &= e^T M^{-2} e 
+\|\vec{n}\|^2 &= \vec{e}^T \vec{M}^{-2} \vec{e} 
 = \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}
 \end{align}
 
 The perpendicular distance of the plane from the origin is
 \begin{align}
-d &= \frac{|1|}{\|n\|} 
-= \frac{1}{\sqrt{e^T M^{-2} e}}
+d &= \frac{|1|}{\|\vec{n}\|} 
+= \frac{1}{\sqrt{\vec{e}^T \vec{M}^{-2} \vec{e}}}
 \end{align}
 
 Thus, the relation between $a,b,c$ and $d$ is
 \begin{align}
-e^T M^{-2} e &= \frac{1}{d^2}
+\vec{e}^T \vec{M}^{-2} \vec{e} &= \frac{1}{d^2}
 \end{align}
-
 The centroid of the triangle $ABC$ is
 \begin{align}
 D &= \frac{1}{3} \myvec{ a \\ b \\ c } 
-= \frac{1}{3} M e
+= \frac{1}{3} \vec{M} \vec{e}
 \end{align}
-
 Hence, the coordinates of the centroid are
 \begin{align}
 x &= \tfrac{a}{3}, \quad y = \tfrac{b}{3}, \quad z = \tfrac{c}{3}
 \end{align}
-
 Now, the required expression is
 \begin{align}
 \frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} 
 &= \frac{1}{(a/3)^2} + \frac{1}{(b/3)^2} + \frac{1}{(c/3)^2}
 \end{align}
-
 Simplifying, we get
 \begin{align}
 \frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
 &= 9\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right)
 \end{align}
-
 In matrix form, this becomes
 \begin{align}
 \frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
-&= 9\, e^T M^{-2} e
+&= 9\, \vec{e}^T \vec{M}^{-2} \vec{e}
 \end{align}
-
 Using the relation obtained earlier,
 \begin{align}
 \frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
 &= \frac{9}{d^2}
 \end{align}
-
 For $d=1$, we finally obtain
 \begin{align}
 \frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} &= 9
 \end{align}
-
 \[
 \boxed{k=9}
 \]
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\linewidth]{figs/fig1.png}
+    \includegraphics[width=0.435\linewidth]{figs/fig1.png}
     \caption{}
     \label{fig:fig1}
 \end{figure}
