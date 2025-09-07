@@ -1,0 +1,172 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+ \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+
+\title{2.10.50}
+\author{EE25BTECH11021 - Dhanush Sagar
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question} \\
+ A variable plane at a distance of one unit from the origin cuts the coordinate axes at $A, B$ and $C$.  
+
+
+If the centroid $D(x,y,z)$ of triangle $ABC$ satisfies the relation  
+\begin{align*}
+\frac{1}{x^{2}} + \frac{1}{y^{2}} + \frac{1}{z^{2}} = k,
+\end{align*}
+then the value of $k$ is :  
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $3$
+    \item $1$
+    \item $\tfrac{1}{3}$
+    \item $9$
+\end{enumerate}
+\end{multicols}
+
+\textbf{Solution} \\
+
+Let the plane meet the coordinate axes at 
+\begin{align*}
+\vec{A} = \myvec{a\\0\\0}, 
+\vec{B} = \myvec{0\\b\\0}, 
+\vec{C} = \myvec{0\\0\\c}.
+\end{align*}
+Define
+\begin{align*}
+    M = \mathrm{diag}(a,b,c), 
+\quad 
+e = \myvec{1 \\ 1 \\ 1}.
+\end{align*}
+
+The normal vector of the plane is given by
+\begin{align}
+n &= M^{-1} e 
+= \myvec{ \tfrac{1}{a} \\[6pt] \tfrac{1}{b} \\[6pt] \tfrac{1}{c} }
+\end{align}
+
+The squared norm of the normal vector is
+\begin{align}
+\|n\|^2 &= e^T M^{-2} e 
+= \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}
+\end{align}
+
+The perpendicular distance of the plane from the origin is
+\begin{align}
+d &= \frac{|1|}{\|n\|} 
+= \frac{1}{\sqrt{e^T M^{-2} e}}
+\end{align}
+
+Thus, the relation between $a,b,c$ and $d$ is
+\begin{align}
+e^T M^{-2} e &= \frac{1}{d^2}
+\end{align}
+
+The centroid of the triangle $ABC$ is
+\begin{align}
+D &= \frac{1}{3} \myvec{ a \\ b \\ c } 
+= \frac{1}{3} M e
+\end{align}
+
+Hence, the coordinates of the centroid are
+\begin{align}
+x &= \tfrac{a}{3}, \quad y = \tfrac{b}{3}, \quad z = \tfrac{c}{3}
+\end{align}
+
+Now, the required expression is
+\begin{align}
+\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} 
+&= \frac{1}{(a/3)^2} + \frac{1}{(b/3)^2} + \frac{1}{(c/3)^2}
+\end{align}
+
+Simplifying, we get
+\begin{align}
+\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
+&= 9\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right)
+\end{align}
+
+In matrix form, this becomes
+\begin{align}
+\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
+&= 9\, e^T M^{-2} e
+\end{align}
+
+Using the relation obtained earlier,
+\begin{align}
+\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
+&= \frac{9}{d^2}
+\end{align}
+
+For $d=1$, we finally obtain
+\begin{align}
+\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} &= 9
+\end{align}
+
+\[
+\boxed{k=9}
+\]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\linewidth]{figs/fig1.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+\end{document}
+
+
+
+
