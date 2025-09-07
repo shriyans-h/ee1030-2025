@@ -124,70 +124,62 @@ Find the coordinates of a point on Y axis which is at a distance of \( 5\sqrt{2}
 
 \begin{frame}
 \frametitle{Solution}
-Given point:
+Let 
 \begin{align}
-\vec{P} &= \begin{pmatrix} 3 \\ -2 \\ 5 \end{pmatrix}
+\vec{P} &\in \mathbb{R}^3, \quad \vec{Q} = y\,\vec{e}_2, \quad \text{where} \quad \vec{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}
 \end{align}
 
-We seek a point on the Y-axis:
+The required distance condition is
 \begin{align}
-\vec{Q} &= y\,\vec{e}_2 = \begin{pmatrix} 0 \\ y \\ 0 \end{pmatrix}
+\|\vec{P} - \vec{Q}\| &= d \\
+\implies (\vec{P} - y\vec{e}_2)^T (\vec{P} - y\vec{e}_2) &= d^2
 \end{align}
 
-Let the standard basis vectors be:
+Expanding the quadratic form:
 \begin{align}
-\vec{e}_1 &= \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad
-\vec{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad
-\vec{e}_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+\vec{P}^T \vec{P} - 2y\,\vec{e}_2^T \vec{P} + y^2 \vec{e}_2^T \vec{e}_2 &= d^2
 \end{align}
 
-The required distance:
+Since \(\vec{e}_2^T \vec{e}_2 = 1\), this leads to the quadratic equation in \( y \):
 \begin{align}
-\|\vec{P} - \vec{Q}\| &= d = 5\sqrt{2}
+y^2 - 2(\vec{e}_2^T \vec{P}) y + \left(\vec{P}^T \vec{P} - d^2\right) = 0
 \end{align}
+
+
 \end{frame}
 \begin{frame}
 \frametitle{Solution}
-So, equating squared norms:
+Applying the quadratic formula, the solution for \( y \) is:
 \begin{align}
-\|\vec{P} - y\vec{e}_2\|^2 &= d^2 \\
-(\vec{P} - y\vec{e}_2)^T (\vec{P} - y\vec{e}_2) &= d^2 \\
-\vec{P}^T \vec{P} - 2y \vec{P}^T \vec{e}_2 + y^2 \vec{e}_2^T \vec{e}_2 &= d^2 \\
-\vec{P}^T \vec{P} - 2y (\vec{P} \cdot \vec{e}_2) + y^2 &= d^2
+y = \vec{e}_2^T \vec{P} \pm \sqrt{\left(\vec{e}_2^T \vec{P}\right)^2 - \left(\vec{P}^T \vec{P} - d^2\right)}
+\end{align}
+\begin{align}
+\vec{P} &= \begin{pmatrix}3 \\ -2 \\ 5\end{pmatrix}, \quad d = 5\sqrt{2}
 \end{align}
 
-Rearrange:
+Calculate intermediate terms:
 \begin{align}
-y^2 - 2(\vec{P} \cdot \vec{e}_2) y + (\vec{P}^T \vec{P} - d^2) = 0
-\end{align}
-
-With values:
-\begin{align}
+\vec{e}_2^T \vec{P} &= -2 \\
 \vec{P}^T \vec{P} &= 3^2 + (-2)^2 + 5^2 = 38 \\
-\vec{P} \cdot \vec{e}_2 &= -2 \\
 d^2 &= (5\sqrt{2})^2 = 50
 \end{align}
+
+Substitute into the general formula:
+
 \end{frame}
 \begin{frame}
 \frametitle{Solution}
-So:
 \begin{align}
-y^2 + 4y - 12 = 0
+y &= -2 \pm \sqrt{(-2)^2 - (38 - 50)} \\
+  &= -2 \pm \sqrt{4 + 12} \\
+  &= -2 \pm 4
 \end{align}
 
-Quadratic formula:
-\begin{align}
-y &= \frac{-4 \pm \sqrt{4^2 - 4 \cdot 1 \cdot (-12)}}{2} \\
-  &= \frac{-4 \pm \sqrt{16 + 48}}{2} \\
-  &= \frac{-4 \pm 8}{2}
-\end{align}
-
-Thus,
+Solutions are:
 \begin{align}
 y_1 &= 2, \qquad y_2 = -6
 \end{align}
 \end{frame}
-
 
 \begin{frame}
 \frametitle{Answer}
