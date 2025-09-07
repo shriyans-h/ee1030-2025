@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  7 SEP 2025 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  7 SEP 2025 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1321,7 +1321,7 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 (Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
 
 
-Overfull \vbox (8.14816pt too high) detected at line 142
+Overfull \vbox (8.34435pt too high) detected at line 142
  []
 
 
@@ -1329,16 +1329,16 @@ Overfull \vbox (8.14816pt too high) detected at line 142
 [3
 
 ]
-Overfull \vbox (4.4568pt too high) detected at line 171
- []
-
-
 
 [4
 
 ]
 
 [5
+
+]
+
+[6
 
 ]
 \openout4 = `main.vrb'.
@@ -1368,12 +1368,12 @@ y[8] = c; // C[]
  []
 
 )
-Overfull \vbox (14.52696pt too high) detected at line 225
+Overfull \vbox (14.52696pt too high) detected at line 226
  []
 
 
 
-[6
+[7
 
 ]
 \openout4 = `main.vrb'.
@@ -1391,12 +1391,12 @@ Overfull \hbox (8.37465pt too wide) in paragraph at lines 20--20
  []
 
 )
-Overfull \vbox (3.36029pt too high) detected at line 248
+Overfull \vbox (3.36029pt too high) detected at line 249
  []
 
 
 
-[7
+[8
 
 ]
 \openout4 = `main.vrb'.
@@ -1414,12 +1414,12 @@ holders[]
  []
 
 )
-Overfull \vbox (3.36029pt too high) detected at line 269
+Overfull \vbox (3.36029pt too high) detected at line 270
  []
 
 
 
-[8
+[9
 
 ]
 \openout4 = `main.vrb'.
@@ -1437,12 +1437,12 @@ Overfull \hbox (54.36415pt too wide) in paragraph at lines 20--20
  []
 
 )
-Overfull \vbox (3.36029pt too high) detected at line 293
+Overfull \vbox (3.36029pt too high) detected at line 294
  []
 
 
 
-[9
+[10
 
 ]
 \openout4 = `main.vrb'.
@@ -1478,26 +1478,26 @@ show()[]
  []
 
 )
-Overfull \vbox (14.52696pt too high) detected at line 315
- []
-
-
-
-[10
-
-]
-<figs/fig1.png, id=77, 462.528pt x 346.896pt>
-File: figs/fig1.png Graphic file (type png)
-<use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 326.
-(pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
-
-Overfull \vbox (2.11359pt too high) detected at line 326
+Overfull \vbox (14.52696pt too high) detected at line 316
  []
 
 
 
 [11
+
+]
+<figs/fig1.png, id=82, 462.528pt x 346.896pt>
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 327.
+(pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
+
+Overfull \vbox (2.11359pt too high) detected at line 327
+ []
+
+
+
+[12
 
  <./figs/fig1.png>]
 \tf@nav=\write6
@@ -1514,37 +1514,42 @@ Overfull \vbox (2.11359pt too high) detected at line 326
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26876 strings out of 467801
- 521746 string characters out of 5417842
+ 26878 strings out of 467801
+ 521886 string characters out of 5417842
  898125 words of memory out of 5000000
- 54939 multiletter control sequences out of 15000+600000
- 636559 words of font info for 74 fonts, out of 8000000 for 9000
+ 54941 multiletter control sequences out of 15000+600000
+ 635959 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,131p,379b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmex10.pfb></data/data/com.termux/files/usr/share/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></data/data/com.termux/fi
-les/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmss10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></data/data/com.termux/file
-s/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssbx10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></data/data/com.termux/fil
-es/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-</data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></data/data/com.termux/files
-/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (11 pages, 201645 bytes).
+les/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmss12.pfb></data/data/com.termux/files/usr/share/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></data/data/com.termux/file
+s/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
+></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmssi10.pfb></data/data/com.termux/files/usr/share/texlive/2025
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></data/data/com.termux/fi
+les/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></data/data/com.termux/file
+s/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on main.pdf (12 pages, 195466 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 24 named destinations out of 1000 (max. 500000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
