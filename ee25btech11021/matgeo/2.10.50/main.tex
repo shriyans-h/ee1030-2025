@@ -60,7 +60,7 @@
 
 
 \textbf{Question} \\
- A variable plane at a distance of one unit from the origin cuts the coordinate axes at $A, B$ and $C$.  
+A variable plane at a distance of one unit from the origin cuts the coordinate axes at $A, B$ and $C$.  
 
 
 If the centroid $D(x,y,z)$ of triangle $ABC$ satisfies the relation  
@@ -71,7 +71,7 @@ then the value of $k$ is :
 
 \begin{multicols}{2}
 \begin{enumerate}
-    \item $3$
+   \item $3$
     \item $1$
     \item $\tfrac{1}{3}$
     \item $9$
@@ -79,84 +79,98 @@ then the value of $k$ is :
 \end{multicols}
 
 \textbf{Solution} \\
-
-Let the plane meet the coordinate axes at 
-\begin{align*}
-\vec{A} = \myvec{a\\0\\0}, 
-\vec{B} = \myvec{0\\b\\0}, 
+The plane is written in vector form as
+\begin{align}
+\vec{n}^\top \vec{x} &= c,
+\end{align}
+where $\vec{n}\in\mathbb{R}^3$ is the normal vector.
+The plane cuts the coordinate axes at
+\begin{align}
+\vec{A} &= \myvec{a\\0\\0}, \qquad
+\vec{B} = \myvec{0\\b\\0}, \qquad
 \vec{C} = \myvec{0\\0\\c}.
-\end{align*}
+\end{align}
 Define
-\begin{align*}
-    \vec{M} = \mathrm{diag}(a,b,c), 
-\quad 
-\vec{e} = \myvec{1 \\ 1 \\ 1}.
-\end{align*}
-
-The normal vector of the plane is given by
 \begin{align}
-\vec{n} &= \vec{M}^{-1} \vec{e} 
-= \myvec{ \tfrac{1}{a} \\[6pt] \tfrac{1}{b} \\[6pt] \tfrac{1}{c} }
+\vec{e} &= \myvec{1\\1\\1}, \qquad 
+\vec{M} = \myvec{a&0&0\\[4pt]0&b&0\\[4pt]0&0&c}.
 \end{align}
-
-The squared norm of the normal vector is
+Since $\vec{A},\vec{B},\vec{C}$ lie on the plane,
 \begin{align}
-\|\vec{n}\|^2 &= \vec{e}^T \vec{M}^{-2} \vec{e} 
-= \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}
+\vec{n}^\top \vec{M} &= c\, \vec{e}^\top.
 \end{align}
-
+Taking transpose,
+\begin{align}
+\vec{M}^\top \vec{n} &= c\, \vec{e}.
+\end{align}
+Since $\vec{M}$ is diagonal,
+\begin{align}
+\vec{n} &= c\, \vec{M}^{-1} \vec{e}.
+\end{align}
 The perpendicular distance of the plane from the origin is
 \begin{align}
-d &= \frac{|1|}{\|\vec{n}\|} 
-= \frac{1}{\sqrt{\vec{e}^T \vec{M}^{-2} \vec{e}}}
+d &= \frac{|c|}{\|\vec{n}\|}
+= \frac{|c|}{|c|\,\|\vec{M}^{-1}\vec{e}\|}
+= \frac{1}{\|\vec{M}^{-1}\vec{e}\|},
 \end{align}
-
-Thus, the relation between $a,b,c$ and $d$ is
+hence
 \begin{align}
-\vec{e}^T \vec{M}^{-2} \vec{e} &= \frac{1}{d^2}
+\vec{e}^\top \vec{M}^{-2} \vec{e} &= \frac{1}{d^2}.
 \end{align}
-The centroid of the triangle $ABC$ is
+The centroid of $\triangle ABC$ is
 \begin{align}
-D &= \frac{1}{3} \myvec{ a \\ b \\ c } 
-= \frac{1}{3} \vec{M} \vec{e}
+\vec{D} &= \frac{\vec{A}+\vec{B}+\vec{C}}{3}
+= \tfrac{1}{3}\vec{M}\vec{e}.
 \end{align}
-Hence, the coordinates of the centroid are
+Thus the centroid coordinates are
 \begin{align}
-x &= \tfrac{a}{3}, \quad y = \tfrac{b}{3}, \quad z = \tfrac{c}{3}
+x &= \tfrac{a}{3}, \quad y = \tfrac{b}{3}, \quad z = \tfrac{c}{3},
+\quad\text{so}\quad
+\vec{D} = \myvec{x\\y\\z}.
 \end{align}
-Now, the required expression is
+Now we compute
 \begin{align}
-\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} 
-&= \frac{1}{(a/3)^2} + \frac{1}{(b/3)^2} + \frac{1}{(c/3)^2}
+\frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2}
+&= 9\left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}\right).
 \end{align}
-Simplifying, we get
+To connect with the matrix form, observe that
 \begin{align}
-\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
-&= 9\left(\frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2}\right)
+\vec{M}^{-2} &= \myvec{\tfrac{1}{a^2}&0&0\\[4pt]0&\tfrac{1}{b^2}&0\\[4pt]0&0&\tfrac{1}{c^2}}, \\[6pt]
+\vec{M}^{-2}\vec{e} &= \myvec{\tfrac{1}{a^2}\\[4pt]\tfrac{1}{b^2}\\[4pt]\tfrac{1}{c^2}}, \\[6pt]
+\vec{e}^\top \vec{M}^{-2}\vec{e} &= \frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}.
 \end{align}
-In matrix form, this becomes
+Therefore
 \begin{align}
-\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
-&= 9\, \vec{e}^T \vec{M}^{-2} \vec{e}
+\frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2}
+&= 9\,\vec{e}^\top \vec{M}^{-2} \vec{e}.
 \end{align}
-Using the relation obtained earlier,
+Using the distance relation,
 \begin{align}
-\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2}
-&= \frac{9}{d^2}
+\frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2} &= \frac{9}{d^2}.
 \end{align}
-For $d=1$, we finally obtain
+For $d=1$,
 \begin{align}
-\frac{1}{x^2} + \frac{1}{y^2} + \frac{1}{z^2} &= 9
+\frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2} &= 9,
 \end{align}
+so
 \[
-\boxed{k=9}
+\boxed{k=9}.
 \]
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.435\linewidth]{figs/fig1.png}
+    \includegraphics[width=0.7\linewidth]{figs/fig1.png}
     \caption{}
     \label{fig:fig1}
 \end{figure}
+
+
+
+
+
+
+
+\end{document}
+
 \end{document}
 
 
