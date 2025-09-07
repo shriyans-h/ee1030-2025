@@ -157,20 +157,19 @@ Side vector:
 \begin{frame}{Step 4: Projection of $\vec{AD}$ on $\vec{AB}$}
 Projection of $\vec{AD}$ on $\vec{AB}$:
 \begin{equation}
-\operatorname{proj}_{\vec{AB}}(\vec{AD})
-=\frac{\vec{AB}^\top\vec{AD}}{\vec{AB}^\top\vec{AB}}\;\vec{AB}.
+\mathbf{AP = \frac{AB^\top AD}{\|AB\|^2} AB}
 \end{equation}
 
 Compute inner products:
 \begin{equation}
 \vec{AB}^\top\vec{AD}=1(-5)+5(-1)=-10,
 \qquad
-\vec{AB}^\top\vec{AB}=1^2+5^2=26.
+\|\vec{AB}\|^2=1^2+5^2=26.
 \end{equation}
 
 So,
 \begin{equation}
-\operatorname{proj}_{\vec{AB}}(\vec{AD})
+\vec{AP}
 =\frac{-10}{26}\begin{pmatrix}1\\5\end{pmatrix}
 =\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}.
 \end{equation}
@@ -180,7 +179,7 @@ So,
 \begin{frame}{Step 5: Perpendicular Component}
 Perpendicular component:
 \begin{equation}
-\vec r=\vec{AD}-\operatorname{proj}_{\vec{AB}}(\vec{AD})
+\vec r=\vec{AD}-\vec{AP}
 =\begin{pmatrix}-5\\-1\end{pmatrix}
 -\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}
 =\begin{pmatrix}-\tfrac{60}{13}\\[4pt]\tfrac{12}{13}\end{pmatrix}.

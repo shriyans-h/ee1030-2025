@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.15)  7 SEP 2025 20:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.15)  7 SEP 2025 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1905,7 +1905,7 @@ f-dist/fonts/enc/dvips/base/8r.enc}
 <figs/fig4.png, id=53, 302.63063pt x 251.94125pt>
 File: figs/fig4.png Graphic file (type png)
 <use figs/fig4.png>
-Package pdftex.def Info: figs/fig4.png  used on input line 154.
+Package pdftex.def Info: figs/fig4.png  used on input line 152.
 (pdftex.def)             Requested size: 291.35735pt x 242.55666pt.
  [2 <./figs/fig4.png>] (./main.aux)
  ***********
@@ -1936,7 +1936,7 @@ exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 90903 bytes).
+Output written on main.pdf (2 pages, 91603 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
