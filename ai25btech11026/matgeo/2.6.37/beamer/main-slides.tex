@@ -98,26 +98,36 @@ The vector from origin to the points $A$ and $B$ are
 \begin{frame}{Theoretical Solution} 
 \textbf{Solution:}\\
  \textbf{Given}  
-
 \begin{align}
-\vec a = \myvec{2\\-3\\2},\quad
-\vec b = \myvec{2\\3\\1},\quad
-\vec{B} - \vec{A} = \vec b - \vec a.
+\vec a=\myvec{2\\-3\\2},\qquad
+\vec b=\myvec{2\\3\\1}.
 \end{align}
-
+Using the triangle-area formula,
 \begin{align}
-\text{Area}(\triangle OAB)
-= \frac{1}{2} \bigl\| \vec a \times \vec b \bigr\|
-\end{align}
+\text{ar}(\triangle OAB)=\frac12\|(A-O)\times(B-O)\|
+=\frac12\|\vec a\times\vec b\|. \; \; \; \; \; \; \; \;
+ \end{align}
 \begin{align}
-= \frac{1}{2}
-\left\|
--9\,\hat\imath + 2\,\hat\jmath + 12\,\hat k
-\right\|
-= \frac{1}{2}\,\sqrt{(-9)^2 + 2^2 + 12^2}
-= \frac{\sqrt{229}}{2}
+\vec a\times\vec b=
+\myvec{
+\hat{\imath}&\hat{\jmath}&\hat{k}\\
+2&-3&2\\
+2&\phantom{-}3&1
+}
+=-9\,\hat{\imath}+2\,\hat{\jmath}+12\,\hat{k},
+ \end{align}
+ \end{frame}
+ \begin{frame}{Theoretical Solution} 
+\textbf{Solution:}\\
+ \textbf{Given} 
+hence
+\begin{align}
+\|\vec a\times\vec b\|=\sqrt{(-9)^2+2^2+12^2}=\sqrt{229}.
 \end{align}
-
+Therefore,
+\begin{align}
+\boxed{\text{area}(\triangle OAB)=\dfrac{\sqrt{229}}{2}}.
+\end{align}
 
 \end{frame}
 
