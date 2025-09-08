@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  5 SEP 2025 18:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  8 SEP 2025 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1962,32 +1962,15 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 File: ts1txr.fd 2000/12/15 v3.1
 )
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 S
-      ection formula for a vector $\vec{P}$ which divides the line formed by...
-
-? 
-
-
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
 ocal/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
-<figs/fig.png, id=52, 462.528pt x 346.896pt>
+<figs/fig.png, id=51, 462.528pt x 346.896pt>
 File: figs/fig.png Graphic file (type png)
 <use figs/fig.png>
-Package pdftex.def Info: figs/fig.png  used on input line 114.
+Package pdftex.def Info: figs/fig.png  used on input line 116.
 (pdftex.def)             Requested size: 218.5194pt x 163.89334pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--117
-
- []
-
 
 
 [2 <./figs/fig.png>] (./main.aux)
@@ -2011,23 +1994,22 @@ Package rerunfilecheck Info: Checksums for `main.out':
 Here is how much of TeX's memory you used:
  54417 strings out of 473190
  1297126 string characters out of 5715801
- 1890520 words of memory out of 5000000
+ 1891520 words of memory out of 5000000
  76845 multiletter control sequences out of 15000+600000
  624051 words of font info for 169 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,15n,109p,1194b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/l
-ocal/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 72892 bytes).
+ 109i,14n,109p,1194b,1027s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 63396 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  17 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
