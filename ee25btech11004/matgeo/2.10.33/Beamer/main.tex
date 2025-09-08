@@ -1,0 +1,198 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{multicol}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{2.10.33}
+\date{September 8,2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{Aditya Appana - EE25BTECH11004}
+
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+\begin{frame}{Question}
+Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position vectors $\alpha\hat{i} + \beta\hat{j} + \gamma\hat{k}$, $\beta\hat{i} +\gamma\hat{j} + \alpha\hat{k}$, $\gamma\hat{i} + \alpha\hat{j} + \beta\hat{k}$:
+
+\begin{enumerate}\begin{multicols}{2}
+
+    \item are collinear
+    \item form an equilateral triangle
+    \item form a scalene triangle
+    \item form a right angled triangle
+    \end{multicols}
+\end{enumerate}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+    \frametitle{Solution}
+
+To answer this question, we need to find the distance between each of these points.
+
+Let $\vec{A}$ be $\alpha\hat{i} + \beta\hat{j} + \gamma\hat{k}$, $\vec{B}$ be $\beta\hat{i} +\gamma\hat{j} + \alpha\hat{k}$, and $\vec{C}$ be $\gamma\hat{i} + \alpha\hat{j} + \beta\hat{k}$. \\
+
+
+
+Then \begin{itemize}
+    \item $\vec{A-B}$ is $(\alpha - \beta)\hat{i} + (\beta - \gamma)\hat{j} + (\gamma - \alpha)\hat{k}$
+    \item $\vec{B-C}$ is $(\beta - \gamma)\hat{i} + (\gamma - \alpha)\hat{j} + (\alpha - \beta)\hat{k}$
+    \item $\vec{C-A}$ is $(\gamma - \alpha)\hat{i} + (\alpha - \beta)\hat{j} + (\beta - \gamma)\hat{k}$
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Solution}
+
+The norms of $\vec{A-B}, \vec{B-C}, \vec{C-A}$ are all equal, and equal to 
+$$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$
+
+The three points therefore form an equilateral triangle, so option (2) is correct.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+import numpy as np
+
+
+vector = np.zeros(3)
+vector[0] = input()
+vector[1] = input()
+vector[2] = input()
+
+print(np.linalg.norm(vector))
+
+\end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{C Code}
+\begin{lstlisting}
+#include<stdio.h>
+#include<math.h>
+
+float norm(float a, float b, float c){
+
+float answer;
+answer = pow(a,2) + pow(b,2) + pow(c,2);
+answer = sqrt(answer);
+
+return answer;
+
+}
+\end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Python and C Code}
+\begin{lstlisting}
+import numpy as np
+import ctypes
+c_lib=ctypes.CDLL('./5c.so')
+
+c_lib.norm.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float]
+c_lib.norm.restype = ctypes.c_float
+
+vector = np.zeros(3)
+vector[0] = input()
+vector[1] = input()
+vector[2] = input()
+
+answer = c_lib.norm(
+    ctypes.c_float(vector[0]),
+    ctypes.c_float(vector[1]), 
+    ctypes.c_float(vector[2]))
+print(answer)
+\end{lstlisting}
+
+\end{frame}
+
+\end{document}
