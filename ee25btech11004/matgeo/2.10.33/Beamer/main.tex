@@ -89,17 +89,15 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position vectors $\alpha\hat{i} + \beta\hat{j} + \gamma\hat{k}$, $\beta\hat{i} +\gamma\hat{j} + \alpha\hat{k}$, $\gamma\hat{i} + \alpha\hat{j} + \beta\hat{k}$:
+Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position vectors $\myvec{\alpha \\ \beta \\ \gamma} , \myvec{ \beta \\ \gamma \\ \alpha}, \myvec{\gamma \\ \alpha \\ \beta}$ :
 
 \begin{enumerate}\begin{multicols}{2}
-
     \item are collinear
     \item form an equilateral triangle
     \item form a scalene triangle
     \item form a right angled triangle
     \end{multicols}
 \end{enumerate}
-
 \end{frame}
 
 
@@ -109,15 +107,16 @@ Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position 
 
 To answer this question, we need to find the distance between each of these points.
 
-Let $\vec{A}$ be $\alpha\hat{i} + \beta\hat{j} + \gamma\hat{k}$, $\vec{B}$ be $\beta\hat{i} +\gamma\hat{j} + \alpha\hat{k}$, and $\vec{C}$ be $\gamma\hat{i} + \alpha\hat{j} + \beta\hat{k}$. \\
+Let $\vec{A}$ be \myvec{\alpha \\ \beta \\ \gamma}, $\vec{B}$ be \myvec{ \beta \\ \gamma \\ \alpha}, and $\vec{C}$ be \myvec{\gamma \\ \alpha \\ \beta}. \\
 
 
 
-Then \begin{itemize}
-    \item $\vec{A-B}$ is $(\alpha - \beta)\hat{i} + (\beta - \gamma)\hat{j} + (\gamma - \alpha)\hat{k}$
-    \item $\vec{B-C}$ is $(\beta - \gamma)\hat{i} + (\gamma - \alpha)\hat{j} + (\alpha - \beta)\hat{k}$
-    \item $\vec{C-A}$ is $(\gamma - \alpha)\hat{i} + (\alpha - \beta)\hat{j} + (\beta - \gamma)\hat{k}$
-    \end{itemize}
+\begin{itemize} \begin{multicols}{3}
+    \item $\vec{A-B}$ is $\myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha}$
+    \item $\vec{B-C}$ is $\myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta}$
+    \item $\vec{C-A}$ is $\myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}$
+    \end{multicols}
+\end{itemize}
 
 \end{frame}
 

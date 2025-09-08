@@ -16,7 +16,7 @@
 
 \section*{Question}
 
-Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position vectors $\alpha\hat{i} + \beta\hat{j} + \gamma\hat{k}$, $\beta\hat{i} +\gamma\hat{j} + \alpha\hat{k}$, $\gamma\hat{i} + \alpha\hat{j} + \beta\hat{k}$
+Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position vectors $\myvec{\alpha \\ \beta \\ \gamma} , \myvec{ \beta \\ \gamma \\ \alpha}, \myvec{\gamma \\ \alpha \\ \beta}$ :
 
 \begin{enumerate}\begin{multicols}{2}
     \item are collinear
@@ -28,15 +28,16 @@ Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position 
 
 \section*{Solution}
 
-Let $\vec{A}$ be $\alpha\hat{i} + \beta\hat{j} + \gamma\hat{k}$, $\vec{B}$ be $\beta\hat{i} +\gamma\hat{j} + \alpha\hat{k}$, and $\vec{C}$ be $\gamma\hat{i} + \alpha\hat{j} + \beta\hat{k}$. \\
+Let $\vec{A}$ be \myvec{\alpha \\ \beta \\ \gamma}, $\vec{B}$ be \myvec{ \beta \\ \gamma \\ \alpha}, and $\vec{C}$ be \myvec{\gamma \\ \alpha \\ \beta}. \\
 
-Then 
-\begin{itemize}
-    \item $\vec{A-B}$ is $(\alpha - \beta)\hat{i} + (\beta - \gamma)\hat{j} + (\gamma - \alpha)\hat{k}$
-    \item $\vec{B-C}$ is $(\beta - \gamma)\hat{i} + (\gamma - \alpha)\hat{j} + (\alpha - \beta)\hat{k}$
-    \item $\vec{C-A}$ is $(\gamma - \alpha)\hat{i} + (\alpha - \beta)\hat{j} + (\beta - \gamma)\hat{k}$
-    
-\end{itemize}\\
+
+
+\begin{itemize} \begin{multicols}{3}
+    \item $\vec{A-B}$ is $\myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha}$
+    \item $\vec{B-C}$ is $\myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta}$
+    \item $\vec{C-A}$ is $\myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}$
+    \end{multicols}
+\end{itemize}
 
 Then norms of $\vec{A-B}, \vec{B-C}, \vec{C-A}$ are all equal, and equal to 
 $$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$\\
