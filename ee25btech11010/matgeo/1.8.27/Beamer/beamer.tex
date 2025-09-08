@@ -96,39 +96,41 @@ The input parameters for the problem are given in the table below.
 \end{frame}
 
 \begin{frame}{Condition Setup}
-Let 
-\[
-\vec{P} = \myvec{x \\ y \\ z}.
-\]
+
 The condition is
 \begin{align}
 \|\vec{A}-\vec{P}\|^2 + \|\vec{B}-\vec{P}\|^2 = 2k^2 \\
-(\vec{P}-\vec{A})^T(\vec{P}-\vec{A}) + (\vec{P}-\vec{B})^T(\vec{P}-\vec{B}) &= 2k^2
+(\vec{P}-\vec{A})^T(\vec{P}-\vec{A}) + (\vec{P}-\vec{B})^T(\vec{P}-\vec{B}) &= 2k^2 \\
+\vec{P}^T\vec{P} - (\vec{A}+\vec{B})^T\vec{P} + \frac{\vec{A}^T\vec{A}+\vec{B}^T\vec{B}}{2}
+&= k^2 
 \end{align}
 \end{frame}
 
-\begin{frame}{Expanding Terms}
+\begin{frame}{Completing square}
 \begin{align}
-\myvec{x-3 & y-4 & z-5}\myvec{x-3\\y-4\\z-5}
-+ 
-\myvec{x+1 & y-3 & z+7}\myvec{x+1\\y-3\\z+7}
-&= 2k^2
+\Big\|\vec{P}-\frac{\vec{A}+\vec{B}}{2}\Big\|^2
+- \frac{(\vec{A}+\vec{B})^T(\vec{A}+\vec{B})}{4}
++ \frac{\vec{A}^T\vec{A}+\vec{B}^T\vec{B}}{2}
+&= k^2
 \end{align}
 
 \begin{align}
-(x-3)^2 + (y-4)^2 + (z-5)^2 + (x+1)^2 + (y-3)^2 + (z+7)^2 &= 2k^2
+(\vec{A}+\vec{B})^T(\vec{A}+\vec{B})=57,\ \vec{A}^T\vec{A}=50,\ \vec{B}^T\vec{B}=59
 \end{align}
 \end{frame}
 
 \begin{frame}{Simplification}
-\begin{align}
-2x^2 + 2y^2 + 2z^2 - 4x - 14y + 4z + 109 &= 2k^2 \\
-(x-1)^2 + \left(y-\tfrac{7}{2}\right)^2 + (z+1)^2 &= k^2 - \tfrac{161}{4}
+Rearranging and substituting values we get:
+
+\begin{align} 
+\Big\|\vec{P}-\frac{\vec{A}+\vec{B}}{2}\Big\|^2
+&= k^2 - \frac{161}{4} \\
+\Big(\vec{P}-\frac{\vec{A}+\vec{B}}{2}\Big)^T
+\Big(\vec{P}-\frac{\vec{A}+\vec{B}}{2}\Big)
+= k^2 - \frac{161}{4}\ \\
+k^2>\frac{161}{4}
 \end{align}
 
-\[
-k^2 > \tfrac{161}{4}
-\]
 \end{frame}
 
 \begin{frame}{Plot}
@@ -264,7 +266,7 @@ ax.set_zlabel("Z")
 ax.set_title("Sphere locus: PA^2 + PB^2 = 2k^2 (k=10)")
 ax.legend()
 
-plt.savefig("figs/fig1.png")
+plt.savefig("/home/arsh-dhoke/ee1030-2025/ee25btech11010/matgeo/1.8.27/figs/fig1.png")
 plt.show()
 \end{lstlisting}
 \end{frame}
@@ -335,13 +337,20 @@ ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, Z, alpha=0.5, edgecolor='k', linewidth=0.3)
 ax.scatter([cx], [cy], [cz], s=50, label="Center")
 
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python+ C Code}
+\begin{lstlisting}
 ax.set_xlabel("X")
 ax.set_ylabel("Y")
 ax.set_zlabel("Z")
 ax.set_title("Sphere locus: PA^2 + PB^2 = 2k^2 (k=10, from C)")
 ax.legend()
 
-plt.savefig("figs/fig1.png")
+plt.savefig("/home/arsh-dhoke/ee1030-2025/ee25btech11010/matgeo/1.8.27/figs/fig1.png")
 plt.show()
 \end{lstlisting}
 \end{frame}
