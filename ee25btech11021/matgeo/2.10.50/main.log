@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  8 SEP 2025 15:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  8 SEP 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2197,12 +2197,9 @@ x/updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-d
 ist/fonts/enc/dvips/base/8r.enc}
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [2]
-<figs/fig1.png, id=70, 462.528pt x 346.896pt>
+<figs/fig1.png, id=71, 462.528pt x 346.896pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
 Package pdftex.def Info: figs/fig1.png  used on input line 178.
@@ -2220,7 +2217,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  54594 strings out of 467801
  1318401 string characters out of 5417842
- 1919666 words of memory out of 5000000
+ 1918666 words of memory out of 5000000
  82391 multiletter control sequences out of 15000+600000
  693355 words of font info for 175 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -2234,7 +2231,7 @@ pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/te
 xlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 115715 bytes).
+Output written on main.pdf (3 pages, 115312 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
