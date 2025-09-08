@@ -33,7 +33,7 @@ ax = fig.add_subplot(111, projection="3d")
 ax.plot(p, q, r, label="line", color="red",linewidth=2)
 
 # points
-ax.scatter(1, -2, 7, color="black", s=5, label="I(1,-2,7)")
+ax.scatter(1, -2, 7, color="black", s=5, label="P(1,-2,7)")
 ax.scatter(3, -4, -5, color="green", s=5, label="A(3,-4,-5)")
 ax.scatter(2, -3, 1, color="yellow", s=5, label="B(2,-3,1)")
 

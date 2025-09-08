@@ -92,7 +92,7 @@ Find the coordinates of the point where the line through $(3,-4,-5)$ and $(2,-3,
 
 \begin{frame}{Solution}
 
-Let the point of intersection be $\vec{I}$.  
+Let the point of intersection be $\vec{P}$.  
 
 The line is written as
 \begin{align}
@@ -103,44 +103,42 @@ The line is written as
 
 So,
 \begin{align}
-  \vec{I} &= \vec{h} + k\,\vec{m}\\
-\vec{I} &= \myvec{2\\-3\\1} + k\myvec{-1\\1\\6} = \myvec{2-k\\k-3\\1+6k}
+\vec{P} &= \vec{h} + k\,\vec{m}
 \end{align}
 
 \end{frame}
 
 \begin{frame}
 
-The plane equation is
-\begin{align}
-\vec{n}^\top \vec{x} &= c \\
-\vec{n} &= \myvec{2\\1\\1}, \quad c=7
-\end{align}
-
-Substitute $\vec{I}$ into the plane:
-\begin{align}
-\vec{n}^\top \vec{I} &= c \\
-\myvec{2 & 1 & 1}\myvec{2-k\\k-3\\1+6k} &= 7
-\end{align}
+The point also lies on the plane , so
 
 \begin{align}
-  4 - 2k + k -3 + 1 +6k &= 7\\
-  k &= 1
+  \vec{n}^\top\vec{P} &= c\\
+  \vec{n}^\top(\vec{h} + k\vec{m}) &= c\\
+  \vec{n}^\top\vec{h} + k\vec{n}^\top\vec{m} &= c\\
+  k = \frac{c -\vec{n}^\top\vec{h}}{\vec{n}^\top\vec{m}}
+\end{align}
+
+here c = 7 , by substituting the vectors for $\vec{n},\vec{h}$ and $\vec{m}$
+
+\begin{align}
+k &= \frac{7 - \myvec{2 & 1 & 1}\myvec{2\\-3\\1}}{\myvec{2 & 1 &1}\myvec{-1\\1\\6}}\\
+k &= \frac{7 - 2}{5} = 1 
 \end{align}
 
 \end{frame}
 
 \begin{frame}
 
-Substitute $k=1$ back:
+Substitute $k=1$ in the line equation to obtain the point of intersection $\vec{P}$
 \begin{align}
-\vec{I} &= \vec{h}+1\cdot \vec{m} \\
-\vec{I} &= \myvec{2\\-3\\1} + \myvec{-1\\1\\6} = \myvec{2-1\\-3+1\\1+6} = \myvec{1\\-2\\7}.
+\vec{P} &= \vec{h}  +\vec{m} \\
+\vec{P} &= \myvec{2\\-3\\1} + \myvec{-1\\1\\6} = \myvec{2-1\\-3+1\\1+6} = \myvec{1\\-2\\7}.
 \end{align}
 
 \textbf{Answer:}
 \begin{align}
-\vec{I} = \myvec{1\\-2\\7}
+\vec{P} = \myvec{1\\-2\\7}
 \end{align}
   
 \end{frame} 
