@@ -1,0 +1,11 @@
+\frametitle{Theoretical Solution}
+Substituting value from Equation 7 and 8 in Equation 5,
+\begin{equation}
+\cos \theta = \frac{3}{\sqrt{2}\cdot 3} = \frac{1}{\sqrt{2}}
+\;\Rightarrow\;
+\theta = 45^{\circ}.
+\end{equation}
+
+\begin{align}
+  \boxed{\text{The angle between } \vec{a} \, and \, 1\hat{i} -2\hat{j}+2\hat{k} \, is \, 45^{\circ}.}
+\end{align}
