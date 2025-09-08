@@ -41,7 +41,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{4.12.8}
+\title{4.7.64}
 \author{AI25BTECH11003 - Bhavesh Gaikwad}
 {\let\newpage\relax\maketitle}
 
@@ -55,50 +55,60 @@
 \renewcommand{\thetable}{\theenumi}
 
 
-\textbf{Question}: Distance of the point $(\alpha, \beta, \gamma)$ from y-axis is\\
-a) $\beta$\\
-b) $|\beta|$\\
-c) $|\beta + \gamma|$\\
-d)$\sqrt{\alpha^2 + \gamma^2}$ \\
+\textbf{Question}: Find the distance between the point $\vec{P}$(6, 5, 9) and the plane determined by the points $\vec{A}$(3, -1, 2), $\vec{B}$(5, 2, 4) and $\vec{C}$(-1, -1, 6). \\
 
-\textbf{Solution:}\\
-Let $\vec{A} = \myvec{\alpha \\ \beta \\ \gamma}$\\ 
-Let $\vec{B}$ be an arbitrary point on the y-axis.
 
+\solution
+\\Given:
+
+\begin{align}
+P = \myvec{6\\5\\9}, \,
+A = \myvec{3\\-1\\2}, \,
+B = \myvec{5\\2\\4}, \,
+C = \myvec{-1\\-1\\6}.
+\end{align}
+
+First, form two direction vectors on the plane using the given points.
+\begin{align}
+\vec{u} &= B - A = \myvec{2\\3\\2}, &
+\vec{v} &= C - A = \myvec{-4\\0\\4}.
+\end{align}
+
+Next, find a nonzero normal $\vec{n}$ orthogonal to both $\vec{u}$ and $\vec{v}$ by solving the homogeneous system.
 \begin{equation}
-    \text{Equation of y-axis: } \vec{r} = t\vec{e_2} \, \,
-    OR \, \, \vec{r}=t\myvec{0 \\ 1 \\ 0}
+\myvec{2 & 3 & 2\\ -4 & 0 & 4}\myvec{n_1\\n_2\\n_3}=\myvec{0\\0}.
 \end{equation}
 
+Row-reduce and solve for a convenient integer solution.
+\begin{align}
+\myvec{2 & 3 & 2\\ -4 & 0 & 4}
+&\xrightarrow{R_2\leftarrow R_2+2R_1}
+\myvec{2 & 3 & 2\\ 0 & 6 & 8},\\
+6n_2+8n_3&=0 \;\Rightarrow\; 3n_2+4n_3=0, \quad
+n_3=3,\; n_2=-4,\; 2n_1+3n_2+2n_3=0 \Rightarrow n_1=3,\\
+\therefore \vec{n} &= \myvec{3\\-4\\3}.
+\end{align}
+
+Writing the plane in normal form $\vec{n}^\top x = c$ with $c=\vec{n}^\top A$.
+
 \begin{equation}
-\therefore \, \vec{B}=\myvec{0 \\ t \\0}
+c=\vec{n}^\top A=3\cdot 3+(-4)(-1)+3\cdot 2=19.
 \end{equation}
 
-\begin{equation}
-\text{For minimum distance from y-axis: } \vec{(A-B)} \text{ should be perpendicular to } \vec{e_2}
-\end{equation}
+\newpage
 
-\begin{center}
-    OR
-\end{center}
+Finally, applying the point-to-plane distance formula and simplify.
 
-\begin{equation}
-\vec{(A-B)}^T\vec{e_2} =0 \, \Rightarrow \, \myvec{\alpha & \beta-t & \gamma}\myvec{0 \\ 1 \\ 0} = 0     
-\end{equation}\\
+\begin{align}
+d &= \frac{\abs{\vec{n}^\top P - c}}{\norm{\vec{n}}}\\
+&= \frac{\abs{3\cdot 6+(-4)\cdot 5+3\cdot 9-19}}{\sqrt{3^2+(-4)^2+3^2}}\\
+&= \frac{\abs{25-19}}{\sqrt{34}}\\
+&= \frac{6}{\sqrt{34}}=\frac{3\sqrt{34}}{17}.
+\end{align}
 
-Therefore, from Equation 0.4,
-\begin{equation}
-t=\beta
-\end{equation}
-
-Therefore the distance between y-axis and $\vec{A}$ is:
-\begin{equation}
-    \norm{\vec{B-A}}  = \norm{\myvec{\alpha \\ 0 \\ \gamma}} = \sqrt{\alpha^2 + \gamma^2}
-\end{equation}
-
-\begin{equation}
-\boxed{\text{Therefore, Option D is Correct.}}    
-\end{equation}
+\begin{align}
+    \boxed{\text{The Distance between the Plane and } \vec{P} \, is \, \dfrac{3\sqrt{34}}{17} \, units.}
+\end{align}
 
 \begin{figure}[htbp]
     \centering
