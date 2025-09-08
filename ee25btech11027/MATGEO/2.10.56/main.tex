@@ -95,6 +95,10 @@ Which can be written as :
 \begin{align}
     \Vec{P}=\myvec{\vec{a}&\vec{b}}\myvec{cost\\sint}
 \end{align}
+Let
+\begin{align}
+    \Vec{x}= \myvec{cost \\ sint} \;\;and\;\;\vec{G}=\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}
+\end{align}
 From given if \textbf{P} is farthest from origin , then length of $\vec{P}$ is given as M.From this we can say  that
 \begin{align}
    M=\text{max}\norm{\Vec{P}}
@@ -117,11 +121,8 @@ Now,
 \begin{align}
        \norm{\Vec{P}}^2=\myvec{cost & sint}\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}\myvec{cost\\sint}
 \end{align}
-Let
-\begin{align}
-    \Vec{x}= \myvec{cost \\ sint} \;\;and\;\;\vec{G}=\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}
-\end{align}
-Then, 
+
+From Eq.3:
 
 \begin{align}
 \norm{\Vec{P}}^2=\Vec{x}^T\vec{G}\Vec{x}
@@ -132,7 +133,7 @@ So,
 \begin{align}
     max\norm{\Vec{P}}=\sqrt{\lambda_{max}}
 \end{align}
-Now we will calculate the Eigen value for the matrix G :
+Now we will calculate the Eigen value for the matrix G:
 \begin{align}
     \mydet{G-\lambda I}=0
 \end{align}
@@ -160,7 +161,7 @@ The above equation can be written as
 \begin{align}
    max \norm{\Vec{P}}=\sqrt{1+\Vec{a}.\Vec{b}}
 \end{align}
-From Eq.2:
+From Eq.4:
 \begin{align}
     M=\sqrt{1+\Vec{a}.\Vec{b}}
 \end{align}

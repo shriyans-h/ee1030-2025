@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  8 SEP 2025 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  9 SEP 2025 01:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1791,6 +1791,12 @@ Type  H <return>  for immediate help.
                                                   
 l.19     double c = dot(a, b);        // a · 
                                               b
+? H
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
 ? 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
 20.
@@ -1825,10 +1831,6 @@ Type  H <return>  for immediate help.
                                                   
 l.8 lib = ctypes.CDLL("
                        ./vec.so")   # use "vec.dll" on Windows
-? H
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2246,7 +2248,7 @@ Package rerunfilecheck Info: Checksums for `main.out':
 Here is how much of TeX's memory you used:
  59146 strings out of 473197
  1435073 string characters out of 5718605
- 2519227 words of memory out of 5000000
+ 2519226 words of memory out of 5000000
  81388 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -2259,7 +2261,7 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (15 pages, 231072 bytes).
+Output written on main.pdf (15 pages, 231171 bytes).
 PDF statistics:
  524 PDF objects out of 1000 (max. 8388607)
  443 compressed objects within 5 object streams
