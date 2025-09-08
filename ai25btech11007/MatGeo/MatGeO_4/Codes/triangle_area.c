@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-// Function to compute square root using Newton-Raphson method
-double my_sqrt(double n) {
-    if(n == 0) return 0;
-    double x = n;      // initial guess
+// Define custom sqrt using Newton-Raphson
+double sqrt_newton(double n) {
+    double x = n;
     double y = 1.0;
-    double eps = 1e-6; // desired precision
+    double e = 1e-9;  // tolerance
 
-    while(x - y > eps) {
+    while (x - y > e) {
         x = (x + y) / 2;
         y = n / x;
     }
@@ -15,31 +14,32 @@ double my_sqrt(double n) {
 }
 
 int main() {
-    // Coordinates of points A, B, C
-    double A[3] = {1, 2, 3};
-    double B[3] = {2, -1, 4};
-    double C[3] = {4, 5, -1};
+    // Define vectors (B - A) and (C - A)
+    int AB[3] = {1, -3, 1};
+    int AC[3] = {3, 3, -4};
 
-    // Compute vectors AB and AC
-    double AB[3], AC[3];
-    for(int i = 0; i < 3; i++) {
-        AB[i] = B[i] - A[i];
-        AC[i] = C[i] - A[i];
-    }
+    // Compute norms squared
+    int AB_sq = AB[0]*AB[0] + AB[1]*AB[1] + AB[2]*AB[2];   // 11
+    int AC_sq = AC[0]*AC[0] + AC[1]*AC[1] + AC[2]*AC[2];   // 34
 
-    // Compute cross product AB x AC
-    double cross[3];
-    cross[0] = AB[1]*AC[2] - AB[2]*AC[1];
-    cross[1] = AB[2]*AC[0] - AB[0]*AC[2];
-    cross[2] = AB[0]*AC[1] - AB[1]*AC[0];
+    // Dot product
+    int dot = AB[0]*AC[0] + AB[1]*AC[1] + AB[2]*AC[2];     // -10
 
-    // Compute magnitude of cross product using my_sqrt
-    double magnitude = my_sqrt(cross[0]*cross[0] + cross[1]*cross[1] + cross[2]*cross[2]);
+    // Using identity: |AB x AC|^2 = |AB|^2|AC|^2 - (AB · AC)^2
+    int cross_sq = AB_sq * AC_sq - dot * dot;
 
-    // Area of triangle = 1/2 * |AB x AC|
-    double area = 0.5 * magnitude;
+    // Magnitude of cross product using custom sqrt
+    double cross_norm = sqrt_newton((double)cross_sq);
 
-    printf("Area of triangle ABC = %.5f\n", area);
+    // Area of triangle
+    double area = 0.5 * cross_norm;
+
+    printf("||AB||^2 = %d\n", AB_sq);
+    printf("||AC||^2 = %d\n", AC_sq);
+    printf("AB · AC = %d\n", dot);
+    printf("||AB x AC||^2 = %d\n", cross_sq);
+    printf("||AB x AC|| = %.6f\n", cross_norm);
+    printf("Area of triangle ABC = %.6f\n", area);
 
     return 0;
 }
