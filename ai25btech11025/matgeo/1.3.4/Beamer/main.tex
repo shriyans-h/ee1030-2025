@@ -89,41 +89,43 @@ If $ A(1, 3) $, $ B(4, 2) $, $ C(x, 5) $, and $ D(x, 4) $ are the vertices of a 
 In a parallelogram, opposite sides are equal and parallel. Since $ABCD$ is a parallelogram, vectors $ \vec{AB} $ and $ \vec{CD} $ must be equal.
 
 \begin{align}
-\vec{AB} = \vec{B} -\vec{A} = \myvec{4 - 1, 2 - 3} = \myvec{3, -1}
+\vec{B} -\vec{A} = \myvec{4 - 1\\ 2 - 3} = \myvec{3, -1}
 \end{align}
 \begin{align}
-\vec{CD} = \vec{D} - \vec{C} = \myvec{x - x, 4 - 5} = \myvec{0, -1}
+\vec{D} - \vec{C} = \myvec{x - x\\ 4 - 5} = \myvec{0, -1}
 \end{align}
 
-Clearly, $ \vec{AB} \neq \vec{CD} $, so let's try using diagonals. In a parallelogram, the diagonals bisect each other.
+	Clearly, $ \vec{B}-\vec{A} \neq \vec{D}-\vec{C} $, so let's try using diagonals. In a parallelogram, the diagonals bisect each other.
 
 Midpoint of diagonal $AC$:
 \begin{align}
-\Vec{M_{AC}} = \myvec{\frac{1 + x}{2} \\ \frac{3 + 5}{2} } = \myvec{ \frac{1 + x}{2}\\ 4 }
-\end{align}
-
-Midpoint of diagonal $BD$:
-\begin{align}
-\vec{M_{BD}} = \myvec{\frac{4 + x}{2} \\ \frac{2 + 4}{2} } = \myvec{ \frac{4 + x}{2}\\ 3 }
+\myvec{\frac{1 + x}{2} \\ \frac{3 + 5}{2} } = \myvec{ \frac{1 + x}{2}\\ 4 }
 \end{align}
 \end{frame}
 
+
 \begin{frame}{Theoretical Solution}
+Midpoint of diagonal $BD$
+\begin{align}
+\myvec{\frac{4 + x}{2} \\ \frac{2 + 4}{2} } = \myvec{ \frac{4 + x}{2}\\ 3 }
+\end{align}
+
 Equating midpoints:
 \begin{align}
 \frac{1 + x}{2} = \frac{4 + x}{2} \quad \text{and} \quad 4 = 3
 \end{align}
-
+\end{frame}
+\begin{frame}{Theoretical Solution}
 The second equation is false, so diagonals do not bisect each other. Let's try using opposite sides again, but this time equating $ \vec{AD} $ and $ \vec{BC} $:
 
 \begin{align}
-\vec{AD} = \vec{D} -\vec{A} = \begin{myvec}
+\vec{D} -\vec{A} = \begin{myvec}
     {x-1 \\ 4-3 } \end{myvec} =\begin{myvec}
         {x-1 \\ 1}
     \end{myvec}
  \end{align}   
  \begin{align}
-\vec{BC} =\vec{C} -\vec{B} = \begin{myvec}
+\vec{C} -\vec{B} = \begin{myvec}
     {x - 4 \\ 5 - 2} \end{myvec} =\begin{myvec}
          {x - 4 \\ 3}
      \end{myvec}
@@ -137,10 +139,12 @@ x - 1 = x - 4 \quad \text{and} \quad 1 = 3
 Again, contradiction. So let's try using the property that opposite sides are equal in length.
 \end{frame}
 
+
+
 \begin{frame}{Theoretical Solution}
 \begin{align}
-\text{Length of } \vec{AD}: \quad |AD| &= \sqrt{(x - 1)^2 + (4 - 3)^2} = \sqrt{(x - 1)^2 + 1} \\
-\text{Length of } \vec{BC}: \quad |BC| &= \sqrt{(x - 4)^2 + (5 - 2)^2} = \sqrt{(x - 4)^2 + 9}
+	\text{Length of } \vec{D}-\vec{A}: \quad |AD| &= \sqrt{(x - 1)^2 + (4 - 3)^2} = \sqrt{(x - 1)^2 + 1} \\
+	\text{Length of } \vec{C}-\vec{B}: \quad |BC| &= \sqrt{(x - 4)^2 + (5 - 2)^2} = \sqrt{(x - 4)^2 + 9}
 \end{align}
 
 Equating lengths:
@@ -187,12 +191,14 @@ int write_points_file(const char *filepath,
                       double ax, double ay,
                       double bx, double by,
                       double cx, double cy);
+
+   int main(void) {
+
    \end{lstlisting}
 	\end{frame}
 \begin{frame}[fragile]
 \frametitle{Main C Code}
    \begin{lstlisting}
-int main(void) {
     // Given A(1,3), B(-1,2), C(2,5)
     double ax=1, ay=3, bx=-1, by=2, cx=2, cy=5;
 
@@ -328,7 +334,7 @@ plt.show()
     \centering
     \includegraphics[height=0.6\textheight, keepaspectratio]{figs/plotc.png}
     \label{figure_1}
-\end{figure}
+    \end{figure}
 \end{frame}
 
 \end{document}
