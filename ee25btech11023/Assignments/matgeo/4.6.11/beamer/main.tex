@@ -136,14 +136,10 @@ The direction vectors of given line are
 \end{align}
 The equation of a line is given by
 \begin{align}
-\vec{n}^\top\brak{\vec{x}-\vec{a}}=0  
+\vec{r}=\vec{a}+t\vec{n}
 \end{align}
 \begin{align}
-\myvec{1&1&2}\brak{\vec{x}-\myvec{1\\-3\\2}}=0 
-\end{align}
-\begin{align}
-\myvec{1&1&2}\vec{x}&=\myvec{1&1&2}\myvec{1\\-3\\2} \\
-\myvec{1&1&2}\vec{x}&=2
+\vec{r}=\myvec{1\\-3\\2}+t\myvec{1\\1\\2}
 \end{align}
 \end{frame}
 
@@ -186,7 +182,7 @@ import ctypes
 import numpy as np
 
 def get_vectors_from_c():
-    lib = ctypes.CDLL('./line_eq.so')
+    lib = ctypes.CDLL('./vector.so')
 
     # The C function expects a pointer to a C double array of size 6
     double_array_6 = ctypes.c_double * 6
@@ -277,7 +273,7 @@ ax.text(point_a[0] + dir_b[0], point_a[1] + dir_b[1], point_a[2] + dir_b[2], ' $
 \frametitle{Python Code for Plotting}
 \begin{lstlisting}[language=Python]
 # --- Formatting ---
-ax.set_title('Plotting a line')
+ax.set_title('Vector Equation of the Line')
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_zlabel('Z-axis')
@@ -285,7 +281,7 @@ ax.set_zlabel('Z-axis')
 ax.grid(True)
 ax.legend()
 plt.show()
-plt.savefig('../figs/fig.png')
+plt.savefig('fig.png')
 \end{lstlisting}
 \end{frame}
 
