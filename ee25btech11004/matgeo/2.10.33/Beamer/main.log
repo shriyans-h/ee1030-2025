@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  8 SEP 2025 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  8 SEP 2025 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1324,12 +1324,6 @@ Type  H <return>  for immediate help.
                                                   
 l.61 ...{\solution}{\noindent \textbf{Solution: }}
                                                   
-? \
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
 ? 
 \c@matchleft=\count381
 \c@matchright=\count382
@@ -1861,11 +1855,11 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 
 [2
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
-l/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 \openout4 = `main.vrb'.
 
- (./main.vrb
+
+(./main.vrb
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
 (Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
@@ -1876,11 +1870,11 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 
 [3
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/loca
+l/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 \openout4 = `main.vrb'.
 
-
-(./main.vrb)
+ (./main.vrb)
 
 [4
 
@@ -1930,7 +1924,7 @@ Overfull \vbox (1.72923pt too high) detected at line 195
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250908232018 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250908232335 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
 
@@ -1956,12 +1950,12 @@ e/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/tex
 mf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
-/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pf
-b>
-Output written on main.pdf (7 pages, 137416 bytes).
+/lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (7 pages, 155747 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
+ 288 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
  15 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
