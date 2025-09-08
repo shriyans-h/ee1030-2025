@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath}     % For math equations
+\usepackage{amssymb}     % For advanced math symbols
+\usepackage{amsfonts} % For math fonts
+\usepackage{gvv}
+\usepackage{esint}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\titleformat{\section}{\bfseries\large}{\thesection.}{1em}{}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{caption}
+
+
+\begin{document}
+
+\section*{Problem 2.7.4}
+
+\textbf{Problem.}
+If
+\begin{align}
+\vec a = \myvec{2 \\1 \\3},\qquad
+\vec b = \myvec{-1 \\2 \\1},\qquad
+\vec c = \myvec{3 \\1 \\2},
+\end{align}
+
+find $\vec a\cdot(\vec b\times\vec c)$.
+
+
+\textbf{Solution.}
+
+\begin{table}[H]
+\centering
+\begin{tabular}[12pt]{ |c| c|}
+    \hline
+    \textbf{Input variable} & \textbf{Value}\\ 
+    \hline
+    $\vec{a}$ & \myvec{2 \\1 \\3} \\
+    \hline 
+    $\vec{b}$ & \myvec{-1 \\2 \\1}\\
+    \hline
+    $\vec{c}$ & \myvec{3 \\1 \\2}\\
+    \hline
+    \end{tabular}
+    \caption{}
+    \label{}
+ \end{table}
+Write the vectors in component form:
+\begin{align}
+\vec a=\myvec{2\\[4pt]1\\[4pt]3},\qquad
+\vec b=\myvec{-1\\[4pt]2\\[4pt]1},\qquad
+\vec c=\myvec{3\\[4pt]1\\[4pt]2}.
+\end{align}
+
+Using the minor notation from the problem statement, where
+\begin{align}
+\vec{B_{ij}}=\myvec{b_i\\[4pt]b_j},\qquad \vec{C_{ij}}=\myvec{c_i\\[4pt]c_j},
+\end{align}
+we write the cross product :
+\begin{align}
+\vec b\times\vec c \;=\;
+\myvec{\,\lvert \vec{B_{23}}\;\vec{C_{23}}\rvert \\[6pt] \lvert \vec{B_{31}}\;\vec{C_{31}}\rvert \\[6pt] \lvert \vec{B_{12}}\;\vec{C_{12}}\rvert\, }.
+\end{align}
+
+Substituting the components gives
+\begin{align}
+\vec b\times\vec c = \myvec{3\\[4pt]5\\[4pt]-7}.
+\end{align}
+
+Now use the transpose (row-vector) method for the dot product:
+\begin{align}
+\vec a^{\!T}(\vec b\times\vec c)
+= \myvec{2\\[4pt]1\\[4pt]3}^{\!T}\,\myvec{3\\[4pt]5\\[4pt]-7}
+= \myvec{2 & 1 & 3}\,\myvec{3\\[4pt]5\\[4pt]-7}
+= 2\cdot 3 + 1\cdot 5 + 3\cdot(-7) = -10.
+\end{align}
+
+Thus
+\begin{align}
+\boxed{\ \vec a\cdot(\vec b\times\vec c) = -10\ }.
+\end{align}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/triple_product.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+
+
+\end{document}
