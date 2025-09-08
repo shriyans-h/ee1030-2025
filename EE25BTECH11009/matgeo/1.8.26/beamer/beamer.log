@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  8 SEP 2025 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  8 SEP 2025 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,13 +1522,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 78.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./beamer.aux)
+)
+No file beamer.aux.
 \openout1 = `beamer.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 78.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 78.
-
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1625,8 +1625,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 78.
-
-(./beamer.out) (./beamer.out)
 \@outlinefile=\write7
 \openout7 = `beamer.out'.
 
@@ -1702,14 +1700,15 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count413
- (./beamer.nav) [1
+
+No file beamer.nav.
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
 5.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -1773,13 +1772,13 @@ dvips/lm/lm-mathsy.enc}] (./tables/table.tex) [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 106.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 106.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 106.
 
  [4
 
@@ -1788,10 +1787,10 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 ] [6
 
 ]
-<figs/equidistant_point.png, id=204, 462.528pt x 346.896pt>
+<figs/equidistant_point.png, id=200, 462.528pt x 346.896pt>
 File: figs/equidistant_point.png Graphic file (type png)
 <use figs/equidistant_point.png>
-Package pdftex.def Info: figs/equidistant_point.png  used on input line 144.
+Package pdftex.def Info: figs/equidistant_point.png  used on input line 140.
 (pdftex.def)             Requested size: 277.84358pt x 208.38268pt.
  [7
 
@@ -1847,7 +1846,7 @@ ips/lm/lm-ts1.enc}]
 \openout4 = `beamer.vrb'.
 
  (./beamer.vrb)
-Overfull \vbox (25.72923pt too high) detected at line 296
+Overfull \vbox (25.72923pt too high) detected at line 292
  []
 
 [15
@@ -1861,7 +1860,7 @@ Overfull \vbox (25.72923pt too high) detected at line 296
 \openout4 = `beamer.vrb'.
 
  (./beamer.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 336
+Overfull \vbox (13.72923pt too high) detected at line 332
  []
 
 [17
@@ -1896,14 +1895,20 @@ Overfull \vbox (13.72923pt too high) detected at line 336
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `beamer.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `beamer.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `beamer.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57201 strings out of 474222
- 1359193 string characters out of 5748734
+ 57140 strings out of 474222
+ 1358616 string characters out of 5748734
  2350252 words of memory out of 5000000
- 78404 multiletter control sequences out of 15000+600000
+ 78353 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1174b,1520s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1914,10 +1919,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on beamer.pdf (20 pages, 220170 bytes).
+Output written on beamer.pdf (20 pages, 219712 bytes).
 PDF statistics:
- 667 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 43 named destinations out of 1000 (max. 500000)
+ 664 PDF objects out of 1000 (max. 8388607)
+ 567 compressed objects within 6 object streams
+ 41 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
