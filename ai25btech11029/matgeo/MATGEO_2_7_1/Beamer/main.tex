@@ -86,21 +86,22 @@ The area of a triangle formed by vertices $\vec{O}, \vec{A}$ and $\vec{B}$, wher
 \end{frame}
 
 \begin{frame}{Solution}
+Let \vec{O} be the origin
 
 Represent the vectors in matrix form:
 \begin{align}
-\vec{OA} = \myvec{1 \\ 2 \\ 3}, \quad
-\vec{OB} = \myvec{-3 \\ 1 \\ 1}
+\vec{A} = \myvec{1 \\ 2 \\ 3}, \quad
+\vec{B} = \myvec{-3 \\ 1 \\ 1}
 \end{align}
 
 The area of triangle $OAB$ is given by:
 \begin{align}
-\text{Area} = \frac{1}{2} \norm{\vec{OA} \times \vec{OB}}
+\text{Area} = \frac{1}{2} \norm{\vec{A} \times \vec{B}}
 \end{align}
 
 Compute the cross product using determinant:
 \begin{align}
-\vec{OA} \times \vec{OB} =
+\vec{A} \times \vec{B} =
 \myvec{
 (2)(1) - (3)(1) \\
 (3)(-3) - (1)(1) \\
@@ -126,13 +127,12 @@ Compute the cross product using determinant:
 
 Simplifying:
 \begin{align}
-= -\hat{i} - 10\hat{j} + 7\hat{k}
-\Rightarrow \vec{OA} \times \vec{OB} = \myvec{-1 \\ -10 \\ 7}
+\Rightarrow \vec{A} \times \vec{B} = \myvec{-1 \\ -10 \\ 7}
 \end{align}
 
 Magnitude of the cross product:
 \begin{align}
-\norm{\vec{OA} \times \vec{OB}} = \sqrt{(-1)^2 + (-10)^2 + 7^2} = \sqrt{1 + 100 + 49} = \sqrt{150}
+\norm{\vec{A} \times \vec{B}} = \sqrt{(-1)^2 + (-10)^2 + 7^2} = \sqrt{1 + 100 + 49} = \sqrt{150}
 \end{align}
 
 Final area:
