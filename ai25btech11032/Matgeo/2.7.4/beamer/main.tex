@@ -118,52 +118,118 @@ find $\vec a\cdot(\vec b\times\vec c)$.
 \subsection{Theoretical Solution }
 \begin{frame}
 \frametitle{Theoretical Solution}
-Write the vectors in component form:
+We are asked to compute:
 \begin{align}
-\vec a=\myvec{2\\[4pt]1\\[4pt]3},\qquad
-\vec b=\myvec{-1\\[4pt]2\\[4pt]1},\qquad
-\vec c=\myvec{3\\[4pt]1\\[4pt]2}.
+\vec{a} \cdot (\vec{b} \times \vec{c}).
 \end{align}
 
-Using the minor notation from the problem statement, where
+\textbf{Step 1 — Vectors as column matrices}
+
 \begin{align}
-\vec{B_{ij}}=\myvec{b_i\\[4pt]b_j},\qquad \vec{C_{ij}}=\myvec{c_i\\[4pt]c_j},
+\vec{a} &= \myvec{2\\1\\3}, &
+\vec{b} &= \myvec{-1\\2\\1}, &
+\vec{c} &= \myvec{3\\1\\2}.
 \end{align}
-we write the cross product :
+
+\textbf{Step 2 — Form the Gram matrix}
+
+The Gram matrix is
 \begin{align}
-\vec b\times\vec c \;=\;
-\myvec{\,\lvert \vec{B_{23}}\;\vec{C_{23}}\rvert \\[6pt] \lvert \vec{B_{31}}\;\vec{C_{31}}\rvert \\[6pt] \lvert \vec{B_{12}}\;\vec{C_{12}}\rvert\, }.
+G &=
+\myvec{
+\vec{a}^T \vec{a} & \vec{a}^T \vec{b} & \vec{a}^T \vec{c} \\
+\vec{b}^T \vec{a} & \vec{b}^T \vec{b} & \vec{b}^T \vec{c} \\
+\vec{c}^T \vec{a} & \vec{c}^T \vec{b} & \vec{c}^T \vec{c}
+}.
 \end{align}
 \end{frame}
 
 \begin{frame}
 \frametitle{Theoretical Solution}
-Substituting the components gives
+Compute each entry:
 \begin{align}
-\vec b\times\vec c = \myvec{3\\[4pt]5\\[4pt]-7}.
+\vec{a}^T \vec{a} &= 14, &
+\vec{b}^T \vec{b} &= 6, &
+\vec{c}^T \vec{c} &= 14, \\
+\vec{a}^T \vec{b} &= 3, &
+\vec{b}^T \vec{c} &= 1, &
+\vec{c}^T \vec{a} &= 13.
 \end{align}
 
-Now use the transpose (row-vector) method for the dot product:
+Thus,
 \begin{align}
-\vec a^{\!T}(\vec b\times\vec c)
-= \myvec{2\\[4pt]1\\[4pt]3}^{\!T}\,\myvec{3\\[4pt]5\\[4pt]-7}
-= \myvec{2 & 1 & 3}\,\myvec{3\\[4pt]5\\[4pt]-7}
-= 2\cdot 3 + 1\cdot 5 + 3\cdot(-7) = -10.
+G = \myvec{
+14 & 3 & 13 \\
+3 & 6 & 1 \\
+13 & 1 & 14
+}.
 \end{align}
 
-Thus
+\textbf{Step 3 — Gram determinant identity}
+
+We know
 \begin{align}
-\boxed{\ \vec a\cdot(\vec b\times\vec c) = -10\ }.
+\det(G) &= \big(\det([\vec{a}\ \vec{b}\ \vec{c}])\big)^2 \\
+        &= \big(\vec{a} \cdot (\vec{b} \times \vec{c})\big)^2.
 \end{align}
 
 \end{frame}
+
+\begin{frame}
+\frametitle{Theoretical Solution}
+Direct computation gives
+\begin{align}
+\det(G) = 100.
+\end{align}
+
+Hence
+\begin{align}
+|\vec{a} \cdot (\vec{b} \times \vec{c})| &= \sqrt{100} = 10.
+\end{align}
+
+\textbf{Step 4 — Find the sign}
+
+Form the matrix
+\begin{align}
+A = [\vec{a}\ \vec{b}\ \vec{c}] =
+\myvec{
+2 & -1 & 3 \\
+1 & 2  & 1 \\
+3 & 1  & 2
+}.
+\end{align}
+
+Then
+\begin{align}
+\det(A) = \vec{a} \cdot (\vec{b} \times \vec{c}).
+\end{align}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Theoretical Solution}
+Compute:
+\begin{align}
+\det(A) = -10.
+\end{align}
+
+\textbf{Final Answer}
+\begin{align}
+\boxed{\ \vec{a} \cdot (\vec{b} \times \vec{c}) = -10\ }
+\end{align}
+
+
+\end{frame}
+
+
 
 \subsection{Plot}
 \begin{frame}
     \frametitle{Plot}
 \begin{figure}[H]
    \centering
-   \includegraphics[width=0.9\columnwidth]{figs/triple_product.png}
+   \includegraphics[width=0.9\columnwidth]{figs/gram_triple_product.png}
    \end{figure}
 \end{frame}
 
@@ -172,16 +238,39 @@ Thus
     \begin{lstlisting}
 #include <stdio.h>
 
-// Cross product of two 3D vectors
-void cross_product(double a[3], double b[3], double result[3]) {
-    result[0] = a[1]*b[2] - a[2]*b[1];
-    result[1] = a[2]*b[0] - a[0]*b[2];
-    result[2] = a[0]*b[1] - a[1]*b[0];
-}
-
 // Dot product of two 3D vectors
 double dot_product(double a[3], double b[3]) {
     return a[0]*b[0] + a[1]*b[1] + a[2]*b[2];
+}
+
+// Build Gram matrix from three 3D vectors
+void gram_matrix(double a[3], double b[3], double c[3], double G[3][3]) {
+    G[0][0] = dot_product(a,a);
+    G[0][1] = dot_product(a,b);
+    G[0][2] = dot_product(a,c);
+
+    G[1][0] = dot_product(b,a);
+    G[1][1] = dot_product(b,b);
+    G[1][2] = dot_product(b,c);
+    \end{lstlisting}
+    \end{frame}
+
+    \begin{frame}[fragile]
+    \frametitle{Code - C}
+    \begin{lstlisting}
+
+    G[2][0] = dot_product(c,a);
+    G[2][1] = dot_product(c,b);
+    G[2][2] = dot_product(c,c);
+}
+
+// Determinant of a 3x3 matrix
+double det3(double M[3][3]) {
+    return M[0][0]*(M[1][1]*M[2][2] - M[1][2]*M[2][1])
+         - M[0][1]*(M[1][0]*M[2][2] - M[1][2]*M[2][0])
+         + M[0][2]*(M[1][0]*M[2][1] - M[1][1]*M[2][0]);
+}
+
 }
 
 \end{lstlisting}
@@ -193,17 +282,18 @@ double dot_product(double a[3], double b[3]) {
     \begin{lstlisting}
 import ctypes
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 
-# Load compiled C library
-lib = ctypes.CDLL('./libvecops.so')
+# --- Load compiled C library ---
+lib = ctypes.CDLL("./libgram.so")
 
-# Argument/return types
-lib.cross_product.argtypes = [ctypes.POINTER(ctypes.c_double),
-                              ctypes.POINTER(ctypes.c_double),
-                              ctypes.POINTER(ctypes.c_double)]
-lib.dot_product.argtypes = [ctypes.POINTER(ctypes.c_double),
-                            ctypes.POINTER(ctypes.c_double)]
+# Define ctypes array types
+DoubleArray3 = ctypes.c_double * 3
+DoubleMatrix3 = (DoubleArray3) * 3
+
+# Function signatures
+lib.dot_product.argtypes = [DoubleArray3, DoubleArray3]
 lib.dot_product.restype = ctypes.c_double
 
 \end{lstlisting}
@@ -211,21 +301,19 @@ lib.dot_product.restype = ctypes.c_double
 \begin{frame}[fragile]
 \frametitle{Code - Python(with shared C code)}
 \begin{lstlisting}
-# Helper type
-DoubleArray3 = ctypes.c_double * 3
+lib.gram_matrix.argtypes = [DoubleArray3, DoubleArray3, DoubleArray3, DoubleMatrix3]
+lib.det3.argtypes = [DoubleMatrix3]
+lib.det3.restype = ctypes.c_double
 
-# Define vectors
+# --- Define vectors ---
 a = np.array([2.0, 1.0, 3.0])
 b = np.array([-1.0, 2.0, 1.0])
 c = np.array([3.0, 1.0, 2.0])
 
-# Cross product (via C)
-cross_res = DoubleArray3()
-lib.cross_product(DoubleArray3(*b), DoubleArray3(*c), cross_res)
-bx_c = np.array([cross_res[i] for i in range(3)])
-
-# Dot product (via C)
-scalar_triple = lib.dot_product(DoubleArray3(*a), cross_res)
+# Convert to C arrays
+A = DoubleArray3(*a)
+B = DoubleArray3(*b)
+C = DoubleArray3(*c)
 
 \end{lstlisting}
 \end{frame}
@@ -233,10 +321,31 @@ scalar_triple = lib.dot_product(DoubleArray3(*a), cross_res)
 \begin{frame}[fragile]
 \frametitle{Code - Python(with shared C code)}
 \begin{lstlisting}
-print("b x c =", bx_c)
+# --- Step 1: Build Gram matrix ---
+G = DoubleMatrix3()
+lib.gram_matrix(A, B, C, G)
+
+# --- Step 2: Compute det(G) ---
+detG = lib.det3(G)
+print("det(G) =", detG)
+
+# --- Step 3: Magnitude of scalar triple product ---
+magnitude = math.sqrt(detG)
+print("|a . (b x c)| =", magnitude)
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Code - Python(with shared C code)}
+\begin{lstlisting}
+# --- Step 4: Compute sign using det(A) ---
+A_mat = np.column_stack((a, b, c))   # matrix [a b c]
+sign_val = np.linalg.det(A_mat)      # NumPy to check sign
+scalar_triple = math.copysign(magnitude, sign_val)
 print("a . (b x c) =", scalar_triple)
 
-# ---------- Image Generation ----------
+# Image generation
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
@@ -244,10 +353,6 @@ def draw_vec(v, color, label):
     ax.quiver(0, 0, 0, v[0], v[1], v[2],
               color=color, arrow_length_ratio=0.1, label=label)
 
-draw_vec(a, 'r', 'a')
-draw_vec(b, 'g', 'b')
-draw_vec(c, 'b', 'c')
-draw_vec(bx_c, 'm', 'b x c')
 
 \end{lstlisting}
 \end{frame}
@@ -255,20 +360,31 @@ draw_vec(bx_c, 'm', 'b x c')
 \begin{frame}[fragile]
 \frametitle{Code - Python(with shared C code)}
 \begin{lstlisting}
-lim = 4
+# Draw just the vectors
+draw_vec(a, 'r', 'a')
+draw_vec(b, 'g', 'b')
+draw_vec(c, 'b', 'c')
+
+# Set axes limits
+lim = 6
 ax.set_xlim([-lim, lim])
 ax.set_ylim([-lim, lim])
 ax.set_zlim([-lim, lim])
 
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
+# Labels
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
 ax.legend()
 
-plt.title(f"Scalar triple product = {scalar_triple}")
+\end{lstlisting}
+\end{frame}
 
-# Save the image instead of just showing
-plt.savefig("/sdcard/ee1030-2025/ai25btech11032/Matgeo/2.7.4/figs/triple_product.png", dpi=300)
+\begin{frame}[fragile]
+\frametitle{Code - Python(with shared C code)}
+\begin{lstlisting}
+plt.title(f"Scalar triple product = {scalar_triple}")
+plt.savefig("gram_triple_product.png", dpi=300)
 plt.show()
 
 \end{lstlisting}
@@ -277,31 +393,52 @@ plt.show()
 \begin{frame}[fragile]
 \frametitle{Code - Python only}
 \begin{lstlisting}
-
 import numpy as np
+import math
 import matplotlib.pyplot as plt
 
-# Define vectors
+# --- Define vectors ---
 a = np.array([2.0, 1.0, 3.0])
 b = np.array([-1.0, 2.0, 1.0])
 c = np.array([3.0, 1.0, 2.0])
 
-# Cross product (NumPy)
-bx_c = np.cross(b, c)
+# --- Step 1: Build Gram matrix ---
+G = np.array([
+    [np.dot(a, a), np.dot(a, b), np.dot(a, c)],
+    [np.dot(b, a), np.dot(b, b), np.dot(b, c)],
+    [np.dot(c, a), np.dot(c, b), np.dot(c, c)]
+])
 
-# Scalar triple product
-scalar_triple = np.dot(a, bx_c)
 
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Code - Python only}
 \begin{lstlisting}
-# Print results
-print("b x c =", bx_c)
+print("Gram matrix:\n", G)
+
+# --- Step 2: Compute det(G) ---
+detG = np.linalg.det(G)
+print("det(G) =", detG)
+
+# --- Step 3: Magnitude of scalar triple product ---
+magnitude = math.sqrt(detG)
+print("|a . (b x c)| =", magnitude)
+
+# --- Step 4: Compute sign using det(A) ---
+A_mat = np.column_stack((a, b, c))   # matrix [a b c]
+sign_val = np.linalg.det(A_mat)
+scalar_triple = math.copysign(magnitude, sign_val)
+
 print("a . (b x c) =", scalar_triple)
 
-# ---------- Image Generation ----------
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Code - Python only}
+\begin{lstlisting}
+# Image Generation
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
@@ -309,11 +446,10 @@ def draw_vec(v, color, label):
     ax.quiver(0, 0, 0, v[0], v[1], v[2],
               color=color, arrow_length_ratio=0.1, label=label)
 
-# Draw vectors
+# Draw the vectors
 draw_vec(a, 'r', 'a')
 draw_vec(b, 'g', 'b')
 draw_vec(c, 'b', 'c')
-draw_vec(bx_c, 'm', 'b x c')
 
 \end{lstlisting}
 \end{frame}
@@ -321,23 +457,22 @@ draw_vec(bx_c, 'm', 'b x c')
 \begin{frame}[fragile]
 \frametitle{Code - Python only}
 \begin{lstlisting}
-# Axis limits
-lim = 4
+# Set axes limits
+lim = 6
 ax.set_xlim([-lim, lim])
 ax.set_ylim([-lim, lim])
 ax.set_zlim([-lim, lim])
 
-# Labels and title
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
+# Labels
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
 ax.legend()
 
 plt.title(f"Scalar triple product = {scalar_triple}")
-
-# Save image
-plt.savefig("triple_product_python.png", dpi=300)
+plt.savefig("gram_triple_product_python.png", dpi=300)
 plt.show()
+
 
 \end{lstlisting}
 \end{frame}
