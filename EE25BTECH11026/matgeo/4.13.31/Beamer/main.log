@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.18)  9 SEP 2025 23:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.18)  4 SEP 2025 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1752,92 +1752,89 @@ No file main.nav.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-03.
+06.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-103.
+106.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-103.
+106.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 103.
+(Font)              <10.95> on input line 106.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 103.
+(Font)              <8> on input line 106.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 103.
+(Font)              <6> on input line 106.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-03.
+06.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-03.
+06.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-03.
+06.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-03.
+06.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-03.
+06.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 106.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 106.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 106.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-103.
+106.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+) [2
+
+]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 119.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 119.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 119.
 
- [2
+ [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] [3
-
-] [4
-
-] [5
-
-] [6
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-mathsy.enc}]
+[4
 
 ]
 \openout4 = `main.vrb'.
@@ -1845,12 +1842,29 @@ dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] [3
  (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 3.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
+))
+Overfull \vbox (1.72923pt too high) detected at line 164
+ []
+
+[5
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [6
+
+]
+\openout4 = `main.vrb'.
+
+
+(./main.vrb (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+))
+[7
+
+]
 \openout4 = `main.vrb'.
 
  (./main.vrb) [8
@@ -1858,42 +1872,99 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [9
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [10
-
-]
-\openout4 = `main.vrb'.
-
-
-(./main.vrb) [11
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-))
-Overfull \vbox (1.72923pt too high) detected at line 309
+ (./main.vrb)
+Overfull \vbox (1.72923pt too high) detected at line 258
  []
 
-[12
+[9
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-13.
+6.
  (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [13
+)) [10
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...itle("Graph for the True Relation:\n1/aÂ² 
+                                                  + 1/bÂ² = 1/pÂ² + 1/qÂ²")
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...aph for the True Relation:\n1/aÂ² + 1/bÂ² 
+                                                  = 1/pÂ² + 1/qÂ²")
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...the True Relation:\n1/aÂ² + 1/bÂ² = 1/pÂ² 
+                                                  + 1/qÂ²")
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...Relation:\n1/aÂ² + 1/bÂ² = 1/pÂ² + 1/qÂ²")
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+) [11
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [12
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [13
+
+]
 \openout4 = `main.vrb'.
 
  (./main.vrb) [14
@@ -1902,38 +1973,21 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 365
- []
-
 [15
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [16
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 412
- []
-
-[17
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb
 
-! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC©).
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 ...t(L_PQ_from_tangent, L_RP)   # P = PQ âˆ© 
-                                                  RP
+l.12 ...title("Graph for the True Relation: 1/aÂ² 
+                                                  + 1/bÂ² = 1/pÂ² + 1/qÂ²")
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
 or specify an encoding such as \usepackage [latin1]{inputenc}
@@ -1941,14 +1995,14 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC©).
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 ...t(L_PQ_from_tangent, L_QR)   # Q = PQ âˆ© 
-                                                  QR
+l.12 ...raph for the True Relation: 1/aÂ² + 1/bÂ² 
+                                                  = 1/pÂ² + 1/qÂ²")
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
 or specify an encoding such as \usepackage [latin1]{inputenc}
@@ -1956,61 +2010,44 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECˆ\lst@EC©).
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 ...t(L_QR, L_RP)                # R = QR âˆ© 
-                                                  RP
+l.12 ... the True Relation: 1/aÂ² + 1/bÂ² = 1/pÂ² 
+                                                  + 1/qÂ²")
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
 or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-)
-Overfull \vbox (1.72923pt too high) detected at line 436
- []
 
-[18
+! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC²).
 
-]
-\openout4 = `main.vrb'.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ... Relation: 1/aÂ² + 1/bÂ² = 1/pÂ² + 1/qÂ²")
+                                                  
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
 
- (./main.vrb) [19
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 475
- []
-
-[20
+) [16
 
 ]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [21
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 513
- []
-
-[22
-
-]
-<figs/Figure_1.png, id=660, 505.89pt x 505.89pt>
+<figs/Figure_1.png, id=492, 505.89pt x 505.89pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 521.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 427.
 (pdftex.def)             Requested size: 205.37926pt x 205.37836pt.
- [23
+ [17
 
  <./figs/Figure_1.png>]
 \tf@nav=\write8
@@ -2041,25 +2078,25 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58060 strings out of 474222
- 1374112 string characters out of 5748733
- 2479910 words of memory out of 5000000
- 79239 multiletter control sequences out of 15000+600000
- 611811 words of font info for 93 fonts, out of 8000000 for 9000
+ 57894 strings out of 474222
+ 1372462 string characters out of 5748733
+ 2425902 words of memory out of 5000000
+ 79096 multiletter control sequences out of 15000+600000
+ 600860 words of font info for 81 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,19n,123p,1172b,1598s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1172b,1600s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+pe1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/txfonts/txsya.pfb>
-Output written on main.pdf (23 pages, 255041 bytes).
+Output written on main.pdf (17 pages, 238723 bytes).
 PDF statistics:
- 758 PDF objects out of 1000 (max. 8388607)
- 648 compressed objects within 7 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 584 PDF objects out of 1000 (max. 8388607)
+ 492 compressed objects within 5 object streams
+ 36 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

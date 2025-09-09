@@ -45,7 +45,7 @@ def plot_confocal_hyperbola(theta=pi/6):
     ax.grid(True)
     ax.set_xlabel('x')
     ax.set_ylabel('y')
-    ax.set_title('Ellipse and Confocal Hyperbola')
+    ax.set_title(r'Ellipse and Confocal Hyperbola for theta=$\pi$/6')
     ax.legend()
     plt.savefig("/home/user/Matrix Theory: workspace/Matgeo_assignments/8.4.29/figs/Figure_1.png")
     plt.show()

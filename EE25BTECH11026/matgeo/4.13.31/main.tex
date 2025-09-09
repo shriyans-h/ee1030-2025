@@ -21,6 +21,7 @@
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{gensymb}
+\usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
@@ -36,7 +37,6 @@
 \usepackage{ifthen}                                           
 \usepackage{lscape}
 \usepackage{circuitikz}
-\usepackage{comment}
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
     text width=4em, text centered, rounded corners, minimum height=3em]
 \tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
@@ -49,7 +49,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{7.4.33}
+\title{4.13.31}
 \author{EE25BTECH11026-Harsha}
  \maketitle
 % \newpage
@@ -66,82 +66,52 @@
 \renewcommand{\thetable}{\theenumi}
 
 \textbf{Question}:\\
-A circle C of radius 1 unit is inscribed in an equilateral triangle PQR. The points of contact of C with sides PQ, QR, RP are D, E, F respectively.The line PQ is given by the equation
-$\sqrt{3}x+y-6=0$ and the point $\vec{D}$ is $\brak{\frac{3\sqrt{3}}{2},\frac{3}{2}}$. Further, it is given
-that the origin and the centre of C are on same side of line PQ. The equation of circle C is
-\begin{multicols}{2}
+Line L has intercepts a and b on the coordinate axes. When the axes are rotated
+through a given angle, keeping the origin fixed, line L has intercepts p and q. Then
+\begin{multicols}{4}
 \begin{enumerate}
-    \item $\brak{x-2\sqrt{3}}^2+\brak{y-1}^2=1$
-    \item $\brak{x-2\sqrt{3}}^2+\brak{y+\frac{1}{2}}^2=1$
-    \item $\brak{x-\sqrt{3}}^2+\brak{y-1}^2=1$
-    \item $\brak{x-\sqrt{3}}^2+\brak{y+1}^2=1$
+    \item $a^2+b^2=p^2+q^2$
+    \item $\frac{1}{a^2}+\frac{1}{b^2}=\frac{1}{p^2}+\frac{1}{q^2}$
+    \item $a^2+p^2=b^2+q^2$
+    \item $\frac{1}{a^2}+\frac{1}{p^2}=\frac{1}{b^2}+\frac{1}{q^2}$
 \end{enumerate}
 \end{multicols}
 \solution \\
 Let us solve the given question theoretically and then verify the solution computationally.\\
 \\
-According to the question,
+According to the question,\\
 \begin{align}
-    \text{Equation of tangent PQ :\,}\vec{n}^{\top}\vec{x}=c
+    \text{The equation of line\,:\,}\myvec{\frac{1}{a}&&\frac{1}{b}}\vec{x}=1
+\end{align} 
+Let the row coefficient vector of the original line be $\vec{m}$ and for the rotated line be $\vec{m'}$.
+
+\begin{align}
+     \vec{m'}=\vec{P}\vec{m}       
 \end{align}
-where $\vec{n}=\myvec{\sqrt{3}&&1}^{\top}$ and $c=6$
+where $\vec{P}$ is the rotation matrix
 \begin{align}
-    \text{Point of tangency}\brak{\vec{D}}:\myvec{\frac{3\sqrt{3}}{2}\\\frac{3}{2}}
+    \|\vec{m'}\|^2=\vec{m'}^{\top}\vec{m'}=\brak{\vec{m}^{\top}\vec{P}^{\top}}\brak{\vec{P}\vec{m}}=\vec{m}^{\top}\brak{\vec{P}^{\top}\vec{P}}\vec{m}
 \end{align}
+Since $\vec{P}$ is an orthogonal matrix,
 \begin{align}
-    radius(r)=1
-\end{align}
-As the point of tangency $\vec{D}$ and centre of circle $\vec{u}$  are along the direction of the vector $\vec{n}$,
-\begin{align}
-    \therefore \vec{D}-\vec{u}=\lambda\vec{n}\;\text{, for some scalar $\lambda$}
-\end{align}
-\begin{align}
-    \implies \vec{u}=\vec{D}-\lambda\vec{n}
-\end{align}
-Also,
-\begin{align}
-    \frac{|\vec{n}^{\top}\vec{O}-c|}{\|\vec{n}\|}=r
+    \therefore \vec{m}^{\top}\brak{\vec{P}^{\top}\vec{P}}\vec{m}=\vec{m}^{\top}\vec{m}=\|m\|^2
 \end{align}
 \begin{align}
-    |\vec{n}^{\top}\vec{u}-c|=r\|\vec{n}\|
+    \implies \|\vec{m'}\|^2=\|\vec{m}\|^2
 \end{align}
+As $\vec{m'}$ is given by $\myvec{\frac{1}{p}&&\frac{1}{q}}^{\top}$,
 \begin{align}
-    \vec{n}^{\top}\vec{u}=c \pm r\|\vec{n}\|
+    \therefore \frac{1}{p^2}+\frac{1}{q^2}=\frac{1}{a^2}+\frac{1}{b^2}
 \end{align}
+
 \newpage
 \vspace*{0.25cm}
-To decide the sign , we need to use the fact that the origin and centre of circle are on the same side of the line PQ.
-\begin{align}
-    \therefore \brak{\vec{n}^{\top}\vec{u}-c}\brak{\vec{n}^{\top}\myvec{0\\0}-c}>0
-\end{align}
-\begin{align}
-    \implies \vec{n}^{\top}\vec{u}<c
-\end{align}
-\begin{align}
-    \therefore \vec{n}^{\top}\vec{u}=c-r\|\vec{n}\|
-\end{align}
-Substituting value of $\vec{u}$,
-\begin{align}
-\vec{n}^{\top}\brak{\vec{D}-\lambda\vec{n}}=c-r\|\vec{n}\|
-\end{align}
-\begin{align}
-    \implies \lambda=\frac{\vec{n}^{\top}\vec{D}+r\|n\|-c}{\vec{n}^{\top}\vec{n}}
-\end{align}
-\begin{align}
-    \vec{u}=\vec{D}-\frac{\vec{n}^{\top}\vec{D}+r\|n\|-c}{\vec{n}^{\top}\vec{n}}\;\vec{n}
-\end{align}
-Substituting the values,
-\begin{align}
-    \therefore \vec{u}=\myvec{\frac{3\sqrt{3}}{2}\\\frac{3}{2}}
--\frac{1}{2}\myvec{\sqrt{3}\\1}=\myvec{\sqrt{3}\\1}
-\end{align}
-\begin{align}
-    \therefore \text{Required equation of circle :\,}\|\vec{x}\|^2-2\myvec{\sqrt{3}&&1}\vec{x}+3=0
-\end{align}
+
 From the figure, it is clearly verified that the theoretical solution matches with the computational solution.\\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\columnwidth]{figs/Figure_1.png}
+    \includegraphics[width=0.8\columnwidth]{figs/Figure_1.png}
     \label{fig:1}
 \end{figure}
+
 \end{document}

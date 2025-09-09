@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.18)  9 SEP 2025 11:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.18)  9 SEP 2025 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1899,7 +1899,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--84
 dist/fonts/enc/dvips/base/8r.enc}
 
 ]
-<figs/Figure_1.png, id=55, 505.89pt x 505.89pt>
+<figs/Figure_1.png, id=56, 505.89pt x 505.89pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
 Package pdftex.def Info: figs/Figure_1.png  used on input line 144.
@@ -1942,7 +1942,7 @@ xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 106722 bytes).
+Output written on main.pdf (2 pages, 106814 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
