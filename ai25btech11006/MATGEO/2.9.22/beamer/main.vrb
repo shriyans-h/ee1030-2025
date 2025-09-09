@@ -1,0 +1,26 @@
+\frametitle{Theoretical  Solution}
+From Equation 1 \& 6,
+\begin{equation}
+\vec{a}^T\vec{a} = \norm{\vec{a}}^2 = 1, \,\,
+\vec{b}^T\vec{b} = \norm{\vec{b}}^2 = 4, \,\,
+\vec{c}^T\vec{c} = \norm{\vec{c}}^2 = 9, \,\,
+\vec{b}^T\vec{c} = 0
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9 + 16 + 36
+\end{equation}
+
+
+\begin{align}
+    \centering
+    \norm{\vec{v}}^2 = 61
+    \quad \Rightarrow \quad
+    \norm{\vec{v}} = \sqrt{61}
+\end{align}
+
+\begin{align}
+\centering
+\boxed{\norm{3\vec{a} - 2\vec{b} + 2\vec{c}} = \sqrt{61}}
+\end{align}

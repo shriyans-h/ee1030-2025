@@ -1,0 +1,193 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+
+\title
+{2.9.22}
+\date{September 8,2025}
+\author 
+{AI25BTECH11006 - Nikhila}
+
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+\begin{frame}{Question}
+ Let $\overrightarrow{a}$,
+$\overrightarrow{b}$, and $\overrightarrow{c}$ be three vectors such that $|\overrightarrow{a}|$ = 1, $|\overrightarrow{b}|$ = 2, and $|\overrightarrow{c}|$ = 3. If the
+projection of $\overrightarrow{b}$ along $\overrightarrow{a}$ is equal to the projection of $\overrightarrow{c}$ along $\overrightarrow{a}$, and $\overrightarrow{b}$ and $\overrightarrow{c}$ are perpendicular to each other, then find $|3\overrightarrow{a} - 2\overrightarrow{b} + 2\overrightarrow{c}|$.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Theoretical Solution}
+Given: 
+\begin{equation}
+\norm{\vec{a}} = 1, \, \norm{\vec{b}} = 2, \, \norm{\vec{c}} = 3\\
+\end{equation}
+
+\begin{equation}
+\text{The projection of} \, \vec{b} \, \text{along} \, \vec{a} = \vec{b}^T\dfrac{\vec{a}}{\norm{\vec{a}}^2}\vec{a}    
+\end{equation}
+
+\begin{equation}
+\text{The projection of} \, \vec{c} \, \text{along} \, \vec{a} = \vec{c}^T\dfrac{\vec{a}}{\norm{\vec{a}}^2}\vec{a}    
+\end{equation}
+
+
+\begin{equation}
+\vec{b}^T\dfrac{\vec{a}}{\norm{\vec{a}}}\vec{a} = \vec{c}^T\dfrac{\vec{a}}{\norm{\vec{a}}}\vec{a}\\
+\end{equation}
+
+\begin{equation}
+\text{Since, } \norm{\vec{a}} = 1
+\Rightarrow \quad
+\therefore \, \, \vec{b}^T\vec{a} = \vec{c}^T\vec{a}
+\end{equation}
+
+Since $\vec{b}$ and $\vec{c}$ are perpendicular: 
+\begin{equation}
+\vec{b}^T\vec{c} = 0\\
+\end{equation}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Theoretical Solution}
+\begin{equation}
+\text{Let} \, \,\vec{v} = 3\vec{a} - 2\vec{b} + 2\vec{c}
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = (3\vec{a} - 2\vec{b} + 2\vec{c})^T(3\vec{a} - 2\vec{b} + 2\vec{c})
+\end{equation}
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9(\vec{a}^T\vec{a}) -6(\vec{a}^T\vec{b}) +6(\vec{a}^T\vec{c}) - 6(\vec{b}^T\vec{a}) + 4(\vec{b}^T\vec{b}) -4(\vec{b}^T\vec{c})+ 6(\vec{c}^T\vec{a}) - 4(\vec{c}^T\vec{b}) + 4(\vec{c}^T\vec{c})\\
+\end{equation}
+
+
+\begin{equation}
+    \text{Since} \,  \vec{a}^T\vec{b} = \vec{b}^T\vec{a} \, \text{\&}
+\, \vec{a}^T\vec{c} = \vec{c}^T\vec{a}
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9(\vec{a}^T\vec{a}) + 4(\vec{b}^T\vec{b}) + 4(\vec{c}^T\vec{c}) - 12(\vec{a}^T\vec{b}) + 12(\vec{a}^T\vec{c}) - 8(\vec{b}^T\vec{c})
+\end{equation}\\
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Theoretical  Solution}
+From Equation 1 \& 6,
+\begin{equation}
+\vec{a}^T\vec{a} = \norm{\vec{a}}^2 = 1, \,\,
+\vec{b}^T\vec{b} = \norm{\vec{b}}^2 = 4, \,\,
+\vec{c}^T\vec{c} = \norm{\vec{c}}^2 = 9, \,\,
+\vec{b}^T\vec{c} = 0
+\end{equation}
+
+
+\begin{equation}
+\norm{\vec{v}}^2 = 9 + 16 + 36
+\end{equation}
+
+
+\begin{align}
+    \centering
+    \norm{\vec{v}}^2 = 61 
+    \quad \Rightarrow \quad
+    \norm{\vec{v}} = \sqrt{61}
+\end{align}
+
+\begin{align}
+\centering
+\boxed{\norm{3\vec{a} - 2\vec{b} + 2\vec{c}} = \sqrt{61}}
+\end{align}
+\end{frame}
+
+
+% Graphical representation
+\begin{frame}
+\frametitle{Graphical Representation}
+\begin{center}
+\includegraphics[width=0.7\linewidth]{fig1.png}
+\end{center}
+\end{frame}
+
+
+\end{document}
