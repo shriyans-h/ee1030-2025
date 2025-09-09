@@ -1,0 +1,101 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} 
+\usepackage{tfrupee} 
+
+\setlength{\headheight}{1cm} 
+\setlength{\headsep}{0mm}     
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.7.2}
+\author{AI25BTECH11030 -Sarvesh Tamgade}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} 
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:  Which of the following expressions are meaningful?
+\begin{multicols}{2}
+\begin{enumerate}[label=(\alph*)]
+     
+\item $\vec{u} \cdot (\vec{v} \times \vec{w})$
+\item $(\vec{u} \cdot \vec{v}) \cdot \vec{w}$
+\item $(\vec{u} \cdot \vec{v})\ \vec{w}$
+\item $\vec{u} \times (\vec{v} \cdot \vec{w})$
+
+\end{enumerate}
+\end{multicols}
+
+\textbf{Solution:}\\
+Let $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$ be vectors in $\mathbb{R}^3$.
+
+\begin{itemize}
+    \item[(a)] $\mathbf{u} \big(\mathbf{v} \times \mathbf{w}\big)$: \\
+    The expression $\mathbf{v} \times \mathbf{w}$ is a vector (cross product), and the expression $\mathbf{u} \big(\mathbf{v} \times \mathbf{w}\big)$ denotes the scalar triple product (sometimes written as the inner product of $\mathbf{u}$ and the vector $\mathbf{v} \times \mathbf{w}$).\\
+    \textbf{Meaningful.}
+    
+    \item[(b)] $\big(\mathbf{u} ^\top\mathbf{v}\big) \mathbf{w}$: \\
+    Here, $\big(\mathbf{u}^\top \mathbf{v}\big)$ represents the inner (dot) product, which is a scalar. Multiplying a scalar by a vector $\mathbf{w}$ is valid. However, if it is interpreted as $(\mathbf{u}^\top  \mathbf{v}) ^\top \mathbf{w}$ having a dot between scalar and vector, that is not defined.\\
+    \textbf{Not meaningful if interpreted as scalar dot vector.}
+    
+    \item[(c)] $\langle \mathbf{u}^\top  \mathbf{v} \rangle^\top  \mathbf{w}$: \\
+    $\langle \mathbf{u}, \mathbf{v} \rangle$ denotes the inner product (a scalar) and multiplying this scalar by vector $\mathbf{w}$ is valid scalar multiplication of a vector.\\
+    \textbf{Meaningful.} 
+
+
+    \item[(d)] $\mathbf{u} \times (\mathbf{v}^\top  \mathbf{w})$: \\
+    $\mathbf{v}^\top \mathbf{w}$ inside parentheses denotes the inner product (scalar), and cross product between a vector and scalar is undefined.\\
+    \textbf{Not meaningful.}
+    
+\end{itemize}
+\textbf{Answer:}
+\boxed{\text{Only (a) and (c) are meaningful }}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\linewidth]{FIG/fig1.png}
+    \caption{Vector Representation}
+    \label{fig:FIG/fig1.png}
+    \end{figure}
+
+\end{document}  
