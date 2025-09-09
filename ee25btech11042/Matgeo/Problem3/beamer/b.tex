@@ -139,7 +139,6 @@ Thus area of triangle is 6\\
 #include <math.h>
 
 float triangle_area(float ax, float ay, float bx, float by, float cx, float cy) {
-	// Using determinant (matrix method)
 	float area = fabs(ax*(by-cy) + bx*(cy-ay) + cx*(ay-by)) / 2.0;
 	return area;
 }
@@ -229,7 +228,7 @@ print("Dot product AB·BC =", np.dot(AB, BC))
 if np.dot(AB, BC) == 0:
 print("Right angle at B ✅")
 
-# Area using determinant formula
+
 area = abs(np.linalg.det(np.array([
 [A[0], A[1], 1],
 [B[0], B[1], 1],

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  9 SEP 2025 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  9 SEP 2025 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2270,11 +2270,11 @@ l.9 plt.axis("equal"
 <figs/Figure_1.png, id=351, 462.528pt x 346.896pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 269.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 268.
 (pdftex.def)             Requested size: 205.37926pt x 154.0374pt.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 269.
+Package hyperref Warning: Ignoring empty anchor on input line 268.
 
 
 
@@ -2284,11 +2284,11 @@ Package hyperref Warning: Ignoring empty anchor on input line 269.
 <figs/Figure_2.png, id=381, 462.528pt x 346.896pt>
 File: figs/Figure_2.png Graphic file (type png)
 <use figs/Figure_2.png>
-Package pdftex.def Info: figs/Figure_2.png  used on input line 280.
+Package pdftex.def Info: figs/Figure_2.png  used on input line 279.
 (pdftex.def)             Requested size: 205.37926pt x 154.0374pt.
 
 
-Package hyperref Warning: Ignoring empty anchor on input line 280.
+Package hyperref Warning: Ignoring empty anchor on input line 279.
 
 
 
@@ -2304,7 +2304,7 @@ Package hyperref Warning: Ignoring empty anchor on input line 280.
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250909145139 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250909145815 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2320,10 +2320,10 @@ Package rerunfilecheck Info: File `b.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59176 strings out of 473197
- 1434693 string characters out of 5718606
+ 59170 strings out of 473197
+ 1434619 string characters out of 5718606
  2531016 words of memory out of 5000000
- 81410 multiletter control sequences out of 15000+600000
+ 81404 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2335,7 +2335,7 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/txfonts/txsya.pfb>
-Output written on b.pdf (13 pages, 223275 bytes).
+Output written on b.pdf (13 pages, 223020 bytes).
 PDF statistics:
  471 PDF objects out of 1000 (max. 8388607)
  392 compressed objects within 4 object streams
