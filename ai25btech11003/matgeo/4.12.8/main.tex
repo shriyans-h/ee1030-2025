@@ -63,47 +63,34 @@ d)$\sqrt{\alpha^2 + \gamma^2}$ \\
 
 \textbf{Solution:}\\
 Let $\vec{A} = \myvec{\alpha \\ \beta \\ \gamma}$\\ 
-Let $\vec{B}$ be an arbitrary point on the y-axis.
+
 
 \begin{equation}
-    \text{Equation of y-axis: } \vec{r} = t\vec{e_2} \, \,
-    OR \, \, \vec{r}=t\myvec{0 \\ 1 \\ 0}
+    \text{Equation of y-axis: } \vec{r} = \vec{e_2} \, \,
+    OR \, \, \vec{r}=\myvec{0 \\ 1 \\ 0}
 \end{equation}
 
-\begin{equation}
-\therefore \, \vec{B}=\myvec{0 \\ t \\0}
-\end{equation}
+Let the distance of Point A from the y-axis be 'd'.
 
 \begin{equation}
-\text{For minimum distance from y-axis: } \vec{(A-B)} \text{ should be perpendicular to } \vec{e_2}
-\end{equation}
-
-\begin{center}
-    OR
-\end{center}
+    \text{Distance formula from y-axis of a point} = \sqrt{x^2 + z^2} 
+\end{equation} 
 
 \begin{equation}
-\vec{(A-B)}^T\vec{e_2} =0 \, \Rightarrow \, \myvec{\alpha & \beta-t & \gamma}\myvec{0 \\ 1 \\ 0} = 0     
-\end{equation}\\
-
-Therefore, from Equation 0.4,
-\begin{equation}
-t=\beta
-\end{equation}
-
-Therefore the distance between y-axis and $\vec{A}$ is:
-\begin{equation}
-    \norm{\vec{B-A}}  = \norm{\myvec{\alpha \\ 0 \\ \gamma}} = \sqrt{\alpha^2 + \gamma^2}
+\therefore \, d = \sqrt{\alpha^2 + \gamma^2}    
 \end{equation}
 
 \begin{equation}
 \boxed{\text{Therefore, Option D is Correct.}}    
 \end{equation}
 
+\newpage
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{figs/fig1.png}
-    \caption{Plane}
+    \caption{Point $\vec{B}$ is a point on the y-axis which is nearest to point $\vec{A}$}
     \label{fig:fig/fig1.png}
 \end{figure}
+
 \end{document}  

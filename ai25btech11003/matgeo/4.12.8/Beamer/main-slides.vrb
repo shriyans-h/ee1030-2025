@@ -1,17 +1,20 @@
 \frametitle{Theoretical Solution}
+Let $\vec{A} = \myvec{\alpha \\ \beta \\ \gamma}$\\
+
 
 \begin{equation}
-\vec{(A-B)}^T\vec{e_2} =0 \, \Rightarrow \, \myvec{\alpha & \beta-t & \gamma}\myvec{0 \\ 1 \\ 0} = 0
-\end{equation}\\
-
-Therefore, from Equation 4,
-\begin{equation}
-t=\beta
+    \text{Equation of y-axis: } \vec{r} = \vec{e_2} \, \,
+    OR \, \, \vec{r}=\myvec{0 \\ 1 \\ 0}
 \end{equation}
 
-Therefore the distance between y-axis and $\vec{A}$ is:
+Let the distance of Point A from the y-axis be 'd'.
+
 \begin{equation}
-    \norm{\vec{B-A}}  = \norm{\myvec{\alpha \\ 0 \\ \gamma}} = \sqrt{\alpha^2 + \gamma^2}
+    \text{Distance formula from y-axis of a point} = \sqrt{x^2 + z^2}
+\end{equation}
+
+\begin{equation}
+\therefore \, d = \sqrt{\alpha^2 + \gamma^2}
 \end{equation}
 
 \begin{equation}
