@@ -88,68 +88,66 @@ If
 find a unit vector perpendicular to both the vectors $\vec{a}$ and $\vec{b}$.\\
 \end{frame}
 \begin{frame}{Solution}
-
-We need a vector $\vec{n}$ such that
-\begin{equation}
-\vec{n} \cdot \vec{a} = 0, \quad \vec{n} \cdot \vec{b} = 0
-\end{equation}
-where
-\begin{equation}
-\vec{a} = \myvec{1 \\ -7 \\ 7}, \quad 
-\vec{b} = \myvec{3 \\ -2 \\ 2}.
-\end{equation}
-
-Let
-\begin{equation}
-\vec{n} = \myvec{x \\ y \\ z}.
-\end{equation}
-
-Orthogonality conditions,
+We want $\vec{n}$ such that 
 \begin{align}
-\vec{n} \cdot \vec{a} &= x - 7y + 7z = 0 \label{eq:1} \\
-\vec{n} \cdot \vec{b} &= 3x - 2y + 2z = 0 \label{eq:2}
+\vec{a}^T \vec{n} &= 0, \label{eq:orth1} \\
+\vec{b}^T \vec{n} &= 0. \label{eq:orth2}
+\end{align}
+
+This system can be written as
+\begin{align}
+\myvec{
+1 & -7 & 7 \\
+3 & -2 & 2
+}
+\vec{n} = \myvec{0 \\ 0}.
+\end{align}
+
+The solution is given by the **null space** of the coefficient matrix.  
+Equivalently, $\vec{n}$ can be expressed as the cross product of $\vec{a}$ and $\vec{b}$:
+\begin{align}
+\vec{n} &= \vec{a} \times \vec{b}. \label{eq:axb}
 \end{align}
 \end{frame}
 \begin{frame}
-    
-
-Solve equations,
-
-From \eqref{eq:1},
-\begin{equation}
-x = 7y - 7z. \label{eq:3}
-\end{equation}
-
-Substitute \eqref{eq:3} into \eqref{eq:2}:
+Using the **transpose method**, we write
 \begin{align}
-3(7y - 7z) - 2y + 2z &= 0 \\
-21y - 21z - 2y + 2z &= 0 \\
-19y - 19z &= 0 \\
-y &= z. \label{eq:4}
+\vec{a} \times \vec{b} &= 
+\myvec{1 \\ -7 \\ 7} \times \myvec{3 \\ -2 \\ 2} \\
+&= 
+\begin{bmatrix}
+\hat{i} & \hat{j} & \hat{k}
+\end{bmatrix}
+\begin{bmatrix}
+1 & -7 & 7 \\
+3 & -2 & 2
+\end{bmatrix}^T
+\begin{bmatrix}
+0 & -1 & 1 \\
+1 & 0 & -1 \\
+-1 & 1 & 0
+\end{bmatrix}
+\myvec{1 \\ -7 \\ 7}. \label{eq:transpose}
 \end{align}
 
-From \eqref{eq:3} and \eqref{eq:4}:
-\begin{equation}
-x = 7y - 7y = 0.
-\end{equation}
-
-Thus,
-\begin{equation}
-\vec{n} = \myvec{0 \\ y \\ y} = y \myvec{0 \\ 1 \\ 1}.
-\end{equation}
+Simplifying \eqref{eq:transpose}, we obtain
+\begin{align}
+\vec{n} &= \myvec{0 \\ 19 \\ 19}.
+\end{align}
 \end{frame}
 \begin{frame}
-Normalize,
-\begin{equation}
-\hat{n} = \frac{\myvec{0 \\ 1 \\ 1}}{\sqrt{0^2 + 1^2 + 1^2}}
-= \myvec{0 \\ \tfrac{1}{\sqrt{2}} \\ \tfrac{1}{\sqrt{2}}}.
-\end{equation}
+Now, the unit vector is
+\begin{align}
+\hat{n} &= \frac{\vec{n}}{\|\vec{n}\|} \\
+&= \frac{1}{\sqrt{0^2 + 19^2 + 19^2}} \myvec{0 \\ 19 \\ 19} \\
+&= \frac{1}{\sqrt{722}} \myvec{0 \\ 19 \\ 19}.
+\end{align}
 
-Hence, a unit vector perpendicular to both $\vec{a}$ and $\vec{b}$ is
-\begin{equation}
-\hat{n} = \frac{1}{\sqrt{2}}(\hat{j} + \hat{k}),
-\end{equation}
-or its negative.
+Hence, the required unit vectors are
+\begin{align}
+\hat{n} = \pm \frac{1}{\sqrt{722}} \myvec{0 \\ 19 \\ 19}.\\
+\hat{n} = \pm\frac{1}{\sqrt{2}}(\hat{j} + \hat{k})
+\end{align}
 \end{frame}
 \begin{frame}{Plot}
     \begin{figure}[H]

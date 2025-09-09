@@ -1,12 +1,14 @@
 import numpy as np
 
-# A vector perpendicular to both a and b is (0,1,1)
-n = np.array([0, 1, 1], dtype=float)
+# Define vectors
+a = np.array([1, -7, 7])
+b = np.array([3, -2, 2])
 
-# Magnitude
-mag = np.linalg.norm(n)
+# Cross product
+n = np.cross(a, b)
 
-# Unit vector
-unit = n / mag
+# Normalize
+unit_n = n / np.linalg.norm(n)
 
-print("Unit vector perpendicular to a and b:", unit)
+print("Cross product vector n:", n)
+print("Unit vector perpendicular to both a and b:", unit_n)

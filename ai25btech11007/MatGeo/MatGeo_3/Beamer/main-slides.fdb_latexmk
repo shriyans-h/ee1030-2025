@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1756723499.35856 "main-slides.tex" "main-slides.pdf" "main-slides" 1756723500.64732 0
+["pdflatex"] 1757416110.77177 "main-slides.tex" "main-slides.pdf" "main-slides" 1757416112.36952 0
   "/etc/texmf/web2c/texmf.cnf" 1755155458.06746 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -351,8 +351,8 @@
   "/usr/share/texmf/fonts/type1/public/lm/lmss8.pfb" 1255129361 94400 e33ecfb646a9f148e2e53da01a9168fe ""
   "/usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb" 1255129361 119663 e82fa1a58f98ccd89bdbd77311ac9cf1 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb" 1255129361 108953 1f7b36ba493bc956ac3c5eab8852ab76 ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb" 1255129361 106860 a773e4958b589eadcc5b01a914624508 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb" 1254269338 27863 09ce3735688ffde955e72da27c95b61a ""
-  "/usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb" 1254269338 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "/usr/share/texmf/tex/latex/lm/lmodern.sty" 1616454256 1608 b00724785a9e9c599e5181bb8729160b ""
   "/usr/share/texmf/tex/latex/lm/omllmm.fd" 1616454256 890 57f5adccd504fb5c98bdf99ed7e7f195 ""
   "/usr/share/texmf/tex/latex/lm/omslmsy.fd" 1616454256 807 3de192f3efa968913bd2f096a7b430d8 ""
@@ -361,12 +361,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755155481.82789 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755155605 8213609 453108db0e1f72493269ff974efb0d7e ""
-  "figs/image.png" 1756703588 151944 0ad0b8217608f992d17ff552c1def168 ""
-  "gvv.sty" 1756703588 4061 dc1741fae4b2ef17c036152478a8f596 ""
-  "main-slides.aux" 1756723500.55346 1810 ce9af805781406a02bd7db147bd26a63 "pdflatex"
-  "main-slides.nav" 1756723500.55447 835 b5c49ba28d3d2049d1773682fb2767a8 "pdflatex"
-  "main-slides.out" 1756723500.20991 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main-slides.tex" 1756703588 3551 850ebb0d4407695ba8e02b9ee3a1d3be ""
+  "figs/image.png" 1757376354 151944 0ad0b8217608f992d17ff552c1def168 ""
+  "gvv.sty" 1757376354 4061 dc1741fae4b2ef17c036152478a8f596 ""
+  "main-slides.aux" 1757416112.19399 1845 fd03fb9e055f7a295a77dd16139e9bcc "pdflatex"
+  "main-slides.nav" 1757416112.19499 835 b5c49ba28d3d2049d1773682fb2767a8 "pdflatex"
+  "main-slides.out" 1757416111.79299 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main-slides.tex" 1757376354 3658 1565ae426b56755463b7816367c48978 ""
   (generated)
   "main-slides.aux"
   "main-slides.log"
