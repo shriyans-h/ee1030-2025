@@ -66,78 +66,83 @@
 Find the equation of the plane passing through the points $(2, 5, -3)$ , $(-2, -3, 5)$ and
 $(5, 3, -3)$. Also find the point of intersection of this plane with the line passing
 through points $(3, 1, 5)$ and $(-1, -3, -1)$.
-.
-  
+
 \textbf{Solution}:\\
-Let the vectors be
+The points are 
 \begin{align}
-\vec{A} &= \myvec{2 \\ 5 \\ -3}, &
-\vec{B} &= \myvec{-2 \\ -3\\ 5}, &
-\vec{C} &= \myvec{5 \\ 3 \\ -3}.
+\vec{A}=\myvec{2\\5\\-3}  ,\vec{B}=\myvec{-2\\-3\\5} , \vec{C}=\myvec{5\\3\\-3}
 \end{align}
-
-The vectors lying on the plane are
-\begin{align}
-\vec{B} - \vec{A} = \myvec{-2 \\ -3 \\ 5} - \myvec{2 \\ 5 \\ -3} 
-= \myvec{-4 \\ -8 \\ 8}, \\
-\vec{C} - \vec{A} = \myvec{5 \\ 3 \\ -3} - \myvec{2 \\ 5 \\ -3} 
-= \myvec{3 \\ -2 \\ 0}.
-\end{align}
-
-The normal vector to the plane is given by the cross product
-\begin{align}
-\vec{n} &= (\vec{B} - \vec{A} ) \times (\vec{C} - \vec{A})\\
-&= \myvec{-4 \\ -8 \\ 8} \times \myvec{3 \\ -2 \\ 0}\nonumber\\
-&= \myvec{16 \\ 24 \\ 32}\nonumber
-\end{align}
-
-Equation of the plane passing through $\vec{A}$ is
-\begin{align}
-\vec{n}^{T} (\vec{x} - \vec{A}) &= 0, \\
-\myvec{16 & 24 & 32} \left( \myvec{x \\ y \\ z} - \myvec{2 \\ 5 \\ -3} \right) &= 0.\nonumber
-\end{align}
-Hence, the equation of the plane is
-\begin{align}
-2x + 3y + 4z = 7.
-\end{align}
-
-Now, the line passes through 
-\begin{align}
-  \vec{P} = \myvec{3 \\ 1 \\ 5}, \quad \vec{Q} = \myvec{-1 \\ -3 \\ -1}.  
-\end{align}
-
-
-The direction vector is
-\begin{align}
-\vec{d} &= \vec{Q} - \vec{P} = \myvec{-1 \\ -3 \\ -1} - \myvec{3 \\ 1 \\ 5} 
-= \myvec{-4 \\ -4 \\ -6}.
-\end{align}
-
-Thus, the parametric equation of the line is
-\begin{align}
-\vec{r} &= \vec{P} + \lambda \vec{d}, \\
-\vec{r} &= \myvec{3 - 4\lambda \\ 1 - 4\lambda \\ 5 - 6\lambda}.
-\end{align}
-
-Substitute into the plane equation:
 \begin{align} 
-2x + 3y + 4z = 7\\
-2(3 - 4\lambda) + 3(1 - 4\lambda) + 4(5 - 6\lambda) &= 7, \\
-\lambda &= \tfrac{1}{2}.
+\myvec{2 & 5 & -3 \\
+-2 & -3 & 5  \\
+5 & 3 & -3 }\vec{n}&=\myvec{1\\1\\1}\\
+\myvec{2 & 5 & -3 & \vline & 1 \\
+-2 & -3 & 5 & \vline & 1 \\
+5 & 3 & -3 & \vline & 1}\nonumber
+&\xrightarrow{R_2 \leftarrow R_2 + R_1,\; R_3 \leftarrow 2R_3 - 5R_1}
+\myvec{2 & 5 & -3 & \vline & 1 \\
+0 & 2 & 2 & \vline & 2 \\
+0 & -19 & 9 & \vline & -3}\nonumber
+\\[1em]
+&\xrightarrow{R_3 \leftarrow 2R_3 + 19R_2}
+\myvec{2 & 5 & -3 & \vline & 1 \\
+0 & 2 & 2 & \vline & 2 \\
+0 & 0 & 56 & \vline & 22}\nonumber
+\\[1em]
+&\xrightarrow{R_1 \leftarrow \tfrac{1}{2}R_1,\; R_2 \leftarrow \tfrac{1}{2}R_2,\; R_3 \leftarrow \tfrac{1}{56}R_3}
+\myvec{1 & \tfrac{5}{2} & -\tfrac{3}{2} & \vline & \tfrac{1}{2} \\
+0 & 1 & 1 & \vline & 1 \\
+0 & 0 & 1 & \vline & \tfrac{11}{28}
+}\nonumber
+\\[1em]
+&\xrightarrow{R_2 \leftarrow R_2 - R_3}
+\myvec{1 & \tfrac{5}{2} & -\tfrac{3}{2} & \vline & \tfrac{1}{2} \\
+0 & 1 & 0 & \vline & \tfrac{17}{28} \\
+0 & 0 & 1 & \vline & \tfrac{11}{28}}\nonumber
+\\[1em]
+&\xrightarrow{R_1 \leftarrow R_1 + \tfrac{3}{2}R_3,\; R_1 \leftarrow R_1 - \tfrac{5}{2}R_2}
+\myvec{1 & 0 & 0 & \vline & \tfrac{2}{7} \\
+0 & 1 & 0 & \vline & \tfrac{3}{7} \\
+0 & 0 & 1 & \vline & \tfrac{4}{7}}\nonumber
+\end{align}
+Hence the equation of the plane is 
+\begin{align} 
+\myvec{\tfrac{2}{7}&\tfrac{3}{7} &\tfrac{4}{7}}\vec{x}&=1
 \end{align}
 
-Thus, the point of intersection is
+\textbf{The equation of the line passing through:}\\
 \begin{align}
-\vec{r} &= \myvec{3 - 4\left(\tfrac{1}{2}\right) \\ 1 - 4\left(\tfrac{1}{2}\right) \\ 5 - 6\left(\tfrac{1}{2}\right)} \\
-&= \myvec{1 \\ -1 \\ 2}.
+\vec{A}=\myvec{3\\1\\5},\vec{B}=\myvec{-1\\-3\\-1}\\
 \end{align}
-
-\textbf{Final Answer:} \\ 
-The plane equation is
-$2x + 3y + 4z = 7,$ and the point of intersection is
-$\myvec{1 \\ -1 \\ 2}.$
-
-
+The direction vector of of the line
+\begin{align}
+m&=\vec{A}-\vec{B}\\
+&=\myvec{4\\4\\6}
+\end{align}
+\textbf{Vector equation of the line is}
+\begin{align}
+\vec{x}=\vec{A}+\lambda\vec{m}\\\nonumber
+\vec{x}=\myvec{3+4\lambda\\1+4\lambda\\5+6\lambda}
+\end{align}
+Solving the equation of the plane and the line,\\
+\begin{align}
+\myvec{\tfrac{2}{7}&\tfrac{3}{7} &\tfrac{4}{7}}\myvec{3+4\lambda\\1+4\lambda\\5+6\lambda}&=1
+\end{align}
+\begin{align}
+\tfrac{2}{7}(3+4\lambda) +\tfrac{3}{7}(1+4\lambda)+ \tfrac{4}{7}(5+6\lambda)&=1\\
+\frac{6 + 8\lambda}{7} + \frac{3 + 12\lambda}{7} + \frac{20 + 24\lambda}{7} = 1\\
+\frac{29 + 44\lambda}{7} = 1\\
+\lambda=-1/2
+\end{align}
+\textbf{Therefore,}\\
+the point of intersection is
+\begin{align}
+\vec{x}&=\myvec{1\\-1\\2}
+\end{align}
+\textbf{Therefore,}\\
+the equation of the plane passing through the points (2, 5, -3) , (-2, -3, 5) and
+(5, 3, -3) is $\myvec{\tfrac{2}{7}&\tfrac{3}{7} &\tfrac{4}{7}}\vec{x}=1$\\
+and the point of intersection of the line with the plane is $\vec{x}=\myvec{1\\-1\\2}$
 
 \begin{figure}[H]
     \centering
@@ -145,5 +150,6 @@ $\myvec{1 \\ -1 \\ 2}.$
     \caption{}
     \label{fig:1}
 \end{figure}
+
 \end{document}
 
