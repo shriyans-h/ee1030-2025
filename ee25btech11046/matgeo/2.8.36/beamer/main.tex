@@ -78,7 +78,7 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-The value of the expression $\norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}}$ is \rule{2cm}{0.4pt}
+The value of the expression $\norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}}$ is \rule{2cm}{0.4pt}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
@@ -90,21 +90,21 @@ The magnitude of the cross product is
 \end{align}
 The dot product or inner product is
 \begin{align}
-    \vec{a} \cdot \vec{b} = \norm{\vec{a}} \norm{\vec{b}} \cos\brak{\theta}
+    \vec{a}^\top\vec{b} = \norm{\vec{a}} \norm{\vec{b}} \cos\brak{\theta}
 \end{align}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
 Now, we substitute these definitions into the given expression:
 \begin{align}
-    \norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}} = \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta} + \norm{\vec{a}} \norm{\vec{b}} \cos\brak{\theta}
+    \norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}} = \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta} + \norm{\vec{a}} \norm{\vec{b}} \cos\brak{\theta}
 \end{align}
 \begin{align}
-\implies \norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}} = \norm{\vec{a}} \norm{\vec{b}} \brak{\sin\brak{\theta} + \cos\brak{\theta}} \\
+\implies \norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}} = \norm{\vec{a}} \norm{\vec{b}} \brak{\sin\brak{\theta} + \cos\brak{\theta}} \\
 \sin\brak{\theta} + \cos\brak{\theta} = \sqrt{2}\sin\brak{\theta + \frac{\pi}{4}}
 \end{align}
 \begin{align*}
-\therefore \norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}} = \sqrt{2} \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta + \frac{\pi}{4}}
+\therefore \norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}} = \sqrt{2} \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta + \frac{\pi}{4}}
 \end{align*}
 \end{frame}
 
@@ -115,8 +115,8 @@ Example: Let
     \norm{\vec{a}} = 1\text{ and }\norm{\vec{b}} = \sqrt{2} \\
 \end{align*}
 \begin{align}
-    \norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}} &= \norm{\myvec{0 \\ 0 \\ 1}} + \myvec{0 & 1 &  0} \myvec{-1 \\ 1 \\ 0} \\
-    \norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}} &= 1 + 1 = 2 \label{eq:2}
+    \norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}} &= \norm{\myvec{0 \\ 0 \\ 1}} + \myvec{0 & 1 &  0} \myvec{-1 \\ 1 \\ 0} \\
+    \norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}} &= 1 + 1 = 2 \label{eq:2}
 \end{align}
 \end{frame}
 
@@ -125,7 +125,7 @@ Example: Let
     \cos\brak{\theta} &= \frac{\myvec{0 & 1 &  0} \myvec{-1 \\ 1 \\ 0}}{\norm{\myvec{0 \\ 1 \\  0}}\norm{\myvec{-1 \\ 1 \\ 0}}} \\
     \cos\brak{\theta} &= \frac{1}{\sqrt{2}} \\
     \theta &= \frac{\pi}{4} \label{eq:3} \\
-    \text{From \ref{eq:3}} \\
+    \text{From \eqref{eq:3}} \\
     \sqrt{2} \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta + \frac{\pi}{4}} &= \sqrt{2} \times 1 \times \sqrt{2} \times \sin\brak{\frac{\pi}{2}}
 \end{align}
 \end{frame}
@@ -134,9 +134,9 @@ Example: Let
 \begin{align}
     \sqrt{2} \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta + \frac{\pi}{4}} &= 2 \label{eq:4}
 \end{align}
-From \ref{eq:2} and \ref{eq:4},
+From \eqref{eq:2} and \eqref{eq:4},
 \begin{align*}
-\norm{\vec{a} \times \vec{b}} + \brak{\vec{a} \cdot \vec{b}} = \sqrt{2} \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta + \frac{\pi}{4}}
+\norm{\vec{a} \times \vec{b}} + \brak{\vec{a}^\top\vec{b}} = \sqrt{2} \norm{\vec{a}} \norm{\vec{b}} \sin\brak{\theta + \frac{\pi}{4}}
 \end{align*}
 \end{frame}
 
