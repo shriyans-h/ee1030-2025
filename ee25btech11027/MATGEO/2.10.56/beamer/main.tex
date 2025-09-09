@@ -112,11 +112,14 @@ Which can be written as :
 \begin{align}
     \Vec{P}=\myvec{\vec{a}&\vec{b}}\myvec{cost\\sint}
 \end{align}
-
+\begin{align}
+    \Vec{P}=\myvec{\Vec{a}&\Vec{b}}\Vec{x}
+\end{align}
 Let
 \begin{align}
     \Vec{x}= \myvec{cost \\ sint} \;\;and\;\;\vec{G}=\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}
 \end{align}
+
    
 \end{frame}
 
@@ -132,30 +135,31 @@ Now,
     \norm{\Vec{P}}=\sqrt{(\Vec{P})^T(\Vec{P})}
 \end{align}
 \begin{align}
-    \norm{\Vec{P}}=\sqrt{\brak{\myvec{\vec{a}&\vec{b}}\myvec{cost\\sint}}^T\brak{\myvec{\vec{a}&\vec{b}}\myvec{cost\\sint}}}
+    \norm{\Vec{P}}=\sqrt{\brak{\myvec{\Vec{a}&\Vec{b}}\Vec{x}}^T\brak{\myvec{\Vec{a}&\Vec{b}}\Vec{x}}}
 \end{align}
 \begin{align}
-    \norm{\Vec{P}}=\sqrt{\myvec{cost\\sint}^T\myvec{\vec{a}&\vec{b}}
-    ^T\myvec{\vec{a}&\vec{b}}\myvec{cost\\sint}}
+    \norm{\Vec{P}}=\sqrt{\Vec{x}^T\myvec{\Vec{a}&\Vec{b}}^T\myvec{\Vec{a}&\Vec{b}}\Vec{x}}
 \end{align}
 
-\begin{align}
-   \norm{\Vec{P}}=\sqrt{\norm{\Vec{a}}^2cos^2t+ \norm{\Vec{b}}^2sin^2t+2(\Vec{a})^T(\Vec{b})(cost)(sint)}
-\end{align}
+
 
 
 
 \end{frame}
 \begin{frame}
 \frametitle{Theoretical solution}
+Let $\Vec{G}$ be a gram matrix:
 \begin{align}
-       \norm{\Vec{P}}^2=\myvec{cost & sint}\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}\myvec{cost\\sint}
+    \Vec{G}=\myvec{\Vec{a}&\Vec{b}}^T\myvec{\Vec{a}&\Vec{b}}=\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}
 \end{align}
-From Eq.3 
+\begin{align}
+       \norm{\Vec{P}}^2=\Vec{x}^T\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}\Vec{x}
+\end{align}
 
 \begin{align}
 \norm{\Vec{P}}^2=\Vec{x}^T\vec{G}\Vec{x}
   \end{align}
+
 Now we should find the maximum value of \textbf{$x^TGx$} such that $\norm{x}=1$\\
 
 
@@ -169,7 +173,7 @@ So,
 \end{align}
 Now we will calculate the Eigen value for the matrix G:
 \begin{align}
-    \mydet{G-\lambda I}=0
+    \mydet{\Vec{G}-\lambda \Vec{I}}=0
 \end{align}
 \begin{align}
     \mydet{\myvec{1-\lambda&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1-\lambda}}=0
@@ -192,7 +196,7 @@ Now we will calculate the Eigen value for the matrix G:
 \begin{align}
  \lambda_{max}=1+  (\Vec{a})^T(\Vec{b}) 
 \end{align}
-From Eq.9
+From Eq.12
 \begin{align}
     max\norm{\Vec{P}}=\sqrt{1+  (\Vec{a})^T(\Vec{b}) }
 \end{align}
@@ -200,7 +204,7 @@ The above equation can be written as
 \begin{align}
    max \norm{\Vec{P}}=\sqrt{1+\Vec{a}.\Vec{b}}
 \end{align}
-From Eq.4:
+From Eq.5:
 \begin{align}
     M=\sqrt{1+\Vec{a}.\Vec{b}}
 \end{align}
@@ -212,7 +216,7 @@ From Eq.4:
     Now let us find the value of t for which $\norm{\Vec{P}}$ is max\\
 With eigenvalue equation,We'll use matrix G and largest eigenvalue $\lambda_{max}$ such that,
 \begin{align}
-    \myvec{G-\lambda I}x=0
+    \myvec{\Vec{G}-\lambda \Vec{I}}\Vec{x}=0
 \end{align}
 \begin{align}
     \myvec{-(\Vec{a})^T(\Vec{b})&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&-(\Vec{a})^T(\Vec{b})}\myvec{cost\\sint}=\myvec{0\\0}
