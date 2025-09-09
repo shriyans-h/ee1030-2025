@@ -76,60 +76,39 @@ The distance between the parallel planes
 
 \solution \\
 
-The second plane equation can be written as:
-\begin{align}
-2x + y - 2z = 0
-\end{align}
-
 The $2$ given planes are parallel since their normal vectors are the same\\
 
-The normal vector of the planes
+The normal vector of the planes $\vec{n}$ is
 \begin{align}
 \vec{n} = \myvec{2 \\ 1 \\ -2}
 \end{align}
+
+
 
 The distance between the planes is given by this formula
 \begin{align}
 \text{Distance} = \frac{|\vec{n^T} \vec{p} - d|}{\norm{\vec{n}}}
 \end{align}
 
+\begin{align}
+{\norm{\vec{n}}} = \brak{\sqrt{\brak{2}^2 + \brak{1}^2 + \brak{-2}^2}} = 3
+\end{align}
 Where $\vec{p}$ represents a point on the second plane\\
 \begin{align}
 \vec{p} = \myvec{0 \\ 0 \\ 0}, d=6 
 \end{align}
 
-\begin{align}
-\vec{n^T}\vec{p} - d = \myvec{2 & 1 & -2}\myvec{0 \\ 0 \\ 0} - 6
-\end{align}
-
-\begin{align}
-\vec{n^T}\vec{p} - d = -6
-\end{align}
-
-\begin{align}
-\norm{\vec{n}}^2 = \vec{n^T}\vec{n} = \myvec{2 & 1 & -2}\myvec{2 \\ 1 \\ -2}
-\end{align}
-
-\begin{align}
-\norm{\vec{n}}^2 = 2\times2 + 1\times1 + \brak{-2}\times\brak{-2}
-\end{align}
-
-\begin{align}
-\norm{\vec{n}}^2 = 9
-\end{align}
-
-\begin{align}
-\therefore \norm{\vec{n}} = 3
-\end{align}
-
-
 Substituting these values in the Distance formula, we get\\
 \begin{align}
-\therefore \text{Distance} = \frac{|-6|}{3}
+\therefore \text{Distance} = \frac{|\myvec{2 & 1 & -2}\myvec{0 \\ 0 \\ 0} - 6|}{3}
 \end{align}
 
 \begin{align}
-\text{Distance} = 2 
+\text{Distance} = \frac{|-6|}{3}
+\end{align}
+
+\begin{align}
+\text{Distance} = 2
 \end{align}
 
 Therefore, the distance between the planes is 2

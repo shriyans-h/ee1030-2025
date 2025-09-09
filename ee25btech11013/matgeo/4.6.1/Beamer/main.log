@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  9 SEP 2025 11:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  9 SEP 2025 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1786,38 +1786,23 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 [2
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 99.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 99.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 99.
+
 
 [3
 
-]
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 106.
-
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 106.
-
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 106.
-
-
+{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 [4
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-
-[5
-
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 
-[6
-
-]
-
-[7
-
-]
-
-[8
+[5
 
 ]
 \openout4 = `main.vrb'.
@@ -1829,7 +1814,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[9
+[6
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
@@ -1915,12 +1900,12 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 )
-Overfull \vbox (1.72923pt too high) detected at line 195
+Overfull \vbox (1.72923pt too high) detected at line 177
  []
 
 
 
-[10
+[7
 
 ]
 \openout4 = `main.vrb'.
@@ -2116,7 +2101,7 @@ or  <return>  to continue without it.
 
 )
 
-[11
+[8
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
@@ -2177,7 +2162,7 @@ or  <return>  to continue without it.
 
 )
 
-[12
+[9
 
 ]
 \openout4 = `main.vrb'.
@@ -2368,17 +2353,17 @@ or  <return>  to continue without it.
 
 )
 
-[13
+[10
 
 ]
-<figs/Figure_1.png, id=400, 462.528pt x 346.896pt>
+<figs/Figure_1.png, id=317, 462.528pt x 346.896pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 269.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 251.
 (pdftex.def)             Requested size: 173.65224pt x 130.24007pt.
 
 
-[14
+[11
 
  <./figs/Figure_1.png>]
 \tf@nav=\write7
@@ -2406,8 +2391,8 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59065 strings out of 473190
- 1437146 string characters out of 5715801
+ 59059 strings out of 473190
+ 1437089 string characters out of 5715801
  2552244 words of memory out of 5000000
  81312 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
@@ -2422,10 +2407,10 @@ ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-Output written on main.pdf (14 pages, 252365 bytes).
+Output written on main.pdf (11 pages, 246494 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 335 compressed objects within 4 object streams
+ 23 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

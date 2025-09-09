@@ -89,64 +89,46 @@ The distance between the parallel planes
 \end{align}
 \end{frame}
 
-\begin{frame}{Simplification}
-The second plane equation can be written as:
-\begin{align}
-2x + y - 2z = 0
-\end{align}
+\begin{frame}{Solution}
+The $2$ given planes are parallel since their normal vectors are the same\\
 
-The two given planes are parallel since their normal vectors are the same.
-\end{frame}
-
-\begin{frame}{Normal Vector}
-The normal vector of the planes is
+The normal vector of the planes $\vec{n}$ is
 \begin{align}
 \vec{n} = \myvec{2 \\ 1 \\ -2}
 \end{align}
 \end{frame}
 
-\begin{frame}{Distance Formula}
-The distance between the planes is given by:
+\begin{frame}{Solution}
+The distance between the planes is given by this formula
 \begin{align}
-\text{Distance} = \frac{|\vec{n^T}\vec{p} - d|}{\norm{\vec{n}}}
-\end{align}
-where $\vec{p}$ represents a point on the second plane.
-
-\begin{align}
-\vec{p} = \myvec{0 \\ 0 \\ 0}, \quad d=6
-\end{align}
-\end{frame}
-
-\begin{frame}{Substitution}
-\begin{align}
-\vec{n^T}\vec{p} - d &= \myvec{2 & 1 & -2}\myvec{0 \\ 0 \\ 0} - 6 \\
-&= -6
+\text{Distance} = \frac{|\vec{n^T} \vec{p} - d|}{\norm{\vec{n}}}
 \end{align}
 
 \begin{align}
-\norm{\vec{n}}^2 = \vec{n^T}\vec{n} = \myvec{2 & 1 & -2}\myvec{2 \\ 1 \\ -2}
+{\norm{\vec{n}}} = \brak{\sqrt{\brak{2}^2 + \brak{1}^2 + \brak{-2}^2}} = 3
+\end{align}
+Where $\vec{p}$ represents a point on the second plane\\
+\begin{align}
+\vec{p} = \myvec{0 \\ 0 \\ 0}, d=6 
 \end{align}
 \end{frame}
 
-\begin{frame}{Norm Calculation}
+\begin{frame}{Solution}
+Substituting these values in the Distance formula, we get\\
 \begin{align}
-\norm{\vec{n}}^2 &= 2 \times 2 + 1 \times 1 + (-2)\times(-2) \\
-&= 9
+\therefore \text{Distance} = \frac{|\myvec{2 & 1 & -2}\myvec{0 \\ 0 \\ 0} - 6|}{3}
 \end{align}
 
 \begin{align}
-\therefore \norm{\vec{n}} = 3
+\text{Distance} = \frac{|-6|}{3}
+\end{align}
+
+\begin{align}
+\text{Distance} = 2
 \end{align}
 \end{frame}
 
-\begin{frame}{Final Calculation}
-Substituting into the distance formula:
-\begin{align}
-\text{Distance} = \frac{|-6|}{3} = 2
-\end{align}
 
-Therefore, the distance between the planes is 2.
-\end{frame}
 
 \begin{frame}[fragile]
     \frametitle{C Code }
