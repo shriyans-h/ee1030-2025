@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  9 SEP 2025 06:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  9 SEP 2025 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1749,29 +1749,25 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 
 [5
 
-]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [6
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+]
 
 [7
 
 ]
-Overfull \vbox (1.60158pt too high) detected at line 237
- []
-
-
 
 [8
 
 ]
-Overfull \vbox (4.42285pt too high) detected at line 261
- []
-
-
 
 [9
+
+]
+
+[10
 
 ]
 \openout4 = `main.vrb'.
@@ -1797,12 +1793,12 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (25.72923pt too high) detected at line 294
+Overfull \vbox (25.72923pt too high) detected at line 321
  []
 
 
 
-[10
+[11
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}]
@@ -1810,7 +1806,7 @@ ips/lm/lm-ts1.enc}]
 
  (./main.vrb)
 
-[11
+[12
 
 ]
 \openout4 = `main.vrb'.
@@ -1825,6 +1821,10 @@ Type  H <return>  for immediate help.
                                                   
 l.8 lib = ctypes.CDLL("
                        ./vec.so")   # use "vec.dll" on Windows
+? H
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -1835,10 +1835,6 @@ Type  H <return>  for immediate help.
                                                   
 l.8 lib = ctypes.CDLL("./vec.so"
                                 )   # use "vec.dll" on Windows
-? H
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -1922,7 +1918,7 @@ l.15 ...pe=np.double, ndim=1, flags="C_CONTIGUOUS"
 ? 
 )
 
-[12
+[13
 
 ]
 \openout4 = `main.vrb'.
@@ -1990,7 +1986,7 @@ l.15 print("u ="
 ? 
 )
 
-[13
+[14
 
 ]
 \openout4 = `main.vrb'.
@@ -2203,17 +2199,17 @@ l.12 ...tech11027/MATGEO/2.10.56/figs/figure1.png"
 ? 
 )
 
-[14
+[15
 
 ]
-<figs/figure1.png, id=431, 462.528pt x 346.896pt>
+<figs/figure1.png, id=458, 462.528pt x 346.896pt>
 File: figs/figure1.png Graphic file (type png)
 <use figs/figure1.png>
-Package pdftex.def Info: figs/figure1.png  used on input line 410.
+Package pdftex.def Info: figs/figure1.png  used on input line 437.
 (pdftex.def)             Requested size: 277.84358pt x 208.38268pt.
 
 
-[15
+[16
 
  <./figs/figure1.png>]
 \tf@nav=\write7
@@ -2244,9 +2240,9 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59146 strings out of 473197
- 1435073 string characters out of 5718605
- 2519226 words of memory out of 5000000
+ 59148 strings out of 473197
+ 1435092 string characters out of 5718605
+ 2519227 words of memory out of 5000000
  81388 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -2259,10 +2255,10 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (15 pages, 230832 bytes).
+Output written on main.pdf (16 pages, 232916 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 34 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

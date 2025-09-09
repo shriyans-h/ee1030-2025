@@ -93,14 +93,14 @@ Given equation:
 \end{align}
 Which can be written as :
 \begin{align}
-    \Vec{P}=\myvec{\vec{a}&\vec{b}}\myvec{cost\\sint}
+    \Vec{P}=\myvec{\vec{a}&\vec{b}}\myvec{\cos{t}\\\sin{t}}
 \end{align}
 \begin{align}
     \Vec{P}=\myvec{\Vec{a}&\Vec{b}}\Vec{x}
 \end{align}
 Let
 \begin{align}
-    \Vec{x}= \myvec{cost \\ sint} \;\;and\;\;\vec{G}=\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}
+    \Vec{x}= \myvec{\cos{t} \\ \sin{t}} \;\;and\;\;\vec{G}=\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}
 \end{align}
 From given if \textbf{P} is farthest from origin , then length of $\vec{P}$ is given as M.From this we can say  that
 \begin{align}
@@ -135,7 +135,7 @@ So,
 \end{align}
 Now we will calculate the Eigen value for the matrix G:
 \begin{align}
-    \mydet{G-\lambda I}=0
+    \mydet{\Vec{G}-\lambda \Vec{I}}=0
 \end{align}
 \begin{align}
     \mydet{\myvec{1-\lambda&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1-\lambda}}=0
@@ -170,21 +170,39 @@ With eigenvalue equation,We'll use matrix G and largest eigenvalue $\lambda_{max
 \begin{align}
     \myvec{\Vec{G}-\lambda \Vec{I}}\Vec{x}=0
 \end{align}
+\begin{align}
+    \brak{\myvec{1&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&1}-\myvec{\lambda&0\\0&\lambda}}\Vec{x}=\myvec{0\\0}
+\end{align}
+\begin{align}
+    \myvec{1-\lambda&(a)^T(b)\\(a)^T(b)&1-\lambda}\Vec{x}=\myvec{0\\0}
+\end{align}
+By substituting  $\lambda = 1+  (\Vec{a})^T(\Vec{b}) $ . We get:
 
 \begin{align}
     \myvec{-(\Vec{a})^T(\Vec{b})&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&-(\Vec{a})^T(\Vec{b})}\Vec{x}=\myvec{0\\0}
 \end{align}
-By solving this we'll get 
 \begin{align}
-    cost=sint
+    \myvec{-(\Vec{a})^T(\Vec{b})&(\Vec{a})^T(\Vec{b})\\(\Vec{a})^T(\Vec{b})&-(\Vec{a})^T(\Vec{b})}\myvec{\cos{t}\\\sin{t}}=\myvec{0\\0}
+\end{align}
+\begin{align}
+    \myvec{-(\Vec{a})^T(\Vec{b})\cos{t}+(\Vec{a})^T(\Vec{b})\sin{t}\\(\Vec{a})^T(\Vec{b})\cos{t}-(\Vec{a})^T(\Vec{b})\sin{t}}=\myvec{0\\0}
+\end{align}
+\begin{align}
+    -(\Vec{a})^T(\Vec{b})\cos{t}+(\Vec{a})^T(\Vec{b})\sin{t}=0
+\end{align}
+\begin{align}
+    (\Vec{a})^T(\Vec{b})\cos{t}=(\Vec{a})^T(\Vec{b})\sin{t}
+\end{align}
+\begin{align}
+    \cos{t}=\sin{t}
 \end{align}
 We already know that:
 \begin{align}
-    sin^2t+cos^2t=1
+    \sin^2{t}+\cos^2{t}=1
 \end{align}
 So,
 \begin{align}
-    sint=\frac{1}{\sqrt{2}}\;\;and\;\; cost=\frac{1}{\sqrt{2}}
+    \sin{t}=\frac{1}{\sqrt{2}}\;\;and\;\; \cos{t}=\frac{1}{\sqrt{2}}
 \end{align}
 From above result
 \begin{align}
@@ -205,7 +223,7 @@ Now subtituiting the value of $t$ in above equation:
 \begin{align}
     \Vec{u}=\frac{\Vec{a} + \Vec{b}}{\norm{\Vec{a} + \Vec{b}}}
 \end{align}
-From Eq.18 and Eq.28 (a) is correct\\
+From Eq.21 and Eq.37 (a) is correct\\
 From the figure it is clearly verified that the theoretical solution matches with the computational solution.\\
 \begin{figure}[h]
     \centering
