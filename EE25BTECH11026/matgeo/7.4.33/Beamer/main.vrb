@@ -1,0 +1,17 @@
+\frametitle{Python code}
+    \begin{lstlisting}[language=Python]
+# points
+plt.scatter([D[0], E[0], F[0]], [D[1], E[1], F[1]], c=['red','orange','purple'], zorder=5,
+            label='Tangency points D,E,F')
+plt.scatter(O[0], O[1], c='black', s=40, label='Center O')
+plt.scatter([P[0],Q[0],R[0]],[P[1],Q[1],R[1]], c='blue', s=30, label='Vertices P,Q,R')
+plt.xlim(xlim_min, xlim_max)
+plt.ylim(min(P[1],Q[1],R[1], O[1]) - 3, max(P[1],Q[1],R[1], O[1]) + 3)
+plt.gca().set_aspect("equal", adjustable="box")
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend()
+plt.title("Equilateral triangle PQR with incircle C and tangency points D,E,F")
+plt.savefig("/home/user/Matrix/Matgeo_assignments/7.4.33/figs/Figure_1.png")
+plt.show()
+
+    \end{lstlisting}
