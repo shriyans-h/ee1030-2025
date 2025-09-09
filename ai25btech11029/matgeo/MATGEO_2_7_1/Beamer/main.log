@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  9 SEP 2025 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  9 SEP 2025 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1585,13 +1585,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 80.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 80.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 80.
-
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1688,8 +1688,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 80.
-
-(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1765,14 +1763,15 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count422
- (./main.nav) [1
+
+No file main.nav.
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
 6.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -1843,13 +1842,13 @@ dvips/lm/lm-mathsy.enc}] [3
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [4
 
 ]
-<figs/Figure_1.png, id=146, 578.16pt x 433.62pt>
+<figs/Figure_1.png, id=145, 578.16pt x 433.62pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 140.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 152.
 (pdftex.def)             Requested size: 270.41098pt x 202.80894pt.
 
-Overfull \vbox (11.28262pt too high) detected at line 140
+Overfull \vbox (11.28262pt too high) detected at line 152
  []
 
 [5
@@ -1869,24 +1868,34 @@ Overfull \vbox (11.28262pt too high) detected at line 140
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56554 strings out of 474222
- 1353418 string characters out of 5748734
- 2185018 words of memory out of 5000000
- 77824 multiletter control sequences out of 15000+600000
+ 56528 strings out of 474222
+ 1353172 string characters out of 5748734
+ 2186018 words of memory out of 5000000
+ 77806 multiletter control sequences out of 15000+600000
  598809 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,16n,123p,1172b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1172b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb>
-Output written on main.pdf (5 pages, 186866 bytes).
+Output written on main.pdf (5 pages, 185240 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  172 compressed objects within 2 object streams
