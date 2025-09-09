@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  8 SEP 2025 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  9 SEP 2025 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1312,13 +1312,13 @@ thkerncmss.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 136.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 136.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 136.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 142.
 
 
 
@@ -1329,20 +1329,16 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 [4
 
 ]
-Overfull \vbox (37.5351pt too high) detected at line 187
- []
-
-
 
 [5
 
 ]
+Overfull \vbox (9.84299pt too high) detected at line 235
+ []
+
+
 
 [6
-
-]
-
-[7
 
 ]
 \openout4 = `main.vrb'.
@@ -1372,12 +1368,12 @@ y[8] = c; // C[]
  []
 
 )
-Overfull \vbox (14.52696pt too high) detected at line 240
+Overfull \vbox (14.52696pt too high) detected at line 259
  []
 
 
 
-[8
+[7
 
 ]
 \openout4 = `main.vrb'.
@@ -1395,12 +1391,12 @@ Overfull \hbox (8.37465pt too wide) in paragraph at lines 20--20
  []
 
 )
-Overfull \vbox (3.36029pt too high) detected at line 263
+Overfull \vbox (3.36029pt too high) detected at line 282
  []
 
 
 
-[9
+[8
 
 ]
 \openout4 = `main.vrb'.
@@ -1418,12 +1414,12 @@ holders[]
  []
 
 )
-Overfull \vbox (3.36029pt too high) detected at line 284
+Overfull \vbox (3.36029pt too high) detected at line 303
  []
 
 
 
-[10
+[9
 
 ]
 \openout4 = `main.vrb'.
@@ -1441,12 +1437,12 @@ Overfull \hbox (54.36415pt too wide) in paragraph at lines 20--20
  []
 
 )
-Overfull \vbox (3.36029pt too high) detected at line 308
+Overfull \vbox (3.36029pt too high) detected at line 327
  []
 
 
 
-[11
+[10
 
 ]
 \openout4 = `main.vrb'.
@@ -1482,26 +1478,26 @@ show()[]
  []
 
 )
-Overfull \vbox (14.52696pt too high) detected at line 330
+Overfull \vbox (14.52696pt too high) detected at line 349
+ []
+
+
+
+[11
+
+]
+<figs/fig1.png, id=82, 462.528pt x 346.896pt>
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 360.
+(pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
+
+Overfull \vbox (2.11359pt too high) detected at line 360
  []
 
 
 
 [12
-
-]
-<figs/fig1.png, id=86, 462.528pt x 346.896pt>
-File: figs/fig1.png Graphic file (type png)
-<use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 341.
-(pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
-
-Overfull \vbox (2.11359pt too high) detected at line 341
- []
-
-
-
-[13
 
  <./figs/fig1.png>]
 \tf@nav=\write6
@@ -1518,14 +1514,24 @@ Overfull \vbox (2.11359pt too high) detected at line 341
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  70F4853A995F09DA541DA12228EBC395;110.
  ) 
 Here is how much of TeX's memory you used:
- 26884 strings out of 467801
- 521937 string characters out of 5417842
- 900125 words of memory out of 5000000
- 54945 multiletter control sequences out of 15000+600000
+ 26879 strings out of 467801
+ 521777 string characters out of 5417842
+ 902125 words of memory out of 5000000
+ 54941 multiletter control sequences out of 15000+600000
  635959 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,131p,379b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1544,10 +1550,10 @@ les/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (13 pages, 193094 bytes).
+Output written on main.pdf (12 pages, 193058 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
