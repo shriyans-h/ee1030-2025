@@ -1,0 +1,150 @@
+ \let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\title{1.5.16}
+\author{EE25btech11028 - J.Navya sri}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+% Define custom vector macro
+
+\textbf{Question:} Find the point \(A\) if \(AB\) is a diameter of the circle with center \(C=(3,-1)\) and point \(B=(2,6)\).
+
+\bigskip
+
+\textbf{Solution:}
+
+\bigskip
+
+\begin{tabular}{ |c|c| } 
+    \hline
+    Point & Vector \\ 
+    \hline
+    B & $ \myvec{2 \\ 6} $  \\
+    \hline
+    C & $ \myvec{3 \\ -1} $   \\
+    \hline  
+\end{tabular}
+
+\bigskip
+
+\textbf{Section Formula:} \\
+If a point \(P\) divides the line joining \(A\) and \(B\) internally in the ratio \(m:n\), then
+\begin{equation}
+\vec{P} = \frac{k \vec{B} + \vec{A}}{k+1}
+= \begin{pmatrix} \vec{A} & \vec{B} \end{pmatrix}
+\myvec{\frac{1}{k+1} \\[6pt] \frac{k}{k+1}}.
+\tag{1}
+\end{equation}
+
+Here, \(C\) is the midpoint of \(AB\), i.e. ratio \(1:1\).
+\begin{equation}
+\vec{C} = \frac{\vec{A} + \vec{B}}{2}
+= \begin{pmatrix} \vec{A} & \vec{B} \end{pmatrix}
+\myvec{\frac{1}{2} \\[6pt] \frac{1}{2}}.
+\tag{2}
+\end{equation}
+
+\bigskip
+
+Express \(\vec{A}\) in terms of \(\vec{B}\) and \(\vec{C}\):
+\begin{equation}
+\vec{C} = \frac{\vec{A} + \vec{B}}{2}
+\quad \Rightarrow \quad
+2 \vec{C} = \vec{A} + \vec{B}
+\quad \Rightarrow \quad
+\vec{A} = 2 \vec{C} - \vec{B}.
+\tag{3}
+\end{equation}
+
+Using matrix notation:
+\begin{equation}
+\vec{A} = 2 \vec{C} - \vec{B} 
+= \begin{pmatrix} \vec{B} & \vec{C} \end{pmatrix}
+\myvec{-1 \\[6pt] 2}.
+\tag{4}
+\end{equation}
+
+\bigskip
+
+\textbf{Substitute values:}
+
+Given:
+\[
+\vec{B} = \myvec{2 \\ 6}, \quad \vec{C} = \myvec{3 \\ -1}
+\]
+we have,
+\begin{equation}
+\vec{A} = 2 \myvec{3 \\ -1} - \myvec{2 \\ 6} 
+= \myvec{6 \\ -2} - \myvec{2 \\ 6} 
+= \myvec{4 \\ -8}.
+\tag{5}
+\end{equation}
+
+\bigskip
+
+\begin{equation}
+\boxed{\vec{A} = \myvec{4 \\ -8}}
+\tag{6}
+\end{equation}
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/fig.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
+
+
