@@ -115,100 +115,119 @@ then the value of $k$ is :
 
 %---------------- Mathematical Formula ----------------
 \begin{frame}{solution}
-Write the plane in vector form as
+We write the plane in vector form as
 \begin{align}
-\vec{n}^\top \vec{x} &= 1,
+\vec{n}^{\top}\vec{x} &= 1,
 \end{align}
-so the constant on the right is \(1\) (no scalar \(c\) appears).
-
-The plane meets the coordinate axes at
+and introduce the axis intercepts
 \begin{align}
-\vec{A} &= \myvec{a\\0\\0}, \qquad
-\vec{B} = \myvec{0\\b\\0}, \qquad
-\vec{C} = \myvec{0\\0\\c}.
+\vec{A} &= \myvec{a\\[4pt]0\\[4pt]0}, & 
+\vec{B} &= \myvec{0\\[4pt]b\\[4pt]0}, &
+\vec{C} &= \myvec{0\\[4pt]0\\[4pt]c}.
 \end{align}
 
 Define
 \begin{align}
-\vec{e} &= \myvec{1\\1\\1}, \qquad 
-\vec{M} = \myvec{a&0&0\\[4pt]0&b&0\\[4pt]0&0&c}.
+\vec{e} &= \myvec{1\\[4pt]1\\[4pt]1}, &
+\mathbf{M} &= \myvec{a&0&0\\[4pt]0&b&0\\[4pt]0&0&c}.
+\end{align}
+(Thus the columns of $\mathbf{M}$ are $\vec{A},\vec{B},\vec{C}$.)
+
+Since $\vec{A},\vec{B},\vec{C}$ lie on the plane we have
+\begin{align}
+\vec{n}^{\top}\vec{A} &= 1, & 
+\vec{n}^{\top}\vec{B} &= 1, & 
+\vec{n}^{\top}\vec{C} &= 1.
 \end{align}
 \end{frame}
 \begin{frame}{solution}
-Since $\vec{A},\vec{B},\vec{C}$ lie on the plane, we have
+These three equations combine into the single matrix relation
 \begin{align}
-\vec{n}^\top \vec{A} &= 1, \\[4pt]
-\vec{n}^\top \vec{B} &= 1, \\[4pt]
-\vec{n}^\top \vec{C} &= 1.
+\vec{n}^{\top}\mathbf{M} &= \vec{e}^{\top}.
+\end{align}
+Transposing yields
+\begin{align}
+\mathbf{M}^{\top}\vec{n} &= \vec{e}.
+\end{align}
+Because $\mathbf{M}$ is diagonal (hence $\mathbf{M}=\mathbf{M}^{\top}$) and invertible,
+\begin{align}
+\vec{n} &= \mathbf{M}^{-1}\vec{e}.
 \end{align}
 
-These combine to the single matrix equation
-\begin{align}
-\vec{n}^\top \vec{M} &= \vec{e}^\top,
-\end{align}
-and transposing gives
-\begin{align}
-\vec{M}^\top \vec{n} &= \vec{e}.
-\end{align}
-
-Because \(\vec{M}\) is diagonal, invertible, and equals its transpose, we obtain
-\begin{align}
-\vec{n} &= \vec{M}^{-1}\vec{e}.
-\end{align}
-The perpendicular distance \(d\) of the plane \(\vec{n}^\top \vec{x}=1\) from the origin is
-\end{frame}
-\begin{frame}{solution}
-\begin{align}
-d &= \frac{|1|}{\|\vec{n}\|}
-= \frac{1}{\|\vec{M}^{-1}\vec{e}\|}.
-\end{align}
-Hence the quadratic-form relation
-\begin{align}
-\vec{e}^\top \vec{M}^{-2} \vec{e} &= \frac{1}{d^2}.
-\end{align}
-
-The centroid of the triangle \(ABC\) is
+The centroid $\vec{D}$ of triangle $ABC$ is
 \begin{align}
 \vec{D} &= \frac{\vec{A}+\vec{B}+\vec{C}}{3}
-= \tfrac{1}{3}\vec{M}\vec{e},
+= \tfrac{1}{3}\mathbf{M}\vec{e}.
 \end{align}
-so the coordinates of the centroid are
+Introduce the diagonal matrix of centroid coordinates
 \begin{align}
-x &= \tfrac{a}{3}, \quad y=\tfrac{b}{3}, \quad z=\tfrac{c}{3},
-\quad\text{and}\quad \vec{D}=\myvec{x\\y\\z}.
+\mathbf{X} &= \operatorname{diag}(x,y,z),
+\end{align}
+and substitute the given relation
+\begin{align}
+\vec{D} &= \mathbf{X}\vec{e}.
+\end{align}
+\end{frame}
+\begin{frame}{solution}
+Comparing with $\vec{D}=\tfrac{1}{3}\mathbf{M}\vec{e}$ we obtain the matrix identity
+\begin{align}
+\mathbf{M} &= 3\mathbf{X}.
 \end{align}
 
-Compute the desired sum:
+Using $\vec{n}=\mathbf{M}^{-1}\vec{e}$ and $\mathbf{M}=3\mathbf{X}$ we get
 \begin{align}
-\frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2}
-&= \frac{1}{(a/3)^2}+\frac{1}{(b/3)^2}+\frac{1}{(c/3)^2} \\
-&= 9\!\left(\frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}\right).
+\vec{n} &= (3\mathbf{X})^{-1}\vec{e}
+      = \tfrac{1}{3}\mathbf{X}^{-1}\vec{e}.
 \end{align}
+
+The perpendicular distance \(d\) from the origin to the plane $\vec{n}^{\top}\vec{x}=1$ is
+\begin{align}
+d &= \frac{1}{\|\vec{n}\|}
+   = \frac{1}{\sqrt{\vec{n}^{\top}\vec{n}}}.
+\end{align}
+Compute $\vec{n}^{\top}\vec{n}$ in purely matrix form:
+\begin{align}
+\vec{n}^{\top}\vec{n}
+&= \Big(\tfrac{1}{3}\mathbf{X}^{-1}\vec{e}\Big)^{\top}
+   \Big(\tfrac{1}{3}\mathbf{X}^{-1}\vec{e}\Big) \\
+&= \tfrac{1}{9}\,\vec{e}^{\top}\mathbf{X}^{-2}\vec{e}.
+\end{align}
+Hence
+\begin{align}
+\frac{1}{d^2} = \vec{n}^{\top}\vec{n} = \tfrac{1}{9}\,\vec{e}^{\top}\mathbf{X}^{-2}\vec{e}.
+\end{align}
+
 \end{frame}
 \begin{frame}{solution}
-To express this in matrix form note that
+
+Since $\mathbf{X}=\operatorname{diag}(x,y,z)$, we have
 \begin{align}
-\vec{M}^{-2} &= \myvec{\tfrac{1}{a^2}&0&0\\[4pt]0&\tfrac{1}{b^2}&0\\[4pt]0&0&\tfrac{1}{c^2}}, \\[6pt]
-\vec{M}^{-2}\vec{e} &= \myvec{\tfrac{1}{a^2}\\[4pt]\tfrac{1}{b^2}\\[4pt]\tfrac{1}{c^2}}, \\[6pt]
-\vec{e}^\top \vec{M}^{-2}\vec{e} &= \frac{1}{a^2}+\frac{1}{b^2}+\frac{1}{c^2}.
+\mathbf{X}^{-2} &= \operatorname{diag}\!\left(\tfrac{1}{x^2},\tfrac{1}{y^2},\tfrac{1}{z^2}\right).
 \end{align}
-Therefore
+Thus
 \begin{align}
-\frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2}
-&= 9\,\vec{e}^\top \vec{M}^{-2}\vec{e}.
+\vec{e}^{\top}\mathbf{X}^{-2}\vec{e}
+&= \myvec{1&1&1}
+   \myvec{
+     \tfrac{1}{x^2} & 0 & 0 \\
+     0 & \tfrac{1}{y^2} & 0 \\
+     0 & 0 & \tfrac{1}{z^2}
+   }
+   \myvec{1\\1\\1} \\
+&= \tfrac{1}{x^2}+\tfrac{1}{y^2}+\tfrac{1}{z^2}.
 \end{align}
-\end{frame}
-\begin{frame}{solution}
-Combining with the distance relation gives the compact formula
+
+\subsection*{Final result}
+
+Therefore,
 \begin{align}
 \frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2} &= \frac{9}{d^2}.
 \end{align}
-
-For the given problem \(d=1\), so
+For the given problem $d=1$,
 \begin{align}
 \frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2} &= 9,
 \end{align}
-and thus
+so the required constant is
 \[
 \boxed{k=9}.
 \]
