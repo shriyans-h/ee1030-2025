@@ -28,19 +28,17 @@ Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position 
 
 \section*{Solution}
 
-Let $\vec{A}$ be \myvec{\alpha \\ \beta \\ \gamma}, $\vec{B}$ be \myvec{ \beta \\ \gamma \\ \alpha}, and $\vec{C}$ be \myvec{\gamma \\ \alpha \\ \beta}. \\
+Let $\vec{A}$ be \myvec{\alpha \\ \beta \\ \gamma}, $\vec{B}$ be \myvec{ \beta \\ \gamma \\ \alpha}, and $\vec{C}$ be \myvec{\gamma \\ \alpha \\ \beta}. 
+
+\begin{align}
+\vec{A-B} \text{ is} \myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha} \\
+\vec{B-C} \text{ is} \myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta} \\
+\vec{C-A} \text{ is} \myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}
+\end{align}
 
 
-
-\begin{itemize} \begin{multicols}{3}
-    \item $\vec{A-B}$ is $\myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha}$
-    \item $\vec{B-C}$ is $\myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta}$
-    \item $\vec{C-A}$ is $\myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}$
-    \end{multicols}
-\end{itemize}
-
-Then norms of $\vec{A-B}, \vec{B-C}, \vec{C-A}$ are all equal, and equal to 
-$$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$\\
+Then $\norm{\vec{A-B}}, \norm{\vec{B-C}}, \norm{\vec{C-A}}$ are all equal, and equal to
+$$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$
 
 The three points therefore form an equilateral triangle, so option (2) is correct.
 
