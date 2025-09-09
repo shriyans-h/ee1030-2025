@@ -69,92 +69,92 @@
 \setlength{\intextsep}{10pt} % Space between text and floats
 
 \textbf{Question}\\
-The vectors $\lambda\hat{i}+\lambda\hat{j}+2\hat{k}$,$1\hat{i}+\lambda\hat{j}-1\hat{k}$ and $2\hat{i}-1\hat{j}+\lambda\hat{k}$ are coplanar if $\lambda$ = \\
-\textbf{Solution}: \\
-\begin{table}[h!]
-	\centering
-	\input{tables/table.tex}
-	\caption{variables used}
-	\label{}
-\end{table}\\
+The vectors $\vec{A} = \lambda \hat{i} + \lambda \hat{j} + 2 \hat{k}$,$\vec{B} = \hat{i} + \lambda \hat{j} - \hat{k}$ and $\vec{C} = 2\hat{i} - \hat{j} + \lambda \hat{k}$ are coplanar if $\lambda$ =\\ 
+\textbf{Solution}:\\ 
 
-Form the \(3\times3\) matrix whose columns are the given vectors:
-\begin{align*}
-A=\myvec{\lambda & 1 & 2\\
-\lambda & \lambda & -1\\
-2 & -1 & \lambda}.
-\end{align*}
-The three vectors are coplanar if the columns are linearly dependent, i.e. if there exists a nonzero vector
-\(u=\myvec{x\\y\\z} \) with \(A u=0\).  Writing \(Au=0\) gives the system
-\begin{align*}
-\begin{cases}
-\lambda x + y + 2z = 0,\\[4pt]
-\lambda x + \lambda y - z = 0,\\[4pt]
-2x - y + \lambda z = 0.
-\end{cases}
-\end{align*}
+The vectors are coplanar $\iff$ they are linearly dependent.  
+Form the matrix with these vectors as columns:
+\begin{align}
+A = 
+\begin{bmatrix}
+\lambda & 1 & 2 \\[4pt]
+\lambda & \lambda & -1 \\[4pt]
+2 & -1 & \lambda
+\end{bmatrix}.
+\end{align}
 
-Subtract the first equation from the second to eliminate \(x\):
-\begin{align*}
-(\lambda x+\lambda y - z) - (\lambda x + y + 2z)=0
-\implies (\lambda-1)y -3z =0
-\implies z=\dfrac{\lambda-1}{3}\,y.
-\end{align*}
+The three vectors are linearly dependent $\iff \det(A)=0$.  
+We compute $\det(A)$ using row reduction.
 
-Substitute this \(z\) into the first equation to express \(x\) in terms of \(y\):
-\begin{align*}
-\lambda x + y + 2\!\left(\frac{\lambda-1}{3}y\right)=0
-\implies
-\lambda x + \frac{2\lambda+1}{3}\,y = 0
-\implies
-x = -\frac{2\lambda+1}{3\lambda}\,y,
-\end{align*}
-(valid when \(\lambda\neq0\); the case \(\lambda=0\) is checked separately below).
+\begin{align}
+A = 
+\begin{bmatrix}
+\lambda & 1 & 2 \\
+\lambda & \lambda & -1 \\
+2 & -1 & \lambda
+\end{bmatrix}
+\end{align}
 
-Now substitute \(x\) and \(z\) (both expressed in terms of \(y\)) into the third equation:
-\begin{align*}
-2x - y + \lambda z = 0.
-\end{align*}
-Using \(x=-\dfrac{2\lambda+1}{3\lambda}y\) and \(z=\dfrac{\lambda-1}{3}y\) we get
-\begin{align*}
--\,\frac{4\lambda+2}{3\lambda}\,y - y + \frac{\lambda(\lambda-1)}{3}\,y = 0.
-\end{align*}
-Multiply through by \(3\lambda\) and factor \(y\):
-\begin{align*}
-y\bigl(\lambda^3-\lambda^2-7\lambda-2\bigr)=0.
-\end{align*}
-A nontrivial solution requires \(y\neq0\), hence
-\begin{align*}
-\lambda^3-\lambda^2-7\lambda-2=0.
-\end{align*}
+\begin{align}
+R_2 \to R_2 - R_1 \quad \Rightarrow \quad
+\begin{bmatrix}
+\lambda & 1 & 2 \\
+0 & \lambda-1 & -3 \\
+2 & -1 & \lambda
+\end{bmatrix}
+\end{align}
 
-Factor the cubic. One checks \(\lambda=-2\) is a root, and polynomial division yields
-\begin{align*}
-\lambda^3-\lambda^2-7\lambda-2=(\lambda+2)(\lambda^2-3\lambda-1).
-\end{align*}
-The quadratic factor has roots
-\begin{align*}
-\lambda=\frac{3\pm\sqrt{9+4}}{2}=\frac{3\pm\sqrt{13}}{2}.
-\end{align*}
+\begin{align}
+R_3 \to R_3 - \tfrac{2}{\lambda}R_1 \quad \Rightarrow \quad
+\begin{bmatrix}
+\lambda & 1 & 2 \\
+0 & \lambda-1 & -3 \\
+0 & -1-\tfrac{2}{\lambda} & \lambda - \tfrac{4}{\lambda}
+\end{bmatrix}
+\end{align}
 
-Finally check the special case \(\lambda=0\): the system becomes
-\begin{align*}
-\begin{cases}
-y+2z=0,\\
--\,z=0,\\
-2x-y=0,
-\end{cases}
-\end{align*}
-which forces \(x=y=z=0\), so \(\lambda=0\) does \emph{not} give a nontrivial solution.
+\begin{align}
+R_3 \to R_3 - \frac{-1-\tfrac{2}{\lambda}}{\lambda-1}R_2
+\quad \Rightarrow \quad
+\begin{bmatrix}
+\lambda & 1 & 2 \\
+0 & \lambda-1 & -3 \\
+0 & 0 & \dfrac{\lambda^3-\lambda^2-7\lambda-2}{\lambda(\lambda-1)}
+\end{bmatrix}
+\end{align}
 
-\begin{align*}
-\boxed{\text{Therefore the vectors are coplanar exactly for }
-\lambda=-2,\;\frac{3+\sqrt{13}}{2},\;\frac{3-\sqrt{13}}{2}.}
-\end{align*}
+Now the matrix is upper triangular, so
+\begin{align}
+\det(A) = \lambda(\lambda-1)\cdot \frac{\lambda^3-\lambda^2-7\lambda-2}{\lambda(\lambda-1)} 
+= \lambda^3 - \lambda^2 - 7\lambda - 2.
+\end{align}
 
+\bigskip
+
+\textbf{Step 2: Solve the cubic}  
+\begin{align}
+\lambda^3 - \lambda^2 - 7\lambda - 2 = 0.
+\end{align}
+Factor:
+\begin{align}
+(\lambda+2)(\lambda^2 - 3\lambda - 1) = 0.
+\end{align}
+
+So the solutions are
+\begin{align}
+\lambda = -2, \qquad \lambda = \frac{3+\sqrt{13}}{2}, \qquad \lambda = \frac{3-\sqrt{13}}{2}.
+\end{align}
+
+\bigskip
+\textbf{Conclusion:}  
+\begin{itemize}
+\item For these values of $\lambda$, $\det(A)=0 \implies \operatorname{rank}(A)<3$, so the vectors are \textbf{linearly dependent} (coplanar).
+\end{itemize}
+
+$\boxed{\text{The vectors are coplanar for } \lambda=-2, \; \tfrac{3+\sqrt{13}}{2}, \; \tfrac{3-\sqrt{13}}{2}.}$
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.66\columnwidth]{figs/01.png}
+	\includegraphics[width=0.86\columnwidth]{figs/01.png}
     \label{fig-1}
 \end{figure}
 \end{document}
