@@ -81,32 +81,41 @@ where, $\vec{PA}=\norm{P-A}$ and $\vec{PB}=\norm{P-B}$
 
 The squared distances can be written as dot products:
 \begin{align}
-    \vec{PA}^2=(\vec{P}-\vec{A}).(\vec{P}-\vec{A}) \\
-    \vec{PB}^2=(\vec{P}-\vec{B}).(\vec{P}-\vec{B})
+    \vec{PA}^2=(\vec{P}-\vec{A})^T(\vec{P}-\vec{A}) \\
+    \vec{PB}^2=(\vec{P}-\vec{B})^T(\vec{P}-\vec{B})
 \end{align}
 Thus:
 \begin{align}
-    \vec{PA}^2+\vec{PB}^2=(\vec{P}-\vec{A}).(\vec{P}-\vec{A})+(\vec{P}-\vec{B}).(\vec{P}-\vec{B}) \\
-    \vec{PA}^2+\vec{PB}^2=\vec{P}.\vec{P}-2\vec{A}.\vec{P}+\vec{A}.\vec{A}+\vec{P}.\vec{P}-2\vec{B}.\vec{P}+\vec{B}.\vec{B}\\
+    \vec{PA}^2+\vec{PB}^2=(\vec{P}-\vec{A})^T(\vec{P}-\vec{A})+(\vec{P}-\vec{B})^T(\vec{P}-\vec{B}) \\
+    \vec{PA}^2+\vec{PB}^2=2\vec{P}^T\vec{P}-2\vec{A}^T\vec{P}+\vec{A}^T\vec{A}+\vec{P}^T\vec{P}-2\vec{B}^T\vec{P}+\vec{B}^T\vec{B}\\ 
+    2\vec{P}^T\vec{P}-2(\vec{A}+\vec{B})^T\vec{P}+\vec{A}^T\vec{A}+\vec{B}^T\vec{B}-k^2=0
 \end{align}
+
+Complete the square,\\ 
+Let, \\ 
+\begin{align}
+    \vec{M}:=\frac{\vec{A}+\vec{B}}{2} \\ 
+    R^2:=\norm{M}^2-\frac{\vec{A}^T\vec{A}+\vec{B}^T\vec{B}-k^2}{2}\\ 
+\end{align}
+
+Then the equation becomes\\ 
+\begin{align}
+    \norm{P-M}^2=R^2 \\ 
+    \norm{P-\frac{\vec{A}+\vec{B}}{2}}^2=\norm{\frac{\vec{A}+\vec{B}}{2}}^2-\frac{\norm{A}^2+\norm{B}^2-k^2}{2}
+\end{align}
+
 Substitute the known values
 \begin{align}
-    \vec{A}.\vec{A}=3^2+4^2+5^2=50 \\
-    \vec{B}.\vec{B}=(-1)^2+3^2+(-7)^2=59 \\
-    \vec{A}+\vec{B}=\myvec{3-1 \\ 4-3 \\ 5-7}=\myvec{2 \\ 7 \\ -2}
+    \norm{A}=3^2+4^2+5^2=50 \\
+    \norm{B}=(-1)^2+3^2+(-7)^2=59 \\
+    \frac{\vec{A}+\vec{B}}{2}=\myvec{1 \\ 3.5 \\ -1}
 \end{align}
 
 The equation of the locus is:
 \begin{align}
-    2\vec{P}.\vec{P}-2\myvec{2 \\ 7 \\ -2}.\vec{P}+109=K^2
+    \norm{P-\myvec{1 \\ 3.5 \\ -1}}^2=\frac{2k^2-161}{4}
 \end{align}
-
-or equivalently,
-\begin{align}
-    2\vec{P}^T\vec{P}-2\myvec{2 & 7 & -2}.\vec{P}+109=K^2
-\end{align}
-
-\newpage
+\\ \\ \\ 
 The plot show the locus for $k=20$
 
 \begin{figure}[H]

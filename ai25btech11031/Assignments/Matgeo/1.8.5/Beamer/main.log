@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  31 AUG 2025 01:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  9 SEP 2025 00:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1192,6 +1192,12 @@ Type  H <return>  for immediate help.
                                                   
 l.52 ...{\solution}{\noindent \textbf{Solution: }}
                                                   
+? \
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
 ? 
 \c@matchleft=\count363
 \c@matchright=\count364
@@ -1774,25 +1780,26 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc}] [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \vbox (1.7633pt too high) detected at line 122
- []
-
-[4
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [4
 
 ] [5
 
+] [6
+
 ]
-<figs/plot2_1.png, id=173, 578.16pt x 433.62pt>
+[7
+
+]
+<figs/plot2_1.png, id=228, 578.16pt x 433.62pt>
 File: figs/plot2_1.png Graphic file (type png)
 <use figs/plot2_1.png>
-Package pdftex.def Info: figs/plot2_1.png  used on input line 145.
+Package pdftex.def Info: figs/plot2_1.png  used on input line 156.
 (pdftex.def)             Requested size: 273.83728pt x 205.37614pt.
 
-Overfull \vbox (29.57896pt too high) detected at line 145
+Overfull \vbox (29.57896pt too high) detected at line 156
  []
 
-[6
+[8
 
  <./figs/plot2_1.png>]
 \openout4 = `main.vrb'.
@@ -1802,46 +1809,77 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 2.
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
+)) [9
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
 
- (./main.vrb
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-9.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Overfull \hbox (8.37744pt too wide) in paragraph at lines 11--11
-[]    \OT1/lmtt/m/n/10.95 printf("2 * (P \TS1/lmtt/m/n/10.95 · \OT1/lmtt/m/n/10
-.95 P) - 2 * (A+B) \TS1/lmtt/m/n/10.95 · \OT1/lmtt/m/n/10.95 P + |A|^2 + |B|^2 
-= K^2[] 
+ (./main.vrb)
+Overfull \vbox (9.12935pt too high) detected at line 196
  []
 
-)
-Overfull \vbox (9.12935pt too high) detected at line 184
- []
-
-[8
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [9
+[10
 
 ]
 \openout4 = `main.vrb'.
 
-
-(./main.vrb
-Overfull \hbox (60.11604pt too wide) in paragraph at lines 6--6
-[]\OT1/lmtt/m/n/10.95 print(f"A + B = ({AplusB[0]:.1f}, {AplusB[1]:.1f}, {Aplus
-B[2]:.1f}),")[] 
+ (./main.vrb)
+Overfull \vbox (9.12935pt too high) detected at line 217
  []
 
-) [10
+[11
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+13.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (54.36731pt too wide) in paragraph at lines 13--13
+[]        \OT1/lmtt/m/n/10.95 return {\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 
+center\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 : M, \TS1/lmtt/m/n/10.95 '\OT1/l
+mtt/m/n/10.95 r2\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 : r2, \TS1/lmtt/m/n/10
+.95 '\OT1/lmtt/m/n/10.95 radius\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 : None,
+ \TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 real\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/
+n/10.95 : False}[] 
+ []
+
+
+Overfull \hbox (88.85971pt too wide) in paragraph at lines 15--15
+[]        \OT1/lmtt/m/n/10.95 return {\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 
+center\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 : M, \TS1/lmtt/m/n/10.95 '\OT1/l
+mtt/m/n/10.95 r2\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 : r2, \TS1/lmtt/m/n/10
+.95 '\OT1/lmtt/m/n/10.95 radius\TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 : np.sq
+rt(r2), \TS1/lmtt/m/n/10.95 '\OT1/lmtt/m/n/10.95 real\TS1/lmtt/m/n/10.95 '\OT1/
+lmtt/m/n/10.95 : True}[] 
+ []
+
+) [12
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+Overfull \hbox (94.60844pt too wide) in paragraph at lines 5--5
+[]    \OT1/lmtt/m/n/10.95 A = tuple(map(float, input("Enter coordinates of A (x
+ y z): ").split()))[] 
+ []
+
+
+Overfull \hbox (94.60844pt too wide) in paragraph at lines 6--6
+[]    \OT1/lmtt/m/n/10.95 B = tuple(map(float, input("Enter coordinates of B (x
+ y z): ").split()))[] 
+ []
+
+) [13
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [14
 
 ]
 \tf@nav=\write8
@@ -1872,9 +1910,9 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56519 strings out of 474222
- 1352683 string characters out of 5748733
- 2183181 words of memory out of 5000000
+ 56531 strings out of 474222
+ 1352792 string characters out of 5748733
+ 2179180 words of memory out of 5000000
  77771 multiletter control sequences out of 15000+600000
  599425 words of font info for 77 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1886,10 +1924,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (10 pages, 292177 bytes).
+Output written on main.pdf (14 pages, 303805 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 30 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

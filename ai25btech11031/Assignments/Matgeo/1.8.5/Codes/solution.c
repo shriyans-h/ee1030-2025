@@ -1,33 +1,53 @@
 #include <stdio.h>
-
-// Define a 3D vector struct
-typedef struct {
-    double x, y, z;
-} Vector3;
-
-// Dot product of two vectors
-double dot(Vector3 v1, Vector3 v2) {
-    return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
-}
+#include <math.h>
 
 int main() {
-    Vector3 A = {3, 4, 5};
-    Vector3 B = {-1, 3, -7};
+    double Ax, Ay, Az, Bx, By, Bz, K;
+    double Mx, My, Mz, diffx, diffy, diffz;
+    double diff_sq, r2, radius;
 
-    // Vector sum A+B
-    Vector3 AplusB = {A.x + B.x, A.y + B.y, A.z + B.z};
+    // Input
+    printf("Enter coordinates of A (x y z): ");
+    scanf("%lf %lf %lf", &Ax, &Ay, &Az);
 
-    // Dot products |A|^2 and |B|^2
-    double A_dot = dot(A, A);
-    double B_dot = dot(B, B);
+    printf("Enter coordinates of B (x y z): ");
+    scanf("%lf %lf %lf", &Bx, &By, &Bz);
 
-    // Equation in vector form:
-    // 2 * (P·P) - 2 * (A+B)·P + |A|^2 + |B|^2 = K^2
-    printf("Vector form equation of locus P satisfies:\n");
-    printf("2 * (P · P) - 2 * (A+B) · P + |A|^2 + |B|^2 = K^2\n");
-    printf("where\n");
-    printf("A + B = (%.1f, %.1f, %.1f),\n", AplusB.x, AplusB.y, AplusB.z);
-    printf("|A|^2 = %.1f, |B|^2 = %.1f\n", A_dot, B_dot);
+    printf("Enter constant K: ");
+    scanf("%lf", &K);
+
+    // Midpoint (center of sphere)
+    Mx = (Ax + Bx) / 2.0;
+    My = (Ay + By) / 2.0;
+    Mz = (Az + Bz) / 2.0;
+
+    // ||A-B||^2
+    diffx = Ax - Bx;
+    diffy = Ay - By;
+    diffz = Az - Bz;
+    diff_sq = diffx*diffx + diffy*diffy + diffz*diffz;
+
+    // r^2 formula
+    r2 = (2.0 * K * K - diff_sq) / 4.0;
+
+    // Output
+    printf("\n--- Results ---\n");
+    printf("Point A = (%.2f, %.2f, %.2f)\n", Ax, Ay, Az);
+    printf("Point B = (%.2f, %.2f, %.2f)\n", Bx, By, Bz);
+    printf("K = %.2f\n", K);
+
+    printf("Center M = (%.2f, %.2f, %.2f)\n", Mx, My, Mz);
+    printf("r^2 = %.4f\n", r2);
+
+    if (r2 < 0) {
+        printf("No real sphere exists (r^2 < 0).\n");
+    } else {
+        radius = sqrt(r2);
+        printf("Radius = %.4f\n", radius);
+
+        printf("\nEquation of locus (vector form):\n");
+        printf("|| P - (%.2f, %.2f, %.2f) ||^2 = %.4f\n", Mx, My, Mz, r2);
+    }
 
     return 0;
 }
