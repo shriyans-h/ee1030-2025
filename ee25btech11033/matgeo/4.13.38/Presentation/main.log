@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  9 SEP 2025 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.3)  9 SEP 2025 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1835,18 +1835,14 @@ l/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 [6
 
 ]
-
-[7
-
-]
-<figs/fig.png, id=233, 722.7pt x 578.16pt>
+<figs/fig.png, id=205, 722.7pt x 578.16pt>
 File: figs/fig.png Graphic file (type png)
 <use figs/fig.png>
-Package pdftex.def Info: figs/fig.png  used on input line 172.
+Package pdftex.def Info: figs/fig.png  used on input line 161.
 (pdftex.def)             Requested size: 260.48056pt x 208.38445pt.
 
 
-[8
+[7
 
  <./figs/fig.png>]
 \tf@nav=\write7
@@ -1858,7 +1854,7 @@ Package pdftex.def Info: figs/fig.png  used on input line 172.
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250909111754 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250909182353 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1870,15 +1866,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58595 strings out of 473190
- 1433132 string characters out of 5715801
+ 58591 strings out of 473190
+ 1433099 string characters out of 5715801
  2337228 words of memory out of 5000000
- 80866 multiletter control sequences out of 15000+600000
+ 80864 multiletter control sequences out of 15000+600000
  596857 words of font info for 74 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,647s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{Navigation9} has been referenced but does not exist
+pdfTeX warning (dest): name{Navigation8} has been referenced but does not exist
 , replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/loca
@@ -1890,10 +1886,10 @@ lic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/l
 msso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/loca
 l/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-Output written on main.pdf (8 pages, 167717 bytes).
+Output written on main.pdf (7 pages, 165683 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 16 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
