@@ -1,0 +1,104 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+\title{1.6.25}
+\author{AI25BTECH11010 - Dhanush Kumar}
+\maketitle
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\noindent
+
+If the sum of two unit vectors is a unit vector, prove that the magnitude of their difference is \(\sqrt{3}\).
+
+\bigskip
+\noindent\textbf{Solution:} \\
+
+Let
+\begin{align}
+\vec{u}, \vec{v} \in \mathbb{R}^n, \quad
+\|\vec{u}\|=1,\;\|\vec{v}\|=1.
+\end{align}
+
+Form the matrix
+\begin{align}
+M = \myvec{\vec{u} & \vec{v}},
+\end{align}
+whose Gram matrix is
+\begin{align}
+G &= M^TM \\
+  &= \myvec{ \vec{u}^T\vec{u} & \vec{u}^T\vec{v} \\ \vec{v}^T\vec{u} & \vec{v}^T\vec{v} } \\
+  &= \myvec{1 & \rho \\ \rho & 1},
+\end{align}
+where \(\rho = \vec{u}^T\vec{v}\).
+
+Now,
+\begin{align}
+\|\vec{u}+\vec{v}\|^2 
+&= \myvec{1 & 1} \, G \, \myvec{1 \\ 1} \\
+&= \myvec{1 & 1}\myvec{1 & \rho \\ \rho & 1}\myvec{1 \\ 1} \\
+&= 2 + 2\rho.
+\end{align}
+
+Since \(\vec{u}+\vec{v}\) is a unit vector,
+\begin{align}
+2 + 2\rho = 1 \;\;\Rightarrow\;\; \rho = -\tfrac{1}{2}.
+\end{align}
+
+Next,
+\begin{align}
+\|\vec{u}-\vec{v}\|^2 
+&= \myvec{1 & -1} \, G \, \myvec{1 \\ -1} \\
+&= \myvec{1 & -1}\myvec{1 & \rho \\ \rho & 1}\myvec{1 \\ -1} \\
+&= 2 - 2\rho.
+\end{align}
+
+Substituting \(\rho = -\tfrac{1}{2}\),
+\begin{align}
+\|\vec{u}-\vec{v}\|^2 &= 2 - 2\left(-\tfrac{1}{2}\right) \\
+&= 3.
+\end{align}
+
+Hence,
+\begin{align}
+\|\vec{u}-\vec{v}\| &= \sqrt{3}.
+\end{align}
+
+\noindent\(\therefore\) The required result is proved.
+\begin{figure}[H]
+  \centering
+   \includegraphics[width=0.7\linewidth]{../figs/vectors_plot.png}
+   \caption{}
+  \label{stemplot}
+\end{figure}
+
+
+\end{document}
+
