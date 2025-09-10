@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  9 SEP 2025 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  10 SEP 2025 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1903,11 +1903,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
-
- []
-
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}
 
@@ -1915,7 +1910,7 @@ dist/fonts/enc/dvips/base/8r.enc}
 <figs/fig1.png, id=48, 354.123pt x 359.54324pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 91.
+Package pdftex.def Info: figs/fig1.png  used on input line 87.
 (pdftex.def)             Requested size: 364.1953pt x 369.79602pt.
  [2 <./figs/fig1.png>] (./main.aux)
  ***********
@@ -1938,7 +1933,7 @@ Package rerunfilecheck Info: Checksums for `main.out':
 Here is how much of TeX's memory you used:
  52943 strings out of 474222
  1254485 string characters out of 5748734
- 1933975 words of memory out of 5000000
+ 1934975 words of memory out of 5000000
  74387 multiletter control sequences out of 15000+600000
  623257 words of font info for 169 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1950,7 +1945,7 @@ xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 199722 bytes).
+Output written on main.pdf (2 pages, 199189 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
