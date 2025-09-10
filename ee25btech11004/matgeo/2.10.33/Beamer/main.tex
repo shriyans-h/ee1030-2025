@@ -108,11 +108,43 @@ Let $\alpha , \beta, \gamma$ be distinct real numbers. The points with position 
 To answer this question, we need to find the distance between each of these points.
 
 Let $\vec{A}$ be \myvec{\alpha \\ \beta \\ \gamma}, $\vec{B}$ be \myvec{ \beta \\ \gamma \\ \alpha}, and $\vec{C}$ be \myvec{\gamma \\ \alpha \\ \beta}. \\
+
+First, we need to check when the three points are collinear. We can do this using the collinearity matrix: \begin{align}\myvec{\vec{C}-\vec{A} & \vec{B} - \vec{A}}^T\end{align}If the rank of the matrix is 1, then the points are collinear.
+
+    
+\begin{align}
+\myvec{\gamma - \alpha & \alpha - \beta & \beta - \gamma \\ \beta - \alpha & \gamma - \beta & \alpha - \gamma}
+\end{align}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Solution}
+    
+The rank of this matrix will be 1 only when all the elements in the bottom row of the matrix are equal to 0. This occurs only when $\alpha = \beta = \gamma$, which contradicts the fact that $\alpha, \beta, \gamma$ are distinct.\\
+
+Therefore the points must be non-collinear and form a triangle.\\
+
+The sides of the triangle are $\vec{A} - \vec{B}, \vec{B} - \vec{C}, \vec{C}- \vec{A}$.\\
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Solution}
 \begin{align}
 \vec{A-B} \text{ is} \myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha} \\
 \vec{B-C} \text{ is} \myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta} \\
 \vec{C-A} \text{ is} \myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}
 \end{align}
+
+
+$\norm{\vec{A}-\vec{B}}, \norm{\vec{B}-\vec{C}}, \norm{\vec{C}-\vec{A}}$ are all equal, and equal to
+$$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$
+
+The three points therefore form an \textbf{equilateral triangle}, so option (2) is correct.
 
 \end{frame}
 
