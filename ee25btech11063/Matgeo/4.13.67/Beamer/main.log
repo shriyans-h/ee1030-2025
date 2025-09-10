@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.3)  10 SEP 2025 09:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.3)  10 SEP 2025 09:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -935,7 +935,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count368
 \l__pdf_internal_box=\box128
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -956,6 +956,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1013,6 +1014,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 68.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1108,15 +1111,12 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count375
-
-No file main.nav.
-[1
+ (./main.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
@@ -1161,7 +1161,7 @@ Overfull \vbox (19.1253pt too high) detected at line 133
 [5
 
 ]
-<figs/01.png, id=48, 505.89pt x 505.89pt>
+<figs/01.png, id=52, 505.89pt x 505.89pt>
 File: figs/01.png Graphic file (type png)
 <use figs/01.png>
 Package pdftex.def Info: figs/01.png  used on input line 141.
@@ -1212,24 +1212,14 @@ Overfull \vbox (8.52684pt too high) detected at line 216
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  786DEDF945F54D022A2FDD30FA989114;116.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 786DEDF945F54D022A2FDD30FA989114;116.
  ) 
 Here is how much of TeX's memory you used:
- 27181 strings out of 474222
- 509614 string characters out of 5748734
+ 27218 strings out of 474222
+ 509946 string characters out of 5748734
  2237975 words of memory out of 5000000
- 48873 multiletter control sequences out of 15000+600000
+ 48902 multiletter control sequences out of 15000+600000
  567234 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,131p,426b,1408s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1244,10 +1234,10 @@ ype1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt8.pfb>
-Output written on main.pdf (8 pages, 237003 bytes).
+Output written on main.pdf (8 pages, 237111 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  19 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
