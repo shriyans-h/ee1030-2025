@@ -80,23 +80,32 @@ The given equations are,
 \end{align}
 As the given equations are homogeneous, converting them into quadratic form,
 \begin{align}
-    \implies \vec{x}^{\top}\vec{F}\vec{x}=0
+    \implies \vec{x}^{\top}\vec{F_1}\vec{x}+c=0
 \end{align}
-where $\vec{x}^{\top}=\myvec{x&&y&&1}$ and $\vec{F}=\myvec{1&&0&&0\\0&&-1&&0\\0&&0&&-180}$\\
+where $\vec{x}^{\top}=\myvec{x&&y}$ and $\vec{F_1}=\myvec{1&&0\\0&&-1}$ and $c=-180$\\
 And also,
 \begin{align}
-    \vec{x}^{\top}\vec{G}\vec{x}=0
+    \vec{x}^{\top}\vec{F_2}\vec{x}+2\vec{b}^{\top}\vec{x}=0
 \end{align}
-where $\vec{x}^{\top}=\myvec{x&&y&&1}^{\top}$ and $\vec{G}=\myvec{0&&0&&-4\\0&&1&&0\\-4&&0&&0}$
+where $\vec{x}^{\top}=\myvec{x&&y}^{\top}$, $\vec{F_2}=\myvec{0&&0\\0&&1}$ and $\vec{b}=\myvec{-4\\0}$.\\
 To identify the intersection of conics, we can employ the approach of degenerating the conics.\\
 \\
-This approach goes by the fact that as both the conics are 0 simultaneously, it's linear combination would also have the same solution.
+To work with degeneracy in matrix form we form the standard augmented $3 \times 3$ matrix for each conic:
 \begin{align}
-    \therefore \vec{x}^{\top}\brak{\vec{F}+\lambda\vec{G}}\vec{x}=0
+    \vec{M_i}=\myvec{\vec{F_i}&&\vec{b_i}\\\vec{b_i}^{\top}&&c_i}
 \end{align}
-To degenerate the conic into a line, we can find the solutions of $\lambda$ when $\|\vec{F}+\lambda\vec{G}\|=0$
 \begin{align}
-    \therefore \|\vec{F}+\lambda\vec{G}\|=0
+    \implies \vec{M_1}=\myvec{1&&0&&0\\0&&-1&&0\\0&&0&&-180} \quad 
+    \vec{M_2}=\myvec{0&&0&&-4\\0&&1&&0\\-4&&0&&0}
+\end{align}
+\begin{align}
+    \therefore \vec{x}^{\top}\brak{\vec{M_1+\lambda M_2}}\vec{x}=0
+\end{align}
+\newpage
+\vspace*{0.25cm}
+To degenerate the conic into a line, we can find the solutions of $\lambda$ when $\|\vec{M_1}+\lambda\vec{M_2}\|=0$
+\begin{align}
+    \therefore \|\vec{M_1}+\lambda\vec{M_2}\|=0
 \end{align}
 \begin{align}
     \implies \brak{\lambda-1}\brak{4\lambda^2+45}=0
@@ -104,11 +113,10 @@ To degenerate the conic into a line, we can find the solutions of $\lambda$ when
 \begin{align}
     \therefore \lambda=1
 \end{align}
-\newpage
-\vspace*{0.25cm}
+
 Substituting $\lambda$ in the equation,
 \begin{align}
-    \vec{x}^{\top}\brak{\vec{F}+\vec{G}}\vec{x}
+    \vec{x}^{\top}\brak{\vec{M_1}+\vec{M_2}}\vec{x}
 \end{align}
 \begin{align}
     \implies x^2-8x-180=0
@@ -126,7 +134,7 @@ for $x=-10$, there is no real solution of $y$,
 From the figure, it is clearly verified that the theoretical solution matches with the computational solution.\\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\columnwidth]{figs/Figure_1.png}
+    \includegraphics[width=0.6\columnwidth]{figs/Figure_1.png}
     \label{fig:1}
 \end{figure}
 

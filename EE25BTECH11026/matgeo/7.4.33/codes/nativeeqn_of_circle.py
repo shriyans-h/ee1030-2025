@@ -89,6 +89,7 @@ def pretty_line(L):
     return f"{a_s:.12g} x + {b_s:.12g} y + {c_s:.12g} = 0"
 
 
+
 # --- Plot ------------------------------------------------------------------
 theta_vals = np.linspace(0, 2*np.pi, 600)
 xc = O[0] + r * np.cos(theta_vals)
@@ -111,10 +112,9 @@ xvals = np.linspace(xlim_min, xlim_max, 400)
 yvals_pq = -(a*xvals + c)/b
 plt.plot(xvals, yvals_pq, 'g-', label="Given side PQ")
 
-# tangent lines via their normals
+# ---- function to plot any line ----
 def plot_line(L, style, label):
     aL,bL,cL = L
-    # avoid vertical division by zero; param in x
     if abs(bL) > 1e-8:
         y = -(aL*xvals + cL)/bL
         plt.plot(xvals, y, style, label=label)
@@ -122,21 +122,41 @@ def plot_line(L, style, label):
         xconst = -cL/aL
         plt.axvline(x=xconst, linestyle=style, label=label)
 
+# tangent lines via their normals
 plot_line(L_QR, 'k--', 'QR (tangent E)')
 plot_line(L_RP, 'c--', 'RP (tangent F)')
 
 # points
-plt.scatter([D[0], E[0], F[0]], [D[1], E[1], F[1]], c=['red','orange','purple'], zorder=5,
-            label='Tangency points D,E,F')
+plt.scatter([D[0], E[0], F[0]], [D[1], E[1], F[1]], 
+            c=['red','orange','purple'], zorder=5, label='Tangency points D,E,F')
 plt.scatter(O[0], O[1], c='black', s=40, label='Center O')
-
 plt.scatter([P[0],Q[0],R[0]],[P[1],Q[1],R[1]], c='blue', s=30, label='Vertices P,Q,R')
+plt.scatter(0,0, c='green', s=40, label="Origin (0,0)")
+
+# --- Add labels near points ---
+def add_label(pt, text, dx=0.1, dy=0.1):
+    plt.text(pt[0]+dx, pt[1]+dy, text, fontsize=11, fontweight='bold',
+             bbox=dict(facecolor='white', edgecolor='none', alpha=0.7))
+
+add_label(P, "P")
+add_label(Q, "Q")
+add_label(R, "R")
+add_label(D, "D")
+add_label(E, "E")
+add_label(F, "F")
+add_label(O, "O", dx=0.2, dy=-0.2)
+add_label([0,0], "Origin", dx=0.2, dy=-0.2)
+
+# axes
+plt.axhline(0, color='gray', linewidth=1)  # x-axis
+plt.axvline(0, color='gray', linewidth=1)  # y-axis
+
 plt.xlim(xlim_min, xlim_max)
 plt.ylim(min(P[1],Q[1],R[1], O[1]) - 3, max(P[1],Q[1],R[1], O[1]) + 3)
 plt.gca().set_aspect("equal", adjustable="box")
 plt.grid(True, linestyle='--', alpha=0.6)
 plt.legend()
 plt.title("Equilateral triangle PQR with incircle C and tangency points D,E,F")
-plt.savefig("/home/user/Matrix/Matgeo_assignments/7.4.33/figs/Figure_1.png")
+plt.savefig("/home/user/Matrix Theory: workspace/Matgeo_assignments/7.4.33/figs/Figure_1.png")
 plt.show()
 
