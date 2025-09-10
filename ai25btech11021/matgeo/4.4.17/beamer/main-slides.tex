@@ -1,0 +1,239 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+
+
+\title 
+{4.4.17}
+\date{September 10,2025}
+
+
+\author 
+{Abhiram Reddy-AI25BTECH11021}
+
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+%------------------------------------
+\begin{frame}{Problem Statement}
+
+A point \(\mathbf{P}\) divides the line segment joining the points \(\mathbf{A}(3, -5)\) and \(\mathbf{B}(-4, 8)\) such that 
+\[
+\frac{AP}{PB} = \frac{K}{1}.
+\]
+If \(\mathbf{P}\) lies on the line \(x + y = 0\), then find the value of \(K\).
+\end{frame}
+
+% Answer Step 1
+\begin{frame}
+\frametitle{\textbf{Answer: Step 1 - Represent points as vectors}}
+\[
+\mathbf{A} = \begin{pmatrix} 3 \\ -5 \end{pmatrix} = \begin{bmatrix} 3 & -5 \end{bmatrix}^\top, \quad 
+\mathbf{B} = \begin{pmatrix} -4 \\ 8 \end{pmatrix} = \begin{bmatrix} -4 & 8 \end{bmatrix}^\top.
+\]
+
+\[
+\mathbf{P} = \frac{K \mathbf{B} + \mathbf{A}}{K + 1} = \frac{K \begin{bmatrix} -4 \\ 8 \end{bmatrix} + \begin{bmatrix} 3 \\ -5 \end{bmatrix}}{K + 1} = \frac{1}{K+1} \begin{bmatrix} 3 - 4K \\ -5 + 8K \end{bmatrix}.
+\]
+\end{frame}
+
+% Answer Step 3
+\begin{frame}
+\frametitle{\textbf{Answer: Step 2 - Use the line condition}}
+The point \(\mathbf{P} = \begin{bmatrix} x \\ y \end{bmatrix}\) lies on the line \(x + y = 0\):
+\[
+\begin{bmatrix} 1 & 1 \end{bmatrix} \mathbf{P} = 0,
+\]
+\[
+\Rightarrow \begin{bmatrix} 1 & 1 \end{bmatrix} \cdot \frac{1}{K+1} \begin{bmatrix} 3 - 4K \\ -5 + 8K \end{bmatrix} = 0.
+\]
+\end{frame}
+
+% Answer Step 4
+\begin{frame}
+\frametitle{\textbf{Answer: Step 3 - Solve for \(K\)}}
+Multiply and simplify:
+\[
+\frac{1}{K+1} \left( (3 - 4K) + (-5 + 8K) \right) = 0,
+\]
+\[
+\Rightarrow \frac{1}{K+1} (-2 + 4K) = 0.
+\]
+Since \(K+1 \neq 0\),
+\[
+-2 + 4K = 0 \implies K = \frac{1}{2}.
+\]
+\[
+\boxed{K = \frac{1}{2}}.
+\]
+\end{frame}
+
+% C code frame
+\begin{frame}[fragile]
+\frametitle{\textbf{C Code: Calculate Point P}}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+
+void calculateP(double A[2], double B[2], double K, double P[2]) {
+    P[0] = (K * B[0] + A[0]) / (K + 1);
+    P[1] = (K * B[1] + A[1]) / (K + 1);
+}
+
+int main() {
+    double A[2] = {3, -5};
+    double B[2] = {-4, 8};
+    double K = 0.5;  // example value for K
+    double P[2];
+
+    calculateP(A, B, K, P);
+
+    printf("Coordinates of P are: (%.2f, %.2f)\n", P[0], P[1]);
+
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+% Python Code frame 1
+\begin{frame}[fragile]
+\frametitle{\textbf{Python Plotting Code - Part 1}}
+\begin{lstlisting}[language=Python]
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Given points A and B
+A = np.array([3, -5])
+B = np.array([-4, 8])
+
+# Given ratio K
+K = 0.5
+
+# Calculate point P dividing AB in ratio K:1
+P = (K * B + A) / (K + 1)
+\end{lstlisting}
+\end{frame}
+
+% Python Code frame 2
+\begin{frame}[fragile]
+\frametitle{\textbf{Python Plotting Code - Part 2}}
+\begin{lstlisting}[language=Python]
+# Prepare line segment AB
+line_AB_x = [A[0], B[0]]
+line_AB_y = [A[1], B[1]]
+
+# Prepare line x + y = 0 (y = -x)
+x_vals = np.linspace(-10, 10, 400)
+y_vals = -x_vals
+
+# Plotting
+plt.figure(figsize=(8, 8))
+plt.plot(line_AB_x, line_AB_y, 'b-', label='Line segment AB')
+plt.plot(x_vals, y_vals, 'g--', label='Line x + y = 0')
+\end{lstlisting}
+\end{frame}
+
+% Python Code frame 3
+\begin{frame}[fragile]
+\frametitle{\textbf{Python Plotting Code - Part 3}}
+\begin{lstlisting}[language=Python]
+# Plot points
+plt.plot(A[0], A[1], 'ro', label='Point A (3, -5)')
+plt.plot(B[0], B[1], 'bo', label='Point B (-4, 8)')
+plt.plot(P[0], P[1], 'mo', label=f'Point P (K={K})')
+
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Points A, B, P and line x + y = 0')
+plt.legend()
+plt.grid(True)
+plt.axis('equal')
+
+# Save plot
+plt.savefig('python_plot.png')
+plt.show()
+\end{lstlisting}
+\end{frame}
+
+
+
+
+\begin{frame}{Plot}
+    \centering
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{figs/python_plot.png}     
+\end{frame}
+
+
+\end{document}
