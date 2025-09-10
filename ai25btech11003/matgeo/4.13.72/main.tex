@@ -62,67 +62,89 @@ A non-zero vector $\vec{a}$ is parallel to the line of intersection of the plane
 
 \textbf{Solution:}\\
 
-First plane is determined by the vectors $\myvec{1 \\ 0 \\ 0}$ and $\myvec{1 \\ 1 \\ 0}$, so a normal is
+Let $\vec{A} =\myvec{1 \\ 0 \\ 0}$, $\vec{B} =\myvec{ 1 \\ 1 \\ 0}$, $\vec{C} =\myvec{1 \\ -1 \\ 0}$, $\vec{D} =\myvec{1 \\ 0 \\ 1}$
+
+
+Let $\vec{n}_1$ be the perpendicular vector to Plane-1.\\
+Let $\vec{n}_1 = \myvec{x_1 \\ x_2 \\ x_3}$
+
 \begin{equation}
-\vec{n}_1
-= 
-\myvec{1 \\ 0 \\ 0} \times \myvec{1 \\ 1 \\ 0}
-=
-\myvec{0 \\ 0 \\ 1}.
+\therefore \, \vec{A}^\top\vec{n}_1=0 \, \& \, \vec{B}^\top\vec{n}_1=0
+\end{equation}
+
+From Equation 0.1,
+\begin{equation}
+x_1 = 0 \, \& \, x_2 + x_1 = 0 \\
+\quad \Rightarrow x_1 = x_2 = 0
+\end{equation}
+
+\begin{equation}
+    \vec{n}_1 = \myvec{0 \\ 0 \\ x_3} \quad OR \quad \vec{n}_1 = \myvec{0 \\ 0 \\ 1}
 \end{equation}
 
 
- Second plane is determined by $\myvec{1 \\ -1 \\ 0}$ and $\myvec{1 \\ 0 \\ 1}$, so a normal is
+Let $\vec{n}_2$ be the perpendicular vector to Plane-2.\\
+Let $\vec{n}_2 = \myvec{z_1 \\ z_2 \\ z_3}$
+
 \begin{equation}
-\vec{n}_2
-=
-\myvec{1 \\ -1 \\ 0} \times \myvec{1 \\ 0 \\ 1}
-=
-\myvec{-1 \\ -1 \\ 1}.
+\therefore \, \vec{C}^\top\vec{n}_2=0 \, \& \, \vec{D}^\top\vec{n}_2=0
 \end{equation}
 
-Let vector $\vec{n}_3$ be the parallel vector of the intersection line.
+From Equation 0.4,
 \begin{equation}
-    \vec{n}_3 = \vec{n}_1 \times \vec{n}_2 = \myvec{1 \\ -1 \\ 0}
+z_1 - z_2 =0 \, \& \, z_1 + z_3 = 0
+\end{equation}
+
+\begin{equation}
+    \vec{n}_2 = \myvec{-z_3 \\ -z_3 \\ z_3} \quad OR \quad \vec{n}_2 = \myvec{-1 \\ -1 \\ 1}
 \end{equation}
 
 
- Thus any vector $\vec{a}$ parallel to the intersection line is parallel to $\myvec{1 \\ -1 \\ 0}$.
+Let $\vec{n}_3$ be the parallel vector to the line of intersection of planes.\\
+Let $\vec{n}_3 = \myvec{k_1 \\ k_2 \\ k_3}$
+
+Since, $\vec{n}_3$ is perpendicular to both $\vec{n}_1$ and $\vec{n}_2$.
 \begin{equation}
-\therefore \, \vec{a} = \myvec{1 \\ -1 \\ 0}.
+    \therefore \, \vec{n}_3^\top\vec{n}_1=0 \, \& \, \vec{n}_3^\top\vec{n}_2 =0
 \end{equation}
 
-Given vector in the question:
-\begin{equation}
-\text{Let }
-\vec{u} = \myvec{1 \\ -2 \\ 2}. \text{ (Already Given in the question)}
-\end{equation}
-
-\newpage
-
-Using the scalar product formula
-\begin{equation}
-\cos \theta = \frac{\vec{a}^{\top}\vec{u}}{ \norm{\vec{a}} \,  \norm{\vec{u}}},
-\end{equation}
-
-We compute
-\begin{align}
-\vec{a}^{\top}\vec{u} &= \myvec{1 & -1 & 0}\myvec{1 \\ -2 \\ 2} = 1 + 2 + 0 = 3, \\
- \norm{\vec{a}} &= \sqrt{\vec{a}^{\top}\vec{a}} = \sqrt{1^{2}+(-1)^{2}+0^{2}} = \sqrt{2}, \\
- \norm{\vec{u}} &= \sqrt{\vec{u}^{\top}\vec{u}}=\sqrt{1^{2}+(-2)^{2}+2^{2}} = 3.
-\end{align}\\
-
-Substituting value from Equation 0.7 and 0.8 in Equation 0.5,
-\begin{equation}
-\cos \theta = \frac{3}{\sqrt{2}\cdot 3} = \frac{1}{\sqrt{2}}
-\;\Rightarrow\;
-\theta = 45^{\circ}.
-\end{equation}
 
 \begin{align}
   \boxed{\text{The angle between } \vec{a} \, and \, 1\hat{i} -2\hat{j}+2\hat{k} \, is \, 45^{\circ}.}  
 \end{align}
   
+\begin{equation}
+k_3 = 0 \, \& \, k_3 - k_1 - k_2 = 0 \quad \Rightarrow k_2 = -k_1
+\end{equation}
+
+\begin{equation}
+\vec{n}_3 = \myvec{k_1 \\ k_2 \\ 0} \quad OR \quad \vec{n}_3 = \myvec{1 \\ 1 \\ 0}    
+\end{equation}
+
+From Equation 0.10,
+\begin{equation}
+\therefore \, \vec{a} = \myvec{1 \\ -1 \\ 0}    
+\end{equation}
+
+Let $\vec{u} = \myvec{1 \\ -2 \\ 2}$ [Already given in the Question]
+
+We know,
+\begin{equation}
+    \vec{a}^\top\vec{u} = \norm{\vec{a}}\norm{\vec{u}}\cos(\theta)
+\end{equation}
+
+\begin{equation}
+    \norm{\vec{a}} = \sqrt{\vec{a}^\top\vec{a}} = \sqrt{2}, \, \norm{\vec{u}} = \sqrt{\vec{u}^\top\vec{u}} = 3
+\end{equation}\\
+
+From Equation 0.12 and 0.13,
+\begin{equation}
+    \cos(\theta) = \dfrac{3}{3\sqrt{2}} \quad \Rightarrow \theta = 45^\circ
+\end{equation}
+
+\begin{align}
+  \boxed{\text{The angle between } \vec{a} \, and \, 1\hat{i} -2\hat{j}+2\hat{k} \, is \, 45^{\circ}.}  
+\end{align}
 
 \begin{figure}[htbp]
     \centering

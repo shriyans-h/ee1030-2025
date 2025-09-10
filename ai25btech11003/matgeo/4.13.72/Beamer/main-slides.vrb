@@ -1,9 +1,18 @@
 \frametitle{Theoretical Solution}
-Substituting value from Equation 7 and 8 in Equation 5,
+Let $\vec{u} = \myvec{1 \\ -2 \\ 2}$ [Already given in the Question]
+
+We know,
 \begin{equation}
-\cos \theta = \frac{3}{\sqrt{2}\cdot 3} = \frac{1}{\sqrt{2}}
-\;\Rightarrow\;
-\theta = 45^{\circ}.
+    \vec{a}^\top\vec{u} = \norm{\vec{a}}\norm{\vec{u}}\cos(\theta)
+\end{equation}
+
+\begin{equation}
+    \norm{\vec{a}} = \sqrt{\vec{a}^\top\vec{a}} = \sqrt{2}, \, \norm{\vec{u}} = \sqrt{\vec{u}^\top\vec{u}} = 3
+\end{equation}\\
+
+From Equation 12 and 13,
+\begin{equation}
+    \cos(\theta) = \dfrac{3}{3\sqrt{2}} \quad \Rightarrow \theta = 45^\circ
 \end{equation}
 
 \begin{align}
