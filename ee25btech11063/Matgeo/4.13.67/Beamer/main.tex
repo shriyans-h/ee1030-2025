@@ -74,11 +74,7 @@ The area of the triangle formed by the intersection of line parallel to X axis a
 \end{frame}
 
 \begin{frame}{Solution}
-   line parallel to X axis is of the form 
-\begin{align}
-    y=c.
-\end{align}
-which can be expressed in the form of 
+line parallel to X axis is of the form 
 \begin{align}
     \Vec{n}^T\Vec{x}=c.\\
      \implies \brak{0\hspace{0.5cm}1}\myvec{x\\y}=c.
@@ -91,29 +87,47 @@ As the above line passes through $\Vec{p}$(h,k)
 The three lines are as follows
 \begin{align}
     y=k\implies \brak{0\hspace{0.5cm}1}\myvec{x\\y}=k.\\
-    -x+y=0 \implies \brak{-1\hspace{0.5cm}1}\myvec{x\\y}=0.\\
+    -x+y=0 \implies \brak{-1\hspace{0.5cm}1}\myvec{x\\y}=0.
+    \end{align}
+    \begin{align}
+    x+y=2 \implies\brak{1\hspace{0.5cm}1}\myvec{x\\y}=2.
+\end{align}
+    \end{frame}
+
+    \begin{frame}{Solution}
+Let $\Vec{A}$,$\Vec{B}$,$\Vec{C}$ be the point of intersection of above 3 lines\\
+On solving equation (0.4) and (0.5)
+\begin{align}
+    \begin{pmatrix}
+        0 & 1\\
+        -1 & 1
+    \end{pmatrix} \myvec{x\\y}=\myvec{k\\0}.\\
+    \implies \vec{A}=\myvec{x\\y}=\myvec{k\\k}
+\end{align}
+On solving equation (0.5) and (0.6)
+\begin{align}
+    \begin{pmatrix}
+        -1 & 1\\
+        1 & 1
+    \end{pmatrix} \myvec{x\\y}=\myvec{0\\2} &\xrightarrow{R_2 \leftrightarrow R_1+R_2} \begin{pmatrix}
+        -1 & 1\\
+        0 & 2
+    \end{pmatrix} \myvec{x\\y}=\myvec{0\\2}.\\
+ \implies \vec{B}=\myvec{x\\y}=\myvec{1\\1}
+\end{align}
+On solving equation (0.4) and (0.6)
+\begin{align}
+    \begin{pmatrix}
+        0 & 1\\
+        1 & 1
+    \end{pmatrix} \myvec{x\\y}=\myvec{k\\2}.
     \end{align}
     \end{frame}
 
     \begin{frame}{Solution}
         \begin{align}
-    x+y=2 \implies \brak{1\hspace{0.5cm}1}\myvec{x\\y}=2.
+    \implies \vec{C}=\myvec{x\\y}=\myvec{2-k\\k}
 \end{align}
-Let $\Vec{A}$,$\Vec{B}$,$\Vec{C}$ be the point of intersection of above 3 lines\\
-By solving equation (5) and (6) we get
-\begin{align}
-    \Vec{A}=\myvec{k\\k}.
-\end{align}
-By solving equation (6) and (7) we get
-\begin{align}
-    \Vec{B}=\myvec{1\\1}.
-\end{align}
-By solving equation (5) and (7) we get
-\begin{align}
-    \Vec{C}=\myvec{2-k\\k}.
-\end{align}
-\end{frame}
-\begin{frame}{Solution}
 \begin{align}
     \text{area of }\triangle \text{ABc}=\frac{1}{2}\norm{(\vec{A}-\vec{B})\times(\vec{B}-\vec{C})}\\
     =\frac{1}{2}\norm{\myvec{k-1\\k-1}\times\myvec{k-1\\1-k}}\\
@@ -125,12 +139,17 @@ Given area of the triangle formed by the intersection of above 3 lines is 4h$^2$
     \implies (y-1)^2=4x^2\\
     \implies(y-1-2x)(y-1+2x)=0
     \end{align}
-    $\implies$ The locus of $\vec{p}$ is union of 2 straight lines
+    \end{frame}
+
+    \begin{frame}{Conclusion}
+        $\implies$ The locus of $\vec{p}$ is Pair of  straight lines
     \begin{align}
      y-1-2x=0. \implies  \brak{-2\hspace{0.5cm}1}\myvec{x\\y}=1.\\
      y-1+2x=0. \implies  \brak{2\hspace{0.5cm}1}\myvec{x\\y}=1.
    \end{align}
     \end{frame}
+    
+    
 
 \begin{frame}{Plot}
     \begin{figure}[H]
