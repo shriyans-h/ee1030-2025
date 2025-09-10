@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.13)  9 SEP 2025 18:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.13)  10 SEP 2025 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1149,10 +1149,10 @@ File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 <figs/01.png, id=53, 282.0939pt x 308.5929pt>
 File: figs/01.png Graphic file (type png)
 <use figs/01.png>
-Package pdftex.def Info: figs/01.png  used on input line 172.
+Package pdftex.def Info: figs/01.png  used on input line 168.
 (pdftex.def)             Requested size: 225.91615pt x 247.14775pt.
 
-Overfull \vbox (17.8746pt too high) detected at line 172
+Overfull \vbox (17.8746pt too high) detected at line 168
  []
 
 [6
@@ -1291,7 +1291,7 @@ l.28             fprintf(fp, "λ
                                  = %d is a solution.\n", lambda);
 ? 
 )
-Overfull \vbox (8.52684pt too high) detected at line 215
+Overfull \vbox (8.52684pt too high) detected at line 211
  []
 
 [7
@@ -1343,7 +1343,7 @@ l.17 print(f"Scalar triple product at λ=
                                          {lam}: {triple:.6g} (0 => coplanar)")
 ? 
 )
-Overfull \vbox (8.52684pt too high) detected at line 253
+Overfull \vbox (8.52684pt too high) detected at line 249
  []
 
 [8
@@ -1379,18 +1379,14 @@ l.22 ax.set_title(f"Vectors A, B, C for λ
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 786DEDF945F54D022A2FDD30FA989114;116.
  ) 
 Here is how much of TeX's memory you used:
- 27315 strings out of 476106
- 510970 string characters out of 5793933
+ 27312 strings out of 476106
+ 510952 string characters out of 5793933
  2373975 words of memory out of 5000000
- 48751 multiletter control sequences out of 15000+600000
+ 48748 multiletter control sequences out of 15000+600000
  566646 words of font info for 67 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  128i,16n,131p,426b,1410s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1406,7 +1402,7 @@ blic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt8.pfb>
-Output written on main.pdf (9 pages, 355302 bytes).
+Output written on main.pdf (9 pages, 354525 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream
