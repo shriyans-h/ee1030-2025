@@ -1,8 +1,0 @@
-\frametitle{Python Code for Plotting}
-\begin{lstlisting}[language=Python]
-plt.ylabel('cm')
-plt.legend()
-plt.savefig('right_triangle.png')
-plt.show()
-\end{lstlisting}
-
