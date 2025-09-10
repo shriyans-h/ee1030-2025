@@ -68,27 +68,78 @@
 \end{multicols}
 
 \textbf{Solution:}\\
-Let $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$ be vectors in $\mathbb{R}^3$.
+Let \begin{align}
+    \mathbf{u} &= \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \quad
+  \mathbf{v} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}, \quad
+  \mathbf{w} = \begin{bmatrix} 0 \\ 5 \end{bmatrix}.
+  \\
+\end{align}
+\begin{enumerate}[label=\alph*)]
+  \item \( \mathbf{u}^\top (\mathbf{v} \times \mathbf{w}) \)
 
-\begin{itemize}
-    \item[(a)] $\mathbf{u} \big(\mathbf{v} \times \mathbf{w}\big)$: \\
-    The expression $\mathbf{v} \times \mathbf{w}$ is a vector (cross product), and the expression $\mathbf{u} \big(\mathbf{v} \times \mathbf{w}\big)$ denotes the scalar triple product (sometimes written as the inner product of $\mathbf{u}$ and the vector $\mathbf{v} \times \mathbf{w}$).\\
-    \textbf{Meaningful.}
-    
-    \item[(b)] $\big(\mathbf{u} ^\top\mathbf{v}\big) \mathbf{w}$: \\
-    Here, $\big(\mathbf{u}^\top \mathbf{v}\big)$ represents the inner (dot) product, which is a scalar. Multiplying a scalar by a vector $\mathbf{w}$ is valid. However, if it is interpreted as $(\mathbf{u}^\top  \mathbf{v}) ^\top \mathbf{w}$ having a dot between scalar and vector, that is not defined.\\
-    \textbf{Not meaningful if interpreted as scalar dot vector.}
-    
-    \item[(c)] $\langle \mathbf{u}^\top  \mathbf{v} \rangle^\top  \mathbf{w}$: \\
-    $\langle \mathbf{u}, \mathbf{v} \rangle$ denotes the inner product (a scalar) and multiplying this scalar by vector $\mathbf{w}$ is valid scalar multiplication of a vector.\\
-    \textbf{Meaningful.} 
+\[
+\mathbf{v} \times \mathbf{w} =
+\begin{pmatrix}
+v_{23} & w_{23} \\
+v_{31} & w_{31} \\
+v_{12} & w_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+v_2 w_3 - v_3 w_2 \\
+v_3 w_1 - v_1 w_3 \\
+v_1 w_2 - v_2 w_1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \times 0 - 0 \times 5 \\
+0 \times 0 - 4 \times 0 \\
+4 \times 5 - 1 \times 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 \\
+0 \\
+20
+\end{pmatrix}
+\]
 
+\[
+\mathbf{u}^\top (\mathbf{v} \times \mathbf{w}) =
+\begin{bmatrix} 2 & 3 & 0 \end{bmatrix}
+\begin{bmatrix}
+0 \\
+0 \\
+20
+\end{bmatrix} = 0
+\]
+Since the scalar (dot) product of two vectors is defined, the expression  \(\mathbf{u} ^\top(\mathbf{v} \times \mathbf{w})\) is meaningful.
+  \item \( (\mathbf{u}^\top \mathbf{v})^\top \mathbf{w} \)
 
-    \item[(d)] $\mathbf{u} \times (\mathbf{v}^\top  \mathbf{w})$: \\
-    $\mathbf{v}^\top \mathbf{w}$ inside parentheses denotes the inner product (scalar), and cross product between a vector and scalar is undefined.\\
-    \textbf{Not meaningful.}
-    
-\end{itemize}
+  \begin{align*}
+  \mathbf{u}^\top \mathbf{v} &= \begin{bmatrix} 2 & 3 \end{bmatrix} \begin{bmatrix} 4 \\ 1 \end{bmatrix} = 2 \times 4 + 3 \times 1 = 11,
+  \\
+  (\mathbf{u}^\top \mathbf{v})^\top \mathbf{w} &= 11^\top \mathbf{w} \quad \text{(scalar dot vector)} \quad \text{undefined}.
+  \end{align*}
+
+  \item \( (\mathbf{u}^\top \mathbf{v}) \mathbf{w} \)
+
+  \begin{align*}
+  (\mathbf{u}^\top \mathbf{v}) \mathbf{w} &= 11 \times \begin{bmatrix} 0 \\ 5 \end{bmatrix} = \begin{bmatrix} 0 \\ 55 \end{bmatrix}.
+  \end{align*}
+
+  This is meaningful scalar multiplication.
+
+  \item \( \mathbf{u} \times (\mathbf{v}^\top \mathbf{w}) \)
+
+  \begin{align*}
+  \mathbf{v}^\top \mathbf{w} &= \begin{bmatrix} 4 & 1 \end{bmatrix} \begin{bmatrix} 0 \\ 5 \end{bmatrix} = 0 + 5 = 5,
+  \\
+  \mathbf{u} \times 5 &= \text{cross product of vector and scalar -- undefined}.
+  \end{align*}
+  
+\end{enumerate}
+
 \textbf{Answer:}
 \boxed{\text{Only (a) and (c) are meaningful }}
 \begin{figure}[htbp]

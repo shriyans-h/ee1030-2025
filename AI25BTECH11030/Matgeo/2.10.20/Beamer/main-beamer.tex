@@ -100,7 +100,6 @@ columns=fullflexible
 \begin{frame}
 \titlepage
 \end{frame}
-
 \section{Question}
 \begin{frame}{Question}
 \textbf{Question}:
@@ -108,10 +107,10 @@ columns=fullflexible
 \begin{multicols}{2}
 \begin{enumerate}[label=(\alph*)]
      
-\item $\vec{u} \cdot (\vec{v} \times \vec{w})$
-\item $(\vec{u} \cdot \vec{v}) \cdot \vec{w}$
-\item $(\vec{u} \cdot \vec{v})\ \vec{w}$
-\item $\vec{u} \times (\vec{v} \cdot \vec{w})$
+\item $\mathbf{u} \cdot (\mathbf{v} \times \mathbf{w})$
+\item $(\mathbf{u} \cdot \mathbf{v}) \cdot \mathbf{w}$
+\item $(\mathbf{u} \cdot \mathbf{v})\ \mathbf{w}$
+\item $\mathbf{u} \times (\mathbf{v} \cdot \mathbf{w})$
 
 \end{enumerate}
 \end{multicols}
@@ -122,32 +121,93 @@ columns=fullflexible
     \frametitle{Solution}
 Let $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$ be vectors in $\mathbb{R}^3$.
 
-\begin{itemize}
-    \item[(a)] $\mathbf{u} \big(\mathbf{v} \times \mathbf{w}\big)$: \\
-    The expression $\mathbf{v} \times \mathbf{w}$ is a vector (cross product), and the expression $\mathbf{u} \big(\mathbf{v} \times \mathbf{w}\big)$ denotes the scalar triple product (sometimes written as the inner product of $\mathbf{u}$ and the vector $\mathbf{v} \times \mathbf{w}$).\\
-    \textbf{Meaningful.}
-    
-    \item[(b)] $\big(\mathbf{u} ^\top\mathbf{v}\big) \mathbf{w}$: \\
-    Here, $\big(\mathbf{u}^\top \mathbf{v}\big)$ represents the inner (dot) product, which is a scalar. Multiplying a scalar by a vector $\mathbf{w}$ is valid. However, if it is interpreted as $(\mathbf{u}^\top  \mathbf{v}) ^\top \mathbf{w}$ having a dot between scalar and vector, that is not defined.\\
-    \textbf{Not meaningful if interpreted as scalar dot vector.}
-    
-    \item[(c)] $\langle \mathbf{u}^\top  \mathbf{v} \rangle^\top  \mathbf{w}$: \\
-    $\langle \mathbf{u}, \mathbf{v} \rangle$ denotes the inner product (a scalar) and multiplying this scalar by vector $\mathbf{w}$ is valid scalar multiplication of a vector.\\
-    \textbf{Meaningful.} 
-    
-\end{itemize}
+   Let \begin{align}
+    \mathbf{u} &= \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \quad
+  \mathbf{v} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}, \quad
+  \mathbf{w} = \begin{bmatrix} 0 \\ 5 \end{bmatrix}.
+  \\
+\end{align}
+\begin{enumerate}[label=\alph*)]
+  \item \( \mathbf{u}^\top (\mathbf{v} \times \mathbf{w}) \)
 
+\[
+\mathbf{v} \times \mathbf{w} =
+\begin{pmatrix}
+v_{23} & w_{23} \\
+v_{31} & w_{31} \\
+v_{12} & w_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+v_2 w_3 - v_3 w_2 \\
+v_3 w_1 - v_1 w_3 \\
+v_1 w_2 - v_2 w_1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \times 0 - 0 \times 5 \\
+0 \times 0 - 4 \times 0 \\
+4 \times 5 - 1 \times 0
+\end{pmatrix}
+\]
+\[
+=
+\begin{pmatrix}
+0 \\
+0 \\
+20
+\end{pmatrix}
+\]
 
+\end{enumerate}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Solution}
+\begin{enumerate}[label=\alph*) ]
+\setcounter{enumi}{1} 
+    \[
+\mathbf{u}^\top (\mathbf{v} \times \mathbf{w}) =
+\begin{bmatrix} 2 & 3 & 0 \end{bmatrix}
+\begin{bmatrix}
+0 \\
+0 \\
+20
+\end{bmatrix} = 0
+\]
+Since the scalar (dot) product of two vectors is defined, the expression  \(\mathbf{u} ^\top(\mathbf{v} \times \mathbf{w})\) is meaningful.
+  \item \( (\mathbf{u}^\top \mathbf{v})^\top \mathbf{w} \)
+
+  \begin{align*}
+  \mathbf{u}^\top \mathbf{v} &= \begin{bmatrix} 2 & 3 \end{bmatrix} \begin{bmatrix} 4 \\ 1 \end{bmatrix} = 2 \times 4 + 3 \times 1 = 11,
+  \\
+  (\mathbf{u}^\top \mathbf{v})^\top \mathbf{w} &= 11^\top \mathbf{w} \quad \text{(scalar dot vector)} \quad \text{undefined}.
+  \end{align*}
+
+  \item \( (\mathbf{u}^\top \mathbf{v}) \mathbf{w} \)
+
+  \begin{align*}
+  (\mathbf{u}^\top \mathbf{v}) \mathbf{w} &= 11 \times \begin{bmatrix} 0 \\ 5 \end{bmatrix} = \begin{bmatrix} 0 \\ 55 \end{bmatrix}.
+  \end{align*}
+\end{enumerate}
 
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Solution}
-\begin{itemize}
-    
-    \item[(d)] $\mathbf{u} \times (\mathbf{v}^\top  \mathbf{w})$: \\
-    $\mathbf{v}^\top \mathbf{w}$ inside parentheses denotes the inner product (scalar), and cross product between a vector and scalar is undefined.\\
-    \textbf{Not meaningful.}
-\end{itemize}
+\begin{enumerate}[label=\alph*) ]
+\setcounter{enumi}{3} 
+ 
+
+  This is meaningful scalar multiplication.
+
+  \item \( \mathbf{u} \times (\mathbf{v}^\top \mathbf{w}) \)
+
+  \begin{align*}
+  \mathbf{v}^\top \mathbf{w} &= \begin{bmatrix} 4 & 1 \end{bmatrix} \begin{bmatrix} 0 \\ 5 \end{bmatrix} = 0 + 5 = 5,
+  \\
+  \mathbf{u} \times 5 &= \text{cross product of vector and scalar -- undefined}.
+  \end{align*}
+  
+\end{enumerate}
 
 \textbf{Answer:}
 \boxed{\text{Only (a) and (c) are meaningful }}
@@ -218,45 +278,42 @@ int main() {
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Define the three points
-points = np.array([[1, -1], [0, 5], [3, 2]])
+# Vectors u, v, w in 2D (using first two components)
+u = np.array([2, 3])
+v = np.array([4, 1])
+w = np.array([0, 5])
 
-# Extract x and y coordinates
-x = points[:, 0]
-y = points[:, 1]
+# Origin point
+origin = np.array([0, 0])
 
-# Plot the points
-plt.plot(x, y, 'ro')
-
-# Annotate the points
-for i, (xi, yi) in enumerate(points):
-    plt.text(xi + 0.1, yi, f'({xi},{yi})')
-
-
+# Plotting the vectors
+plt.figure(figsize=(7, 7))
+plt.quiver(*origin, *u, angles='xy', scale_units='xy', scale=1, color='red', label='u = [2, 3]')
+plt.quiver(*origin, *v, angles='xy', scale_units='xy', scale=1, color='green', label='v = [4, 1]')
+plt.quiver(*origin, *w, angles='xy', scale_units='xy', scale=1, color='blue', label='w = [0, 5]')
 
 \end{lstlisting}
 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Python Code for Plotting}
-\begin{lstlisting}[language=Python]   
-# Draw the triangle by connecting points and closing the loop
-triangle = plt.Polygon(points, closed=True, fill=True, color='cyan', alpha=0.3)
-plt.gca().add_patch(triangle)
+\begin{lstlisting}[language=Python]
+# Setting the limits
+plt.xlim(-1, 5)
+plt.ylim(-1, 6)
 
-# Set limits
-plt.xlim(min(x)-1, max(x)+1)
-plt.ylim(min(y)-1, max(y)+1)
+# Adding labels and title
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('2D vectors: u, v, w')
+plt.grid()
+plt.legend()
+plt.gca().set_aspect('equal')
 
-# Title and labels
-plt.title('Triangle formed by points')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
+# Save the figure as a PNG file
+plt.savefig('2D_vectors.png')
+plt.close()
 
-# Save the figure
-plt.savefig('triangle_area.png')
-
-plt.show()
 \end{lstlisting}
 
 \end{frame}
