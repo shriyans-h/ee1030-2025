@@ -42,19 +42,17 @@ int main() {
     printf("Norm |n1| = %.2f, Norm |n2| = %.2f\n", norm1, norm2);
     printf("Cosine of angle between planes: %.5f\n", cos_theta);
 
-    // Write plane coefficients and cos(theta) to output.dat
-    // Format: n1_x n1_y n1_z d1 n2_x n2_y n2_z d2 cos_theta
-    FILE *fp = fopen("output.dat", "w");
-    if (!fp) {
-        printf("Error opening output.dat\n");
+
+ FILE *fptr;
+    fptr = fopen("output.data", "w");
+    if (fptr == NULL) {
+        printf("Error opening file!\n");
         return 1;
     }
-    fprintf(fp, "%lf %lf %lf %lf %lf %lf %lf %lf %lf\n",
-            n1[0], n1[1], n1[2], d1,
-            n2[0], n2[1], n2[2], d2,
-            cos_theta);
-    fclose(fp);
-
+    fprintf(fptr, "%lf %lf %lf %lf\n", n1[0], n1[1], n1[2], d1);
+    fprintf(fptr, "%lf %lf %lf %lf\n", n2[0], n2[1], n2[2], d2);
+    
+    fclose(fptr);
     printf("All results saved to output.dat for plotting in Python.\n");
     return 0;
 }

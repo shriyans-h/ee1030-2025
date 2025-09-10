@@ -7,7 +7,7 @@ import numpy as np
 import numpy.linalg as LA
 import mpmath as mp
 #from line.params import *
-from params import *
+#from params import *
 
 
 def dir_vec(A,B):

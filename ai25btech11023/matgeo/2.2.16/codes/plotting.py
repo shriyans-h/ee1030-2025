@@ -1,49 +1,76 @@
+import sys                                          #for path to external scripts
 
 import numpy as np
+import numpy.linalg as LA
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 from mpl_toolkits.mplot3d import Axes3D
 
-# Read coefficients and constants from output.dat
-with open('output.dat', 'r') as f:
-    vals = [float(x) for x in f.read().split()]
-n1_x, n1_y, n1_z, d1 = vals[0], vals[1], vals[2], vals[3]
-n2_x, n2_y, n2_z, d2 = vals[4], vals[5], vals[6], vals[7]
+#local imports
+#from line.funcs import *
+#from triangle.funcs import *
+#from conics.funcs import circ_gen
 
-fig = plt.figure(figsize=(8, 6))
-ax = fig.add_subplot(111, projection='3d')
+#if using termux
+import subprocess
+import shlex
+#end if
 
-x = np.linspace(-4, 4, 50)
-y = np.linspace(-4, 4, 50)
-X, Y = np.meshgrid(x, y)
+# Read plane data from output.data file
+plane_data = np.loadtxt('output.data')
 
-# Plane 1: n1_x*x + n1_y*y + n1_z*z = d1 --> z = (d1 - n1_x*X - n1_y*Y)/n1_z
-Z1 = (d1 - n1_x*X - n1_y*Y) / n1_z
-ax.plot_surface(X, Y, Z1, alpha=0.5, color="blue")
+# Extract normal vectors and d constants
+n1 = plane_data[0, :3]
+d1 = plane_data[0, 3]
+n2 = plane_data[1, :3]
+d2 = plane_data[1, 3]
 
-# Plane 2: n2_x*x + n2_y*y + n2_z*z = d2
-if abs(n2_z) < 1e-8:
-    x2 = np.linspace(-4, 4, 50)
-    y2 = (d2 - n2_x*x2) / n2_y
-    z2 = np.zeros_like(x2)
-    ax.plot3D(x2, y2, z2, color="red", linewidth=3)
+# Generate meshgrid for x and y
+x = np.linspace(-5, 10, 50)
+y = np.linspace(-5, 10, 50)
+xx, yy = np.meshgrid(x, y)
+
+def solve_for_z(normal, d, xx, yy):
+    a, b, c = normal
+    # Check if c != 0 to solve for z
+    if c != 0:
+        return (-a * xx - b * yy - d) / c
+    else:
+        # If c == 0, the plane is vertical, so return None here
+        return None
+
+# Calculate z for each plane
+zz1 = solve_for_z(n1, d1, xx, yy)
+zz2 = solve_for_z(n2, d2, xx, yy)
+
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+
+# Plot plane 1 if z coords were found
+if zz1 is not None:
+    ax.plot_surface(xx, yy, zz1, alpha=0.5, color='blue', label='Plane 1')
+
+# Plot plane 2 if z coords were found, else plot vertical plane differently
+if zz2 is not None:
+    ax.plot_surface(xx, yy, zz2, alpha=0.5, color='red', label='Plane 2')
 else:
-    Z2 = (d2 - n2_x*X - n2_y*Y)/n2_z
-    ax.plot_surface(X, Y, Z2, alpha=0.5, color="red")
+    # For vertical planes (c=0), solve for alternative variable (like x or y)
+    # Here, if c=0 for plane 2, plot by solving for x instead: a*x + b*y = -d
+    # So, x = (-b*y - d)/a (if a != 0)
+    a, b, c = n2
+    if a != 0:
+        xx_alt = np.linspace(-5, 10, 50)
+        yy_alt = np.linspace(-5, 10, 50)
+        yy_alt, zz_alt = np.meshgrid(yy_alt, xx_alt)
+        xx_alt = (-b * yy_alt - d2) / a
+        ax.plot_surface(xx_alt, yy_alt, zz_alt, alpha=0.5, color='red', label='Plane 2 (vertical)')
+    else:
+        print("Plane 2 has c=0 and a=0, special handling needed")
 
-# Optional: Points and labels as in original code
-A = np.array(([1, 1,0])).reshape(-1,1)
-B = np.array(([1,2, 1])).reshape(-1,1)
-C = np.array(([-2,2, 1])).reshape(-1,1)
-tri_coords = np.block([A, B, C])
-ax.scatter(tri_coords[0, :], tri_coords[1, :], tri_coords[2, :], c='black')
-vert_labels = ['A', 'B', 'C']
-for i, txt in enumerate(vert_labels):
-    ax.text(tri_coords[0, i], tri_coords[1, i], tri_coords[2, i],f'{txt}',fontsize=12, ha='center', va='bottom')
-
-ax.set_xlim(-4, 4)
-ax.set_ylim(-4, 4)
-ax.set_zlim(-4, 4)
-ax.set_box_aspect([1,1,1])
-plt.grid()
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_zlabel('Z axis')
+plt.title('Planes from output.data')
+#if using termux
 plt.savefig('../figs/fig.png')
 plt.show()

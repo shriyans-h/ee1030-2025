@@ -61,7 +61,7 @@ tri_coords = np.block([P,Q,R])  # Stack P,Q,R vertically
 ax.scatter(tri_coords[0, :], tri_coords[1, :], tri_coords[2, :], c=colors)
 vert_labels = ['P', 'Q', 'R']
 
-ax.quiver(1,-1,2, 2,1,1, color='r', linewidth=2, label='n')
+ax.quiver(1,-1,2, 8,4,4, color='r', linewidth=2, label='n')
 
 for i, txt in enumerate(vert_labels):
     # Annotate each point with its label and coordinates
