@@ -135,14 +135,14 @@ The sides of the triangle are $\vec{A} - \vec{B}, \vec{B} - \vec{C}, \vec{C}- \v
 \begin{frame}[fragile]
     \frametitle{Solution}
 \begin{align}
-\vec{A-B} \text{ is} \myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha} \\
-\vec{B-C} \text{ is} \myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta} \\
-\vec{C-A} \text{ is} \myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}
+\vec{A-B} = \myvec{\alpha - \beta \\ \beta - \gamma \\ \gamma - \alpha} \\
+\vec{B-C} = \myvec{\beta - \gamma \\ \gamma - \alpha \\ \alpha - \beta} \\
+\vec{C-A} = \myvec{\gamma - \alpha \\ \alpha - \beta \\ \beta - \gamma}
 \end{align}
 
 
-$\norm{\vec{A}-\vec{B}}, \norm{\vec{B}-\vec{C}}, \norm{\vec{C}-\vec{A}}$ are all equal, and equal to
-$$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$
+$\norm{\vec{A}-\vec{B}} = \norm{\vec{B}-\vec{C}} = \norm{\vec{C}-\vec{A}} = \sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$ 
+
 
 The three points therefore form an \textbf{equilateral triangle}, so option (2) is correct.
 
@@ -150,20 +150,8 @@ The three points therefore form an \textbf{equilateral triangle}, so option (2) 
 
 
 \begin{frame}[fragile]
-    \frametitle{Solution}
-
-Then $\norm{\vec{A-B}}, \norm{\vec{B-C}}, \norm{\vec{C-A}}$ are all equal, and equal to
-$$\sqrt{(\alpha - \beta)^2  + (\beta - \gamma)^2 + (\gamma - \alpha)^2}$$
-
-
-The three points therefore form an equilateral triangle, so option (2) is correct.
-
-\end{frame}
-
-
-\begin{frame}[fragile]
-    \frametitle{Python Code}
-    \begin{lstlisting}
+\frametitle{Python Code}
+\begin{lstlisting}
 import numpy as np
 
 
@@ -173,6 +161,37 @@ vector[1] = input()
 vector[2] = input()
 
 print(np.linalg.norm(vector))
+
+A = np.array([vector[0],vector[1],vector[2]])
+B = np.array([vector[1],vector[2],vector[0]])
+C = np.array([vector[2],vector[0],vector[1]])
+
+fig = plt.figure(figsize = (6,6))
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Python Code}
+\begin{lstlisting}
+ax = fig.add_subplot(111, projection='3d')
+
+AB = line_gen(A,B)
+BC= line_gen(B,C)
+CA= line_gen(C,A)
+
+plt.plot(AB[0,:],AB[1,:],AB[2,:],label='$AB$')
+plt.plot(BC[0,:],BC[1,:],BC[2,:],label='$BC$')
+plt.plot(CA[0,:],CA[1,:],CA[2,:],label='$CA$')
+
+ax = plt.gca()
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
+
+plt.grid()
+plt.axis('equal')
+plt.show()
 
 \end{lstlisting}
 
@@ -195,7 +214,6 @@ return answer;
 
 }
 \end{lstlisting}
-
 \end{frame}
 
 
@@ -219,12 +237,44 @@ answer = c_lib.norm(
     ctypes.c_float(vector[1]), 
     ctypes.c_float(vector[2]))
 print(answer)
-\end{lstlisting}
 
+A = np.array([vector[0],vector[1],vector[2]])
+B = np.array([vector[1],vector[2],vector[0]])
+C = np.array([vector[2],vector[0],vector[1]])
+
+fig = plt.figure(figsize = (6,6))
+
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Python and C Code}
+\begin{lstlisting}
+ax = fig.add_subplot(111, projection='3d')
+
+AB = line_gen(A,B)
+BC= line_gen(B,C)
+CA= line_gen(C,A)
+
+plt.plot(AB[0,:],AB[1,:],AB[2,:],label='$AB$')
+plt.plot(BC[0,:],BC[1,:],BC[2,:],label='$BC$')
+plt.plot(CA[0,:],CA[1,:],CA[2,:],label='$CA$')
+
+ax = plt.gca()
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
+
+plt.grid()
+plt.axis('equal')
+plt.show()
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Plot}
 
 For example, let us take $\alpha = 2$, $\beta = 1$, $\gamma = 3$.
 We get an equilateral triangle as shown below:
