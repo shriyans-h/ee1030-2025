@@ -50,38 +50,88 @@ The vector from origin to the points $A$ and $B$ are \begin{align}
 \textbf{Solution:}
 Given
 
+The area of the triangle $OAB$ is given by
 \begin{align}
-\vec a=\myvec{2\\-3\\2},\qquad
-\vec b=\myvec{2\\3\\1}.
+\text{Area}(OAB) = \frac{1}{2} \|\vec{a} \times \vec{b}\|.
 \end{align}
-Using the triangle-area formula,
+We have
 \begin{align}
-\text{ar}(\triangle OAB)=\frac12\|(A-O)\times(B-O)\|
-=\frac12\|\vec a\times\vec b\|. \; \; \; \; \; \; \; \;
- \end{align}
-\begin{align}
-\vec a\times\vec b=
-\myvec{
-\hat{\imath}&\hat{\jmath}&\hat{k}\\
-2&-3&2\\
-2&\phantom{-}3&1
-}
-=-9\,\hat{\imath}+2\,\hat{\jmath}+12\,\hat{k},
- \end{align}
-hence
-\begin{align}
-\|\vec a\times\vec b\|=\sqrt{(-9)^2+2^2+12^2}=\sqrt{229}.
-\end{align}
-Therefore,
-\begin{align}
-\boxed{\text{area}(\triangle OAB)=\dfrac{\sqrt{229}}{2}}.
+\mathbf{a} = (2,-3,2), \quad \vec{b} = (2,3,1).
 \end{align}
 
-\newpage
-\begin{figure}
+Using the cross product definition,
+\begin{align}
+\begin{myvec}{
+\vec{a} \times \vec{b} =
+\begin{myvec}{
+a_2 & b_2 \\
+a_3 & b_3}
+\end{myvec} \\
+\\
+\begin{myvec}{
+a_3 & b_3 \\
+a_1 & b_1}
+\end{myvec} \\
+\\
+\begin{myvec}{
+a_1 & b_1 \\
+a_2 & b_2}
+\end{myvec}}
+\end{myvec}
+\end{align}
+
+Substituting values:
+\begin{align}
+\vec{a} \times \vec{b} =
+\begin{myvec}{
+\begin{myvec}{
+-3 & 3 \\
+2 & 1}
+\end{myvec} \\
+\\
+\begin{myvec}{
+2 & 1 \\
+2 & 2}
+\end{myvec} \\
+\\
+\begin{myvec}{
+2 & 2 \\
+-3 & 3}
+\end{myvec}}
+\end{myvec}
+=
+\begin{myvec}{
+(-3)(1) - (3)(2) \\
+(2)(2) - (1)(2) \\
+(2)(3) - (2)(-3)}
+\end{myvec}.
+\end{align}
+
+\begin{align}
+\vec{a} \times \vec{b} = (-9,\, 2,\, 12).
+\end{align}
+
+Now, its magnitude is
+\begin{align}
+\|\vec{a} \times \vec{b}\| = \sqrt{(-9)^2 + (2)^2 + (12)^2}
+= \sqrt{81 + 4 + 144} = \sqrt{229}.
+\end{align}
+
+Therefore, the required area is
+\begin{align}
+\text{Area}(OAB) = \frac{1}{2}\|\vec{a} \times \vec{b}\|
+= \frac{1}{2}\sqrt{229}.
+\end{align}
+
+\begin{align}
+\boxed{\text{Area}(OAB) = \frac{\sqrt{229}}{2}}
+\end{align}
+\begin{figure}[h!]
     \centering
-\includegraphics[width=0.5\linewidth]{figs/matg4.jpeg}
-    \caption{}
+    \includegraphics[width=0.5\linewidth]{figs/matg4.jpeg}
+    \caption{Caption}
     \label{fig:placeholder}
 \end{figure}
+
 \end{document}
+
