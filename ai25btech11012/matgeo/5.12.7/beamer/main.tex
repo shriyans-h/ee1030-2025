@@ -1,0 +1,97 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\title{5.12.7 Matgeo}
+\author{AI25BTECH11012 - Garige Unnathi}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Question frame
+\begin{frame}
+\frametitle{Question}
+ Solve the following equations for x and y :
+ \begin{align*}
+     (ax - by) + (a + 4b)= 0 \\
+     (bx + ay) + (b - 4a)= 0
+ \end{align*}
+\end{frame}
+
+
+% Solution steps
+\begin{frame}
+\frametitle{Solution}
+given two equations :
+ \begin{align}
+     (ax - by) =  -(a + 4b) \\
+     (bx + ay) = -(b - 4a)
+ \end{align}
+
+ these can be written as :
+
+ \begin{align}
+     \begin{bmatrix}a & -b \\ b & a\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix} = \begin{bmatrix}-a-4b \\ 4a -b\end{bmatrix}
+ \end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution}
+\begin{align}
+    \textbf{A}\textbf{X} = \textbf{B}
+\end{align}
+To find X we need to multiply $A^{-1}$ on both sides
+\begin{align}
+   X =A^{-1}B
+\end{align}
+\end{frame}
+
+\begin{frame}
+Finding $A^{-1}$ :
+\begin{align}
+    \begin{bmatrix}a-\lambda & -b \\ b & a-\lambda\end{bmatrix} = 0\\
+    \lambda^{2} - 2a\lambda + a^{2} + b^{2} = 0
+\end{align}
+since :
+\begin{align}
+    \lvert \textbf{A}- \lambda\textbf{I} \rvert = 0\\
+    \textbf{A}^{2} -2a\textbf{A} +(a^{2}+b^{2}) =0
+\end{align}
+Multiply both sides by \textbf{$A^{-1}$}:
+\begin{align}
+    \textbf{A} -2a\textbf{I}+\textbf{$A^{-1}$}(a^{2}+b^{2}) = 0\\
+    \textbf{$A^{-1}$} = \frac{1}{a^{2}+b^{2}} (2a\textbf{I} - \textbf{A})\\
+    \textbf{$A^{-1}$}= \begin{bmatrix}a & b \\ -b & a\end{bmatrix}
+\end{align}
+\end{frame}
+
+ \begin{frame}
+from the equation 0.5 :
+\begin{align}
+    \textbf{X} =\begin{bmatrix}a & b \\ -b & a\end{bmatrix}\begin{bmatrix}-a-4b  \\ 4a -b\end{bmatrix}
+\end{align}
+\begin{align}
+   \textbf{X} =\begin{bmatrix}-a^{2} -b^{2} \\ 4a^{2} + 4b^{2}\end{bmatrix}
+\end{align}
+\end{frame}
+
+ \begin{frame}
+\frametitle{Solution}
+Hence :
+\begin{align*}
+    x = -a^{2} -b^{2}\\
+    y = 4a^{2} + 4b^{2}
+\end{align*}
+
+\end{frame}
+
+\end{document}
