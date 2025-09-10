@@ -1,21 +1,12 @@
 \frametitle{Python and C Code}
-\begin{lstlisting}
-import numpy as np
-import ctypes
-c_lib=ctypes.CDLL('./5c.so')
 
-c_lib.norm.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float]
-c_lib.norm.restype = ctypes.c_float
+For example, let us take $\alpha = 2$, $\beta = 1$, $\gamma = 3$.
+We get an equilateral triangle as shown below:
 
-vector = np.zeros(3)
-vector[0] = input()
-vector[1] = input()
-vector[2] = input()
-
-answer = c_lib.norm(
-    ctypes.c_float(vector[0]),
-    ctypes.c_float(vector[1]),
-    ctypes.c_float(vector[2]))
-print(answer)
-\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{Figs/Example.png}
+    \caption{Equilateral Triangle}
+    \label{fig:placeholder}
+\end{figure}
 

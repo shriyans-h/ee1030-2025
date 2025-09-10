@@ -1,5 +1,17 @@
 import numpy as np
 import ctypes
+import matplotlib.pyplot as plt
+
+def line_gen(A,B):
+  len =10
+  dim = A.shape[0]
+  x_AB = np.zeros((dim,len))
+  lam_1 = np.linspace(0,1,len)
+  for i in range(len):
+    temp1 = A + lam_1[i]*(B-A)
+    x_AB[:,i]= temp1.T
+  return x_AB
+
 
 c_lib=ctypes.CDLL('./5c.so')
 
@@ -18,3 +30,35 @@ answer = c_lib.norm(
 )
 
 print(answer)
+
+A = np.array([vector[0],vector[1],vector[2]])
+B = np.array([vector[1],vector[2],vector[0]])
+C = np.array([vector[2],vector[0],vector[1]])
+
+
+fig = plt.figure(figsize = (6,6))
+
+ax = fig.add_subplot(111, projection='3d')
+
+AB = line_gen(A,B)
+BC= line_gen(B,C)
+CA= line_gen(C,A)
+
+
+#Plotting all lines
+plt.plot(AB[0,:],AB[1,:],AB[2,:],label='$AB$')
+plt.plot(BC[0,:],BC[1,:],BC[2,:],label='$BC$')
+plt.plot(CA[0,:],CA[1,:],CA[2,:],label='$CA$')
+
+
+ax = plt.gca()
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
+
+plt.grid()
+plt.axis('equal')
+
+
+plt.show()

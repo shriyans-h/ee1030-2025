@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  10 SEP 2025 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  10 SEP 2025 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1551,9 +1551,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 55.
+<Figs/Example.png, id=51, 528.97626pt x 492.84125pt>
+File: Figs/Example.png Graphic file (type png)
+<use Figs/Example.png>
+Package pdftex.def Info: Figs/Example.png  used on input line 62.
+(pdftex.def)             Requested size: 272.99881pt x 254.34624pt.
 
 
-[2] (./main.aux)
+[2]
+
+[3 <./Figs/Example.png>] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
@@ -1562,13 +1569,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52718 strings out of 473190
- 1265303 string characters out of 5715800
- 1846704 words of memory out of 5000000
- 75190 multiletter control sequences out of 15000+600000
+ 52737 strings out of 473190
+ 1265678 string characters out of 5715800
+ 1846754 words of memory out of 5000000
+ 75207 multiletter control sequences out of 15000+600000
  604043 words of font info for 149 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,14n,109p,1194b,1021s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,14n,109p,1194b,1023s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texliv
@@ -1576,10 +1583,10 @@ e/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 49890 bytes).
+Output written on main.pdf (3 pages, 313486 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
