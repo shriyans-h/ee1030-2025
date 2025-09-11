@@ -59,52 +59,60 @@
 
 
 \solution
-\\Given:
+Let the Equation of the Plane be $\vec{n}^\top\vec{x}$ = 1.\\
 
-\begin{align}
-P = \myvec{6\\5\\9}, \,
-A = \myvec{3\\-1\\2}, \,
-B = \myvec{5\\2\\4}, \,
-C = \myvec{-1\\-1\\6}.
-\end{align}
+Since, $\vec{A}, \, \vec{B}, \, \vec{C}$ lie on the Plane.
 
-First, form two direction vectors on the plane using the given points.
-\begin{align} LET \, \,
-\vec{u} &= B - A = \myvec{2\\3\\2}, &
-\vec{v} &= C - A = \myvec{-4\\0\\4}.
-\end{align}
-
-Let $\vec{n} = \myvec{n_1 \\ n_2 \\ n_3}$ be the perpendicular vector to the Plane.\\
-Therefore, the equation of the Plane is $\vec{n}^\top \vec{x}=1$\\
-Let the equation of the Plane be $\myvec{n_1 & n_2 & n_3}\vec{x}=1$\\
-
-Finding $\vec{n}$ which is orthogonal to both $\vec{u}$ and $\vec{v}$ by solving the homogeneous system:
 \begin{equation}
-\myvec{2 & 3 & 2\\ -4 & 0 & 4}\myvec{n_1\\n_2\\n_3}=\myvec{0\\0}.
+    \therefore \, \vec{n}^\top\vec{A}=1, \, \vec{n}^\top\vec{B}=1,  \, \vec{n}^\top\vec{C}=1
 \end{equation}
 
-Row-reduce and solve for a convenient integer solution.
-\begin{align}
-\myvec{2 & 3 & 2\\ -4 & 0 & 4}
-&\xrightarrow{R_2\leftarrow R_2+2R_1}
-\myvec{2 & 3 & 2\\ 0 & 6 & 8},\\
-6n_2+8n_3&=0 \;\Rightarrow\; 3n_2+4n_3=0, \quad
-n_3=3,\; n_2=-4,\; 2n_1+3n_2+2n_3=0 \Rightarrow n_1=3,\\
-\therefore \vec{n} &= \frac{1}{19}\myvec{3\\-4\\3}.
-\end{align}
+\begin{center}
+    OR
+\end{center}
 
-Writing the plane as $\vec{n}^\top\vec{x} = 1$
+\begin{equation}
+    \vec{A}^\top\vec{n}=1, \, \vec{B}^\top\vec{n}=1, \, \vec{C}^\top\vec{n}=1
+\end{equation}
 
-\newpage
+Let $\vec{n} = \myvec{n_1 \\ n_2 \\ n_3}$
 
-Finally, applying the point-to-plane distance formula and simplify.
+From Equation 0.2,
+\begin{equation}
+    (\vec{A} \, \vec{B} \, \vec{C})^\top n=1
+\end{equation}
 
-\begin{align}
-d &= \frac{\abs{\vec{n}^\top P - 1}}{\norm{\vec{n}}}\\
-&= \frac{\abs{3\cdot 6+(-4)\cdot 5+3\cdot 9-19}}{\sqrt{3^2+(-4)^2+3^2}}\\
-&= \frac{\abs{25-19}}{\sqrt{34}}\\
-&= \frac{6}{\sqrt{34}}=\frac{3\sqrt{34}}{17}.
-\end{align}
+\begin{equation}
+\myvec{3 & -1 & 2 \\ 5 & 2 & 4\\ -1 & -1 & 6}\myvec{n_1 \\ n_2 \\ n_3} = 1
+\end{equation}
+
+
+From Equation 0.4,
+\begin{equation}
+    n_1 = 3/19, \, n_2 = -4/19, \, n_3 = 3/19
+\end{equation}
+
+\begin{equation}
+\therefore \, \text{The Equation of the Plane is: } \dfrac{1}{19}\myvec{3 & -4 & 3}\vec{x} = 1
+\end{equation}\\
+
+The Distance of Point from a Plane is given by the formula:
+\begin{equation}
+    d = \dfrac{\norm{\vec{n}^\top\vec{Q}-1}}{\norm{\vec{n}}}
+\end{equation}
+
+Let $d$ be the distance between Point $\vec{P}$ and the Plane.
+\begin{equation}
+    Then, \, \, d = \dfrac{\norm{\vec{n}^\top\vec{P}-1}}{\norm{\vec{n}}}
+\end{equation}
+
+\begin{equation}
+    d= \dfrac{\norm{\frac{18-20+27}{19}-1}}{(\frac{\sqrt{34}}{19})}
+\end{equation}
+
+\begin{equation}
+\therefore \, d = \dfrac{3\sqrt{34}}{17}    
+\end{equation}
 
 \begin{align}
     \boxed{\text{The Distance between the Plane and } \vec{P} \, is \, \dfrac{3\sqrt{34}}{17} \, units.}
@@ -112,7 +120,7 @@ d &= \frac{\abs{\vec{n}^\top P - 1}}{\norm{\vec{n}}}\\
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\columnwidth]{figs/fig1.png}
+    \includegraphics[width=0.95\columnwidth]{figs/fig1.png}
     \caption{Plane}
     \label{fig:fig/fig1.png}
 \end{figure}
