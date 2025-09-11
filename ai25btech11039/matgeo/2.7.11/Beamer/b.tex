@@ -94,19 +94,43 @@ $A=\myvec{1\\-1}$,\; $B=\myvec{-4\\6}$,\; $C=\myvec{-3\\-5}$.
 %
 \begin{frame}
 \frametitle{Solution}
-\begin{align}
-&A=\myvec{1\\-1\\0},\quad
-B=\myvec{-4\\6\\0},\quad
-C=\myvec{-3\\-5\\0}.\\
-&\vec{AB}=B-A=\myvec{-5\\7\\0},\qquad
-\vec{AC}=C-A=\myvec{-4\\-4\\0}.\\
-&\vec{AB}\times\vec{AC}
-=\myvec{0\\0\\(-5)(-4)-(7)(-4)}
-=\myvec{0\\0\\48}.\\
-&\therefore\ \text{Area}
-=\frac12\,\norm{\vec{AB}\times\vec{AC}}
-=\frac12\cdot 48=24.
-\end{align}
+\textbf{Given:} The vertices of the triangle are
+\[
+A = \myvec{1\\-1}, \quad B = \myvec{-4\\6}, \quad C = \myvec{-3\\-5}.
+\]
+
+\medskip
+
+The area of a triangle with vertices $A,B,C$ is given by
+\[
+\Delta = \frac{1}{2}\,\left|\det\left(\myvec{B-A & C-A}\right)\right|
+= \frac{1}{2}\,\left\|(B-A)\times(C-A)\right\|,
+\]
+where the cross product in 2D is interpreted as the determinant of a $2\times2$ matrix.
+
+\medskip
+
+\[
+B - A = \myvec{-4\\6}-\myvec{1\\-1}=\myvec{-5\\7}, \quad
+C - A = \myvec{-3\\-5}-\myvec{1\\-1}=\myvec{-4\\-4}.
+\]
+Now,
+\[
+\det\myvec{-5 & -4\\ 7 & -4} = (-5)(-4) - (7)(-4) = 20+28=48.
+\]
+
+
+\end{frame}
+\begin{frame}{Solution}
+    Hence,
+\[
+\Delta = \frac{1}{2}\,|48|=24.
+\]
+\medskip
+\textbf{Final Answer:}
+\[
+\boxed{24}
+\]
 
 \end{frame}
 \begin{frame}{Plot}
