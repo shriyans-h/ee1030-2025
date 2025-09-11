@@ -69,23 +69,17 @@ Draw an Right angle  triangle $\triangle ABC$ in which $\boldsymbol{BC} = 12 \te
       AB^2 & = 5^2 = 25, \\
       BC^2 & = 12^2 = 144.
    \end{align}
-According to the Pythagorean theorem:
+   The squared length of AC is just the vector AC dotted with itself. In matrix form, that means multiplying the row vector (transpose) of AC with the column vector AC.
    \begin{align}
-      AC^2 & = AB^2 + BC^2 
-   \end{align}
-Now substituting in the values:
-
-   \begin{align}
-      AC^2 & = 25 + 144 \\
-      & = 169.
-   \end{align}
-
-Thus, we find:
-
-   \begin{align}
-      AC & = \sqrt{169} \\
-      & = 13 \, \text{cm}.
-   \end{align}
+    AC^2 &= (\vec{AC})^T (\vec{AC}) \\
+         &= \myvec{12 -5} \myvec{12 \\ -5} \\
+         &= (12 \times 12) + (-5 \times -5) \\
+         &= 144 + 25 = 169
+\end{align}
+Thus, the length of AC is:
+\begin{align}
+    AC &= \sqrt{169} = 13 \text{ cm}.
+\end{align}
     \begin{figure}[h]
        \centering
        \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
