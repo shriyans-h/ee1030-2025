@@ -39,6 +39,18 @@ plt.plot(BC[0,:],BC[1,:],BC[2,:],label='$BC$')
 plt.plot(CA[0,:],CA[1,:],CA[2,:],label='$CA$')
 
 
+A = np.array([vector[0],vector[1],vector[2]]).reshape(-1,1)
+B = np.array([vector[1],vector[2],vector[0]]).reshape(-1,1)
+C = np.array([vector[2],vector[0],vector[1]]).reshape(-1,1)
+
+colors = np.arange(1,4)
+allcoords = np.block([A,B,C])
+
+labels = [((int(vector[0]),int(vector[1]),int(vector[2]))), (int(vector[1]),int(vector[2]),int(vector[0])), (int(vector[2]),int(vector[0]),int(vector[1]))]
+
+for i in range(3):
+    ax.text(allcoords[i,0] + 0.2, allcoords[i,1] + 0.2, allcoords[i,2] + 0.2, labels[i], fontsize=12)
+
 ax = plt.gca()
 ax.spines['top'].set_color('none')
 ax.spines['left'].set_position('zero')

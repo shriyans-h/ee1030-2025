@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  10 SEP 2025 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  11 SEP 2025 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1948,13 +1948,13 @@ Overfull \vbox (13.72923pt too high) detected at line 274
 \openout4 = `main.vrb'.
 
  (./main.vrb
-<Figs/Example.png, id=324, 528.97626pt x 492.84125pt>
+<Figs/Example.png, id=324, 546.04pt x 545.03625pt>
 File: Figs/Example.png Graphic file (type png)
 <use Figs/Example.png>
 Package pdftex.def Info: Figs/Example.png  used on input line 8.
-(pdftex.def)             Requested size: 205.37926pt x 191.35pt.
+(pdftex.def)             Requested size: 205.37926pt x 205.00351pt.
 )
-Overfull \vbox (29.15283pt too high) detected at line 289
+Overfull \vbox (42.80634pt too high) detected at line 289
  []
 
 
@@ -1971,7 +1971,7 @@ Overfull \vbox (29.15283pt too high) detected at line 289
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250910161822 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250911143040 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1999,7 +1999,7 @@ ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (11 pages, 448630 bytes).
+Output written on main.pdf (11 pages, 412808 bytes).
 PDF statistics:
  411 PDF objects out of 1000 (max. 8388607)
  337 compressed objects within 4 object streams
