@@ -94,28 +94,34 @@ columns=fullflexible
 \frametitle{Solution}
 
 \textbf{Solution.}
-Let
+\textbf{Given:} $\|\myvec{a}\|=\|\myvec{b}\|=1$ and $\left\|\sqrt{3}\,\myvec{a}-\myvec{b}\right\|=1$.
+
+\medskip
+ Use the length definition $\|x\|^2=x^\top x$ and the scalar–product relation
+$\myvec{a}^\top\myvec{b}=\|\myvec{a}\|\,\|\myvec{b}\|\cos\theta$.
+
+
+\medskip
+
 \[
-\vec a=\myvec{a_1\\a_2\\a_3},\qquad
-\vec b=\myvec{b_1\\b_2\\b_3},\qquad
-\vec a^{\top}\vec a=\vec b^{\top}\vec b=1.
+\begin{aligned}
+\left\|\sqrt{3}\,\myvec{a}-\myvec{b}\right\|^2
+&= \left(\sqrt{3}\,\myvec{a}-\myvec{b}\right)^\top\!\left(\sqrt{3}\,\myvec{a}-\myvec{b}\right)\\
+&= 3\,\myvec{a}^\top\myvec{a}+\myvec{b}^\top\myvec{b}-2\sqrt{3}\,\myvec{a}^\top\myvec{b}\\
+&= 3\|\myvec{a}\|^2+\|\myvec{b}\|^2-2\sqrt{3}\,\|\myvec{a}\|\,\|\myvec{b}\|\cos\theta\\
+&= 3+1-2\sqrt{3}\cos\theta.
+\end{aligned}
 \]
-If $\sqrt{3}\,\vec a-\vec b$ is a unit vector, then
+Since $\left\|\sqrt{3}\,\myvec{a}-\myvec{b}\right\|=1$, we get
 \[
-1=\|\sqrt{3}\,\vec a-\vec b\|^2
-=(\sqrt{3}\,\vec a-\vec b)^{\top}(\sqrt{3}\,\vec a-\vec b)
-=3\,\vec a^{\top}\vec a+\vec b^{\top}\vec b-2\sqrt{3}\,\vec a^{\top}\vec b.
-\]
-Hence
-\[
-4-2\sqrt{3}\,(\vec a^{\top}\vec b)=1
+1=4-2\sqrt{3}\cos\theta
 \;\Longrightarrow\;
-\vec a^{\top}\vec b=\frac{\sqrt{3}}{2}.
+3=2\sqrt{3}\cos\theta
+\;\Longrightarrow\;
+\cos\theta=\frac{3}{2\sqrt{3}}=\frac{\sqrt{3}}{2}.
 \]
-Let $\theta$ be the angle between $\vec a$ and $\vec b$;
-$\cos\theta=\vec a^{\top}\vec b$, so
+Hence,
 \[
-\cos\theta=\frac{\sqrt{3}}{2}\quad\Rightarrow\quad
 \boxed{\theta=30^\circ}.
 \]
 
