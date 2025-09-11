@@ -1,0 +1,294 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+\begin{document}
+
+\title 
+{3.2.1}
+\date{september 10,2025}
+
+
+\author 
+{Namaswi-EE25BTECH11060}
+\frame{\titlepage}
+\begin{frame}{Question}
+ Draw a triangle ABC in which AB=4cm,BC=6cm and AC=9cm.
+\end{frame}
+\begin{frame}{solution}
+ According to given data lets assume,\\
+\begin{align*}
+    A=\begin{pmatrix}0\\0\end{pmatrix}\qquad 
+B=\begin{pmatrix}4\\0\end{pmatrix}\qquad 
+C=\begin{pmatrix}x\\y\end{pmatrix}   
+\end{align*}
+
+ 
+\end{frame}
+
+\begin{frame}{solution}
+  \begin{align}
+    ||C-A||=9\\
+    C^\top C=81\\
+    ||C-B||=6\\
+    (C-B)^\top (C-B)=36\\
+    C^\top C-2 B^\top C +B^\top B=36\\
+    as,B^\top B =16 \; ; C^\top C=81\\
+    2B^\top C =61\\
+    \begin{pmatrix}
+        8 & 0
+    \end{pmatrix}C=61\\
+    Augmented\;Matrix \implies
+    \begin{pmatrix}
+        8 & 0 \;| \;61
+    \end{pmatrix}\\
+    \implies
+    \begin{pmatrix}
+        1 & 0 \;|\; 61/8
+    \end{pmatrix}\\
+    x=61/8
+\end{align}
+\end{frame}
+\begin{frame}{Solution}
+\begin{align}
+     as,C^\top C =81\\
+    x^2+y^2=81\\
+    y=\sqrt{\frac{1463}{64}}\\
+    C=\begin{pmatrix}
+        7.625\\ \pm4.781
+    \end{pmatrix}
+\end{align}
+Refer fig
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code }
+
+    \begin{lstlisting}
+
+ #include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Given distances (according to your solution)
+    double AC = 9.0, BC = 6.0;
+    double AB = 4.0;
+
+    // Fix A and B
+    double Ax = 0.0, Ay = 0.0;
+    double Bx = 4.0, By = 0.0;
+
+    // Step 1: Find x using the relation (from your derivation)
+    // 2 * B^T * C = AC^2 + B^T B - BC^2
+    double x = (AC*AC + (Bx*Bx + By*By) - BC*BC) / (2 * Bx);
+
+ \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code}
+    \begin{lstlisting}
+     // Step 2: Use AC^2 = x^2 + y^2 to solve for y
+    double y_square = AC*AC - x*x;
+
+    if (y_square < 0) {
+        printf("No real solution (triangle inequality violated).\n");
+        return 0;
+    }
+
+    double y1 = sqrt(y_square);
+    double y2 = -sqrt(y_square);
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code}
+    \begin{lstlisting}
+  // Print results
+    printf("Coordinates of A: (%.3f, %.3f)\n", Ax, Ay);
+    printf("Coordinates of B: (%.3f, %.3f)\n", Bx, By);
+    printf("Possible coordinates of C:\n");
+    printf("C1 = (%.3f, %.3f)\n", x, y1);
+    printf("C2 = (%.3f, %.3f)\n", x, y2);
+
+    return 0;
+}
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+ import matplotlib.pyplot as plt
+
+# Define vertices
+A = (0, 0)
+B = (4, 0)
+C = (7.625, 4.781)
+
+# Collect coordinates (close the triangle by repeating A at the end)
+x_coords = [A[0], B[0], C[0], A[0]]
+y_coords = [A[1], B[1], C[1], A[1]]
+
+# Plot the triangle
+plt.figure(figsize=(6,6))
+plt.plot(x_coords, y_coords, 'b-', linewidth=2)      # Triangle edges
+plt.fill(x_coords, y_coords, 'skyblue', alpha=0.3)   # Fill inside
+
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+ # Plot vertices
+plt.scatter(*A, color='red', s=60)
+plt.scatter(*B, color='green', s=60)
+plt.scatter(*C, color='purple', s=60)
+
+# Label points
+plt.text(A[0]-0.3, A[1]-0.3, 'A', fontsize=12, fontweight='bold')
+plt.text(B[0]+0.2, B[1]-0.3, 'B', fontsize=12, fontweight='bold')
+plt.text(C[0]+0.2, C[1]+0.2, 'C', fontsize=12, fontweight='bold')
+
+# Formatting
+plt.axhline(0, color='gray', linewidth=0.5)
+plt.axvline(0, color='gray', linewidth=0.5)
+plt.gca().set_aspect('equal', adjustable='box')
+plt.title("Triangle ABC")
+plt.grid(True)
+plt.show()
+
+
+
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{C and Python Code}
+    \begin{lstlisting}
+ import ctypes
+import os
+
+# Load shared object
+lib = ctypes.CDLL(os.path.abspath("./triangle.so"))
+
+# Define argument and return types
+lib.find_triangle.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double,
+                              ctypes.POINTER(ctypes.c_double),
+                              ctypes.POINTER(ctypes.c_double),
+                              ctypes.POINTER(ctypes.c_double)]
+
+    \end{lstlisting}
+\end{frame}
+ \begin{frame}[fragile]
+    \frametitle{C and Python Code}
+    \begin{lstlisting}
+ # Function wrapper
+def find_triangle(AB, AC, BC):
+    x = ctypes.c_double()
+    y1 = ctypes.c_double()
+    y2 = ctypes.c_double()
+    
+    lib.find_triangle(AB, AC, BC,
+                      ctypes.byref(x), ctypes.byref(y1), ctypes.byref(y2))
+    
+    return x.value, y1.value, y2.value
+
+
+    \end{lstlisting}
+\end{frame}
+ \begin{frame}[fragile]
+    \frametitle{C and Python Code}
+    \begin{lstlisting}
+ 
+# Example usage
+if __name__ == "__main__":
+    AB, AC, BC = 4.0, 9.0, 6.0   # Example
+    x, y1, y2 = find_triangle(AB, AC, BC)
+    
+    print(f"A = (0,0)")
+    print(f"B = ({AB},0)")
+    print(f"C1 = ({x:.3f},{y1:.3f})")
+    print(f"C2 = ({x:.3f},{y2:.3f})")
+
+
+    \end{lstlisting}
+\end{frame}
+  
+
+
+\begin{frame}{Plot}
+    \centering
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{Figure_5.png}     
+\end{frame}
+\end{document}

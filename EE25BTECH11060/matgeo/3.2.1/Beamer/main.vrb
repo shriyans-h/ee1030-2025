@@ -1,0 +1,15 @@
+\frametitle{C and Python Code}
+    \begin{lstlisting}
+
+# Example usage
+if __name__ == "__main__":
+    AB, AC, BC = 4.0, 9.0, 6.0   # Example
+    x, y1, y2 = find_triangle(AB, AC, BC)
+
+    print(f"A = (0,0)")
+    print(f"B = ({AB},0)")
+    print(f"C1 = ({x:.3f},{y1:.3f})")
+    print(f"C2 = ({x:.3f},{y2:.3f})")
+
+
+    \end{lstlisting}
