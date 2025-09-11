@@ -1,0 +1,164 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+\title 
+{MatGeo Assignment 2.6.13}
+
+\author
+{AI25BTECH11007}
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}{Question}
+Given that vectors $\vec{a},\vec{b},\vec{c}$ form a triangle such that
+\[
+\vec{a}=\vec{b}+\vec{c},
+\]
+find $p,q,r,s$ given that
+\[
+\vec{a}=p\hat{i}+q\hat{j}+r\hat{k},\qquad
+\vec{b}=s\hat{i}+3\hat{j}+4\hat{k},\qquad
+\vec{c}=3\hat{i}+1\hat{j}-2\hat{k},
+\]
+and the area of the triangle is $5\sqrt{6}$.\\
+
+
+\end{frame}
+\begin{frame}{Solution}
+From the condition given, 
+\[
+\vec{a}=\vec{b}+\vec{c},
+\]
+
+\begin{equation}
+\myvec{p\\q\\r} = \myvec{s\\3\\4} + \myvec{3\\1\\-2}.
+\end{equation}
+Rearrange to write a linear system in the unknowns $(p,s,q,r)$.
+\begin{align}
+p - s &= 3,\\
+q       &= 4,\\
+r       &= 2. 
+\end{align}
+
+Thus $q=4,\ r=2$ and $p=s+3$. The variable $s$ is a free parameter. We express the family of solutions as
+\begin{equation}\label{eq:param_solution}
+\myvec{p\\q\\r} = \myvec{s+3\\4\\2},\qquad s\in\mathbb{R}.
+\end{equation}
+\end{frame}
+\begin{frame}
+Choose $\vec{b}$ and $\vec{c}$ as the two adjacent side-vectors of the triangle.\\ The area $A$ of the triangle,
+\begin{equation}\label{eq:area_formula}
+A=\tfrac{1}{2}\|\vec{b}\times\vec{c}\|.
+\end{equation}
+
+\begin{equation}
+\|\vec{b}\times\vec{c}\| = 2A = 10\sqrt{6}.
+\end{equation}
+
+Substitute $\vec{b}=\myvec{s\\3\\4}$ and $\vec{c}=\myvec{3\\1\\-2}$. Compute the cross product.
+\begin{align}
+\vec{b}\times\vec{c}
+&= \myvec{-10\\2s+12\\s-9}.
+\end{align}
+\end{frame}
+\begin{frame}
+Therefore the squared norm is
+\begin{equation}\label{eq:norm_squared}
+\|\vec{b}\times\vec{c}\|^2 = (-10)^2 + (2s+12)^2 + (s-9)^2 = (10\sqrt{6})^2
+\end{equation}
+\begin{equation}\label{eq:area_equation}
+100 + (2s+12)^2 + (s-9)^2 = 600.
+\end{equation}
+
+Hence
+\begin{equation}\label{eq:s_values}
+s = 5 \quad\text{or}\quad s = -11.
+\end{equation}
+
+Back-substitute to obtain $p,q,r$\\
+\noindent
+\textbf{Case 1: $s=5$.} Then from \eqref{eq:param_solution}
+\begin{equation}\label{eq:case1}
+p = s+3 = 8,\qquad q=4,\qquad r=2.
+\end{equation}
+
+\textbf{Case 2: $s=-11$.} Then
+\begin{equation}\label{eq:case2}
+p = s+3 = -8,\qquad q=4,\qquad r=2.
+\end{equation}
+
+\begin{equation}\label{eq:final_answer}
+(p,q,r,s) = (8,4,2,5)\quad\text{or}\quad (p,q,r,s)=(-8,4,2,-11).
+\end{equation}
+
+\end{frame}
+\end{document}

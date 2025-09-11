@@ -1,0 +1,146 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow} 
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{MatGeo Assignment 2.6.13}
+\author{AI25BTECH11007}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question:}\\
+Given that vectors $\vec{a},\vec{b},\vec{c}$ form a triangle such that
+\[
+\vec{a}=\vec{b}+\vec{c},
+\]
+find $p,q,r,s$ given that
+\[
+\vec{a}=p\hat{i}+q\hat{j}+r\hat{k},\qquad
+\vec{b}=s\hat{i}+3\hat{j}+4\hat{k},\qquad
+\vec{c}=3\hat{i}+1\hat{j}-2\hat{k},
+\]
+and the area of the triangle is $5\sqrt{6}$.\\
+
+
+\noindent
+\textbf{Solution:}\\
+From the condition given, 
+\[
+\vec{a}=\vec{b}+\vec{c},
+\]
+
+\begin{equation}
+\myvec{p\\q\\r} = \myvec{s\\3\\4} + \myvec{3\\1\\-2}.
+\end{equation}
+Rearrange to write a linear system in the unknowns $(p,s,q,r)$.
+\begin{align}
+p - s &= 3,\\
+q       &= 4,\\
+r       &= 2. 
+\end{align}
+
+Thus $q=4,\ r=2$ and $p=s+3$. The variable $s$ is a free parameter. We express the family of solutions as
+\begin{equation}\label{eq:param_solution}
+\myvec{p\\q\\r} = \myvec{s+3\\4\\2},\qquad s\in\mathbb{R}.
+\end{equation}
+
+
+Choose $\vec{b}$ and $\vec{c}$ as the two adjacent side-vectors of the triangle.\\ The area $A$ of the triangle,
+\begin{equation}\label{eq:area_formula}
+A=\tfrac{1}{2}\|\vec{b}\times\vec{c}\|.
+\end{equation}
+
+\begin{equation}
+\|\vec{b}\times\vec{c}\| = 2A = 10\sqrt{6}.
+\end{equation}
+
+Substitute $\vec{b}=\myvec{s\\3\\4}$ and $\vec{c}=\myvec{3\\1\\-2}$. Compute the cross product.
+\begin{align}
+\vec{b}\times\vec{c}
+&= \myvec{-10\\2s+12\\s-9}.
+\end{align}
+Therefore the squared norm is
+\begin{equation}\label{eq:norm_squared}
+\|\vec{b}\times\vec{c}\|^2 = (-10)^2 + (2s+12)^2 + (s-9)^2 = (10\sqrt{6})^2
+\end{equation}
+\begin{equation}\label{eq:area_equation}
+100 + (2s+12)^2 + (s-9)^2 = 600.
+\end{equation}
+
+Hence
+\begin{equation}\label{eq:s_values}
+s = 5 \quad\text{or}\quad s = -11.
+\end{equation}
+
+Back-substitute to obtain $p,q,r$\\
+\noindent
+\textbf{Case 1: $s=5$.} Then from 
+\begin{equation}\label{eq:case1}
+p = s+3 = 8,\qquad q=4,\qquad r=2.
+\end{equation}
+
+\textbf{Case 2: $s=-11$.} Then
+\begin{equation}
+\label{eq:case2}
+p = s+3 = -8,\qquad q=4,\qquad r=2.
+\end{equation}
+
+\begin{equation}\label{eq:final_answer}
+(p,q,r,s) = (8,4,2,5)\quad\text{or}\quad (p,q,r,s)=(-8,4,2,-11).
+\end{equation}
+
+\end{document}
