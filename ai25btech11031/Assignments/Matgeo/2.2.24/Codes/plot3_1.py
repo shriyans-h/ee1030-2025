@@ -1,50 +1,50 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the points
+# Define points A, B, C, D
 A = np.array([1, 1, 1])
 B = np.array([2, 5, 0])
 C = np.array([3, 2, -3])
 D = np.array([1, -6, -1])
 
-# Vectors
+# Compute vectors AB and CD
 AB = B - A
 CD = D - C
 
-# Compute angle using dot product
-dot_product = np.dot(AB, CD)
-norms = np.linalg.norm(AB) * np.linalg.norm(CD)
-cos_theta = dot_product / norms
-theta = np.degrees(np.arccos(cos_theta))
+# Shift CD so its tail is at A (collinearity check)
+CD_shifted_start = A
+CD_shifted_end = A + CD
 
-print("Vector AB:", AB)
-print("Vector CD:", CD)
-print("Dot product =", dot_product)
-print("cos(theta) =", cos_theta)
-print("Angle between AB and CD =", theta, "degrees")
-
-# Create 3D plot
-fig = plt.figure(figsize=(8,6))
+# Plot
+fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-# Plot points
-ax.scatter(*A, color='red', label='A(1,1,1)')
-ax.scatter(*B, color='red', label='B(2,5,0)')
-ax.scatter(*C, color='green', label='C(3,2,-3)')
-ax.scatter(*D, color='green', label='D(1,-6,-1)')
+# Original vectors
+ax.quiver(A[0], A[1], A[2], AB[0], AB[1], AB[2], color='b', arrow_length_ratio=0.1, label="AB")
+ax.quiver(C[0], C[1], C[2], CD[0], CD[1], CD[2], color='g', arrow_length_ratio=0.1, label="CD")
 
-# Plot vectors AB and CD
-ax.quiver(*A, *AB, color='red', arrow_length_ratio=0.1, linewidth=2, label="AB")
-ax.quiver(*C, *CD, color='green', arrow_length_ratio=0.1, linewidth=2, label="CD")
+# Shifted CD (with arrow head, dotted style)
+ax.quiver(CD_shifted_start[0], CD_shifted_start[1], CD_shifted_start[2],
+          CD[0], CD[1], CD[2], color='r', linestyle="dashed",
+          arrow_length_ratio=0.1, label="Shifted CD")
 
-# Labels and formatting
-ax.set_xlabel("X-axis")
-ax.set_ylabel("Y-axis")
-ax.set_zlabel("Z-axis")
-ax.set_title("Vectors AB and CD (Collinear)")
+# Points
+ax.scatter(*A, color='b')
+ax.text(*A, "A")
+ax.scatter(*B, color='b')
+ax.text(*B, "B")
+ax.scatter(*C, color='g')
+ax.text(*C, "C")
+ax.scatter(*D, color='g')
+ax.text(*D, "D")
+
+# Labels
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
 ax.legend()
 
-# Save and show plot
-plt.savefig("collinear_vectors.png", dpi=300)  # Save the figure
+plt.title("AB and CD (Shifted CD from A with arrow head)")
+plt.savefig("collinear_vectors_shifted.png", dpi=300)
 plt.show()
 
