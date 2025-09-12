@@ -93,28 +93,27 @@ then the value of $k$ is
 
 \end{frame}
 \begin{frame}{Theoretical solution}
-The vector equation of a line $\tfrac{x-\alpha}{a}=\tfrac{y-\beta}{b}=\tfrac{z-\gamma}{c}  is \myvec{\alpha+a\lambda\\\beta+b\lambda\\\gamma+c\lambda}$\\
-The vector equation of first line,
-\begin{align}
-\myvec{1+2\lambda\\-1+3\lambda\\1+4\lambda}
-\end{align}
-The vector equation of Second line,
-\begin{align}
-\myvec{3+\lambda\\k+2\lambda\\\lambda}
-\end{align}
 The lines $A+ K_1m_1,B+K_2m_2$ will intersect if 
 \begin{align}
 \operatorname{rank}(\vec{M} \hspace{5mm}  \vec{B-A})&=2\\
-\vec{M}=\myvec{m_1&&m_2}
+\vec{M}=\myvec{m_1&&m_2}\\
+\end{align}
+Here,
+\begin{align}
+\vec{m_1}=\myvec{2\\3\\4} \vec{m_2}=\myvec{1\\2\\1}
 \end{align}
 \end{frame}
 \begin{frame}{Theoretical solution}
-Here,
+
 \begin{align}
 \vec{M}&=\myvec{2&&1\\3&&2\\4&&1}\\
+\vec{A}&=\myvec{1\\-1\\1} ,\vec{B}=\myvec{3\\k\\0}\\
 \vec{B-A}&=\myvec{3-1\\k-(-1)\\-1}=\myvec{2\\k+1\\-1}\\
 \operatorname{rank}\Bigg(\myvec{2&&1&&2\\3&&2&&k+1\\4&&1&&-1}\Bigg)&=2
 \end{align}
+
+\end{frame}
+\begin{frame}{Theoretical solution}
 \begin{align}
 \begin{pmatrix}
 2 & 1 & 2\\
@@ -127,18 +126,13 @@ Here,
 0 & 1 & 2k-4\\
 0 & -2 & -10
 \end{pmatrix}\\
-\end{align}
-\end{frame}
-\begin{frame}{Theoretical solution}
-\begin{align}
 \;\\\xrightarrow[\;]{\;R_3 \to R_3 + 2R_2\;}\;
 \begin{pmatrix}
 2 &1 & 2\\
 0 & 1 & 2k-4\\
 0 & 0 & 4k-18
-\end{pmatrix}
-\end{align}
-For the $\operatorname{rank}(\vec{M} \hspace{5mm}  \vec{B-A})$ to be 2\\
+\end{pmatrix}\end{align}
+For the$ \operatorname{rank}(\vec{M} \hspace{5mm}  \vec{B-A})$ to be 2\\
 the last row must be all zero implies\\
 \begin{align}
 4k-18&=0\\

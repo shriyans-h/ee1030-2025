@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.18)  9 SEP 2025 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.18)  12 SEP 2025 06:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1712,13 +1712,13 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 105.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 105.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 105.
 
 
 
@@ -1726,10 +1726,6 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathex.enc}]
-Overfull \vbox (0.49957pt too high) detected at line 131
- []
-
-
 
 [4
 
@@ -2260,7 +2256,7 @@ l.15 # Second line: (x, y, z) = (3+μ, k+2μ, μ)
                                                  
 ? 
 )
-Overfull \vbox (13.72923pt too high) detected at line 280
+Overfull \vbox (13.72923pt too high) detected at line 274
  []
 
 
@@ -2489,10 +2485,10 @@ l.8 ax.set_title("3D Plot of Two Lines"
 [15
 
 ]
-<figs/4.13.85.png, id=461, 527.9725pt x 369.38pt>
+<figs/4.13.85.png, id=460, 527.9725pt x 369.38pt>
 File: figs/4.13.85.png Graphic file (type png)
 <use figs/4.13.85.png>
-Package pdftex.def Info: figs/4.13.85.png  used on input line 318.
+Package pdftex.def Info: figs/4.13.85.png  used on input line 312.
 (pdftex.def)             Requested size: 263.9856pt x 184.68954pt.
 
 
@@ -2529,23 +2525,23 @@ Package rerunfilecheck Info: Checksums for `main.out':
 Here is how much of TeX's memory you used:
  59191 strings out of 473197
  1434840 string characters out of 5718605
- 2528210 words of memory out of 5000000
+ 2528209 words of memory out of 5000000
  81421 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,19n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (16 pages, 229015 bytes).
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmtt10.pfb>
+Output written on main.pdf (16 pages, 217000 bytes).
 PDF statistics:
- 557 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
+ 552 PDF objects out of 1000 (max. 8388607)
+ 466 compressed objects within 5 object streams
  34 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
