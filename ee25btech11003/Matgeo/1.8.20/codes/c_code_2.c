@@ -2,7 +2,7 @@
 
 
 float perpendicularSlope(float x1, float y1, float x2, float y2) {
-    float slope;
+    float slope,pslope;
 
     
     if (x2 - x1 == 0) {
@@ -14,6 +14,9 @@ float perpendicularSlope(float x1, float y1, float x2, float y2) {
         return 9999999.0;
     }
     
-    slope = (y2 - y1) / (x2 - x1);
-   return -1.0 / slope;
+    slope = ((y2 - y1) / (x2 - x1));
+    
+    pslope = (-1/slope);
+
+    return pslope;
 }

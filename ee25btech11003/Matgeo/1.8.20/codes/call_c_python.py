@@ -1,6 +1,7 @@
 import ctypes
 import sys
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Load the compiled shared library
 lib = ctypes.CDLL("./libslope.so")
@@ -9,41 +10,49 @@ lib = ctypes.CDLL("./libslope.so")
 lib.perpendicularSlope.argtypes = [ctypes.c_float, ctypes.c_float, ctypes.c_float, ctypes.c_float]
 lib.perpendicularSlope.restype = ctypes.c_float
 
+
+# Input points
+
 # Input points
 x1, y1 = 3.0, 6.0
 x2, y2 = -3.0, 4.0
 
 # Call the C function
-perp_slope = lib.perpendicularSlope(x1, y1, x2, y2)
+perpslope = lib.perpendicularSlope(x1, y1, x2, y2)
 
-# Print the perpendicular slope
-if perp_slope == 9999999.0:
-    print("The perpendicular line is vertical (slope undefined).")
-else:
-    print(f"The slope of the perpendicular line is: {perp_slope:.2f}")
 
-# Plot the original line connecting (x1, y1) and (x2, y2)
-plt.figure(figsize=(6, 6))
-plt.plot([x1, x2], [y1, y2], 'b-o', label='Line Joining Points')
+A = (x1,y1)
+B = (x2,y2)
+M = ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
 
-# Highlight the two points
-plt.scatter([x1, x2], [y1, y2], color='red')
-plt.text(x1, y1, f"({x1}, {y1})", fontsize=10, ha='right')
-plt.text(x2, y2, f"({x2}, {y2})", fontsize=10, ha='right')
-# Midpoint
-mid_x = (x1 + x2) / 2.0
-mid_y = (y1 + y2) / 2.0
-plt.scatter(mid_x, mid_y, color='green', label='Midpoint')
-plt.text(mid_x, mid_y, f"({mid_x:.1f}, {mid_y:.1f})", fontsize=10, ha='left')
+# Plot line segment AB
+plt.plot([A[0], B[0]], [A[1], B[1]], 'b-', label='Line segment AB')
 
-# Add labels and grid
-plt.xlabel("X-axis")
-plt.ylabel("Y-axis")
-plt.title("Line Joining Two Points")
-plt.grid(True)
+# Plot points A, B, and M
+plt.scatter(*A, color='red', label='A(3,6)')
+plt.scatter(*B, color='green', label='B(-3,4)')
+plt.scatter(*M, color='purple', marker='x', s=100, label='Midpoint M(0,5)')
+
+# Annotate points
+plt.text(A[0]+0.2, A[1], 'A(3,6)', fontsize=10)
+plt.text(B[0]-1, B[1]-0.3, 'B(-3,4)', fontsize=10)
+plt.text(M[0]+0.2, M[1], 'M(0,5)', fontsize=10, color='purple')
+
+# Perpendicular bisector: y = 5 - 3x
+x_vals = np.linspace(-5, 5, 400)
+y_vals = 5 + perpslope*x_vals
+plt.plot(x_vals, y_vals, 'r--', label='Perpendicular bisector (y+3x=5)')
+
+# Axes, grid, legend
+plt.axhline(0, color='black', linewidth=0.8)
+plt.axvline(0, color='black', linewidth=0.8)
+plt.grid(True, linestyle='--', alpha=0.6)
 plt.legend()
+
+plt.title("Line Segment AB with Midpoint M and Perpendicular Bisector")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
 plt.axis('equal')
 
-# Show the plot
-plt.savefig("fig1.png")
 plt.show()
+plt.savefig("fig1.png")
