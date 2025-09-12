@@ -3,6 +3,7 @@
 #define ROWS 3
 #define COLS 3
 
+// Perform Gaussian elimination to convert to REF
 void row_echelon_form(double A[ROWS][COLS]) {
     int pivot_row = 0;
 
@@ -16,6 +17,7 @@ void row_echelon_form(double A[ROWS][COLS]) {
         }
         if (pivot == -1) continue;
 
+        // Swap rows if needed
         if (pivot != pivot_row) {
             for (int c = 0; c < COLS; c++) {
                 double tmp = A[pivot_row][c];
@@ -24,6 +26,7 @@ void row_echelon_form(double A[ROWS][COLS]) {
             }
         }
 
+        // Eliminate entries below pivot
         for (int r = pivot_row + 1; r < ROWS; r++) {
             if (A[r][pivot_col] != 0.0) {
                 double factor = A[r][pivot_col] / A[pivot_row][pivot_col];
@@ -32,12 +35,30 @@ void row_echelon_form(double A[ROWS][COLS]) {
                 }
             }
         }
+
         pivot_row++;
         if (pivot_row == ROWS) break;
     }
 }
 
-void solve_ref(double *out) {
+// Compute rank = number of non-zero rows in REF
+int matrix_rank(double A[ROWS][COLS]) {
+    int rank = 0;
+    for (int i = 0; i < ROWS; i++) {
+        int nonzero = 0;
+        for (int j = 0; j < COLS; j++) {
+            if (A[i][j] != 0.0) {
+                nonzero = 1;
+                break;
+            }
+        }
+        if (nonzero) rank++;
+    }
+    return rank;
+}
+
+// Function exposed to Python
+void solve_ref(double *out, int *rank_out) {
     double A[ROWS][COLS] = {
         {2, 3, 7},
         {6, 4, 7},
@@ -45,7 +66,9 @@ void solve_ref(double *out) {
     };
 
     row_echelon_form(A);
+    *rank_out = matrix_rank(A);
 
+    // Flatten into output buffer
     int k = 0;
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
