@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  9 SEP 2025 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  11 SEP 2025 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1389,13 +1389,13 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
  (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 12.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 12.
@@ -1487,6 +1487,8 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 12.
+
+(./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -1527,6 +1529,8 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <17.28> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 24.
 
 Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
@@ -1544,21 +1548,14 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52698 strings out of 473190
- 1264989 string characters out of 5715800
- 1843710 words of memory out of 5000000
- 75181 multiletter control sequences out of 15000+600000
+ 52708 strings out of 473190
+ 1265109 string characters out of 5715800
+ 1844701 words of memory out of 5000000
+ 75184 multiletter control sequences out of 15000+600000
  604043 words of font info for 149 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  99i,13n,109p,1194b,1029s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1569,10 +1566,10 @@ texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 45814 bytes).
+Output written on main.pdf (2 pages, 45692 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
