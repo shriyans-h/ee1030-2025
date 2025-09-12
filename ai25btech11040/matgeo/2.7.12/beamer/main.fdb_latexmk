@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1757686813.57312 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/2.7.12/beamer/main.tex" "main.pdf" "main" 1757686814.29887 0
+["pdflatex"] 1757698986.25122 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/2.7.12/beamer/main.tex" "main.pdf" "main" 1757698987.02584 0
   "../figs/triangle_diagram.png" 1757685694.16753 29835 114ed259cc0933f531bb27f623f52b34 ""
   "/etc/texmf/web2c/texmf.cnf" 1754154256.17489 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/2.7.12/beamer/main.tex" 1757686813.42249 1912 d3cd1fd6db1f33b27243c0a59bddca84 ""
+  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/2.7.12/beamer/main.tex" 1757698986.10135 1912 4db89c7062dfbb2a8ae64d4ce91f98db ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -341,10 +341,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1754425258.11696 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1754425266 8215844 a8669b1d38396b5b9aec55f004a41d83 ""
   "gvv.sty" 1757468609.89276 4740 64870c6d48a36f090052f42fcff5f239 ""
-  "main.aux" 1757686814.23299 1204 d40815a04a5d2b89d104e2ecdd835848 "pdflatex"
-  "main.nav" 1757686814.23339 659 3cb0dd10b35feddfc4c8158c93cb8db0 "pdflatex"
-  "main.out" 1757686814.08461 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1757686813.42249 1912 d3cd1fd6db1f33b27243c0a59bddca84 ""
+  "main.aux" 1757698986.93019 1204 d40815a04a5d2b89d104e2ecdd835848 "pdflatex"
+  "main.nav" 1757698986.93072 659 3cb0dd10b35feddfc4c8158c93cb8db0 "pdflatex"
+  "main.out" 1757698986.76938 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1757698986.10135 1912 4db89c7062dfbb2a8ae64d4ce91f98db ""
   (generated)
   "main.aux"
   "main.log"
