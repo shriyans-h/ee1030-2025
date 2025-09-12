@@ -1,5 +1,5 @@
 \documentclass{beamer}
-
+\usepackage{gvv}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usetheme{Madrid}
@@ -9,10 +9,9 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{minted}
-\usepackage{gvv}
 
 \setbeamertemplate{page number in head/foot}[totalframenumber]
-
+\renewcommand{\vec}[1]{\mathbf{#1}}
 \title{1.8.22: Equidistant Points Problem}
 \author{Aditya Mishra - ee25btech11005}
 \date{September 9, 2025}
@@ -21,10 +20,10 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Find all points that are equidistant from 
+Find all points that are equidistant from
 \[
-\mathbf{A} = \myvec{-5 \\ 4}, \quad
-\mathbf{B} = \myvec{-1 \\ 6}.
+\vec{A} = \myvec{-5 \\ 4}, \quad
+\vec{B} = \myvec{-1 \\ 6}.
 \]
 How many such points exist?
 \end{frame}
@@ -32,48 +31,48 @@ How many such points exist?
 \begin{frame}{Given Information}
 Points as column vectors:
 \[
-\mathbf{A} = \myvec{-5 \\ 4}, \quad
-\mathbf{B} = \myvec{-1 \\ 6}.
+\vec{A} = \myvec{-5 \\ 4}, \quad
+\vec{B} = \myvec{-1 \\ 6}.
 \]
 Desired point:
 \[
-\mathbf{O} = \myvec{x \\ y}.
+\vec{O} = \myvec{x \\ y}.
 \]
 \end{frame}
 
 \begin{frame}{Equidistant Condition}
 Equidistant means:
 \[
-\norm{\mathbf{O} - \mathbf{A}} = \norm{\mathbf{O} - \mathbf{B}}.
+\norm{\vec{O} - \vec{A}} = \norm{\vec{O} - \vec{B}}.
 \]
 Squaring both sides:
 \[
-\norm{\mathbf{O} - \mathbf{A}}^2 = \norm{\mathbf{O} - \mathbf{B}}^2.
+\norm{\vec{O} - \vec{A}}^2 = \norm{\vec{O} - \vec{B}}^2.
 \]
 Using vector dot product:
 \[
-(\mathbf{O} - \mathbf{A})^\top (\mathbf{O} - \mathbf{A}) = (\mathbf{O} - \mathbf{B})^\top (\mathbf{O} - \mathbf{B}).
+(\vec{O} - \vec{A})^\top (\vec{O} - \vec{A}) = (\vec{O} - \vec{B})^\top (\vec{O} - \vec{B}).
 \]
 \end{frame}
 
 \begin{frame}{Simplify the Equation}
 Expand both sides:
 \[
-\mathbf{O}^\top \mathbf{O} - 2 \mathbf{A}^\top \mathbf{O} + \mathbf{A}^\top \mathbf{A} = \mathbf{O}^\top \mathbf{O} - 2 \mathbf{B}^\top \mathbf{O} + \mathbf{B}^\top \mathbf{B}.
+\vec{O}^\top \vec{O} - 2 \vec{A}^\top \vec{O} + \vec{A}^\top \vec{A} = \vec{O}^\top \vec{O} - 2 \vec{B}^\top \vec{O} + \vec{B}^\top \vec{B}.
 \]
-Simplify by cancelling \(\mathbf{O}^\top \mathbf{O}\):
+Simplify by cancelling \(\vec{O}^\top \vec{O}\):
 \[
-- 2 \mathbf{A}^\top \mathbf{O} + \mathbf{A}^\top \mathbf{A} = - 2 \mathbf{B}^\top \mathbf{O} + \mathbf{B}^\top \mathbf{B}.
+- 2 \vec{A}^\top \vec{O} + \vec{A}^\top \vec{A} = - 2 \vec{B}^\top \vec{O} + \vec{B}^\top \vec{B}.
 \]
 Rearranged:
 \[
-2 (\mathbf{B} - \mathbf{A})^\top \mathbf{O} = \mathbf{B}^\top \mathbf{B} - \mathbf{A}^\top \mathbf{A}.
+2 (\vec{B} - \vec{A})^\top \vec{O} = \vec{B}^\top \vec{B} - \vec{A}^\top \vec{A}.
 \]
 \end{frame}
 
 \begin{frame}{Final Equation}
 \[
-(\mathbf{B} - \mathbf{A})^\top \mathbf{O} = \frac{\mathbf{B}^\top \mathbf{B} - \mathbf{A}^\top \mathbf{A}}{2}.
+(\vec{B} - \vec{A})^\top \vec{O} = \frac{\vec{B}^\top \vec{B} - \vec{A}^\top \vec{A}}{2}.
 \]
 Put terms explicitly:
 \[
@@ -87,7 +86,7 @@ That gives a line equation:
 \end{frame}
 
 \begin{frame}{Number of Solutions}
-The set of points equidistant from \(\mathbf{A}\) and \(\mathbf{B}\) lies on the line:
+The set of points equidistant from \(\vec{A}\) and \(\vec{B}\) lies on the line:
 \[
 2x + y = -1.
 \]
