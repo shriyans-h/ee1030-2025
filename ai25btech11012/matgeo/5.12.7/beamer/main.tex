@@ -46,52 +46,36 @@ given two equations :
 
 \begin{frame}
 \frametitle{Solution}
-\begin{align}
-    \textbf{A}\textbf{X} = \textbf{B}
+ these can be written as :
+
+ \begin{align}
+    \begin{bmatrix}a & -b \\ b & a\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix} = \begin{bmatrix}-a-4b \\ 4a -b\end{bmatrix} = \textbf{M}\begin{bmatrix}a \\ b\end{bmatrix} \\
 \end{align}
-To find X we need to multiply $A^{-1}$ on both sides
+where :
 \begin{align}
-   X =A^{-1}B
-\end{align}
+     \textbf{M} = \begin{bmatrix}-1 & -4 \\ 4 & -1\end{bmatrix}
+ \end{align}
+
 \end{frame}
 
 \begin{frame}
-Finding $A^{-1}$ :
-\begin{align}
-    \begin{bmatrix}a-\lambda & -b \\ b & a-\lambda\end{bmatrix} = 0\\
-    \lambda^{2} - 2a\lambda + a^{2} + b^{2} = 0
-\end{align}
-since :
-\begin{align}
-    \lvert \textbf{A}- \lambda\textbf{I} \rvert = 0\\
-    \textbf{A}^{2} -2a\textbf{A} +(a^{2}+b^{2}) =0
-\end{align}
-Multiply both sides by \textbf{$A^{-1}$}:
-\begin{align}
-    \textbf{A} -2a\textbf{I}+\textbf{$A^{-1}$}(a^{2}+b^{2}) = 0\\
-    \textbf{$A^{-1}$} = \frac{1}{a^{2}+b^{2}} (2a\textbf{I} - \textbf{A})\\
-    \textbf{$A^{-1}$}= \begin{bmatrix}a & b \\ -b & a\end{bmatrix}
-\end{align}
-\end{frame}
-
- \begin{frame}
-from the equation 0.5 :
-\begin{align}
-    \textbf{X} =\begin{bmatrix}a & b \\ -b & a\end{bmatrix}\begin{bmatrix}-a-4b  \\ 4a -b\end{bmatrix}
-\end{align}
-\begin{align}
-   \textbf{X} =\begin{bmatrix}-a^{2} -b^{2} \\ 4a^{2} + 4b^{2}\end{bmatrix}
-\end{align}
-\end{frame}
-
- \begin{frame}
 \frametitle{Solution}
-Hence :
-\begin{align*}
-    x = -a^{2} -b^{2}\\
-    y = 4a^{2} + 4b^{2}
-\end{align*}
+Multiplying both sides by $A^{T}$ :
 
+\begin{align}
+    \begin{bmatrix}a & b\\ -b & a\end{bmatrix}\begin{bmatrix}a & -b\\b & a\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix} = A^{T}M\begin{bmatrix}a \\ b\end{bmatrix}\\
+    (a^{2} + b^{2})\begin{bmatrix}x \\y\end{bmatrix} = A^{T}M\begin{bmatrix}a \\ b\end{bmatrix}
+\end{align}
 \end{frame}
+
+ \begin{frame}
+ \frametitle{Solution}
+ Hence:
+\begin{align}
+    \begin{bmatrix}x \\ y\end{bmatrix} = \frac{1}{(a^{2} + b^{2})} A^{T}M\begin{bmatrix}a \\ b\end{bmatrix}
+\end{align}
+\end{frame}
+
+ 
 
 \end{document}

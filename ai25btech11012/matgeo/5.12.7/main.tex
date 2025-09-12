@@ -75,7 +75,8 @@ given two equations :
  these can be written as :
 
  \begin{align}
-     \myvec{a & -b \\ b & a}\myvec{x \\ y} = \myvec{-a-4b \\ 4a -b}
+     \myvec{a & -b \\ b & a}\myvec{x \\ y} = \myvec{-a-4b \\ 4a -b} = \vec{M}\myvec{a \\ b} \\
+     \vec{M} = \myvec{-1 & -4 \\ 4 & -1}
  \end{align}
 
  \begin{table}[h!]    
@@ -85,45 +86,16 @@ given two equations :
       \label{}
     \end{table}
 
-From the equation 0.3 :
+Multiplying both sides by $A^{T}$ :
+
 \begin{align}
-    \vec{A}\vec{X} = \vec{B}
-\end{align}
-To find X we need to multiply $A^{-1}$ on both sides
-\begin{align}
-   \vec{X} = \vec{A^{-1}}\vec{B}
-\end{align}
-Finding $A^{-1}$ :
-\begin{align}
-    \myvec{a-\lambda & -b \\ b & a-\lambda} = 0\\
-    \lambda^{2} - 2a\lambda + a^{2} + b^{2} = 0
-\end{align}
-since :
-\begin{align}
-    \lvert \vec{A}-\lambda\vec{I} \rvert = 0\\
-    \vec{A}^{2} -2a\vec{A} +(a^{2}+b^{2}) =0
-\end{align}
-Multiply both sides by $\vec{A^{-1}}$ :
-\begin{align}
-    \vec{A} -2a\vec{I}+\vec{A^{-1}}(a^{2}+b^{2}) = 0\\
-    \vec{A^{-1}} = \frac{1}{a^{2}+b^{2}} (2a\vec{I} - \vec{A})\\
-    \vec{A^{-1}}= \myvec{a & b \\ -b & a}
-\end{align}
-from the equation 0.5 :
-\begin{align}
-    \vec{X} = \myvec{a & b \\ -b & a}\myvec{-a-4b  \\ 4a -b} 
-\end{align}
-\begin{align}
-   \vec{X} = \myvec{-a^{2} -b^{2} \\ 4a^{2} + 4b^{2}}
+    \myvec{a & b\\ -b & a}\myvec{a & -b\\b & a}\myvec{x \\ y} = \vec{A^{T}}\vec{M}\myvec{a \\ b}\\
+    (a^{2} + b^{2})\myvec{x \\y} = \vec{A^{T}}\vec{M}\myvec{a \\ b}
 \end{align}
 
-Hence :
-\begin{align*}
-    x = -a^{2} -b^{2}\\
-    y = 4a^{2} + 4b^{2}
-\end{align*}
-
-
+\begin{align}
+    \myvec{x \\ y} = \frac{1}{(a^{2} + b^{2})} \vec{A^{T}}\vec{M}\myvec{a \\ b}
+\end{align}
 
 
 \end{document}

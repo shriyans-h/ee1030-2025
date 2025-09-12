@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  10 SEP 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  12 SEP 2025 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1969,39 +1969,32 @@ File: ts1txr.fd 2000/12/15 v3.1
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
 ocal/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
-]
-
-[2] (./main.aux)
+] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54428 strings out of 473190
- 1297720 string characters out of 5715801
- 1889520 words of memory out of 5000000
+ 54422 strings out of 473190
+ 1297638 string characters out of 5715801
+ 1892554 words of memory out of 5000000
  76846 multiletter control sequences out of 15000+600000
- 624025 words of font info for 169 fonts, out of 8000000 for 9000
+ 625401 words of font info for 171 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,15n,109p,1194b,1027s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 49510 bytes).
+ 109i,15n,109p,1194b,1018s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (1 page, 43386 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
+ 81 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
