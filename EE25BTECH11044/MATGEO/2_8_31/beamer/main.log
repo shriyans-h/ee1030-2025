@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.15)  7 SEP 2025 23:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.15)  12 SEP 2025 19:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1829,7 +1829,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 <figs/fig4.png, id=348, 302.63063pt x 251.94125pt>
 File: figs/fig4.png Graphic file (type png)
 <use figs/fig4.png>
-Package pdftex.def Info: figs/fig4.png  used on input line 305.
+Package pdftex.def Info: figs/fig4.png  used on input line 311.
 (pdftex.def)             Requested size: 239.60567pt x 199.4735pt.
  [12
 
@@ -1859,10 +1859,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57093 strings out of 474222
- 1358373 string characters out of 5748733
+ 57097 strings out of 474222
+ 1358528 string characters out of 5748733
  2345253 words of memory out of 5000000
- 78333 multiletter control sequences out of 15000+600000
+ 78337 multiletter control sequences out of 15000+600000
  628783 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1625s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1874,7 +1874,7 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmtt10.pfb>
-Output written on main.pdf (12 pages, 235617 bytes).
+Output written on main.pdf (12 pages, 235852 bytes).
 PDF statistics:
  440 PDF objects out of 1000 (max. 8388607)
  366 compressed objects within 4 object streams

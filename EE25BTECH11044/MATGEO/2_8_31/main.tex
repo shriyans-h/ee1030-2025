@@ -101,28 +101,30 @@ Thus
 
 Now define the base and side vectors:
 \begin{equation}
-\vec{AB}=\vec B-\vec A=\begin{pmatrix}1\\5\end{pmatrix}, \qquad
-\vec{AD}=\vec D-\vec A=\begin{pmatrix}-5\\-1\end{pmatrix}.
+\vec B-\vec A=\begin{pmatrix}1\\5\end{pmatrix}, \qquad
+\vec D-\vec A=\begin{pmatrix}-5\\-1\end{pmatrix}.
 \end{equation}
 
-The projection $\vec{AP}$ of $\vec{AD}$ on $\vec{AB}$ is
+\[
+\text{The projection of }\vec{D}-\vec{A}\text{ on }\vec{B}-\vec{A}\text{ is } 
+\]
 \begin{equation}
-\mathbf{AP = \frac{AB^\top AD}{\|AB\|^2} AB}
+\mathbf{P-A = \frac{(B-A)^\top (D-A)}{\|B-A\|^2} (B-A)}
 \end{equation}
 Compute:
 \begin{equation}
-\vec{AB}^\top\vec{AD}=1(-5)+5(-1)=-10, \qquad
-\|\vec{AB}\|^2=1^2+5^2=26.
+(\vec B-\vec A)^\top(\vec D-\vec A)=1(-5)+5(-1)=-10, \qquad
+\|\vec B-\vec A\|^2=1^2+5^2=26.
 \end{equation}
 So
 \begin{equation}
-\mathbf{AP=\frac{-10}{26}\begin{pmatrix}1\\5\end{pmatrix}}
+\mathbf{P-A=\frac{-10}{26}\begin{pmatrix}1\\5\end{pmatrix}}
 =\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}.
 \end{equation}
 
 Subtracting, the perpendicular component is
 \begin{equation}
-\vec r=\vec{AD}-\vec{AP}
+\vec r=(\vec D-\vec A)-(\vec P-\vec A)
 =\begin{pmatrix}-5\\-1\end{pmatrix}
 -\begin{pmatrix}-\tfrac{5}{13}\\[4pt]-\tfrac{25}{13}\end{pmatrix}
 =\begin{pmatrix}-\tfrac{60}{13}\\[4pt]\tfrac{12}{13}\end{pmatrix}.
