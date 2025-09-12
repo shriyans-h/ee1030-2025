@@ -79,53 +79,40 @@ $A=\myvec{1\\-1}$,\; $B=\myvec{-4\\6}$,\; $C=\myvec{-3\\-5}$.
 
 
 \section*{Solution}
-Let the vertices be
+\textbf{Given:} The vertices of the triangle are
 \[
-\vec{A} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}, \quad 
-\vec{B} = \begin{bmatrix} -4 \\ 6 \end{bmatrix}, \quad 
-\vec{C} = \begin{bmatrix} -3 \\ -5 \end{bmatrix}.
+A = \myvec{1\\-1}, \quad B = \myvec{-4\\6}, \quad C = \myvec{-3\\-5}.
 \]
 
 \medskip
 
-The area of the triangle is
+The area of a triangle with vertices $A,B,C$ is given by
 \[
-\Delta = \frac{1}{2}\Big|\det\Big((\vec{B}-\vec{A}), (\vec{C}-\vec{A})\Big)\Big|.
+\Delta = \frac{1}{2}\,\left|\det\left(\myvec{B-A & C-A}\right)\right|
+= \frac{1}{2}\,\left\|(B-A)\times(C-A)\right\|,
 \]
+where the cross product in 2D is interpreted as the determinant of a $2\times2$ matrix.
 
 \medskip
 
+\[
+B - A = \myvec{-4\\6}-\myvec{1\\-1}=\myvec{-5\\7}, \quad
+C - A = \myvec{-3\\-5}-\myvec{1\\-1}=\myvec{-4\\-4}.
+\]
 Now,
 \[
-\vec{B}-\vec{A} = \begin{bmatrix} -4 \\ 6 \end{bmatrix} - \begin{bmatrix} 1 \\ -1 \end{bmatrix}
-= \begin{bmatrix} -5 \\ 7 \end{bmatrix},
-\]
-\[
-\vec{C}-\vec{A} = \begin{bmatrix} -3 \\ -5 \end{bmatrix} - \begin{bmatrix} 1 \\ -1 \end{bmatrix}
-= \begin{bmatrix} -4 \\ -4 \end{bmatrix}.
+\det\myvec{-5 & -4\\ 7 & -4} = (-5)(-4) - (7)(-4) = 20+28=48.
 \]
 
+
+    Hence,
+\[
+\Delta = \frac{1}{2}\,|48|=24.
+\]
 \medskip
-
-So,
+\textbf{Final Answer:}
 \[
-\det\Big((\vec{B}-\vec{A}), (\vec{C}-\vec{A})\Big) 
-= \begin{vmatrix} -5 & -4 \\ 7 & -4 \end{vmatrix}
-= (-5)(-4) - (7)(-4) = 20 + 28 = 48.
-\]
-
-\medskip
-
-Hence,
-\[
-\Delta = \frac{1}{2} \times |48| = 24.
-\]
-
-\medskip
-
-\textbf{Final Answer: } The area of the triangle is
-\[
-\Delta = 24.
+\boxed{24}
 \]
    \begin{figure}[h!]
 \centering
