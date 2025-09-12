@@ -1,0 +1,9 @@
+\beamer@sectionintoc {2}{Problem}{3}{0}{1}
+\beamer@sectionintoc {2}{Solution}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Finding values}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Solving}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Substitution}{6}{0}{2}
+\beamer@subsectionintoc {2}{4}{Conclusion}{7}{0}{2}
+\beamer@subsectionintoc {2}{5}{Plot}{8}{0}{2}
+\beamer@sectionintoc {3}{C Code}{9}{0}{3}
+\beamer@sectionintoc {4}{Python Code}{10}{0}{4}
