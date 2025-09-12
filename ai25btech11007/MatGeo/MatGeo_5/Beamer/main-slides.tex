@@ -94,71 +94,84 @@ and the area of the triangle is $5\sqrt{6}$.\\
 
 \end{frame}
 \begin{frame}{Solution}
-From the condition given, 
-\[
-\vec{a}=\vec{b}+\vec{c},
-\]
+We are given:
 
 \begin{equation}
-\myvec{p\\q\\r} = \myvec{s\\3\\4} + \myvec{3\\1\\-2}.
-\end{equation}
-Rearrange to write a linear system in the unknowns $(p,s,q,r)$.
-\begin{align}
-p - s &= 3,\\
-q       &= 4,\\
-r       &= 2. 
-\end{align}
-
-Thus $q=4,\ r=2$ and $p=s+3$. The variable $s$ is a free parameter. We express the family of solutions as
-\begin{equation}\label{eq:param_solution}
-\myvec{p\\q\\r} = \myvec{s+3\\4\\2},\qquad s\in\mathbb{R}.
-\end{equation}
-\end{frame}
-\begin{frame}
-Choose $\vec{b}$ and $\vec{c}$ as the two adjacent side-vectors of the triangle.\\ The area $A$ of the triangle,
-\begin{equation}\label{eq:area_formula}
-A=\tfrac{1}{2}\|\vec{b}\times\vec{c}\|.
+\vec{a} = \vec{b} + \vec{c}
 \end{equation}
 
 \begin{equation}
-\|\vec{b}\times\vec{c}\| = 2A = 10\sqrt{6}.
+\vec{a} = p\hat{i} + q\hat{j} + r\hat{k}, \quad
+\vec{b} = s\hat{i} + 3\hat{j} + 4\hat{k}, \quad
+\vec{c} = 3\hat{i} + 1\hat{j} -2\hat{k}
 \end{equation}
 
-Substitute $\vec{b}=\myvec{s\\3\\4}$ and $\vec{c}=\myvec{3\\1\\-2}$. Compute the cross product.
-\begin{align}
-\vec{b}\times\vec{c}
-&= \myvec{-10\\2s+12\\s-9}.
-\end{align}
+and the area of the triangle formed by these vectors is:
+\begin{equation}
+\text{Area} = 5\sqrt{6}
+\end{equation}
+
+\vspace{1em}
+\end{frame}
+\begin{frame}{Observation:}
+For three vectors to form a triangle, they must sum to zero:
+\begin{equation}
+\vec{a} + \vec{b} + \vec{c} = \vec{0}
+\end{equation}
+
+However, we are told:
+\begin{equation}
+\vec{a} = \vec{b} + \vec{c} \Rightarrow \vec{a} - \vec{b} - \vec{c} = \vec{0}
+\end{equation}
+
+This implies:
+\begin{equation}
+\vec{a} + (-\vec{b}) + (-\vec{c}) = \vec{0}
+\end{equation}
+
+So, the triangle is formed by the vectors $\vec{a}, -\vec{b}, -\vec{c}$. For these to form a triangle, they must not lie along the same line (i.e., must not be collinear).
+
+\vspace{1em}
+Now, if we assume:
+\begin{equation}
+\vec{a} = \vec{0}
+\Rightarrow \vec{b} + \vec{c} = \vec{0}
+\Rightarrow \vec{b} = -\vec{c}
+\end{equation}
 \end{frame}
 \begin{frame}
-Therefore the squared norm is
-\begin{equation}\label{eq:norm_squared}
-\|\vec{b}\times\vec{c}\|^2 = (-10)^2 + (2s+12)^2 + (s-9)^2 = (10\sqrt{6})^2
-\end{equation}
-\begin{equation}\label{eq:area_equation}
-100 + (2s+12)^2 + (s-9)^2 = 600.
-\end{equation}
-
-Hence
-\begin{equation}\label{eq:s_values}
-s = 5 \quad\text{or}\quad s = -11.
+Given:
+\begin{equation}
+\vec{c} = \myvec{3 \\ 1 \\ -2} 
+\Rightarrow \vec{b} = -\vec{c} = -\myvec{3 \\ 1 \\ -2}
+= \myvec{-3 \\ -1 \\ 2}
 \end{equation}
 
-Back-substitute to obtain $p,q,r$\\
-\noindent
-\textbf{Case 1: $s=5$.} Then from \eqref{eq:param_solution}
-\begin{equation}\label{eq:case1}
-p = s+3 = 8,\qquad q=4,\qquad r=2.
+Then:
+\begin{equation}
+\vec{a} = \vec{b} + \vec{c} = \vec{0}
+\Rightarrow p = 0,\quad q = 0,\quad r = 0
 \end{equation}
 
-\textbf{Case 2: $s=-11$.} Then
-\begin{equation}\label{eq:case2}
-p = s+3 = -8,\qquad q=4,\qquad r=2.
+We now compute the area of the triangle using:
+\begin{equation}
+\text{Area} = \frac{1}{2} \left\| \vec{b} \times \vec{c} \right\|
 \end{equation}
 
-\begin{equation}\label{eq:final_answer}
-(p,q,r,s) = (8,4,2,5)\quad\text{or}\quad (p,q,r,s)=(-8,4,2,-11).
+Compute the cross product:
+\begin{equation}
+\vec{b} \times \vec{c} = \vec{0} \Rightarrow \text{Area} = 0
 \end{equation}
 
+If we assume $\vec{a} = \vec{0}$, then $\vec{b} = -\vec{c}$, and the triangle is degenerate (i.e., the vectors lie on a straight line). Therefore, the area is zero:
+\begin{equation}
+\boxed{\text{Area} = 0}
+\end{equation}
+\end{frame}
+\begin{frame}{Coclusion}
+This contradicts the given area of $5\sqrt{6}$. Therefore, no solution exists such that:
+\begin{equation}
+\vec{a} = \vec{b} + \vec{c} \quad \text{and} \quad \text{Area} = 5\sqrt{6}
+\end{equation}
 \end{frame}
 \end{document}

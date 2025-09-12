@@ -1,14 +1,26 @@
-import math
+import numpy as np
 
-# given area
-A = 5 * math.sqrt(6)
-print(f"Given area = {A:.2f}")
+# Given vectors
+b = np.array([ -3, -1, 2 ])
+c = np.array([ 3, 1, -2 ])
 
-# possible values of s
-s_vals = [5, -11]
+# Compute a = b + c
+a = b + c
 
-for i, s in enumerate(s_vals, start=1):
-    p = s + 3   # relation
-    q = 4
-    r = 2
-    print(f"Solution {i}: (p,q,r,s) = ({p},{q},{r},{s})")
+# Cross product of b and c
+cross_product = np.cross(b, c)
+
+# Magnitude of the cross product
+area = 0.5 * np.linalg.norm(cross_product)
+
+# Output vectors and area
+print(f"Vector a = b + c = {a}")
+print(f"Cross product (b x c) = {cross_product}")
+print(f"Area of triangle = {area:.4f}")
+print(f"Expected area = {5 * np.sqrt(6):.4f}")
+
+# Check consistency
+if np.all(a == 0) and area == 0:
+    print("✅ Vectors are collinear. Triangle is degenerate. Area = 0.")
+else:
+    print("❌ Vectors form a triangle with nonzero area. Inconsistent with a = 0.")

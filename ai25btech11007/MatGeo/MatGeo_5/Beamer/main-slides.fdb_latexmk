@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1757609492.5753 "main-slides.tex" "main-slides.pdf" "main-slides" 1757609495.35543 0
+["pdflatex"] 1757688409.89801 "main-slides.tex" "main-slides.pdf" "main-slides" 1757688411.1317 0
   "/etc/texmf/web2c/texmf.cnf" 1755155458.06746 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -10,7 +10,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txsya.tfm" 1136768653 972 2c9ffac4bbd20f91c01aaef9bf3f8710 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txsyb.tfm" 1136768653 988 098ca7e8cc5647b9ac21b82dbdce1f01 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/txsyc.tfm" 1136768653 1084 75e807e9e71f7a312e4e1187dce5e93b ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb" 1136849748 24244 ffc0312cbd155e940e16287bb7cbb16c ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -361,11 +360,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755155481.82789 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755155605 8213609 453108db0e1f72493269ff974efb0d7e ""
-  "gvv.sty" 1757589578 4061 dc1741fae4b2ef17c036152478a8f596 ""
-  "main-slides.aux" 1757609495.14365 1927 654b504dd6b3e9e2c2c85437f0ea0d69 "pdflatex"
-  "main-slides.nav" 1757609495.14665 659 3cb0dd10b35feddfc4c8158c93cb8db0 "pdflatex"
-  "main-slides.out" 1757609494.6257 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main-slides.tex" 1757589578 3747 ccc3873505cba756c265525254fa8b22 ""
+  "gvv.sty" 1757668500 4061 dc1741fae4b2ef17c036152478a8f596 ""
+  "main-slides.aux" 1757688411.03954 1252 aff542003fa44b7392c0cf52fc2d3956 "pdflatex"
+  "main-slides.nav" 1757688411.04054 747 0e276c0940a342ad38699132b0e9aa8d "pdflatex"
+  "main-slides.out" 1757688410.79155 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main-slides.tex" 1757668500 4075 7014990e5beda0ff37e94243a2b6efdf ""
   (generated)
   "main-slides.aux"
   "main-slides.log"
