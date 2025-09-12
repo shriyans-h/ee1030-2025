@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  10 SEP 2025 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  12 SEP 2025 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1794,35 +1794,32 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 108.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 108.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 108.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
  [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathex.enc}] [4
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] [4
 
-] [5
-
-]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
 \openout4 = `main.vrb'.
 
-
-(./main.vrb
+ (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
- (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (1.72923pt too high) detected at line 169
+Overfull \vbox (1.72923pt too high) detected at line 150
  []
 
-[6
+[5
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
@@ -1838,16 +1835,16 @@ Type  H <return>  for immediate help.
 l.6     print(f"|−b|
                         = {neg_b_mag:.3f}")
 ? 
-) [7
+) [6
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 203
+Overfull \vbox (1.72923pt too high) detected at line 184
  []
 
-[8
+[7
 
 ]
 \openout4 = `main.vrb'.
@@ -1869,29 +1866,38 @@ l.18 ...e: pick a along x-axis, b rotated by 120°
                                                   
 ? 
 )
-Overfull \vbox (61.72923pt too high) detected at line 232
+Overfull \vbox (61.72923pt too high) detected at line 213
  []
 
-[9
+[8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<../figs/vectors_plot.png, id=293, 387.6081pt x 380.1402pt>
+<../figs/vectors_plot.png, id=263, 387.6081pt x 380.1402pt>
 File: ../figs/vectors_plot.png Graphic file (type png)
 <use ../figs/vectors_plot.png>
-Package pdftex.def Info: ../figs/vectors_plot.png  used on input line 236.
+Package pdftex.def Info: ../figs/vectors_plot.png  used on input line 217.
 (pdftex.def)             Requested size: 212.4813pt x 208.38748pt.
- [10
+ [9
 
  <../figs/vectors_plot.png>]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [11
+ (./main.vrb) [10
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 283
+Overfull \vbox (1.72923pt too high) detected at line 264
+ []
+
+[11
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (25.72923pt too high) detected at line 289
  []
 
 [12
@@ -1899,11 +1905,7 @@ Overfull \vbox (1.72923pt too high) detected at line 283
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb)
-Overfull \vbox (25.72923pt too high) detected at line 308
- []
-
-[13
+ (./main.vrb) [13
 
 ]
 \openout4 = `main.vrb'.
@@ -1918,16 +1920,16 @@ Overfull \vbox (25.72923pt too high) detected at line 308
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [16
+ (./main.vrb)
+Overfull \vbox (13.72923pt too high) detected at line 372
+ []
+
+[16
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 391
- []
-
-[17
+ (./main.vrb) [17
 
 ]
 \openout4 = `main.vrb'.
@@ -1935,17 +1937,12 @@ Overfull \vbox (13.72923pt too high) detected at line 391
  (./main.vrb) [18
 
 ]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [19
-
-]
-<../figs/vectors_from_c.png, id=577, 387.6081pt x 380.1402pt>
+<../figs/vectors_from_c.png, id=546, 387.6081pt x 380.1402pt>
 File: ../figs/vectors_from_c.png Graphic file (type png)
 <use ../figs/vectors_from_c.png>
-Package pdftex.def Info: ../figs/vectors_from_c.png  used on input line 435.
+Package pdftex.def Info: ../figs/vectors_from_c.png  used on input line 416.
 (pdftex.def)             Requested size: 212.4813pt x 208.38748pt.
- [20
+ [19
 
  <../figs/vectors_from_c.png>]
 \tf@nav=\write8
@@ -1967,10 +1964,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57794 strings out of 474222
- 1369820 string characters out of 5748734
+ 57788 strings out of 474222
+ 1369727 string characters out of 5748734
  2453292 words of memory out of 5000000
- 78991 multiletter control sequences out of 15000+600000
+ 78987 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1472s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1978,15 +1975,12 @@ Here is how much of TeX's memory you used:
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-txfonts/txsyb.pfb>
-Output written on main.pdf (20 pages, 414611 bytes).
+hare/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (19 pages, 390325 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 39 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
