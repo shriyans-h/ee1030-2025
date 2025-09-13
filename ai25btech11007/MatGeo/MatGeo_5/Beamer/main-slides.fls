@@ -735,6 +735,12 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmssbx10.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT ./figs/Screenshot 2025-09-13 191422.png
+INPUT ./figs/Screenshot 2025-09-13 191422.png
+INPUT ./figs/Screenshot 2025-09-13 191422.png
+INPUT ./figs/Screenshot 2025-09-13 191422.png
+INPUT ./figs/Screenshot 2025-09-13 191422.png
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss10.tfm
 OUTPUT main-slides.nav
 OUTPUT main-slides.toc
 OUTPUT main-slides.snm
