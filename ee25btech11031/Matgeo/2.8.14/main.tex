@@ -41,7 +41,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{2.4.27}
+\title{2.8.14}
 \author {EE25BTECH11031 - Sai Sreevallabh}
 % \maketitle
 % \newpage
@@ -59,59 +59,49 @@
 
 \textbf{Question: }\\
 
-The perpendicular bisector of the line segment joining the points $\vec{A}\brak{1,5}$ and $\vec{B}\brak{4,6}$ cuts the y-axis at \rule{1.5cm}{0.4pt}.\\
+Three vectors $\vec{a}$, $\vec{b}$ and $\vec{c}$ satisfy the condition $\vec{a}+\vec{b}+\vec{c}=0$. Evaluate the quantity $\vec{\mu} = \vec{a}\cdot\vec{b} + \vec{b}\cdot\vec{c} + \vec{c}\cdot\vec{a}$. If $\abs{\vec{a}} = 3$, $\abs{\vec{b}}=4$ and $\abs{\vec{c}}=2$. \\
 
 \textbf{Solution: }\\
 
-Given points are
+Given: 
 \begin{align}
-    \vec{A}= \myvec{1\\5} \ \ \text{and}\ \ \vec{B} = \myvec{4\\6}
+    \vec{a}+\vec{b}+\vec{c}=0 \ \text{and}\ \norm{\vec{a}}=3 \ , \ \norm{\vec{b}}=4 \ , \ \norm{\vec{c}}=2
 \end{align}
 
-Let the perpendicular bisector of line segment $\vec{B}-\vec{A}$ intersect the y-axis at point $\vec{P}$. 
-
+To find
 \begin{align}
-    \vec{P} = \myvec{0\\y}
+    \vec{\mu} = \vec{a}^\top\vec{b}+\vec{b}^\top\vec{c}+\vec{c}^\top\vec{a}
 \end{align}
 
-All points on the perpendicular bisector of line segment are equidistant from the end points. \\
-Hence, $\vec{P}$ is equidistant from both $\vec{A}$ and $\vec{B}$. So, the norms of vectors $\vec{P}-\vec{B}$ and $\vec{P}-\vec{A}$ are equal. 
+Multiplying $\vec{a}+\vec{b} + \vec{c}=0$ with $\vec{a}^\top$ on both sides
 
 \begin{align}
-    \norm{\vec{P}-\vec{B}} =& \norm{\vec{P}-\vec{A}}\\
-    \implies  \norm{\vec{P}-\vec{B}}^2 =& \norm{\vec{P}-\vec{A}}^2\\
-    \implies \norm{\vec{P}}^2 - 2\vec{P}^\top\vec{A} + \vec{A}^2 =& \norm{\vec{P}}^2 - 2\vec{P}^\top\vec{B} + \vec{B}^2
+    \vec{a}^\top\vec{a} + \vec{a}^\top\vec{b} + \vec{a}^\top\vec{c} = 0
 \end{align}
 
-Simplification of the above results in:
-\begin{align}
-    \brak{\vec{A}-\vec{B}}^\top\vec{P} = \frac{\norm{A}^2 - \norm{B}^2}{2} 
-\end{align}
+Similarly, upon multiplying with $\vec{b}^\top$ and $\vec{c}^\top$, we get 
 
 \begin{align}
-    \because \vec{P} = y\vec{e_2}   
+   \vec{b}^\top\vec{a} + \vec{b}^\top\vec{b} + \vec{b}^\top\vec{c} &= 0\\
+   \vec{c}^\top\vec{a} + \vec{c}^\top\vec{b} + \vec{c}^\top\vec{c} &= 0
 \end{align}
 
+Adding the above three equations,
 \begin{align}
-    y = \frac{\norm{A}^2-\norm{B}^2}{2\brak{\vec{A}-\vec{B}}^\top\vec{e_2}}
+    2\brak{\vec{a}^\top\vec{b}+\vec{b}^\top\vec{c}+\vec{c}^\top\vec{a}} + \vec{a}^\top\vec{a}+\vec{b}^\top\vec{b}+\vec{c}^\top\vec{c} &= 0\\
+   \implies 2\mu + \vec{a}^\top\vec{a}+\vec{b}^\top\vec{b}+\vec{c}^\top\vec{c} &= 0
 \end{align}
 
-Substituting the values of $\vec{A}$ and $\vec{B}$:
-
+By using $\vec{x}^\top\vec{x} = \norm{\vec{x}}^2$ we get
 \begin{align}
-    y = \frac{\norm{\myvec{1\\5}}^2 - \norm{\myvec{4\\6}}^2}{2\myvec{-3 & -1}\myvec{0\\1}}
-\end{align}
+    2\mu + \brak{\norm{\vec{a}}^2 + \norm{\vec{b}}^2 + \norm{\vec{c}}^2} = 0
+\end{align}\\
 
+Substituting the values of $\norm{\vec{a}}, \norm{\vec{b}}, \norm{\vec{c}}$ we get
 \begin{align}
-    y = 13
+  \mu = \frac{-29}{2}
 \end{align}
 
-$\therefore$ The point where the perpendicular bisector of $\vec{B}-\vec{A}$ intersects the y-axis is the point $\vec{P}=\myvec{0\\13}$.
+$\therefore$ The value of $\mu$ is $\frac{-29}{2}$.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\linewidth]{Figs/plot(py+C).png}
-\end{figure}
-
-
-\end{document} 
+\end{document}

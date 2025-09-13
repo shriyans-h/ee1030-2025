@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.13)  12 SEP 2025 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.13)  13 SEP 2025 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1712,13 +1712,13 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 3
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 39.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 39.
-
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1894,8 +1894,6 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 39.
- (./main.out)
-(./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1949,42 +1947,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}
 
-]
-<Figs/plot(py+C).png, id=52, 462.528pt x 346.896pt>
-File: Figs/plot(py+C).png Graphic file (type png)
-<use Figs/plot(py+C).png>
-Package pdftex.def Info: Figs/plot(py+C).png  used on input line 113.
-(pdftex.def)             Requested size: 364.1953pt x 273.16086pt.
- [2 <./Figs/plot(py+C).png>] (./main.aux)
+] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52989 strings out of 474222
- 1255321 string characters out of 5748733
- 1943975 words of memory out of 5000000
- 74417 multiletter control sequences out of 15000+600000
- 623257 words of font info for 169 fonts, out of 8000000 for 9000
+ 52961 strings out of 474222
+ 1254820 string characters out of 5748733
+ 1942975 words of memory out of 5000000
+ 74400 multiletter control sequences out of 15000+600000
+ 621907 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,15n,109p,1194b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,10n,109p,1194b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 71352 bytes).
+fb>
+Output written on main.pdf (1 page, 48092 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
