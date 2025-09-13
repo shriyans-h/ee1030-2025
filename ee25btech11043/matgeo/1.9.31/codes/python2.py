@@ -69,7 +69,7 @@ plt.legend(loc='best')
 plt.grid(True)
 plt.title("Triangle ABC and Median AD")
 plt.axis('equal') # Ensures correct aspect ratio
-plt.savefig("median.png")
+plt.savefig("fig2.png")
 plt.show()
 
-print("Figure saved as median.png")
+print("Figure saved as fig2.png")
