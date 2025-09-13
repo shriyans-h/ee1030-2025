@@ -1,3 +1,2 @@
-\beamer@sectionintoc {2}{Question}{3}{0}{1}
-\beamer@sectionintoc {3}{Solution}{4}{0}{2}
-\beamer@subsectionintoc {3}{1}{plot}{5}{0}{2}
+\beamer@sectionintoc {1}{Solution}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{plot}{4}{0}{1}
