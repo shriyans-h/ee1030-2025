@@ -20,21 +20,15 @@
 
 We know that
 \[
-\innerproduct{\bm{a}}{\bm{b}} = \|\bm{a}\| \|\bm{b}\| \cos\theta,
-\]
-\hspace*{1.1em} where \(\theta\) is the angle between \(\bm{a}\) and \(\bm{b}\).
-
-Thus,
-\[
-\cos\theta = \frac{\innerproduct{\bm{a}}{\bm{b}}}{\|\bm{a}\| \|\bm{b}\|}.
+\cos\theta = \frac{{a}\top {b}}{\|{a}\| \|{b}\|}.
 \]
 
 Calculating each term:
 
 \begin{align}
-\innerproduct{\bm{a}}{\bm{b}} &= 3(2) + 1(-2) + 2(4) = 6 - 2 + 8 = 12, \\
-\|\bm{a}\| &= \sqrt{3^2 + 1^2 + 2^2} = \sqrt{14}, \\
-\|\bm{b}\| &= \sqrt{2^2 + (-2)^2 + 4^2} = \sqrt{24}, \\
+{{a}}\top{{b}} &= 3(2) + 1(-2) + 2(4) = 6 - 2 + 8 = 12, \\
+\|\vec{a}\| &= \sqrt{3^2 + 1^2 + 2^2} = \sqrt{14}, \\
+\|\vec{b}\| &= \sqrt{2^2 + (-2)^2 + 4^2} = \sqrt{24}, \\
 \cos\theta &= \frac{12}{\sqrt{14} \cdot \sqrt{24}} = \frac{12}{\sqrt{336}} = \frac{3}{\sqrt{21}}.
 \end{align}
 
@@ -48,11 +42,11 @@ Now, to find \(\sin\theta\):
 &= \frac{2}{\sqrt{7}}.
 \end{align}
 
-The sine of the angle between the vectors \(\bm{a}\) and \(\bm{b}\) is \(\frac{2}{\sqrt{7}}\).
+The sine of the angle between the vectors \(\vec{a}\) and \(\vec{b}\) is \(\frac{2}{\sqrt{7}}\).
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
    \centering
-   \includegraphics[width=1.2\linewidth]{fig1.png}
+   \includegraphics[width=1\linewidth]{fig1.png}
    \caption{}
    \label{}
 \end{figure}
