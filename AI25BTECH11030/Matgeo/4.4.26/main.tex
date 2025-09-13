@@ -69,31 +69,117 @@ Using the section formula, the midpoint \(\mathbf{M}\) of the side \(BC\) is
 \begin{bmatrix} -3 \\ 4 \end{bmatrix}.
 \]
 
-The median passes through points \(\mathbf{A}(2,5)\) and \(\mathbf{M}(-3,4)\). The direction vector is 
+The median passes through points \(\mathbf{A}(2,5)\) and \(\mathbf{M}(-3,4)\).
+Let the required line have the equation
 \[
-\mathbf{d} = \mathbf{M} - \mathbf{A} = \begin{bmatrix} -3 - 2 \\ 4 - 5 \end{bmatrix} = \begin{bmatrix} -5 \\ -1 \end{bmatrix}.
+\mathbf{n}^\top \mathbf{x} = 1
+\]
+where \( \mathbf{n} = \begin{bmatrix} n_1 \\ n_2 \end{bmatrix} \) is the direction vector.
+
+Since both the points \( A \) and \( M \) lie on the median, they satisfy the line equation. That is,
+\[
+\mathbf{n}^\top \mathbf{A} = 1, \quad \mathbf{n}^\top \mathbf{M} = 1
+\]
+or, writing explicitly for the points \( A(2,5) \), \( M(-3,4) \):
+\[
+\begin{pmatrix}
+2 & 5 \\
+-3 & 4
+\end{pmatrix}
+\begin{pmatrix}
+n_1 \\ n_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \\ 1
+\end{pmatrix}
+\]
+We want to find the vector \( \mathbf{n} = \begin{bmatrix} n_1 \\ n_2 \end{bmatrix} \) satisfying the system:
+\[
+\begin{pmatrix}
+2 & 5 \\
+-3 & 4
+\end{pmatrix} \mathbf{n} = \mathbf{c}
 \]
 
-Following the matrix approach :
+Set up the augmented matrix with right-hand side \(1\):
 \[
-\left( \begin{array}{cc} -5 & -1 \end{array} \right) \mathbf{x} = c,
-\]
- where \(c\) is found by substituting point \(\mathbf{A}(2,5)\):
-\[
--5 \times 2 - 1 \times 5 = -10 - 5 = -15.
+\left(\begin{array}{cc|c}
+2 & 5 & 1 \\
+-3 & 4 & 1
+\end{array}\right)
 \]
 
-Thus, the equation of the median is
+Perform row operations:
+
 \[
--5 x - y = -15,
+R_2 \to R_2 + \frac{3}{2} R_1:
+\quad
+\left(\begin{array}{cc|c}
+2 & 5 & 1 \\
+0 & \frac{23}{2} & \frac{5}{2}
+\end{array}\right)
 \]
+
+\[
+R_1 \to R_1 - \frac{10}{23} R_2:
+\quad
+\left(\begin{array}{cc|c}
+2 & 0 & 1 - \frac{50}{46} \\
+0 & \frac{23}{2} & \frac{5}{2}
+\end{array}\right)
+\]
+
+
+
+So the augmented matrix is:
+\[
+\left(\begin{array}{cc|c}
+2 & 0 & -\frac{2}{23} \\
+0 & \frac{23}{2} & \frac{5}{2}
+\end{array}\right)
+\]
+
+Solve the system:
+
+\[
+2 n_1 = -\frac{2}{23} \quad \Rightarrow \quad n_1 = -\frac{1}{23}
+\]
+\[
+\frac{23}{2} n_2 = \frac{5}{2} \quad \Rightarrow \quad n_2 = \frac{5}{23}
+\]
+
+\[
+\mathbf{n} = \frac{1}{23}\begin{bmatrix} -1 \\ 5 \end{bmatrix}
+\]
+\[
+\mathbf{n}^\top \mathbf{x} = 1
+\]
+Substitute \( \mathbf{n} \):
+\[
+\left(
+\frac{1}{23}
+\begin{bmatrix}
+-1 \\ 5
+\end{bmatrix}
+\right)^\top
+\mathbf{x} = 1
+\]
+
+\[
+\begin{bmatrix}
+-1 & 5
+\end{bmatrix}
+\mathbf{x} = 23
+\]
+
+
 or equivalently,
 \[
-5x + y = 15.
+5y - x = 23.
 \]
-
 Therefore, equation of required line is  :\[
-\boxed{5x + y = 15}
+\boxed{5y - x = 23.}
 \]
 
 \begin{figure}[htbp]
