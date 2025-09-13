@@ -12,7 +12,7 @@ E = (2*A + C)/3
 
 # Function to calculate area of triangle given 3 points
 def area(P, Q, R):
-    return 0.5 * abs(np.linalg.det(np.array([
+    return 0.5 * np.linalg.norm(np.linalg.det(np.array([
         [Q[0] - P[0], R[0] - P[0]],
         [Q[1] - P[1], R[1] - P[1]]
     ])))

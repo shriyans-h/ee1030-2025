@@ -4,11 +4,13 @@
 \usetheme{Madrid}
 \usecolortheme{default}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
 \usepackage{txfonts}
 \usepackage{tkz-euclide}
 \usepackage{listings}
 \usepackage{adjustbox}
 \usepackage{array}
+\usepackage{gensymb}
 \usepackage{tabularx}
 \usepackage{gvv}
 \usepackage{lmodern}
@@ -16,15 +18,71 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 
-
 \setbeamertemplate{page number in head/foot}[totalframenumber]
 
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
 
-\title
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
 {2.7.18}
-\date{September 10, 2025}
-\author 
-{ADUDOTLA SRIVIDYA - EE25BTECH11006}
+\date{september 10,2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{EE25BTECH11006 - ADUDOTLA SRIVIDYA}
+
 \begin{document}
 
 \frame{\titlepage}
@@ -56,36 +114,32 @@ Calculate the area of $\triangle ADE$ and compare it with the area of $\triangle
 % ---------------- SOLUTION ----------------
 \begin{frame}{Solution}
 Let $A(4,6), B(1,5), C(7,2)$.
-\begin{center}
-$
+\begin{align}
 D = \frac{1\cdot B + 2\cdot A}{1+2}
 = \frac{1}{3}\begin{bmatrix}1+8 \\ 5+12 \end{bmatrix}
 = \myvec{3\\\tfrac{17}{3}}
-$ 
+\end{align}
 
-$
+\begin{align}
 E = \frac{1\cdot C + 2\cdot A}{1+2}
 = \frac{1}{3}\begin{bmatrix}7+8 \\ 2+12 \end{bmatrix}
 = \myvec{5\\\tfrac{14}{3}}
-$
-\end{center}
+\end{align}
 \end{frame}
 
 \begin{frame}{Areas}
-$
+\begin{align}
 \text{ar}(\Delta ABC) = \tfrac{1}{2}\left|
-(1-4)(2-6) - (5-6)(7-4) \right| = \dfrac{15}{2}
-$
+(1-4)(2-6) - (5-6)(7-4) \right| = 9
+\end{align}
 
-$
+\begin{align}
 \text{ar}(\Delta ADE) = \tfrac{1}{2}\left|
-(3-4)\brak{\tfrac{14}{3}-6} - \brak{\tfrac{17}{3}-6}(5-4) \right| = \dfrac{5}{6}
-$
-\begin{center}
-$
+(3-4)\brak{\tfrac{14}{3}-6} - \brak{\tfrac{17}{3}-6}(5-4) \right| = 1
+\end{align}
+\begin{align}
 \frac{\text{ar}(\Delta ADE)}{\text{ar}(\Delta ABC)} = \frac{1}{9}
-$
-\end{center}
+\end{align}
 \end{frame}
 
 % ---------------- PURE PYTHON ----------------
@@ -107,7 +161,7 @@ E = (2*A + C)/3
 \begin{frame}[fragile]{Pure Python Plot (Part 2)}
 \begin{lstlisting}[language=Python]
 def area(P, Q, R):
-    return 0.5 * abs(np.linalg.det(np.array([
+    return 0.5 * np.linalg.norm(np.linalg.det(np.array([
         [Q[0] - P[0], R[0] - P[0]],
         [Q[1] - P[1], R[1] - P[1]]
     ])))
@@ -233,7 +287,7 @@ plt.show()
 \begin{frame}{Plot}
 \centering
 \includegraphics[width=0.6\linewidth]{figs/fig4.png}
-\caption{$\triangle ADE$ inside $\triangle ABC$}
+\caption{Internal Division: ΔADE inside ΔABC}
 \end{frame}
 
 \end{document}
