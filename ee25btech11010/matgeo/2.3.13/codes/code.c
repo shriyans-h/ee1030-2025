@@ -2,11 +2,11 @@
 #include <math.h>
 
 double angleWithYAxis(double vx, double vy, double vz) {
-    double jy = 1.0;
-    double dot = vy * jy;
+    double e2y = 1.0;
+    double dot = vy * e2y;
     double magv = sqrt(vx*vx + vy*vy + vz*vz);
-    double magj = 1.0;
-    double cosTheta = dot / (magv * magj);
+    double mage2 = 1.0;
+    double cosTheta = dot / (magv * mage2);
     double thetaRad = acos(cosTheta);
     double thetaDeg = thetaRad * 180.0 / M_PI;
     return thetaDeg;

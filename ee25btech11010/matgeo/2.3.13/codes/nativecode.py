@@ -4,11 +4,11 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # Vectors
 v = np.array([1, -1, 2])
-j = np.array([0, 1, 0])
+e2 = np.array([0, 1, 0])
 
 # Normalize for plotting
 v_unit = v / np.linalg.norm(v)
-j_unit = j / np.linalg.norm(j)
+e2_unit = e2 / np.linalg.norm(e2)
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -17,11 +17,11 @@ origin = np.array([0, 0, 0])
 
 # Plot vectors
 ax.quiver(*origin, *v_unit, color='r')
-ax.quiver(*origin, *j_unit, color='b')
+ax.quiver(*origin, *e2_unit, color='b')
 
 # Add labels next to the tips
 ax.text(*v_unit, "Line (1,-1,2)", color='r', fontsize=10)
-ax.text(*j_unit, "Y-axis (0,1,0)", color='b', fontsize=10)
+ax.text(*e2_unit, "Y-axis (0,1,0)", color='b', fontsize=10)
 
 # Axes labels and limits
 ax.set_xlabel('X')
