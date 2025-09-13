@@ -97,8 +97,8 @@ Hence its direction vector is
 
 \begin{align}
 \vec{v} &= \myvec{1\\-1\\2} \\
-\vec{j} &= \myvec{0\\1\\0} \\
-\vec{v}^T\vec{j} &= 
+\vec{e_2} &= \myvec{0\\1\\0} \\
+\vec{v}^T\vec{e_2} &= 
 \myvec{1 & -1 & 2}\myvec{0\\1\\0}=-1 
 \end{align}
 \end{frame}
@@ -108,9 +108,9 @@ Hence its direction vector is
 \|\vec{v}\| &= 
 \sqrt{\vec{v}^T\vec{v}}
 =\sqrt{\myvec{1 & -1 & 2}\myvec{1\\-1\\2}}=\sqrt{6} \\
-\|\vec{j}\| &=1 \\
+\|\vec{e_2}\| &=1 \\
 \cos\theta &= 
-\frac{\vec{v}^T\vec{j}}{\|\vec{v}\|\|\vec{j}\|}
+\frac{\vec{v}^T\vec{e_2}}{\|\vec{v}\|\|\vec{e_2}\|}
 =\frac{-1}{\sqrt{6}} \\
 \theta &= \cos^{-1}\!\brak{-\frac{1}{\sqrt{6}}}
 \end{align}
@@ -132,11 +132,11 @@ $
 #include <math.h>
 
 double angleWithYAxis(double vx, double vy, double vz) {
-    double jy = 1.0;
-    double dot = vy * jy;
+    double e2y = 1.0;
+    double dot = vy * e2y;
     double magv = sqrt(vx*vx + vy*vy + vz*vz);
-    double magj = 1.0;
-    double cosTheta = dot / (magv * magj);
+    double mage2 = 1.0;
+    double cosTheta = dot / (magv * mage2);
     double thetaRad = acos(cosTheta);
     double thetaDeg = thetaRad * 180.0 / M_PI;
     return thetaDeg;
@@ -159,11 +159,11 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # Vectors
 v = np.array([1, -1, 2])
-j = np.array([0, 1, 0])
+e2 = np.array([0, 1, 0])
 
 # Normalize for plotting
 v_unit = v / np.linalg.norm(v)
-j_unit = j / np.linalg.norm(j)
+e2_unit = e2 / np.linalg.norm(e2)
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -178,11 +178,11 @@ origin = np.array([0, 0, 0])
     \frametitle{Python Code}
 \begin{lstlisting}
 ax.quiver(*origin, *v_unit, color='r')
-ax.quiver(*origin, *j_unit, color='b')
+ax.quiver(*origin, *e2_unit, color='b')
 
 # Add labels next to the tips
 ax.text(*v_unit, "Line (1,-1,2)", color='r', fontsize=10)
-ax.text(*j_unit, "Y-axis (0,1,0)", color='b', fontsize=10)
+ax.text(*e2_unit, "Y-axis (0,1,0)", color='b', fontsize=10)
 
 # Axes labels and limits
 ax.set_xlabel('X')
@@ -228,11 +228,11 @@ print(f"Angle with positive Y-axis = {theta_deg:.2f} degrees")
 \begin{lstlisting}
 # 3D plotting
 v = np.array([vx, vy, vz])
-j = np.array([0, 1, 0])  # Y-axis unit vector
+e2 = np.array([0, 1, 0])  # Y-axis unit vector
 
 # Normalize for plotting
 v_unit = v / np.linalg.norm(v)
-j_unit = j / np.linalg.norm(j)
+e2_unit = e2 / np.linalg.norm(e2)
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
@@ -240,7 +240,7 @@ origin = np.array([0, 0, 0])
 
 # Plot vectors
 ax.quiver(*origin, *v_unit, color='r', length=1)
-ax.quiver(*origin, *j_unit, color='b', length=1)
+ax.quiver(*origin, *e2_unit, color='b', length=1)
 
 # Labels
 \end{lstlisting}
@@ -250,7 +250,7 @@ ax.quiver(*origin, *j_unit, color='b', length=1)
     \frametitle{Python+ C Code}
 \begin{lstlisting}
 ax.text(*(v_unit + 0.1), f"Line {tuple(v)}", color='r', fontsize=10)
-ax.text(*(j_unit + 0.1), f"Y-axis {tuple(j)}", color='b', fontsize=10)
+ax.text(*(e2_unit + 0.1), f"Y-axis {tuple(e2)}", color='b', fontsize=10)
 ax.text(0.2, 0.2, 0.2, f"Angle with Y-axis: {theta_deg:.2f}°", color='k', fontsize=12)
 
 # Axes

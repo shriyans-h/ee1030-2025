@@ -1,7 +1,7 @@
 \frametitle{Python+ C Code}
 \begin{lstlisting}
 ax.text(*(v_unit + 0.1), f"Line {tuple(v)}", color='r', fontsize=10)
-ax.text(*(j_unit + 0.1), f"Y-axis {tuple(j)}", color='b', fontsize=10)
+ax.text(*(e2_unit + 0.1), f"Y-axis {tuple(e2)}", color='b', fontsize=10)
 ax.text(0.2, 0.2, 0.2, f"Angle with Y-axis: {theta_deg:.2f}°", color='k', fontsize=12)
 
 # Axes
