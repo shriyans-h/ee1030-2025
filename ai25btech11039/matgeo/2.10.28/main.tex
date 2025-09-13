@@ -1,0 +1,135 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.10.28}
+\author{AI25BTECH11039-Harichandana Varanasi}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section*{Question}
+\textbf{Q 2.10.28.}
+For non-zero vectors $\vec a,\vec b,\vec c$, the relation
+\[
+\bigl|(\vec a\times \vec b)\cdot \vec c\bigr|=\|\vec a\|\,\|\vec b\|\,\|\vec c\|
+\]
+holds if and only if
+\begin{enumerate}
+  \item $\vec a\cdot\vec b=0,\; \vec b\cdot\vec c=0$
+  \item $\vec b\cdot\vec c=0,\; \vec c\cdot\vec a=0$
+  \item $\vec c\cdot\vec a=0,\; \vec a\cdot\vec b=0$
+  \item $\vec a\cdot\vec b=\vec b\cdot\vec c=\vec c\cdot\vec a=0$
+\end{enumerate}
+
+
+\section*{Solution}
+
+We need the condition for
+\[
+\abs{(\vec{a} \times \vec{b})\cdot \vec{c}} = \|\vec{a}\|\,\|\vec{b}\|\,\|\vec{c}\|.
+\]
+Now,
+\[
+\| \vec{a} \times \vec{b} \| = \|\vec{a}\|\,\|\vec{b}\|\sin\theta,
+\]
+where $\theta$ is the angle between $\vec{a}$ and $\vec{b}$.
+
+So,
+\[
+\abs{(\vec{a} \times \vec{b})\cdot \vec{c}} 
+\le \|\vec{a}\|\,\|\vec{b}\|\,\|\vec{c}\|.
+\]
+
+Equality holds iff  
+1. $\sin\theta = 1 \;\;\Rightarrow\;\; \vec{a} \perp \vec{b}$, and  
+2. $\vec{c} \parallel (\vec{a} \times \vec{b}) \;\;\Rightarrow\;\; \vec{c} \perp \vec{a},\;\vec{c} \perp \vec{b}$.  
+
+Thus the conditions are
+\[
+\vec{a} \cdot \vec{b} = 0, \quad 
+\vec{b} \cdot \vec{c} = 0, \quad 
+\vec{c} \cdot \vec{a} = 0.
+\]
+
+Hence, the correct option is
+\[
+\boxed{\text{(d)}}
+\]
+
+
+
+     \begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{figs/2.10.28.jpeg}
+\caption{Illustration of $|( \vec a\times\vec b)\cdot\vec c|=|\vec a|\,|\vec b|\,|\vec c|$ with $\vec a\perp\vec b$ and $\vec c\parallel(\vec a\times\vec b)$.}
+
+
+\end{figure}
+
+\end{document}
