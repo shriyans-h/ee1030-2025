@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  13 SEP 2025 14:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.22)  14 SEP 2025 00:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1741,10 +1741,6 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 [3
 
 ]
-Overfull \vbox (9.25241pt too high) detected at line 133
- []
-
-
 
 [4
 
@@ -1761,6 +1757,10 @@ Overfull \vbox (9.25241pt too high) detected at line 133
 [7
 
 ]
+
+[8
+
+]
 \openout4 = `main.vrb'.
 
  (./main.vrb
@@ -1770,7 +1770,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[8
+[9
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
@@ -1862,7 +1862,7 @@ l.16     printf("d: %lf %lf %lf\n"
 ? 
 )
 
-[9
+[10
 
 ]
 \openout4 = `main.vrb'.
@@ -1894,7 +1894,7 @@ Overfull \vbox (1.72923pt too high) detected at line 292
 
 
 
-[10
+[11
 
 ]
 \openout4 = `main.vrb'.
@@ -1947,7 +1947,7 @@ l.15 ax.text(*B,"B(3,3,-5)"
 ? 
 )
 
-[11
+[12
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
@@ -2056,17 +2056,17 @@ l.9 ...5btech11027/MATGEO/4.7.13/figs/figure1.png"
 ? 
 )
 
-[12
+[13
 
 ]
-<figs/figure1.png, id=373, 462.528pt x 346.896pt>
+<figs/figure1.png, id=401, 462.528pt x 346.896pt>
 File: figs/figure1.png Graphic file (type png)
 <use figs/figure1.png>
 Package pdftex.def Info: figs/figure1.png  used on input line 355.
 (pdftex.def)             Requested size: 277.84358pt x 208.38268pt.
 
 
-[13
+[14
 
  <./figs/figure1.png>]
 \tf@nav=\write7
@@ -2098,12 +2098,12 @@ Package rerunfilecheck Info: Checksums for `main.out':
  ) 
 Here is how much of TeX's memory you used:
  59089 strings out of 473197
- 1433569 string characters out of 5718605
- 2517227 words of memory out of 5000000
- 81335 multiletter control sequences out of 15000+600000
+ 1433530 string characters out of 5718605
+ 2517226 words of memory out of 5000000
+ 81333 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,24n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,21n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
@@ -2111,10 +2111,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (13 pages, 231489 bytes).
+Output written on main.pdf (14 pages, 233287 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 489 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 30 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

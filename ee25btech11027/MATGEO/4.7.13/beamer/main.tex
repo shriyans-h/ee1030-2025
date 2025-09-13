@@ -101,8 +101,8 @@
     \label{tab:parameters}
 Given equation:
 \begin{align}
-   \overrightarrow{\Vec{r}}=\hat{i}+2\hat{j}-4\hat{k}+\lambda(2\hat{i}+3\hat{j}+6\hat{k}) \\
-\overrightarrow{\Vec{r}}=3\hat{i}+3\hat{j}-5\hat{k}+\mu(2\hat{i}+3\hat{j}+6\hat{k})\\
+   \Vec{r}=\hat{i}+2\hat{j}-4\hat{k}+\lambda(2\hat{i}+3\hat{j}+6\hat{k}) \\
+\Vec{r}=3\hat{i}+3\hat{j}-5\hat{k}+\mu(2\hat{i}+3\hat{j}+6\hat{k})\\
 \end{align}
 
    
@@ -111,45 +111,38 @@ Given equation:
 
 \begin{frame}
 \frametitle{Theoretical Solution}
-The given lines are in the form
+From the above two equation it is clear that given two lines are parallel.\\
+Now we'll find the distance between them.\\
+The given lines are in the form:
 \begin{align}
-   \Vec{r} = \Vec{a_1} + \lambda\Vec{b}\\
-   \Vec{r} = \Vec{a_2} + \mu\Vec{b}
+   \Vec{r} = \myvec{1\\2\\-4} + k_1\myvec{2\\3\\6}\\
+   \Vec{r} = \myvec{3\\3\\-5}+ k_2\myvec{2\\3\\6}
 \end{align}
 Where,
 \begin{align}
-    \Vec{a_1}=\myvec{1\\2\\-4}\;\;\Vec{a_2}=\myvec{3\\3\\-5}\;\;\Vec{b}=\myvec{2\\3\\6}
-\end{align}
-The given two lines are parallel.The distance between two parallel lines is given by:
-\begin{align}
-     d = \frac{\norm{(\Vec{a}_2 - \Vec{a}_1) \times \Vec{b}}}{\norm{\Vec{b}}}
-\end{align}
-
-\begin{align}
-   \Vec{a_2}-\Vec{a_1}=\myvec{2\\1\\-1}\;\;and\;\;\Vec{b}=\myvec{2\\3\\6}
+    \Vec{A}=\myvec{1\\2\\-4}\;\;\,\Vec{B}=\myvec{3\\3\\-5}\;\;,\Vec{M}=\myvec{2&2\\3&3\\6&6}
 \end{align}
 
 
 \end{frame}
 \begin{frame}
 \frametitle{Theoretical solution}
-Let,
+From Least squares solution, for shortest distance:
 \begin{align}
-    \Vec{a_2}-\Vec{a_1}=\Vec{a}
-\end{align}
-Now finding:
-\begin{align}
-    (\Vec{a}_2 - \Vec{a}_1) \times \Vec{b}=\Vec{a}\times\Vec{b}
+    \Vec{M^T}\Vec{M}\myvec{k_1\\-k_2}=\Vec{M^T}(\Vec{B}-\Vec{A})
 \end{align}
 \begin{align}
-   \mydet{\Vec{A_{23} \;\; \Vec{B_{23}}}}=\mydet{1&3\\-1&6}=9
+    \myvec{2&3&6\\2&3&6}\myvec{2&2\\3&3\\6&6}\myvec{k_1\\-k_2}=\myvec{2&3&6\\2&3&6}\brak{\myvec{3\\3\\-5}-\myvec{1\\2\\-4}}
 \end{align}
 \begin{align}
-     \mydet{\Vec{A_{31} \;\; \Vec{B_{31}}}}=\mydet{2&2\\-1&6}=14
+\myvec{49&49\\49&49}\myvec{k_1\\-k_2}=\myvec{2&3&6\\2&3&6}\brak{\myvec{3\\3\\-5}-\myvec{1\\2\\-4}}
 \end{align}
 \begin{align}
-     \mydet{\Vec{A_{12} \;\; \Vec{B_{12}}}}=\mydet{2&2\\1&3}=4
+    \myvec{49&49\\49&49}\myvec{k_1\\-k_2}=\myvec{2&3&6\\2&3&6}\myvec{2\\1\\-1}
 \end{align}
+
+
+
 
 
 
@@ -157,17 +150,18 @@ Now finding:
 \begin{frame}
 \frametitle{Theoretical Solution}
     \begin{align}
-     \norm{\Vec{a}\times\Vec{b}}=\left\|\myvec{ \mydet{\Vec{A_{23} \;\; \Vec{B_{23}}}} \\\\ \mydet{\Vec{A_{31} \;\; \Vec{B_{31}}}} \\\\ \mydet{\Vec{A_{12} \;\; \Vec{B_{12}}}}}  \right\|
+   \myvec{49&49\\49&49}\myvec{k_1\\-k_2}=\myvec{1\\1}
 \end{align}
 \begin{align}
-      \norm{\Vec{a}\times\Vec{b}}=\left\|\myvec{9\\ 14\\ 4}  \right\|
+   \myvec{1&1\\1&1}\myvec{k_1\\-k_2}=\frac{\myvec{1\\1}}{49}
 \end{align}
 \begin{align}
-       \norm{\Vec{a}\times\Vec{b}}=\sqrt{293}
+     k_1-k_2=\frac{1}{49}
 \end{align}
-
+Let $r_1$ and $r_2$ be the point on the line $l_1$ and $l_2$\\
+Now,
 \begin{align}
-     \norm{(\Vec{a}_2 - \Vec{a}_1) \times \Vec{b}}=\sqrt{293}
+    r_1-r_2=\myvec{-2\\-1\\1}+(k_1-k_2)\myvec{2\\3\\6}
 \end{align}
 
 
@@ -176,26 +170,32 @@ Now finding:
 \begin{frame}
 \frametitle{Theoretical Solution}
   \begin{align}
-\norm{\Vec{b}}=\sqrt{\Vec{b^T}\Vec{b}}
-  \end{align}
-
+      r_1-r_2=\myvec{-2\\-1\\1}+(\frac{1}{49})\myvec{2\\3\\6}
+\end{align}
 \begin{align}
-   \norm{\Vec{b}}=\sqrt{4+9+36}=\sqrt{49}
+       r_1-r_2=\myvec{\frac{-96}{49}\\\\\frac{-46}{49}\\\\\frac{55}{49}}
 \end{align}
 
-\begin{align}
-    \norm{\Vec{b}}=7
-\end{align}
-Substituting the values in Eq.7:
-
-\begin{align}
-  d=\frac{\sqrt{293}}{7}
-\end{align}
-Therefore the distance between the lines $l_1$ and $l_2$ is $\frac{\sqrt{293}}{7}$
 
 
 
 \end{frame}
+
+\begin{frame}
+\frametitle{Theoretical Solution}
+ Now , Distance between two lines = $\norm{r_1-r_2}$
+\begin{align}
+    \norm{r_1-r_2}=\sqrt{\brak{\frac{-96}{49}}^2+\brak{\frac{-46}{49}}^2+\brak{\frac{55}{49}}^2}
+\end{align}
+\begin{align}
+       \norm{r_1-r_2}=\frac{\sqrt{14357}}{49}
+\end{align}
+
+
+Therefore the distance between the lines $l_1$ and $l_2$ is $\frac{\sqrt{14357}}{49}$
+
+\end{frame}
+
 
 
 
