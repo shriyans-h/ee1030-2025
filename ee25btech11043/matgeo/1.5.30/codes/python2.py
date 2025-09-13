@@ -1,14 +1,8 @@
-import sys
 import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
 
-# Assuming you have these functions in your CoordGeo library
-# For demonstration, I'll provide simplified versions or inline the logic
-# from line.funcs import *
-# from conics.funcs import circ_gen
 
-# Simplified line_gen_num function (to avoid external dependency for this example)
 def line_gen_num(A, B, num_points):
     
     A = A.flatten()
@@ -17,7 +11,7 @@ def line_gen_num(A, B, num_points):
     points = np.outer(A, (1-t)) + np.outer(B, t)
     return points
 
-# Simplified circ_gen function (to avoid external dependency for this example)
+
 def circ_gen(center, radius, num_points=100):
    
     center = center.flatten()
@@ -58,7 +52,7 @@ plt.plot(x_AB[0,:], x_AB[1,:], "g--", label="Diameter")
 
 # Plot the points
 tri_coords = np.block([[A, B, P]])
-plt.scatter(tri_coords[0,:], tri_coords[1,:], s=50, zorder=5) # s for size, zorder to ensure visibility
+plt.scatter(tri_coords[0,:], tri_coords[1,:], s=50, zorder=5)
 
 # Add labels to the points
 vert_labels = [f'A({A[0,0]:.0f},{A[1,0]:.0f})', f'B({B[0,0]:.0f},{B[1,0]:.0f})', f'P({P[0,0]:.0f},{P[1,0]:.0f}) (Center)']
@@ -71,7 +65,7 @@ plt.legend(loc='best')
 plt.grid()
 plt.title("Diameter of a Circle")
 plt.axis('equal') # Important to make the circle appear circular
-plt.savefig("circle_diameter_question.png")
+plt.savefig("fig1.png")
 plt.show()
 
-print("Figure saved as circle_diameter_question.png")
+print("Figure saved as fig1.png")

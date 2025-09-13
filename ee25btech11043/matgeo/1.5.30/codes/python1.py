@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the shared library
-lib_diameter = ctypes.CDLL("./c.so")
+lib_diameter = ctypes.CDLL("./code.so")
 
 # Define the argument types and return type for the C function
 lib_diameter.findOtherEndOfDiameter.argtypes = [
