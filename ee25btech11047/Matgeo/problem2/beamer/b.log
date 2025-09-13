@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.29)  12 SEP 2025 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.29)  13 SEP 2025 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1817,32 +1817,11 @@ Overfull \hbox (18.9395pt too wide) in paragraph at lines 156--156
 \openout4 = `b.vrb'.
 
 
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 174--174
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 176--176
  [][]  
  []
 
-(./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 lib = ctypes.CDLL("
-                       ./libunit.so")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 lib = ctypes.CDLL("./libunit.so"
-                                    )
-? 
-)
+(./b.vrb)
 
 
 Overfull \hbox (18.9395pt too wide) has occurred while \output is active
@@ -1852,41 +1831,21 @@ Overfull \hbox (18.9395pt too wide) has occurred while \output is active
 [7
 
 ]
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 176--176
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 178--178
  [][]  
  []
 
 \openout4 = `b.vrb'.
 
 
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 196--196
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 195--195
  [][]  
  []
 
 (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 print(f"
-             Unit vector = ({u[0]:.4f})i + ({u[1]:.4f})j + ({u[2]:.4f})k")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ...0]:.4f})i + ({u[1]:.4f})j + ({u[2]:.4f})k"
-                                                  )
-? 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-17.
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+16.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
@@ -1898,18 +1857,261 @@ Overfull \hbox (18.9395pt too wide) has occurred while \output is active
 [8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 198--198
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 197--197
  [][]  
  []
 
 \openout4 = `b.vrb'.
 
 
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 212--212
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 217--217
  [][]  
  []
 
-(./b.vrb)
+(./b.vrb
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ax.quiver(0,0,0,*a,color="
+                              r",label="a")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ax.quiver(0,0,0,*a,color="r"
+                                ,label="a")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ax.quiver(0,0,0,*a,color="r",label="
+                                        a")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ax.quiver(0,0,0,*a,color="r",label="a"
+                                          )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ax.quiver(0,0,0,*b,color="
+                              g",label="b")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ax.quiver(0,0,0,*b,color="g"
+                                ,label="b")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ax.quiver(0,0,0,*b,color="g",label="
+                                        b")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ax.quiver(0,0,0,*b,color="g",label="b"
+                                          )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ax.quiver(0,0,0,*s,color="
+                              b",label="a+b")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ax.quiver(0,0,0,*s,color="b"
+                                ,label="a+b")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ax.quiver(0,0,0,*s,color="b",label="
+                                        a+b")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ax.quiver(0,0,0,*s,color="b",label="a+b"
+                                            )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ax.quiver(0,0,0,*u_py,color="
+                                 c",label="unit (Python)")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ax.quiver(0,0,0,*u_py,color="c"
+                                   ,label="unit (Python)")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ax.quiver(0,0,0,*u_py,color="c",label="
+                                           unit (Python)")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...0,0,0,*u_py,color="c",label="unit (Python)"
+                                                  )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ax.quiver(0,0,0,*(u_py*LA.norm(s)),color="
+                                               c",linestyle="dashed",label="...
+
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ax.quiver(0,0,0,*(u_py*LA.norm(s)),color="c"
+                                                 ,linestyle="dashed",label="...
+
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...0,*(u_py*LA.norm(s)),color="c",linestyle="
+                                                  dashed",label="unit scaled")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...y*LA.norm(s)),color="c",linestyle="dashed"
+                                                  ,label="unit scaled")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...m(s)),color="c",linestyle="dashed",label="
+                                                  unit scaled")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ..."c",linestyle="dashed",label="unit scaled"
+                                                  )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ax.set_title("
+                   Vectors a, b, a+b and Unit Vector")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ..._title("Vectors a, b, a+b and Unit Vector"
+                                                  )
+? 
+)
 
 
 Overfull \hbox (18.9395pt too wide) has occurred while \output is active
@@ -1919,14 +2121,14 @@ Overfull \hbox (18.9395pt too wide) has occurred while \output is active
 [9
 
 ]
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 215--215
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 220--220
  [][]  
  []
 
 \openout4 = `b.vrb'.
 
 
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 231--231
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 236--236
  [][]  
  []
 
@@ -1940,19 +2142,19 @@ Overfull \hbox (18.9395pt too wide) has occurred while \output is active
 [10
 
 ]
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 234--234
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 239--239
  [][]  
  []
 
 \openout4 = `b.vrb'.
 
 
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 253--253
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 258--258
  [][]  
  []
 
 (./b.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 253
+Overfull \vbox (1.72923pt too high) detected at line 258
  []
 
 
@@ -1965,17 +2167,17 @@ Overfull \hbox (18.9395pt too wide) has occurred while \output is active
 [11
 
 ]
-Overfull \hbox (18.9395pt too wide) in paragraph at lines 263--263
+Overfull \hbox (18.9395pt too wide) in paragraph at lines 268--268
  [][]  
  []
 
 <fig-1.png, id=346, 462.528pt x 346.896pt>
 File: fig-1.png Graphic file (type png)
 <use fig-1.png>
-Package pdftex.def Info: fig-1.png  used on input line 263.
+Package pdftex.def Info: fig-1.png  used on input line 268.
 (pdftex.def)             Requested size: 342.2953pt x 256.73607pt.
 
-Overfull \vbox (65.20975pt too high) detected at line 263
+Overfull \vbox (65.20975pt too high) detected at line 268
  []
 
 
@@ -2016,13 +2218,13 @@ Package rerunfilecheck Info: Checksums for `b.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58954 strings out of 475135
- 1429486 string characters out of 5765398
- 2485885 words of memory out of 5000000
- 80964 multiletter control sequences out of 15000+600000
+ 58971 strings out of 475135
+ 1429686 string characters out of 5765398
+ 2505885 words of memory out of 5000000
+ 80981 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
- 101i,18n,107p,1169b,1461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,18n,107p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
@@ -2030,7 +2232,7 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-Output written on b.pdf (12 pages, 219980 bytes).
+Output written on b.pdf (12 pages, 219653 bytes).
 PDF statistics:
  435 PDF objects out of 1000 (max. 8388607)
  363 compressed objects within 4 object streams

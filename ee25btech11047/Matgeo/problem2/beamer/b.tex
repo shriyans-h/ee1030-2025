@@ -155,59 +155,64 @@ void unitVector(double x1, double x2, double x3, double unit[3]) {
             \begin{frame}[fragile]
 	\frametitle{Python Code through shared output}
 	\begin{lstlisting}
-import ctypes
+#Code adapted to plot only vectors a, b, a+b and unit vector
+#Released under GNU GPL
+import sys
 import numpy as np
+import numpy.linalg as LA
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
-# Load the shared C library
-lib = ctypes.CDLL("./libunit.so")
+# local imports 
+from libs.line.funcs import *
+from libs.triangle.funcs import *
+from libs.conics.funcs import circ_gen
 
-# Define the function signature for unitVector
-lib.unitVector.argtypes = [ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
-lib.unitVector.restype = None
-
-# Input vectors
-a = np.array([2, -1, 1], dtype=np.double)
-b = np.array([0, 2, 1], dtype=np.double)
+#if using termux
+import subprocess
+import shlex
+#end if
+\end{lstlisting}
+            \end{frame}
+            \begin{frame}[fragile]
+	\frametitle{Python Code through shared output}
+	\begin{lstlisting}
+# Vectors from ctypes example
+a = np.array([2.0, -1.0, 1.0])
+b = np.array([0.0,  2.0, 1.0])
 s = a + b
-\end{lstlisting}
-            \end{frame}
-            \begin{frame}[fragile]
-	\begin{lstlisting}
-# Prepare C arrays
-x = (ctypes.c_double * 3)(*s)
-result = (ctypes.c_double * 3)()
 
-# Call the C function
-lib.unitVector(x, result)
+# Unit vector function
+def unit_vector(x):
+    return x / LA.norm(x)
 
-# Convert result to numpy array
-u = np.array([result[i] for i in range(3)])
+u_py = unit_vector(s)
 
-# Print result
-print(f"Unit vector = ({u[0]:.4f})i + ({u[1]:.4f})j + ({u[2]:.4f})k")
-
-# ---------- PLOTTING ----------
-fig = plt.figure()
+# Create figure
+fig = plt.figure(figsize=(8, 6))
 ax = fig.add_subplot(111, projection='3d')
-
-origin = [0, 0, 0]
 \end{lstlisting}
             \end{frame}
             \begin{frame}[fragile]
+	\frametitle{Python Code through shared output}
 	\begin{lstlisting}
-# Plot vectors
-ax.quiver(*origin, *a, color='r', label='a')
-ax.quiver(*origin, *b, color='g', label='b')
-ax.quiver(*origin, *s, color='b', label='a+b')
-ax.quiver(*origin, *u, color='m', label='unit vector (from C)', linewidth=2)
+# Plot vectors (from origin)
+ax.quiver(0,0,0,*a,color="r",label="a")
+ax.quiver(0,0,0,*b,color="g",label="b")
+ax.quiver(0,0,0,*s,color="b",label="a+b")
 
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
+# Plot unit vector (length = 1)
+ax.quiver(0,0,0,*u_py,color="c",label="unit (Python)")
+
+# Plot scaled unit vector (same length as s)
+ax.quiver(0,0,0,*(u_py*LA.norm(s)),color="c",linestyle="dashed",label="unit scaled")
+
+ax.set_title("Vectors a, b, a+b and Unit Vector")
 ax.legend()
-
+plt.grid()
 plt.show()
+
+
 \end{lstlisting}
             \end{frame}
             
