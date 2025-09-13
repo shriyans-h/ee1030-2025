@@ -83,7 +83,7 @@ columns=fullflexible
   showstringspaces=false
 }
 
-\title{Problem 4.11.1}
+\title{Problem 4.13.28}
 \author{ee25btech11023-Venkata Sai}
 
 \date{\today} 
@@ -120,13 +120,13 @@ Equation of a line through $\vec{P}$ and having slope $m$ is
  \myvec{-m & 1}\myvec{x-2 \\ y-3}=0  
  \end{align}
  \begin{align}
- \myvec{-m & 1}\brak{\myvec{x\\y}-\myvec{2\\3}}=0 \implies \myvec{-m & 1}\myvec{x\\y}=\myvec{-m & 1}\myvec{2\\3}
+ \myvec{-m & 1}\brak{\myvec{x\\y}-\myvec{2\\3}} \implies \myvec{-m & 1}\myvec{x\\y}=\myvec{-m & 1}\myvec{2\\3}
 \end{align}
 \begin{align}
 \myvec{-m & 1}\myvec{x\\y}=3-2m
 \end{align}
 \begin{align}
-  x+y=7 \implies  \myvec{1 & 1}\myvec{x\\y}=7
+  x+y=7 \implies  \myvec{1 & 1}\myvec{\vec{x}\\\vec{y}}=7
 \end{align}
 \end{frame}
 \subsection{Solving}
@@ -138,45 +138,43 @@ Equation of a line through $\vec{P}$ and having slope $m$ is
 \myvec{1 & 1& 7 \\0 & 1+m & 3+5m}
 \end{align}
 \begin{align}
-y=&\frac{3+5m}{1+m}\\
-x+y=7\implies x=&7-y \implies x=7-\frac{3+5m}{1+m}
-\end{align}
-\begin{align}
-x=\frac{7+7m-3-5m}{1+m}=\frac{4+2m}{1+m}
+y=&\frac{3+5m}{1+m}
 \end{align}
 Given the point is at a distance of 4 units from point $\vec{P}$
 \begin{align}
-  \norm{\myvec{x\\y}-\myvec{2\\3}}=4 \implies \norm{\myvec{\frac{4+2m}{1+m}-2\\\frac{3+5m}{1+m}-3}}=4
+  \norm{\myvec{x\\y}-\myvec{2\\3}}=4 \implies \norm{\myvec{x-2\\y-3}}=4
+\end{align}
+\begin{align}
+\sqrt{\brak{x-2}^2+{\brak{y-3}^2}}=4  \\
+\sqrt{\brak{7-y-2}^2+{\brak{y-3}^2}}=4  
 \end{align}
 \end{frame}
 \subsection{Substitution}
 \begin{frame}
 \frametitle{Substitution}
 \begin{align}
-\norm{\myvec{\frac{4+2m-2-2m}{1+m}\\ \frac{3+5m-3-3m}{1+m}}}=\norm{\myvec{\frac{2}{1+m}\\ \frac{2m}{1+m}}}=4\\
-\sqrt{\brak{\frac{2}{1+m}}^2+{\brak{\frac{2m}{1+m}}^2}}=4 
+\brak{5-y}^2+{\brak{y-3}^2}=4^2=16 \\
+25+y^2-10y+y^2+9-6y=16 \\
+2y^2-16y+18=0 \implies y^2-8y+9=0 \\
+y^2-8y+9+16=16 \implies \brak{y-4}^2=7 
 \end{align}
 \begin{align}
-\frac{4+4m^2}{\brak{1+m}^2}&=4^2=16 \\
-4\brak{1+m^2}=16\brak{1+m^2+2m} &\implies \brak{1+m^2}=4\brak{1+m^2+2m} 
+&y-4=\pm\sqrt7 \\
+y=4&-\sqrt{7}\ \brak{\text{or}}\  4+\sqrt{7}
 \end{align}
 \begin{align}
-4+4m^2+8m=1&+m^2 \implies 3m^2+8m+3=0 \\
-m^2+&\frac{8m}{3}+1=0 \\
-m^2+\frac{8m}{3}&+1+\brak{\frac{4}{3}}^2=\brak{\frac{4}{3}}^2 
+\frac{3+5m}{1+m} = \frac{3+5m+2-2}{1+m}= \frac{5+5m-2}{1+m}=\frac{5\brak{m+1}-2}{1+m}=5-\frac{2}{1+m}
 \end{align}
 \end{frame}
 \subsection{Conclusion}
 \begin{frame}
 \frametitle{Conclusion}
 \begin{align}
-\brak{m+\frac{4}{3}}^2&=\frac{16}{9}-1=\frac{7}{9} \\
-m+\frac{4}{3}&=\pm\frac{\sqrt{7}}{3} \\
-m=\frac{-4+\sqrt{7}}{3}\ &\text{or}\ \frac{-4-\sqrt{7}}{3}
-\end{align}
-According to options 
-\begin{align}
-    \frac{-4+\sqrt{7}}{3}=\frac{-8+2\sqrt{7}}{6}=\frac{1-\sqrt7}{1+\sqrt{7}}
+5-\frac{2}{1+m}= 4-\sqrt{7}\quad &\brak{\text{or}}\ \quad  5-\frac{2}{1+m}=4+\sqrt{7} \\
+\frac{2}{1+m} = 1+\sqrt{7}\quad &\brak{\text{or}}\ \quad \frac{2}{1+m} =1-\sqrt{7} \\
+1+m = \frac{2}{1+\sqrt{7}}\quad &\brak{\text{or}}\ \quad 1+m = \frac{2}{1-\sqrt{7}}  \\
+m=\frac{2-1-\sqrt{7}}{1+\sqrt{7}}\quad &\brak{\text{or}}\ \quad m = \frac{2-1+\sqrt{7}}{1-\sqrt{7}}  \\
+m=\frac{1-\sqrt{7}}{1+\sqrt{7}} \quad &\brak{\text{or}}\ \quad m=\frac{1+\sqrt{7}}{1-\sqrt{7}}
 \end{align}
 \end{frame}
 \subsection{Plot}
