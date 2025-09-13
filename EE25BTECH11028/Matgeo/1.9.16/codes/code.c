@@ -1,20 +1,50 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 int main() {
-    int A_x = -2, A_y = 0;
-    int B_x = 6, B_y = 0;
-    int P_x1, P_x2;
+    // Coordinates of points A and B
+    int Ax = -2, Ay = 0;
+    int Bx = 6, By = 0;
 
-    // Based on |x + 2| = |x - 6|, two cases arise:
-    // Case 1: x + 2 = x - 6 (not possible)
+    // We know P lies on the x-axis: P = (x, 0)
+    // So we'll find x such that |P - A| = |P - B|
+
+    int x;
+
+    // Vector subtraction magnitudes:
+    // |P - A| = sqrt((x + 2)^2 + 0^2)
+    // |P - B| = sqrt((x - 6)^2 + 0^2)
+    // Equating:
+    // |x + 2| = |x - 6|
+
+    // Solve the absolute value equation manually:
+
+    // Case 1: x + 2 = x - 6 => 2 = -6 → invalid
+    int lhs1 = x + 2;
+    int rhs1 = x - 6;
+
+    if (lhs1 == rhs1) {
+        printf("Case 1 valid, x = any value (unexpected)\n");
+    } else {
+        printf("Case 1: %d = %d → Not possible\n", lhs1, rhs1);
+    }
+
     // Case 2: x + 2 = -(x - 6)
+    //         x + 2 = -x + 6
+    //         2x = 4 => x = 2
 
-    // Case 2 calculation:
-    P_x1 = (6 - 2) / 2; // x = 2
-    P_x2 = 2; // Only one valid solution as per the problem.
+    x = 2;
 
-    printf("Coordinates of point P are: (%d, 0)\n", P_x2);
+    // Output the result
+    printf("The point P that is equidistant from A and B on the x-axis is: (%d, 0)\n", x);
+
+    // Optional: verify distances
+    double distance_PA = sqrt(pow(x - Ax, 2) + pow(0 - Ay, 2));
+    double distance_PB = sqrt(pow(x - Bx, 2) + pow(0 - By, 2));
+
+    printf("Distance PA = %.2f\n", distance_PA);
+    printf("Distance PB = %.2f\n", distance_PB);
 
     return 0;
 }

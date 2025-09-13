@@ -74,17 +74,16 @@
 %This block of code defines the information to appear in the
 %Title page
 \title %optional
-{1.9.17}
+{1.5.16}
 \date{August  2025}
 %\subtitle{A short story}
 
 \author % (optional)
 {J.NAVYASRI- EE25BTECH11028}
 
-
-
 \begin{document}
-% Question Slide
+
+\frame{\titlepage}
 \begin{frame}{Question}
 \textbf{Question:} \\
 Write the coordinates of a point \(\mathbf{P}\) on the \(x\)-axis which is equidistant from the points \(\mathbf{A(-2, 0)}\) and \(\mathbf{B(6, 0)}\).
@@ -92,53 +91,66 @@ Write the coordinates of a point \(\mathbf{P}\) on the \(x\)-axis which is equid
 
 % Step 1: Theoretical solution
 \begin{frame}{Theoretical solution}
-Let the point $P$ be on the $x$-axis with coordinates:
+Let the point \(P\) lie on the \(x\)-axis with coordinates
 \begin{equation}
-P(x, 0)
+    \mathbf{P} = (x, 0)
 \end{equation}
 
-Since $P$ is equidistant from $A$ and $B$, their distances from $P$ are equal:
+The position vectors of points \(A\), \(B\), and \(P\) are
+\begin{align}
+    \vec{A} &= \langle -2, 0 \rangle \\
+    \vec{B} &= \langle 6, 0 \rangle \\
+    \vec{P} &= \langle x, 0 \rangle
+\end{align}
+
+Since \(P\) is equidistant from \(A\) and \(B\), their distances are equal:
 \begin{equation}
-PA = PB
+    |\vec{P} - \vec{A}| = |\vec{P} - \vec{B}|
 \end{equation}
 
 \end{frame}
 
 % Step 2: Theoretical solution 
-\begin{frame}{Distance Formula}
-Using the distance formula:
+\begin{frame}{Theoretical solution}
+Using vector subtraction:
+\begin{align}
+    \vec{P} - \vec{A} &= \langle x - (-2), 0 - 0 \rangle = \langle x + 2, 0 \rangle \\
+    \vec{P} - \vec{B} &= \langle x - 6, 0 - 0 \rangle = \langle x - 6, 0 \rangle
+\end{align}
+
+Now equate the magnitudes:
 \begin{equation}
-\sqrt{(x + 2)^2 + (0 - 0)^2} = \sqrt{(x - 6)^2 + (0 - 0)^2}
+    \sqrt{(x+2)^2 + 0^2} = \sqrt{(x-6)^2 + 0^2}
 \end{equation}
 
-This simplifies to:
+Simplifying, we get:
 \begin{equation}
-|x + 2| = |x - 6|
+    |x + 2| = |x - 6|
 \end{equation}
-
 \end{frame}
 
 % Step 3: Solve Cases
 \begin{frame}{Solving Cases}
+Consider the two cases:
+
 \textbf{Case 1:}
 \begin{equation}
-x + 2 = x - 6 \quad \Rightarrow \quad 2 = -6 \quad \text{(Not possible)}
+    x + 2 = x - 6 \implies 2 = -6 \quad \text{(not possible)}
 \end{equation}
 
 \textbf{Case 2:}
 \begin{equation}
-x + 2 = -(x - 6) 
+    x + 2 = -(x - 6) \implies x + 2 = -x + 6 \implies 2x = 4 \implies x = 2
 \end{equation}
-\[ x + 2 = -x + 6 \] 
-\[ 2x = 4 \quad \Rightarrow \quad x = 2 \]
 \end{frame}
 
 % Final Answer
 \begin{frame}{Answer}
-Therefore, the coordinates of point $P$ are:
+Therefore, the coordinates of point \(P\) are
 \begin{equation}
-\boxed{(2, 0)}
+    \boxed{(2, 0)}
 \end{equation}
+
 \end{frame}
 
 \begin{frame}[fragile]
@@ -146,71 +158,100 @@ Therefore, the coordinates of point $P$ are:
     \begin{lstlisting}
 import matplotlib.pyplot as plt
 
-# Define points
-A = (-2, 0)
-B = (6, 0)
-P = (2, 0)
+def setup_plot():
+    # Points A, P, and B
+    A = (-2, 0)
+    P = (2, 0)
+    B = (6, 0)
 
-# Create figure and axis
-fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(8, 3))
 
-# Plot points
-ax.plot(A[0], A[1], 'ro')  # Red point A
-ax.plot(B[0], B[1], 'bo')  # Blue point B
-ax.plot(P[0], P[1], 'go')  # Green point P
+    # Set axis limits and aspect ratio
+    ax.set_xlim(-4, 8)
+    ax.set_ylim(-1, 2)
+    ax.set_aspect('equal')
 
-# Draw x and y axis
-ax.axhline(0, color='black', linewidth=0.5)
-ax.axvline(0, color='black', linewidth=0.5)
+    # Remove ticks and spines except left and bottom
+    ax.set_xticks([])
+    ax.set_yticks([])
+    for spine in ['top', 'right']:
+        ax.spines[spine].set_visible(False)
 
-# Add labels for axes
-ax.text(7, 0, 'x', fontsize=12, verticalalignment='bottom')
-ax.text(0, 2, 'y', fontsize=12, horizontalalignment='left')
-
-# Set limits and aspect ratio
-ax.set_xlim(-4, 8)
-ax.set_ylim(-1, 3)
-ax.set_aspect('equal')
-
-# Hide the ticks
-ax.set_xticks([])
-ax.set_yticks([])
+    return fig, ax, A, P, B
 
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Python Code}
-    
-# Add point labels
-ax.text(A[0], A[1] - 0.3, 'A(-2, 0)', color='red', fontsize=10, horizontalalignment='center')
-ax.text(B[0], B[1] - 0.3, 'B(6, 0)', color='blue', fontsize=10, horizontalalignment='center')
-ax.text(P[0], P[1] + 0.3, 'P(2, 0)', color='green', fontsize=10, horizontalalignment='center')
+    \begin{lstlisting}
+def draw_elements(ax, A, P, B):
+    # Plot points
+    ax.plot(A[0], A[1], 'ro')  # red
+    ax.plot(P[0], P[1], 'go')  # green
+    ax.plot(B[0], B[1], 'bo')  # blue
 
-# Add annotation about P being equidistant from A and B
-ax.text(2, 0.3, 'P is equidistant from A and B', fontsize=10, verticalalignment='bottom', horizontalalignment='left')
+    # Labels below points
+    ax.text(A[0], A[1] - 0.25, r'$A(-2,0)$', color='red', ha='center', fontsize=12)
+    ax.text(P[0], P[1] - 0.25, r'$P(2,0)$', color='green', ha='center', fontsize=12)
+    ax.text(B[0], B[1] - 0.25, r'$B(6,0)$', color='blue', ha='center', fontsize=12)
 
-# Show the plot
-plt.show()
+    # Dashed line between A and B
+    ax.plot([A[0], B[0]], [A[1], B[1]], 'k--', linewidth=1)
 
+    # Annotation above dashed line
+    ax.text(2, 0.3, r'$P$ is equidistant from $A$ and $B$', fontsize=12, style='italic', ha='center')
 
+    # Draw x and y axis arrows
+    ax.arrow(-4, 0, 12, 0, head_width=0.15, head_length=0.3, fc='black', ec='black', length_includes_head=True)
+    ax.arrow(0, -1, 0, 2, head_width=0.15, head_length=0.3, fc='black', ec='black', length_includes_head=True)
+
+    # Axis labels
+    ax.text(7.9, -0.15, 'x', fontsize=12)
+    ax.text(-0.2, 1.8, 'y', fontsize=12)
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+      \begin{lstlisting}
+def add_caption_and_show(fig):
+    fig.text(0.5, 0.02, 'Fig. 0', ha='center', fontsize=14, weight='bold')
+    plt.show()
+
+if __name__ == "__main__":
+    fig, ax, A, P, B = setup_plot()
+    draw_elements(ax, A, P, B)
+    add_caption_and_show(fig)
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{C Code}
 \begin{lstlisting}
-
+// Part 1: Problem Setup and Case 1 Checking
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 int main() {
-    // Define points A and B on x-axis
-    int A_x = -2, A_y = 0;
-    int B_x = 6, B_y = 0;
-    
-    // Coordinates of point P to be found
-    int P_x;
-    
-    // Next part will calculate P_x
+    // Coordinates of points A and B
+    int Ax = -2, Ay = 0;
+    int Bx = 6, By = 0;
+
+    // Point P lies on the x-axis, so P = (x, 0)
+    int x;
+
+    // Case 1: x + 2 = x - 6 --> 2 = -6 (not possible)
+    int lhs1 = 0 + 2;  // placeholder for demonstration
+    int rhs1 = 0 - 6;
+
+    if (lhs1 == rhs1) {
+        printf("Case 1 valid, unexpected result\n");
+    } else {
+        printf("Case 1: %d = %d --> Not possible\n", lhs1, rhs1);
+    }
 
 
 \end{lstlisting}
@@ -220,14 +261,23 @@ int main() {
 \begin{frame}[fragile]
 \frametitle{C Code}
 \begin{lstlisting}
-    // Solve |x + 2| = |x - 6|
-    // Case 2: x + 2 = -(x - 6)
-    P_x = (6 - 2) / 2;  // P_x = 2
+    // Case 2: x + 2 = -(x - 6) => x + 2 = -x + 6
+    // => 2x = 4 => x = 2
+    x = 2;
 
-    printf("Coordinates of point P are: (%d, 0)\n", P_x);
+    // Output result
+    printf("The point P that is equidistant from A and B on the x-axis is: (%d, 0)\n", x);
+
+    // Optional: verify the distances
+    double distance_PA = sqrt(pow(x - Ax, 2) + pow(0 - Ay, 2));
+    double distance_PB = sqrt(pow(x - Bx, 2) + pow(0 - By, 2));
+
+    printf("Distance PA = %.2f\n", distance_PA);
+    printf("Distance PB = %.2f\n", distance_PB);
 
     return 0;
 }
+
 \end{lstlisting}
 
 \end{frame}
@@ -248,28 +298,30 @@ print(result.stdout)
 
 \end{frame}
 
-\begin{frame}{Graphical Representation}
-    
+\begin{frame}{Graphical Representation:}
 
 \begin{center}
-\begin{tikzpicture}[scale=0.8]
-    % Draw axes
-    \draw[->] (-4,0) -- (8,0) node[right] {$x$};
-    \draw[->] (0,-1) -- (0,2) node[above] {$y$};
-
-    % Plot points
-    \filldraw[red] (-2,0) circle (3pt) node[below] {$A(-2,0)$};
-    \filldraw[blue] (6,0) circle (3pt) node[below] {$B(6,0)$};
-    \filldraw[green!70!black] (2,0) circle (3pt) node[below] {$P(2,0)$};
-
-    % Draw dashed lines showing equal distance
-    \draw[dashed, gray] (-2,0) -- (2,0);
-    \draw[dashed, gray] (6,0) -- (2,0);
-
-    % Add label
-    \node at (2,1) {P is equidistant from A and B};
-\end{tikzpicture}
+    \begin{tikzpicture}[scale=1.0]
+        % axes
+        \draw[->] (-4,0) -- (8,0) node[right] {\(x\)};
+        \draw[->] (0,-1) -- (0,2) node[above] {\(y\)};
+        
+        % points
+        \filldraw[red] (-2,0) circle (2pt) node[below] {\(A(-2,0)\)};
+        \filldraw[blue] (6,0) circle (2pt) node[below] {\(B(6,0)\)};
+        \filldraw[green!70!black] (2,0) circle (2pt) node[below] {\(P(2,0)\)};
+        
+        % dotted line
+        \draw[dashed] (-2,0) -- (6,0);
+        
+        % annotation
+        \node at (4,1.0) {\(P\) is equidistant from \(A\) and \(B\)};
+    \end{tikzpicture}
+    
+    % Add "Fig. 0" text below the figure
+    \vspace{0.5cm} % space between figure and text
+    \textbf{Fig. 0}
 \end{center}
 \end{frame}
-
 \end{document}
+
