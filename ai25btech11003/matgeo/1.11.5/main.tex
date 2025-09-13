@@ -66,16 +66,16 @@ Let $\vec{u}$ be the unit vector along $\vec{b} + \vec{c} .$ \\
 $ \vec{b} + \vec{c} = \myvec{2+\lambda\\4+2\\-5+3}
 =\myvec{2+\lambda\\6\\-2}.$ \\
 
-$\|\vec{b}+\vec{c}\| = \sqrt{(2+\lambda)^2+6^2+(-2)^2}
+$\|\vec{b}+\vec{c}\| = \vec{(b+c)}\vec{(b+c)}^T
  = \sqrt{\lambda^2+4\lambda+44}.$ \\
 
 $\vec{u}$ = $\dfrac{\vec{b} + \vec{c}}{\|\vec{b}+\vec{c}\|}$ = $\dfrac{1}{\sqrt{\lambda^2+4\lambda+44}} \myvec{2+\lambda\\6\\-2}.$ \\\\
 
 
-Given condition: $\vec{a}\cdot \vec{u}=1.$  
+Given condition: $\vec{a}^T\vec{u}=1.$  
 
-$$ \vec{a}\cdot\vec{u} = \dfrac{\vec{a}\cdot(\vec{b}+\vec{c})}{\|\vec{b}+\vec{c}\|}
-= \dfrac{\myvec{1\\1\\1}\cdot\myvec{2+\lambda\\6\\-2}}
+$$ \vec{a}^T\vec{u} = \dfrac{\vec{a}^T(\vec{b}+\vec{c})}{\|\vec{b}+\vec{c}\|}
+= \dfrac{\myvec{1 & 1 & 1}\myvec{2+\lambda\\6\\-2}}
 {\sqrt{\lambda^2+4\lambda+44}}
 = \dfrac{\lambda+6}{\sqrt{\lambda^2+4\lambda+44}}=1.
 $$ \\
@@ -91,8 +91,7 @@ $$\Longrightarrow\
 \boxed{\lambda=1}$$
 
 Now, with $\lambda=1:\quad \vec{b}+\vec{c}
-=\myvec{3\\6\\-2},\quad \|\vec{b}+\vec{c}\|
-=\sqrt{3^2+6^2+(-2)^2} = \sqrt{49} = 7.$ \\
+=\myvec{3\\6\\-2},\quad \|\vec{b}+\vec{c}\| = 7.$ \\
 
 Unit vector along, $\vec{b}+\vec{c}$ is: $\quad \dfrac{1}{7}\myvec{3\\6\\-2}
 = \dfrac{1}{7}\myvec{3\\6\\-2}.$\\\\
