@@ -24,6 +24,7 @@ p_A = line_gen(A, B)
 p_B = line_gen(B, C)
 p_C = line_gen(C, D)
 p_D = line_gen(D, A)
+p_BD = line_gen(B, D)
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
@@ -31,6 +32,7 @@ ax.plot(p_A[0, :], p_A[1, :], label = 'Line AB')
 ax.plot(p_B[0, :], p_B[1, :], label = 'Line BC')
 ax.plot(p_C[0, :], p_C[1, :], label = 'Line CD')
 ax.plot(p_D[0, :], p_D[1, :], label = 'Line DA')
+ax.plot(p_BD[0, :], p_BD[1, :], label = 'Line BD')
 
 pts = np.block([A, B, C, D])
 names = ['A', 'B', 'C', 'D']

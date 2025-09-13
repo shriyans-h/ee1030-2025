@@ -24,13 +24,14 @@ my_lib.write_points(A[0][0], A[1][0], B[0][0], B[1][0], C[0][0], C[1][0], D[0][0
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-labels = ['AB', 'BC', 'CD', 'DA']
+labels = ['AB', 'BC', 'CD', 'DA', 'BD']
 pts = np.block([A, B, C, D])
 vertices = ['A', 'B', 'C', 'D']
 for i,label in enumerate(labels):
     points = np.loadtxt('plot.dat', delimiter = ',', usecols=(0,1))[i*(npts+1):(i+1)*(npts+1)]
     ax.plot(points[:, 0], points[:, 1], label = f'Line {label}')
-    ax.text(pts[:, i][0], pts[:, i][1], s=f'{vertices[i]}({round(pts[:, i][0],3)}, {round(pts[:, i][1],3)})')
+    if(i<4):
+        ax.text(pts[:, i][0], pts[:, i][1], s=f'{vertices[i]}({round(pts[:, i][0],3)}, {round(pts[:, i][1],3)})')
 
 ax.set_xlabel('$x$')
 ax.set_ylabel('$y$')

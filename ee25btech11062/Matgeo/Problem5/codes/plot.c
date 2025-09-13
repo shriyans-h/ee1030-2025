@@ -46,6 +46,7 @@ void write_points(double x1, double y1, double x2, double y2, double x3, double 
     point_gen(p_file, B, C, m, n, npts);
     point_gen(p_file, C, D, m, n, npts);
     point_gen(p_file, D, A, m, n, npts);
+    point_gen(p_file, B, D, m, n, npts);
 
     freeMat(A, m);
     freeMat(B, m);
