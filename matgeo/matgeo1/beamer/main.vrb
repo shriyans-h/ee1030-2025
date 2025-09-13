@@ -1,18 +1,16 @@
-\frametitle{Python Code: Finishing Plot}
-\begin{block}{Part 5}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-ax = plt.gca()
-ax.spines['left'].set_position('zero')
-ax.spines['bottom'].set_position('zero')
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-plt.xlabel('$x$')
-plt.ylabel('$y$')
-plt.legend(loc='upper right')
-plt.grid(True)
-plt.axis('equal')
+\frametitle{C Code}
+\begin{lstlisting}
+void sectionFormula(float p1[3], float p2[3], float m, float n,
+float res[3]) {
+    res[0] = (m * p2[0] + n * p1[0]) / (m + n);
+    res[1] = (m * p2[1] + n * p1[1]) / (m + n);
+    res[2] = (m * p2[2] + n * p1[2]) / (m + n);
+}
 
-plt.savefig('figs/Plot_P.png')
-plt.show()
+void sectionFormulaExternal(float p1[3], float p2[3], float m,
+float n, float res[3]) {
+    res[0] = (m * p2[0] - n * p1[0]) / (m - n);
+    res[1] = (m * p2[1] - n * p1[1]) / (m - n);
+    res[2] = (m * p2[2] - n * p1[2]) / (m - n);
+}
 \end{lstlisting}
-\end{block}

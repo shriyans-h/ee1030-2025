@@ -4,11 +4,13 @@
 \usetheme{Madrid}
 \usecolortheme{default}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
 \usepackage{txfonts}
 \usepackage{tkz-euclide}
 \usepackage{listings}
 \usepackage{adjustbox}
 \usepackage{array}
+\usepackage{gensymb}
 \usepackage{tabularx}
 \usepackage{gvv}
 \usepackage{lmodern}
@@ -16,12 +18,49 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 
-\setbeamertemplate{page number in head/foot}[totalframumber]
+\setbeamertemplate{page number in head/foot}[totalframenumber]
 
 \usepackage{tcolorbox}
 \tcbuselibrary{minted,breakable,xparse,skins}
 
+
+
 \definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
 \lstset{
     language=C,
     basicstyle=\ttfamily\small,
@@ -33,186 +72,213 @@
     breaklines=true,
     showstringspaces=false,
 }
-
 %------------------------------------------------------------
-\title{1.4.21}
-\date{August 28,2025}
-\author{EE25BTECH11006 - ADUDOTLA SRIVIDYA}
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{4.2.9}
+\date{september 12,2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{EE25BTECH11006 - ADUDOTLA SRIVIDYA}
 
 \begin{document}
 
 \frame{\titlepage}
 
 \begin{frame}{Question}
-Find the coordinates of the point which divides the line segment joining $\vec{A}(2,3)$ and $\vec{B}(6,-3)$ in the ratio $2:3$ \textbf{internally and externally}.
+Find the coordinates of the point which divides the line segment joining
+$
+A(1,-2,3), \quad B(3,4,-5)
+$
+in the ratio
+\begin{enumerate}[label=(\alph*)]
+    \item \(2 : 3\) internally
+    \item \(2 : 3\) externally
+\end{enumerate}
 \end{frame}
 
-\begin{frame}{Formula}
-The section formula for a point $\vec{P}$ dividing $\vec{A}$ and $\vec{B}$ in the ratio $m:n$ is:
+\begin{frame}{Given Information}
+Given vector \(\mathbf{A}\):
 \begin{align}
-\vec{P} = \frac{m\vec{B}+n\vec{A}}{m+n} \quad &\text{(Internal Division)} \\
-\vec{P} = \frac{m\vec{B}-n\vec{A}}{m-n} \quad &\text{(External Division)}
+\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}
+\end{align}
+Given vector \(\mathbf{B}\):
+\begin{align}
+\begin{bmatrix} 3 \\ 4 \\ -5 \end{bmatrix}
 \end{align}
 \end{frame}
 
-\begin{frame}{Internal Division}
-Here, $m=2$, $n=3$, $\vec{A}=\begin{bmatrix}2\\3\end{bmatrix}$, $\vec{B}=\begin{bmatrix}6\\-3\end{bmatrix}$.
+\begin{frame}{Required Formulae}
+Internal division:
 \begin{align}
-\vec{P}_{int} &= \frac{2\begin{bmatrix}6\\-3\end{bmatrix}+3\begin{bmatrix}2\\3\end{bmatrix}}{2+3} \\
-&= \frac{1}{5}\begin{bmatrix}12+6 \\ -6+9\end{bmatrix} = \frac{1}{5}\begin{bmatrix}18\\3\end{bmatrix} \\
-&= \begin{bmatrix} \tfrac{18}{5} \\ \tfrac{3}{5} \end{bmatrix} = \brak{3.6, 0.6}
+P = \frac{m \mathbf{B} + n \mathbf{A}}{m + n}
+\end{align}
+
+External division:
+\begin{align}
+Q = \frac{m \mathbf{B} - n \mathbf{A}}{m - n}
 \end{align}
 \end{frame}
 
-\begin{frame}{External Division}
+\begin{frame}{Solution - Internal}
 \begin{align}
-\vec{P}_{ext} &= \frac{2\begin{bmatrix}6\\-3\end{bmatrix}-3\begin{bmatrix}2\\3\end{bmatrix}}{2-3} \\
-&= \frac{1}{-1}\begin{bmatrix}12-6 \\ -6-9\end{bmatrix} \\
-&= \begin{bmatrix}-6 \\ 15\end{bmatrix}
+P = \frac{2 \begin{bmatrix} 3 \\ 4 \\ -5 \end{bmatrix} + 3 \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}}{5}
+= \frac{\begin{bmatrix} 6 + 3 \\ 8 - 6 \\ -10 + 9 \end{bmatrix}}{5}
+= \begin{bmatrix} -\frac{-9}{5} \\ \frac{2}{5} \\ \frac{-1}{5} \end{bmatrix}
 \end{align}
-So the external division point is $\brak{-6,15}$.
 \end{frame}
 
-\begin{frame}{Final Answer}
-\begin{itemize}
-    \item Internal Division Point: $\brak{3.6, 0.6}$
-    \item External Division Point: $\brak{-6, 15}$
-\end{itemize}
+\begin{frame}{Solution - External}
+\begin{align}
+Q = \frac{2 \begin{bmatrix} 1 \\ -4 \\ 6 \end{bmatrix} - 3 \begin{bmatrix} -2 \\ 3 \\ 5 \end{bmatrix}}{2 - 3}
+= \frac{\begin{bmatrix} 2 + 6 \\ -8 - 9 \\ 12 - 15 \end{bmatrix}}{-1}
+= \begin{bmatrix} -8 \\ 17 \\ 3 \end{bmatrix}
+\end{align}
 \end{frame}
 
-\begin{frame}[fragile]{Section Formula Code (C)}
-\begin{block}{C Program}
-\begin{lstlisting}[language=C, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-#include <stdio.h>
-void section_formula(float *P, float *A, float *B, int m, int n, int k){
-    for (int i = 0; i < k ; i++) {
-        P[i] = (m*B[i]+n*A[i])/(m+n);
-    }
-}
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-
-\begin{frame}[fragile]{Python Code: Import and Setup}
-\begin{block}{Part 1}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-import sys
-import ctypes
-import numpy as np
+\begin{frame}[fragile]{Python Code-Plot}
+\begin{lstlisting}
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
-# Load C library
-c_lib = ctypes.CDLL('./formula.so')
+A = (1, -2, 3)
+B = (3, 4, -5)
 
-c_lib.section_formula.argtypes = [
-    ctypes.POINTER(ctypes.c_float),  
-    ctypes.POINTER(ctypes.c_float),  
-    ctypes.POINTER(ctypes.c_float),  
-    ctypes.c_int,                    
-    ctypes.c_int,                    
-    ctypes.c_int                     
-]
-c_lib.section_formula.restype = None  
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-
-\begin{frame}[fragile]{Python Code: Define Points}
-\begin{block}{Part 2}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-k = 3  # 3D points
-
-A = np.array([1, -2, 3], dtype=np.float32)
-B = np.array([3, 4, -5], dtype=np.float32)
-
-P = np.zeros(k, dtype=np.float32)
-Q = np.zeros(k, dtype=np.float32)
-
-# Internal (2:3)
-m, n = 2, 3
-c_lib.section_formula(
-    P.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-    A.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-    B.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-    m, n, k
+P = (
+    (2*B[0] + 3*A[0]) / 5,
+    (2*B[1] + 3*A[1]) / 5,
+    (2*B[2] + 3*A[2]) / 5
 )
-\end{lstlisting}
-\end{block}
-\end{frame}
 
-
-\begin{frame}[fragile]{Python Code: External Division}
-\begin{block}{Part 3}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-# External (2:3)
-m, n = 2, -3   # equivalent to formula
-c_lib.section_formula(
-    Q.ctypes.data_as(ctypes.POINTER(ctypes.c_float)), 
-    A.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-    B.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
-    m, n, k
+Q = (
+    (2*B[0] - 3*A[0]) / (2-3),
+    (2*B[1] - 3*A[1]) / (2-3),
+    (2*B[2] - 3*A[2]) / (2-3)
 )
+
+print("Internal Division Point:", P)
+print("External Division Point:", Q)
 \end{lstlisting}
-\end{block}
 \end{frame}
 
+\begin{frame}[fragile]{Python Code-Plot}
+\begin{lstlisting}
+fig = plt.figure(figsize=(8,8))
+ax = fig.add_subplot(111, projection='3d')
 
-\begin{frame}[fragile]{Python Code: Plotting}
-\begin{block}{Part 4}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-# Plot in XY-plane projection
-plt.plot([A[0], B[0]], [A[1], B[1]], label='Line AB')
+ax.plot([A[0], B[0]], [A[1], B[1]], [A[2], B[2]], color='blue')
 
-all_points = np.vstack([A, B, P, Q])
-labels = ['A', 'B', 'P', 'Q']
+def plot_point(pt, label, color):
+    ax.scatter(*pt, color=color, s=60)
+    ax.text(pt[0], pt[1], pt[2], f"{label}{pt}", fontsize=10)
 
-plt.scatter(all_points[:, 0], all_points[:, 1], color='red')
-for i, txt in enumerate(labels):
-    plt.annotate(f'{txt}\n({all_points[i,0]:.1f}, {all_points[i,1]:.1f})',
-                 (all_points[i,0], all_points[i,1]),
-                 textcoords="offset points", xytext=(0,10), ha='center')
+plot_point(A, "A", "red")
+plot_point(B, "B", "red")
+plot_point(P, "P", "green")
+plot_point(Q, "Q", "purple")
+
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('Z-axis')
+ax.set_title('3D Division of Line Segment')
+
+
 \end{lstlisting}
-\end{block}
 \end{frame}
 
+\begin{frame}[fragile]{Python Code-Plot}
+\begin{lstlisting}
+ax.set_xlim(-4, 4)
+ax.set_ylim(-15, 5)
+ax.set_zlim(-5, 19)
 
-\begin{frame}[fragile]{Python Code: Finishing Plot}
-\begin{block}{Part 5}
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\small, keywordstyle=\color{blue}, frame=single]
-ax = plt.gca()
-ax.spines['left'].set_position('zero')
-ax.spines['bottom'].set_position('zero')
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-plt.xlabel('$x$')
-plt.ylabel('$y$')
-plt.legend(loc='upper right')
-plt.grid(True)
-plt.axis('equal')
-
-plt.savefig('figs/Plot_P.png')
+plt.savefig("Figs/graph.png")
 plt.show()
 \end{lstlisting}
-\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Python ctypes Call}
+\begin{lstlisting}
+import ctypes
+
+lib = ctypes.CDLL('./mat1.so')
+
+lib.sectionFormula.argtypes = [
+    ctypes.POINTER(ctypes.c_float),
+    ctypes.POINTER(ctypes.c_float),
+    ctypes.c_float,
+    ctypes.c_float,
+    ctypes.POINTER(ctypes.c_float)
+]
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python ctypes Call}
+\begin{lstlisting}
+lib.sectionFormula.restype = None
+
+lib.sectionFormulaExternal.argtypes = [
+    ctypes.POINTER(ctypes.c_float),
+    ctypes.POINTER(ctypes.c_float),
+    ctypes.c_float,
+    ctypes.c_float,
+    ctypes.POINTER(ctypes.c_float)
+]
+
+lib.sectionFormulaExternal.restype = None
+
+p1 = (ctypes.c_float * 3)(1.0, -2.0, 3.0)
+p2 = (ctypes.c_float * 3)(3.0, 4.0, -5.0)
+
+res_internal = (ctypes.c_float * 3)()
+res_external = (ctypes.c_float * 3)()
+
+m = 2.0
+n = 3.0
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python ctypes Call}
+\begin{lstlisting}
+lib.sectionFormula(p1, p2, m, n, res_internal)
+lib.sectionFormulaExternal(p1, p2, m, n, res_external)
+
+print("Internal division (2:3): [{:.2f}, {:.2f}, {:.2f}]".format(
+    res_internal[0], res_internal[1], res_internal[2]
+))
+
+print("External division (2:3): [{:.2f}, {:.2f}, {:.2f}]".format(
+    res_external[0], res_external[1], res_external[2]
+))
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{C Code}
+\begin{lstlisting}
+void sectionFormula(float p1[3], float p2[3], float m, float n,
+float res[3]) {
+    res[0] = (m * p2[0] + n * p1[0]) / (m + n);
+    res[1] = (m * p2[1] + n * p1[1]) / (m + n);
+    res[2] = (m * p2[2] + n * p1[2]) / (m + n);
+}
+
+void sectionFormulaExternal(float p1[3], float p2[3], float m, 
+float n, float res[3]) {
+    res[0] = (m * p2[0] - n * p1[0]) / (m - n);
+    res[1] = (m * p2[1] - n * p1[1]) / (m - n);
+    res[2] = (m * p2[2] - n * p1[2]) / (m - n);
+}
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}{Plot}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.55\columnwidth]{figs/fig_int_div.jpeg}
-        \caption{Internal division of line AB in ratio 2:3}
-    \end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{figs/fig1.png}
+\caption{3D Plot of points \(A, B, P, Q\)}
+\label{fig:graph}
+\end{figure}
 \end{frame}
-
-
-\begin{frame}{Plot}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.55\columnwidth]{figs/fig_ext_div.jpeg}
-        \caption{External division of line AB in ratio 2:3}
-    \end{figure}
-\end{frame}
-
 \end{document}
