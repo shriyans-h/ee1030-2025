@@ -108,37 +108,55 @@ holds if and only if
 \begin{frame}
 
 \begin{solution}
-We need the condition for
+Let 
 \[
-\abs{(\vec{a} \times \vec{b})\cdot \vec{c}} = \|\vec{a}\|\,\|\vec{b}\|\,\|\vec{c}\|.
+A=\myvec{\vec{a}&\vec{b}&\vec{c}}
 \]
-Now,
+and consider the Gram matrix of $\vec{a},\vec{b},\vec{c}$:
 \[
-\| \vec{a} \times \vec{b} \| = \|\vec{a}\|\,\|\vec{b}\|\sin\theta,
+G=A^\top A
+=\myvec{
+\vec a^\top\vec a & \vec a^\top\vec b & \vec a^\top\vec c\\
+\vec b^\top\vec a & \vec b^\top\vec b & \vec b^\top\vec c\\
+\vec c^\top\vec a & \vec c^\top\vec b & \vec c^\top\vec c }.
 \]
-where $\theta$ is the angle between $\vec{a}$ and $\vec{b}$.
-
-So,
+Since the scalar triple product equals the determinant of the column matrix,
 \[
-\abs{(\vec{a} \times \vec{b})\cdot \vec{c}} 
-\le \|\vec{a}\|\,\|\vec{b}\|\,\|\vec{c}\|.
+\det A=\det\myvec{\vec a&\vec b&\vec c}=(\vec a\times\vec b)\cdot\vec c,
 \]
-
-Equality holds iff  
-1. $\sin\theta = 1 \;\;\Rightarrow\;\; \vec{a} \perp \vec{b}$, and  
-2. $\vec{c} \parallel (\vec{a} \times \vec{b}) \;\;\Rightarrow\;\; \vec{c} \perp \vec{a},\;\vec{c} \perp \vec{b}$.  
-
-Thus the conditions are
+we have
 \[
-\vec{a} \cdot \vec{b} = 0, \quad 
-\vec{b} \cdot \vec{c} = 0, \quad 
-\vec{c} \cdot \vec{a} = 0.
+\abs{(\vec a\times\vec b)\cdot\vec c}^{2}
+=(\det A)^2
+=\det(A^\top A)
+=\det G.
 \]
 
-Hence, the correct option is
 \[
-\boxed{\text{(d)}}
+\det G\le
+(\vec a^\top\vec a)(\vec b^\top\vec b)(\vec c^\top\vec c)
+=\|\vec a\|^2\,\|\vec b\|^2\,\|\vec c\|^2,
 \]
+\end{solution}
+\end{frame}
+\begin{frame}{Solution}
+ \begin{solution}
+     
+
+with equality iff $G$ is diagonal, i.e.,
+\[
+\vec a\cdot\vec b=0,\qquad
+\vec b\cdot\vec c=0,\qquad
+\vec c\cdot\vec a=0.
+\]
+Taking square roots yields
+\[
+\abs{(\vec a\times\vec b)\cdot\vec c}
+=\|\vec a\|\,\|\vec b\|\,\|\vec c\|
+\iff
+\vec a\cdot\vec b=\vec b\cdot\vec c=\vec c\cdot\vec a=0.
+\]
+Hence, the correct option is \(\boxed{\text{(d)}}\).
 \end{solution}
 
 \end{frame}
