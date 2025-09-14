@@ -40,13 +40,7 @@
 
 % Question Frame
 \begin{frame}{Question}
-If 
-\[
-\vec{a} = \vec{i}+\vec{j}+\vec{k}, \quad
-\vec{a}\cdot\vec{b}=1, \quad
-\vec{a}\times\vec{b}=\vec{j}-\vec{k},
-\]
-then $\vec{b}$ is
+If $\vec{a} = \vec{i}+\vec{j}+\vec{k}$, $\vec{a}\cdot\vec{b}=1$ and $\vec{a}\times\vec{b}=\vec{j}-\vec{k}$, then $\vec{b}$ is 
 \begin{multicols}{2}
 \begin{enumerate}[label=(\alph*)]
 \item $\vec{i}-\vec{j}+\vec{k}$  
@@ -55,65 +49,62 @@ then $\vec{b}$ is
 \item $2\vec{i}$  
 \end{enumerate}
 \end{multicols}
-\hfill (GATE XL 2025)
 \end{frame}
 
-% Setup Frame
-\begin{frame}{Setup}
-\[
-\vec{a} = \begin{bmatrix}1\\1\\1\end{bmatrix}, 
-\quad 
-\vec{b} = \begin{bmatrix}x\\y\\z\end{bmatrix}
-\]
+% Solution Frame 1
+\begin{frame}{Solution}
+\begin{align}
+\vec{a} &= \myvec{1\\1\\1}, \quad 
+\vec{b} = \myvec{x\\y\\z}
+\end{align}
 
 Dot product condition:
 \[
-\vec{a}\cdot\vec{b} = x+y+z = 1
-\]
-
-Cross product:
-\[
-\vec{a}\times \vec{b} = 
-\begin{vmatrix}
-\vec{i} & \vec{j} & \vec{k} \\
-1 & 1 & 1 \\
-x & y & z
-\end{vmatrix}
-= (z-y)\vec{i}+(x-z)\vec{j}+(y-x)\vec{k}
+x+y+z=1
 \]
 \end{frame}
 
-% Solution Frame
-\begin{frame}{Solving Conditions}
-Compare with $\vec{j}-\vec{k}$:
+% Solution Frame 2
+\begin{frame}{Solution}
+Cross product condition gives
 \[
-z-y=0 \;\Rightarrow\; z=y
-\]
-\[
-x-z=1 \;\Rightarrow\; x=z+1
-\]
-\[
-y-x=-1 \;\Rightarrow\; y=x-1
+z-y=0,\quad x-z=1,\quad y-x=-1
 \]
 
-So,
+The first equation can be expressed as
 \[
-z=y=x-1
-\]
-
-Dot product:
-\[
-x+y+z = x+(x-1)+(x-1) = 3x-2 = 1
-\]
-\[
-\implies x=1, \quad y=z=0
+\myvec{0 & 1 & -1}\myvec{x\\y\\z}=0
 \]
 \end{frame}
+
+% Solution Frame 3
+\begin{frame}{Solution}
+Collecting all equations:
+\[
+\myvec{0 & 1 & -1\\ 1 & 0 & -1\\ 1 & 1 & 1}\myvec{x\\y\\z}=\myvec{0\\1\\1}
+\]
+
+Solving,
+\[
+\myvec{x\\y\\z}=\myvec{1\\0\\0}
+\]
+\end{frame}
+
+% Solution Frame 4
+\begin{frame}{Final Answer}
+Hence,
+\[
+\vec{b}=\myvec{1\\0\\0}=\vec{i}
+\]
+
+Therefore, the correct option is \textbf{(c)}.
+\end{frame}
+
 
 % Answer Frame
 \begin{frame}{Answer}
 \[
-\vec{b} = \begin{bmatrix}1\\0\\0\end{bmatrix} = \vec{i}
+\vec{b} = \myvec{1\\0\\0} = \vec{i}
 \]
 
 \[

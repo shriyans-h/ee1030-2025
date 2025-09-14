@@ -60,7 +60,7 @@ If $\vec{a} = \vec{i}+\vec{j}+\vec{k}$, $\vec{a}\cdot\vec{b}=1$ and $\vec{a}\tim
 \item $\vec{i}$  
 \item $2\vec{i}$  
 \end{enumerate}
-\end{multicols}
+\end{multicols}  
 
 \solution  
 
@@ -71,40 +71,36 @@ If $\vec{a} = \vec{i}+\vec{j}+\vec{k}$, $\vec{a}\cdot\vec{b}=1$ and $\vec{a}\tim
 
 Dot product condition:
 \begin{align}
-\vec{a}\cdot\vec{b} &= x+y+z = 1
+x+y+z=1
 \end{align}
 
-Cross product:
+Cross product condition gives
 \begin{align}
-\vec{a}\times \vec{b} &= 
-\begin{vmatrix}
-\vec{i} & \vec{j} & \vec{k} \\
-1 & 1 & 1 \\
-x & y & z
-\end{vmatrix} \\
-&= (z-y)\vec{i}+(x-z)\vec{j}+(y-x)\vec{k}
+z-y=0,\quad x-z=1,\quad y-x=-1
 \end{align}
 
-Comparing with $\vec{j}-\vec{k}$:
+The first equation can be expressed as
 \begin{align}
-z-y &= 0 \implies z=y \\
-x-z &= 1 \implies x=z+1 \\
-y-x &= -1 \implies y=x-1
+\myvec{0 & 1 & -1}\myvec{x\\y\\z}=0
 \end{align}
 
-Hence $z=y=x-1$.  
-Substituting in dot product:
+Collecting all equations:
 \begin{align}
-x+y+z &= x+(x-1)+(x-1) = 3x-2 = 1 \\
-\implies x=1,\ y=z=0
+\myvec{0 & 1 & -1\\ 1 & 0 & -1\\ 1 & 1 & 1}\myvec{x\\y\\z}=\myvec{0\\1\\1}
 \end{align}
 
-Thus,
+Solving,
+\begin{align}
+\myvec{x\\y\\z}=\myvec{1\\0\\0}
+\end{align}
+
+Hence,
 \begin{align}
 \vec{b}=\myvec{1\\0\\0}=\vec{i}
 \end{align}
 
-Hence the answer is option (c).
+Therefore, the correct option is (c).
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\columnwidth]{figs/5.png}
