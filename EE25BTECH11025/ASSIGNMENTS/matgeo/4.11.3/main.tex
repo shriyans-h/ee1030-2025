@@ -31,8 +31,7 @@ Direction vector of the line:
 
 Vector form of the line can be written as:
 \begin{align}
-    \vec{x}=\vec{P}_1+\kappa\vec{m}\\
-    \vec{x}=\myvec{2\\-1\\2}+\kappa\myvec{3\\4\\2}
+    \vec{x}=\vec{P}_1+\kappa\vec{m}
 \end{align}
 
 Vector form of the line can be written as:
@@ -51,23 +50,26 @@ Augmented matrix can be written as:
 
 Therefore, the plane equation is:
 \begin{align}
-    \myvec{1&-1&1}\vec{x}=5
+    \myvec{1&-1&1}\vec{x}=5\\
+    \vec{n}^\top\vec{x}=c
 \end{align}
 
-General form of a point on the line can be written as:
+Substituting (4) in (11):
 \begin{align}
-    \vec{x}=\myvec{2+3\kappa\\-1+6\kappa\\2+2\kappa}
+    \vec{n}^\top\myvec{\vec{P}_1+\kappa\vec{m}}=c\\
+    (\vec{n}^\top\vec{P}_1)+(\kappa\vec{n}^\top\vec{m})=c\\
+    \kappa=\frac{c-(\vec{n}^\top\vec{P}_1)}{\vec{n}^\top\vec{m}}
 \end{align}
 
-Substituting (13) in (12), we get:
+The point of intersection is (from(4)):
 \begin{align}
-    \myvec{1&-1&1}\myvec{2+3\kappa\\-1+6\kappa\\2+2\kappa}=5\\
-    \kappa = 0
+    \vec{x}=\vec{P}_1+\brak{\frac{c-(\vec{n}^\top\vec{P}_1)}{\vec{n}^\top\vec{m}}}\vec{m}
 \end{align}
 
-Hence the point of intersection of the line and the plane can be found by substituting (15) in (13):
+Substituting the values from (11), (1) and (3):
 \begin{align}
-    \myvec{2\\-1\\2}
+    \vec{x}=\myvec{2\\-1\\2}+\brak{\frac{0}{-3}}\myvec{3&4&2}\\
+    \vec{x}=\myvec{2\\-1\\2}
 \end{align}
 
 \begin{figure}[h!]
