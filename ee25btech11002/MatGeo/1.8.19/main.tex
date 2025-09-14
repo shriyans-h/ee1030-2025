@@ -38,7 +38,7 @@
 \usepackage{lscape}
 \begin{document}
 \bibliographystyle{IEEEtran}
-\title{2.3.5}
+\title{1.8.19}
 \author{EE25BTECH11002 - Achat Parth Kalpesh }
 {\let\newpage\relax\maketitle}
 \renewcommand{\thefigure}{\theenumi}
@@ -49,50 +49,67 @@
 \renewcommand{\thetable}{\theenumi}
 \parindent 0px
 
+
 \textbf{Question:}\\
-Find the angle between the line $\vec{r} = \brak{\hat{i} - \hat{j} + \hat{k}} + \lambda\brak{3\hat{i} - \hat{j} + 2\hat{k}}$ and the plane $\vec{r} \cdot \brak{\hat{i} + \hat{j} + \hat{k}} = 3$.
+If $\vec{Q}$\brak{0, 1} is equidistant from $\vec{P}$\brak{5, -3} and $\vec{R}$\brak{x, 6}, find the values of x. Also find the distances $\vec{QR}$ and $\vec{PR}$.\\
 
 \textbf{Solution:}\\
-From the given equations, we can identify the direction vector of the line,
-$\vec{d}$, and the normal vector of the plane, $\vec{n}$.
 
-\begin{align} 
-\label{eq:d_vec}
-\vec{d} = \myvec{3\\-1\\2} \\
-\label{eq:n_vec}
-\vec{n} = \myvec{1\\1\\1}
-\end{align}
-
-
-If $\theta$ is the angle between the line and the plane, then the angle between the line's direction vector $\vec{d}$ and the plane's normal vector $\vec{n}$ is $90\degree - \theta$. The formula to calculate the angle $\theta$ is:
+Let the given points be represented by the column vectors $\vec{P}$, $\vec{Q}$, and $\vec{R}$.
 \begin{align}
-\theta = \sin^{-1}\brak{\frac{\abs{\vec{n}^\top\vec{d}}}{\norm{\vec{d}} \norm{\vec{n}}}}
+    \vec{P} = \myvec{5 \\ -3}, \quad \vec{Q} = \myvec{0 \\ 1}, \quad \vec{R} = \myvec{x \\ 6}
 \end{align}
-
-Substituting the vectors $\vec{d}$ and $\vec{n}$ into this formula:
+According to given condition;
 \begin{align}
-\theta &= \sin^{-1}\brak{\frac{\abs{\myvec{1&1&1}\myvec{3\\-1\\2}}}{\norm{\myvec{3\\-1\\2}}\norm{\myvec{1\\1\\1}}}} \\
-&= \sin^{-1} \brak{\frac{\abs{\brak{3}\brak{1} + \brak{-1}\brak{1} + \brak{2}\brak{1}}}{\sqrt{3^2 + \brak{-1}^2 + 2^2}\sqrt{1^2 + 1^2 + 1^2}}} \\
-&= \sin^{-1}\brak{\frac{\abs{3-1+2}}{\sqrt{9+1+4}\sqrt{3}}} \\
-&= \sin^{-1}\brak{\frac{\abs{4}}{\sqrt{14}\sqrt{3}}} \\
-&= \sin^{-1}\brak{\frac{4}{\sqrt{42}}}
+\norm{\vec{P} - \vec{Q}}^2 = \norm{\vec{R} - \vec{Q}}^2
 \end{align}
-
-
-So, the angle $\theta$ is:
+The squared norm of a vector $\vec{v}$ is given by the matrix product $\vec{v}^T\vec{v}$.
 \begin{align}
-\theta = \sin^{-1}\brak{\frac{4}{\sqrt{42}}}
+\brak{\vec{P} - \vec{Q}}^T \brak{\vec{P} - \vec{Q}} = \brak{\vec{R} - \vec{Q}}^T \brak{\vec{R} - \vec{Q}} \label{eq:0.3}
+\end{align}
+
+\begin{align}
+    \vec{P} - \vec{Q} &= \myvec{5 - 0 \\ -3 - 1} = \myvec{5 \\ -4} \\
+    \vec{R} - \vec{Q} &= \myvec{x - 0 \\ 6 - 1} = \myvec{x \\ 5}
+\end{align}
+Substituting these into Equation \eqref{eq:0.3} and performing the matrix multiplication:
+\begin{align}
+    \myvec{ 5 & -4} \myvec{5 \\ -4} &= \myvec{ x & 5 } \myvec{x \\ 5} \\
+    \brak{5}\brak{5} + \brak{-4}\brak{-4} &= \brak{x}\brak{x} + \brak{5}\brak{5} \\
+    25 + 16 &= x^2 + 25 \\
+    x^2 &= 16 \\
+    \implies x &= \pm 4
+\end{align}
+Therefore, the two possible vectors for $\vec{R}$ are:
+\begin{align}
+\vec{R}_1 &= \myvec{4 \\ 6}  \\  \vec{R}_2 &= \myvec{-4 \\ 6}
 \end{align}
 
 
-This is approximately $37.98\degree$
+Distance $\vec{QR}$:
+\begin{align}
+     \norm{\vec{Q} - \vec{R}}&= \norm{\vec{P} - \vec{Q}} = \sqrt{5^2 + \brak{-4}^2} = \sqrt{41} \approx 6.40
+\end{align}
 
-\begin{figure}[h]
+Distance $\vec{PR}$:
+\begin{itemize}
+    \item For $\vec{R}_1$:
+    \begin{align}
+     \norm{\vec{R_1} - \vec{P}} &= \norm{ \myvec{4 - 5 \\ 6 - \brak{-3}}}  = \norm{ \myvec{-1 \\ 9}} \\
+    &= \sqrt{\brak{-1}^2 + 9^2} = \sqrt{82} \approx 9.06
+    \end{align}
+    \item For $\vec{R}_2$:
+    \begin{align}
+    \norm{\vec{R}_2 - \vec{P}} &= \norm{\myvec{-4 - 5 \\ 6 - (-3)}}  = \norm{\myvec{-9 \\ 9}} \\
+    &= \sqrt{\brak{-9}^2 + 9^2} = \sqrt{162} = 9\sqrt{2} \approx 12.73
+    \end{align}
+\end{itemize}
+
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=\columnwidth]{figs/pure_python.png}
-    \caption{Graph}
+    \includegraphics[width=0.9\columnwidth]{figs/pure_python.png}
+    \caption{Visual representation of the solution. The points $R_1$ and $R_2$ are the intersections of the circle centered at Q and the line $y=6$.}
     \label{fig:fig}
  \end{figure}
-
 
 \end{document}
