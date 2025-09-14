@@ -1,0 +1,182 @@
+\documentclass[12pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Packages
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{esint}
+
+% --- Fixes / helpers ---
+% define \myvec to produce column or row vectors depending on input
+\newcommand{\myvec}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+% safe include for figures: if file missing, show a placeholder box instead of failing
+\newcommand{\incfig}[1]{%
+  \IfFileExists{#1}{\includegraphics[width=0.45\linewidth]{#1}}{%
+    \fbox{\parbox[c][3cm][c]{0.45\linewidth}{\centering Missing image:\\#1}}}%
+}
+
+% Title
+\title[Vector Coplanarity Problem]{Vector Coplanarity and Perpendicularity Check}
+\author{AI25BTECH11034 - Sujal Chauhan}
+\date{2.10.23}
+
+\begin{document}
+
+% Title Page
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Question Slide
+\begin{frame}{Question}
+\small
+The vector(s) which is/are coplanar with the vectors 
+\[
+\hat{i}+\hat{j}+2\hat{k}, \quad \hat{i}+2\hat{j}+\hat{k}
+\] 
+and perpendicular to vector 
+\[
+\hat{i}+\hat{j}+\hat{k}
+\]
+is/are:
+\begin{enumerate}[label=\alph*)]
+    \item $\hat{\mathbf{j}} - \hat{\mathbf{k}}$
+    \item $\hat{\mathbf{i}} + \hat{\mathbf{j}}$
+    \item $\hat{\mathbf{i}} - \hat{\mathbf{j}}$
+    \item $\hat{\mathbf{j}} + \hat{\mathbf{k}}$
+\end{enumerate}
+\end{frame}
+
+% Vectors definition
+\begin{frame}{Given Vectors}
+\small
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Variable & Vector \\
+\hline
+$\vec{A}$ & $\myvec{1 \\ 1 \\ 2}$ \\
+\hline
+$\vec{B}$ & $\myvec{1 \\ 2 \\ 1}$ \\
+\hline
+$\vec{C}$ & $\myvec{1 \\ 1 \\ 1}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\end{frame}
+\begin{frame}
+Options as vectors $\vec{D_i}$:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Input & Vector \\
+\hline
+$\vec{D_1}$ & $\myvec{0 \\ 1 \\ -1}$ \\
+\hline
+$\vec{D_2}$ & $\myvec{1 \\ 1 \\ 1}$ \\
+\hline
+$\vec{D_3}$ & $\myvec{1 \\ -1 \\ 0}$ \\
+\hline
+$\vec{D_4}$ & $\myvec{0 \\ 1 \\ 1}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+% Coplanarity
+\begin{frame}{Checking Coplanarity}
+\small
+Condition:
+\[
+(\vec{A}\times \vec{B})^T \vec{D_i} = 0
+\]
+
+\[
+\vec{A}\times\vec{B} = \myvec{-3 \\ 1 \\ 1}, 
+\quad (\vec{A}\times\vec{B})^T = \myvec{-3 & 1 & 1}
+\]
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Vector & $(\vec{A}\times\vec{B})^T\vec{D_i}$ & Coplanar? \\
+\hline
+$\vec{D_1}$ & $0$ & Yes \\
+\hline
+$\vec{D_2}$ & $-1$ & No \\
+\hline
+$\vec{D_3}$ & $-4$ & No \\
+\hline
+$\vec{D_4}$ & $2$ & No \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+% Perpendicular
+\begin{frame}{Checking Perpendicularity}
+\small
+Condition:
+\[
+\vec{C}^T \vec{D_i} = 0, \quad \vec{C}^T = \myvec{1 & 1 & 1}
+\]
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Vector & $\vec{C}^T \vec{D_i}$ & Perpendicular? \\
+\hline
+$\vec{D_1}$ & $0$ & Yes \\
+\hline
+$\vec{D_2}$ & $3$ & No \\
+\hline
+$\vec{D_3}$ & $0$ & Yes \\
+\hline
+$\vec{D_4}$ & $2$ & No \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+% Figures
+\begin{frame}{Figures (1/2)}
+\centering
+\incfig{figures/plane_1.png}
+\hspace{0.2cm}
+\incfig{figures/plane_2.png}
+\end{frame}
+
+\begin{frame}{Figures (2/2)}
+\centering
+\incfig{figures/plane_3.png}
+\hspace{0.2cm}
+\incfig{figures/plane_4.png}
+\end{frame}
+
+% Answer
+\begin{frame}{Final Answer}
+\Large
+The vectors satisfying both conditions is:
+\[
+\boxed{{\vec{D_1} }}
+\]
+\end{frame}
+
+\end{document}
+
