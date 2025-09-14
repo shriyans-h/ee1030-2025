@@ -1,16 +1,9 @@
 \frametitle{Python code -Ploting the points using c function}
-	\begin{lstlisting}
+		\begin{lstlisting}
 
-plt.title(f'Triangle Plot (Area = {area})')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.grid(True)
-plt.legend()
-
-# Save the plot in figs folder
-plt.savefig('../figs/triangle_plot1.png', dpi=300)
-print("Triangle plot saved in figs/triangle_plot.png")
+# Step 7: Save and show plot
+os.makedirs("../figs", exist_ok=True)
+plt.savefig("../figs/triangle_plot.png", dpi=300, bbox_inches="tight")
 plt.show()
-
-
+	
 \end{lstlisting}

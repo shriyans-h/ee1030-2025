@@ -1,49 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
-#include <stdbool.h>
-
-#define SIZE 3
-#define EPS 1e-9  // tolerance for floating-point comparison
-
-// Function to build matrix f(theta)
-void f(double theta, double M[SIZE][SIZE]) {
-    M[0][0] = cos(theta);  M[0][1] = -sin(theta); M[0][2] = 0;
-    M[1][0] = sin(theta);  M[1][1] =  cos(theta); M[1][2] = 0;
-    M[2][0] = 0;           M[2][1] = 0;           M[2][2] = 1;
-}
-
-// Multiply two 3x3 matrices
-void multiply(double A[SIZE][SIZE], double B[SIZE][SIZE], double C[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            C[i][j] = 0;
-            for (int k = 0; k < SIZE; k++) {
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
-    }
-}
-
-// Check if two matrices are approximately equal
-bool equal(double A[SIZE][SIZE], double B[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            if (fabs(A[i][j] - B[i][j]) > EPS)
-                return false;
-        }
-    }
-    return true;
-}
-
-// Print a 3x3 matrix
-void printMatrix(double M[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            printf("%10.6f ", M[i][j]);
-        }
-        printf("\n");
-    }
-}
+#include "/home/dhanush-kumar-a/ee1030-2025/ai25btech11010/matgeo/2.9.26/codes/libs/matfun.h"
 
 int main() {
     double alpha, beta;
@@ -52,31 +10,55 @@ int main() {
     printf("Enter beta (in radians): ");
     scanf("%lf", &beta);
 
-    double F_alpha[SIZE][SIZE], F_minus_beta[SIZE][SIZE], F_alpha_minus_beta[SIZE][SIZE];
-    double lhs[SIZE][SIZE], rhs[SIZE][SIZE];
+    // Step 1: Create 3x3 rotation matrices
+    double **F_alpha = createMat(3,3);
+    double **F_minus_beta = createMat(3,3);
+    double **F_alpha_minus_beta = createMat(3,3);
 
-    // Build matrices
-    f(alpha, F_alpha);
-    f(-beta, F_minus_beta);
-    f(alpha - beta, F_alpha_minus_beta);
+    // Fill the matrices manually
+    F_alpha[0][0] = cos(alpha);  F_alpha[0][1] = -sin(alpha); F_alpha[0][2] = 0;
+    F_alpha[1][0] = sin(alpha);  F_alpha[1][1] =  cos(alpha); F_alpha[1][2] = 0;
+    F_alpha[2][0] = 0;           F_alpha[2][1] = 0;           F_alpha[2][2] = 1;
 
-    // Compute lhs = f(alpha) * f(-beta)
-    multiply(F_alpha, F_minus_beta, lhs);
+    F_minus_beta[0][0] = cos(-beta);  F_minus_beta[0][1] = -sin(-beta); F_minus_beta[0][2] = 0;
+    F_minus_beta[1][0] = sin(-beta);  F_minus_beta[1][1] =  cos(-beta); F_minus_beta[1][2] = 0;
+    F_minus_beta[2][0] = 0;           F_minus_beta[2][1] = 0;           F_minus_beta[2][2] = 1;
 
-    // rhs = f(alpha - beta)
-    for (int i = 0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
-            rhs[i][j] = F_alpha_minus_beta[i][j];
+    F_alpha_minus_beta[0][0] = cos(alpha - beta);  F_alpha_minus_beta[0][1] = -sin(alpha - beta); F_alpha_minus_beta[0][2] = 0;
+    F_alpha_minus_beta[1][0] = sin(alpha - beta);  F_alpha_minus_beta[1][1] =  cos(alpha - beta); F_alpha_minus_beta[1][2] = 0;
+    F_alpha_minus_beta[2][0] = 0;                  F_alpha_minus_beta[2][1] = 0;                  F_alpha_minus_beta[2][2] = 1;
 
-    // Compare
-    if (equal(lhs, rhs)) {
-        printf("\n Verified: f(alpha) f(-beta) = f(alpha - beta)\n");
-    } else {
-        printf("\nNot equal!\n");
-        printf("\nLHS =\n"); printMatrix(lhs);
-        printf("\nRHS =\n"); printMatrix(rhs);
+    // Step 2: Multiply f(alpha) * f(-beta)
+    double **lhs = Matmul(F_alpha, F_minus_beta, 3, 3, 3);
+
+    // Step 3: Compare lhs with f(alpha - beta)
+    int equal = 1;
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            if(fabs(lhs[i][j] - F_alpha_minus_beta[i][j]) > 1e-9){
+                equal = 0;
+                break;
+            }
+        }
+        if(!equal) break;
     }
+
+    // Step 4: Print results
+    if(equal){
+        printf("\nVerified: f(alpha) * f(-beta) = f(alpha - beta)\n");
+    } else {
+        printf("\nNot equal!\n\nLHS =\n");
+        printMat(lhs, 3, 3);
+        printf("\nRHS =\n");
+        printMat(F_alpha_minus_beta, 3, 3);
+    }
+
+    // Step 5: Free memory
+    for(int i=0;i<3;i++){
+        free(F_alpha[i]); free(F_minus_beta[i]); free(F_alpha_minus_beta[i]);
+        free(lhs[i]);
+    }
+    free(F_alpha); free(F_minus_beta); free(F_alpha_minus_beta); free(lhs);
 
     return 0;
 }
-

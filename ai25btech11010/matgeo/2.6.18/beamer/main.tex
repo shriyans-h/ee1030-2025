@@ -110,42 +110,102 @@ Find the area of the region bounded by the triangle whose vertices are $(-1, 0)$
 \begin{frame}[fragile]                            
 \frametitle{Python code - Calculating the area of triangle}                
 \begin{lstlisting}
-import numpy as np
-import matplotlib.pyplot as plt
+# Triangle Plotting Script
+# Author: Dhanush (based on GVV Sharma)
+# September 13, 2025
+# Draw a triangle, calculate area, and save figure
+
+import sys
 import os
+import numpy as np
+import numpy.linalg as LA
+import matplotlib.pyplot as plt
 
-# Define the vertices of the triangle
-A = np.array([-1, 0])
-B = np.array([1, 3])
-C = np.array([3, 2])
+# Add parent folder of 'triangle' and 'line' to Python path
+sys.path.insert(0, '/home/dhanush-kumar-a/code/CoordGeo')
 
-# Calculate area using cross product formula
-area = 0.5 * np.abs(np.cross(B - A, C - A))
-print(f"Area of the triangle: {area}")
+# Local imports
+from triangle.funcs import tri_sides, tri_mid_pt
+from line.funcs import dir_vec, norm_vec, line_gen
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]                            
+\frametitle{Python code - Calculating the area of triangle}                
+\begin{lstlisting}
+
+
+# -----------------------
+# Triangle vertices (column vectors)
+A = np.array([-1, 0]).reshape(-1,1)
+B = np.array([1, 3]).reshape(-1,1)
+C = np.array([3, 2]).reshape(-1,1)
+m1 = dir_vec(A,B)
+m2 = dir_vec(B,C)
+m3 = dir_vec(C,A)
+
+# Area using cross product
+arvec = np.cross(m1[:,0], m3[:,0])
+area = 0.5 * LA.norm(arvec)
+print(f"Area of the triangle: {area:.3f}")
+
+
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]                            
 \frametitle{Python code - Plotting the triangle}                
 \begin{lstlisting}
-# Prepare triangle points for plotting
-triangle = np.array([A, B, C, A])  # repeat first point to close the triangle
+# Generate points for triangle sides
+x_AB = line_gen(A,B)
+x_BC = line_gen(B,C)
+x_CA = line_gen(C,A)
 
-# Plot the triangle
-plt.plot(triangle[:, 0], triangle[:, 1], 'b-o', label='Triangle')
-plt.fill(triangle[:, 0], triangle[:, 1], 'skyblue', alpha=0.3)
-plt.text(A[0], A[1], 'A', fontsize=12, color='red')
-plt.text(B[0], B[1], 'B', fontsize=12, color='red')
-plt.text(C[0], C[1], 'C', fontsize=12, color='red')
+# Plot triangle sides
+plt.plot(x_AB[0,:], x_AB[1,:], 'b', label='AB')
+plt.plot(x_BC[0,:], x_BC[1,:], 'g', label='BC')
+plt.plot(x_CA[0,:], x_CA[1,:], 'r', label='CA')
+
+# Plot vertices
+tri_coords = np.block([[A,B,C]])
+plt.scatter(tri_coords[0,:], tri_coords[1,:], color='red')
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]                            
+\frametitle{Python code - Plotting the triangle}                
+\begin{lstlisting}
+
+# Annotate vertices
+vert_labels = ['A','B','C']
+for i, txt in enumerate(vert_labels):
+    plt.annotate(txt,
+                 (tri_coords[0,i], tri_coords[1,i]),
+                 textcoords="offset points",
+                 xytext=(0,10),
+                 ha='center',
+                 fontsize=12, color='blue')
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]                            
+\frametitle{Python code - Plotting the triangle}                
+\begin{lstlisting}
+
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Triangle Plot')
 plt.grid(True)
+plt.axis('equal')
 plt.legend()
 
 # Save the figure
-plt.savefig('../figs/triangle_plot.png')
+plt.savefig('../figs/triangle_plot.png', dpi=300)
+print("Figure saved as figs/triangle_plot.png")
+
 plt.show()
+
 \end{lstlisting}
 \end{frame}
 \begin{frame}{Plot-Using  Python}
@@ -160,153 +220,160 @@ plt.show()
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-// Structure to store a 2D point
-typedef struct {
-    double x;
-    double y;
-} Point;
-
-// Function to calculate the area of a triangle using 2D determinant formula
-double triangle_area(Point A, Point B, Point C) {
-    return 0.5 * fabs(A.x*(B.y - C.y) + B.x*(C.y - A.y) + C.x*(A.y - B.y));
-}
-\end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]                            
-\frametitle{C code - To calculate the area of triangle and Save points}                
-\begin{lstlisting}
-
-// Function to save points and area to a file
-void save_points_and_area(const char *filename, Point A, Point B, Point C, double area) {
-    FILE *fp = fopen(filename, "w");
-    if (fp == NULL) {
-        printf("Error opening file!\n");
-        exit(1);
-    }
-    fprintf(fp, "Triangle Vertices:\n");
-    fprintf(fp, "A: %.2lf %.2lf\n", A.x, A.y);
-    fprintf(fp, "B: %.2lf %.2lf\n", B.x, B.y);
-    fprintf(fp, "C: %.2lf %.2lf\n", C.x, C.y);
-    fprintf(fp, "Area of the triangle: %.2lf\n", area);
-    fclose(fp);
-}
-\end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]                            
-\frametitle{C code - To calculate the area of triangle and Save points}                
-\begin{lstlisting}
+#include "/home/dhanush-kumar-a/ee1030-2025/ai25btech11010/matgeo/1.11.12/codes/libs/matfun.h"
 
 int main() {
-    // Triangle vertices
-    Point A = {-1, 0};
-    Point B = {1, 3};
-    Point C = {3, 2};
+    // Step 1: Create triangle vertices as 2x1 matrices
+    double **A = createMat(2,1);
+    double **B = createMat(2,1);
+    double **C = createMat(2,1);
 
-    // Calculate area
-    double area = triangle_area(A, B, C);
+    A[0][0] = -1; A[1][0] = 0;
+    B[0][0] = 1;  B[1][0] = 3;
+    C[0][0] = 3;  C[1][0] = 2;
+    \end{lstlisting}
 
-    // Print points and area
-    printf("Triangle Vertices:\n");
-    printf("A: (%.2lf, %.2lf)\n", A.x, A.y);
-    printf("B: (%.2lf, %.2lf)\n", B.x, B.y);
-    printf("C: (%.2lf, %.2lf)\n", C.x, C.y);
-    printf("Area of the triangle: %.2lf\n", area);
-\end{lstlisting}
 \end{frame}
+
+
 \begin{frame}[fragile]                            
 \frametitle{C code - To calculate the area of triangle and Save points}                
 \begin{lstlisting}
 
-    // Save points and area to file
-    save_points_and_area("points.dat", A, B, C, area);
-    printf("Triangle points and area saved in points.dat\n");
+    // Step 2: Compute vectors AB and AC using matrix subtraction
+    double **AB = Matsub(B, A, 2, 1);
+    double **AC = Matsub(C, A, 2, 1);
+
+    // Step 3: Create rotated row vector [AB_y, -AB_x] for cross product
+    double **rotAB = createMat(1,2);
+    rotAB[0][0] = AB[1][0];   // AB_y
+    rotAB[0][1] = -AB[0][0];  // -AB_x
+
+    // Step 4: Area = 0.5 * |rotAB * AC|
+    double **prod = Matmul(rotAB, AC, 1, 2, 1); // 1x1 matrix
+    double area = 0.5 * fabs(prod[0][0]);
+    \end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]                            
+\frametitle{C code - To calculate the area of triangle and Save points}                
+\begin{lstlisting}
+
+    // Step 5: Save results to files
+    FILE *fp_points = fopen("points.dat", "w");
+    if(fp_points != NULL){
+        fprintf(fp_points, "Vertex\tX\tY\n");
+        fprintf(fp_points, "A\t%.2f\t%.2f\n", A[0][0], A[1][0]);
+        fprintf(fp_points, "B\t%.2f\t%.2f\n", B[0][0], B[1][0]);
+        fprintf(fp_points, "C\t%.2f\t%.2f\n", C[0][0], C[1][0]);
+        fclose(fp_points);
+    }
+
+    FILE *fp_area = fopen("area.dat", "w");
+    if(fp_area != NULL){
+        fprintf(fp_area, "%.2f\n", area);
+        fclose(fp_area);
+    }
+    \end{lstlisting}
+
+\end{frame}
+
+
+\begin{frame}[fragile]                            
+\frametitle{C code - To calculate the area of triangle and Save points}                
+\begin{lstlisting}
+
+    // Step 6: Free memory
+    for(int i=0;i<2;i++){
+        free(A[i]); free(B[i]); free(C[i]);
+        free(AB[i]); free(AC[i]);
+    }
+    free(A); free(B); free(C);
+    free(AB); free(AC);
+    free(rotAB[0]); free(rotAB);
+    free(prod[0]); free(prod);
 
     return 0;
-    }
+}
+
 \end{lstlisting}
 \end{frame}
 
 	
 \begin{frame}[fragile]                              
-	\frametitle{Python code -Ploting the points using c function} 
-	\begin{lstlisting}
+	\frametitle{Python code -Ploting the points using c function}
+		\begin{lstlisting}
+
 import os
+import numpy as np
 import matplotlib.pyplot as plt
 
-# Run the C program
-# On Windows use: os.system("triangle.exe")
-os.system("./triangle")  # Linux/Mac
+# Step 1: Compile the C program
+os.system("gcc c.c -o triangle -lm")
 
-# Read points and area from points.dat
-points = {}
-area=0
-	\end{lstlisting}
-\end{frame}
+# Step 2: Run the compiled C program
+os.system("./triangle")
 
-	
-\begin{frame}[fragile]                              
-	\frametitle{Python code -Ploting the points using c function} 
-	\begin{lstlisting}
-
-
-with open("points.dat", "r") as file:
-    for line in file:
-        line = line.strip()
-        if line.startswith("A:"):
-            x, y = map(float, line[2:].split())
-            points['A'] = (x, y)
-        elif line.startswith("B:"):
-            x, y = map(float, line[2:].split())
-            points['B'] = (x, y)
-        elif line.startswith("C:"):
-            x, y = map(float, line[2:].split())
-            points['C'] = (x, y)
-        elif line.startswith("Area"):
-     print(f"Read Area from C program: {area}")
-print("Triangle Points:", points)
+# Step 3: Load points data
+points_data = np.genfromtxt("points.dat", skip_header=1, dtype=None, encoding="utf-8")
+labels = [row[0] for row in points_data]
+x_vals = np.array([float(row[1]) for row in points_data])
+y_vals = np.array([float(row[2]) for row in points_data])
 \end{lstlisting}
 \end{frame}
 
 	
 \begin{frame}[fragile]                              
-	\frametitle{Python code -Ploting the points using c function} 
-	\begin{lstlisting}
+	\frametitle{Python code -Ploting the points using c function}
+		\begin{lstlisting}
 
-# Prepare triangle points for plotting
-triangle_coords = [points['A'], points['B'], points['C'], points['A']]  # close the triangle
-x_vals, y_vals = zip(*triangle_coords)
+# Step 4: Load area
+with open("area.dat") as f:
+    area = float(f.read().strip())
 
-# Create figs folder if it doesn't exist
-os.makedirs('figs', exist_ok=True)
+# Step 5: Prepare triangle coordinates
+triangle_coords = [(x_vals[i], y_vals[i]) for i in range(3)]
+triangle_coords.append(triangle_coords[0])  # close the triangle
+tx, ty = zip(*triangle_coords)
 
-# Plot
-plt.plot(x_vals, y_vals, 'b-o', label='Triangle')
-plt.fill(x_vals, y_vals, 'skyblue', alpha=0.3)
+# Step 6: Plot the triangle
+fig, ax = plt.subplots(figsize=(6,6))
+ax.plot(tx, ty, 'b-o', label='Triangle')
+ax.fill(tx, ty, 'skyblue', alpha=0.3)
+\end{lstlisting}
+\end{frame}
+
+	
+\begin{frame}[fragile]                              
+	\frametitle{Python code -Ploting the points using c function}
+		\begin{lstlisting}
 
 # Label points
-for label, coord in points.items():
-    plt.text(coord[0], coord[1], label, fontsize=12, color='red')
+for i in range(3):
+    ax.text(x_vals[i], y_vals[i], f"{labels[i]}", fontsize=12, color='red')
+
+# Axes formatting
+ax.axhline(0, color="black", linewidth=1.0, linestyle="--")
+ax.axvline(0, color="black", linewidth=1.0, linestyle="--")
+ax.set_aspect("equal")
+ax.grid(True)
+ax.set_title(f"Triangle Plot (Area = {area:.2f})")
+plt.legend()
 \end{lstlisting}
 \end{frame}
 
 	
 \begin{frame}[fragile]                              
-	\frametitle{Python code -Ploting the points using c function} 
-	\begin{lstlisting}
+	\frametitle{Python code -Ploting the points using c function}
+		\begin{lstlisting}
 
-plt.title(f'Triangle Plot (Area = {area})')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.grid(True)
-plt.legend()
-
-# Save the plot in figs folder
-plt.savefig('../figs/triangle_plot1.png', dpi=300)
-print("Triangle plot saved in figs/triangle_plot.png")
+# Step 7: Save and show plot
+os.makedirs("../figs", exist_ok=True)
+plt.savefig("../figs/triangle_plot.png", dpi=300, bbox_inches="tight")
 plt.show()
-
-
+	
 \end{lstlisting}                               
 \end{frame}
 

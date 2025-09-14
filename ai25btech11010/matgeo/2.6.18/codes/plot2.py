@@ -1,54 +1,46 @@
 import os
+import numpy as np
 import matplotlib.pyplot as plt
 
-# Run the C program
-# On Windows use: os.system("triangle.exe")
-os.system("./triangle")  # Linux/Mac
+# Step 1: Compile the C program
+os.system("gcc c.c -o triangle -lm")
 
-# Read points and area from points.dat
-points = {}
-area = 0
-with open("points.dat", "r") as file:
-    for line in file:
-        line = line.strip()
-        if line.startswith("A:"):
-            x, y = map(float, line[2:].split())
-            points['A'] = (x, y)
-        elif line.startswith("B:"):
-            x, y = map(float, line[2:].split())
-            points['B'] = (x, y)
-        elif line.startswith("C:"):
-            x, y = map(float, line[2:].split())
-            points['C'] = (x, y)
-        elif line.startswith("Area"):
-            area = float(line.split(":")[1])
+# Step 2: Run the compiled C program
+os.system("./triangle")
 
-print(f"Read Area from C program: {area}")
-print("Triangle Points:", points)
+# Step 3: Load points data
+points_data = np.genfromtxt("points.dat", skip_header=1, dtype=None, encoding="utf-8")
+labels = [row[0] for row in points_data]
+x_vals = np.array([float(row[1]) for row in points_data])
+y_vals = np.array([float(row[2]) for row in points_data])
 
-# Prepare triangle points for plotting
-triangle_coords = [points['A'], points['B'], points['C'], points['A']]  # close the triangle
-x_vals, y_vals = zip(*triangle_coords)
+# Step 4: Load area
+with open("area.dat") as f:
+    area = float(f.read().strip())
 
-# Create figs folder if it doesn't exist
-os.makedirs('figs', exist_ok=True)
+# Step 5: Prepare triangle coordinates
+triangle_coords = [(x_vals[i], y_vals[i]) for i in range(3)]
+triangle_coords.append(triangle_coords[0])  # close the triangle
+tx, ty = zip(*triangle_coords)
 
-# Plot
-plt.plot(x_vals, y_vals, 'b-o', label='Triangle')
-plt.fill(x_vals, y_vals, 'skyblue', alpha=0.3)
+# Step 6: Plot the triangle
+fig, ax = plt.subplots(figsize=(6,6))
+ax.plot(tx, ty, 'b-o', label='Triangle')
+ax.fill(tx, ty, 'skyblue', alpha=0.3)
 
 # Label points
-for label, coord in points.items():
-    plt.text(coord[0], coord[1], label, fontsize=12, color='red')
+for i in range(3):
+    ax.text(x_vals[i], y_vals[i], f"{labels[i]}", fontsize=12, color='red')
 
-plt.title(f'Triangle Plot (Area = {area})')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.grid(True)
+# Axes formatting
+ax.axhline(0, color="black", linewidth=1.0, linestyle="--")
+ax.axvline(0, color="black", linewidth=1.0, linestyle="--")
+ax.set_aspect("equal")
+ax.grid(True)
+ax.set_title(f"Triangle Plot (Area = {area:.2f})")
 plt.legend()
 
-# Save the plot in figs folder
-plt.savefig('../figs/triangle_plot1.png', dpi=300)
-print("Triangle plot saved in figs/triangle_plot.png")
+# Step 7: Save and show plot
+os.makedirs("../figs", exist_ok=True)
+plt.savefig("../figs/triangle_plot.png", dpi=300, bbox_inches="tight")
 plt.show()
-

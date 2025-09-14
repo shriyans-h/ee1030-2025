@@ -1,80 +1,45 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
-
-// Structure for 2D vector
-typedef struct {
-    double x;
-    double y;
-} Vector;
-
-// Function to normalize a vector
-Vector normalize(Vector v) {
-    double mag = sqrt(v.x * v.x + v.y * v.y);
-    Vector result = {v.x / mag, v.y / mag};
-    return result;
-}
-
-// Function to add two vectors
-Vector add(Vector a, Vector b) {
-    Vector result = {a.x + b.x, a.y + b.y};
-    return result;
-}
-
-// Function to subtract two vectors
-Vector subtract(Vector a, Vector b) {
-    Vector result = {a.x - b.x, a.y - b.y};
-    return result;
-}
-
-// Function to negate a vector
-Vector negate(Vector v) {
-    Vector result = {-v.x, -v.y};
-    return result;
-}
-
-// Function to compute magnitude
-double magnitude(Vector v) {
-    return sqrt(v.x * v.x + v.y * v.y);
-}
-
-// Function to save vectors to .dat file
-void save_to_dat(Vector a, Vector b, Vector neg_b, Vector sum, Vector diff, const char *filename) {
-    FILE *fp = fopen(filename, "w");
-    if (fp == NULL) {
-        printf("Error opening file!\n");
-        return;
-    }
-    fprintf(fp, "Vector\tX\tY\tMagnitude\n");
-    fprintf(fp, "a\t%.4f\t%.4f\t%.4f\n", a.x, a.y, magnitude(a));
-    fprintf(fp, "b\t%.4f\t%.4f\t%.4f\n", b.x, b.y, magnitude(b));
-    fprintf(fp, "-b\t%.4f\t%.4f\t%.4f\n", neg_b.x, neg_b.y, magnitude(neg_b));
-    fprintf(fp, "a+b\t%.4f\t%.4f\t%.4f\n", sum.x, sum.y, magnitude(sum));
-    fprintf(fp, "a-b\t%.4f\t%.4f\t%.4f\n", diff.x, diff.y, magnitude(diff));
-    fclose(fp);
-    printf("Data saved to %s\n", filename);
-}
+#include "/home/dhanush-kumar-a/ee1030-2025/ai25btech11010/matgeo/1.11.12/codes/libs/matfun.h"
 
 int main() {
-    // Define vectors: a = (1,0), b = (cos120, sin120)
-    Vector a = {1.0, 0.0};
-    Vector b = {cos(M_PI * 120.0 / 180.0), sin(M_PI * 120.0 / 180.0)};
-    
-    // Normalize to ensure unit vectors
-    a = normalize(a);
-    b = normalize(b);
-    
-    // Compute required vectors
-    Vector sum = add(a, b);
-    Vector diff = subtract(a, b);
-    Vector neg_b = negate(b);
-    
-    // Print to console
-    printf("|a+b| = %.3f\n", magnitude(sum));
-    printf("|a-b| = %.3f\n", magnitude(diff));
-    printf("|-b|  = %.3f\n", magnitude(neg_b));
-    
-    // Save results in same folder as code
-    save_to_dat(a, b, neg_b, sum, diff, "vectors_data.dat");
-    
+    // Vectors as 2x1 matrices
+    double **a = createMat(2,1);
+    double **b = createMat(2,1);
+
+    a[0][0] = 1.0;  a[1][0] = 0.0;  
+    b[0][0] = cos(M_PI * 120.0 / 180.0);  
+    b[1][0] = sin(M_PI * 120.0 / 180.0);
+
+    // Normalize
+    a = Matunit(a, 2);
+    b = Matunit(b, 2);
+
+    // Operations
+    double **sum = Matadd(a, b, 2, 1);
+    double **diff = Matsub(a, b, 2, 1);
+    double **neg_b = Matscale(b, 2, 1, -1);
+
+    // Magnitudes
+    printf("|a+b| = %.3f\n", Matnorm(sum, 2));
+    printf("|a-b| = %.3f\n", Matnorm(diff, 2));
+    printf("|-b|  = %.3f\n", Matnorm(neg_b, 2));
+
+    // Save results to file
+    FILE *fp = fopen("vectors_data.dat", "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    fprintf(fp, "Vector\tX\tY\tMagnitude\n");
+    fprintf(fp, "a\t%.4f\t%.4f\t%.4f\n", a[0][0], a[1][0], Matnorm(a,2));
+    fprintf(fp, "b\t%.4f\t%.4f\t%.4f\n", b[0][0], b[1][0], Matnorm(b,2));
+    fprintf(fp, "-b\t%.4f\t%.4f\t%.4f\n", neg_b[0][0], neg_b[1][0], Matnorm(neg_b,2));
+    fprintf(fp, "a+b\t%.4f\t%.4f\t%.4f\n", sum[0][0], sum[1][0], Matnorm(sum,2));
+    fprintf(fp, "a-b\t%.4f\t%.4f\t%.4f\n", diff[0][0], diff[1][0], Matnorm(diff,2));
+    fclose(fp);
+
+    printf("Data saved to vectors_data.dat\n");
     return 0;
 }

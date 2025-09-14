@@ -1,38 +1,58 @@
 #include <stdio.h>
-
-typedef struct {
-    double x, y, z;
-} Point;
+#include <stdlib.h>
+#include <math.h>
+#include "/home/dhanush-kumar-a/ee1030-2025/ai25btech11010/matgeo/4.4.6/codes/libs/matfun.h"
 
 int main() {
-    Point A = {2, 5, -3};
-    Point B = {-2, -3, 5};
-    Point C = {5, 3, -3};
+    // Step 1: Define points A, B, C as 3x1 column vectors
+    double **A = createMat(3,1);
+    double **B = createMat(3,1);
+    double **C = createMat(3,1);
 
-    // Compute vectors AB and AC
-    double AB[3] = {B.x - A.x, B.y - A.y, B.z - A.z};
-    double AC[3] = {C.x - A.x, C.y - A.y, C.z - A.z};
+    A[0][0] = 2;  A[1][0] = 5;  A[2][0] = -3;
+    B[0][0] = -2; B[1][0] = -3; B[2][0] = 5;
+    C[0][0] = 5;  C[1][0] = 3;  C[2][0] = -3;
 
-    // Normal vector n = AB x AC
-    double n[3];
-    n[0] = AB[1]*AC[2] - AB[2]*AC[1];
-    n[1] = AB[2]*AC[0] - AB[0]*AC[2];
-    n[2] = AB[0]*AC[1] - AB[1]*AC[0];
+    // Step 2: Compute AB = B - A, AC = C - A
+    double **AB = Matsub(B, A, 3, 1);
+    double **AC = Matsub(C, A, 3, 1);
 
-    // Plane equation: n•X = d
-    double d = n[0]*A.x + n[1]*A.y + n[2]*A.z;
+    // Step 3: Form matrix [AB AC] (3x2)
+    double **M = Mathstack(AB, AC, 3, 1, 1);
 
-    // Save points and plane to file
+    // Step 4: Normal vector n = null space of Mᵀ
+    // Compute n by solving (AB, AC) cross product equivalent
+    double **n = createMat(3,1);
+    n[0][0] = AB[1][0]*AC[2][0] - AB[2][0]*AC[1][0];
+    n[1][0] = AB[2][0]*AC[0][0] - AB[0][0]*AC[2][0];
+    n[2][0] = AB[0][0]*AC[1][0] - AB[1][0]*AC[0][0];
+
+    // Step 5: Compute d = nᵀ * A
+    double d = Matdot(n, A, 3);
+
+    // Step 6: Save plane equation and points
     FILE *fp = fopen("plane_points.dat", "w");
-    fprintf(fp, "# Plane: %lf*x + %lf*y + %lf*z = %lf\n", n[0], n[1], n[2], d);
-    fprintf(fp, "%lf %lf %lf\n", A.x, A.y, A.z);
-    fprintf(fp, "%lf %lf %lf\n", B.x, B.y, B.z);
-    fprintf(fp, "%lf %lf %lf\n", C.x, C.y, C.z);
+    if (fp == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+    fprintf(fp, "# Plane equation: %lf*x + %lf*y + %lf*z = %lf\n",
+            n[0][0], n[1][0], n[2][0], d);
+    fprintf(fp, "%lf %lf %lf\n", A[0][0], A[1][0], A[2][0]);
+    fprintf(fp, "%lf %lf %lf\n", B[0][0], B[1][0], B[2][0]);
+    fprintf(fp, "%lf %lf %lf\n", C[0][0], C[1][0], C[2][0]);
     fclose(fp);
 
-    // Print normal and d for Python
-    printf("%lf %lf %lf %lf\n", n[0], n[1], n[2], d);
+    // Step 7: Print only the 4 values for Python
+    printf("%lf %lf %lf %lf\n", n[0][0], n[1][0], n[2][0], d);
+
+    // Step 8: Free memory
+    for(int i=0;i<3;i++){
+        free(A[i]); free(B[i]); free(C[i]);
+        free(AB[i]); free(AC[i]); free(M[i]); free(n[i]);
+    }
+    free(A); free(B); free(C);
+    free(AB); free(AC); free(M); free(n);
 
     return 0;
 }
-

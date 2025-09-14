@@ -3,6 +3,6 @@
 Enter alpha (in radians): 2
 Enter beta (in radians): 1.23
 
- Verified: f(alpha) f(-beta) = f(alpha - beta)
+ Verified: f(alpha)*f(-beta) = f(alpha - beta)
 
 \end{lstlisting}
