@@ -1,0 +1,161 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+\begin{document}
+
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.9.2}
+\author{EE25BTECH11051 - Shreyas Goud Burra}
+\maketitle
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}
+If (-5, 3) and (5, 3) are two vertices of an equilateral triangle, then the
+coordinates of the third vertex, given that the origin lies inside the triangle (take $\sqrt{3}$ = 1.7), are\\
+
+\solution\\
+
+Let us find the solution theoretically first and then verify it computationally.\\
+Let the two given points be represented as vectors, \textbf{A} and \textbf{B}, respectively
+
+\begin{align}
+    \textbf{A} = \myvec{-5\\3}, \textbf{B} = \myvec{5\\3}
+    \label{0.1}
+\end{align}
+
+Let us assume the third point be \textbf{C}.\\
+\textbf{C} must be equidistant from both \textbf{A} and \textbf{B}, and it lies on the perpendicular bisector to both \textbf{A} and \textbf{B}.
+
+The distance between \textbf{A} and \textbf{B}, is given by
+\begin{align}
+    \norm{\textbf{A}-\textbf{B}}=\norm{\myvec{-10\\0}}
+    \label{0.2}
+\end{align}
+
+We know that the norm of a vector is given by
+
+\begin{align}
+    \norm{\textbf{A}-\textbf{B}}^2 = (\textbf{A}-\textbf{B})^\text{T}(\textbf{A}-\textbf{B}) \implies \myvec{-10&0}.\myvec{-10\\0}= 100
+    \label{0.3}
+\end{align}
+
+As the norm of a vector is always greater than or equal to zero. From \ref{0.3} we get
+
+\begin{align}
+    \norm{\textbf{A}-\textbf{B}} = 10
+    \label{0.4}
+\end{align}
+
+The midpoint to the line segment \textbf{AB} is given by
+
+\begin{align}
+        \frac{\textbf{A}+\textbf{B}}{2} = \frac{\myvec{-5\\3}+\myvec{5\\3}}{2} = \myvec{0\\3}
+        \label{0.5}
+\end{align}
+
+Slope of line segment \textbf{AB} is given by
+\begin{align}
+    \textbf{B}-\textbf{A}=k\myvec{1\\m}\text{, where m is the slope of the line segment}
+    \label{0.6}
+\end{align}
+
+On further solving
+
+\begin{align}
+    \textbf{B}-\textbf{A}=\myvec{10\\0} \implies m=0
+    \label{0.7}
+\end{align}
+
+Therefore the perpendicular bisector for this line segment is a vertical line passing through the midpoint (0, 3).\\
+
+In parametric form
+
+\begin{align}
+    \textbf{}
+    \textbf{C}= \myvec{0\\t+3}\text{, where t is the distance between the point \textbf{C} and the line segment \textbf{AB}}
+    \label{0.8}
+\end{align}
+
+We know for an equilateral triangle, distance between a point and the opposite edge is $\frac{\sqrt{3}}{2}$ times the length of an edge of that triangle.
+
+\begin{align}
+    t=\pm \frac{\sqrt{3}}{2}\norm{\textbf{A}-\textbf{B}} \implies t=\pm 5\sqrt{3}
+    \label{0.9}
+\end{align}
+
+Therefore the required points for \textbf{C} are given by
+
+\begin{align}
+    \textbf{C} = \myvec{0\\\pm 5\sqrt{3}+3}
+    \label{0.9}
+\end{align}
+
+On plotting this gives us
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/fig1.png}
+    \caption{2D Plot}
+    \label{3D Plot}
+\end{figure}
+
+
+
+
+
+
+\end{document}
