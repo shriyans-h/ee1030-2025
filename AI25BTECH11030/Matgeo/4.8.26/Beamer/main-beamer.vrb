@@ -1,0 +1,11 @@
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+# Adjust view angle
+ax.view_init(elev=20, azim=45)
+
+# Save the figure as .png
+plt.savefig('foot_of_perpendicular.png')
+plt.show()
+
+\end{lstlisting}
+

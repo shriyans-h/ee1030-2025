@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.9)  14 SEP 2025 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.9)  14 SEP 2025 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1582,58 +1582,58 @@ See the minted package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 \begin{document}
+l.90 \begin{document}
                      
 ? 
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-91.
+90.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 No file main-beamer.aux.
 \openout1 = `main-beamer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 91.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 90.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-91.
+90.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 90.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-91.
+90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 90.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-91.
+90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 90.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 9
-1.
+0.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1691,56 +1691,56 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 91.
+Package hyperref Info: Link coloring OFF on input line 90.
 \@outlinefile=\write7
 \openout7 = `main-beamer.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 91.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 90.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 91.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 90.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 91.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 90.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 91.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 90.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 91.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 91.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 90.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 91.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 91.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 91.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 90.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 91.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 91.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 91.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 90.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 91.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 91.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 91.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 90.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 91.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 91.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 90.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 91.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 90.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 91.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 91.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 91.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 91.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 91.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 90.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 91.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1774,114 +1774,106 @@ No file main-beamer.nav.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-05.
+04.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-105.
+104.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-105.
+104.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 105.
+(Font)              <10.95> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 105.
+(Font)              <8> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 105.
+(Font)              <6> on input line 104.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-05.
+04.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-05.
+04.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-05.
+04.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-05.
+04.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-05.
+04.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 105.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 105.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 105.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 105.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 105.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 105.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 104.
 
  [2
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc}]
 \openout4 = `main-beamer.vrb'.
 
- (./main-beamer.vrb) [3
+ (./main-beamer.vrb)
+Overfull \vbox (3.55002pt too high) detected at line 125
+ []
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-\openout4 = `main-beamer.vrb'.
+[3
 
- (./main-beamer.vrb) [4
-
-]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 \openout4 = `main-beamer.vrb'.
 
  (./main-beamer.vrb)
-Overfull \vbox (0.10204pt too high) detected at line 198
- []
-
-[5
+[4
 
 ]
 \openout4 = `main-beamer.vrb'.
 
- (./main-beamer.vrb) [6
+ (./main-beamer.vrb) [5
 
 ]
-<FIG/fig1.png, id=206, 433.62pt x 433.62pt>
+<FIG/fig1.png, id=178, 462.528pt x 346.896pt>
 File: FIG/fig1.png Graphic file (type png)
 <use FIG/fig1.png>
-Package pdftex.def Info: FIG/fig1.png  used on input line 226.
-(pdftex.def)             Requested size: 222.48985pt x 222.49304pt.
-
-Overfull \vbox (30.96672pt too high) detected at line 226
- []
-
-[7
+Package pdftex.def Info: FIG/fig1.png  used on input line 168.
+(pdftex.def)             Requested size: 222.48985pt x 166.86812pt.
+ [6
 
  <./FIG/fig1.png>]
 \openout4 = `main-beamer.vrb'.
@@ -1892,40 +1884,35 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-Overfull \vbox (13.72923pt too high) detected at line 255
- []
-
-[8
+)) [7
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main-beamer.vrb'.
 
  (./main-beamer.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-17.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+15.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 282
+Overfull \vbox (1.72923pt too high) detected at line 216
  []
 
-[9
+[8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main-beamer.vrb'.
 
  (./main-beamer.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 306
+Overfull \vbox (97.72923pt too high) detected at line 247
  []
 
-[10
+[9
 
 ]
 \openout4 = `main-beamer.vrb'.
 
- (./main-beamer.vrb) [11
+ (./main-beamer.vrb) [10
 
 ]
 \tf@nav=\write8
@@ -1956,10 +1943,10 @@ Package rerunfilecheck Info: Checksums for `main-beamer.out':
 (rerunfilecheck)             After:  947E4F9AA73214CE5ECDF428DA8A579F;318.
  ) 
 Here is how much of TeX's memory you used:
- 57205 strings out of 474222
- 1360285 string characters out of 5748734
- 2412976 words of memory out of 5000000
- 78438 multiletter control sequences out of 15000+600000
+ 57178 strings out of 474222
+ 1360005 string characters out of 5748734
+ 2413976 words of memory out of 5000000
+ 78415 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1179b,1679s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1970,10 +1957,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main-beamer.pdf (11 pages, 199718 bytes).
+Output written on main-beamer.pdf (10 pages, 215161 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 26 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -55,93 +55,77 @@
 \renewcommand{\thetable}{\theenumi}
 
 
-\textbf{Question}: Find the equation of the median through vertex \(\mathbf{A}\) of the triangle \(ABC\), having vertices
+\textbf{Question}: Find the equation of the median through vertex \(\vec{A}\) of the triangle \(ABC\), having vertices
 \[
-\mathbf{A}(2,5), \quad \mathbf{B}(-4,9), \quad \mathbf{C}(-2,-1).
+\vec{A}(2,5), \quad \vec{B}(-4,9), \quad \vec{C}(-2,-1).
 \]
-
-\textbf{Solution:}\\
-Using the section formula, the midpoint \(\mathbf{M}\) of the side \(BC\) is 
+\textbf{Solution:}\
+Using the section formula, the midpoint \(\vec{M}\) of the side \(BC\) is 
 \[
-\mathbf{M} = \frac{\mathbf{B} + \mathbf{C}}{2} = 
-\frac{1}{2} \begin{bmatrix} -4 \\ 9 \end{bmatrix} + 
-\frac{1}{2} \begin{bmatrix} -2 \\ -1 \end{bmatrix} = 
-\begin{bmatrix} -3 \\ 4 \end{bmatrix}.
+\vec{M} = \frac{\vec{B} + \vec{C}}{2} = 
+\frac{1}{2} \myvec{-4 & 9} + 
+\frac{1}{2} \myvec{-2 & -1} = 
+\myvec{-3 & 4}.
 \]
-
-The median passes through points \(\mathbf{A}(2,5)\) and \(\mathbf{M}(-3,4)\).
+The median passes through points \(\vec{A}(2,5)\) and \(\vec{M}(-3,4)\).
 Let the required line have the equation
 \[
-\mathbf{n}^\top \mathbf{x} = 1
+\vec{n}^\top \vec{x} = 1
 \]
-where \( \mathbf{n} = \begin{bmatrix} n_1 \\ n_2 \end{bmatrix} \) is the direction vector.
+where 
+\[
+\vec{n} = \myvec{n_1 \\ n_2}
+\]
+is the column vector (direction vector).
 
-Since both the points \( A \) and \( M \) lie on the median, they satisfy the line equation. That is,
+Since both points \( A \) and \( M \) lie on the median, they satisfy the line equation:
 \[
-\mathbf{n}^\top \mathbf{A} = 1, \quad \mathbf{n}^\top \mathbf{M} = 1
+\vec{n}^\top \vec{A} = 1, \quad \vec{n}^\top \vec{M} = 1
 \]
-or, writing explicitly for the points \( A(2,5) \), \( M(-3,4) \):
+or, explicitly,
 \[
-\begin{pmatrix}
-2 & 5 \\
--3 & 4
-\end{pmatrix}
-\begin{pmatrix}
-n_1 \\ n_2
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 \\ 1
-\end{pmatrix}
+\myvec{2 & 5 \\ -3 & 4} \myvec{n_1 \\ n_2} = \myvec{1 \\ 1}
 \]
-We want to find the vector \( \mathbf{n} = \begin{bmatrix} n_1 \\ n_2 \end{bmatrix} \) satisfying the system:
+We want to find the vector \(\vec{n}\) satisfying
 \[
-\begin{pmatrix}
-2 & 5 \\
--3 & 4
-\end{pmatrix} \mathbf{n} = \mathbf{c}
+\myvec{2 & 5 \\ -3 & 4} \vec{n} = \vec{c}.
 \]
 
-Set up the augmented matrix with right-hand side \(1\):
-\[
-\left(\begin{array}{cc|c}
+\text{Set up the augmented matrix with right-hand side \(1\):}
+\begin{align}
+\myaugvec{2}{
 2 & 5 & 1 \\
 -3 & 4 & 1
-\end{array}\right)
-\]
+}
+\end{align}
 
-Perform row operations:
-
-\[
-R_2 \to R_2 + \frac{3}{2} R_1:
-\quad
-\left(\begin{array}{cc|c}
+\text{Perform row operation } \(R_2 \to R_2 + \frac{3}{2} R_1\):
+\begin{align}
+\myaugvec{2}{
 2 & 5 & 1 \\
 0 & \frac{23}{2} & \frac{5}{2}
-\end{array}\right)
-\]
+}
+\end{align}
 
-\[
-R_1 \to R_1 - \frac{10}{23} R_2:
-\quad
-\left(\begin{array}{cc|c}
-2 & 0 & 1 - \frac{50}{46} \\
-0 & \frac{23}{2} & \frac{5}{2}
-\end{array}\right)
-\]
-
-
-
-So the augmented matrix is:
-\[
-\left(\begin{array}{cc|c}
+\text{Perform row operation } \(R_1 \to R_1 - \frac{10}{23} R_2\):
+\begin{align}
+\myaugvec{2}{
 2 & 0 & -\frac{2}{23} \\
 0 & \frac{23}{2} & \frac{5}{2}
-\end{array}\right)
-\]
+}
+\end{align}
+
+\text{The final augmented matrix is:}
+\begin{align}
+\myaugvec{2}{
+2 & 0 & -\frac{2}{23} \\
+0 & \frac{23}{2} & \frac{5}{2}
+}
+\end{align}
+
+
 
 Solve the system:
-
 \[
 2 n_1 = -\frac{2}{23} \quad \Rightarrow \quad n_1 = -\frac{1}{23}
 \]
@@ -150,35 +134,28 @@ Solve the system:
 \]
 
 \[
-\mathbf{n} = \frac{1}{23}\begin{bmatrix} -1 \\ 5 \end{bmatrix}
-\]
-\[
-\mathbf{n}^\top \mathbf{x} = 1
-\]
-Substitute \( \mathbf{n} \):
-\[
-\left(
-\frac{1}{23}
-\begin{bmatrix}
--1 \\ 5
-\end{bmatrix}
-\right)^\top
-\mathbf{x} = 1
+\vec{n} = \frac{1}{23} \myvec{-1 \\ 5}
 \]
 
 \[
-\begin{bmatrix}
--1 & 5
-\end{bmatrix}
-\mathbf{x} = 23
+\vec{n}^\top \vec{x} = 1
 \]
 
+Substitute \(\vec{n}\):
+\[
+\left(\frac{1}{23} \myvec{-1 \\ 5}\right)^\top \vec{x} = 1
+\]
+\[
+\myvec{-1 & 5} \vec{x} = 23
+\]
 
 or equivalently,
 \[
 5y - x = 23.
 \]
-Therefore, equation of required line is  :\[
+
+Therefore, equation of required line is:
+\[
 \boxed{5y - x = 23.}
 \]
 

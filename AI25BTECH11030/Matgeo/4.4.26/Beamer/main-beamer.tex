@@ -1,82 +1,75 @@
 \documentclass{beamer}
-\mode<presentation>
-\usepackage{amsmath}
-\usepackage{amssymb}
-%\usepackage{advdate}
-\usepackage{graphicx}
-\usepackage{adjustbox}
-\usepackage{subcaption}
-\usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{url}
-\def\UrlBreaks{\do\/\do-}
-\usetheme{Boadilla}
-\usecolortheme{lily}
-\setbeamertemplate{footline}
-{
-  \leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-  \end{beamercolorbox}}%
-  \vskip0pt%
-}
-\setbeamertemplate{navigation symbols}{}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{multicol}
 
-\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
-\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
-\providecommand{\mbf}{\mathbf}
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
-\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
-\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
-\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
-\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
-\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
-\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
-\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
-\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\vert#1\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\lVert#1\rVert}
-\providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E[ #1 ]}
-\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
-%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\vec{Solution:}{#1}}
-%\newcommand{\solution}{\noindent \vec{Solution: }}
-\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\setbeamertemplate{page number in head/foot}[totalframenumber]
 
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
 
-\lstset{
-%language=C,
-frame=single, 
-breaklines=true,
-columns=fullflexible
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
 }
 \lstset{
-  language=C,
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\color{blue}\bfseries,
-  commentstyle=\color{gray}\itshape,
-  stringstyle=\color{orange},
-  numbers=left,
-  numberstyle=\tiny\color{gray},
-  breaklines=true,
-  frame=single,
-  showstringspaces=false,
-  tabsize=4,
-  captionpos=b
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
 }
+
 \numberwithin{equation}{section}
 \lstset{
   language=Python,
@@ -104,9 +97,9 @@ columns=fullflexible
 \section{Question}
 \begin{frame}{Question}
 \textbf{Question}:
- Find the equation of the median through vertex \(\mathbf{A}\) of the triangle \(ABC\), having vertices
+ Find the equation of the median through vertex \(\vec{A}\) of the triangle \(ABC\), having vertices
 \[
-\mathbf{A}(2,5), \quad \mathbf{B}(-4,9), \quad \mathbf{C}(-2,-1).
+\vec{A}(2,5), \quad \vec{B}(-4,9), \quad \vec{C}(-2,-1).
 \]
 
 \end{frame}
@@ -114,95 +107,75 @@ columns=fullflexible
 \section{Solution}
 \begin{frame}[fragile]
     \frametitle{Solution}
-Using the section formula, the midpoint \(\mathbf{M}\) of the side \(BC\) is 
+Using the section formula, the midpoint \(\vec{M}\) of the side \(BC\) is 
 \[
-\mathbf{M} = \frac{\mathbf{B} + \mathbf{C}}{2} = 
-\frac{1}{2} \begin{bmatrix} -4 \\ 9 \end{bmatrix} + 
-\frac{1}{2} \begin{bmatrix} -2 \\ -1 \end{bmatrix} = 
-\begin{bmatrix} -3 \\ 4 \end{bmatrix}.
+\vec{M} = \frac{\vec{B} + \vec{C}}{2} = 
+\frac{1}{2} \myvec{-4 & 9} + 
+\frac{1}{2} \myvec{-2 & -1} = 
+\myvec{-3 & 4}.
 \]
-
-The median passes through points \(\mathbf{A}(2,5)\) and \(\mathbf{M}(-3,4)\).
+The median passes through points \(\vec{A}(2,5)\) and \(\vec{M}(-3,4)\).
 Let the required line have the equation
 \[
-\mathbf{n}^\top \mathbf{x} = 1
+\vec{n}^\top \vec{x} = 1
 \]
-where \( \mathbf{n} = \begin{bmatrix} n_1 \\ n_2 \end{bmatrix} \) is the direction vector.
-
+where \( \vec{n} = \myvec{n_1 & n_2} \) is the direction vector.
 Since both the points \( A \) and \( M \) lie on the median, they satisfy the line equation. That is,
 \[
-\mathbf{n}^\top \mathbf{A} = 1, \quad \mathbf{n}^\top \mathbf{M} = 1
+\vec{n}^\top \vec{A} = 1, \quad \vec{n}^\top \vec{M} = 1
 \]
 or, writing explicitly for the points \( A(2,5) \), \( M(-3,4) \):
 \[
-\begin{pmatrix}
-2 & 5 \\
--3 & 4
-\end{pmatrix}
-\begin{pmatrix}
-n_1 \\ n_2
-\end{pmatrix}
+\myvec{2 & 5 \\ -3 & 4}
+\myvec{n_1 \\ n_2}
 =
-\begin{pmatrix}
-1 \\ 1
-\end{pmatrix}
+\myvec{1 \\ 1}
 \]
-
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Solution}
 
-We want to find the vector \( \mathbf{n} = \begin{bmatrix} n_1 \\ n_2 \end{bmatrix} \) satisfying the system:
+We want to find the vector \(\vec{n}\) satisfying
 \[
-\begin{pmatrix}
-2 & 5 \\
--3 & 4
-\end{pmatrix} \mathbf{n} = \mathbf{c}
+\myvec{2 & 5 \\ -3 & 4} \vec{n} = \vec{c}.
 \]
-
-Set up the augmented matrix with right-hand side \(1\):
-\[
-\left(\begin{array}{cc|c}
+\text{Set up the augmented matrix with right-hand side \(1\):}
+\begin{align}
+\myaugvec{2}{
 2 & 5 & 1 \\
 -3 & 4 & 1
-\end{array}\right)
-\]
+}
+\end{align}
 
-Perform row operations:
-
-\[
-R_2 \to R_2 + \frac{3}{2} R_1:
-\quad
-\left(\begin{array}{cc|c}
+\text{Perform row operation } \(R_2 \to R_2 + \frac{3}{2} R_1\):
+\begin{align}
+\myaugvec{2}{
 2 & 5 & 1 \\
 0 & \frac{23}{2} & \frac{5}{2}
-\end{array}\right)
-\]
+}
+\end{align}
 
-\[
-R_1 \to R_1 - \frac{10}{23} R_2:
-\quad
-\left(\begin{array}{cc|c}
-2 & 0 & 1 - \frac{50}{46} \\
+\text{Perform row operation } \(R_1 \to R_1 - \frac{10}{23} R_2\):
+\begin{align}
+\myaugvec{2}{
+2 & 0 & -\frac{2}{23} \\
 0 & \frac{23}{2} & \frac{5}{2}
-\end{array}\right)
-\]
-
+}
+\end{align}
 
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Solution}
 
-So the augmented matrix is:
-\[
-\left(\begin{array}{cc|c}
+\text{The final augmented matrix is:}
+\begin{align}
+\myaugvec{2}{
 2 & 0 & -\frac{2}{23} \\
 0 & \frac{23}{2} & \frac{5}{2}
-\end{array}\right)
-\]
+}
+\end{align}
 
 Solve the system:
-
 \[
 2 n_1 = -\frac{2}{23} \quad \Rightarrow \quad n_1 = -\frac{1}{23}
 \]
@@ -211,41 +184,34 @@ Solve the system:
 \]
 
 \[
-\mathbf{n} = \frac{1}{23}\begin{bmatrix} -1 \\ 5 \end{bmatrix}
-\]
-\[
-\mathbf{n}^\top \mathbf{x} = 1
-\]
-Substitute \( \mathbf{n} \):
-\[
-\left(
-\frac{1}{23}
-\begin{bmatrix}
--1 \\ 5
-\end{bmatrix}
-\right)^\top
-\mathbf{x} = 1
+\vec{n} = \frac{1}{23} \myvec{-1 \\ 5}
 \]
 
+\[
+\vec{n}^\top \vec{x} = 1
+\]
+
+Substitute \(\vec{n}\):
+\[
+\left(\frac{1}{23} \myvec{-1 \\ 5}\right)^\top \vec{x} = 1
+\]
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Solution}
-
 \[
-\begin{bmatrix}
--1 & 5
-\end{bmatrix}
-\mathbf{x} = 23
+\myvec{-1 & 5} \vec{x} = 23
 \]
-
 
 or equivalently,
 \[
 5y - x = 23.
 \]
-Therefore, equation of required line is  :\[
+
+Therefore, equation of required line is:
+\[
 \boxed{5y - x = 23.}
 \]
+
 
 \end{frame}
 \section{Graph}
