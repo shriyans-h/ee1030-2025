@@ -73,28 +73,17 @@ To find
     \vec{\mu} = \vec{a}^\top\vec{b}+\vec{b}^\top\vec{c}+\vec{c}^\top\vec{a}
 \end{align}
 
-Multiplying $\vec{a}+\vec{b} + \vec{c}=0$ with $\vec{a}^\top$ on both sides
+To find the value of $\vec{\mu}$
 
 \begin{align}
-    \vec{a}^\top\vec{a} + \vec{a}^\top\vec{b} + \vec{a}^\top\vec{c} = 0
-\end{align}
-
-Similarly, upon multiplying with $\vec{b}^\top$ and $\vec{c}^\top$, we get 
-
-\begin{align}
-   \vec{b}^\top\vec{a} + \vec{b}^\top\vec{b} + \vec{b}^\top\vec{c} &= 0\\
-   \vec{c}^\top\vec{a} + \vec{c}^\top\vec{b} + \vec{c}^\top\vec{c} &= 0
-\end{align}
-
-Adding the above three equations,
-\begin{align}
-    2\brak{\vec{a}^\top\vec{b}+\vec{b}^\top\vec{c}+\vec{c}^\top\vec{a}} + \vec{a}^\top\vec{a}+\vec{b}^\top\vec{b}+\vec{c}^\top\vec{c} &= 0\\
-   \implies 2\mu + \vec{a}^\top\vec{a}+\vec{b}^\top\vec{b}+\vec{c}^\top\vec{c} &= 0
+    \norm{\vec{a}+\vec{b}+\vec{c}}^2 &= 0\\
+    \brak{\vec{a}+\vec{b}+\vec{c}}^\top\brak{\vec{a}+\vec{b}+\vec{c}}&=0\\
+    \vec{a}^\top\vec{a} + \vec{b}^\top\vec{b} +\vec{c}^\top\vec{c} + 2\brak{\vec{a}^\top\vec{b} + \vec{b}^\top\vec{c} + \vec{c}^\top\vec{a}} &= 0
 \end{align}
 
 By using $\vec{x}^\top\vec{x} = \norm{\vec{x}}^2$ we get
 \begin{align}
-    2\mu + \brak{\norm{\vec{a}}^2 + \norm{\vec{b}}^2 + \norm{\vec{c}}^2} = 0
+    \brak{\norm{\vec{a}}^2 + \norm{\vec{b}}^2 + \norm{\vec{c}}^2} + 2\mu = 0
 \end{align}\\
 
 Substituting the values of $\norm{\vec{a}}, \norm{\vec{b}}, \norm{\vec{c}}$ we get
@@ -105,3 +94,4 @@ Substituting the values of $\norm{\vec{a}}, \norm{\vec{b}}, \norm{\vec{c}}$ we g
 $\therefore$ The value of $\mu$ is $\frac{-29}{2}$.
 
 \end{document}
+
