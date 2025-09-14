@@ -58,19 +58,30 @@ Prove that three points A, B, and C with position vectors $\mathbf{a}$, $\mathbf
 
 \textbf{Solution}:\\
 The three points A, B, and C are collinear if and only if the vectors $\vec{AB}$ and $\vec{AC}$ are parallel. The position vectors for these are:
+\begin{table}[H]    
+  \centering
+  \input{tables/table.tex}
+  \caption{Answers}
+  \label{Answers}
+\end{table}
 \begin{align*}
-    \mathbf{AB} &= \vec{b} - \vec{a} \\
-    \mathbf{AC} &= \vec{c} - \vec{a}
+    \mathbf{A-B} &= \vec{b} - \vec{a} \\
+    \mathbf{A-C} &= \vec{c} - \vec{a}
 \end{align*}
 If two vectors are collinear,
 \begin{align}
-    \vec{AB} \times \vec{AC} &= \mathbf{0} \\
     (\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a}) &= \mathbf{0}
 \end{align}
-Expanding the expression,
-\begin{align}
-    (\mathbf{b} \times \mathbf{c}) - (\mathbf{b} \times \mathbf{a}) - (\mathbf{a} \times \mathbf{c}) + (\mathbf{a} \times \mathbf{a}) &= \mathbf{0} \label{eq:expanded}
-\end{align}
+Using the determinant (matrix) form of the cross product,
+
+\[
+(\mathbf{b}-\mathbf{a}) \times (\mathbf{c}-\mathbf{a}) =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\myvec{b_1-a_1} & \myvec{b_2-a_2} & \myvec{b_3-a_3} \\
+\myvec{c_1-a_1} & \myvec{c_2-a_2} & \myvec{c_3-a_3}
+\end{vmatrix}
+\]
 Rearranging the equation we get,
 \begin{align}
     (\mathbf{a} \times \mathbf{b}) + (\mathbf{b} \times \mathbf{c}) + (\mathbf{c} \times \mathbf{a}) &= \mathbf{0}
