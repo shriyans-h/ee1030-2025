@@ -1,0 +1,9 @@
+\frametitle{Python Code (nativecode.py)}
+\begin{lstlisting}[language=Python]
+"A": (x1, y1), "B": (x2, y2), "C": (x3, y3), "D": (x4, y4)}
+for p, (x, y) in points.items():
+    plt.text(x, y, f"{p}{(x,y)}")
+
+plt.title(f"Quadrilateral ABCD, Area={area}")
+plt.show()
+\end{lstlisting}
