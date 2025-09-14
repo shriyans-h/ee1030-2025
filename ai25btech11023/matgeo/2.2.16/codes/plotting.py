@@ -30,16 +30,6 @@ else:
     Z2 = (d2 - n2_x*X - n2_y*Y)/n2_z
     ax.plot_surface(X, Y, Z2, alpha=0.5, color="red")
 
-# Optional: Points and labels as in original code
-A = np.array(([1, 1,0])).reshape(-1,1)
-B = np.array(([1,2, 1])).reshape(-1,1)
-C = np.array(([-2,2, 1])).reshape(-1,1)
-tri_coords = np.block([A, B, C])
-ax.scatter(tri_coords[0, :], tri_coords[1, :], tri_coords[2, :], c='black')
-vert_labels = ['A', 'B', 'C']
-for i, txt in enumerate(vert_labels):
-    ax.text(tri_coords[0, i], tri_coords[1, i], tri_coords[2, i],f'{txt}',fontsize=12, ha='center', va='bottom')
-
 ax.set_xlim(-4, 4)
 ax.set_ylim(-4, 4)
 ax.set_zlim(-4, 4)
