@@ -1,31 +1,37 @@
 import ctypes
-import numpy as np
 import matplotlib.pyplot as plt
 
+# Load shared library
 lib = ctypes.CDLL("./code.so")
-lib.area_of_quadrilateral.argtypes = [ctypes.c_double, ctypes.c_double,
-                                      ctypes.c_double, ctypes.c_double,
-                                      ctypes.c_double, ctypes.c_double,
-                                      ctypes.c_double, ctypes.c_double]
-lib.area_of_quadrilateral.restype = ctypes.c_double
+lib.findArea.argtypes = [
+    ctypes.c_double, ctypes.c_double,
+    ctypes.c_double, ctypes.c_double,
+    ctypes.c_double, ctypes.c_double,
+    ctypes.c_double, ctypes.c_double
+]
+lib.findArea.restype = ctypes.c_double
 
-x1, y1 = -4, -5
-x2, y2 = -1, -6
-x3, y3 = -5, 7
-x4, y4 = 4, 5
+# Correct order for function: A, B, C, D
+A = (-4, -5)
+B = (-1, -6)
+C = (-5, 7)
+D = (4, 5)
 
-area = lib.area_of_quadrilateral(x1, y1, x2, y2, x3, y3, x4, y4)
-print("Area:", area)
+area = lib.findArea(A[0], A[1], B[0], B[1], C[0], C[1], D[0], D[1])
 
-xs = [x1, x2, x4, x3, x1]
-ys = [y1, y2, y4, y3, y1]
+# For plotting, reorder to A, B, D, C to avoid bow-tie
+plot_points = [A, B, D, C, A]
+x = [p[0] for p in plot_points]
+y = [p[1] for p in plot_points]
 
-plt.fill(xs, ys, alpha=0.3, edgecolor='black')
-plt.scatter([x1, x2, x3, x4], [y1, y2, y3, y4], color='red')
+plt.fill(x, y, alpha=0.3, color="skyblue", edgecolor="black")
+plt.scatter(x, y, color="red")
 
-points = {"A": (x1, y1), "B": (x2, y2), "C": (x3, y3), "D": (x4, y4)}
-for p, (x, y) in points.items():
-    plt.text(x, y, f"{p}{(x,y)}")
+labels = ["A(-4,-5)", "B(-1,-6)", "D(4,5)", "C(-5,7)"]
+for xi, yi, lbl in zip(x[:-1], y[:-1], labels):
+    plt.text(xi, yi, lbl, fontsize=9, ha="right")
 
 plt.title(f"Quadrilateral ABCD, Area={area}")
+plt.gca().set_aspect("equal", adjustable="box")
 plt.show()
+
