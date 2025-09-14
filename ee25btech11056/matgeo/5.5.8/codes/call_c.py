@@ -50,7 +50,7 @@ ax.plot_surface(X,Y,Z2,alpha = 0.5,color="blue")
 ax.plot_surface(X,Y,Z3,alpha = 0.5,color="green")
 
 #Plot the solution point 
-ax.scatter(x,y,z,color="black",label="P(1.0,2.0,3.0")
+ax.scatter(x,y,z,color="black",label="P(1.0,2.0,3.0)")
 ax.text(x+0.5,y+0.5,z+0.5,f"P({x:.2f},{y:.2f},{z:.2f})",fontsize=10,color="black")
 
 #Axes 
