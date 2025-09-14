@@ -1,0 +1,315 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{1.9.17}
+\date{August  2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{J.NAVYASRI- EE25BTECH11028}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}{Question}
+Write the coordinates of a point \(\mathbf{P}\) on the \(x\)-axis which is equidistant from the points \(\mathbf{A(-2, 0)}\) and \(\mathbf{B(6, 0)}\).
+\end{frame}
+
+% Step 1: Theoretical solution
+\begin{frame}{Theoretical solution}
+Let
+\begin{equation}
+\mathbf{A} = \begin{pmatrix} a \\ 0 \end{pmatrix}, \quad
+\mathbf{B} = \begin{pmatrix} b \\ 0 \end{pmatrix}, \quad
+\mathbf{P} = \begin{pmatrix} p \\ 0 \end{pmatrix}
+\end{equation}
+
+Since \(\mathbf{P}\) is equidistant from \(\mathbf{A}\) and \(\mathbf{B}\), their distances satisfy:
+\begin{equation}
+\|\mathbf{P} - \mathbf{A}\| = \|\mathbf{P} - \mathbf{B}\|
+\end{equation}
+
+Square both sides:
+\begin{equation}
+\|\mathbf{P} - \mathbf{A}\|^2 = \|\mathbf{P} - \mathbf{B}\|^2
+\end{equation}
+
+Using the norm squared definition:
+\begin{equation}
+(\mathbf{P} - \mathbf{A})^\top (\mathbf{P} - \mathbf{A}) = (\mathbf{P} - \mathbf{B})^\top (\mathbf{P} - \mathbf{B})
+\end{equation}
+
+Expand both sides:
+\begin{equation}
+\mathbf{P}^\top \mathbf{P} - 2 \mathbf{A}^\top \mathbf{P} + \mathbf{A}^\top \mathbf{A} = \mathbf{P}^\top \mathbf{P} - 2 \mathbf{B}^\top \mathbf{P} + \mathbf{B}^\top \mathbf{B}
+\end{equation}
+
+\end{frame}
+
+% Step 2: Theoretical solution 
+\begin{frame}{Theoretical solution}
+Cancel \(\mathbf{P}^\top \mathbf{P}\) from both sides:
+\begin{equation}
+- 2 \mathbf{A}^\top \mathbf{P} + \mathbf{A}^\top \mathbf{A} = - 2 \mathbf{B}^\top \mathbf{P} + \mathbf{B}^\top \mathbf{B}
+\end{equation}
+
+Rearranged:
+\begin{equation}
+2 (\mathbf{B} - \mathbf{A})^\top \mathbf{P} = \mathbf{B}^\top \mathbf{B} - \mathbf{A}^\top \mathbf{A}
+\end{equation}
+
+Substitute the vectors:
+\begin{equation}
+2 (b - a) p = b^2 - a^2
+\end{equation}
+
+Rewrite right side as difference of squares:
+\begin{equation}
+2 (b - a) p = (b - a)(b + a)
+\end{equation}
+
+Since \(b \neq a\), divide both sides by \((b - a)\):
+\begin{equation}
+2 p = b + a
+\end{equation}
+\end{frame}
+
+% Step 3: Theoretical solution 
+\begin{frame}{Theoretical solution}
+Solve for \(x\):
+Solve for \(p\):
+\begin{equation}
+p = \frac{a + b}{2}
+\end{equation}
+
+Now substitute \(a = -2\), \(b = 6\):
+\begin{equation}
+p = \frac{-2 + 6}{2} = \frac{4}{2} = 2
+\end{equation}
+
+Hence, the coordinates of \(\mathbf{P}\) are:
+\begin{equation}
+\boxed{
+\mathbf{P} = \begin{pmatrix} 2 \\ 0 \end{pmatrix}
+}
+\end{equation}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+import matplotlib.pyplot as plt
+
+def setup_plot():
+    # Points A, P, and B
+    A = (-2, 0)
+    P = (2, 0)
+    B = (6, 0)
+
+    fig, ax = plt.subplots(figsize=(8, 3))
+
+    # Set axis limits and aspect ratio
+    ax.set_xlim(-4, 8)
+    ax.set_ylim(-1, 2)
+    ax.set_aspect('equal')
+
+    # Remove ticks and spines except left and bottom
+    ax.set_xticks([])
+    ax.set_yticks([])
+    for spine in ['top', 'right']:
+        ax.spines[spine].set_visible(False)
+
+    return fig, ax, A, P, B
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+def draw_elements(ax, A, P, B):
+    # Plot points
+    ax.plot(A[0], A[1], 'ro')  # red
+    ax.plot(P[0], P[1], 'go')  # green
+    ax.plot(B[0], B[1], 'bo')  # blue
+
+    # Labels below points
+    ax.text(A[0], A[1] - 0.25, r'$A(-2,0)$', color='red', ha='center', fontsize=12)
+    ax.text(P[0], P[1] - 0.25, r'$P(2,0)$', color='green', ha='center', fontsize=12)
+    ax.text(B[0], B[1] - 0.25, r'$B(6,0)$', color='blue', ha='center', fontsize=12)
+
+    # Dashed line between A and B
+    ax.plot([A[0], B[0]], [A[1], B[1]], 'k--', linewidth=1)
+
+    # Annotation above dashed line
+    ax.text(2, 0.3, r'$P$ is equidistant from $A$ and $B$', fontsize=12, style='italic', ha='center')
+
+    # Draw x and y axis arrows
+    ax.arrow(-4, 0, 12, 0, head_width=0.15, head_length=0.3, fc='black', ec='black', length_includes_head=True)
+    ax.arrow(0, -1, 0, 2, head_width=0.15, head_length=0.3, fc='black', ec='black', length_includes_head=True)
+
+    # Axis labels
+    ax.text(7.9, -0.15, 'x', fontsize=12)
+    ax.text(-0.2, 1.8, 'y', fontsize=12)
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+      \begin{lstlisting}
+def add_caption_and_show(fig):
+    fig.text(0.5, 0.02, 'Fig. 0', ha='center', fontsize=14, weight='bold')
+    plt.show()
+
+if __name__ == "__main__":
+    fig, ax, A, P, B = setup_plot()
+    draw_elements(ax, A, P, B)
+    add_caption_and_show(fig)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{C Code}
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    // Given points A and B on x-axis
+    double a = -2.0;
+    double b = 6.0;
+
+    // Calculate p = (a + b) / 2
+    double p = (a + b) / 2.0;
+
+    printf("Coordinates of P are: (%.2f, 0)\n", p);
+
+    return 0;
+}
+
+
+
+
+\end{lstlisting}
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+# Compile the C program
+subprocess.run(["gcc", "equidiistance.c", "-o", "equidistance"])
+
+# Run the compiled C program
+result = subprocess.run(["./equidistance"], capture_output=True, text=True)
+
+# Print the output from the C program 
+print(result.stdout)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}{Graphical Representation:}
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.0]
+        % axes
+        \draw[->] (-4,0) -- (8,0) node[right] {\(x\)};
+        \draw[->] (0,-1) -- (0,2) node[above] {\(y\)};
+        
+        % points
+        \filldraw[red] (-2,0) circle (2pt) node[below] {\(A(-2,0)\)};
+        \filldraw[blue] (6,0) circle (2pt) node[below] {\(B(6,0)\)};
+        \filldraw[green!70!black] (2,0) circle (2pt) node[below] {\(P(2,0)\)};
+        
+        % dotted line
+        \draw[dashed] (-2,0) -- (6,0);
+        
+        % annotation
+        \node at (4,1.0) {\(P\) is equidistant from \(A\) and \(B\)};
+    \end{tikzpicture}
+    
+    % Add "Fig. 0" text below the figure
+    \vspace{0.5cm} % space between figure and text
+    \textbf{Fig. 0}
+\end{center}
+\end{frame}
+\end{document}
+
