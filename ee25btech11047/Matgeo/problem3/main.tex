@@ -77,18 +77,50 @@ Side vectors:
 \vec{A}-\vec{C} &= \myvec{7 \\ 10} - \myvec{3 \\ 4} = \myvec{4 \\ 6} \\
 \vec{B}-\vec{C} &= \myvec{-2 \\ 5} - \myvec{3 \\ 4} = \myvec{-5 \\ 1}
 \end{align}
+\newpage
+Isosceles check:\\
 
-Squared lengths:
+1. Altitude from $\vec{A}$ 
 \begin{align}
-\|\vec{A}-\vec{B}\|^2 &= (\vec{A}-\vec{B})^T(\vec{A}-\vec{B})
-= 9^2 + 5^2 = 106 \\
-\|\vec{A}-\vec{C}\|^2 &= (\vec{A}-\vec{C})^T(\vec{A}-\vec{C})
-= 4^2 + 6^2 = 52 \\
-\|\vec{B}-\vec{C}\|^2 &= (\vec{B}-\vec{C})^T(\vec{B}-\vec{C})
-= (-5)^2 + 1^2 = 26
+\vec{D}=\frac{\vec{B}+\vec{C}}{2}
+=\frac{1}{2}\myvec{-2+3\\5+4}
+=\myvec{\tfrac{1}{2}\\\tfrac{9}{2}}.\\
+\vec{A}-\vec{D}
+=\myvec{\tfrac{13}{2}\\\tfrac{11}{2}},\qquad
+\vec{B}-\vec{C}
+=\myvec{-5\\1}.\\
+(\vec{A}-\vec{D})^{T}(\vec{B}-\vec{C})
+=\myvec{\tfrac{13}{2} & \tfrac{11}{2}}
+\myvec{-5\\1}
+=-\tfrac{65}{2}+\tfrac{11}{2}\neq 0.
 \end{align}
-\begin{center}
-                    Since all are distinct not Isosceles.\\
+
+
+2. Altitude from $\vec{B}$
+\begin{align}
+\vec{E}=\frac{\vec{C}+\vec{A}}{2}
+=\myvec{5\\7}.\\
+\vec{B}-\vec{E}=\myvec{-7\\-2},\qquad
+\vec{C}-\vec{A}=\myvec{-4\\-6}.\\
+(\vec{B}-\vec{E})^{T}(\vec{C}-\vec{A})
+=\myvec{-7 & -2}\myvec{-4\\-6}
+=28+12=40\neq 0.
+\end{align}
+ 
+
+3.Altitude from $\vec{C}$
+\begin{align}
+\vec{F}=\frac{\vec{A}+\vec{B}}{2}
+=\myvec{\tfrac{5}{2}\\\tfrac{15}{2}}.\\
+\vec{C}-\vec{F}=\myvec{\tfrac{1}{2}\\-\tfrac{7}{2}},\qquad
+\vec{A}-\vec{B}=\myvec{9\\5}.\\
+(\vec{C}-\vec{F})^{T}(\vec{A}-\vec{B})
+=\myvec{\tfrac{1}{2} & -\tfrac{7}{2}}
+\myvec{9\\5}
+=\tfrac{9}{2}-\tfrac{35}{2}=-13\neq0.
+\end{align}
+\begin{center}    
+Hence it is not isosceles triangle.
 \end{center}
 
 Right angle check:\\
