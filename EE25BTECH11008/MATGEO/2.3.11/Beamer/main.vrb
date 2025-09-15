@@ -1,0 +1,9 @@
+\frametitle{Python Code (cont..)}
+\begin{lstlisting}[language=Python]
+u = [1, -2, -2]
+v = [3, -6, 2]
+theta = compute_angle(u, v)
+
+print(f"Angle(radians):{theta}")
+print(f"Angle(degrees):{theta*180/numpy.pi}")
+\end{lstlisting}
