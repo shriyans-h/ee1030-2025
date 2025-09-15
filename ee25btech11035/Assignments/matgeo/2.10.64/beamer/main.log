@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  12 SEP 2025 23:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.5)  15 SEP 2025 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -883,7 +883,7 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count387
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -904,6 +904,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -961,6 +962,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 60.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1042,9 +1045,7 @@ English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count394
-
-No file main.nav.
-
+ (./main.nav)
 
 [1
 
@@ -1091,18 +1092,26 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 [5
 
 ]
-<figs/2.png, id=51, 867.24pt x 650.43pt>
+
+[6
+
+]
+
+[7
+
+]
+<figs/2.png, id=73, 867.24pt x 650.43pt>
 File: figs/2.png Graphic file (type png)
 <use figs/2.png>
-Package pdftex.def Info: figs/2.png  used on input line 134.
+Package pdftex.def Info: figs/2.png  used on input line 184.
 (pdftex.def)             Requested size: 325.17949pt x 243.88087pt.
 
-Overfull \vbox (32.65039pt too high) detected at line 134
+Overfull \vbox (32.65039pt too high) detected at line 184
  []
 
 
 
-[6
+[8
 
  <./figs/2.png>]
 \tf@nav=\write6
@@ -1119,21 +1128,14 @@ Overfull \vbox (32.65039pt too high) detected at line 134
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A601F8F66CF8F502679A2C231DA208A7;320.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: A601F8F66CF8F502679A2C231DA208A7;320.
  ) 
 Here is how much of TeX's memory you used:
- 25141 strings out of 467799
- 473772 string characters out of 5436041
- 874070 words of memory out of 5000000
- 53266 multiletter control sequences out of 15000+600000
+ 25186 strings out of 467799
+ 474178 string characters out of 5436041
+ 872070 words of memory out of 5000000
+ 53299 multiletter control sequences out of 15000+600000
  634457 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,394b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1145,11 +1147,12 @@ type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmssi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (6 pages, 201791 bytes).
+b><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texl
+ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (8 pages, 213965 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 72 words of extra memory for PDF output out of 10000 (max. 10000000)
 

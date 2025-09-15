@@ -57,6 +57,30 @@ $\vec{A}\myvec{3\\-2\\-1}$, $\vec{B}\myvec{2\\3\\-4}$, $\vec{C}\myvec{-1\\1\\2}$
 \bigskip
 
 \textbf{Solution: }\\
+
+The general equation for a plane with normal vector $\vec{n}$ passing through point P is \\
+\begin{equation}
+    \vec{n}^{\top}\vec{P} = d
+\end{equation}
+So,
+\begin{equation}
+    \vec{n}^{\top}\vec{A} = d
+\end{equation}
+
+\begin{equation}
+    \vec{n}^{\top}\vec{B} = d
+\end{equation}
+
+\begin{equation}
+    \vec{n}^{\top}\vec{C} = d
+\end{equation}
+
+\begin{equation}
+    \vec{n}^{\top}\vec{D} = d
+\end{equation}
+
+Forming direction vectors in the plane,
+
 \begin{equation}
 \vec{B} - \vec{A} = \myvec{-1\\5\\-3}
 \end{equation}
@@ -65,37 +89,59 @@ $\vec{A}\myvec{3\\-2\\-1}$, $\vec{B}\myvec{2\\3\\-4}$, $\vec{C}\myvec{-1\\1\\2}$
 \vec{C} - \vec{A} = \myvec{-4\\3\\3}
 \end{equation}
 
+Now, the normal vector will be orthogonal to both of these direction vectors, so that
 \begin{equation}
-\vec{D} - \vec{A} = \myvec{1\\7\\\lambda+1}
-\end{equation}
-
-As the points $\vec{A}$, $\vec{B}$, $\vec{C}$ and $\vec{D}$ lie on a plane, this means that the vectors $\vec{B} - \vec{A}$, $\vec{C} - \vec{A}$ and $\vec{D} - \vec{A}$ are coplanar and hence,\\
-\begin{equation}
-\implies \abs{\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A} & \vec{D} - \vec{A}}} = 0
+    \brak{\vec{B} - \vec{A}}^{\top}\vec{n} = 0
 \end{equation}
 
 \begin{equation}
-    \abs{\myvec{-1 & -4 & 1\\5 & 3 &7\\-3 & 3 & \lambda+1}} = 0
+    \brak{\vec{C} - \vec{A}}^{\top}\vec{n} = 0
 \end{equation}
 
-Converting this matrix into row echelon form,
+Combining the above two equations,
 \begin{equation}
- \myvec{-1 & -4 & 1\\5 & 3 &7\\-3 & 3 & \lambda+1} \overset{R_2 \rightarrow R_2 + 5R_1}{\longrightarrow} \myvec{-1 & -4 & 1\\0 & -17 & 12\\-3 & 3 & \lambda+1}
-\end{equation}
-
-\begin{equation}
-    \myvec{-1 & -4 & 1\\0 & -17 & 12\\-3 & 3 & \lambda+1} \overset{R_3 \rightarrow R_3 - 3R_1}{\longrightarrow} \myvec{-1 & -4 & 1\\0 & -17 & 12\\0 & 15 & \lambda-2}
+    \myvec{\brak{\vec{B} - \vec{A}}^{\top}\\ \brak{\vec{C} - \vec{A}}^{\top}}\vec{n} = 0
 \end{equation}
 
 \begin{equation}
-    \myvec{-1 & -4 & 1\\0 & -17 & 12\\0 & 15 & \lambda-2} \overset{R_2 \rightarrow -R_2}{\longrightarrow} \myvec{-1 & -4 & 1\\0 & 17 & -12\\0 & 15 & \lambda-2}
+    \myvec{-1&5&-3\\-4&3&3}\vec{n} = \myvec{0\\0}
+\end{equation}
+
+Augmented matrix:
+\begin{equation}
+    \implies \myvec{-1&5&-3&|&0\\-4&3&3&|&0}
 \end{equation}
 
 \begin{equation}
-    \myvec{-1 & -4 & 1\\0 & 17 & -12\\0 & 15 & \lambda-2} \overset{R_3 \rightarrow R_3 - \frac{15}{17}R_2}{\longrightarrow} \myvec{-1 & -4 & 1\\0 & 17 & -12\\0 & 0 & \lambda+\frac{146}{17}}
+    \myvec{-1&5&-3&|&0\\-4&3&3&|&0} \overset{R_2 \rightarrow R_2 - 4R_1}{\longrightarrow} \myvec{-1&5&-3&|&0\\0&-17&15&|&0}
 \end{equation}
 
-Now for the determinant of this matrix to be zero, the complete row $R_3$ must be zero, so that
+\begin{equation}
+    \myvec{-1&5&-3&|&0\\0&-17&15&|&0} \overset{R_2 \rightarrow \frac{-1}{17}R_2}{\longrightarrow} \myvec{-1&5&-3&|&0\\0&1&\frac{-15}{17}&|&0}
+\end{equation}
+
+\begin{equation}
+    \myvec{-1&5&-3&|&0\\0&1&\frac{-15}{17}&|&0} \overset{R_1 \rightarrow R_1 - 5R_2}{\longrightarrow} \myvec{-1&0&\frac{24}{17}&|&0\\0&1&\frac{-15}{17}&|&0}
+\end{equation}
+
+\begin{equation}
+    \implies \vec{n} = \myvec{\frac{24}{17}\\ \frac{15}{17}\\ 1} t
+\end{equation}
+
+So we can take $t=17$ in order to get integer coefficients,
+\begin{equation}
+    \vec{n} = \myvec{24\\15\\17}
+\end{equation}
+
+Substituting this in (2),
+\begin{equation}
+    d = \myvec{24&15&17}\myvec{3\\-2\\-1} = 25
+\end{equation}
+
+So substituting for $\vec{D}$ and $d$ in the equation (5), we have
+\begin{equation}
+    \myvec{24&15&17}\myvec{4\\5\\\lambda} = 25
+\end{equation}
 
 \begin{equation}
     \implies \fbox{$\lambda = \frac{-146}{17}$}
