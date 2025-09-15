@@ -1,0 +1,298 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  literate={λ}{{$\lambda$}}1
+}
+
+
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+\begin{document}
+
+\title 
+{2.10.44}
+\date{September 15,2025}
+
+
+\author 
+{Bhoomika V - EE25BTECH11015}
+
+
+
+
+\frame{\titlepage}
+\begin{frame}{Question}
+If $\vec{a}, \vec{b}, \vec{c}$ are unit vectors, then
+\[
+\lVert \vec{a} - \vec{b} \rVert^2
++ \lVert \vec{b} - \vec{c} \rVert^2
++ \lVert \vec{a} - \vec{b} \rVert^2
+\]
+does not exceed
+\begin{enumerate}[label=\alph*)] % makes options a), b), c), d)
+    \item 4
+    \item 9
+    \item 8
+    \item 6
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Solution-Gram matrix}
+Let 
+\[
+x = \vec{a}\cdot \vec{b}, \quad y = \vec{a}\cdot \vec{c}, \quad z = \vec{b}\cdot \vec{c}.
+\]
+Since $\vec{a},\vec{b},\vec{c}$ are unit vectors, their Gram matrix is
+\[
+G = \begin{pmatrix}
+1 & x & y \\
+x & 1 & z \\
+y & z & 1
+\end{pmatrix}.
+\]
+\end{frame}
+
+\begin{frame}{SOlution}
+Now consider
+\[
+(1,1,1) \, G \, (1,1,1)^T = (\vec{a}+\vec{b}+\vec{c}) \cdot (\vec{a}+\vec{b}+\vec{c}) \geq 0.
+\]
+Expanding,
+\[
+|\vec{a}|^2 + |\vec{b}|^2 + |\vec{c}|^2 + 2(x+y+z) = 3 + 2(x+y+z) \geq 0,
+\]
+\begin{equation}
+\implies \quad x+y+z \geq -\tfrac{3}{2}.
+\label{1}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Solution}
+Now ,
+\[
+|\vec{a}-\vec{b}|^2 + |\vec{b}-\vec{c}|^2 + |\vec{c}-\vec{a}|^2
+= (2-2x) + (2-2z) + (2-2y).
+\]
+So,
+\[
+= 6 - 2(x+y+z).
+\]
+From Equation~\eqref{1}
+\[
+6 - 2(x+y+z) \leq 6 - 2\left(-\tfrac{3}{2}\right) = 9.
+\]
+
+\end{frame}
+
+\begin{frame}{Answer}
+\[
+\text{Thus, } 
+\lVert \vec{a} - \vec{b} \rVert^2
++ \lVert \vec{b} - \vec{c} \rVert^2
++ \lVert \vec{a} - \vec{b} \rVert^2
+\text{ does not exceed } 9.
+\]
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code - A function to find max value}
+
+    \begin{lstlisting}
+#include <math.h>
+
+// Function to check inequality
+// Returns 1 if inequality holds, 0 otherwise
+int is_within_bound(float ax, float ay, float az,
+                    float bx, float by, float bz,
+                    float cx, float cy, float cz) {
+    
+    // Compute squared distances
+    float ab = (ax - bx)*(ax - bx) + (ay - by)*(ay - by) + (az - bz)*(az - bz);
+    float bc = (bx - cx)*(bx - cx) + (by - cy)*(by - cy) + (bz - cz)*(bz - cz);
+    float ca = (cx - ax)*(cx - ax) + (cy - ay)*(cy - ay) + (cz - az)*(cz - az);
+     \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code - A function to find max value  }
+
+    \begin{lstlisting}
+float sum = ab + bc + ca;
+
+    if (sum <= 9.0f) {
+        return 1;  // Inequality holds
+    } else {
+        return 0;  // Inequality violated
+    }
+}
+
+     \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import ctypes
+import os
+
+# --- Load the C library ---
+try:
+    c_lib = ctypes.CDLL('./code.so')
+except OSError:
+    print(" Error: 'code.so' not found. Compile with:")
+    print("   gcc -shared -o code.so -fPIC inequality.c -lm")
+    exit()
+
+# Define argument and return types
+c_lib.is_within_bound.argtypes = [
+    ctypes.c_float, ctypes.c_float, ctypes.c_float,
+    ctypes.c_float, ctypes.c_float, ctypes.c_float,
+    ctypes.c_float, ctypes.c_float, ctypes.c_float]
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+c_lib.is_within_bound.restype = ctypes.c_int
+
+# --- Function to generate random unit vector ---
+def random_unit_vector():
+    vec = np.random.randn(3)
+    return vec / np.linalg.norm(vec)
+
+# --- Generate unit vectors a, b, c ---
+a = random_unit_vector()
+b = random_unit_vector()
+c = random_unit_vector()
+
+# --- Call C function ---
+result = c_lib.is_within_bound(a[0], a[1], a[2],
+                               b[0], b[1], b[2],
+                               c[0], c[1], c[2])
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+if result == 1:
+    print(" The inequality holds (sum ≤ 9).")
+else:
+    print(" The inequality is violated.")
+
+# --- Plotting ---
+fig = plt.figure(figsize=(8,6))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot points
+ax.scatter(*a, color="red", s=50)
+ax.scatter(*b, color="blue", s=50)
+ax.scatter(*c, color="green", s=50)
+
+# Draw triangle
+triangle = np.array([a, b, c])
+ax.add_collection3d(Poly3DCollection([triangle], alpha=0.2, facecolor='cyan'))
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+# Edges
+ax.plot(*zip(a,b), color="black")
+ax.plot(*zip(b,c), color="black")
+ax.plot(*zip(c,a), color="black")
+
+# Labels
+ax.text(*a, "a", color="red")
+ax.text(*b, "b", color="blue")
+ax.text(*c, "c", color="green")
+
+# Axes labels
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.set_title("Triangle formed by unit vectors a, b, c")
+
+plt.show()
+    \end{lstlisting}
+\end{frame}
+
+\end{document}
