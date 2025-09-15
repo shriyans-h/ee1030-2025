@@ -86,7 +86,7 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-If the point $\textbf{A}(2,-4)$ is equidistant from $\textbf{P}(3,8)$ and $\textbf{Q}(-10,y)$, find the values of y.
+If the point $\textbf{A}(2,-4)$ is equidistant from $\textbf{P}(3,8)$ and $\textbf{Q}(-10,y)$, find the values of $y$.
  Also find distance $\vec{PQ}$.
 
  \input{tables/table}
@@ -104,15 +104,20 @@ Since $\vec{A}$ is equidistant from $\vec{P}$ and $\vec{Q}$,
 \end{align}
 
 \begin{align}
- {||\vec{A}||}^2 \, - \, 2\vec{A}^\top\vec{P} \, + \, {||\vec{P}||}^2 \, = \, {||\vec{A}||}^2 \, - \, 2\vec{A}^\top\vec{Q} \, + \, {||\vec{Q}||}^2
+    {(\vec{A} - \vec{P})}^\top (\vec{A} - \vec{P}) \, &= \, {(\vec{A} - \vec{Q})}^\top (\vec{A} - \vec{Q})
 \end{align}
 
 \begin{align}
-    {(\vec{P} - \vec{Q})}^\top \vec{A} \, &= \, \frac{{||\vec{P}||}^2\, - \, {||\vec{Q}||}^2}{2}
+ {||\vec{A}||}^2 \, - \, 2\vec{A}^\top\vec{P} \, + \, {||\vec{P}||}^2 \, = \, {||\vec{A}||}^2 \, - \, 2\vec{A}^\top\vec{Q} \, + \, {||\vec{Q}||}^2
 \end{align}
+
 \end{frame}
 
 \begin{frame}
+\begin{align}
+    {(\vec{P} - \vec{Q})}^\top \vec{A} \, &= \, \frac{{||\vec{P}||}^2\, - \, {||\vec{Q}||}^2}{2}
+\end{align}
+
 \begin{align}
     \myvec{3-(-10)\\8-y}^\top\myvec{2\\-4}\, = \, \frac{73-(-10)^2 -y^2}{2}
 \end{align}

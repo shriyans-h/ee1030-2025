@@ -45,7 +45,7 @@
 \maketitle
 
 Question:\\
- If the point $\textbf{A}(2,-4)$ is equidistant from $\textbf{P}(3,8)$ and $\textbf{Q}(-10,y)$, find the values of y.
+ If the point $\textbf{A}(2,-4)$ is equidistant from $\textbf{P}(3,8)$ and $\textbf{Q}(-10,y)$, find the values of $y$.
  Also find distance $\vec{PQ}$.
 
 \solution:\\
@@ -63,12 +63,17 @@ Since $\vec{A}$ is equidistant from $\vec{P}$ and $\vec{Q}$,
 \end{align}
 
 \begin{align}
+    {(\vec{A} - \vec{P})}^\top (\vec{A} - \vec{P}) \, &= \, {(\vec{A} - \vec{Q})}^\top (\vec{A} - \vec{Q})
+\end{align}
+
+\begin{align}
  {||\vec{A}||}^2 \, - \, 2\vec{A}^\top\vec{P} \, + \, {||\vec{P}||}^2 \, = \, {||\vec{A}||}^2 \, - \, 2\vec{A}^\top\vec{Q} \, + \, {||\vec{Q}||}^2
 \end{align}
 
 \begin{align}
     {(\vec{P} - \vec{Q})}^\top \vec{A} \, &= \, \frac{{||\vec{P}||}^2\, - \, {||\vec{Q}||}^2}{2}
 \end{align}
+
 
 After substituting the values,
 
@@ -104,7 +109,7 @@ Therefore,
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\columnwidth]{figs/fig1.png}
+\includegraphics[width=0.56\columnwidth]{figs/fig1.png}
  \caption*{Equidistant Points from $\vec{A}$ with Distances}
 \label{fig:graph.png}
 \end{figure}
