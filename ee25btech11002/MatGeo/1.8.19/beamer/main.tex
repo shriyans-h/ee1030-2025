@@ -108,38 +108,34 @@ Squaring both sides,
 \begin{align}
 \norm{\vec{P} - \vec{Q}}^2 = \norm{\vec{R} - \vec{Q}}^2
 \end{align}
-The squared norm of a vector $\vec{v}$ is given by $\vec{v}^T\vec{v}$.
+The squared norm of a vector $\vec{v}$ is given by $\vec{v}^\top\vec{v}$.
 \begin{align}
-\brak{\vec{P} - \vec{Q}}^T \brak{\vec{P} - \vec{Q}} = \brak{\vec{R} - \vec{Q}}^T \brak{\vec{R} - \vec{Q}}
+\brak{\vec{P} - \vec{Q}}^\top \brak{\vec{P} - \vec{Q}} = \brak{\vec{R} - \vec{Q}}^\top \brak{\vec{R} - \vec{Q}}
 \end{align}
 
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-First, we find the difference vectors:
 \begin{align}
-    \vec{P} - \vec{Q} &= \myvec{5 - 0 \\ -3 - 1} = \myvec{5 \\ -4} \\
-    \vec{R} - \vec{Q} &= \myvec{x - 0 \\ 6 - 1} = \myvec{x \\ 5}
-\end{align}
-Substituting these into the equation:
-\begin{align}
-    \myvec{ 5 & -4} \myvec{5 \\ -4} &= \myvec{ x & 5 } \myvec{x \\ 5} \\
-    \brak{5}\brak{5} + \brak{-4}\brak{-4} &= \brak{x}\brak{x} + \brak{5}\brak{5} \\
-    25 + 16 &= x^2 + 25 \\
-    x^2 &= 16 \\
+\brak{\vec{P}^{\top} - \vec{Q}^{\top}} \brak{\vec{P} - \vec{Q}} &= \brak{\vec{R}^{\top} - \vec{Q}^{\top}} \brak{\vec{R} - \vec{Q}}\\
+\vec{P}^{\top}\vec{P} - 2\vec{Q}^{\top}\vec{P} &= \vec{R}^{\top} \vec{R} - 2\vec{R}^{\top}\vec{Q}\\
+\myvec{5 & -3}\myvec{5 \\ -3} - 2\myvec{0 & 1}\myvec{5 \\ -3} &= \myvec{x & 6}\myvec{x \\ 6} - 2\myvec{x & 6}\myvec{0 \\ 1}\\
+25 + 9 + 6 &= x^2 + 36 -12 \\
+x^2 &= 16 \\
     \implies x &= \pm 4
 \end{align}
+
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-So, the two possible vectors for $\vec{R}$ are:
+Therefore, the two possible vectors for $\vec{R}$ are:
 \begin{align}
-\vec{R}_1 = \myvec{4 \\ 6}  \quad \text{and} \quad  \vec{R}_2 = \myvec{-4 \\ 6}
+\vec{R}_1 = \myvec{4 \\ 6}  \\  \vec{R}_2 = \myvec{-4 \\ 6}
 \end{align}
 
 
 
-Distance $\vec{QR}$:
+
 \begin{align}
      \norm{\vec{Q} - \vec{R}}&= \norm{\vec{P} - \vec{Q}} = \sqrt{5^2 + \brak{-4}^2} = \sqrt{41} \approx 6.40
 \end{align}
@@ -148,7 +144,6 @@ Distance $\vec{QR}$:
 
 
 \begin{frame}{Theoretical Solution}
-Distance $\vec{PR}$:
 \begin{itemize}
     \item For $\vec{R}_1 = \myvec{4 \\ 6}$:
     \begin{align}
