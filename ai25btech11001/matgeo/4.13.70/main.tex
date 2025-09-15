@@ -37,33 +37,57 @@
 
 \begin{document}
 
-\title{4.7.62}
+\title{4.13.70}
 \author{AI25BTECH11001 - ABHISEK MOHAPATRA}
 {\let\newpage\relax\maketitle}
 	 	\textbf{Question}:
-Find the equation of the plane which passes through the point (5,2,-4) and perpendicular the line with direction ratios 2,3,-1.
+If $\myvec{a &a^2 &1+ a3\\ b & b^2 & 1 + b^3\\c & c^2 & 1 + c^3} = 0$
+and the vectors $\vec{A}=\myvec{1&a&a^2}$, $\vec{B}=\myvec{1\\b\\b^2}$, $\vec{C}=\myvec{1&c&c^2}$ are co-planar, then the product
+abc = \rule{1cm}{0.15mm}.
+		
 
+		\textbf{Solution:} 
+Let equation of the plane be $\vec{n}^\top\vec{x}=0$.
 
-		\textbf{Solution:} let the equation of the plane be 
+so, 
 \begin{align}
-		\vec{n}^\top\vec{x} = c
+\vec{n}^\top\vec{A}=0,
+\vec{n}^\top\vec{B}=0,
+\vec{n}^\top\vec{C}=0
+\end{align}
+so ,
+\begin{align}
+		\myvec{\vec{A}&\vec{B}&\vec{C}}^\top\vec{n}=0,
+\end{align}
+so for a unique plane to exist the rank of the matrix at left must be 3.Or, 
+\begin{align}
+		det\myvec{\vec{A}&\vec{B}&\vec{C}} \neq 0
+\end{align}
+\begin{align}
+		\Rightarrow\mydet{1&a &a^2 \\1& b & b^2 \\1& c & c^2}	= 0
 \end{align}
 
-as per the question, $\vec{n} = \myvec{2\\3\\-1}$ and a point ,let $\vec{P} = \myvec{5\\2\\-4}$ 
-
-so putting the values in the equation,
+solving the given determinant,
 \begin{align}
-		\myvec{2\\3\\-1}^\top\myvec{5\\2\\-4} = c\\
-		\Rightarrow c = 10 + 6 +4 = 20
+\mydet{a &a^2 &1+ a^3\\ b & b^2 & 1 + b^3\\c & c^2 & 1 + c^3} = 0
 \end{align}
-so the required equation is
 \begin{align}
-		\myvec{2\\3\\-1}\vec{x} = 20
+\mydet{a &a^2 & a^3\\ b & b^2 & b^3\\c & c^2 & c^3} + \mydet{a &a^2 & 1\\ b & b^2 & 1\\c & c^2 & 1} = 0
+\end{align}
+\begin{align}
+		\mydet{a &a^2 & a^3\\ b & b^2 & b^3\\c & c^2 & c^3} + \mydet{1&a &a^2 \\1& b & b^2 \\1& c & c^2} = 0
+\end{align}
+\begin{align}
+		 abc\mydet{1&a &a^2 \\1& b & b^2 \\1& c & c^2}  + \mydet{1&a &a^2 \\1& b & b^2 \\1& c & c^2} = 0
+\end{align}
+\begin{align}
+		\brak{abc+1}\mydet{1&a &a^2 \\1& b & b^2 \\1& c & c^2}	= 0
+\end{align}
+so,
+\begin{align}
+abc+1 = 0\Rightarrow
+abc = -1
 \end{align}
 
-Graph:
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{img.png}
-\end{figure}
+
 \end{document}
