@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  14 SEP 2025 19:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  15 SEP 2025 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1531,13 +1531,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 76.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 76.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 76.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1634,6 +1634,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 76.
+
+(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1712,8 +1714,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-No file main.nav.
+ (./main.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 83.
@@ -1948,7 +1949,7 @@ Overfull \hbox (0.53288pt too wide) in paragraph at lines 235--235
  [][]  
  []
 
-<../beamer/figs/fig1.png, id=289, 757.32938pt x 654.94687pt>
+<../beamer/figs/fig1.png, id=290, 757.32938pt x 654.94687pt>
 File: ../beamer/figs/fig1.png Graphic file (type png)
 <use ../beamer/figs/fig1.png>
 Package pdftex.def Info: ../beamer/figs/fig1.png  used on input line 235.
@@ -1999,24 +2000,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58356 strings out of 474222
- 1383504 string characters out of 5748733
+ 58392 strings out of 474222
+ 1383830 string characters out of 5748733
  2479089 words of memory out of 5000000
- 79592 multiletter control sequences out of 15000+600000
+ 79620 multiletter control sequences out of 15000+600000
  628755 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,16n,123p,1172b,1467s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2027,7 +2018,7 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (10 pages, 216292 bytes).
+Output written on main.pdf (10 pages, 216429 bytes).
 PDF statistics:
  377 PDF objects out of 1000 (max. 8388607)
  311 compressed objects within 4 object streams
