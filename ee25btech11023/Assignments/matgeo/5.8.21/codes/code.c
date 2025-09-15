@@ -1,8 +1,9 @@
-void get_system_coeffs(double* out_coeffs) {
-     
-    out_coeffs[0] = 4.0;
-    out_coeffs[1] = 5.0;
-   
-    out_coeffs[2] = 3.0;
-    out_coeffs[3] = 4.0;
+void get_system_coeffs(double* out_data) {
+
+    out_data[0] = 1.0;
+    out_data[1] = 1.0;
+    out_data[2] = 8.0;
+    out_data[3] = -1.0;
+    out_data[4] = 9.0;
+    out_data[5] = 0.0;
 }
