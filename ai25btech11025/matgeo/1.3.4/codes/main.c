@@ -1,29 +1,22 @@
+// main.c
 #include <stdio.h>
 
-// Function declarations (prototypes)
-double dx_from_abc(double ax, double ay, double bx, double by, double cx, double cy);
-double dy_from_abc(double ax, double ay, double bx, double by, double cx, double cy);
-int write_points_file(const char *filepath,
-                      double ax, double ay,
-                      double bx, double by,
-                      double cx, double cy);
+// function declaration
+int find_x(int Ax, int Ay, int Bx, int By, int Cx, int Cy, int Dy);
 
-int main(void) {
-    // Given A(1,3), B(-1,2), C(2,5)
-    double ax=1, ay=3, bx=-1, by=2, cx=2, cy=5;
+int main() {
+    int Ax=1, Ay=3, Bx=-1, By=2, Cx=2, Cy=5, Dy=4;
+    int x = find_x(Ax, Ay, Bx, By, Cx, Cy, Dy);
 
-    double dx = dx_from_abc(ax, ay, bx, by, cx, cy);
-    double dy = dy_from_abc(ax, ay, bx, by, cx, cy);
+    printf("The value of x is: %d\n", x);
 
-    printf("Computed x for D: %.10g\n", dx);
-    printf("Computed y for D (for consistency): %.10g\n", dy);
-
-    // Write coordinates to a file
-    if (write_points_file("points.dat", ax, ay, bx, by, cx, cy) != 0) {
-        fprintf(stderr, "Failed to write points.dat\n");
-        return 1;
-    }
-    printf("Wrote points to points.dat\n");
+    // save coordinates to file for Python
+    FILE *fp = fopen("coords.dat","w");
+    fprintf(fp,"%d %d\n",Ax,Ay);
+    fprintf(fp,"%d %d\n",Bx,By);
+    fprintf(fp,"%d %d\n",x,Dy);
+    fprintf(fp,"%d %d\n",Cx,Cy);
+    fclose(fp);
 
     return 0;
 }

@@ -82,259 +82,162 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-If $ A(1, 3) $, $ B(4, 2) $, $ C(x, 5) $, and $ D(x, 4) $ are the vertices of a parallelogram $ABCD$, then the value of $x$ is \underline{\hspace{2cm}}. \hfill (10, 2012)
+If $ A(1, 3), B(-1, 2), C(2, 5) $ and $ D(x, 4) $ are the vertices of a parallelogram \( ABCD \), then the value of $x$ is \underline{\hspace{2cm}}(10, 2012)
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-In a parallelogram, opposite sides are equal and parallel. Since $ABCD$ is a parallelogram, vectors $ \vec{AB} $ and $ \vec{CD} $ must be equal.
-
+In a parallelogram, the diagonals bisect each other. Therefore, the midpoint of diagonal AC equals the midpoint of diagonal BD:
 \begin{align}
-\vec{B} -\vec{A} = \myvec{4 - 1\\ 2 - 3} = \myvec{3, -1}
-\end{align}
-\begin{align}
-\vec{D} - \vec{C} = \myvec{x - x\\ 4 - 5} = \myvec{0, -1}
+\frac{\vec{A} +\vec{C}}{2} = \frac{\vec{B} + \vec{D}}{2} \\
+\vec{A} + \vec{C} = \vec{B} + \vec{D} \\
+\vec{D} = \vec{A} + \vec{C} - \vec{B}
 \end{align}
 
-	Clearly, $ \vec{B}-\vec{A} \neq \vec{D}-\vec{C} $, so let's try using diagonals. In a parallelogram, the diagonals bisect each other.
-
-Midpoint of diagonal $AC$:
+Substituting the coordinates:
 \begin{align}
-\myvec{\frac{1 + x}{2} \\ \frac{3 + 5}{2} } = \myvec{ \frac{1 + x}{2}\\ 4 }
+\myvec{ x \\ 4 } = \myvec{ 1 \\ 3 } + \myvec{ 2 \\ 5 } - \myvec{ -1 \\ 2 } \\
+                 = \myvec{ 1 + 2 - (-1) \\ 3 + 5 - 2 } \\
+                 = \myvec{ 4 \\ 6 }
 \end{align}
 \end{frame}
 
-
 \begin{frame}{Theoretical Solution}
-Midpoint of diagonal $BD$
-\begin{align}
-\myvec{\frac{4 + x}{2} \\ \frac{2 + 4}{2} } = \myvec{ \frac{4 + x}{2}\\ 3 }
-\end{align}
-
-Equating midpoints:
-\begin{align}
-\frac{1 + x}{2} = \frac{4 + x}{2} \quad \text{and} \quad 4 = 3
-\end{align}
-\end{frame}
-\begin{frame}{Theoretical Solution}
-The second equation is false, so diagonals do not bisect each other. Let's try using opposite sides again, but this time equating $ \vec{AD} $ and $ \vec{BC} $:
+This gives us the equations: 
 
 \begin{align}
-\vec{D} -\vec{A} = \begin{myvec}
-    {x-1 \\ 4-3 } \end{myvec} =\begin{myvec}
-        {x-1 \\ 1}
-    \end{myvec}
- \end{align}   
- \begin{align}
-\vec{C} -\vec{B} = \begin{myvec}
-    {x - 4 \\ 5 - 2} \end{myvec} =\begin{myvec}
-         {x - 4 \\ 3}
-     \end{myvec}
+       x=4\\
+       4=6
 \end{align}
 
-Equating vectors:
+this indicates that the assumption ABCD is a parallelogram with the given order might be incorrect. Perhaps the vertices are not in order A,B,C,DA,B,C,D. Let's try a different pairing.
+
+
+
 \begin{align}
-x - 1 = x - 4 \quad \text{and} \quad 1 = 3
+\frac{\vec{A} + \vec{D}}{2} = \frac{\vec{B} + \vec{C}}{2} \\
+\vec{A} + \vec{D} = \vec{B} + \vec{C} \\
+\vec{D} = \vec{B} + \vec{C} - \vec{A}
 \end{align}
-
-Again, contradiction. So let's try using the property that opposite sides are equal in length.
-\end{frame}
-
-
-
-\begin{frame}{Theoretical Solution}
-\begin{align}
-	\text{Length of } \vec{D}-\vec{A}: \quad |AD| &= \sqrt{(x - 1)^2 + (4 - 3)^2} = \sqrt{(x - 1)^2 + 1} \\
-	\text{Length of } \vec{C}-\vec{B}: \quad |BC| &= \sqrt{(x - 4)^2 + (5 - 2)^2} = \sqrt{(x - 4)^2 + 9}
-\end{align}
-
-Equating lengths:
-\begin{align}
-\sqrt{(x - 1)^2 + 1} = \sqrt{(x - 4)^2 + 9}
-\end{align}
-
-Squaring both sides:
-\begin{align}
-(x - 1)^2 + 1 = (x - 4)^2 + 9
-\end{align}
-\begin{align}
-x^2 - 2x + 1 + 1 = x^2 - 8x + 16 + 9
-\end{align}
-\begin{align}
-x^2 - 2x + 2 = x^2 - 8x + 25
-\end{align}
-
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Subtract $x^2$ from both sides:
-
+Substituting the coordinates:
 \begin{align}
--2x + 2 = -8x + 25
+\myvec{ x \\ 4 } = \myvec{ -1 \\ 2 } + \myvec{ 2 \\ 5 } - \myvec{ 1 \\ 3 } \\
+                 = \myvec{ -1 + 2 - (-1) \\ 2 + 5 - 3 } \\
+                 = \myvec{ 0 \\ 4 }
 \end{align}
 
+This gives us the equations: 
+
 \begin{align}
-6x = 23 \Rightarrow x = \frac{23}{6}
+    x=0  \\
+    4=4
 \end{align}
 
-\textbf{Answer:} $ \boxed{\frac{23}{6}} $
+\textbf{Answer:}  
+\textbf{x=0}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Main C Code}
    \begin{lstlisting}
-include <stdio.h>
+// main.c
+#include <stdio.h>
 
-// Function declarations (prototypes)
-double dx_from_abc(double ax, double ay, double bx, double by, double cx, double cy);
-double dy_from_abc(double ax, double ay, double bx, double by, double cx, double cy);
-int write_points_file(const char *filepath,
-                      double ax, double ay,
-                      double bx, double by,
-                      double cx, double cy);
+// function declaration
+int find_x(int Ax, int Ay, int Bx, int By, int Cx, int Cy, int Dy);
 
-   int main(void) {
+int main() {
+    int Ax=1, Ay=3, Bx=-1, By=2, Cx=2, Cy=5, Dy=4;
+    int x = find_x(Ax, Ay, Bx, By, Cx, Cy, Dy);
 
-   \end{lstlisting}
+    printf("The value of x is: %d\n", x);
+
+\end{lstlisting}
 	\end{frame}
+
 \begin{frame}[fragile]
 \frametitle{Main C Code}
    \begin{lstlisting}
-    // Given A(1,3), B(-1,2), C(2,5)
-    double ax=1, ay=3, bx=-1, by=2, cx=2, cy=5;
-
-    double dx = dx_from_abc(ax, ay, bx, by, cx, cy);
-    double dy = dy_from_abc(ax, ay, bx, by, cx, cy);
-
-    printf("Computed x for D: %.10g\n", dx);
-    printf("Computed y for D (for consistency): %.10g\n", dy);
-
-    // Write coordinates to a file
-    if (write_points_file("points.dat", ax, ay, bx, by, cx, cy) != 0) {
-        fprintf(stderr, "Failed to write points.dat\n");
-        return 1;
-    }
-    printf("Wrote points to points.dat\n");
-
-    return 0;
-}
-   \end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{C Function}
-   \begin{lstlisting}
-   #include <stdio.h>
-
-// Function to calculate Dx (x-coordinate of D)
-double dx_from_abc(double ax, double ay, double bx, double by, double cx, double cy) {
-    (void)ay; (void)by; (void)cy; // unused
-    return ax + cx - bx;
-}
-   \end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{C Function}
-     \begin{lstlisting}
-
-// Function to calculate Dy (y-coordinate of D)
-double dy_from_abc(double ax, double ay, double bx, double by, double cx, double cy) {
-    (void)ax; (void)bx; (void)cx; // unused
-    return ay + cy - by;
-}
-
-// Function to write points into a file
-int write_points_file(const char *filepath,
-                      double ax, double ay,
-                      double bx, double by,
-                      double cx, double cy) {
-    double dx = dx_from_abc(ax, ay, bx, by, cx, cy);
-    double dy = dy_from_abc(ax, ay, bx, by, cx, cy);
-     \end{lstlisting}
-     \end{frame}
-
-\begin{frame}[fragile]
-\frametitle{C Function}
-   \begin{lstlisting}
-
- FILE *fp = fopen(filepath, "w");
-    if (!fp) return 1;
-    fprintf(fp, "A %.10g %.10g\n", ax, ay);
-    fprintf(fp, "B %.10g %.10g\n", bx, by);
-    fprintf(fp, "C %.10g %.10g\n", cx, cy);
-    fprintf(fp, "D %.10g %.10g\n", dx, dy);
+ // save coordinates to file for Python
+    FILE *fp = fopen("coords.dat","w");
+    fprintf(fp,"%d %d\n",Ax,Ay);
+    fprintf(fp,"%d %d\n",Bx,By);
+    fprintf(fp,"%d %d\n",x,Dy);
+    fprintf(fp,"%d %d\n",Cx,Cy);
     fclose(fp);
+
     return 0;
 }
-
-   \end{lstlisting}
-\end{frame}
+\end{lstlisting}
+	\end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Python Code}
+\frametitle{C Function}
    \begin{lstlisting}
+// parallelogram.c
+#include <stdio.h>
 
-   import ctypes
-import pandas as pd
-import matplotlib.pyplot as plt
+int find_x(int Ax, int Ay, int Bx, int By, int Cx, int Cy, int Dy){
+int Dx=Bx+Cx-Ax;
 
-# Load the shared library
-lib = ctypes.CDLL("./libparallelogram.so")
-lib.dx_from_abc.argtypes = [ctypes.c_double]*6
-lib.dx_from_abc.restype = ctypes.c_double
-lib.dy_from_abc.argtypes = [ctypes.c_double]*6
-lib.dy_from_abc.restype = ctypes.c_double
-
-# Given points
-ax, ay = 1.0, 3.0
-bx, by = -1.0, 2.0
-cx, cy = 2.0, 5.0
-
+    return Dx;
+}
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Python Code}
    \begin{lstlisting}
-dx = lib.dx_from_abc(ax, ay, bx, by, cx, cy)
-dy = lib.dy_from_abc(ax, ay, bx, by, cx, cy)
+from ctypes import CDLL
+import matplotlib.pyplot as plt
 
-print("From Python via .so:")
-print("D =", dx, dy)
+# load shared library
+lib = CDLL("./libparallelogram.so")
 
-# Read the points written by C main
-df = pd.read_csv("points.dat", sep=r"\s+", header=None, names=["label","x","y"])
+# run C main program to generate coords.dat
+import os
+os.system("./main")
+# read coords
+coords = []
+with open("coords.dat") as f:
+    for line in f:
+        x,y = map(int,line.split())
+        coords.append((x,y))
 
-# Plot
-order = ["A","B","C","D","A"]
-xs = [df.loc[df["label"]==lbl,"x"].values[0] for lbl in order]
-ys = [df.loc[df["label"]==lbl,"y"].values[0] for lbl in order]
-   \end{lstlisting}
+# close polygon
+coords.append(coords[0])
+
+\end{lstlisting}
 \end{frame}
+
+
 \begin{frame}[fragile]
 \frametitle{Python Code}
    \begin{lstlisting}
-plt.plot(xs, ys, marker="o")
-for lbl in ["A","B","C","D"]:
-    x = df.loc[df["label"]==lbl,"x"].values[0]
-    y = df.loc[df["label"]==lbl,"y"].values[0]
-    plt.text(x, y, f"{lbl}({x:.0f},{y:.0f})")
-
+# plot
+xs, ys = zip(*coords)
+plt.plot(xs, ys, marker='o')
+plt.text(1,3,"A(1,3)")
+plt.text(-1,2,"B(-1,2)")
+plt.text(0,4,"D(0,4)")
+plt.text(2,5,"C(2,5)")
 plt.title("Parallelogram ABCD")
-plt.xlabel("x")
-plt.ylabel("y")
 plt.grid(True)
 plt.savefig("/home/r-nikhil/ee1030-2025/ai25btech11025/matgeo/1.3.4/figs/plotc.png")
 plt.show()
+
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}{Plot}
-    \begin{figure}[h!]
+\begin{figure}[h!]
     \centering
     \includegraphics[height=0.6\textheight, keepaspectratio]{figs/plotc.png}
     \label{figure_1}
-    \end{figure}
-\end{frame}
+\end{figure}
 
+\end{frame}
+    
 \end{document}

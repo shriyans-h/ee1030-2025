@@ -1,42 +1,32 @@
-import ctypes
-import pandas as pd
+from ctypes import CDLL
 import matplotlib.pyplot as plt
 
-# Load the shared library
-lib = ctypes.CDLL("./libparallelogram.so")
-lib.dx_from_abc.argtypes = [ctypes.c_double]*6
-lib.dx_from_abc.restype = ctypes.c_double
-lib.dy_from_abc.argtypes = [ctypes.c_double]*6
-lib.dy_from_abc.restype = ctypes.c_double
+# load shared library
+lib = CDLL("./libparallelogram.so")
 
-# Given points
-ax, ay = 1.0, 3.0
-bx, by = -1.0, 2.0
-cx, cy = 2.0, 5.0
+# run C main program to generate coords.dat
+import os
+os.system("./main")
 
-dx = lib.dx_from_abc(ax, ay, bx, by, cx, cy)
-dy = lib.dy_from_abc(ax, ay, bx, by, cx, cy)
+# read coords
+coords = []
+with open("coords.dat") as f:
+    for line in f:
+        x,y = map(int,line.split())
+        coords.append((x,y))
 
-print("From Python via .so:")
-print("D =", dx, dy)
+# close polygon
+coords.append(coords[0])
 
-# Read the points written by C main
-df = pd.read_csv("points.dat", sep=r"\s+", header=None, names=["label","x","y"])
-
-# Plot
-order = ["A","B","C","D","A"]
-xs = [df.loc[df["label"]==lbl,"x"].values[0] for lbl in order]
-ys = [df.loc[df["label"]==lbl,"y"].values[0] for lbl in order]
-
-plt.plot(xs, ys, marker="o")
-for lbl in ["A","B","C","D"]:
-    x = df.loc[df["label"]==lbl,"x"].values[0]
-    y = df.loc[df["label"]==lbl,"y"].values[0]
-    plt.text(x, y, f"{lbl}({x:.0f},{y:.0f})")
-
+# plot
+xs, ys = zip(*coords)
+plt.plot(xs, ys, marker='o')
+plt.text(1,3,"A(1,3)")
+plt.text(-1,2,"B(-1,2)")
+plt.text(0,4,"D(0,4)")
+plt.text(2,5,"C(2,5)")
 plt.title("Parallelogram ABCD")
-plt.xlabel("x")
-plt.ylabel("y")
 plt.grid(True)
 plt.savefig("/home/r-nikhil/ee1030-2025/ai25btech11025/matgeo/1.3.4/figs/plotc.png")
 plt.show()
+
