@@ -86,42 +86,16 @@ If $ A(1, 3), B(-1, 2), C(2, 5) $ and $ D(x, 4) $ are the vertices of a parallel
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-In a parallelogram, the diagonals bisect each other. Therefore, the midpoint of diagonal AC equals the midpoint of diagonal BD:
+In a parallelogram, the opposite sides are equal. Therefore, the length of side AC equals to the length of side BD:
 \begin{align}
-\frac{\vec{A} +\vec{C}}{2} = \frac{\vec{B} + \vec{D}}{2} \\
-\vec{A} + \vec{C} = \vec{B} + \vec{D} \\
-\vec{D} = \vec{A} + \vec{C} - \vec{B}
-\end{align}
-
-Substituting the coordinates:
-\begin{align}
-\myvec{ x \\ 4 } = \myvec{ 1 \\ 3 } + \myvec{ 2 \\ 5 } - \myvec{ -1 \\ 2 } \\
-                 = \myvec{ 1 + 2 - (-1) \\ 3 + 5 - 2 } \\
-                 = \myvec{ 4 \\ 6 }
-\end{align}
-\end{frame}
-
-\begin{frame}{Theoretical Solution}
-This gives us the equations: 
-
-\begin{align}
-       x=4\\
-       4=6
-\end{align}
-
-this indicates that the assumption ABCD is a parallelogram with the given order might be incorrect. Perhaps the vertices are not in order A,B,C,DA,B,C,D. Let's try a different pairing.
-
-
-
-\begin{align}
-\frac{\vec{A} + \vec{D}}{2} = \frac{\vec{B} + \vec{C}}{2} \\
-\vec{A} + \vec{D} = \vec{B} + \vec{C} \\
+\vec{D} - \vec{B} = \vec{C} - \vec{A} \\
 \vec{D} = \vec{B} + \vec{C} - \vec{A}
 \end{align}
+
+Substituting the coordinates:
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Substituting the coordinates:
 \begin{align}
 \myvec{ x \\ 4 } = \myvec{ -1 \\ 2 } + \myvec{ 2 \\ 5 } - \myvec{ 1 \\ 3 } \\
                  = \myvec{ -1 + 2 - (-1) \\ 2 + 5 - 3 } \\
