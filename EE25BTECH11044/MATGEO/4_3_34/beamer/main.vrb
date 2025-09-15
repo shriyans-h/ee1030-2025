@@ -1,0 +1,30 @@
+\frametitle{Python Code (Part 2)}
+\begin{lstlisting}[language=Python]
+# Parameters for simulation
+x_0, y_0 = 0.0, 2.0
+x_end, step_size = 1.0, 0.001
+steps = int((x_end - x_0) / step_size) + 1
+
+x_points = np.zeros(steps, dtype=np.float32)
+y_points = np.zeros(steps, dtype=np.float32)
+
+# Call the points function
+lib.points(x_0, y_0, x_end, step_size,
+           x_points, y_points, steps)
+
+# Theoretical solution (C = -2)
+def theoretical_solution(x):
+    return (-x + 4 - 2*np.exp(x))
+
+x_theory = np.linspace(x_0, x_end, 1000)
+y_theory = theoretical_solution(x_theory)
+
+# Plot results
+plt.plot(x_points, y_points, 'ro-',
+         markersize=2, linewidth=4, label="sim")
+plt.plot(x_theory, y_theory, 'b-',
+         linewidth=2, label="theory")
+plt.xlabel("x"); plt.ylabel("y")
+plt.legend(); plt.grid(True, linestyle="--")
+plt.show()
+\end{lstlisting}

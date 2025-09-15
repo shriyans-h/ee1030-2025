@@ -1,0 +1,259 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{4.3.34}
+\date{September 15, 2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{Sai Hasini Pappula - EE25BTECH11044}
+
+
+
+\begin{document}
+\begin{frame}{Question}
+\begin{block}{Problem}
+If the line
+\[
+\frac{x}{a} + \frac{y}{b} = 1
+\]
+passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$.
+\end{block}
+\end{frame}
+
+% Solution (Frame 1)
+\begin{frame}{Solution (Step 1)}
+For $(2,-3)$:
+\[
+\frac{2}{a} - \frac{3}{b} = 1
+\]
+For $(4,-5)$:
+\[
+\frac{4}{a} - \frac{5}{b} = 1
+\]
+
+Let
+\[
+u = \frac{1}{a}, \quad v = \frac{1}{b}.
+\]
+\end{frame}
+
+% Solution (Frame 2)
+\begin{frame}{Solution (Step 2)}
+System becomes:
+\[
+2u - 3v = 1, \qquad 4u - 5v = 1
+\]
+
+Matrix form:
+\[
+\begin{bmatrix}2 & -3 \\ 4 & -5 \end{bmatrix}
+\begin{bmatrix}u \\ v\end{bmatrix}
+=
+\begin{bmatrix}1 \\ 1\end{bmatrix}.
+\]
+
+Compute:
+\[
+A^{-1} = \frac{1}{2}
+\begin{bmatrix}-5 & 3 \\ -4 & 2\end{bmatrix}.
+\]
+\end{frame}
+
+% Solution (Frame 3)
+\begin{frame}{Solution (Step 3)}
+\[
+\begin{bmatrix}u \\ v\end{bmatrix}
+=
+A^{-1}\begin{bmatrix}1 \\ 1\end{bmatrix}
+=
+\frac{1}{2}\begin{bmatrix}-2 \\ -2\end{bmatrix}
+=
+\begin{bmatrix}-1 \\ -1\end{bmatrix}.
+\]
+
+Thus,
+\[
+a = -1, \quad b = -1.
+\]
+
+Equation of line:
+\[
+-x - y = 1.
+\]
+\end{frame}
+
+% C Code Part 1
+\begin{frame}[fragile]{C Code (Part 1)}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+
+int main() {
+    double A[2][2] = {{2, -3}, {4, -5}};
+    double B[2] = {1, 1};
+    double det, u, v, a, b;
+
+    // Determinant of A
+    det = A[0][0]*A[1][1] - A[0][1]*A[1][0];
+\end{lstlisting}
+\end{frame}
+
+% C Code Part 2
+\begin{frame}[fragile]{C Code (Part 2)}
+\begin{lstlisting}[language=C]
+    if(det == 0) {
+        printf("No unique solution.\n");
+        return 0;
+    }
+
+    // Cramer's Rule
+    u = (B[0]*A[1][1] - B[1]*A[0][1]) / det;
+    v = (A[0][0]*B[1] - A[1][0]*B[0]) / det;
+
+    a = 1.0 / u;
+    b = 1.0 / v;
+
+    printf("Solution: a = %.2f, b = %.2f\n", a, b);
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+% Python Code Part 1
+\begin{frame}[fragile]{Python Code (Part 1)}
+\begin{lstlisting}[language=Python]
+import ctypes
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the shared library
+lib = ctypes.CDLL("./c.so")
+
+# Define the function signature for points
+lib.points.argtypes = [
+    ctypes.c_float,  # x_0
+    ctypes.c_float,  # y_0
+    ctypes.c_float,  # x_end
+    ctypes.c_float,  # h
+    np.ctypeslib.ndpointer(dtype=np.float32, ndim=1),  
+    np.ctypeslib.ndpointer(dtype=np.float32, ndim=1),  
+    ctypes.c_int     # steps
+]
+\end{lstlisting}
+\end{frame}
+
+% Python Code Part 2
+\begin{frame}[fragile]{Python Code (Part 2)}
+\begin{lstlisting}[language=Python]
+# Parameters for simulation
+x_0, y_0 = 0.0, 2.0
+x_end, step_size = 1.0, 0.001
+steps = int((x_end - x_0) / step_size) + 1
+
+x_points = np.zeros(steps, dtype=np.float32)
+y_points = np.zeros(steps, dtype=np.float32)
+
+# Call the points function
+lib.points(x_0, y_0, x_end, step_size, 
+           x_points, y_points, steps)
+
+# Theoretical solution (C = -2)
+def theoretical_solution(x):
+    return (-x + 4 - 2*np.exp(x))
+
+x_theory = np.linspace(x_0, x_end, 1000)
+y_theory = theoretical_solution(x_theory)
+
+# Plot results
+plt.plot(x_points, y_points, 'ro-', 
+         markersize=2, linewidth=4, label="sim")
+plt.plot(x_theory, y_theory, 'b-', 
+         linewidth=2, label="theory")
+plt.xlabel("x"); plt.ylabel("y")
+plt.legend(); plt.grid(True, linestyle="--")
+plt.show()
+\end{lstlisting}
+\end{frame}
+
+
+% Plot Frame
+\begin{frame}{Plot}
+\begin{center}
+\includegraphics[width=0.8\columnwidth]{figs/plot6.png}
+\end{center}
+\end{frame}
+
+\end{document}

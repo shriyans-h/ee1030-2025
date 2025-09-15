@@ -1,0 +1,206 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.3.34}
+\author{EE25BTECH11044 - Sai Hasini Pappula}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question:}  
+If the line 
+\[
+\frac{x}{a} + \frac{y}{b} = 1
+\]
+passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$ 
+
+\textbf{Solution:}  
+
+For $(2,-3)$:
+\[
+\frac{2}{a} + \frac{-3}{b} = 1 \quad \Rightarrow \quad \frac{2}{a} - \frac{3}{b} = 1
+\]
+
+For $(4,-5)$:
+\[
+\frac{4}{a} + \frac{-5}{b} = 1 \quad \Rightarrow \quad \frac{4}{a} - \frac{5}{b} = 1
+\]
+
+Let 
+\[
+u = \frac{1}{a}, \quad v = \frac{1}{b}.
+\]
+
+Then the system becomes:
+\[
+2u - 3v = 1, \qquad 4u - 5v = 1
+\]
+
+or in matrix form:
+\[
+\begin{bmatrix}
+2 & -3 \\
+4 & -5
+\end{bmatrix}
+\begin{bmatrix}
+u \\ v
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}.
+\]
+
+
+\[
+A = \begin{bmatrix} 2 & -3 \\ 4 & -5 \end{bmatrix}.
+\]
+
+We compute
+\[
+A A^T =
+\begin{bmatrix}
+13 & 23 \\
+23 & 41
+\end{bmatrix}.
+\]
+
+Hence, the norm of $A$ is
+\[
+\|A\|_F = \sqrt{\mathrm{trace}(A A^T)} = \sqrt{13 + 41} = \sqrt{54} \neq 0,
+\]
+so the matrix is invertible.
+
+
+\[
+A^{-1} = \frac{1}{2}
+\begin{bmatrix}
+-5 & 3 \\
+-4 & 2
+\end{bmatrix}.
+\]
+
+Thus,
+\[
+\begin{bmatrix}
+u \\ v
+\end{bmatrix}
+=
+A^{-1}
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix}
+-5 & 3 \\
+-4 & 2
+\end{bmatrix}
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix}
+-2 \\ -2
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1 \\ -1
+\end{bmatrix}.
+\]
+
+Hence,
+\[
+u = -1 \;\Rightarrow\; a = -1, 
+\qquad 
+v = -1 \;\Rightarrow\; b = -1.
+\]
+
+---
+
+\textbf{Verification:}  
+Equation of the line:
+\[
+\frac{x}{-1} + \frac{y}{-1} = 1 \quad \Rightarrow \quad -x - y = 1.
+\]
+
+For $(2,-3)$:
+\[
+-(2) - (-3) = -2 + 3 = 1 \quad \checkmark
+\]
+
+For $(4,-5)$:
+\[
+-(4) - (-5) = -4 + 5 = 1 \quad \checkmark
+\]
+
+---
+
+\textbf{Final Answer:}  
+\[
+(a,b) = (-1,-1).
+\]
+
+\begin{center}
+    \includegraphics[width=0.8\columnwidth]{figs/plot6.png}
+\end{center}
+
+\end{document}
