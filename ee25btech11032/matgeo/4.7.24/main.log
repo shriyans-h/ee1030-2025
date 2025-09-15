@@ -1899,16 +1899,17 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-) (./tables/table.tex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/u
-sr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-
-]
-<figs/section1.png, id=52, 462.528pt x 346.896pt>
-File: figs/section1.png Graphic file (type png)
-<use figs/section1.png>
-Package pdftex.def Info: figs/section1.png  used on input line 111.
+) (./tables/table.tex)
+<figs/perpendicular2.png, id=31, 462.528pt x 346.896pt>
+File: figs/perpendicular2.png Graphic file (type png)
+<use figs/perpendicular2.png>
+Package pdftex.def Info: figs/perpendicular2.png  used on input line 101.
 (pdftex.def)             Requested size: 364.1953pt x 273.16086pt.
- [2 <./figs/section1.png>] (./main.aux)
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}
+
+] [2 <./figs/perpendicular2.png>]
+(./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1917,13 +1918,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52981 strings out of 474222
- 1255121 string characters out of 5748734
- 1947975 words of memory out of 5000000
+ 52974 strings out of 474222
+ 1255103 string characters out of 5748734
+ 1943975 words of memory out of 5000000
  74407 multiletter control sequences out of 15000+600000
- 624837 words of font info for 172 fonts, out of 8000000 for 9000
+ 622145 words of font info for 168 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,109p,1194b,902s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,16n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/te
@@ -1931,10 +1932,10 @@ xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 80975 bytes).
+Output written on main.pdf (2 pages, 76926 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
