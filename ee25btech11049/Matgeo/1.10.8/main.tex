@@ -49,7 +49,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{1.5.36}
+\title{1.10.8}
 \author{EE25BTECH11049 - Sai Krishna Bakki}
  \maketitle
 % \newpage
@@ -66,63 +66,30 @@
 \renewcommand{\thetable}{\theenumi}
 
 \textbf{Question}:\\
-Point P\brak{x,4} lies on the line segment joining the points $\vec{A}$\brak{-5, 8} and $\vec{B}$\brak{4,-10}. Find the ratio in which point P divides the line segment AB. Also, find the value of x. \\ 
+Find the unit vector in the direction of the  vector ${a} = \hat{i} + \hat{j} + 2\hat{k}$ \\ 
 \solution \\
-Let 
+Given:
 \begin{align}
-\vec{A}= \myvec{-5 \\ 8}, \vec{B}= \myvec{4 \\ -10} , \vec{P} = \myvec{x \\ 4}
-\end{align}    
+ \vec{a}=\myvec{1\\1\\2}
+\end{align} 
+\begin{align}
 
-Since $\vec{P}$ lies on $\vec{A}$ and $\vec{B}$, they must be collinear
-\begin{align}
-\therefore \text{rank}\myvec{\vec{B} - \vec{A} & &\vec{P} - \vec{A}} = 1
-\end{align}
-\begin{align}
-    \text{rank}\myvec{9 & x+5 \\ -18 & -4} = 1
-\end{align}
-\begin{align}
-	\myvec{9 &  x+5\\ -18 & -4} \xleftrightarrow[]{R_2 \rightarrow {2R_1 + R_2}} \myvec{9 & x+5 \\ 0 & 2x+6}  
-\end{align}
-The number of non zero rows in the row reduced matrix (also known as {\em echelon form}) is defined as the rank. For above matrix to be of rank 1,
-\begin{align}
-    2x+6 = 0
-\end{align}
-\begin{align}
-\therefore x = -3
-\end{align}
-Thus $\vec{P}$ is :	
-\begin{align}
-    \vec{P} = \myvec{-3 \\ 4}
-\end{align}
-
-let $\vec{P}$ divide the line joining points $\vec{A}$ and $\vec{B}$ in the ratio $k:1$.
 
 \begin{align}
-    \vec{P}=\frac{k\vec{B+\vec{A}}}{k+1}
+    {||\vec{a}||} =\sqrt{\vec{a}^\top\vec{a}}=\sqrt{\brak{1}^2+\brak{1}^2+\brak{2}^2}=\sqrt{6}
 \end{align}
+
+The unit vector in the direction of $\vec{a}$ is 
 
 \begin{align}
-    k\brak{\vec{P}- \vec{B}} = \vec{A}-\vec{P}
-k=\frac{\brak{\vec{P}-\vec{B}}^T\brak{\vec{A}-\vec{P}}}{||\brak{\vec{P}-\vec{B}}||^2}    
+    \frac{\vec{a}}{||\vec{a}||}=\frac{1}{\sqrt{6}}\myvec{1\\1\\2}
 \end{align}
 
-\begin{align}
-    k=\frac{\myvec{x-4 \\ -14} \cdot \myvec{-5-x\\4}}{{\norm{\myvec{x-4 \\ -14}}}^2}
-\end{align}
-
-substituting the value of $x$ as , we get the value of $k$ as
-
-\begin{align}
-    k=2/7
-\end{align}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\columnwidth]{figs/Figure.png}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\columnwidth]{figs/Figure_1.png}
-\end{figure}
+    \begin{figure}
+    \begin{center}
+        \includegraphics[width=0.9\columnwidth]{figs/Figure_1.png}
+        \caption{plot using only python}
+        \label{fig:placeholder}
+    \end{center}
+    \end{figure}
 \end{document}
