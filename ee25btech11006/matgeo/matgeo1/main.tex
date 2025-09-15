@@ -24,41 +24,41 @@ Find the coordinates of the point which divides the line segment joining the poi
 
 Let the two points be  
 \begin{align}
-A = \myvec{1 \\ -2 \\ 3}, \quad B = \myvec{3 \\ 4 \\ -5}
+\vec{A} = \myvec{1 \\ -2 \\ 3}, \quad \vec{B} = \myvec{3 \\ 4 \\ -5}
 \end{align}
 
 \textbf{(a) Internal Division:}  
-If $P$ divides $AB$ in the ratio $m:n$ internally, then
+If \vec{P} divides \vec{AB} in the ratio $k:1$ internally, then
 \begin{align}
-P = \frac{mB+nA}{m+n}
+\vec{P} = \frac{kB+A}{k+1}
 \end{align}
-Substituting $m=2$, $n=3$:
+Substituting $k=\dfrac{2}{3}$ :
 \begin{align}
-P = \frac{2\myvec{3 \\ 4 \\ -5} + 3\myvec{1 \\ -2 \\ 3}}{5}
+\vec{P} = \frac{\dfrac{2}{3}\myvec{3 \\ 4 \\ -5} + \myvec{1 \\ -2 \\ 3}}{\dfrac{5}{3}}
 \end{align}
 \begin{align}
-P = \frac{\myvec{6 \\ 8 \\ -10} + \myvec{3 \\ -6 \\ 9}}{5}
-= \frac{\myvec{9 \\ 2 \\ -1}}{5}
-= \myvec{-\tfrac{9}{5} \\ \tfrac{2}{5} \\ \tfrac{-1}{5}}
+\vec{P} = \frac{\myvec{2 \\ \dfrac{8}{3} \\ \dfrac{-10}{3}} + \myvec{1 \\ -2 \\ 3}}{\dfrac{5}{3}}
+= \frac{\myvec{3 \\ \dfrac{2}{3} \\ \dfrac{-1}{3}}}{\dfrac{5}{3}}
+= \myvec{\tfrac{9}{5} \\ \tfrac{2}{5} \\ \tfrac{-1}{5}}
 \end{align}
 
 \textbf{(b) External Division:}  
-If $Q$ divides $AB$ in the ratio $m:n$ externally, then
+If \vec{Q} divides \vec{AB} in the ratio $k:1$ externally, then
 \begin{align}
-Q = \frac{mB-nA}{m-n}
+\vec{Q} = \frac{kB-A}{k-1}
 \end{align}
-Substituting $m=2$, $n=3$:
+Substituting $k=\dfrac{2}{3}$:
 \begin{align}
-Q = \frac{2\myvec{3 \\ 4 \\ -5} - 3\myvec{1 \\ -2 \\ 3}}{5}
+\vec{Q} = \frac{\dfrac{2}{3}\myvec{3 \\ 4 \\ -5} - \myvec{1 \\ -2 \\ 3}}{\dfrac{5}{3}}
 \end{align}
 \begin{align}
-Q = \frac{\myvec{6 \\ 8 \\ -10} - \myvec{3 \\ -6 \\ 9}}{-1}
-= \frac{\myvec{3 \\ 14 \\ -19}}{-1}
+\vec{Q} = \frac{\myvec{2 \\ \dfrac{8}{3} \\ \dfrac{-10}{3}} - \myvec{1 \\ -2 \\ 3}}{\dfrac{-1}{3}}
+= \frac{\myvec{1 \\ \dfrac{14}{3} \\ \dfrac{-19}{3}}}{\dfrac{-1}{3}}
 = \myvec{-3 \\ -14 \\ 19}
 \end{align}
 
 \begin{align}
-\boxed{\text{Internal point: } \myvec{-1.8 \\ 0.40 \\ 0.20}}, \quad
+\boxed{\text{Internal point: } \myvec{1.8 \\ 0.40 \\ -0.20}}, \quad
 \boxed{\text{External point: } \myvec{-3 \\ -14 \\ 19}}
 \end{align}
 \begin{figure}[H]

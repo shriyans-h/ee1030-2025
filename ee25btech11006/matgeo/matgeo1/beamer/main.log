@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  13 SEP 2025 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  15 SEP 2025 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1847,15 +1847,26 @@ Overfull \hbox (0.53288pt too wide) in paragraph at lines 111--111
  [][]  
  []
 
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
 
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
+! LaTeX Error: \mathbf allowed only in math mode.
 
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 \end{frame}
+                 
+? 
 
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 \end{frame}
+                 
+? 
 
 Overfull \hbox (0.53288pt too wide) has occurred while \output is active
  [][]  
@@ -1868,6 +1879,15 @@ Overfull \hbox (0.53288pt too wide) in paragraph at lines 123--123
  [][]  
  []
 
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 123.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 123.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 123.
+
 
 Overfull \hbox (0.53288pt too wide) has occurred while \output is active
  [][]  
@@ -1876,7 +1896,7 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [4
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 131--131
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 134--134
  [][]  
  []
 
@@ -1888,7 +1908,7 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [5
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 139--139
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 146--146
  [][]  
  []
 
@@ -1900,14 +1920,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [6
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 141--141
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 148--148
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 164--164
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 167--167
  [][]  
  []
 
@@ -1917,10 +1937,6 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (25.72923pt too high) detected at line 164
- []
-
-
 Overfull \hbox (0.53288pt too wide) has occurred while \output is active
  [][]  
  []
@@ -1928,14 +1944,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [7
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 166--166
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 169--169
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 189--189
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 188--188
  [][]  
  []
 
@@ -1945,10 +1961,6 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (1.72923pt too high) detected at line 189
- []
-
-
 Overfull \hbox (0.53288pt too wide) has occurred while \output is active
  [][]  
  []
@@ -1956,14 +1968,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 191--191
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 190--190
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 200--200
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 199--199
  [][]  
  []
 
@@ -1975,14 +1987,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [9
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 203--203
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 202--202
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 217--217
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 216--216
  [][]  
  []
 
@@ -1994,22 +2006,18 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [10
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 219--219
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 218--218
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 242--242
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 236--236
  [][]  
  []
 
 (./main.vrb)
-Overfull \vbox (25.72923pt too high) detected at line 242
- []
-
-
 Overfull \hbox (0.53288pt too wide) has occurred while \output is active
  [][]  
  []
@@ -2017,14 +2025,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [11
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 244--244
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 238--238
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 257--257
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 251--251
  [][]  
  []
 
@@ -2036,14 +2044,14 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [12
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 258--258
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 252--252
  [][]  
  []
 
 \openout4 = `main.vrb'.
 
 
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 274--274
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 268--268
  [][]  
  []
 
@@ -2055,42 +2063,38 @@ Overfull \hbox (0.53288pt too wide) has occurred while \output is active
 [13
 
 ]
-Overfull \hbox (0.53288pt too wide) in paragraph at lines 283--283
+Overfull \hbox (0.53288pt too wide) in paragraph at lines 277--277
  [][]  
  []
 
 <figs/fig1.png, id=404, 569.12625pt x 520.94624pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 283.
-(pdftex.def)             Requested size: 273.83728pt x 250.66342pt.
+Package pdftex.def Info: figs/fig1.png  used on input line 277.
+(pdftex.def)             Requested size: 205.37926pt x 187.99359pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 283.
+(Font)              <10> on input line 277.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 283.
+(Font)              <7> on input line 277.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 283.
+(Font)              <5> on input line 277.
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 283.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 277.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 283.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 277.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 283.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 277.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 283.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 277.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 283.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 277.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 283.
-
-
-Overfull \vbox (59.13712pt too high) detected at line 283
- []
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 277.
 
 
 Overfull \hbox (0.53288pt too wide) has occurred while \output is active
@@ -2134,7 +2138,7 @@ Here is how much of TeX's memory you used:
  78988 multiletter control sequences out of 15000+600000
  631003 words of font info for 116 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1172b,1470s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,123p,1172b,1470s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
@@ -2142,7 +2146,7 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (14 pages, 254622 bytes).
+Output written on main.pdf (14 pages, 250037 bytes).
 PDF statistics:
  493 PDF objects out of 1000 (max. 8388607)
  414 compressed objects within 5 object streams

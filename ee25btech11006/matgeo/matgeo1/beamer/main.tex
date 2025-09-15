@@ -76,8 +76,8 @@
 %This block of code defines the information to appear in the
 %Title page
 \title %optional
-{4.2.9}
-\date{september 12,2025}
+{1.4.21}
+\date{september 11,2025}
 %\subtitle{A short story}
 
 \author % (optional)
@@ -90,7 +90,7 @@
 \begin{frame}{Question}
 Find the coordinates of the point which divides the line segment joining
 $
-A(1,-2,3), \quad B(3,4,-5)
+(1,-2,3), \quad (3,4,-5)
 $
 in the ratio
 \begin{enumerate}[label=(\alph*)]
@@ -100,64 +100,67 @@ in the ratio
 \end{frame}
 
 \begin{frame}{Given Information}
-Given vector \(\mathbf{A}\):
+Given vector \vec{A}:
 \begin{align}
-\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}
+\myvec{ 1 \\ -2 \\ 3 }
 \end{align}
-Given vector \(\mathbf{B}\):
+Given vector \vec{B}:
 \begin{align}
-\begin{bmatrix} 3 \\ 4 \\ -5 \end{bmatrix}
+\myvec{ 3 \\ 4 \\ -5 }
 \end{align}
 \end{frame}
 
 \begin{frame}{Required Formulae}
 Internal division:
 \begin{align}
-P = \frac{m \mathbf{B} + n \mathbf{A}}{m + n}
+\vec{P} = \frac{kB+A}{k+1}
 \end{align}
 
 External division:
 \begin{align}
-Q = \frac{m \mathbf{B} - n \mathbf{A}}{m - n}
+\vec{Q} = \frac{kB-A}{k-1}
 \end{align}
 \end{frame}
 
 \begin{frame}{Solution - Internal}
 \begin{align}
-P = \frac{2 \begin{bmatrix} 3 \\ 4 \\ -5 \end{bmatrix} + 3 \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}}{5}
-= \frac{\begin{bmatrix} 6 + 3 \\ 8 - 6 \\ -10 + 9 \end{bmatrix}}{5}
-= \begin{bmatrix} -\frac{-9}{5} \\ \frac{2}{5} \\ \frac{-1}{5} \end{bmatrix}
+\vec{P} = \frac{\dfrac{2}{3}\myvec{3 \\ 4 \\ -5} + \myvec{1 \\ -2 \\ 3}}{\dfrac{5}{3}} 
+\end{align}
+\begin{align}
+    \vec{P} = \frac{\myvec{2 \\ \dfrac{8}{3} \\ \dfrac{-10}{3}} + \myvec{1 \\ -2 \\ 3}}{\dfrac{5}{3}}
+= \frac{\myvec{3 \\ \dfrac{2}{3} \\ \dfrac{-1}{3}}}{\dfrac{5}{3}}
+= \myvec{\tfrac{9}{5} \\ \tfrac{2}{5} \\ \tfrac{-1}{5}}
 \end{align}
 \end{frame}
 
 \begin{frame}{Solution - External}
 \begin{align}
-Q = \frac{2 \begin{bmatrix} 1 \\ -4 \\ 6 \end{bmatrix} - 3 \begin{bmatrix} -2 \\ 3 \\ 5 \end{bmatrix}}{2 - 3}
-= \frac{\begin{bmatrix} 2 + 6 \\ -8 - 9 \\ 12 - 15 \end{bmatrix}}{-1}
-= \begin{bmatrix} -8 \\ 17 \\ 3 \end{bmatrix}
+\vec{Q} = \frac{\dfrac{2}{3}\myvec{3 \\ 4 \\ -5} - \myvec{1 \\ -2 \\ 3}}{\dfrac{5}{3}}
 \end{align}
+\begin{align}
+\vec{Q} = \frac{\myvec{2 \\ \dfrac{8}{3} \\ \dfrac{-10}{3}} - \myvec{1 \\ -2 \\ 3}}{\dfrac{-1}{3}}
+= \frac{\myvec{1 \\ \dfrac{14}{3} \\ \dfrac{-19}{3}}}{\dfrac{-1}{3}}
+= \myvec{-3 \\ -14 \\ 19}
+\end{align}
+
 \end{frame}
 
 \begin{frame}[fragile]{Python Code-Plot}
 \begin{lstlisting}
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-
 A = (1, -2, 3)
 B = (3, 4, -5)
-
 P = (
     (2*B[0] + 3*A[0]) / 5,
     (2*B[1] + 3*A[1]) / 5,
     (2*B[2] + 3*A[2]) / 5
 )
-
 Q = (
     (2*B[0] - 3*A[0]) / (2-3),
     (2*B[1] - 3*A[1]) / (2-3),
     (2*B[2] - 3*A[2]) / (2-3)
 )
-
 print("Internal Division Point:", P)
 print("External Division Point:", Q)
 \end{lstlisting}
@@ -167,18 +170,14 @@ print("External Division Point:", Q)
 \begin{lstlisting}
 fig = plt.figure(figsize=(8,8))
 ax = fig.add_subplot(111, projection='3d')
-
 ax.plot([A[0], B[0]], [A[1], B[1]], [A[2], B[2]], color='blue')
-
 def plot_point(pt, label, color):
     ax.scatter(*pt, color=color, s=60)
     ax.text(pt[0], pt[1], pt[2], f"{label}{pt}", fontsize=10)
-
 plot_point(A, "A", "red")
 plot_point(B, "B", "red")
 plot_point(P, "P", "green")
 plot_point(Q, "Q", "purple")
-
 ax.set_xlabel('X-axis')
 ax.set_ylabel('Y-axis')
 ax.set_zlabel('Z-axis')
@@ -219,7 +218,6 @@ lib.sectionFormula.argtypes = [
 \begin{frame}[fragile]{Python ctypes Call}
 \begin{lstlisting}
 lib.sectionFormula.restype = None
-
 lib.sectionFormulaExternal.argtypes = [
     ctypes.POINTER(ctypes.c_float),
     ctypes.POINTER(ctypes.c_float),
@@ -227,15 +225,11 @@ lib.sectionFormulaExternal.argtypes = [
     ctypes.c_float,
     ctypes.POINTER(ctypes.c_float)
 ]
-
 lib.sectionFormulaExternal.restype = None
-
 p1 = (ctypes.c_float * 3)(1.0, -2.0, 3.0)
 p2 = (ctypes.c_float * 3)(3.0, 4.0, -5.0)
-
 res_internal = (ctypes.c_float * 3)()
 res_external = (ctypes.c_float * 3)()
-
 m = 2.0
 n = 3.0
 \end{lstlisting}
@@ -276,7 +270,7 @@ float n, float res[3]) {
 \begin{frame}{Plot}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\linewidth]{figs/fig1.png}
+\includegraphics[width=0.6\linewidth]{figs/fig1.png}
 \caption{3D Plot of points \(A, B, P, Q\)}
 \label{fig:graph}
 \end{figure}
