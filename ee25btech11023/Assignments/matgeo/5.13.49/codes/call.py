@@ -20,8 +20,6 @@ M = sympy.Matrix([
         [k,         coeffs[2],  coeffs[3]],  
         [coeffs[4], coeffs[5],  coeffs[6]]  
     ])
-
-    # Calculate the determinant of the matrix in terms of k
 det_M = M.det()
 print(f"\nDeterminant = {det_M}")
     
