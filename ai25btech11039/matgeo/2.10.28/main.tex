@@ -87,52 +87,52 @@ holds if and only if
   \item $\vec a\cdot\vec b=\vec b\cdot\vec c=\vec c\cdot\vec a=0$
 \end{enumerate}
 
-
 \begin{solution}
 Let 
-\[
-A=\myvec{\vec{a}&\vec{b}&\vec{c}}
-\]
-and consider the Gram matrix of $\vec{a},\vec{b},\vec{c}$:
-\[
+\begin{align}
+A=\myvec{\vec{a}&\vec{b}&\vec{c}}, \qquad 
 G=A^\top A
 =\myvec{
 \vec a^\top\vec a & \vec a^\top\vec b & \vec a^\top\vec c\\
 \vec b^\top\vec a & \vec b^\top\vec b & \vec b^\top\vec c\\
-\vec c^\top\vec a & \vec c^\top\vec b & \vec c^\top\vec c }.
-\]
-Since the scalar triple product equals the determinant of the column matrix,
-\[
-\det A=\det\myvec{\vec a&\vec b&\vec c}=(\vec a\times\vec b)\cdot\vec c,
-\]
-we have
-\[
-\abs{(\vec a\times\vec b)\cdot\vec c}^{2}
-=(\det A)^2
-=\det(A^\top A)
-=\det G.
-\]
-
-\[
-\det G\le
-(\vec a^\top\vec a)(\vec b^\top\vec b)(\vec c^\top\vec c)
-=\|\vec a\|^2\,\|\vec b\|^2\,\|\vec c\|^2,
-\]
-with equality iff $G$ is diagonal, i.e.,
-\[
-\vec a\cdot\vec b=0,\qquad
-\vec b\cdot\vec c=0,\qquad
-\vec c\cdot\vec a=0.
-\]
-Taking square roots yields
-\[
+\vec c^\top\vec a & \vec c^\top\vec b & \vec c^\top\vec c } .
+\label{eq:gram}
+\end{align}
+The scalar triple product equals the determinant of the column matrix,
+\begin{align}
+(\vec a\times\vec b)\cdot\vec c=\det\myvec{\vec a&\vec b&\vec c}=\det A .
+\label{eq:triple-is-det}
+\end{align}
+Hence
+\begin{align}
+\abs{(\vec a\times\vec b)\cdot\vec c}^{2}=(\det A)^2
+= \det(A^\top A)=\det G .
+\label{eq:detG}
+\end{align}
+By Hadamard’s inequality for the positive semidefinite Gram matrix $G$,
+\begin{align}
+\det G \le (\vec a^\top\vec a)\,(\vec b^\top\vec b)\,(\vec c^\top\vec c)
+= \|\vec a\|^2\,\|\vec b\|^2\,\|\vec c\|^2,
+\label{eq:hadamard}
+\end{align}
+with equality \emph{iff} the columns of $A$ are pairwise orthogonal, i.e.,
+\begin{align}
+\vec a\cdot\vec b=0,\qquad 
+\vec b\cdot\vec c=0,\qquad 
+\vec c\cdot\vec a=0 .
+\label{eq:orth}
+\end{align}
+Taking square roots in 4.3 and 4.4 yields
+\begin{align}
 \abs{(\vec a\times\vec b)\cdot\vec c}
-=\|\vec a\|\,\|\vec b\|\,\|\vec c\|
+= \|\vec a\|\,\|\vec b\|\,\|\vec c\|
 \iff
-\vec a\cdot\vec b=\vec b\cdot\vec c=\vec c\cdot\vec a=0.
-\]
-Hence, the correct option is \(\boxed{\text{(d)}}\).
+4.5 holds.
+\label{eq:final}
+\end{align}
+Thus the correct option is \(\boxed{\text{(d)}}\).
 \end{solution}
+
 
 
 
