@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the vertices of the triangle
+points = np.array([
+    [5, -2],   # A
+    [6, 4],   # B
+    [7, -2], # C
+])
+
+# Close the triangle (repeat first point)
+points = np.vstack([points, points[0]])
+
+# Plot
+plt.plot(points[:,0], points[:,1], "bo-", linewidth=2)
+plt.xlim([2,9])
+plt.ylim([-4,6])
+plt.title("isosceles triangle")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.gca().set_aspect("equal")
+plt.grid(True)
+plt.savefig('figs/triangle2.png')
+plt.show()
