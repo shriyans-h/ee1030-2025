@@ -76,59 +76,67 @@ A point \(\mathbf{P}\) divides the line segment joining the points \(\mathbf{A}(
 
 \subsection*{\textbf{Step 1: Represent points as column vectors}}
 \[
-\mathbf{A} = \begin{pmatrix} 3 \\ -5 \end{pmatrix} = \begin{bmatrix} 3 & -5 \end{bmatrix}^\top, \quad 
-\mathbf{B} = \begin{pmatrix} -4 \\ 8 \end{pmatrix} = \begin{bmatrix} -4 & 8 \end{bmatrix}^\top.
+\mathbf{A} = \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} b_1 \\ b_2 \end{pmatrix}.
 \]
 
 \subsection*{\textbf{Step 2: Express \(\mathbf{P}\) using section formula in vector form}}
 Since \(\mathbf{P}\) divides \(\mathbf{AB}\) in the ratio \(K : 1\), 
 \[
-\mathbf{P} = \frac{K \mathbf{B} + \mathbf{A}}{K + 1} = \frac{K \begin{bmatrix} -4 \\ 8 \end{bmatrix} + \begin{bmatrix} 3 \\ -5 \end{bmatrix}}{K + 1} = \frac{1}{K+1} \begin{bmatrix} 3 - 4K \\ -5 + 8K \end{bmatrix}.
+\mathbf{P} = \frac{K \mathbf{B} + \mathbf{A}}{K + 1}.
 \]
 
 \subsection*{\textbf{Step 3: Use the line equation condition}}
-The point \(\mathbf{P} = \begin{bmatrix} x \\ y \end{bmatrix}\) lies on the line \(x + y = 0\), which can be written as
+Suppose the line is given as
 \[
-\begin{bmatrix} 1 & 1 \end{bmatrix} \mathbf{P} = 0.
+\mathbf{n}^\top \mathbf{x} = c, \quad \text{where } \mathbf{n} = \begin{pmatrix} n_1 \\ n_2 \end{pmatrix}.
 \]
-Substitute \(\mathbf{P}\):
+Since \(\mathbf{P}\) lies on this line,
 \[
-\begin{bmatrix} 1 & 1 \end{bmatrix} \cdot \frac{1}{K+1} \begin{bmatrix} 3 - 4K \\ -5 + 8K \end{bmatrix} = 0.
+\mathbf{n}^\top \mathbf{P} = c.
+\]
+Substitute for \(\mathbf{P}\):
+\[
+\mathbf{n}^\top \left(\frac{K\mathbf{B} + \mathbf{A}}{K+1}\right) = c.
 \]
 
-\subsection*{\textbf{Step 4: Simplify and solve for \(K\)}}
-Multiply:
+\subsection*{\textbf{Step 4: Derive general formula for \(K\)}}
+Multiplying through,
 \[
-\frac{1}{K+1} \left( (3 - 4K) + (-5 + 8K) \right) = 0,
+\mathbf{n}^\top (K\mathbf{B} + \mathbf{A}) = c(K+1).
 \]
 \[
-\frac{1}{K+1} (3 - 4K - 5 + 8K) = 0,
+K(\mathbf{n}^\top \mathbf{B} - c) = c - \mathbf{n}^\top \mathbf{A}.
 \]
 \[
-\frac{1}{K+1} (-2 + 4K) = 0.
+K = \frac{c - \mathbf{n}^\top \mathbf{A}}{\mathbf{n}^\top \mathbf{B} - c}.
 \]
-Since \(K + 1 \neq 0\), 
+
+\subsection*{\textbf{Step 5: Substitute given values}}
+Here,
 \[
--2 + 4K = 0,
+\mathbf{A} = \begin{pmatrix} 3 \\ -5 \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} -4 \\ 8 \end{pmatrix}, \quad 
+\mathbf{n} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}, \quad 
+c = 0.
 \]
+Thus,
 \[
-4K = 2,
-\]
-\[
-K = \frac{1}{2}.
+K = \frac{0 - (1\cdot 3 + 1\cdot (-5))}{(1\cdot (-4) + 1\cdot 8) - 0}
+= \frac{-(-2)}{4}
+= \frac{2}{4}
+= \frac{1}{2}.
 \]
 
 \subsection*{\textbf{Final answer}}
 \[
-\boxed{K = \frac{1}{2}}.
+\boxed{K = \tfrac{1}{2}}
 \]
-
-
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\columnwidth]{figs/python_plot.png} 
-\caption{plot}
+\caption{Plot of the points and line showing the division ratio.}
 \label{fig:1}
 \end{figure}
 

@@ -98,46 +98,62 @@ If \(\mathbf{P}\) lies on the line \(x + y = 0\), then find the value of \(K\).
 \end{frame}
 
 % Answer Step 1
-\begin{frame}
-\frametitle{\textbf{Answer: Step 1 - Represent points as vectors}}
+\begin{frame}{Step 1: Represent points as vectors}
 \[
-\mathbf{A} = \begin{pmatrix} 3 \\ -5 \end{pmatrix} = \begin{bmatrix} 3 & -5 \end{bmatrix}^\top, \quad 
-\mathbf{B} = \begin{pmatrix} -4 \\ 8 \end{pmatrix} = \begin{bmatrix} -4 & 8 \end{bmatrix}^\top.
-\]
-
-\[
-\mathbf{P} = \frac{K \mathbf{B} + \mathbf{A}}{K + 1} = \frac{K \begin{bmatrix} -4 \\ 8 \end{bmatrix} + \begin{bmatrix} 3 \\ -5 \end{bmatrix}}{K + 1} = \frac{1}{K+1} \begin{bmatrix} 3 - 4K \\ -5 + 8K \end{bmatrix}.
+\mathbf{A} = \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} b_1 \\ b_2 \end{pmatrix}.
 \]
 \end{frame}
 
-% Answer Step 3
-\begin{frame}
-\frametitle{\textbf{Answer: Step 2 - Use the line condition}}
-The point \(\mathbf{P} = \begin{bmatrix} x \\ y \end{bmatrix}\) lies on the line \(x + y = 0\):
+\begin{frame}{Step 2: Section formula}
+Since \(\mathbf{P}\) divides \(\mathbf{AB}\) in the ratio \(K : 1\),
 \[
-\begin{bmatrix} 1 & 1 \end{bmatrix} \mathbf{P} = 0,
-\]
-\[
-\Rightarrow \begin{bmatrix} 1 & 1 \end{bmatrix} \cdot \frac{1}{K+1} \begin{bmatrix} 3 - 4K \\ -5 + 8K \end{bmatrix} = 0.
+\mathbf{P} = \frac{K \mathbf{B} + \mathbf{A}}{K + 1}.
 \]
 \end{frame}
 
-% Answer Step 4
-\begin{frame}
-\frametitle{\textbf{Answer: Step 3 - Solve for \(K\)}}
-Multiply and simplify:
+\begin{frame}{Step 3: Line equation condition}
+Suppose the line is given as
 \[
-\frac{1}{K+1} \left( (3 - 4K) + (-5 + 8K) \right) = 0,
+\mathbf{n}^\top \mathbf{x} = c, 
+\quad \mathbf{n} = \begin{pmatrix} n_1 \\ n_2 \end{pmatrix}.
+\]
+Since \(\mathbf{P}\) lies on the line,
+\[
+\mathbf{n}^\top \mathbf{P} = c.
+\]
+\end{frame}
+
+\begin{frame}{Step 4: Derive general formula for \(K\)}
+\[
+\mathbf{n}^\top (K\mathbf{B} + \mathbf{A}) = c(K+1),
 \]
 \[
-\Rightarrow \frac{1}{K+1} (-2 + 4K) = 0.
-\]
-Since \(K+1 \neq 0\),
-\[
--2 + 4K = 0 \implies K = \frac{1}{2}.
+K(\mathbf{n}^\top \mathbf{B} - c) = c - \mathbf{n}^\top \mathbf{A},
 \]
 \[
-\boxed{K = \frac{1}{2}}.
+K = \frac{c - \mathbf{n}^\top \mathbf{A}}{\mathbf{n}^\top \mathbf{B} - c}.
+\]
+\end{frame}
+
+\begin{frame}{Step 5: Substitute values}
+Given
+\[
+\mathbf{A} = \begin{pmatrix} 3 \\ -5 \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} -4 \\ 8 \end{pmatrix}, \quad 
+\mathbf{n} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}, \quad 
+c = 0,
+\]
+\[
+K = \frac{0 - (1\cdot 3 + 1\cdot (-5))}{(1\cdot (-4) + 1\cdot 8) - 0}
+= \frac{2}{4}
+= \frac{1}{2}.
+\]
+\end{frame}
+
+\begin{frame}{Final Answer}
+\[
+\boxed{K = \tfrac{1}{2}}
 \]
 \end{frame}
 
