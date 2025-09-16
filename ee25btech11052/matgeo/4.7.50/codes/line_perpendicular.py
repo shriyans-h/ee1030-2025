@@ -5,13 +5,8 @@ from mpl_toolkits.mplot3d import Axes3D
 import os
 
 # Load the shared library
-try:
-    lib = ctypes.CDLL('/home/shriyasnh/Desktop/matgeonew/4.7.50/codes/libline_perpendicular.so')
-except OSError as e:
-    print(f"Error loading library: {e}")
-    print("Make sure you've compiled the C code using: gcc -shared -fPIC -o libline_perpendicular.so line_perpendicular.c")
-    exit(1)
-
+lib = ctypes.CDLL('/home/shriyasnh/Desktop/matgeonew/4.7.50/codes/libline_perpendicular.so')
+    
 # Define function signatures
 lib.get_point_on_line.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double,
                                  ctypes.c_double, ctypes.c_double, ctypes.c_double,
