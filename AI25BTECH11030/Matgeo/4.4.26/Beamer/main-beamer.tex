@@ -96,7 +96,6 @@
 
 \section{Question}
 \begin{frame}{Question}
-\textbf{Question}:
  Find the equation of the median through vertex \(\vec{A}\) of the triangle \(ABC\), having vertices
 \[
 \vec{A}(2,5), \quad \vec{B}(-4,9), \quad \vec{C}(-2,-1).
@@ -107,99 +106,113 @@
 \section{Solution}
 \begin{frame}[fragile]
     \frametitle{Solution}
-Using the section formula, the midpoint \(\vec{M}\) of the side \(BC\) is 
+\textbf{Solution:} \\
+
+Using the section formula, the midpoint \(\vec{M}\) of the side \(BC\) is
 \[
 \vec{M} = \frac{\vec{B} + \vec{C}}{2} = 
-\frac{1}{2} \myvec{-4 & 9} + 
-\frac{1}{2} \myvec{-2 & -1} = 
-\myvec{-3 & 4}.
+\frac{1}{2} \myvec{-4 \\ 9} + 
+\frac{1}{2} \myvec{-2 \\ -1} = 
+\myvec{-3 \\ 4}.
+\tag{0.1}
 \]
-The median passes through points \(\vec{A}(2,5)\) and \(\vec{M}(-3,4)\).
+
+The median passes through points \(\vec{A} = \myvec{2 \\ 5}\) and \(\vec{M} = \myvec{-3 \\ 4}\).
+
 Let the required line have the equation
 \[
-\vec{n}^\top \vec{x} = 1
+\vec{n}^\top \vec{x} = 1,
+\tag{0.2}
 \]
-where \( \vec{n} = \myvec{n_1 & n_2} \) is the direction vector.
-Since both the points \( A \) and \( M \) lie on the median, they satisfy the line equation. That is,
+where
 \[
-\vec{n}^\top \vec{A} = 1, \quad \vec{n}^\top \vec{M} = 1
+\vec{n} = \myvec{n_1 \\ n_2}
+\tag{0.3}
 \]
-or, writing explicitly for the points \( A(2,5) \), \( M(-3,4) \):
-\[
-\myvec{2 & 5 \\ -3 & 4}
-\myvec{n_1 \\ n_2}
-=
-\myvec{1 \\ 1}
-\]
+is the column vector (normal vector).
+
+
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Solution}
 
-We want to find the vector \(\vec{n}\) satisfying
+Since both points \(\vec{A}\) and \(\vec{M}\) lie on the median, they satisfy the line equation:
 \[
-\myvec{2 & 5 \\ -3 & 4} \vec{n} = \vec{c}.
+\vec{n}^\top \vec{A} = 1, \quad \vec{n}^\top \vec{M} = 1,
+\tag{0.4}
 \]
-\text{Set up the augmented matrix with right-hand side \(1\):}
-\begin{align}
+or, explicitly,
+\[
+\myvec{2 & 5 \\ -3 & 4} \vec{n} = \myvec{1 \\ 1}.
+\tag{0.5}
+\]
+
+We want to find \(\vec{n}\) satisfying
+\[
+\myvec{2 & 5 \\ -3 & 4} \vec{n} = \vec{c},
+\quad \text{where } \vec{c} = \myvec{1 \\ 1}.
+\tag{0.6}
+\]
+
+Set up the augmented matrix with right-hand side \(1\):
+\[
 \myaugvec{2}{
 2 & 5 & 1 \\
 -3 & 4 & 1
 }
-\end{align}
+\tag{0.7}
+\]
 
-\text{Perform row operation } \(R_2 \to R_2 + \frac{3}{2} R_1\):
-\begin{align}
+Perform row operation \(R_2 \to R_2 + \frac{3}{2} R_1\):
+
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Solution}
+\[
 \myaugvec{2}{
 2 & 5 & 1 \\
 0 & \frac{23}{2} & \frac{5}{2}
 }
-\end{align}
+\tag{0.8}
+\]
 
-\text{Perform row operation } \(R_1 \to R_1 - \frac{10}{23} R_2\):
-\begin{align}
+Perform row operation \(R_1 \to R_1 - \frac{10}{23} R_2\):
+\[
 \myaugvec{2}{
 2 & 0 & -\frac{2}{23} \\
 0 & \frac{23}{2} & \frac{5}{2}
 }
-\end{align}
+\tag{0.9}
+\]
 
-\end{frame}
-\begin{frame}[fragile]
-    \frametitle{Solution}
-
-\text{The final augmented matrix is:}
-\begin{align}
+The final augmented matrix is:
+\[
 \myaugvec{2}{
 2 & 0 & -\frac{2}{23} \\
 0 & \frac{23}{2} & \frac{5}{2}
 }
-\end{align}
+\tag{0.10}
+\]
 
 Solve the system:
-\begin{equation}
-2 n_1 = -\frac{2}{23} \Rightarrow n_1 = -\frac{1}{23}
-\tag{2.5}
-\end{equation}
+\[
+2 n_1 = -\frac{2}{23} \implies n_1 = -\frac{1}{23}
+\tag{0.11}
+\]
 
-\begin{equation}
-\frac{23}{2} n_2 = \frac{5}{2} \Rightarrow n_2 = \frac{5}{23}
-\tag{2.6}
-\end{equation}
-
-\begin{equation}
-\vec{n} = \frac{1}{23} \myvec{-1 \\ 5}
-\tag{2.7}
-\end{equation}
-
-\begin{equation}
-\myvec{-1 & 5} \vec{x} = 23
-\tag{2.8}
-\end{equation}
+\[
+\frac{23}{2} n_2 = \frac{5}{2} \implies n_2 = \frac{5}{23}
+\tag{0.12}
+\]
 
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Solution}
 
+\[
+\vec{n} = \frac{1}{23} \myvec{-1 \\ 5}
+\tag{0.13}
+\]
 
 Therefore, equation of required line is:
 \[

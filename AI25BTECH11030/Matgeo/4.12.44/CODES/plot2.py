@@ -29,7 +29,6 @@ matfun.scalar_multiply.argtypes = [
 # Define points A and B
 A = np.array([1.0, 2.0, 3.0])
 B = np.array([3.0, 2.0, -1.0])
-
 BA = np.zeros(3)
 rhs = 0.0
 
@@ -46,28 +45,29 @@ matfun.scalar_multiply(BA, BA2, 2, 3)
 print(f"Vector 2(B - A): {BA2}")
 print(f"RHS (B.B - A.A): {rhs}")
 
-# Create grid for b and c
-b_vals = np.linspace(-10, 10, 100)
-c_vals = np.linspace(-10, 10, 100)
-b_grid, c_grid = np.meshgrid(b_vals, c_vals)
+# Create grid for y and z
+y_vals = np.linspace(-10, 10, 100)
+z_vals = np.linspace(-10, 10, 100)
+Y, Z = np.meshgrid(y_vals, z_vals)
 
 # From plane equation 2(B - A)^T X = rhs
 # Which is BA2^T * X = rhs
-# BA2 = [4, 0, -8], so the equation is 4a - 8c = rhs = 0
-# => a = 2c
+# BA2 = [4, 0, -8], so the equation is 4x - 8z = 0
+# => x = 2z
 
-# Calculate corresponding a using a = 2c
-a_grid = 2 * c_grid
+# Calculate corresponding x using x = 2z
+X = 2 * Z
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
 # Plot the plane surface
-ax.plot_surface(a_grid, b_grid, c_grid, alpha=0.5, color='cyan', edgecolor='k')
+ax.plot_surface(X, Y, Z, alpha=0.5, color='cyan', edgecolor='k')
 
-ax.set_xlabel('a')
-ax.set_ylabel('b')
-ax.set_zlabel('c')
-ax.set_title('3D Plot of plane: a - 2c = 0 (from shared library)')
-
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+ax.set_title('3D Plot of plane: x - 2z = 0 (from shared library)')
+plt.savefig("fig2.png")
 plt.show()
+
