@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  10 SEP 2025 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  10 SEP 2025 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2118,7 +2118,9 @@ Package hyperref Info: Link coloring OFF on input line 50.
 \openout5 = `main.out'.
 
 \c@lstlisting=\count426
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 78
+LaTeX Font Info:    Font shape `OT1/txr/b/sc' in size <10> not available
+(Font)              Font shape `OT1/txr/bx/sc' tried instead on input line 72.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 73
 .
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/jknapl
@@ -2126,20 +2128,20 @@ tx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 7
-8.
+3.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/amsfon
 ts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/amsfon
@@ -2147,14 +2149,14 @@ ts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 7
-8.
+3.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7
-8.
+3.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/ts1txr.fd
@@ -2166,11 +2168,11 @@ x/updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-d
 ist/fonts/enc/dvips/base/8r.enc}
 
 ]
-<figs/python_plot.png, id=43, 1083.04625pt x 921.4425pt>
+<figs/python_plot.png, id=52, 1027.84pt x 1027.84pt>
 File: figs/python_plot.png Graphic file (type png)
 <use figs/python_plot.png>
-Package pdftex.def Info: figs/python_plot.png  used on input line 161.
-(pdftex.def)             Requested size: 291.35735pt x 247.87889pt.
+Package pdftex.def Info: figs/python_plot.png  used on input line 157.
+(pdftex.def)             Requested size: 254.9356pt x 254.93619pt.
 
 
 [2 <./figs/python_plot.png>] (./main.aux)
@@ -2192,26 +2194,30 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54521 strings out of 467801
- 1316881 string characters out of 5417843
- 1911440 words of memory out of 5000000
- 82356 multiletter control sequences out of 15000+600000
- 692039 words of font info for 173 fonts, out of 8000000 for 9000
+ 54536 strings out of 467801
+ 1317026 string characters out of 5417843
+ 1909440 words of memory out of 5000000
+ 82360 multiletter control sequences out of 15000+600000
+ 693999 words of font info for 177 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,14n,107p,1194b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,12n,107p,1194b,1034s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
-blic/txfonts/rtxmi.pfb></data/data/com.termux/files/usr/share/texlive/2025/texm
-f-dist/fonts/type1/public/txfonts/rtxr.pfb></data/data/com.termux/files/usr/sha
-re/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></data/data/com.
-termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.
-pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/
-urw/times/utmb8a.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/te
-xlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 163774 bytes).
+blic/amsfonts/symbols/msam10.pfb></data/data/com.termux/files/usr/share/texlive
+/2025/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb></data/data/com.termux/f
+iles/usr/share/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></d
+ata/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/
+txfonts/rtxr.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist
+/fonts/type1/public/txfonts/txex.pfb></data/data/com.termux/files/usr/share/tex
+live/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></data/data/com.termux
+/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></dat
+a/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times
+/utmbi8a.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/texlive/20
+25/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 174293 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

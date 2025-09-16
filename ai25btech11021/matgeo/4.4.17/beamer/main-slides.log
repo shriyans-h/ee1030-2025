@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  10 SEP 2025 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  16 SEP 2025 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1946,73 +1946,79 @@ No file main-slides.nav.
 updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dis
 t/fonts/enc/dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/oml
 lmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-97.
+98.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/oms
 lmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-97.
+98.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/omx
 lmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 97.
+(Font)              <10.95> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 97.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 97.
+(Font)              <6> on input line 98.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 97.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 97.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 97.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 98.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 98.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 98.
 
 
 [2
@@ -2023,16 +2029,41 @@ lm/lm-mathit.enc}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist
 
 [3
 
-]
+{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
+lm/lm-mathex.enc}]
 
 [4
 
-{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
-lm/lm-mathex.enc}]
+]
 
 [5
 
 ]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 137.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 137.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 137.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 137.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 137.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 137.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 137.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 137.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 137.
+
+
 
 [6
 
@@ -2049,7 +2080,7 @@ lm/lm-mathex.enc}]
 
  (./main-slides.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-3.
+2.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/ot1
 lmtt.fd
@@ -2062,8 +2093,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14         printf("
-                     Cannot perform elimination as pivot is zero.\n");
+l.18     printf("
+                 Coordinates of P are: (%.2f, %.2f)\n", P[0], P[1]);
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -2075,14 +2106,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 ...t perform elimination as pivot is zero.\n"
-                                                  );
+l.18 ...ntf("Coordinates of P are: (%.2f, %.2f)\n"
+                                                  , P[0], P[1]);
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 )
-Overfull \vbox (25.72923pt too high) detected at line 202
+Overfull \vbox (25.72923pt too high) detected at line 184
  []
 
 
@@ -2094,59 +2125,10 @@ lm/lm-rmtt.enc}]
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7     printf("
-                Enter value for p: ");
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7     printf("Enter value for p: "
-                                    );
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8     scanf("
-               %lf", &p);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8     scanf("%lf"
-                   , &p);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/listin
+gs/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+))
 
 [10
 
@@ -2154,237 +2136,15 @@ or  <return>  to continue without it.
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5     printf("
-                Original matrix:\n");
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5     printf("Original matrix:\n"
-                                   );
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8             printf("
-                        %8.3f ", matrix[i][j]);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8             printf("%8.3f "
-                               , matrix[i][j]);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10         printf("
-                     \n");
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10         printf("\n"
-                        );
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15     printf("
-                 \nMatrix after echelon form operation:\n");
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ..."\nMatrix after echelon form operation:\n"
-                                                  );
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18             printf("
-                         %8.3f ", matrix[i][j]);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18             printf("%8.3f "
-                                , matrix[i][j]);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20         printf("
-                     \n");
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20         printf("\n"
-                        );
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24         printf("
-                     \nRows are linearly dependent; points are collinear for...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...dent; points are collinear for p = %.3f\n"
-                                                  , p);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26         printf("
-                     \nRows are not linearly dependent; points are NOT colli...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 ...; points are NOT collinear for p = %.3f\n"
-                                                  , p);
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-)
-Overfull \vbox (133.72923pt too high) detected at line 254
- []
-
-
-
-[11
-
-]
-\openout4 = `main-slides.vrb'.
-
- (./main-slides.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-11.
+13.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/ts1
 lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[12
+[11
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
 lm/lm-ts1.enc}]
@@ -2392,11 +2152,11 @@ lm/lm-ts1.enc}]
 
  (./main-slides.vrb)
 
-[13
+[12
 
 ]
 
-LaTeX Warning: File `figs/python_plot.png' not found on input line 304.
+LaTeX Warning: File `figs/python_plot.png' not found on input line 252.
 
 
 ! Package pdftex.def Error: File `figs/python_plot.png' not found: using draft 
@@ -2406,14 +2166,14 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.304 \end{frame}
+l.252 \end{frame}
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
 
-[14
+[13
 
 ]
 \tf@nav=\write7
@@ -2441,13 +2201,13 @@ Package rerunfilecheck Info: Checksums for `main-slides.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59337 strings out of 467801
- 1464618 string characters out of 5417843
- 2592038 words of memory out of 5000000
- 86975 multiletter control sequences out of 15000+600000
- 663062 words of font info for 80 fonts, out of 8000000 for 9000
+ 59468 strings out of 467801
+ 1466288 string characters out of 5417843
+ 2538038 words of memory out of 5000000
+ 87104 multiletter control sequences out of 15000+600000
+ 694807 words of font info for 113 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1179b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1179b,1570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/lm/lmex10.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-di
 st/fonts/type1/public/lm/lmmi10.pfb></data/data/com.termux/files/usr/share/texl
@@ -2457,15 +2217,15 @@ ta/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lms
 s8.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/typ
 e1/public/lm/lmssbx10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
 exmf-dist/fonts/type1/public/lm/lmsso10.pfb></data/data/com.termux/files/usr/sh
-are/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></data/data/com.te
-rmux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
-/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publi
-c/lm/lmsy8.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/f
-onts/type1/public/lm/lmtt10.pfb>
-Output written on main-slides.pdf (14 pages, 204231 bytes).
+are/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></data/data/com.t
+ermux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+</data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publ
+ic/lm/lmsy8.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/
+fonts/type1/public/lm/lmtt10.pfb>
+Output written on main-slides.pdf (13 pages, 195223 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 414 compressed objects within 5 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
+ 27 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
