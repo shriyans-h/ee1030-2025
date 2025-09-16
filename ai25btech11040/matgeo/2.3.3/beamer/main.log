@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  12 SEP 2025 23:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  16 SEP 2025 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1323,41 +1323,21 @@ LaTeX Font Info:    Undo math alphabet allocation in version normal on input lin
  [2
 
 ]
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 35.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input line 27.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
  [3
 
 ]
@@ -1380,17 +1360,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  35685 strings out of 474222
- 724290 string characters out of 5748734
- 1936975 words of memory out of 5000000
- 57060 multiletter control sequences out of 15000+600000
- 571446 words of font info for 81 fonts, out of 8000000 for 9000
+ 724169 string characters out of 5748734
+ 1931975 words of memory out of 5000000
+ 57058 multiletter control sequences out of 15000+600000
+ 572046 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,1241b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (3 pages, 71980 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (3 pages, 62192 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 126 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  7 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

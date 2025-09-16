@@ -16,17 +16,12 @@
 If $\vec{a}$, $\vec{b}$, $\vec{c}$ are three non-zero unequal vectors such that $\vec{a}^{\mathrm{T}}\vec{b} = \vec{a}^{\mathrm{T}}\vec{c}$, then find the angle between $\vec{a}$ and $\vec{b}-\vec{c}$.
 
 \section{Solution: }
-The angle $\theta$ between two vectors $\vec{a}$ and $\vec{b}$ is given by the formula:
+Given that $\vec{a}^{\mathrm{T}}\vec{b} = \vec{a}^{\mathrm{T}}\vec{c}$, we can rewrite this as:
 \begin{align}
-    \theta = \arccos \left(\ \frac{\norm{\vec{a}^{\mathrm{T}}\vec{b}}}{\norm{\vec{a}} \norm{\vec{b}}} \right)
+    \vec{a}^{\mathrm{T}}\vec{b} - \vec{a}^{\mathrm{T}}\vec{c} = 0 \\
+    \vec{a}^{\mathrm{T}}(\vec{b} - \vec{c}) = 0
 \end{align}
-In this case, we would need to find
-\begin{align}
-    \theta = \arccos(\frac{ \norm{\vec{a}^{\mathrm{T}}(\vec{b}-\vec{c})}}{\norm{\vec{a}} \norm{\vec{b}-\vec{c}}})\\
-    \theta = \arccos(\frac{\norm{\vec{a}^{\mathrm{T}}\vec{b}-\vec{a}^{\mathrm{T}}\vec{c}}}{|\vec{a}||\vec{b}-\vec{c}|})\\
-    \theta = \arccos(0) = 90^\circ\\
-    \because \vec{a}^{\mathrm{T}}\vec{b}=\vec{a}^{\mathrm{T}}\vec{c} \text{ and } |\vec{a}| \ne 0, |\vec{b}-\vec{c}| \ne 0
-\end{align}
-Therefore, the angle between the vectors $\vec{a}$ and $\vec{b}-\vec{c}$ is $90^\circ$.
+This implies that the dot product of $\vec{a}$ and $\vec{b} - \vec{c}$ is zero, ie these are orthogonal matrices.
+Therefore, the angle between $\vec{a}$ and $\vec{b} - \vec{c}$ is $90^\circ$.
 
 \end{document}
