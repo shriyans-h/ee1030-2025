@@ -94,24 +94,42 @@ Find the equation of the plane which passes through the point (5, 2, -4) and per
 
 
 \begin{frame}{Theoretical Solution}
-The plane passes through a known point,
-\[ \mathbf{A} = \myvec{5\\2\\-4} \]
-The plane is perpendicular to a line with direction ratios (2, 3, -1). 
-\[ \mathbf{n} = \myvec{2\\3\\-1} \]
-The equation of a plane is given by the formula \[ \mathbf{n} = \myvec{2\\3\\-1} \], where $\mathbf{x}$ is a general point $[x, y, z]^T$ on the plane.
+The plane passes through the point
+\[
+\mathbf{A} = \myvec{5\\2\\-4}
+\]
+with normal vector
+\[
+\mathbf{n} = \myvec{2\\3\\-1}.
+\]
+
+The equation of the plane can be written as
+\[
+\mathbf{n}^T(\mathbf{x}-\mathbf{A})=0.
+\]
+
+Equivalently,
+\[
+\mathbf{n}^T\mathbf{x}=\mathbf{n}^T\mathbf{A}.
+\]
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Substituting the numerical values for our normal vector $\mathbf{n}$ and point $\mathbf{A}$:
+Substituting the values,
 \begin{align}
-    \myvec{2 & 3 & -1} \left( \myvec{x\\y\\z} - \myvec{5\\2\\-4} \right) &= 0 \\
-    \implies \myvec{2 & 3 & -1} \myvec{x-5\\y-2\\z-(-4)} &= 0 \\
-    \implies \myvec{2 & 3 & -1} \myvec{x-5\\y-2\\z+4} &= 0 \\
-    \implies 2(x-5) + 3(y-2) - 1(z+4) &= 0 \\
-    \implies 2x - 10 + 3y - 6 - z - 4 &= 0 \\
-    \implies 2x + 3y - z &= 20
+\myvec{2 & 3 & -1}\mathbf{x} &= \myvec{2 & 3 & -1}\myvec{5\\2\\-4} \\
+\implies \myvec{2 & 3 & -1}\mathbf{x} &= 20.
 \end{align}
-Thus, the equation of the plane is $2x + 3y - z = 20$.
+
+Hence, the equation of the plane is
+\[
+\mathbf{n}^T\mathbf{x} = 20,
+\]
+where
+\[
+\mathbf{n} = \myvec{2\\3\\-1}.
+\]
+
 \end{frame}
 
 \begin{frame}[fragile]
