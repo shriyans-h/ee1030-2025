@@ -1,4 +1,4 @@
-\frametitle{Pyhton Code}
+\frametitle{Py Code}
 \begin{lstlisting}
 # Axes setup
 plt.gca().set_aspect('equal', adjustable='box')
