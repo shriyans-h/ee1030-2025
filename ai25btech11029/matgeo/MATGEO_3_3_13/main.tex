@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[a4paper, left = 1.5cm, right = 1.5cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+\large
+    \textbf{Samyak Gondane-AI25BTECH11029}
+\end{center}
+\date{}
+
+\section*{Question}
+Draw a triangle $ABC$ with $BC = 7\ cm$, $\angle B = 45\degree$ and $\angle C = 60\degree$.
+
+\section*{Solution}
+
+\subsection*{Given}
+\begin{itemize}
+    \item $BC = 7\ cm$
+    \item $\angle B = 45\degree$
+    \item $\angle C = 60\degree$
+\end{itemize}
+
+\subsection*{Approach}
+Place point $\vec{B}$ at the origin and point $\vec{C}$ along the x-axis:
+
+
+\begin{align}
+\vec{B} = \myvec{0 \\ 0}, \quad
+\vec{C} = \myvec{7 \\ 0}
+\end{align}
+
+
+
+\subsection*{Use Law of Sines to find sides AB and AC}
+
+Using:
+\begin{align}
+    \frac{AB}{\sin C} = \frac{AC}{\sin B} = \frac{BC}{\sin A}\\
+\end{align}
+
+\begin{align}
+    AB = \frac{7 \cdot \sin(60\degree)}{\sin(75\degree)}      6.28\ units\\
+    AC = \frac{7 \cdot \sin(45\degree)}{\sin(75\degree)}      5.12\ units
+\end{align}
+
+\subsection*{Coordinates of Point A}
+
+Using angle $\angle B = 45\degree$ and side $AB \approx 6.28$:
+\begin{align}
+    A_x = AB\cos⁡(45\degree) \approx 6.28 \times 0.707 \approx 4.44\\
+    A_y = AB\sin⁡(45\degree) \approx 6.28 \times 0.707 \approx 4.44
+\end{align}
+
+So:
+
+    Point $\vec{A} \approx (4.44, 4.44)$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{./figs/Figure_1.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+
+
+
+\end{document}

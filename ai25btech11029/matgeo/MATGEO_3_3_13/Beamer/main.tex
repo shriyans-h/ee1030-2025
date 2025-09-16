@@ -1,0 +1,142 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+
+\title 
+{3.3.13}
+\date{}
+
+\author
+{SAMYAK GONDANE - AI25BTECH11029}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Question}
+    Draw a triangle $ABC$ with $BC = 7\ cm$, $\angle B = 45\degree$ and $\angle C = 60\degree$.
+\end{frame}
+
+\begin{frame}{Solution}
+\textbf{Given}
+\begin{itemize}
+    \item $BC = 7\ cm$
+    \item $\angle B = 45\degree$
+    \item $\angle C = 60\degree$
+\end{itemize}
+
+Place point $\vec{B}$ at the origin and point $\vec{C}$ along the x-axis:
+
+\begin{align}
+\vec{B} = \myvec{0 \\ 0}, \quad
+\vec{C} = \myvec{7 \\ 0}
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
+\textbf{Use Law of Sines to find sides AB and AC}
+
+Using:
+\begin{align}
+    \frac{AB}{\sin C} = \frac{AC}{\sin B} = \frac{BC}{\sin A}\\
+\end{align}
+
+\begin{align}
+    AB = \frac{7 \cdot \sin(60\degree)}{\sin(75\degree)}      6.28\ units\\
+    AC = \frac{7 \cdot \sin(45\degree)}{\sin(75\degree)}      5.12\ units
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
+\textbf{Coordinates of Point A}
+
+Using angle $\angle B = 45\degree$ and side $AB \approx 6.28$:
+\begin{align}
+    A_x = AB\cos⁡(45\degree) \approx 6.28 \times 0.707 \approx 4.44\\
+    A_y = AB\sin⁡(45\degree) \approx 6.28 \times 0.707 \approx 4.44
+\end{align}
+
+So:
+
+    Point $\vec{A} \approx (4.44, 4.44)$
+\end{frame}
+
+\begin{frame}{Plot}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.58\linewidth]{./figs/Figure_1.png}
+        \caption{}
+        \label{fig:fig1}
+    \end{figure}
+\end{frame}
+
+
+\end{document}
