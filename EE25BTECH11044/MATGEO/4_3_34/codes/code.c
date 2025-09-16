@@ -1,28 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    // Coefficient matrix
-    double A[2][2] = {{2, -3}, {4, -5}};
-    double B[2] = {1, 1};  // RHS vector
-    double det, u, v, a, b;
+    // Input: two points (x1,y1), (x2,y2)
+    double x1 = 2, y1 = -3;
+    double x2 = 4, y2 = -5;
 
-    // Determinant of A
-    det = A[0][0]*A[1][1] - A[0][1]*A[1][0];
+    // Step 1: Direction vector m = (x2-x1, y2-y1)
+    double m1 = x2 - x1;
+    double m2 = y2 - y1;
 
-    if(det == 0) {
-        printf("System has no unique solution.\n");
-        return 0;
-    }
+    // Step 2: Find normal vector n = (n1,n2)
+    // Condition: n^T * m = 0  => n1*m1 + n2*m2 = 0
+    // One valid solution is n = (m2, -m1)
+    double n1 = m2;
+    double n2 = -m1;
 
-    // Cramer's Rule
-    u = (B[0]*A[1][1] - B[1]*A[0][1]) / det;
-    v = (A[0][0]*B[1] - A[1][0]*B[0]) / det;
+    // Step 3: Find c using point (x1,y1)
+    double c = n1*x1 + n2*y1;
 
-    // Recover a and b
-    a = 1.0 / u;
-    b = 1.0 / v;
-
-    printf("Solution: a = %.2f, b = %.2f\n", a, b);
+    // Final line equation: n1*x + n2*y = c
+    printf("Equation of line: %.2lf*x + %.2lf*y = %.2lf\n", n1, n2, c);
 
     return 0;
 }

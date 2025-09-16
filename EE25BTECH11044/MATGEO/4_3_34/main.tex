@@ -71,132 +71,78 @@ If the line
 \]
 passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$ 
 
-\textbf{Solution:}  
+\textbf{Solution (using $\vec{n}^T \vec{x} = c$):}
 
-For $(2,-3)$:
+The equation of a line can be expressed as
 \[
-\frac{2}{a} + \frac{-3}{b} = 1 \quad \Rightarrow \quad \frac{2}{a} - \frac{3}{b} = 1
+\vec{n}^T \vec{x} = c,
+\]
+where $\vec{n}$ is the normal vector to the line.
+
+---
+
+\textbf{Step 1: Direction vector of the line}
+
+The line passes through
+\[
+\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}, \quad
+\vec{x}_2 = \begin{bmatrix}4\\-5\end{bmatrix}.
 \]
 
-For $(4,-5)$:
+Hence, its direction vector is
 \[
-\frac{4}{a} + \frac{-5}{b} = 1 \quad \Rightarrow \quad \frac{4}{a} - \frac{5}{b} = 1
+\vec{m} = \vec{x}_2 - \vec{x}_1
+= \begin{bmatrix}4-2 \\ -5 - (-3)\end{bmatrix}
+= \begin{bmatrix}2 \\ -2\end{bmatrix}.
 \]
 
-Let 
+---
+
+\textbf{Step 2: Find the normal vector $\vec{n}$}
+
+The normal vector $\vec{n} = \begin{bmatrix}n_1 \\ n_2\end{bmatrix}$ must satisfy
 \[
-u = \frac{1}{a}, \quad v = \frac{1}{b}.
+\vec{n}^T \vec{m} = 0.
 \]
 
-Then the system becomes:
+That is,
 \[
-2u - 3v = 1, \qquad 4u - 5v = 1
+\begin{bmatrix}n_1 & n_2\end{bmatrix}
+\begin{bmatrix}2 \\ -2\end{bmatrix} = 0,
+\]
+\[
+2n_1 - 2n_2 = 0 \quad \Rightarrow \quad n_1 = n_2.
 \]
 
-or in matrix form:
+So, a valid choice is
 \[
-\begin{bmatrix}
-2 & -3 \\
-4 & -5
-\end{bmatrix}
-\begin{bmatrix}
-u \\ v
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 \\ 1
-\end{bmatrix}.
+\vec{n} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
 \]
 
+---
 
+\textbf{Step 3: Find $c$}
+
+Using the equation
 \[
-A = \begin{bmatrix} 2 & -3 \\ 4 & -5 \end{bmatrix}.
+\vec{n}^T \vec{x} = c,
 \]
-
-We compute
+substitute $\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}$:
 \[
-A A^T =
-\begin{bmatrix}
-13 & 23 \\
-23 & 41
-\end{bmatrix}.
-\]
-
-Hence, the norm of $A$ is
-\[
-\|A\|_F = \sqrt{\mathrm{trace}(A A^T)} = \sqrt{13 + 41} = \sqrt{54} \neq 0,
-\]
-so the matrix is invertible.
-
-
-\[
-A^{-1} = \frac{1}{2}
-\begin{bmatrix}
--5 & 3 \\
--4 & 2
-\end{bmatrix}.
+\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}2 \\ -3\end{bmatrix}
+= 2 - 3 = -1.
 \]
 
 Thus,
 \[
-\begin{bmatrix}
-u \\ v
-\end{bmatrix}
-=
-A^{-1}
-\begin{bmatrix}
-1 \\ 1
-\end{bmatrix}
-=
-\frac{1}{2}
-\begin{bmatrix}
--5 & 3 \\
--4 & 2
-\end{bmatrix}
-\begin{bmatrix}
-1 \\ 1
-\end{bmatrix}
-=
-\frac{1}{2}
-\begin{bmatrix}
--2 \\ -2
-\end{bmatrix}
-=
-\begin{bmatrix}
--1 \\ -1
-\end{bmatrix}.
-\]
-
-Hence,
-\[
-u = -1 \;\Rightarrow\; a = -1, 
-\qquad 
-v = -1 \;\Rightarrow\; b = -1.
+c = -1.
 \]
 
 ---
 
-\textbf{Verification:}  
-Equation of the line:
+\textbf{Final Answer:}
 \[
-\frac{x}{-1} + \frac{y}{-1} = 1 \quad \Rightarrow \quad -x - y = 1.
-\]
-
-For $(2,-3)$:
-\[
--(2) - (-3) = -2 + 3 = 1 \quad \checkmark
-\]
-
-For $(4,-5)$:
-\[
--(4) - (-5) = -4 + 5 = 1 \quad \checkmark
-\]
-
----
-
-\textbf{Final Answer:}  
-\[
-(a,b) = (-1,-1).
+\vec{n}^T \vec{x} = -1 \quad \Rightarrow \quad x+y=-1.
 \]
 
 \begin{center}

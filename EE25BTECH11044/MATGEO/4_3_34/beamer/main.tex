@@ -90,111 +90,107 @@ If the line
 \[
 \frac{x}{a} + \frac{y}{b} = 1
 \]
-passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$.
+passes through the points $(2,-3)$ and $(4,-5)$, find $(a,b)$.
 \end{block}
 \end{frame}
 
-% Solution (Frame 1)
-\begin{frame}{Solution (Step 1)}
-For $(2,-3)$:
+% ---------------- Solution 1 ----------------
+\begin{frame}{Solution: Step 1}
+The given points are
 \[
-\frac{2}{a} - \frac{3}{b} = 1
-\]
-For $(4,-5)$:
-\[
-\frac{4}{a} - \frac{5}{b} = 1
+\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}, \quad
+\vec{x}_2 = \begin{bmatrix}4\\-5\end{bmatrix}.
 \]
 
-Let
+\bigskip
+The direction vector of the line is
 \[
-u = \frac{1}{a}, \quad v = \frac{1}{b}.
+\vec{m} = \vec{x}_2 - \vec{x}_1
+= \begin{bmatrix}2 \\ -2\end{bmatrix}.
 \]
 \end{frame}
 
-% Solution (Frame 2)
-\begin{frame}{Solution (Step 2)}
-System becomes:
+% ---------------- Solution 2 ----------------
+\begin{frame}{Solution: Step 2}
+The normal vector $\vec{n} = \begin{bmatrix}n_1 \\ n_2\end{bmatrix}$ must satisfy
 \[
-2u - 3v = 1, \qquad 4u - 5v = 1
+\vec{n}^T \vec{m} = 0.
 \]
 
-Matrix form:
 \[
-\begin{bmatrix}2 & -3 \\ 4 & -5 \end{bmatrix}
-\begin{bmatrix}u \\ v\end{bmatrix}
-=
-\begin{bmatrix}1 \\ 1\end{bmatrix}.
+\begin{bmatrix}n_1 & n_2\end{bmatrix}
+\begin{bmatrix}2 \\ -2\end{bmatrix} = 0
+\quad \Rightarrow \quad n_1 = n_2.
 \]
 
-Compute:
+So we can take
 \[
-A^{-1} = \frac{1}{2}
-\begin{bmatrix}-5 & 3 \\ -4 & 2\end{bmatrix}.
+\vec{n} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
 \]
 \end{frame}
 
-% Solution (Frame 3)
-\begin{frame}{Solution (Step 3)}
+% ---------------- Solution 3 ----------------
+\begin{frame}{Solution: Step 3}
+The line equation is
 \[
-\begin{bmatrix}u \\ v\end{bmatrix}
-=
-A^{-1}\begin{bmatrix}1 \\ 1\end{bmatrix}
-=
-\frac{1}{2}\begin{bmatrix}-2 \\ -2\end{bmatrix}
-=
-\begin{bmatrix}-1 \\ -1\end{bmatrix}.
+\vec{n}^T \vec{x} = c
+\quad \Rightarrow \quad
+\begin{bmatrix}1 & 1\end{bmatrix}
+\begin{bmatrix}x \\ y\end{bmatrix} = c.
 \]
 
-Thus,
+Substitute point $\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}$:
 \[
-a = -1, \quad b = -1.
+c = 2 - 3 = -1.
 \]
 
-Equation of line:
+\bigskip
+\textbf{Final Equation:}
 \[
--x - y = 1.
+x + y = -1.
 \]
 \end{frame}
 
-% C Code Part 1
+% ---------------- C code 1 ----------------
 \begin{frame}[fragile]{C Code (Part 1)}
-\begin{lstlisting}[language=C]
+\lstset{language=C}
+\begin{lstlisting}
 #include <stdio.h>
 
 int main() {
-    double A[2][2] = {{2, -3}, {4, -5}};
-    double B[2] = {1, 1};
-    double det, u, v, a, b;
+    double x1 = 2, y1 = -3;
+    double x2 = 4, y2 = -5;
 
-    // Determinant of A
-    det = A[0][0]*A[1][1] - A[0][1]*A[1][0];
+    // Direction vector
+    double m1 = x2 - x1;
+    double m2 = y2 - y1;
+
+    // Normal vector (perpendicular)
+    double n1 = m2;
+    double n2 = -m1;
 \end{lstlisting}
 \end{frame}
 
-% C Code Part 2
+% ---------------- C code 2 ----------------
 \begin{frame}[fragile]{C Code (Part 2)}
-\begin{lstlisting}[language=C]
-    if(det == 0) {
-        printf("No unique solution.\n");
-        return 0;
-    }
+\lstset{language=C}
+\begin{lstlisting}
+    // Constant c
+    double c = n1*x1 + n2*y1;
 
-    // Cramer's Rule
-    u = (B[0]*A[1][1] - B[1]*A[0][1]) / det;
-    v = (A[0][0]*B[1] - A[1][0]*B[0]) / det;
+    // Line equation
+    printf("Equation of line: %.2lf*x + %.2lf*y = %.2lf\n",
+           n1, n2, c);
 
-    a = 1.0 / u;
-    b = 1.0 / v;
-
-    printf("Solution: a = %.2f, b = %.2f\n", a, b);
     return 0;
 }
 \end{lstlisting}
 \end{frame}
 
-% Python Code Part 1
+% ---------------- Python code 1 ----------------
 \begin{frame}[fragile]{Python Code (Part 1)}
-\begin{lstlisting}[language=Python]
+\lstset{language=Python}
+\begin{lstlisting}
 import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
@@ -215,9 +211,10 @@ lib.points.argtypes = [
 \end{lstlisting}
 \end{frame}
 
-% Python Code Part 2
+% ---------------- Python code 2 ----------------
 \begin{frame}[fragile]{Python Code (Part 2)}
-\begin{lstlisting}[language=Python]
+\lstset{language=Python}
+\begin{lstlisting}
 # Parameters for simulation
 x_0, y_0 = 0.0, 2.0
 x_end, step_size = 1.0, 0.001
@@ -233,7 +230,14 @@ lib.points(x_0, y_0, x_end, step_size,
 # Theoretical solution (C = -2)
 def theoretical_solution(x):
     return (-x + 4 - 2*np.exp(x))
+\end{lstlisting}
+\end{frame}
 
+% ---------------- Python code 3 ----------------
+\begin{frame}[fragile]{Python Code (Part 3)}
+\lstset{language=Python}
+\begin{lstlisting}
+# Generate theory curve
 x_theory = np.linspace(x_0, x_end, 1000)
 y_theory = theoretical_solution(x_theory)
 
@@ -242,17 +246,20 @@ plt.plot(x_points, y_points, 'ro-',
          markersize=2, linewidth=4, label="sim")
 plt.plot(x_theory, y_theory, 'b-', 
          linewidth=2, label="theory")
-plt.xlabel("x"); plt.ylabel("y")
-plt.legend(); plt.grid(True, linestyle="--")
+
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.grid(True, linestyle="--")
 plt.show()
 \end{lstlisting}
 \end{frame}
 
 
-% Plot Frame
-\begin{frame}{Plot}
+% ---------------- Plot ----------------
+\begin{frame}{Plot of the Line}
 \begin{center}
-\includegraphics[width=0.8\columnwidth]{figs/plot6.png}
+\includegraphics[width=0.7\columnwidth]{figs/plot6.png}
 \end{center}
 \end{frame}
 
