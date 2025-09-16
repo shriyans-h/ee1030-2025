@@ -29,49 +29,27 @@ Let
 \quad \vec{n}_2 = \myvec{3 \\ -6 \\ 2}.
 \]
 
-Form the matrix\
+The dot product is
 \begin{align}
-A = \myvec{1 & 3 \\ -2 & -6 \\ -2 & 2},
-\end{align}
-whose columns are the normals.  
-The Gram matrix is
-\begin{align}
-G = A^\top A 
-= \myvec{\vec{n}_1^\top \vec{n}_1 & \vec{n}_1^\top \vec{n}_2 \\ \vec{n}_2^\top \vec{n}_1 & \vec{n}_2^\top \vec{n}_2}.
+\vec{n}_1^\top \vec{n}_2 &= 1\cdot 3 + (-2)(-6) + (-2)(2) \\
+&= 3 + 12 - 4 \\
+&= 11.
 \end{align}
 
-Now,
-\[
-\vec{n}_1^\top \vec{n}_1 = 9, \quad 
-\vec{n}_2^\top \vec{n}_2 = 49, \quad 
-\vec{n}_1^\top \vec{n}_2 = 11.
-\]
-
-Thus,
+The norms are
 \begin{align}
-G = \myvec{9 & 11 \\ 11 & 49}.
+\|\vec{n}_1\| &= \sqrt{1^2 + (-2)^2 + (-2)^2} = \sqrt{9} = 3, \\
+\|\vec{n}_2\| &= \sqrt{3^2 + (-6)^2 + 2^2} = \sqrt{49} = 7.
 \end{align}
 
-
-Let
+Hence,
 \begin{align}
-D = \myvec{9 & 0 \\ 0 & 49}, 
-\quad D^{-1/2} = \myvec{\tfrac{1}{3} & 0 \\ 0 & \tfrac{1}{7}}.
+\cos\theta &= \frac{\vec{n}_1^\top \vec{n}_2}{\|\vec{n}_1\|\|\vec{n}_2\|} \\
+&= \frac{11}{3\cdot 7} \\
+&= \frac{11}{21}.
 \end{align}
 
-
-The normalized Gram matrix is
-\begin{align}
-C = D^{-1/2} G D^{-1/2} 
-= \myvec{1 & \tfrac{11}{21} \\ \tfrac{11}{21} & 1}.
-\end{align}
-
-The off-diagonal entry gives
-\begin{align}
-\cos\theta = \frac{11}{21}.
-\end{align}
-
-Hence, the acute angle between the planes is
+Therefore, the acute angle between the planes is
 \[
 \boxed{\theta = \arccos\!\left(\tfrac{11}{21}\right) \approx 58.41^\circ}
 \]

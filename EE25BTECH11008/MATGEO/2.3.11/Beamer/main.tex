@@ -33,53 +33,29 @@ Let
 \quad \vec{n}_2 = \myvec{3 \\ -6 \\ 2}.
 \]
 
-Form the matrix\
+The dot product is
 \begin{align}
-A = \myvec{1 & 3 \\ -2 & -6 \\ -2 & 2},
+\vec{n}_1^\top \vec{n}_2 &= 1\cdot 3 + (-2)(-6) + (-2)(2) = 11.
 \end{align}
-whose columns are the normals.  
-The Gram matrix is
+
+The norms are
 \begin{align}
-G = A^\top A 
-= \myvec{\vec{n}_1^\top \vec{n}_1 & \vec{n}_1^\top \vec{n}_2 \\ \vec{n}_2^\top \vec{n}_1 & \vec{n}_2^\top \vec{n}_2}.
+\|\vec{n}_1\| &= \sqrt{1^2 + (-2)^2 + (-2)^2} = \sqrt{9} = 3, \\
+\|\vec{n}_2\| &= \sqrt{3^2 + (-6)^2 + 2^2} = \sqrt{49} = 7.
 \end{align}
 \end{frame}
 
 %----------------- Solution (cont) -------------------
 \begin{frame}{Solution (cont..)}
-Now,
-\[
-\vec{n}_1^\top \vec{n}_1 = 9, \quad 
-\vec{n}_2^\top \vec{n}_2 = 49, \quad 
-\vec{n}_1^\top \vec{n}_2 = 11.
-\]
 
-Thus,
+Hence,
 \begin{align}
-G = \myvec{9 & 11 \\ 11 & 49}.
+\cos\theta &= \frac{\vec{n}_1^\top \vec{n}_2}{\|\vec{n}_1\|\|\vec{n}_2\|} \\
+&= \frac{11}{3\cdot 7} \\
+&= \frac{11}{21}.
 \end{align}
 
-
-Let
-\begin{align}
-D = \myvec{9 & 0 \\ 0 & 49}, 
-\quad D^{-1/2} = \myvec{\tfrac{1}{3} & 0 \\ 0 & \tfrac{1}{7}}.
-\end{align}
-\end{frame}
-
-\begin{frame}{Solution (cont..)}
-The normalized Gram matrix is
-\begin{align}
-C = D^{-1/2} G D^{-1/2} 
-= \myvec{1 & \tfrac{11}{21} \\ \tfrac{11}{21} & 1}.
-\end{align}
-
-The off-diagonal entry gives
-\begin{align}
-\cos\theta = \frac{11}{21}.
-\end{align}
-
-Hence, the acute angle between the planes is
+Therefore, the acute angle between the planes is
 \[
 \boxed{\theta = \arccos\!\left(\tfrac{11}{21}\right) \approx 58.41^\circ}
 \]
@@ -130,61 +106,29 @@ plt.show()
 
 %----------------- C Code -------------------
 
-\begin{frame}[fragile]{C Code (Matrix multiplication)}
+\begin{frame}[fragile]{C Code (Finding Angle)}
 \begin{lstlisting}[language=C]
 #include <stdio.h>
 #include <math.h>
 
-void matmul(double A[2][2], double B[2][2], double C[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            C[i][j] = 0.0;
-            for (int k = 0; k < 2; k++) {
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
+double find_angle(int A[3], int B[3]) {
+    int dot = 0;
+    double a_mag = 0;
+    double b_mag = 0;
+    for (int i=0; i<3; i++) {
+        dot += A[i]*B[i];
+        a_mag += A[i]*A[i];
+        b_mag += B[i]*B[i];
     }
-}
 
 \end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{C Code (Finding G)}
+\begin{frame}[fragile]{C Code (cont..)}
 \begin{lstlisting}[language=C]
-void gram_matrix(double *u, double *v, int n, double G[2][2]) {
-    double g11 = 0.0, g22 = 0.0, g12 = 0.0;
-    for (int i = 0; i < n; i++) {
-        g11 += u[i] * u[i];
-        g22 += v[i] * v[i];
-        g12 += u[i] * v[i];
-    }
-    G[0][0] = g11;
-    G[0][1] = g12;
-    G[1][0] = g12;
-    G[1][1] = g22;
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]{C Code (Normalising G)}
-\begin{lstlisting}[language=C]
-void normalize_gram(double G[2][2], double G_norm[2][2]) {
-    double d11 = 1.0 / sqrt(G[0][0]);
-    double d22 = 1.0 / sqrt(G[1][1]);
-
-    double Dinv[2][2] = {{d11, 0.0}, {0.0, d22}};
-
-    double temp[2][2];
-    matmul(Dinv, G, temp); 
-    matmul(temp, Dinv, G_norm);
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]{C Code (Finding Angle)}
-\begin{lstlisting}[language=C]
-double angle_from_normalized(double G_norm[2][2]) {
-    double cos_theta = G_norm[0][1]; 
+    a_mag = pow(a_mag, 0.5);
+    b_mag = pow(b_mag, 0.5);
+    double cos_theta = dot/(a_mag*b_mag);
     if (cos_theta > 1.0) {
         cos_theta = 1.0; 
     }
@@ -196,7 +140,6 @@ double angle_from_normalized(double G_norm[2][2]) {
 \end{lstlisting}
 \end{frame}
 
-
 %----------------- Python Code -------------------
 \begin{frame}[fragile]{Python Code (Calling C)}
 \begin{lstlisting}[language=Python]
@@ -205,27 +148,11 @@ import numpy
 
 lib = ctypes.CDLL("./computations.so")
 
-lib.gram_matrix.argtypes = [
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.c_int,
-    ctypes.POINTER((ctypes.c_double * 2) * 2)
+lib.find_angle.argtypes = [
+    ctypes.POINTER((ctypes.c_int * 3)),
+    ctypes.POINTER((ctypes.c_int * 3))
 ]
-\end{lstlisting}
-\end{frame}
-
-
-\begin{frame}[fragile]{Python Code (cont..)}
-\begin{lstlisting}[language=Python]
-lib.normalize_gram.argtypes = [
-    ctypes.POINTER((ctypes.c_double * 2) * 2),
-    ctypes.POINTER((ctypes.c_double * 2) * 2)
-]
-
-lib.angle_from_normalized.argtypes = [
-    ctypes.POINTER((ctypes.c_double * 2) * 2)
-]
-lib.angle_from_normalized.restype = ctypes.c_double
+lib.find_angle.restype = ctypes.c_double
 \end{lstlisting}
 \end{frame}
 
@@ -233,29 +160,17 @@ lib.angle_from_normalized.restype = ctypes.c_double
 \begin{frame}[fragile]{Python Code (cont..)}
 \begin{lstlisting}[language=Python]
 def compute_angle(u, v):
-    n = len(u)
-    u_arr = (ctypes.c_double * n)(*u)
-    v_arr = (ctypes.c_double * n)(*v)
-
-    G = ((ctypes.c_double * 2) * 2)()
-    G_norm = ((ctypes.c_double * 2) * 2)()
-
-    lib.gram_matrix(u_arr, v_arr, n, G)
-    lib.normalize_gram(G, G_norm)
-    theta = lib.angle_from_normalized(G_norm)
+    u_arr = (ctypes.c_int * 3)(*u)
+    v_arr = (ctypes.c_int * 3)(*v)
+    theta = lib.find_angle(u_arr, v_arr)
     return theta
-\end{lstlisting}
-\end{frame}
 
-
-\begin{frame}[fragile]{Python Code (cont..)}
-\begin{lstlisting}[language=Python]
 u = [1, -2, -2]
 v = [3, -6, 2]
 theta = compute_angle(u, v)
 
-print(f"Angle(radians):{theta}")
-print(f"Angle(degrees):{theta*180/numpy.pi}")
+print(f"Angle (radians): {theta}")
+print(f"Angle (degrees): {theta * 180 / numpy.pi}")
 \end{lstlisting}
 \end{frame}
 
