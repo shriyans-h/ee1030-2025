@@ -35,13 +35,12 @@ fig = plt.figure(figsize=(12, 10))
 ax = fig.add_subplot(111, projection='3d')
 
 # Plot the plane: x + 2y - 5z + 9 = 0 (rearranged to z = (x + 2y + 9)/5)
-print("Plotting plane: x + 2y - 5z + 9 = 0")
 xx, yy = np.meshgrid(np.linspace(-3, 5, 20), np.linspace(-2, 6, 20))
 zz = (xx + 2*yy + 9) / 5
 ax.plot_surface(xx, yy, zz, alpha=0.3, color='yellow', edgecolor='gray', linewidth=0.1)
 
 # Plot the line using C function
-print("Plotting line through point A with direction vector d")
+#"Plotting line through point A with direction vector d"
 t_values = np.linspace(-2, 2, 200)
 line_points = []
 for t in t_values:
