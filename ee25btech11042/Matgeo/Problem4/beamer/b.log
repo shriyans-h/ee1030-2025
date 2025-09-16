@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  16 SEP 2025 20:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  16 SEP 2025 20:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,17 +1470,14 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./b.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-)
+) (./b.aux)
 \openout1 = `b.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 86.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 86.
@@ -1718,36 +1715,35 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
 (Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 (Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 92.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 92.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 92.
 
 
 [2
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 111.
+
+
 
 [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathsy.enc}]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [4
 
-]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 [5
 
 ]
 
 [6
-
-]
-
-[7
 
 ]
 \openout4 = `b.vrb'.
@@ -1759,33 +1755,19 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[8
+[7
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb
+ (./b.vrb)
 
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+[8
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 lib = ctypes.CDLL("
-                       ./trianglearea.so")
-? 
+]
+\openout4 = `b.vrb'.
 
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 lib = ctypes.CDLL("./trianglearea.so"
-                                         )
-? 
-)
+ (./b.vrb)
 
 [9
 
@@ -1793,220 +1775,22 @@ l.8 lib = ctypes.CDLL("./trianglearea.so"
 \openout4 = `b.vrb'.
 
  (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 print("
-           Area of triangle ABC (from C):", area)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 print("Area of triangle ABC (from C):"
-                                          , area)
-? 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-11.
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+8.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+))
+Overfull \vbox (61.72923pt too high) detected at line 227
+ []
 
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 plt.text(A[0], A[1], "
-                           A(2,9)", fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 plt.text(A[0], A[1], "A(2,9)"
-                                  , fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 ...xt(A[0], A[1], "A(2,9)", fontsize=10, ha="
-                                                  right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 ...], A[1], "A(2,9)", fontsize=10, ha="right"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 plt.text(B[0], B[1], "
-                           B(2,5)", fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 plt.text(B[0], B[1], "B(2,5)"
-                                  , fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ...xt(B[0], B[1], "B(2,5)", fontsize=10, ha="
-                                                  right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ...], B[1], "B(2,5)", fontsize=10, ha="right"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 plt.text(C[0], C[1], "
-                           C(5,5)", fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 plt.text(C[0], C[1], "C(5,5)"
-                                  , fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 ...xt(C[0], C[1], "C(5,5)", fontsize=10, ha="
-                                                  right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 ...], C[1], "C(5,5)", fontsize=10, ha="right"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 plt.title("
-                Right Triangle ABC")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 plt.title("Right Triangle ABC"
-                                   )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 plt.axis("
-               equal")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 plt.axis("equal"
-                     )
-? 
-)
 
 [10
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 		plt.scatter(p[0], p[1], label=f"
-                                       Point {p}")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 		plt.scatter(p[0], p[1], label=f"Point {p}"
-                                                 )
-? 
-)
+ (./b.vrb)
 
 [11
 
@@ -2021,18 +1805,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 print("
-            Dot product ABÂ·BC =", np.dot(AB, BC))
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Â\lst@EC·).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 print("Dot product ABÂ·BC 
-                               =", np.dot(AB, BC))
+l.10 	print("
+             Coordinates calculated by C library and loaded into NumPy:")
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2041,10 +1815,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 print("Dot product ABÂ·BC ="
-                                 , np.dot(AB, BC))
+l.10 ...lated by C library and loaded into NumPy:"
+                                                  )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 	print(f"
+                Point {name}: ({coords[0]:.4f}, {coords[1]:.4f})")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...name}: ({coords[0]:.4f}, {coords[1]:.4f})"
+                                                  )
 ? 
 )
+Overfull \vbox (61.72923pt too high) detected at line 273
+ []
+
+
 
 [12
 
@@ -2059,18 +1857,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 print("
-           Right angle at B âœ…")
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (â\lst@ECœ\lst@EC…).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 print("Right angle at B âœ…"
-                                )
+l.10 			ax.legend(loc="
+                       upper left")
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2079,30 +1867,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 print("Right angle at B âœ…"
-                                )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 print("
-            Area of triangle ABC (Python):", area)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 print("Area of triangle ABC (Python):"
-                                           , area)
+l.10 			ax.legend(loc="upper left"
+                                  )
 ? 
 )
+Overfull \vbox (1.72923pt too high) detected at line 292
+ []
+
+
 
 [13
 
@@ -2117,8 +1889,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 plt.text(A[0], A[1], "
-                          A(2,9)", fontsize=10, ha="right")
+l.8 			"
+        ""
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2127,8 +1899,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 plt.text(A[0], A[1], "A(2,9)"
-                                 , fontsize=10, ha="right")
+l.8 			""
+         "
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2137,8 +1909,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...ext(A[0], A[1], "A(2,9)", fontsize=10, ha="
-                                                  right")
+l.8 			"""
+          
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2147,8 +1919,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4 ...0], A[1], "A(2,9)", fontsize=10, ha="right"
-                                                  )
+l.10 			"
+         ""
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2157,8 +1929,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 plt.text(B[0], B[1], "
-                          B(2,5)", fontsize=10, ha="right")
+l.10 			""
+          "
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2167,140 +1939,120 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 plt.text(B[0], B[1], "B(2,5)"
-                                 , fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ...ext(B[0], B[1], "B(2,5)", fontsize=10, ha="
-                                                  right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ...0], B[1], "B(2,5)", fontsize=10, ha="right"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 plt.text(C[0], C[1], "
-                          C(5,5)", fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 plt.text(C[0], C[1], "C(5,5)"
-                                 , fontsize=10, ha="right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...ext(C[0], C[1], "C(5,5)", fontsize=10, ha="
-                                                  right")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...0], C[1], "C(5,5)", fontsize=10, ha="right"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 plt.title("
-               Right Triangle ABC (Pure Python)")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 plt.title("Right Triangle ABC (Pure Python)"
-                                                )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 plt.axis("
-              equal")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 plt.axis("equal"
-                    )
+l.10 			"""
+           
 ? 
 )
+Overfull \vbox (37.72923pt too high) detected at line 316
+ []
+
+
 
 [14
 
 ]
-<figs/Figure_1.png, id=434, 462.528pt x 346.896pt>
-File: figs/Figure_1.png Graphic file (type png)
-<use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 301.
-(pdftex.def)             Requested size: 205.37926pt x 154.0374pt.
+\openout4 = `b.vrb'.
 
+ (./b.vrb
 
-Package hyperref Warning: Ignoring empty anchor on input line 301.
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		print("
+              Coordinates calculated by NumPy:")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		print("Coordinates calculated by NumPy:"
+                                               )
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 		print(f"
+                 Point {name}: ({coords[0]:.4f}, {coords[1]:.4f})")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...name}: ({coords[0]:.4f}, {coords[1]:.4f})"
+                                                  )
+? 
+)
+Overfull \vbox (109.72923pt too high) detected at line 343
+ []
 
 
 
 [15
 
- <./figs/Figure_1.png>]
-<figs/Figure_2.png, id=464, 462.528pt x 346.896pt>
-File: figs/Figure_2.png Graphic file (type png)
-<use figs/Figure_2.png>
-Package pdftex.def Info: figs/Figure_2.png  used on input line 312.
-(pdftex.def)             Requested size: 205.37926pt x 154.0374pt.
+]
+\openout4 = `b.vrb'.
 
+ (./b.vrb
 
-Package hyperref Warning: Ignoring empty anchor on input line 312.
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 		ax.legend(loc="
+                      upper left")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 		ax.legend(loc="upper left"
+                                 )
+? 
+)
+Overfull \vbox (49.72923pt too high) detected at line 366
+ []
 
 
 
 [16
+
+]
+<figs/Figure_1.png, id=500, 722.7pt x 578.16pt>
+File: figs/Figure_1.png Graphic file (type png)
+<use figs/Figure_1.png>
+Package pdftex.def Info: figs/Figure_1.png  used on input line 376.
+(pdftex.def)             Requested size: 205.37926pt x 164.30092pt.
+
+
+[17
+
+ <./figs/Figure_1.png>]
+<figs/Figure_2.png, id=530, 722.7pt x 578.16pt>
+File: figs/Figure_2.png Graphic file (type png)
+<use figs/Figure_2.png>
+Package pdftex.def Info: figs/Figure_2.png  used on input line 385.
+(pdftex.def)             Requested size: 205.37926pt x 164.30092pt.
+
+
+[18
 
  <./figs/Figure_2.png>]
 \tf@nav=\write7
@@ -2312,7 +2064,7 @@ Package hyperref Warning: Ignoring empty anchor on input line 312.
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250916201334 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250916201225 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2320,21 +2072,17 @@ runsystem(latexminted cleantemp  --timestamp 20250916201334 92EB5FFEE6AE2FEC3AD
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `b.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59181 strings out of 473197
- 1434788 string characters out of 5718606
- 2531016 words of memory out of 5000000
- 81408 multiletter control sequences out of 15000+600000
+ 59383 strings out of 473197
+ 1436781 string characters out of 5718606
+ 2649016 words of memory out of 5000000
+ 81596 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1169b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
@@ -2343,10 +2091,10 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/txfonts/txsya.pfb>
-Output written on b.pdf (16 pages, 230205 bytes).
+Output written on b.pdf (18 pages, 314717 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
- 35 named destinations out of 1000 (max. 500000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 532 compressed objects within 6 object streams
+ 43 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
