@@ -73,17 +73,21 @@ Given vectors:
 \end{align}
 $\therefore$ We have:
 \begin{align}
-\vec{C} = \vec{a} + \vec{b} &= \myvec{4 \\ 1 \\ -1} \\
-\vec{D} = \vec{a} - \vec{b} &= \myvec{-2 \\ 3 \\ -5}
+\vec{C} &= \myvec{\vec{a} & \vec{b}}\myvec{1 \\ 1} \\ %&= \myvec{4 \\ 1 \\ -1} \\
+\vec{D} &= \myvec{\vec{a} & \vec{b}}\myvec{1 \\ -1} %&= \myvec{-2 \\ 3 \\ -5}
 \end{align}
 For two perpendicular vectors $\vec{P}$ and $\vec{Q}$:
 \begin{align}
- \vec{A}^\top\vec{B} = 0
+ \vec{P}^\top\vec{Q} = 0
 \end{align}
 For vectors $\vec{C}$ and $\vec{D}$:
 \begin{align}
- \vec{C}^\top\vec{D} &= \myvec{4 & 1 & -1}\myvec{-2 \\ 3 \\ -5} \\
- &= -8 + 3 + 5 = 0
+ %\vec{C}^\top\vec{D} &= \myvec{4 & 1 & -1}\myvec{-2 \\ 3 \\ -5} \\
+ %&= -8 + 3 + 5 = 0
+ \vec{C}^\top\vec{D} &= \myvec{1 & 1}\myvec{\vec{a} & \vec{b}}^\top\myvec{\vec{a} & \vec{b}}\myvec{1 \\ -1} \\
+ &= \myvec{1 & 1}\myvec{\norm{\vec{a}}^2 & \vec{a}^\top\vec{b} \\ \vec{a}^\top\vec{b} & \norm{\vec{b}}^2}\myvec{1 \\ -1} \\
+ &= \norm{\vec{a}}^2 - \vec{a}^\top\vec{b} + \vec{a}^\top\vec{b} - \norm{\vec{b}}^2 \\
+ &= 14 - 14 = 0
 \end{align}
 \begin{figure}[H]
     \centering
