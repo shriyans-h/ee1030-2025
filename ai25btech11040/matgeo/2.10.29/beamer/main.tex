@@ -1,0 +1,51 @@
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{gvv}
+
+\title{Question 2.10.29}
+\author{AI25BTECH11040 - Vivaan Parashar}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Question: }
+    The volume of the parallelopiped whose sides are given by $\textit{OA} = 2\vec{i}-2\vec{j}$, $\textit{OB} = \vec{i}+\vec{j}-\vec{k}$, $\textit{OC} = 3\vec{i} - \vec{k}$, is
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solution: }
+    To find the volume of the parallelopiped, we can use the scalar triple product formula:
+    \begin{align}
+        V = \norm{\vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC})} \\
+        \vec{OA} = \myvec{2                                        \\ -2 \\ 0}, \quad
+        \vec{OB} = \myvec{1                                        \\ 1 \\ -1}, \quad
+        \vec{OC} = \myvec{3                                        \\ 0 \\ -1}\\
+    \end{align}
+    To find the cross product between two vectors $\vec{a} = \myvec{a_1 \\ a_2 \\ a_3}$ and $\vec{b} = \myvec{b_1 \\ b_2 \\ b_3}$, we can use the matrix multiplication method, by first defining a new matrix $[\vec{a}]_{\times}$ as follows:
+\end{frame}
+\begin{frame}
+    \begin{align}
+        [\vec{a}]_{\times} = \myvec{0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0} \\
+    \end{align}
+    Now, $\vec{a} \times \vec{b} = [\vec{a}]_{\times}\vec{b}$.\\
+    Using this method, we can find the cross product $\vec{OB} \times \vec{OC}$ as follows:
+    \begin{align}
+        [\vec{OB}]_{\times} = \myvec{0                                    & 1 & 1 \\ -1 & 0 & -1 \\ -1 & 1 & 0} \\
+        \vec{OB} \times \vec{OC} = [\vec{OB}]_{\times}\vec{OC} = \myvec{0 & 1 & 1 \\ -1 & 0 & -1 \\ -1 & 1 & 0}\myvec{3 \\ 0 \\ -1} = \myvec{-1 \\ -2 \\ 3}
+    \end{align}
+    Now, we can find the scalar triple product $\vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC})$ as follows:
+\end{frame}
+\begin{frame}
+    \begin{align}
+        \vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC}) = \myvec{2 & -2 & 0}\myvec{-1 \\ -2 \\ 3} = \myvec{-2 + 4 + 0} = \myvec{2}
+    \end{align}
+    Finally, we can find the volume of the parallelopiped as follows:
+    \begin{align}
+        V = \norm{\vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC})} = \norm{\myvec{2}} = 2
+    \end{align}
+\end{frame}
+
+\end{document}
