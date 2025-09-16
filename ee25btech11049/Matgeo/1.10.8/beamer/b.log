@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.15)  31 AUG 2025 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.15)  16 SEP 2025 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2265,7 +2265,7 @@ l.9 ...uncs.py' contains 'calculate_unit_vector'."
 [15
 
 ]
-<figs/Figure.png, id=461, 722.7pt x 697.4055pt>
+<figs/Figure.png, id=462, 722.7pt x 697.4055pt>
 File: figs/Figure.png Graphic file (type png)
 <use figs/Figure.png>
 Package pdftex.def Info: figs/Figure.png  used on input line 342.
@@ -2275,7 +2275,7 @@ Package pdftex.def Info: figs/Figure.png  used on input line 342.
 [16
 
  <./figs/Figure.png>]
-<figs/Figure_1.png, id=491, 722.7pt x 697.4055pt>
+<figs/Figure_1.png, id=492, 722.7pt x 697.4055pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
 Package pdftex.def Info: figs/Figure_1.png  used on input line 347.
@@ -2294,7 +2294,7 @@ Package pdftex.def Info: figs/Figure_1.png  used on input line 347.
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250831161256 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250916090809 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2308,7 +2308,7 @@ Package rerunfilecheck Info: File `b.out' has not changed.
 Here is how much of TeX's memory you used:
  59318 strings out of 473197
  1435902 string characters out of 5718605
- 2567017 words of memory out of 5000000
+ 2568017 words of memory out of 5000000
  81536 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -2318,11 +2318,11 @@ pe1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmtt10.pfb>
-Output written on b.pdf (17 pages, 392548 bytes).
+ic/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on b.pdf (17 pages, 395973 bytes).
 PDF statistics:
- 568 PDF objects out of 1000 (max. 8388607)
- 481 compressed objects within 5 object streams
+ 573 PDF objects out of 1000 (max. 8388607)
+ 484 compressed objects within 5 object streams
  35 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
