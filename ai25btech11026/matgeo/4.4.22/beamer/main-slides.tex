@@ -95,7 +95,8 @@ Find the equation of a plane which passes through the point $(3,2,0)$ and contai
 \begin{frame}{Theoretical Solution}
 \textbf{Solution:}\\
  \textbf{Given:}  
-\textbf{Find the plane using column vectors.}
+\textbf{Finding the plane using column vectors.}
+
 
 Let the normal be \(\vec{n}=(a,b,c)^T\). We use the form
 \begin{align}
@@ -111,29 +112,50 @@ so take a point on the line \(A=(3,6,4)\) and the direction vector
 
 The conditions are
 \begin{align}
-\vec{n}^T P = 1,\qquad \vec{n}^T A = 1,\qquad \vec{n}^T \vec{v} = 0.
+\vec{n}^T \vec{P} = 1
 \end{align}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Put these three column vectors together into a matrix (columns are the given points/vectors):
 \begin{align}
-M=\begin{myvec}{
+\vec{n}^T \vec{A} = 1
+\end{align}
+\begin{align}
+\vec{n}^T \vec{v} = 0.
+\end{align}
+
+Put these three column vectors together into a matrix (columns are the given points/vectors):
+
+\end{frame}
+\begin{frame}{Theoretical Solution}
+\begin{align}
+\vec{M}=\begin{myvec}{
+3 & 3 & 1\\[4pt]
+2 & 6 & 5\\[4pt]
+0 & 4 & 4}
+\end{myvec}
+\qquad\text{(columns are }\vec{P},\;\vec{A},\;\vec{v}\text{).}
+\end{align}
+
+Then the three scalar conditions above read compactly as
+\end{frame}
+\begin{frame}{Theoretical Solution}
+\begin{align}
+\vec{M}=\begin{myvec}{
 3 & 3 & 1\\[4pt]
 2 & 6 & 5\\[4pt]
 0 & 4 & 4}
 \end{myvec}
 \qquad\text{(columns are }P,\;A,\;\vec{v}\text{).}
 \end{align}
+
 Then the three scalar conditions above read compactly as
-\end{frame}
-\begin{frame}{Theoretical Solution}
 \begin{align}
-\vec{n}^T M = \begin{myvec}{1 & 1 & 0}\end{myvec}.
+\vec{n}^T\vec{M} = \begin{myvec}{1 & 1 & 0}\end{myvec}.
 \end{align}
 Transposing both sides gives a standard linear system for \(\vec{n}\):
 \begin{align}
-M^T \vec{n} = \begin{myvec}{1\\[4pt]1\\[4pt]0}\end{myvec}.
+\vec{M}^T \vec{n} = \begin{myvec}{1\\[4pt]1\\[4pt]0}\end{myvec}.
 \end{align}
 \end{frame}
 \begin{frame}{Theoretical Solution}
@@ -148,17 +170,15 @@ Write this out:
 =
 \begin{myvec}{1\\[4pt]1\\[4pt]0}\end{myvec}.
 \end{align}
-
-Solving this \(3\times3\) system (by Gaussian elimination or matrix inverse) yields
 \begin{align}
-\begin{myvec}{a\\[4pt]b\\[4pt]c}\end{myvec}
+\vec{n}
 =
-\begin{myvec}{1\\[4pt]-1\\[4pt]1}\end{myvec}.
+\begin{myvec}{1\\-1\\1}\end{myvec}.
 \end{align}
 
 Thus a convenient normal vector is \(\vec{n}=(1,-1,1)^T\), and the plane equation in the requested form is
 \begin{align}
-\boxed{\ \vec{n}^T\vec{x}=1\ } \quad\Longrightarrow\quad \boxed{\ x - y + z = 1\ }.
+\begin{myvec}{1\\-1\\1}^T\end{myvec}\vec{x}=1
 \end{align}
 \end{frame}
 \begin{figure}[h!]
