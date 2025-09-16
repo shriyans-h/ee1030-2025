@@ -93,7 +93,7 @@
 
 	
 \begin{frame}{Theoretical Solution}
-	Given the points A, B and C, also consider $\vec{c}$ to be vector opposite to side AB and $\vec{b}$, $\vec{a}$ similarly
+Given the points A, B and C, also consider $\vec{c}$ to be vector opposite to side AB and $\vec{b}$, $\vec{a}$ similarly
 
 \begin{align}
 	\vec{A} = \begin{myvec}{2\\9} \end{myvec} , \vec{B} = \begin{myvec}{a\\5} \end{myvec}, \vec{C} = \begin{myvec}{5\\5} \end{myvec}
@@ -112,22 +112,47 @@ Orthogonality $\implies$ matrix product is zero :
 \begin{align}
 	\vec{c}^T\vec{a} = \begin{myvec}{2 -a & 4} \end{myvec}\begin{myvec}{a - 5 \\0} \end{myvec} = \brak{2-a}\brak{a-5} = 0
 \end{align}
-\end{frame}
-\begin{frame}{Theoretical Solution}
-	So \brak{2-a}\brak{5-a} = 0 $\implies$ $a = 2$ or $a = 5$.\\
+So \brak{2-a}\brak{5-a} = 0 $\implies$ $a = 2$ or $a = 5$.\\
 $a = 5$ make $\vec{B}$=$\vec{C}$. $\therefore a =2$  \\
-We can compute area using general formula since the vectors are perpendicular
+We can compute area using cross product formula
 \begin{align}
-	\text{AREA} = \frac{1}{2}\times\text{base}\times\text{height} \label{eq:0.5}
+	\Delta = \frac{1}{2}\norm{\vec{c}\times\vec{a}} \label{eq:0.5}
 \end{align}
+The general cross product of two vectors is defined as:
+\begin{align}
+	\vec{A}\times\vec{B} = \begin{myvec}{|\vec{A}_{23} & \vec{B}_{23}|\\|\vec{A}_{31} & \vec{B}_{31}|\\|\vec{A}_{12} & \vec{B}_{12}|} \end{myvec} \label{0.6}
+\end{align}
+The vectors in 3-D space look like
+\begin{align}
+	\vec{c} = \begin{myvec}{0\\4\\0} \end{myvec}
+\end{align}
+\begin{align}
+	\vec{a} = \begin{myvec}{-3 \\0\\0} \end{myvec}
+\end{align}
+\begin{align}
+	\vec{c}_{31} \text{ } \vec{a}_{31}| = |\begin{mydet}{0 & 0\\ 0 & -3} \end{mydet} = 0
+\end{align}
+\begin{align}
+	|\vec{c}_{23} \text{ } \vec{a}_{23}| = \begin{mydet}{4 & 0\\ 0 & 0} \end{mydet} = 0
+\end{align}
+\begin{align}
+	|\vec{c}_{12} \text{ } \vec{a}_{12}| = \begin{mydet}{0 & 4\\ -3 & 0} \end{mydet} = 12
+\end{align}
+By \eqref{0.6}:
+\begin{align}
+	\vec{c}\times\vec{a} = \begin{myvec}{0 \\ 0 \\ 12} \end{myvec}
+\end{align}
+\begin{align}
+	\norm{\vec{c}\times\vec{a}} = 12
+\end{align}
+
+
+
 Using \eqref{eq:0.5}
 \begin{align}
-	\Delta = \frac{1}{2}\times\norm{\vec{AB}}\times\norm{\vec{BC}}
+	\therefore	\Delta = \frac{1}{2}\norm{\vec{c}\times\vec{a}} = 6
 \end{align}
-\begin{align}
-	\therefore	\Delta = \frac{1}{2}\times4\times3 = 6
-\end{align}
-Thus area of triangle is 6\\
+Thus area of triangle is $6$\\
 
 	\end{frame}
 
