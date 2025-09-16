@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 
 # Extract coordinates
-A = (4.44, 4.44)
+A = (-2.574, -2.574)
 B = (0, 0)
 C = (7, 0)
 

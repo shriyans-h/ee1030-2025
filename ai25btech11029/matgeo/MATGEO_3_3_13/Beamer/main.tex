@@ -88,46 +88,62 @@
 \begin{frame}{Solution}
 \textbf{Given}
 \begin{itemize}
-    \item $BC = 7\ cm$
+    \item $BC = a = 7\ cm$
     \item $\angle B = 45\degree$
     \item $\angle C = 60\degree$
 \end{itemize}
-
-Place point $\vec{B}$ at the origin and point $\vec{C}$ along the x-axis:
+\\
+Let $\vec{B}$ be the origin
 
 \begin{align}
+\angle A = 180\degree - (45\degree + 60\degree) = 75\degree
+\end{align}
+
+\begin{align}
+K = \frac{a \sin C}{\sin A}
+= \frac{7 \sin(60\degree)}{\sin (75\degree)}
+= \frac{7 \times \frac{\sqrt{3}}{2}}{\frac{1}{\sqrt{2}} \times \frac{\sqrt{3} + 1}{2}}
+= \frac{7 \sqrt{6}}{\sqrt{3} + 1}
+\end{align}
+\end{frame}
+
+
+\begin{frame}{Solution}
+\begin{align}
+c = \frac{K^2 - a^2}{2(K - a \cos B)}
+= \frac{(\frac{7 \sqrt{6}}{\sqrt{3} + 1})^2 - 49}{2( \frac{7 \sqrt{6}}{\sqrt{3} + 1} - 7 \times \frac{1}{\sqrt{2}})} = -3.64
+\end{align}
+
+Let:
+
+\begin{align}
+\vec{B} = \myvec{0 \\ 0}, \quad
+\vec{C} = \myvec{a \\ 0} = \myvec{7 \\ 0}
+\end{align}
+\end{frame}
+
+
+\begin{frame}{Solution}
+Direction of $\vec{A}$ is along angle $B = 45\degree$:
+
+\begin{align}
+\vec{A} = c \myvec{\cos B \\ \sin B}
+= c \times \frac{1}{\sqrt{2}} \myvec{1 \\ 1}
+\end{align}
+
+\begin{align}
+A = c \myvec{\cos B \\ \sin B} = -3.64 \myvec{0.7071 \\ 0.7071} \approx \myvec{-2.574 \\ -2.574}
+\end{align}
+
+\textbf{Final Coordinates}
+
+\begin{align}
+\vec{A} = \myvec{-2.574 \\ -2.574}, \quad
 \vec{B} = \myvec{0 \\ 0}, \quad
 \vec{C} = \myvec{7 \\ 0}
 \end{align}
 \end{frame}
 
-\begin{frame}{Solution}
-\textbf{Use Law of Sines to find sides AB and AC}
-
-Using:
-\begin{align}
-    \frac{AB}{\sin C} = \frac{AC}{\sin B} = \frac{BC}{\sin A}\\
-\end{align}
-
-\begin{align}
-    AB = \frac{7 \cdot \sin(60\degree)}{\sin(75\degree)}      6.28\ units\\
-    AC = \frac{7 \cdot \sin(45\degree)}{\sin(75\degree)}      5.12\ units
-\end{align}
-\end{frame}
-
-\begin{frame}{Solution}
-\textbf{Coordinates of Point A}
-
-Using angle $\angle B = 45\degree$ and side $AB \approx 6.28$:
-\begin{align}
-    A_x = AB\cos⁡(45\degree) \approx 6.28 \times 0.707 \approx 4.44\\
-    A_y = AB\sin⁡(45\degree) \approx 6.28 \times 0.707 \approx 4.44
-\end{align}
-
-So:
-
-    Point $\vec{A} \approx (4.44, 4.44)$
-\end{frame}
 
 \begin{frame}{Plot}
     \begin{figure}
