@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  16 SEP 2025 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  16 SEP 2025 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1521,6 +1521,202 @@ uitikz/pgfcircvoltage.tex
 uitikz/pgfcirccurrent.tex)
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/generic/circ
 uitikz/pgfcircflow.tex))
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcolorbox.sty
+Package: tcolorbox 2025/07/08 version 6.7.1 text color boxes
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tools/
+verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks56
+\verbatim@line=\toks57
+\verbatim@in@stream=\read3
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/enviro
+n/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/trimsp
+aces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box95
+\tcb@upperbox=\box96
+\tcb@lowerbox=\box97
+\tcb@phantombox=\box98
+\c@tcbbreakpart=\count391
+\c@tcblayer=\count392
+\c@tcolorbox@number=\count393
+\l__tcobox_tmpa_box=\box99
+\l__tcobox_tmpa_dim=\dimen383
+\tcb@temp=\box100
+\tcb@temp=\box101
+\tcb@temp=\box102
+\tcb@temp=\box103
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcbminted.code.tex
+Library (tcolorbox): 'tcbminted.code.tex' version '6.7.1'
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/minted
+/minted.sty
+Package: minted 2025/05/14 v3.7.0 Yet another Pygments shim for LaTeX
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/generic/catc
+hfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/generic/etex
+cmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/fvextr
+a/fvextra.sty
+Package: fvextra 2025/05/29 v1.13.2 fvextra - extensions and patches for fancyv
+rb
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/fancyv
+rb/fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count394
+\FV@InFile=\read4
+\FV@TabBox=\box104
+\c@FancyVerbLine=\count395
+\FV@StepNumber=\count396
+\FV@OutFile=\write5
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/upquot
+e/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/base/t
+extcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lineno
+/lineno.sty
+Package: lineno 2025/05/13 line numbers on paragraphs v5.5
+\linenopenalty=\count397
+\output=\toks58
+\linenoprevgraf=\count398
+\linenumbersep=\dimen384
+\linenumberwidth=\dimen385
+\c@linenumber=\count399
+\c@pagewiselinenumber=\count400
+\c@LN@truepage=\count401
+\c@internallinenumber=\count402
+\c@internallinenumbers=\count403
+\quotelinenumbersep=\dimen386
+\bframerule=\dimen387
+\bframesep=\dimen388
+\bframebox=\box105
+\@LN@amsmath@ams@eqpen=\count404
+)
+\c@FancyVerbWriteLine=\count405
+\c@FancyVerbBufferLine=\count406
+\c@FV@TrueTabGroupLevel=\count407
+\c@FV@TrueTabCounter=\count408
+\FV@TabBox@Group=\box106
+\FV@bgcolorstructbox=\box107
+\FV@TmpLength=\skip69
+\c@FV@HighlightLinesStart=\count409
+\c@FV@HighlightLinesStop=\count410
+\FV@LoopCount=\count411
+\FV@NCharsBox=\box108
+\FV@BreakIndent=\dimen389
+\FV@BreakIndentNChars=\count412
+\FV@BreakSymbolSepLeft=\dimen390
+\FV@BreakSymbolSepLeftNChars=\count413
+\FV@BreakSymbolSepRight=\dimen391
+\FV@BreakSymbolSepRightNChars=\count414
+\FV@BreakSymbolIndentLeft=\dimen392
+\FV@BreakSymbolIndentLeftNChars=\count415
+\FV@BreakSymbolIndentRight=\dimen393
+\FV@BreakSymbolIndentRightNChars=\count416
+\c@FancyVerbLineBreakLast=\count417
+\FV@LineBox=\box109
+\FV@LineIndentBox=\box110
+\c@FV@BreakBufferDepth=\count418
+\FV@LineWidth=\dimen394
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/latex2
+pydata/latex2pydata.sty
+Package: latex2pydata 2025/03/26 v0.6.0 latex2pydata - write data to file in Py
+thon literal format
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/pgfopt
+s/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks59
+\pgfopts@list@add@b@toks=\toks60
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tools/
+shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/float/
+float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count419
+\float@exts=\toks61
+\float@box=\box111
+\@float@everytoks=\toks62
+\@floatcapt=\box112
+)
+\c@minted@FancyVerbLineTemp=\count420
+\@float@every@listing=\toks63
+\c@listing=\count421
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.7.1'
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.7.1'
+)
+\c@tcblisting=\count422
+))
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.7.1'
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/pdfcol
+/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+)
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box113
+\tcb@totalupperbox=\box114
+\tcb@totallowerbox=\box115
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '6.7.1'
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.7.1'
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tikzfi
+ll/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tikzfi
+ll/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+)
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tikzfi
+ll/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box116
+))
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/tcolor
+box/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.7.1'
+))
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/listin
 gs/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
@@ -1531,10 +1727,10 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 34.
+(hyperref)                removing `\\' on input line 42.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-35.
+44.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/ot1
 lmss.fd
@@ -1543,52 +1739,52 @@ File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 No file main-slides.aux.
 \openout1 = `main-slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 35.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 44.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-35.
+44.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 44.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-35.
+44.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 44.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-35.
+44.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 35.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 3
-5.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 44.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 4
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1628,17 +1824,17 @@ LaTeX Font Info:    ... okay on input line 35.
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/context/base
 /mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count391
-\scratchdimen=\dimen383
-\scratchbox=\box95
-\nofMPsegments=\count392
-\nofMParguments=\count393
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count394
-\MPscratchDim=\dimen384
-\MPnumerator=\count395
-\makeMPintoPDFobject=\count396
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count423
+\scratchdimen=\dimen395
+\scratchbox=\box117
+\nofMPsegments=\count424
+\nofMParguments=\count425
+\everyMPshowfont=\toks64
+\MPscratchCnt=\count426
+\MPscratchDim=\dimen396
+\MPnumerator=\count427
+\makeMPintoPDFobject=\count428
+\everyMPtoPDFconversion=\toks65
 )
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/epstop
 df-pkg/epstopdf-base.sty
@@ -1651,56 +1847,56 @@ onfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 35.
-\@outlinefile=\write5
-\openout5 = `main-slides.out'.
+Package hyperref Info: Link coloring OFF on input line 44.
+\@outlinefile=\write6
+\openout6 = `main-slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 35.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 35.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 35.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 35.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 44.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 35.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 35.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 35.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 44.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 35.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 35.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 35.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 35.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 35.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 35.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 35.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 35.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 44.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 35.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 44.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/transl
 ator/translator-basic-dictionary-English.dict
@@ -1726,7 +1922,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 ator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count397
+\c@lstlisting=\count429
 
 No file main-slides.nav.
 
@@ -1736,98 +1932,90 @@ No file main-slides.nav.
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdftex/
 updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dis
 t/fonts/enc/dvips/lm/lm-rm.enc}]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/oml
 lmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-42.
+54.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/oms
 lmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-42.
+54.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/omx
 lmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 42.
+(Font)              <10.95> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 42.
+(Font)              <8> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 42.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 4
-2.
+(Font)              <6> on input line 54.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 5
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 5
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 5
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 5
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 4
-2.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 5
+4.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 42.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 42.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 54.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 42.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 54.
 
 
 [2
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
-lm/lm-mathsy.enc}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist
-/fonts/enc/dvips/lm/lm-mathit.enc}]
+lm/lm-mathit.enc}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 79.
+
 
 [3
-
-]
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 59.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 59.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 59.
-
-
-[4
-
-]
-
-[5
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
 lm/lm-mathex.enc}]
@@ -1841,7 +2029,190 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (97.72923pt too high) detected at line 107
+
+[4
+
+{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
+lm/lm-rmtt.enc}]
+\openout4 = `main-slides.vrb'.
+
+ (./main-slides.vrb
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10     printf("
+                 Vector PQ = (%.0f, %.0f, %.0f)\n", PQ[0], PQ[1], PQ[2]);
+? <return>
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? R
+OK, entering \nonstopmode...
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10     printf("Vector PQ = (%.0f, %.0f, %.0f)\n"
+                                                  , PQ[0], PQ[1], PQ[2]);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     printf("
+                 |PQ| = sqrt(209) = %.4f\n", mag);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     printf("|PQ| = sqrt(209) = %.4f\n"
+                                           , mag);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12     printf("
+                 Direction cosines:\n");
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12     printf("Direction cosines:\n"
+                                      );
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13     printf("
+                 cos(alpha) = %.4f\n", cos_alpha);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13     printf("cos(alpha) = %.4f\n"
+                                     , cos_alpha);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14     printf("
+                 cos(beta)  = %.4f\n", cos_beta);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14     printf("cos(beta)  = %.4f\n"
+                                     , cos_beta);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15     printf("
+                 cos(gamma) = %.4f\n", cos_gamma);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15     printf("cos(gamma) = %.4f\n"
+                                     , cos_gamma);
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+
+[5
+
+]
+\openout4 = `main-slides.vrb'.
+
+ (./main-slides.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+17.
+
+(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/lm/ts1
+lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+Overfull \vbox (1.72923pt too high) detected at line 153
  []
 
 
@@ -1849,47 +2220,118 @@ Overfull \vbox (97.72923pt too high) detected at line 107
 [6
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
-lm/lm-rmtt.enc}]
-<figs/fig1.png, id=202, 390.258pt x 381.8265pt>
-File: figs/fig1.png Graphic file (type png)
-<use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 113.
-(pdftex.def)             Requested size: 212.99306pt x 208.39136pt.
-
-
-[7
-
- <./figs/fig1.png>]
+lm/lm-ts1.enc}]
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 137
- []
+
+[7
+
+]
+\openout4 = `main-slides.vrb'.
+
+ (./main-slides.vrb
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ax.set_title("
+                  Line joining P(4,3,-5) and Q(-2,1,8)")
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...itle("Line joining P(4,3,-5) and Q(-2,1,8)"
+                                                  )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 plt.savefig("
+                  fig1.png", dpi=300, bbox_inches="tight")
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 plt.savefig("fig1.png"
+                           , dpi=300, bbox_inches="tight")
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...savefig("fig1.png", dpi=300, bbox_inches="
+                                                  tight")
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...g("fig1.png", dpi=300, bbox_inches="tight"
+                                                  )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
 
 [8
 
 ]
-\openout4 = `main-slides.vrb'.
+<figs/fig1.png, id=263, 355.5684pt x 370.0224pt>
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 197.
+(pdftex.def)             Requested size: 200.24545pt x 208.3855pt.
 
- (./main-slides.vrb)
 
 [9
 
-]
+ <./figs/fig1.png>]
+\tf@nav=\write7
+\openout7 = `main-slides.nav'.
 
-[10
+\tf@toc=\write8
+\openout8 = `main-slides.toc'.
 
-]
-\tf@nav=\write6
-\openout6 = `main-slides.nav'.
-
-\tf@toc=\write7
-\openout7 = `main-slides.toc'.
-
-\tf@snm=\write8
-\openout8 = `main-slides.snm'.
+\tf@snm=\write9
+\openout9 = `main-slides.snm'.
 
  (./main-slides.aux)
  ***********
@@ -1910,13 +2352,13 @@ Package rerunfilecheck Info: Checksums for `main-slides.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51565 strings out of 467801
- 1244413 string characters out of 5417843
- 2273149 words of memory out of 5000000
- 79314 multiletter control sequences out of 15000+600000
- 668187 words of font info for 81 fonts, out of 8000000 for 9000
+ 59362 strings out of 467801
+ 1464465 string characters out of 5417843
+ 2536095 words of memory out of 5000000
+ 87009 multiletter control sequences out of 15000+600000
+ 668492 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1179b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,123p,1179b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/lm/lmex10.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-di
 st/fonts/type1/public/lm/lmmi10.pfb></data/data/com.termux/files/usr/share/texl
@@ -1927,13 +2369,13 @@ s8.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/typ
 e1/public/lm/lmssbx10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
 exmf-dist/fonts/type1/public/lm/lmsso10.pfb></data/data/com.termux/files/usr/sh
 are/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></data/data/com.te
-rmux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
-/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publi
-c/txfonts/txsya.pfb>
-Output written on main-slides.pdf (10 pages, 307667 bytes).
+rmux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
+data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public
+/lm/lmtt10.pfb>
+Output written on main-slides.pdf (9 pages, 324212 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 20 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

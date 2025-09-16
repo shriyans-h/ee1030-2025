@@ -18,45 +18,6 @@
 
 \setbeamertemplate{page number in head/foot}[totalframenumber]
 
-\usepackage{tcolorbox}
-\tcbuselibrary{minted,breakable,xparse,skins}
-
-\definecolor{bg}{gray}{0.95}
-\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
-  breakable=true,
-  listing engine=minted,
-  listing only,
-  minted language=#2,
-  minted style=default,
-  minted options={%
-    linenos,
-    gobble=0,
-    breaklines=true,
-    breakafter=,,
-    fontsize=\small,
-    numbersep=8pt,
-    #1},
-  boxsep=0pt,
-  left skip=0pt,
-  right skip=0pt,
-  left=25pt,
-  right=0pt,
-  top=3pt,
-  bottom=3pt,
-  arc=5pt,
-  leftrule=0pt,
-  rightrule=0pt,
-  bottomrule=2pt,
-  toprule=2pt,
-  colback=bg,
-  colframe=orange!70,
-  enhanced,
-  overlay={%
-    \begin{tcbclipinterior}
-    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
-    \end{tcbclipinterior}},
-  #3,
-}
 \lstset{
     language=C,
     basicstyle=\ttfamily\small,
@@ -68,11 +29,9 @@
     breaklines=true,
     showstringspaces=false,
 }
-\title 
-{MatGeo Assignment 1.2.14}
 
-\author
-{AI25BTECH11008}
+\title{MatGeo Assignment 1.2.14}
+\author{AI25BTECH11008\\Chiruvella Harshith Sharan}
 \begin{document}
 
 \frame{\titlepage}
@@ -84,56 +43,30 @@ $A(-2,3)$, $B(6,7)$ and $C(8,3)$ is
 
 \begin{frame}{Theoretical Solution}
 \noindent
-Let us solve the given equation theoretically and then verify the solution computationally. \\
-According to the question, \\
+We solve this using \textbf{vector algebra}. \\
 
 We are given three vertices of a parallelogram:
 $$A(-2,3), \; B(6,7), \; C(8,3).$$
 \end{frame}
 
 \begin{frame}{Property}
-\textbf{In a parallelogram, the diagonals bisect each other. So, the midpoints of the diagonals are equal.}
+\textbf{In a parallelogram, opposite sides are parallel and equal.}  
+
+Thus, the fourth vertex is obtained as:
+\[
+\vec{D} = \vec{A} + \vec{C} - \vec{B}.
+\]
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Let $D(x,y)$ be the fourth vertex. \\
+Substitute the given values:  
 
 \[
-\text{Midpoint of } AC = \text{Midpoint of } BD
+\vec{D} = \myvec{-2 \\ 3} + \myvec{8 \\ 3} - \myvec{6 \\ 7}
 \]
 
 \[
-\frac{1}{2}
-\myvec{
--2+8 \\
-3+3
-}
-=
-\frac{1}{2}
-\myvec{
-6+x \\
-7+y
-}
-\]
-
-\[
-\myvec{
-3 \\
-3
-}
-=
-\myvec{
-\frac{6+x}{2} \\
-\frac{7+y}{2}
-}
-\]
-
-\[
-\frac{6+x}{2} = 3, \quad \frac{7+y}{2} = 3
-\]
-
-\[
-x = 0, \quad y = -1
+= \myvec{0 \\ -1}
 \]
 
 \[
@@ -142,38 +75,47 @@ x = 0, \quad y = -1
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{C-code}
+\frametitle{C-code (Vector Algebra Method)}
 \begin{lstlisting}
-    
-    #include <stdio.h>
+#include <stdio.h>
 
 int main() {
     // Given vertices
     int x1 , y1 ;  // A
-    int x2 , y2 ;   // B
-    int x3 , y3 ;   // C
-    int x, y;             // D (to be calculated)
+    int x2 , y2 ;  // B
+    int x3 , y3 ;  // C
+    int x, y;      // D (to be calculated)
 
-    // Using midpoint property: midpoint of AC = midpoint of BD
-    x = x1 + x3 - x2;  // Derived formula
+    printf("Enter coordinates of A: ");
+    scanf("%d %d", &x1, &y1);
+
+    printf("Enter coordinates of B: ");
+    scanf("%d %d", &x2, &y2);
+
+    printf("Enter coordinates of C: ");
+    scanf("%d %d", &x3, &y3);
+
+    // Using vector algebra property: D = A + C - B
+    x = x1 + x3 - x2;
     y = y1 + y3 - y2;
+
+    printf("The fourth vertex D is: (%d, %d)\n", x, y);
 
     return 0;
 }
-
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}{Plot}
     \centering
     \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{figs/fig1.png} 
-    \label{The visual of the parallelogram with vertices A, B, C, D and diagonals shown}
+    \label{Parallelogram ABCD using vector algebra}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Python code for plot}
 \begin{lstlisting}
-    import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Given points
 A = (-2, 3)
@@ -191,17 +133,12 @@ plt.plot(x_coords, y_coords, 'b-o')
 # Plot diagonals
 plt.plot([A[0], C[0]], [A[1], C[1]], 'r--', label='Diagonal AC')
 plt.plot([B[0], D[0]], [B[1], D[1]], 'g--', label='Diagonal BD')
-
-
 \end{lstlisting}
 \end{frame}
-
 
 \begin{frame}[fragile]
 \frametitle{Python code for plot}
 \begin{lstlisting}
-
-
 # Label points
 plt.text(A[0]-0.4, A[1]-0.3, 'A(-2,3)', fontsize=10)
 plt.text(B[0]+0.1, B[1], 'B(6,7)', fontsize=10)
@@ -217,15 +154,13 @@ plt.grid(True, linestyle='--', alpha=0.5)
 plt.legend()
 plt.title("Parallelogram ABCD with diagonals AC and BD")
 
+plt.show()
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}{Conclusion}
-From the figure it is clearly verified that the theoretical solution matches with the computational solution.
+From the figure it is clearly verified that the vector algebra solution matches with the computational solution.
 \end{frame}
 
 \end{document}
-
-
-
 

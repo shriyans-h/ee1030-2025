@@ -2,8 +2,8 @@
 
 int main() {
     // Given vertices
-    int x1 , y1 ;  // A
-    int x2 , ;   // B
+    int x1 , y1 ;   // A
+    int x2 , y2 ;   // B
     int x3 , y3 ;   // C
     int x, y;             // D (to be calculated)
 

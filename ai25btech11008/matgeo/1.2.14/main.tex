@@ -2,11 +2,9 @@
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
-\usepackage{tfrupee} % Include tfrupee package
-
-\setlength{\headheight}{1cm} % Set the height of the header box
-\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{tfrupee} 
+\setlength{\headheight}{1cm} 
+\setlength{\headsep}{0mm}    
 
 \usepackage{gvv-book}
 \usepackage{gvv}
@@ -24,19 +22,8 @@
 \usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
-\usepackage{listings}
-% \usepackage{gvv}                                        
-\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}                                
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow} 
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
-\usepackage{lscape}
 \usepackage{circuitikz}
+
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
     text width=4em, text centered, rounded corners, minimum height=3em]
 \tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
@@ -48,98 +35,61 @@
 \vspace{3cm}
 
 \title{MatGeo Assignment 1.2.14}
-\author{AI25BTECH11008\\Chiruvella Harshith Sharan}
+\author{AI25BTECH11008 \\ Chiruvella Harshith Sharan}
 
- \maketitle
+\maketitle
 {\let\newpage\relax\maketitle}
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-\setlength{\intextsep}{10pt} % Space between text and floats
-
+\setlength{\intextsep}{10pt}
 
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
+
 \noindent
 \textbf{Question:}\\
 The fourth vertex $D$ of a parallelogram $ABCD$ whose three vertices are 
 $A(-2,3)$, $B(6,7)$ and $C(8,3)$ is \\
 \noindent
 \textbf{Solution:}\\
-Let us solve the given equation theoretically and then verify the solution computationally. \\
+We solve this using \textbf{vector algebra}.  
 
-We are given three vertices of a parallelogram:
-
+We are given three vertices:  
 \[
-A(-2,3), \; B(6,7), \; C(8,3).
+A = \myvec{-2\\3}, \quad B = \myvec{6\\7}, \quad C = \myvec{8\\3}.
 \]
 
-\textbf{Property: In a parallelogram, diagonals bisect each other.}
+\textbf{Property: In a parallelogram, opposite sides are parallel and equal.}  
 
-Thus, midpoint of $AC = $ midpoint of $BD$.  
-
-Let $D(x,y)$ be the fourth vertex.  
-
+Thus,  
 \[
-\frac{1}{2}
-\myvec{
--2+8 \\
-3+3
-}
-=
-\frac{1}{2}
-\myvec{
-6+x \\
-7+y
-}
+\vec{D} = \vec{A} + \vec{C} - \vec{B}.
+\]
+
+Substitute the values:  
+\[
+\vec{D} = \myvec{-2\\3} + \myvec{8\\3} - \myvec{6\\7}.
 \]
 
 \[
-\myvec{
-\frac{6}{2} \\
-\frac{6}{2}
-}
-=
-\myvec{
-\frac{6+x}{2} \\
-\frac{7+y}{2}
-}
+\vec{D} = \myvec{(-2+8-6) \\ (3+3-7)} = \myvec{0 \\ -1}.
 \]
 
+Hence,  
 \[
-\myvec{
-3 \\
-3
-}
-=
-\myvec{
-\frac{6+x}{2} \\
-\frac{7+y}{2}
-}
-\]
-
-\[
-\frac{6+x}{2} = 3, \quad \frac{7+y}{2} = 3
-\]
-
-\[
-x = 0, \quad y = -1
-\]
-
-\[
-\therefore \; D(0,-1)
+\therefore D(0,-1)
 \]
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{figs/fig1.png}
-    \caption{The visual of the parallelogram with vertices $A$, $B$, $C$, $D$ and diagonals shown}
+    \caption{Parallelogram with vertices $A$, $B$, $C$, $D$ using vector method}
     \label{fig:figs/fig1.png}
 \end{figure}
 
-
 \noindent
-From the figure it is clearly verified that the theoretical solution matches with the computational solution.
+Thus, using vector addition, the fourth vertex is obtained as $D(0,-1)$, which matches the computational result.
 
 \end{document}
