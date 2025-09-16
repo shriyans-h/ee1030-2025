@@ -1,0 +1,11 @@
+\frametitle{Python Code - Using Shared Object}
+    \begin{lstlisting}
+
+ax.set_xlabel('a')
+ax.set_ylabel('b')
+ax.set_zlabel('c')
+ax.set_title('3D Plot of plane: a - 2c = 0 (from shared library)')
+
+plt.show()
+
+\end{lstlisting}

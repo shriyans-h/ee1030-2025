@@ -1,0 +1,134 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} 
+\usepackage{tfrupee} 
+
+\setlength{\headheight}{1cm} 
+\setlength{\headsep}{0mm}     
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.12.44}
+\author{AI25BTECH11030 -Sarvesh Tamgade}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} 
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}: Find the equation of the set of points which are equidistant from the points \(\vec{A} = \myvec{1 \\ 2 \\ 3}\) and \(\vec{B} = \myvec{3 \\ 2 \\ -1}\).
+
+\textbf{Solution}:
+
+Let \(\vec{X} = \myvec{a \\ b \\ c}\) be the position vector of any point equidistant from \(\vec{A}\) and \(\vec{B}\).
+
+The condition for \(\vec{X}\) to be equidistant is:
+\[
+\|\vec{X} - \vec{A}\| = \|\vec{X} - \vec{B}\|
+\]
+
+Squaring both sides we get:
+\[
+(\vec{X} - \vec{A})^\top (\vec{X} - \vec{A}) = (\vec{X} - \vec{B})^\top (\vec{X} - \vec{B})
+\]
+
+Expanding,
+\[
+\vec{X}^\top \vec{X} - 2 \vec{A}^\top \vec{X} + \vec{A}^\top \vec{A} = \vec{X}^\top \vec{X} - 2 \vec{B}^\top \vec{X} + \vec{B}^\top \vec{B}
+\]
+\[
+-2 \vec{A}^\top \vec{X} + \vec{A}^\top \vec{A} = -2 \vec{B}^\top \vec{X} + \vec{B}^\top \vec{B}
+\]
+
+Rearranging,
+\[
+2(\vec{B} - \vec{A})^\top \vec{X} = \vec{B}^\top \vec{B} - \vec{A}^\top \vec{A}
+\]
+
+Calculate \(\vec{B} - \vec{A}\):
+\[
+\vec{B} - \vec{A} = \myvec{3 - 1 \\ 2 - 2 \\ -1 - 3} = \myvec{2 \\ 0 \\ -4}
+\]
+
+Calculate \(\vec{B}^\top \vec{B}\) and \(\vec{A}^\top \vec{A}\):
+\[
+\vec{B}^\top \vec{B} = 3^2 + 2^2 + (-1)^2 = 14, \quad
+\vec{A}^\top \vec{A} = 1^2 + 2^2 + 3^2 = 14
+\]
+
+Thus,
+\[
+2 \myvec{2 & 0 & -4} \myvec{a \\ b \\ c} = 14 - 14 = 0
+\]
+
+Simplifying,
+\[
+\myvec{4 & 0 & -8} \myvec{a \\ b \\ c} = 0
+\]
+
+This matrix equation represents the plane:
+\[
+4a - 8c = 0
+\]
+
+or equivalently,
+
+\[
+a - 2c = 0
+\]
+
+\textbf{Final Answer:} The set of points equidistant from \(\vec{A}\) and \(\vec{B}\) lies on the plane defined by
+\[
+\boxed{
+\myvec{4 & 0 & -8} \vec{x} = 0
+}
+\]
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\linewidth]{FIG/fig1.png}
+    \caption{Vector Representation}
+    \label{fig:FIG/fig1.png}
+    \end{figure}
+
+\end{document}  
