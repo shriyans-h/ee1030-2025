@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.9)  13 SEP 2025 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.9)  15 SEP 2025 14:25
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -1132,6 +1133,15 @@ File: figs/1.png Graphic file (type png)
 <use figs/1.png>
 Package pdftex.def Info: figs/1.png  used on input line 108.
 (pdftex.def)             Requested size: 171.14764pt x 171.149pt.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 108.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 108.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 108.
+
 
 
 [5
@@ -1155,11 +1165,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 26E49DCAEF513F9017B62323394D36ED;161.
  ) 
 Here is how much of TeX's memory you used:
- 25265 strings out of 473190
- 479028 string characters out of 5715801
+ 25286 strings out of 473190
+ 479321 string characters out of 5715801
  856496 words of memory out of 5000000
- 47987 multiletter control sequences out of 15000+600000
- 566774 words of font info for 64 fonts, out of 8000000 for 9000
+ 48006 multiletter control sequences out of 15000+600000
+ 571145 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,394b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1171,11 +1181,12 @@ r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on main.pdf (5 pages, 110836 bytes).
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on main.pdf (5 pages, 119979 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  14 named destinations out of 1000 (max. 500000)
  64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
