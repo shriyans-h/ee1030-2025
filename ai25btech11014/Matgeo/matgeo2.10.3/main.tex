@@ -1,0 +1,175 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.10.3}
+\author{AI25BTECH11014 - Gooty Suhas}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\large\textbf{Problem}}
+\vspace{0.5cm}
+
+Find the unit vector perpendicular to the plane determined by the points:
+
+
+\[
+\vec{P} = \myvec{1 \\ -1 \\ 2}, \quad
+\vec{Q} = \myvec{2 \\ 0 \\ -1}, \quad
+\vec{R} = \myvec{0 \\ 2 \\ 1}
+\]
+
+
+
+\section*{\large\textbf{Solution}}
+\vspace{0.5cm}
+
+To find a unit vector perpendicular to the plane, we compute two direction vectors and take their cross product.
+
+\subsection*{Step 1: Direction Vectors}
+
+
+\[
+\vec{PQ} = \vec{Q} - \vec{P} = \myvec{1 \\ 1 \\ -3}, \quad
+\vec{PR} = \vec{R} - \vec{P} = \myvec{-1 \\ 3 \\ -1}
+\]
+
+
+
+\subsection*{Step 2: Cross Product}
+The cross product of two vectors \( \vec{a} = \myvec{a_1 \\ a_2 \\ a_3} \) and \( \vec{b} = \myvec{b_1 \\ b_2 \\ b_3} \) is:
+
+
+\[
+\vec{a} \times \vec{b} = \myvec{
+a_2 b_3 - a_3 b_2 \\
+a_3 b_1 - a_1 b_3 \\
+a_1 b_2 - a_2 b_1
+}
+\]
+
+
+
+Applying this:
+
+
+\[
+\vec{N} = \vec{PQ} \times \vec{PR} =
+\myvec{
+(1)(-1) - (-3)(3) \\
+(-3)(-1) - (1)(1) \\
+(1)(3) - (1)(-1)
+} =
+\myvec{8 \\ 2 \\ 4}
+\]
+
+
+
+\subsection*{Step 3: Magnitude}
+
+
+\[
+\|\vec{N}\| = \sqrt{8^2 + 2^2 + 4^2} = \sqrt{84}
+\]
+
+
+
+\subsection*{Step 4: Unit Vector}
+
+
+\[
+\hat{n} = \frac{1}{\sqrt{84}} \vec{N}
+= \myvec{\frac{8}{\sqrt{84}} \\ \frac{2}{\sqrt{84}} \\ \frac{4}{\sqrt{84}}}
+\]
+
+
+
+
+
+\[
+\boxed{
+\hat{n} = \myvec{\frac{8}{\sqrt{84}} \\ \frac{2}{\sqrt{84}} \\ \frac{4}{\sqrt{84}}}
+}
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figs/fig1.png}
+    \caption{Plane and its normal}
+    \label{fig:fig1}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
