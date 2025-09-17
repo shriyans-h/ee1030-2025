@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1758022387.36318 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/1.8.16/main.tex" "main.pdf" "main" 1758022387.95589 0
+["pdflatex"] 1758120913.77674 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/1.8.16/main.tex" "main.pdf" "main" 1758120914.31137 0
   "/etc/texmf/web2c/texmf.cnf" 1754154256.17489 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/1.8.16/main.tex" 1758022386.72007 935 a381ba27b96829649c2a900512a042c0 ""
+  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/1.8.16/main.tex" 1758120913.62925 1229 baa86ce01750b2ecfa349a309ea0b86b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -290,10 +290,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1754425258.11696 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1754425266 8215844 a8669b1d38396b5b9aec55f004a41d83 ""
+  "figs/plot.png" 1758120825.98125 28074 c2dfcc676672c4f3d04315ef44a8e0c5 ""
   "gvv.sty" 1757001045.93121 4701 37bd06f55411f9798df5697cb07e3d79 ""
-  "main.aux" 1758022387.88407 376 7c80d025853509c55f47edca4dce56b3 "pdflatex"
-  "main.out" 1758022387.88407 192 24cd1dfefca9225fd756d8801556ef54 "pdflatex"
-  "main.tex" 1758022386.72007 935 a381ba27b96829649c2a900512a042c0 ""
+  "main.aux" 1758120914.24925 862 f64556c4cd054bfa40a5f1a49ce1b5c6 "pdflatex"
+  "main.out" 1758120914.24925 270 cb8125d0e075d8eeafc1b5d1c6a2a5d4 "pdflatex"
+  "main.tex" 1758120913.62925 1229 baa86ce01750b2ecfa349a309ea0b86b ""
   (generated)
   "main.aux"
   "main.log"
