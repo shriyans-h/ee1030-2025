@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  13 SEP 2025 12:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  18 SEP 2025 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1773,22 +1773,19 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}] [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathit.enc}] [4
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [4
 
-] [5
-
-]
-<figs/plot4.png, id=175, 1387.584pt x 784.1295pt>
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+<figs/plot4.png, id=147, 1387.584pt x 784.1295pt>
 File: figs/plot4.png Graphic file (type png)
 <use figs/plot4.png>
-Package pdftex.def Info: figs/plot4.png  used on input line 152.
+Package pdftex.def Info: figs/plot4.png  used on input line 130.
 (pdftex.def)             Requested size: 342.2953pt x 193.42355pt.
 
-Overfull \vbox (1.89723pt too high) detected at line 152
+Overfull \vbox (1.89723pt too high) detected at line 130
  []
 
-[6
+[5
 
  <./figs/plot4.png>]
 \openout4 = `main.vrb'.
@@ -1799,32 +1796,117 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (2.62871pt too wide) in paragraph at lines 6--6
-[]\OT1/lmtt/m/n/10.95 a = np.array(list(map(int, input("Enter vector a (3 integ
-ers[] 
+Overfull \hbox (25.62364pt too wide) in paragraph at lines 7--7
+[]\OT1/lmtt/m/n/10.95 void cross_product(double a[3], double b[3], double resul
+t[3]) {[] 
  []
 
+) [6
 
-Overfull \hbox (2.62871pt too wide) in paragraph at lines 8--8
-[]\OT1/lmtt/m/n/10.95 b = np.array(list(map(int, input("Enter vector b (3 integ
-ers[] 
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-10.
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-Overfull \vbox (9.12935pt too high) detected at line 173
- []
-
-[7
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ts1.enc}]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [8
+ (./main.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+3.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Overfull \hbox (31.37238pt too wide) in paragraph at lines 4--4
+[]\OT1/lmtt/m/n/10.95 void compute_c(double a[3], double b[3], double k, double
+ c[3]) {[] 
+ []
+
+) [7
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+Overfull \hbox (54.36731pt too wide) in paragraph at lines 15--15
+[]    \OT1/lmtt/m/n/10.95 printf("\nVector c = (%.2lf, %.2lf, %.2lf)\n", c[0], 
+c[1], c[2]);[] 
+ []
+
+) [8
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [9
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+Overfull \hbox (152.09578pt too wide) in paragraph at lines 10--10
+[]\OT1/lmtt/m/n/10.95 a = list(map(float, input("Enter vector a (3 numbers sepa
+rated by space): ").split()))[] 
+ []
+
+
+Overfull \hbox (152.09578pt too wide) in paragraph at lines 11--11
+[]\OT1/lmtt/m/n/10.95 b = list(map(float, input("Enter vector b (3 numbers sepa
+rated by space): ").split()))[] 
+ []
+
+) [10
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+Overfull \hbox (88.85971pt too wide) in paragraph at lines 10--10
+[]        \OT1/lmtt/m/n/10.95 raise ValueError("Vector a is (nearly) zero | no 
+unique solution.")[] 
+ []
+
+
+Overfull \hbox (94.60844pt too wide) in paragraph at lines 13--13
+[]        \OT1/lmtt/m/n/10.95 raise ValueError("Inconsistent input: a\TS1/lmtt/
+m/n/10.95 ·\OT1/lmtt/m/n/10.95 b must be 0 for b = a \TS1/lmtt/m/n/10.95 Ö \OT1
+/lmtt/m/n/10.95 c.")[] 
+ []
+
+)
+Overfull \vbox (9.12935pt too high) detected at line 244
+ []
+
+[11
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+Overfull \hbox (71.61351pt too wide) in paragraph at lines 6--6
+[]        \OT1/lmtt/m/n/10.95 raise ValueError("Please enter exactly 3 numbers 
+for a vector.")[] 
+ []
+
+
+Overfull \hbox (106.10591pt too wide) in paragraph at lines 10--10
+[]        \OT1/lmtt/m/n/10.95 a = parse_vec(input("Enter vector a (3 values sep
+arated by space): "))[] 
+ []
+
+
+Overfull \hbox (106.10591pt too wide) in paragraph at lines 11--11
+[]        \OT1/lmtt/m/n/10.95 b = parse_vec(input("Enter vector b (3 values sep
+arated by space): "))[] 
+ []
+
+
+Overfull \hbox (19.87491pt too wide) in paragraph at lines 12--12
+[]        \OT1/lmtt/m/n/10.95 k = float(input("Enter the value of a\TS1/lmtt/m/
+n/10.95 ·\OT1/lmtt/m/n/10.95 c (scalar k): "))[] 
+ []
+
+)
+Overfull \vbox (22.72935pt too high) detected at line 266
+ []
+
+[12
 
 ]
 \tf@nav=\write8
@@ -1855,10 +1937,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56515 strings out of 474222
- 1352702 string characters out of 5748733
- 2182182 words of memory out of 5000000
- 77775 multiletter control sequences out of 15000+600000
+ 56532 strings out of 474222
+ 1352825 string characters out of 5748733
+ 2182180 words of memory out of 5000000
+ 77774 multiletter control sequences out of 15000+600000
  599425 words of font info for 77 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1867,14 +1949,13 @@ pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-txfonts/txsyb.pfb>
-Output written on main.pdf (8 pages, 242534 bytes).
+ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/txfonts/txsya.pfb>
+Output written on main.pdf (12 pages, 238040 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
+ 26 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
