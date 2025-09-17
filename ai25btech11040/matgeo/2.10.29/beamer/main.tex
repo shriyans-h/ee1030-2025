@@ -17,35 +17,50 @@
 
 \begin{frame}
     \frametitle{Solution: }
-    To find the volume of the parallelopiped, we can use the scalar triple product formula:
+    To find the volume of the parallelopiped, we can use the Gram matrix formula:
     \begin{align}
-        V = \norm{\vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC})} \\
-        \vec{OA} = \myvec{2                                        \\ -2 \\ 0}, \quad
-        \vec{OB} = \myvec{1                                        \\ 1 \\ -1}, \quad
-        \vec{OC} = \myvec{3                                        \\ 0 \\ -1}\\
+        V = \sqrt{\det(\vec{G})} \\
+        \vec{OA} = \myvec{2      \\ -2 \\ 0}, \quad
+        \vec{OB} = \myvec{1      \\ 1 \\ -1}, \quad
+        \vec{OC} = \myvec{3      \\ 0 \\ -1}\\
     \end{align}
-    To find the cross product between two vectors $\vec{a} = \myvec{a_1 \\ a_2 \\ a_3}$ and $\vec{b} = \myvec{b_1 \\ b_2 \\ b_3}$, we can use the matrix multiplication method, by first defining a new matrix $[\vec{a}]_{\times}$ as follows:
+    We define the Gram matrix $\vec{G}$ as:
+    \begin{align}
+        \vec{G} = \myvec{\vec{OA}^{\mathrm{T}}\vec{OA} & \vec{OA}^{\mathrm{T}}\vec{OB} & \vec{OA}^{\mathrm{T}}\vec{OC}  \\
+        \vec{OB}^{\mathrm{T}}\vec{OA}                  & \vec{OB}^{\mathrm{T}}\vec{OB} & \vec{OB}^{\mathrm{T}}\vec{OC}  \\
+        \vec{OC}^{\mathrm{T}}\vec{OA}                  & \vec{OC}^{\mathrm{T}}\vec{OB} & \vec{OC}^{\mathrm{T}}\vec{OC}}
+    \end{align}
 \end{frame}
 \begin{frame}
+    Calculating the dot products:
     \begin{align}
-        [\vec{a}]_{\times} = \myvec{0 & -a_3 & a_2 \\ a_3 & 0 & -a_1 \\ -a_2 & a_1 & 0} \\
+        \vec{OA}^{\mathrm{T}}\vec{OA} = 8, \quad
+        \vec{OA}^{\mathrm{T}}\vec{OB} = 0, \quad
+        \vec{OA}^{\mathrm{T}}\vec{OC} = 6 \\
+        \vec{OB}^{\mathrm{T}}\vec{OB} = 3, \quad
+        \vec{OB}^{\mathrm{T}}\vec{OC} = 4 \\
+        \vec{OC}^{\mathrm{T}}\vec{OC} = 10
     \end{align}
-    Now, $\vec{a} \times \vec{b} = [\vec{a}]_{\times}\vec{b}$.\\
-    Using this method, we can find the cross product $\vec{OB} \times \vec{OC}$ as follows:
+    The Gram matrix $\vec{G}$ becomes:
     \begin{align}
-        [\vec{OB}]_{\times} = \myvec{0                                    & 1 & 1 \\ -1 & 0 & -1 \\ -1 & 1 & 0} \\
-        \vec{OB} \times \vec{OC} = [\vec{OB}]_{\times}\vec{OC} = \myvec{0 & 1 & 1 \\ -1 & 0 & -1 \\ -1 & 1 & 0}\myvec{3 \\ 0 \\ -1} = \myvec{-1 \\ -2 \\ 3}
+        \vec{G} = \myvec{
+        8 & 0 & 6  \\
+        0 & 3 & 4  \\
+        6 & 4 & 10
+        }
     \end{align}
-    Now, we can find the scalar triple product $\vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC})$ as follows:
+
+    Therefore, $V = \sqrt{|\det(\vec{G})|} = \sqrt{4} = 2$.
 \end{frame}
+
 \begin{frame}
-    \begin{align}
-        \vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC}) = \myvec{2 & -2 & 0}\myvec{-1 \\ -2 \\ 3} = \myvec{-2 + 4 + 0} = \myvec{2}
-    \end{align}
-    Finally, we can find the volume of the parallelopiped as follows:
-    \begin{align}
-        V = \norm{\vec{OA}^{\mathrm{T}}(\vec{OB} \times \vec{OC})} = \norm{\myvec{2}} = 2
-    \end{align}
+    \frametitle{Plot: }
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.8\columnwidth]{../figs/plot.png}
+        \caption{Parallelopiped formed by vectors $\vec{OA}$, $\vec{OB}$ and $\vec{OC}$}
+        \label{fig:2.10.29}
+    \end{figure}
 \end{frame}
 
 \end{document}
