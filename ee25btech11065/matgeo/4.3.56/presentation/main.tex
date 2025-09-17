@@ -104,32 +104,61 @@ The intercepts define three points on the plane, which we can label A, B, and C.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-We can find two direction vectors, $\mathbf{m_1}$ and $\mathbf{m_2}$, that lie in the plane:
-\begin{align*}
-    \mathbf{m_1} &= \mathbf{B} - \mathbf{A} = \myvec{0-2\\3-0\\0-0} = \myvec{-2\\3\\0} \\
-    \mathbf{m_2} &= \mathbf{C} - \mathbf{A} = \myvec{0-2\\0-0\\4-0} = \myvec{-2\\0\\4}
-\end{align*}
+The equation of the plane can also be written in the form
+\[
+\mathbf{n}^T \mathbf{x} = 1
+\]
+  where $\mathbf{n}$ is the normal vector.
+
+Substituting the three intercept points $A = \myvec{2\\0\\0}$, 
+$B = \myvec{0\\3\\0}$, and $C = \myvec{0\\0\\4}$ into this equation:
+
+\begin{align}
+\mathbf{n}^T \mathbf{A} &= 1 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+\implies \mathbf{n}^T \myvec{2\\0\\0} = 1 \\[6pt]
+\end{align}
+
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-The normal vector to the plane, $\mathbf{n}$, is found by the cross product of these two vectors.
-\begin{align*}
-    \mathbf{n} = \mathbf{m_1} \times \mathbf{m_2} &= \myvec{-2\\3\\0} \times \myvec{-2\\0\\4} \\
-    &= \myvec{(3)(4) - (0)(0) \\ (0)(-2) - (-2)(4) \\ (-2)(0) - (3)(-2)} = \myvec{12\\8\\6}
-\end{align*}
-We can simplify the normal vector to $\mathbf{n} = \myvec{6\\4\\3}$. The equation of the plane is then given by:
-\[ \mathbf{n}^T (\mathbf{x} - \mathbf{A}) = 0 \]
+\begin{align}
+\mathbf{n}^T \mathbf{B} &= 1 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+\implies \mathbf{n}^T \myvec{0\\3\\0} = 1 \\[6pt]
+\mathbf{n}^T \mathbf{C} &= 1 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+\implies \mathbf{n}^T \myvec{0\\0\\4} = 1
+\end{align}
+Combining these into a single matrix equation:
+\begin{align}
+\myvec{
+    2 & 0 & 0 \\
+    0 & 3 & 0 \\
+    0 & 0 & 4
+}
+\mathbf{n}
+=
+\myvec{1\\1\\1}
+\end{align}
+
+
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Substituting the numerical values, where $\mathbf{x} = [x, y, z]^T$:
-\begin{align*}
-    \myvec{6 & 4 & 3} \left( \myvec{x\\y\\z} - \myvec{2\\0\\0} \right) &= 0 \\
-    \implies \myvec{6 & 4 & 3} \myvec{x-2\\y\\z} &= 0 \\
-    \implies 6(x-2) + 4y + 3z &= 0 \\
-    \implies 6x - 12 + 4y + 3z &= 0 \\
-    \implies 6x + 4y + 3z &= 12
-\end{align*}
+Solving, we obtain
+\[
+\mathbf{n} = 
+\myvec{\tfrac{1}{2}\\[4pt]\tfrac{1}{3}\\[4pt]\tfrac{1}{4}}
+\]
+
+Hence, the plane equation 
+\[
+\mathbf{n}^T \mathbf{x} = 1 
+\]
+\[
+\myvec{\tfrac{1}{2}\\[4pt]\tfrac{1}{3}\\[4pt]\tfrac{1}{4}}\mathbf{x} =1
+\]
 \end{frame}
 
 
