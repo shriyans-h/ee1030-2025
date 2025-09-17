@@ -108,56 +108,54 @@ holds if and only if
 \begin{frame}
 
 \begin{solution}
-Let 
+Let
 \begin{align}
-A=\myvec{\vec{a}&\vec{b}&\vec{c}}, \qquad 
+A=\myvec{\vec{a}&\vec{b}&\vec{c}},\qquad 
 G=A^\top A
 =\myvec{
 \vec{a}^\top\vec{a} & \vec{a}^\top\vec{b} & \vec{a}^\top\vec{c}\\
 \vec{b}^\top\vec{a} & \vec{b}^\top\vec{b} & \vec{b}^\top\vec{c}\\
-\vec{c}^\top\vec{a} & \vec{c}^\top\vec{b} & \vec{c}^\top\vec{c} } .
-\label{eq:gram}
+\vec{c}^\top\vec{a} & \vec{c}^\top\vec{b} & \vec{c}^\top\vec{c}}
+\label{eq:gram-matrix}
 \end{align}
-The scalar triple product equals the determinant of the column matrix,
+be the column and Gram matrices of $\vec{a},\vec{b},\vec{c}$.
+The given magnitude equals $\abs{\det A}$, so
 \begin{align}
-(\vec{a}\times\vec{b})\cdot\vec{c}
-=\det\myvec{\vec{a}&\vec{b}&\vec{c}}=\det A .
-\label{eq:triple-is-det}
+\abs{\det A}^{\,2}=(\det A)^2
+=\det\!\paren{A^\top A}
+=\det G .
+\label{eq:det-square}
 \end{align}
-Hence
+By Hadamard’s inequality for the positive semidefinite matrix $G$,
 \begin{align}
-\abs{(\vec{a}\times\vec{b})\cdot\vec{c}}^{2}
-=(\det A)^2
-= \det(A^\top A)=\det G .
-\label{eq:detG}
+\det G
+\le (\vec{a}^\top\vec{a})\,
+   (\vec{b}^\top\vec{b})\,
+   (\vec{c}^\top\vec{c})
+= \|\vec{a}\|^{2}\,\|\vec{b}\|^{2}\,\|\vec{c}\|^{2},
+\label{eq:hadamard-bound}
 \end{align}
-By Hadamard’s inequality for the positive semidefinite Gram matrix $G$,
+with equality \emph{iff} $G$ is diagonal, i.e., the columns of $A$ are pairwise orthogonal:
 \begin{align}
-\det G \le (\vec{a}^\top\vec{a})\,(\vec{b}^\top\vec{b})\,(\vec{c}^\top\vec{c})
-= \|\vec{a}\|^2\,\|\vec{b}\|^2\,\|\vec{c}\|^2,
-\label{eq:hadamard}
+\vec{a}^\top\vec{b}=0,\qquad
+\vec{b}^\top\vec{c}=0,\qquad
+\vec{c}^\top\vec{a}=0 .
+\label{eq:orth}
 \end{align}
-with equality \emph{iff} the columns of $A$ are pairwise orthogonal, i.e.,
 \end{solution}
 \end{frame}
 \begin{frame}{Solution}
- \begin{solution}
-     
+    \begin{solution}
+
+Taking square roots in 4.2 and 4.3 yields
 \begin{align}
-\vec{a}\cdot\vec{b}=0,\qquad 
-\vec{b}\cdot\vec{c}=0,\qquad 
-\vec{c}\cdot\vec{a}=0 .
-\label{eq:orth}
-\end{align}
-Taking square roots in (4.3) and (4.4) yields
-\begin{align}
-\abs{(\vec{a}\times\vec{b})\cdot\vec{c}}
+\abs{\det A}
 = \|\vec{a}\|\,\|\vec{b}\|\,\|\vec{c}\|
 \iff
-(4.5)  holds.
+4.4 holds.
 \label{eq:final}
 \end{align}
-Thus the correct option is \(\boxed{\text{(d)}}\).
+Hence, the correct option is \(\boxed{\text{(d)}}\).
 \end{solution}
 \end{frame}
 \begin{frame}{Plot}
