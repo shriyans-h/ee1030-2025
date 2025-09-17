@@ -1,23 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    // Points P(x1, y1) and Q(x2, y2)
-    float x1 = 3, y1 = -2;
-    float x2 = -1, y2 = 4;
+    double Ax, Ay, Bx, By, dx, dy, slope;
 
-    // Direction ratios (l, m)
-    float l = x2 - x1;
-    float m = y2 - y1;
+    // Input coordinates of points A and B
+    printf("Enter coordinates of point A (x y): ");
+    scanf("%lf %lf", &Ax, &Ay);
 
-    printf("For P(%.2f, %.2f) and Q(%.2f, %.2f):\n", x1, y1, x2, y2);
-    printf("Direction ratios (l, m) = (%.2f, %.2f)\n", l, m);
+    printf("Enter coordinates of point B (x y): ");
+    scanf("%lf %lf", &Bx, &By);
 
-    // Slope = m / l  (if l != 0)
-    if(l != 0) {
-        float slope = m / l;
-        printf("Slope = %.2f\n", slope);
+    // Direction vector components (B - A)
+    dx = Bx - Ax; // horizontal component
+    dy = By - Ay; // vertical component
+
+    // Check for vertical line (undefined slope)
+    if (dx == 0) {
+        printf("The line AB is vertical. The slope is undefined (infinite).\n");
     } else {
-        printf("Slope is undefined (vertical line).\n");
+        slope = dy / dx;
+        printf("Direction vector of AB: (%.2f, %.2f)\n", dx, dy);
+        printf("Slope of AB: %.2f\n", slope);
     }
 
     return 0;
