@@ -1,0 +1,98 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{5.3.6}
+\author{AI25BTECH11012 - GARIGE UNNATHI}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question:}\\
+If the pair of equations 3x - y + 8 = 0 and 6x - ry + 16 = 0 represents coincident
+lines, then the value of r is  \\
+
+\textbf{Solution:}\\
+Let :
+\begin{align}
+    \vec{r_1} = \myvec{3 & -1 }\vec{x} = -8 \\
+    \vec{r_2} = \myvec{6 & -r}\vec{x} = -16
+\end{align}
+
+For coincident lines:
+\begin{align}
+    \vec{r_2} = \kappa  \vec{r_1}
+\end{align}
+
+Solving using above equation 
+\begin{align}
+    \myvec{6 & -r}\vec{x} + 16 = \kappa(\myvec{3 & -1 }\vec{x} + 8)\\
+     = \myvec{3\kappa & -1\kappa }\vec{x} + 8\kappa
+\end{align}
+
+By comparing we get :
+\begin{align}
+    \kappa = 2\\
+     \myvec{6 & -r}\vec{x} + 16 = \myvec{6 & -2 }\vec{x} + 16
+\end{align}
+
+since LHS should be equal to RHS :
+\begin{align}
+    r = 2
+\end{align}
+
+
+
+
+
+\end{document}

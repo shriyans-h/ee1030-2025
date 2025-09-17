@@ -1,0 +1,67 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\title{5.3.6 Matgeo}
+\author{AI25BTECH11012 - Garige Unnathi}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Question frame
+\begin{frame}
+\frametitle{Question}
+If the pair of equations 3x - y + 8 = 0 and 6x - ry + 16 = 0 represents coincident
+lines, then the value of r is 
+\end{frame}
+
+
+% Solution steps
+\begin{frame}
+\frametitle{Solution}
+Let :
+\begin{align}
+    \textbf{$r_1$} = \begin{bmatrix}3 & -1\end{bmatrix}\textbf{x} = -8 \\
+    \textbf{$r_2$} = \begin{bmatrix}6 & -r\end{bmatrix}\textbf{x} = -16
+\end{align}
+For coincident lines:
+\begin{align}
+    \textbf{$r_2$} = \kappa  \textbf{$r_1$}
+\end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution}
+Solving using above equation 
+\begin{align}
+    \begin{bmatrix}6 & -r\end{bmatrix}\textbf{x} + 16 = \kappa(\begin{bmatrix}3 & -1\end{bmatrix}\textbf{x} + 8)\\
+     = \begin{bmatrix}3\kappa & -1\kappa\end{bmatrix}\textbf{x} + 8\kappa
+\end{align}
+
+By comparing we get :
+\begin{align}
+    \kappa = 2\\
+     \begin{bmatrix}6 & -r\end{bmatrix}\textbf{x} + 16 = \begin{bmatrix}6 & -2 \end{bmatrix}\textbf{x} + 16
+\end{align}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Solution}
+since LHS should be equal to RHS :
+\begin{align}
+    r = 2
+\end{align}
+\end{frame}
+
+
+\end{document}
