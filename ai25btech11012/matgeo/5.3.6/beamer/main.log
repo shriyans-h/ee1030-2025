@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  17 SEP 2025 18:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  17 SEP 2025 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -791,7 +791,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count354
 \l__pdf_internal_box=\box82
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -812,6 +812,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -869,6 +870,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 16.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -961,8 +964,7 @@ Package gensymb Info: Using \Omega for \ohm on input line 16.
 
 Package gensymb Warning: Not defining \micro.
 
-No file main.nav.
-
+(./main.nav)
 
 [1
 
@@ -1001,6 +1003,21 @@ thkerncmss.
 [5
 
 ]
+</Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/5.3.6/figs/figs.png
+, id=172, 462.528pt x 346.896pt>
+File: /Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/5.3.6/figs/fig
+s.png Graphic file (type png)
+<use /Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/5.3.6/figs/figs
+.png>
+Package pdftex.def Info: /Users/unnathi/Documents/ee1030-2025/ai25btech11012/ma
+tgeo/5.3.6/figs/figs.png  used on input line 73.
+(pdftex.def)             Requested size: 205.37926pt x 154.0374pt.
+
+
+[6
+
+ </Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/5.3.6/figs/figs.pn
+g>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1015,21 +1032,14 @@ thkerncmss.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24763 strings out of 473190
- 494027 string characters out of 5715801
- 858976 words of memory out of 5000000
- 47516 multiletter control sequences out of 15000+600000
+ 24801 strings out of 473190
+ 494957 string characters out of 5715801
+ 859021 words of memory out of 5000000
+ 47544 multiletter control sequences out of 15000+600000
  567809 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,396b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1041,10 +1051,10 @@ usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
 sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
 sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (5 pages, 87743 bytes).
+Output written on main.pdf (6 pages, 99665 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 11 named destinations out of 1000 (max. 500000)
- 79 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 13 named destinations out of 1000 (max. 500000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
