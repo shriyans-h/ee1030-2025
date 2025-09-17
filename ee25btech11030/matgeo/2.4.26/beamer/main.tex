@@ -148,14 +148,15 @@ Given details:
 
 #include <stdio.h>
 
-void isosceles_triangle(double *points) {
-    double coords[6] = {5,-2,  6,4,  7,-2,};
+void isosceles_triangle(double *points,double *M) {
+    double coords[8] = {5,-2,  6,4,  7,-2, 6,-2};
 
     for (int i = 0; i < 6; i++) {
         points[i] = coords[i];
     }
+    M[0]=coords[6];
+    M[1]=coords[7];
 }
-
     \end{lstlisting}
 \end{frame}
 
@@ -172,7 +173,7 @@ import matplotlib.pyplot as plt
 triangle_lib = ctypes.CDLL("./triangle.so")
 
 # Define function return type
-triangle_lib.isosceles_triangle.argtypes = [np.ctypeslib.ndpointer(dtype=np.double, ndim=1, flags="C")]
+triangle_lib.isosceles_triangle.argtypes = [np.ctypeslib.ndpointer(dtype=np.double,ndim=1,flags="C"),np.ctypeslib.ndpointer(dtype=np.double, ndim=1, flags="C")]
 
 
 \end{lstlisting}
@@ -183,9 +184,10 @@ triangle_lib.isosceles_triangle.argtypes = [np.ctypeslib.ndpointer(dtype=np.doub
     \begin{lstlisting}
 # Create numpy array to hold 6 values (x,y for 3 points)
 points = np.zeros(6, dtype=np.double)
+M = np.zeros(2, dtype=np.double)
 
 # Call C function to fill points
-triangle_lib.isosceles_triangle(points)
+triangle_lib.isosceles_triangle(points,M)
 
 # Reshape into (3,2)
 points = points.reshape((3,2))
@@ -198,8 +200,25 @@ points = np.vstack([points, points[0]])
 \begin{frame}[fragile]
     \frametitle{Python Code - Using Shared Object}
     \begin{lstlisting}
-# Plot isosceles triangle
+#text
+plt.text(points[0,0]+0.2, points[0,1]+0.2, "A(5,-2)", fontsize=12, ha='right')
+plt.text(points[1,0], points[1,1], "B(6,4)", fontsize=12, ha='right')
+plt.text(points[2,0]+0.2, points[2,1]+0.2, "C(7,-2)", fontsize=12, ha='left')
+plt.text(M[0]+0.2, M[1]+0.2, "M(6,-2)", fontsize=12, ha='center')
+
+
+
+
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+     \frametitle{Python Code - Using Shared Object}
+     \begin{lstlisting}
+         # Plot isosceles triangle
 plt.plot(points[:,0], points[:,1], "bo-")
+plt.plot([M[0],points[1,0]],[M[1],points[1,1]],"go-")
 plt.xlim([2,9])
 plt.ylim([-4,6])
 plt.title("isosceles triangle from C library")
@@ -209,14 +228,8 @@ plt.gca().set_aspect("equal")
 plt.grid(True)
 plt.savefig('figs/triangle.png')
 plt.show()
-
-
-
-
-
-\end{lstlisting}
-\end{frame}
-
+     \end{lstlisting}
+     \end{frame}
 
 
 \begin{frame}{Plot-Using Both C and Python}
@@ -235,7 +248,9 @@ points = np.array([
     [5, -2],   # A
     [6, 4],   # B
     [7, -2], # C
+
 ])
+M=np.array([6,-2])
 
 
 
@@ -250,7 +265,21 @@ points = np.array([
 # Close the triangle (repeat first point)
 points = np.vstack([points, points[0]])
 
-# Plot
+#scatter
+plt.text(points[0,0]+0.2, points[0,1]+0.2, "A(5,-2)", fontsize=12, ha='right')
+plt.text(points[1,0], points[1,1], "B(6,4)", fontsize=12, ha='right')
+plt.text(points[2,0]+0.2, points[2,1]+0.2, "C(7,-2)", fontsize=12, ha='left')
+plt.text(M[0]+0.2, M[1]+0.2, "M(6,-2)", fontsize=12, ha='center')
+
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code }
+    \begin{lstlisting}
+#Plot
+plt.plot([M[0],points[1,0]],[M[1],points[1,1]],"go-",linewidth=2)
 plt.plot(points[:,0], points[:,1], "bo-", linewidth=2)
 plt.xlim([2,9])
 plt.ylim([-4,6])
@@ -262,12 +291,8 @@ plt.grid(True)
 plt.savefig('figs/triangle2.png')
 plt.show()
 
-
 \end{lstlisting}
 \end{frame}
-
-
-
 
 
 \begin{frame}{Plot-Using only Python}
