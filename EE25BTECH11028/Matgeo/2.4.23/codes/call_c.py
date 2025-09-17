@@ -1,0 +1,8 @@
+# Compile the C program
+subprocess.run(["gcc", "triangl.c", "-o", "triangle"])
+
+# Run the compiled C program
+result = subprocess.run(["./triangle"], capture_output=True, text=True)
+
+# Print the output from the C program 
+print(result.stdout)
