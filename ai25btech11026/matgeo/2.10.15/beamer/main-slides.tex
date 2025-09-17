@@ -97,8 +97,6 @@ is
 \end{align}
 \end{frame}
 \begin{frame}{Theoretical Solution} 
-\textbf{Solution:}\\
- \textbf{Given}  
 Let
 \begin{align}
 \vec{a}=\myvec{1\\1\\0},\quad 
@@ -107,20 +105,24 @@ Let
 \end{align}
 A vector $\vec{x}$ perpendicular to both $\vec{a}$ and $\vec{b}$ satisfies
 \begin{align}
-\vec{a}^\top\vec{x} &= 0 \;\;\Rightarrow\;\; x_1+x_2=0,
+\vec{a}^\top\vec{x} &= 0 
 \label{eq:q1-ax0}\\
-\vec{b}^\top\vec{x} &= 0 \;\;\Rightarrow\;\; x_2+x_3=0.
+\vec{b}^\top\vec{x} &= 0 
 \label{eq:q1-bx0}
+\end{align}
+\begin{align}
+    \begin{myvec}{\vec{a} &&\vec{b}}^T\end{myvec}\vec{x}=\begin{myvec}{0\\0}
+    \end{myvec}
+\end{align}
+From row reduction
+
+\begin{align}
+\vec{x}=\lambda\myvec{-1\\1\\-1}.
+\label{eq:q1-dir}
 \end{align}
 \end{frame}
 \begin{frame}{Theoretical Solution} 
 \textbf{Solution:}\\
-\begin{align}
-x_1=-x_2,\qquad x_3=-x_2
-\;\Rightarrow\;
-\vec{x}=x_2\myvec{-1\\1\\-1}.
-\label{eq:q1-dir}
-\end{align}
 Thus a direction vector is
 \begin{align}
 \vec{n}=\myvec{-1\\1\\-1},\qquad 
