@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  17 SEP 2025 08:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  17 SEP 2025 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1769,14 +1769,14 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 [5
 
 ]
-<../figs/fig.png, id=167, 462.528pt x 346.896pt>
-File: ../figs/fig.png Graphic file (type png)
-<use ../figs/fig.png>
-Package pdftex.def Info: ../figs/fig.png  used on input line 122.
-(pdftex.def)             Requested size: 277.84358pt x 208.38268pt.
+<../figs/fig.pdf, id=167, 462.52798pt x 346.89601pt>
+File: ../figs/fig.pdf Graphic file (type pdf)
+<use ../figs/fig.pdf>
+Package pdftex.def Info: ../figs/fig.pdf  used on input line 122.
+(pdftex.def)             Requested size: 277.84357pt x 208.38269pt.
  [6
 
- <../figs/fig.png>]
+ <../figs/fig.pdf>]
 \tf@nav=\write8
 \openout8 = `main-slides.nav'.
 
@@ -1797,8 +1797,8 @@ Package rerunfilecheck Info: Checksums for `main-slides.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 55658 strings out of 476091
- 1333068 string characters out of 5794081
+ 55657 strings out of 476091
+ 1333088 string characters out of 5794081
  2110583 words of memory out of 5000000
  75072 multiletter control sequences out of 15000+600000
  544877 words of font info for 68 fonts, out of 8000000 for 9000
@@ -1813,10 +1813,10 @@ lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 o10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy8.pfb>
-Output written on main-slides.pdf (6 pages, 142039 bytes).
+Output written on main-slides.pdf (6 pages, 133552 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
+ 264 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
  13 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
