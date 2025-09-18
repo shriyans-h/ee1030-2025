@@ -69,12 +69,28 @@ Find the number of elements in \(S\).
   \label{5.13.81}
 \end{table}
 
-Applyting row operation to $\vec{A}$
+Rearranging the rows of $\vec{A}$
 
 \begin{align}
 \myvec{0 & 1 & c\\[2pt] 1 & a & d\\[2pt] 1 & b & e}
-\xleftrightarrow{\;R_2 \to R_2 - R_3}
-\myvec{0 & 1 & c\\0 & a - b & d - e\\1 & b & e}
+\xleftrightarrow{R_2 \leftrightarrow R_3}
+\myvec{0 & 1 & c\\1 & b & e\\1 & a & d}
+\xleftrightarrow{R_1 \leftrightarrow R_2}
+\myvec{1 & b & e\\0 & 1 & c\\1 & a & d}
+\end{align}
+
+Applyting row operation to $\vec{A}$ to reduce it into Echelon form
+
+\begin{align}
+\myvec{1 & b & e\\0 & 1 & c\\1 & a & d}
+\xleftrightarrow{R_3 \to R_3 - R_1}
+\myvec{1 & b & e\\0 & 1 & c\\0 & a-b & d-e}
+\xleftrightarrow{R_3 \to R_3 - (a-b)R_2}
+\myvec{
+  \makebox[1cm][c]{1} & \makebox[1cm][c]{b} & \makebox[2cm][c]{e} \\
+  \makebox[1cm][c]{0} & \makebox[1cm][c]{1} & \makebox[2cm][c]{c} \\
+  \makebox[1cm][c]{0} & \makebox[1cm][c]{0} & \makebox[2.6cm][c]{$d-e-c(a-b)$}
+}
 \end{align}
 
 Finding the determinant by the first column 
