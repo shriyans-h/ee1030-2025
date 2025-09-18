@@ -3,10 +3,22 @@
 
 \usetheme{Madrid}
 \usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
 \usepackage{extarrows}
-\usepackage{amsmath}
-\usepackage{extarrows}
-\usepackage{amssymb,amsfonts,amsthm}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{txfonts}
 \usepackage{tkz-euclide}
 \usepackage{listings}
@@ -24,6 +36,8 @@
 
 \usepackage{tcolorbox}
 \tcbuselibrary{minted,breakable,xparse,skins}
+
+
 
 \definecolor{bg}{gray}{0.95}
 \DeclareTCBListing{mintedbox}{O{}m!O{}}{%
@@ -51,7 +65,7 @@
   leftrule=0pt,
   rightrule=0pt,
   bottomrule=2pt,
-  toprule=2pt,
+
   colback=bg,
   colframe=orange!70,
   enhanced,
@@ -73,8 +87,7 @@
     showstringspaces=false,
 }
 \title %optional
-{4.11.10}
-\date{September 13 ,2025}
+{4.13.37}
 
 \author 
 {Kartik Lahoti - EE25BTECH11032}
@@ -84,72 +97,81 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Point $\vec{A}$ lies on the line segment $\vec{XY}$  joining $\vec{X}\brak{6,-6}$ and $\vec{Y}\brak{-4,-1}$ in such a way that $\frac{\vec{XA}}{\vec{XY}} = \frac{2}{5}$. if point $\vec{A}$ also lies on the line $3x + k(y+1) = 0$, find the value of $k$ .
+If $x_1 , x_2 , x_3$ as well as $y_1 , y_2 ,y _3$, are in G.P with the same common ratio then then points $\brak{x_1 , y_1}$, $\brak{x_2 , y_2}$ and $\brak{x_3 , y_3}$
+\begin{multicols}
+\begin{enumerate}
+        \item lie on a straight line
+        \item lie on ellipse 
+        \item lie on circle
+        \item are vertices of a triangle
+    
+\end{enumerate}
+\end{multicols}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+    \begin{table}[]
+        \centering
+        \input{../tables/table}
+        \caption{$4.13.37$}
+        \label{tab:1.0}
+    \end{table}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
 
-\begin{table}[H]
-    \centering
-    \input{../tables/table.tex}
-    \caption{4.11.10}
-    \label{tab:placeholder_1}
-\end{table}
-
-Given Line Equation, 
+To check if $\vec{A}$ , $\vec{B}$ and $\vec{C}$ lie on a straight line , 
 
 \begin{align}
-        \myvec{3 & k}\vec{x} + k &= 0  
+    rank\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{B}} = 1
+\end{align}
+
+If $r$ is the common ratio for the G.P , then vector $\vec{B}$ and $\vec{C}$ can also be written as
+
+\begin{align}
+    \vec{B} = r\vec{A} \hspace{1cm} \vec{C} = r^2\vec{A} 
 \end{align}
 
 \end{frame}
 \begin{frame}{Theoretical Solution}
 
-Using Section Formula,
 \begin{align}
-  \vec{A} = \frac{1}{1+p}\brak{\vec{X} + p\vec{Y}}
+    rank\myvec{r\vec{A} - \vec{A} & r^2\vec{A} - r\vec{A} } = 1 
 \end{align}
 
-From the Question, $p = \frac{2}{3}$
-
-Substituting the values, 
+Case $1\colon$ $x_1 \neq 0 $ 
 
 \begin{align}
-  \vec{A} =  \frac{1}{1 + \frac{2}{3}}\brak{\myvec{6 \\ -6} + \frac{2}{3}\myvec{-4\\-1}} = \myvec{2 \\ -4}
+    \brak{r-1}\myvec{x_1 & rx_1 \\ y_1 & ry_1} \xleftrightarrow[]{R_2 \rightarrow {R_2 - \frac{y_1}{x_1}R_1 }} \myvec{x_1 & rx_1 \\ 0 & 0 }
 \end{align}
 
 \end{frame}
 \begin{frame}{Theoretical Solution}
 
-Putting $\vec{A}$ in the given line equation,
+Case $2\colon$ $\brak{x_1 = 0  \text{ and }  y_1 \neq 0}$ or $\brak{x_1 \neq 0 \text{ and }  y_1 = 0 }$
+
 \begin{align}
-  \myvec{3 & k}\myvec{2 \\ -4 } + k &= 0 
+    \myvec{0 & 0 \\ y_1 & ry_1} \hspace{0.5cm}or\hspace{0.5cm} \myvec{x_1 & rx_1 \\ 0 & 0} 
 \end{align}
-\begin{align}
-    6 - 4k + k &= 0 
-\end{align}
-\begin{align}
-    k &= 2
-\end{align}
+
+From Case $1$ and Case $2$ we can see $rank = 1$. Thus, the points lie on a straight line
+
+Hence, Answer $\colon \brak{1}$
 \end{frame}
 
-\begin{frame}{Theoretical Solution}
-Hence, 
-\begin{align}
-  \vec{A} = \myvec{2 \\ -4} \text{ and } k = 2
-\end{align}
-\end{frame}
+
 
 \begin{frame}[fragile]
     \frametitle{C Code (1)}
 
     \begin{lstlisting}
-void section_formula ( double *X , double *Y , double *A , double ratio , int m  )
+void gp( double *X , double *Y , double fact  )
 {
-    for(int i = 0;  i < m ; i++)	
-	A[i] = (1/(1+ratio))*(X[i] + ratio * Y[i] );
+	for(int i= 0 ; i <2 ; i++)
+			Y[i] = X[i] * fact;
 }
-    \end{lstlisting}
+
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -181,14 +203,13 @@ import matplotlib.pyplot as plt
 
 handc1 = ct.CDLL("./func.so")
 
-handc1.section_formula.argtypes = [
+handc1.gp.argtypes = [
     ct.POINTER(ct.c_double),
     ct.POINTER(ct.c_double),
-    ct.POINTER(ct.c_double),
-    ct.c_double,
-    ct.c_int
+    ct.c_double
 ]
-handc1.section_formula.restype = None
+
+handc1.gp.restype = None
 
 \end{lstlisting}
 \end{frame}
@@ -197,17 +218,22 @@ handc1.section_formula.restype = None
     \frametitle{Python Code - Using Shared Object}
     \begin{lstlisting}
 
-X = np.array([6,-6] , dtype = np.float64).reshape(-1,1)
-Y = np.array([-4,-1] , dtype = np.float64).reshape(-1,1)
-A = np.zeros(2, dtype = np.float64).reshape(-1,1)
-p = 2 / 3 
-handc1.section_formula(
-    X.ctypes.data_as(ct.POINTER(ct.c_double)),
-    Y.ctypes.data_as(ct.POINTER(ct.c_double)),
+O = np.zeros(2 , dtype = np.float64).reshape(-1,1)
+A = np.array([1,2] , dtype = np.float64).reshape(-1,1)
+B = np.zeros(2 , dtype = np.float64).reshape(-1,1)
+C = np.zeros(2, dtype = np.float64).reshape(-1,1)
+r = 3 
+handc1.gp(
     A.ctypes.data_as(ct.POINTER(ct.c_double)),
-    p , 2
-)
+    B.ctypes.data_as(ct.POINTER(ct.c_double)),
+    r)
+handc1.gp(
+    A.ctypes.data_as(ct.POINTER(ct.c_double)),
+    C.ctypes.data_as(ct.POINTER(ct.c_double)),
+    r**2)
 print("Vector A = ",A)
+print("Vector B = " , B)
+print("Vector C = " , C)
 
 \end{lstlisting}
 \end{frame}
@@ -215,8 +241,6 @@ print("Vector A = ",A)
 \begin{frame}[fragile]
     \frametitle{Python Code - Using Shared Object}
     \begin{lstlisting}
-M = np.array([-10,14] , dtype = np.float64).reshape(-1,1)
-N = np.array([10,-16] , dtype = np.float64).reshape(-1,1)
 
 def line(P: np.ndarray , Q: np.ndarray, str1 , str2):
     handc2 = ct.CDLL("./line_gen.so")
@@ -250,41 +274,54 @@ def line(P: np.ndarray , Q: np.ndarray, str1 , str2):
 \begin{frame}[fragile]
     \frametitle{Python Code - Using Shared Object}
     \begin{lstlisting}
+    
 plt.figure()
 
-line(X,Y,"g--","Line Segment XY")
-line(M,N,"r-","Line Containing A")
-coords = np.block([[X,Y,A]])
+line(O,A,"g-"," Line Segment : OA ")
+line(A,B,"r-"," Line Segment : AB ")
+line(B,C,"b-"," Line Segment : BC ")
+
+coords = np.block([[A,B,C,O]])
 
 plt.scatter(coords[0,:] , coords[1,:])
-vert_label = ['X', 'Y' , 'A' ]
+vert_label = ['A','B','C','O']
 
-for i , txt in enumerate(vert_label) :
-    plt.annotate(f"{txt}\n({coords[0,i]:.1f},{coords[1,i]:.1f})",
-                 (coords[0,i], coords[1,i]),
-                 textcoords = "offset points" ,
-                 xytext = (0,-30),ha = "center")
 \end{lstlisting}
 \end{frame}
-
 \begin{frame}[fragile]
     \frametitle{Python Code - Using Shared Object}
     \begin{lstlisting}
-plt.xlim([-6,8])
-plt.ylim([-8,0])
+for i , txt in enumerate(vert_label) :
+    
+    if i != 2 :
+        plt.annotate(f"{txt}\n({coords[0,i]:.1f},{coords[1,i]:.1f})",
+                    (coords[0,i], coords[1,i]),
+                    textcoords = "offset points" ,
+                    xytext = (0,12),ha = "center")
+    else :
+        plt.annotate(f"{txt}\n({coords[0,i]:.1f},{coords[1,i]:.1f})",
+                    (coords[0,i], coords[1,i]),
+                    textcoords = "offset points" ,
+                    xytext = (0,-25),ha = "center")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Python Code - Using Shared Object}
+    \begin{lstlisting}
+    
 plt.xlabel("$x$")
 plt.ylabel("$y$")
 plt.grid()
 
 plt.legend(loc="best")
 
-plt.title("4.11.10")
+plt.title("4.13.37")
 
-plt.savefig("../figs/section1.png")
+plt.savefig("../figs/colli1.png")
 plt.show()
 
-#plt.savefig('../figs/section1.png')
-#subprocess.run(shlex.split("termux-open ../figs/section1.png"))
+#plt.savefig('../figs/colli1.png')
+#subprocess.run(shlex.split("termux-open ../figs/colli1.png"))
 
 \end{lstlisting}
 \end{frame}
@@ -310,15 +347,18 @@ from line.funcs import *
 \begin{frame}[fragile]
     \frametitle{Python Code }
     \begin{lstlisting}
-X = np.array([6,-6] , dtype = np.float64).reshape(-1,1)
-Y = np.array([-4,-1] , dtype = np.float64).reshape(-1,1)
-k = 2 / 3
-A = (1/(1+k))*(X + k * Y)
- 
-print("Vector A = " , A ) 
+O = np.zeros(2).reshape(-1,1)
+A = np.array([1,2]).reshape(-1,1)
+B = np.zeros(2).reshape(-1,1)
+C = np.zeros(2).reshape(-1,1)
+r = 3 
+B = r * A
+C = (r ** 2 ) *A
 
-M = np.array([-10,14] , dtype = np.float64).reshape(-1,1)
-N = np.array([10,-16] , dtype = np.float64).reshape(-1,1)
+print("Vector A = " , A)
+print("Vector B = " , B)
+print("Vector C = " , C)
+
 \end{lstlisting}
 \end{frame}
 
@@ -330,12 +370,14 @@ def plot_it(P,Q,str1,str2):
     plt.plot(x_l[0,:],x_l[1,:] , str1 , label =  str2)
 
 plt.figure()
+plot_it(O,A,"g-"," Line Segment : OA ")
+plot_it(A,B,"r-"," Line Segment : AB ")
+plot_it(B,C,"b-"," Line Segment : BC ")
 
-plot_it(X,Y,"g--","Line Segment XY")
-plot_it(M,N,"r-","Line Containing A")
-coords = np.block([[X,Y,A]])
-plt.scatter(coords[0,:],coords[1,:])
-vert_labels = ['X','Y','A']
+coords = np.block([[A,B,C,O]])
+
+plt.scatter(coords[0,:] , coords[1,:])
+vert_label = ['A','B','C','O']
 
 
 \end{lstlisting}
@@ -344,40 +386,46 @@ vert_labels = ['X','Y','A']
 \begin{frame}[fragile]
     \frametitle{Python Code }
     \begin{lstlisting}
-
-for i, txt in enumerate(vert_labels):
-    plt.annotate(f'{txt}\n({coords[0,i]:.1f}, {coords[1,i]:.1f})',
-                 (coords[0,i], coords[1,i]),
-                 textcoords="offset points",
-                 xytext=(0,-30),
-                 ha='center')
+for i , txt in enumerate(vert_label) :
+    
+    if i != 2 :
+        plt.annotate(f"{txt}\n({coords[0,i]:.1f},{coords[1,i]:.1f})",
+                    (coords[0,i], coords[1,i]),
+                    textcoords = "offset points" ,
+                    xytext = (0,12),ha = "center")
+    else :
+        plt.annotate(f"{txt}\n({coords[0,i]:.1f},{coords[1,i]:.1f})",
+                    (coords[0,i], coords[1,i]),
+                    textcoords = "offset points" ,
+                    xytext = (0,-25),ha = "center")
                  
     \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Python Code }
     \begin{lstlisting}
-    
-plt.xlim([-6,8])
-plt.ylim([-8,0])
+   
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.grid()
 plt.legend(loc = "best")
-plt.title("Fig:4.11.10")
-plt.savefig("../figs/section2.png")
+plt.title("Fig:4.13.37")
+plt.savefig("../figs/colli2.png")
 plt.show()
 
-#plt.savefig('../figs/section1.png')
-#subprocess.run(shlex.split("termux-open ../figs/section1.png"))
+#plt.savefig('../figs/colli2.png')
+#subprocess.run(shlex.split("termux-open ../figs/colli2.png"))
 
     \end{lstlisting}
 \end{frame}
 
 
 \begin{frame}{Plot}
+
+Taking an example as $\vec{A} = \myvec{1 \\ 2}$ and $r=3$ , we get the following graph.
+
     \centering
-    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{../figs/section1.png}   
+    \includegraphics[width=\columnwidth, height=0.7\textheight, keepaspectratio]{../figs/colli1.png}   
 \end{frame}
 
 \end{document}

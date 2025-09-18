@@ -52,12 +52,21 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{4.11.10}
+\title{4.13.37}
 \author{EE25BTECH11032 - Kartik Lahoti}
 \maketitle
 
 \subsection*{Question: } 
-Point $\vec{A}$ lies on the line segment $\vec{XY}$  joining $\vec{X}\brak{6,-6}$ and $\vec{Y}\brak{-4,-1}$ in such a way that $\frac{\vec{XA}}{\vec{XY}} = \frac{2}{5}$. if point $\vec{A}$ also lies on the line $3x + k(y+1) = 0$, find the value of $k$ .
+If $x_1 , x_2 , x_3$ as well as $y_1 , y_2 ,y _3$, are in G.P with the same common ratio then then points $\brak{x_1 , y_1}$, $\brak{x_2 , y_2}$ and $\brak{x_3 , y_3}$
+
+\begin{enumerate}
+    \begin{multicols}{2}
+        \item lie on a straight line
+        \item lie on ellipse 
+        \item lie on circle
+        \item are vertices of a triangle
+    \end{multicols}
+\end{enumerate}
 
 \solution 
 
@@ -69,45 +78,44 @@ Given :
     \label{tab:placeholder_1}
 \end{table}
 
-
-Using Section Formula, 
-\begin{align}
-    \vec{A} = \frac{1}{1+p}\brak{\vec{X} + p\vec{Y}}
-\end{align}
-
-From the question , $p = \frac{2}{3}$
-
-Substituting the values, we get
+To check if $\vec{A}$ , $\vec{B}$ and $\vec{C}$ lie on a straight line , 
 
 \begin{align}
-    \vec{A} =  \frac{1}{1 + \frac{2}{3}}\brak{\myvec{6 \\ -6} + \frac{2}{3}\myvec{-4\\-1}} = \myvec{2 \\ -4}
+    rank\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{B}} = 1
 \end{align}
 
-Given Line Equation, 
-\begin{align}
-    \myvec{3 & k}\vec{x} + k &= 0  
-\end{align}
-Putting $\vec{A}$ in this equation,
+If $r$ is the common ratio for the G.P , then vector $\vec{B}$ and $\vec{C}$ can also be written as
 
 \begin{align}
-    \myvec{3 & k}\myvec{2 \\ -4} + k &= 0 
-\end{align}
-\begin{align}
-    6 - 4k + k = 0 
-\end{align}
-\begin{align}
-    k &= 2
+    \vec{B} = r\vec{A} \hspace{1cm} \vec{C} = r^2\vec{A} 
 \end{align}
 
-Hence, 
 \begin{align}
-    \vec{A} = \myvec{2 \\ -4 } \text{ and } k = 2
+    rank\myvec{r\vec{A} - \vec{A} & r^2\vec{A} - r\vec{A} } = 1 
 \end{align}
 
+Case $1\colon$ $x_1 \neq 0 $ 
+
+\begin{align}
+    \brak{r-1}\myvec{x_1 & rx_1 \\ y_1 & ry_1} \xleftrightarrow[]{R_2 \rightarrow {R_2 - \frac{y_1}{x_1}R_1 }} \myvec{x_1 & rx_1 \\ 0 & 0 }
+\end{align}
+
+Case $2\colon$ $\brak{x_1 = 0  \text{ and }  y_1 \neq 0}$ or $\brak{x_1 \neq 0 \text{ and }  y_1 = 0 }$
+
+\begin{align}
+    \myvec{0 & 0 \\ y_1 & ry_1} \hspace{0.5cm}or\hspace{0.5cm} \myvec{x_1 & rx_1 \\ 0 & 0} 
+\end{align}
+
+From Case $1$ and Case $2$ we can see $rank = 1$. Thus, the points lie on a straight line
+
+Hence, Answer $\colon \brak{1}$
+
+
+Taking an example as $\vec{A} = \myvec{1 \\ 2}$ and $r=3$ , we get the following graph.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\columnwidth]{figs/section1.png}
+    \includegraphics[width=1.0\columnwidth]{figs/colli1.png}
     \caption*{}
     \label{fig:}
 \end{figure}
