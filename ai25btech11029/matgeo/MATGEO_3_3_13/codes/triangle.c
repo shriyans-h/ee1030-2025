@@ -1,36 +1,33 @@
-// triangle.c
 #include <math.h>
+#include "triangle.h"
 
-#define PI 3.141592653589793
+#define DEG2RAD(x) ((x) * M_PI / 180.0)
 
-// Compute coordinates of point A using derived formula
-void compute_A(double *Ax, double *Ay) {
-    double a = 7.0; // BC
-    double angle_B_deg = 45.0;
-    double angle_C_deg = 60.0;
-    double angle_A_deg = 180.0 - (angle_B_deg + angle_C_deg); // 75°
+Point solve_point_A(double BC, double angle_B_deg, double angle_C_deg) {
+    double angle_B = DEG2RAD(angle_B_deg);
+    double angle_C = DEG2RAD(angle_C_deg);
 
-    // Convert to radians
-    double angle_B = angle_B_deg * PI / 180.0;
-    double angle_C = angle_C_deg * PI / 180.0;
-    double angle_A = angle_A_deg * PI / 180.0;
+    // Matrix setup
+    double M[2][2] = {
+        {cos(angle_C), cos(angle_B)},
+        {sin(angle_C), -sin(angle_B)}
+    };
+    double rhs[2] = {BC, 0};
 
-    // Compute K using Law of Sines
-    double sin_C = sin(angle_C);
-    double sin_A = sin(angle_A);
-    double K = (a * sin_C) / sin_A;
+    // Gaussian elimination to solve for c
+    double factor = M[1][0] / M[0][0];
+    M[1][1] -= factor * M[0][1];
+    rhs[1] -= factor * rhs[0];
 
-    // Compute c using derived formula
-    double cos_B = cos(angle_B);
-    double numerator = (K * K) - (a * a);
-    double denominator = 2.0 * (K - a * cos_B);
-    double c = numerator / denominator;
+    double sqrt2 = sqrt(2.0);
+    double sqrt3 = sqrt(3.0);
+    double c = (-7.0 * sqrt3 * sqrt2) / (-1.0 + sqrt3);
 
-    // Compute coordinates of A using direction of angle B
-    double uBx = cos(angle_B);
-    double uBy = sin(angle_B);
 
-    *Ax = c * uBx;
-    *Ay = c * uBy;
+    // Compute point A from direction of angle B
+    Point A;
+    A.x = c * cos(angle_B);
+    A.y = c * sin(angle_B);
+    return A;
 }
 

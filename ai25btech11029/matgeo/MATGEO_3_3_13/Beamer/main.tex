@@ -99,21 +99,6 @@ Let $\vec{B}$ be the origin
 \angle A = 180\degree - (45\degree + 60\degree) = 75\degree
 \end{align}
 
-\begin{align}
-K = \frac{a \sin C}{\sin A}
-= \frac{7 \sin(60\degree)}{\sin (75\degree)}
-= \frac{7 \times \frac{\sqrt{3}}{2}}{\frac{1}{\sqrt{2}} \times \frac{\sqrt{3} + 1}{2}}
-= \frac{7 \sqrt{6}}{\sqrt{3} + 1}
-\end{align}
-\end{frame}
-
-
-\begin{frame}{Solution}
-\begin{align}
-c = \frac{K^2 - a^2}{2(K - a \cos B)}
-= \frac{(\frac{7 \sqrt{6}}{\sqrt{3} + 1})^2 - 49}{2( \frac{7 \sqrt{6}}{\sqrt{3} + 1} - 7 \times \frac{1}{\sqrt{2}})} = -3.64
-\end{align}
-
 Let:
 
 \begin{align}
@@ -122,23 +107,72 @@ Let:
 \end{align}
 \end{frame}
 
-
 \begin{frame}{Solution}
+
 Direction of $\vec{A}$ is along angle $B = 45\degree$:
+
 
 \begin{align}
 \vec{A} = c \myvec{\cos B \\ \sin B}
-= c \times \frac{1}{\sqrt{2}} \myvec{1 \\ 1}
+= c \frac{1}{\sqrt{2}} \myvec{1 \\ 1}
+\end{align}
+
+in $\triangle ABC$
+\begin{align}
+    b \cos \angle C + c \cos \angle B = 7\\
+    b \sin \angle C - c \sin \angle B = 0
+\end{align}
+
+Solving linear Equation in b and c:
+\begin{align}
+    \myvec{\cos \angle C && \cos \angle B \\
+    \sin \angle C && -\sin \angle B} \myvec{b \\ c} = \myvec{7 \\ 0}
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
+Using augmented matrix
+\begin{align}
+    \myvec{\cos \angle C && \cos \angle B &\vrule &7 \\
+    \sin \angle C && -\sin \angle B &\vrule &0}
+\end{align}
+
+putting $\angle C = 60 \degree$ and $\angle B = 45 \degree$
+\begin{align}
+    \myvec{1/2 && 1/\sqrt{2} &\vrule &7 \\
+    \sqrt{3}/2 && -1/\sqrt{2} &\vrule &0}
+\end{align}
+
+Echelon form of the matrix is given by
+\begin{align}
+    \myvec{1 && 2/\sqrt{2} &\vrule &14 \\
+    \sqrt{3}/2 && -1/\sqrt{2} &\vrule &0}
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
+\begin{align}
+    \myvec{1 && 2/\sqrt{2} &\vrule &14 \\
+    0 && (-1 + \sqrt{3})/\sqrt{2} &\vrule &-7\sqrt{3}}
 \end{align}
 
 \begin{align}
-A = c \myvec{\cos B \\ \sin B} = -3.64 \myvec{0.7071 \\ 0.7071} \approx \myvec{-2.574 \\ -2.574}
+    \frac{(- 1 + \sqrt{3})}{\sqrt{2}} \times c = - 7 \sqrt{3}
 \end{align}
 
+\begin{align}
+    c = \frac{-7\sqrt{3} \cdot \sqrt{2}}{-1 + \sqrt{3}} = \frac{-7\sqrt{6}}{-1 + \sqrt{3}}
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
 \textbf{Final Coordinates}
+\begin{align}
+\vec{A} = c \myvec{\cos \angle B \\ \sin \angle B} = -23.42 \myvec{0.7071 \\ 0.7071} \approx \myvec{-16.56 \\ -16.56}
+\end{align}
 
 \begin{align}
-\vec{A} = \myvec{-2.574 \\ -2.574}, \quad
+\vec{A} = \myvec{-16.56 \\ -16.56}, \quad
 \vec{B} = \myvec{0 \\ 0}, \quad
 \vec{C} = \myvec{7 \\ 0}
 \end{align}
