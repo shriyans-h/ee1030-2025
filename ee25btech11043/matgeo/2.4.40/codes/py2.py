@@ -2,11 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def find_angle_between_lines_and_plot():
-    # Line 1: y - sqrt(3)x - 5 = 0  =>  y = sqrt(3)x + 5
+    # Line 1: y - sqrt(3)x - 5 = 0
     # Slope m1 = sqrt(3)
     m1 = np.sqrt(3)
 
-    # Line 2: sqrt(3)y - x + 6 = 0  => sqrt(3)y = x - 6 => y = (1/sqrt(3))x - 6/sqrt(3)
+    # Line 2: sqrt(3)y - x + 6 = 0 
     # Slope m2 = 1 / np.sqrt(3)
     m2 = 1 / np.sqrt(3)
 
