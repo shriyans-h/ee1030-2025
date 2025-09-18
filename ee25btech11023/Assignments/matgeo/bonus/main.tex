@@ -1,0 +1,194 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\newcommand{\tr}{\operatorname{tr}}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumeric\topable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+\title{Extra}
+\author{EE25BTECH11023 -   Venkata Sai}
+% \maketitle
+% \newpage
+% \bigskip
+\maketitle \vspace{-1cm}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\numberwithin{align}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question:}  \\
+Find the equations of tangents drawn from origin to the circle $x^2+y^2-2rx-2hy+h^2=0$,are
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $x=0$
+    \item $y=0$
+    \item $\brak{h^2-r^2}x-2rhy=0$
+    \item $\brak{h^2-r^2}x+2rhy=0$
+\end{enumerate}
+\end{multicols}
+\textbf{Solution:}  \\
+Equation of a circle is given by
+\begin{align}
+\vec{x}^\top \vec{V} \vec{x} + 2 \vec{u}^\top \vec{x} + f = 0,
+\end{align}
+The parametric equation of this line is
+\begin{align}
+\vec{x} = \vec{h} + k \vec{m}.
+\end{align}
+\begin{align}
+\brak{\vec{h}+k\vec{m}}^T \vec{V}\brak{\vec{h}+k\vec{m}}+2\vec{u}^T\brak{\vec{h}+k\vec{m}}+f
+\end{align}
+\begin{align}
+\vec{h}^\top \vec{V} \vec{h}+ k\brak{\vec{m}^\top \vec{V} \vec{h} + \vec{h}^\top \vec{V} \vec{m}}+ k^2 \vec{m}^\top \vec{V} \vec{m}+ 2\vec{u}^\top\vec{h} + 2k\,\vec{u}^\top\vec{m} + f \\
+\brak{\vec{m}^\top \vec{V} \vec{m}}k^2+2\brak{\vec{m}^\top \vec{V}\vec{h} + \vec{u}^\top\vec{m}}\,k
+   + \brak{\vec{h}^\top \vec{V} \vec{h} + 2\vec{u}^\top\vec{h} + f}
+\end{align}
+Hence the quadratic in $k$ is
+\begin{align}
+A k^2 + B k + C = 0,
+\end{align}
+where
+\begin{align}
+A &= \vec{m}^{\top} \vec{V} \vec{m}, \\
+B &= 2 \brak{ \vec{m}^{\top} \vec{V} \vec{h} + \vec{u}^{\top} \vec{m} }, \\
+C &= \brak{ \vec{h}^{\top} \vec{V} \vec{h} + 2 \vec{u}^{\top} \vec{h} + f }
+\end{align}
+Discriminant is 0 as tangent intersects the circle at only one point
+\begin{align}
+B^2 - 4AC = 0 
+\end{align}
+\begin{align}
+A &= \vec{m}^{\top} \vec{V} \vec{m}, \\
+B &= 2 \brak{ \vec{m}^{\top} \vec{V} \vec{h} + \vec{u}^{\top} \vec{m} }, \\
+C &= \brak{ \vec{h}^{\top} \vec{V} \vec{h} + 2 \vec{u}^{\top} \vec{h} + f }
+\end{align}
+Discriminant is 0 as tangent intersects the circle at only one point
+\begin{align}
+B^2 - 4AC = 0 
+\end{align}
+Substituting the expressions for A, B, and C and expanding:
+\begin{align}
+\left(2 \brak{\vec{m}^{\top}\vec{V}\vec{h} + \vec{u}^{\top}\vec{m}}\right) ^{2}
+- 4 \brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{h}^{\top}\vec{V}\vec{h} + 2 \vec{u}^{\top}\vec{h} + f}
+= 0.
+\end{align}
+\begin{align}
+\brak{\vec{m}^{\top}\vec{V}\vec{h}+\vec{u}^{\top}\vec{m}}\brak{\vec{m}^{\top}\vec{V}\vec{h} + \vec{u}^{\top}\vec{m}}^\top-\brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{h}^{\top}\vec{V}\vec{h} + 2 \vec{u}^{\top}\vec{h} + f}
+= 0
+\end{align}
+\begin{align}
+\brak{\vec{m}^{\top}\vec{V}\vec{h} + \vec{u}^{\top}\vec{m}}\brak{\vec{h}^{\top}\vec{V}\vec{m}+\vec{m}^{\top}\vec{u}}-\brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{h}^{\top}\vec{V}\vec{h} + 2 \vec{u}^{\top}\vec{h} + f}=0
+\end{align}
+\begin{align}
+\brak{\vec{m}^{\top} \vec{V} \vec{h}}\brak{\vec{h}^{\top} \vec{V} \vec{m}} + \brak{\vec{m}^{\top} \vec{V} \vec{h}}\brak{\vec{m}^{\top} \vec{u}} + \brak{\vec{u}^{\top} \vec{m}}\brak{\vec{h}^{\top} \vec{V} \vec{m}} + \brak{\vec{u}^{\top} \vec{m}}\brak{\vec{m}^{\top} \vec{u}} \nonumber \\
+- \brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{h}^{\top}\vec{V}\vec{h}} + 2\brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{u}^{\top}\vec{h}} + f\brak{\vec{m}^{\top}\vec{V}\vec{m}} &= 0
+\end{align}
+\begin{align}
+\brak{\vec{m}^{\top} \vec{V} \vec{h}}\brak{\vec{h}^{\top} \vec{V} \vec{m}} + \brak{\vec{m}^{\top} \vec{V} \vec{h}}\brak{\vec{m}^{\top} \vec{u}} + \brak{\vec{u}^{\top} \vec{m}}\brak{\vec{h}^{\top} \vec{V} \vec{m}} + \brak{\vec{u}^{\top} \vec{m}}\brak{\vec{m}^{\top} \vec{u}} \nonumber \\
+- \brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{h}^{\top}\vec{V}\vec{h}} - 2\brak{\vec{m}^{\top}\vec{V}\vec{m}}\brak{\vec{u}^{\top}\vec{h}} - f\brak{\vec{m}^{\top}\vec{V}\vec{m}} &= 0
+\end{align}
+\begin{align}
+\vec{m}^{\top} \brak{ \vec{V}\vec{h}\vec{h}^{\top}\vec{V} + \vec{V}\vec{h}\vec{u}^{\top} + \vec{u}\vec{h}^{\top}\vec{V} + \vec{u}\vec{u}^{\top} - \brak{\vec{h}^{\top}\vec{V}\vec{h}}\vec{V} - 2\brak{\vec{u}^{\top}\vec{h}}\vec{V} - f\vec{V} } \vec{m} &= 0
+\end{align}
+\begin{align}
+\vec{m}^{\top} \brak{ \vec{V}\vec{h}\brak{\vec{V}\vec{h}}^\top + \vec{V}\vec{h}\vec{u}^{\top} + \vec{u}\brak{\vec{V}\vec{h}}^{\top} + \vec{u}\vec{u}^{\top} - \brak{\vec{h}^{\top}\vec{V}\vec{h}}\vec{V} - 2\brak{\vec{u}^{\top}\vec{h}}\vec{V} - f\vec{V} } \vec{m} &= 0
+\end{align}
+\begin{align}
+\vec{m}^{\top} \brak{\brak{\vec{V}\vec{h}+\vec{u}}\brak{\vec{V}\vec{h}+\vec{u}}^\top -\brak{ \vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} + f}\vec{V} } \vec{m} &= 0
+\end{align}
+\begin{align}
+\vec{m}^{\top} \brak{\brak{\vec{V}\vec{h}+\vec{u}}\brak{\vec{V}\vec{h}+\vec{u}}^\top - g\brak{\vec{h}}} \vec{m} &= 0
+\end{align}
+where
+\begin{align}
+g\brak{\vec{h}}=\brak{ \vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} + f}\vec{V} 
+\end{align}
+On comparing the given circle with matrix equation
+\begin{align}
+x^2+y^2=\vec{x}^\top \myvec{1&0\\0&1} \vec{x} \implies \vec{V}=\myvec{1&0\\0&1}  \\
+-2rx-2hy=2\vec{u}^\top\vec{x} \implies \vec{u}^\top=\myvec{-r&-h}\implies \vec{u}=\myvec{-r\\-h} \\
+h^2=f
+\end{align}
+Given tangents are drawn from the origin
+\begin{align}
+    \vec{h}=\myvec{0\\0}
+\end{align}
+\begin{align}
+  \vec{V}\vec{h}+\vec{u}=\myvec{1&0\\0&1}\myvec{0\\0}+\myvec{-r\\-h}=\myvec{-r\\-h}
+  \end{align}
+  \begin{align}
+   \vec{V}\vec{h}=0 \implies  \vec{h}^\top\vec{V}\vec{h}=0
+   \end{align}
+   \begin{align}
+  g\brak{\vec{h}}=\brak{\vec{h}^{\top}\vec{V}\vec{h}+2\vec{u}^{\top}\vec{h} + f}\vec{V}=\brak{0+2\myvec{-r\\-h}\myvec{0\\0}+h^2}\myvec{1&0\\0&1}
+\end{align}
+\begin{align}
+g\brak{\vec{h}}=h^2
+\end{align}
+\begin{align}
+\vec{m}^\top\sum\vec{m}\implies\sum=\myvec{-r\\-h}\myvec{-r&-h}-h^2\vec{I}
+\end{align}
+\begin{align}
+\sum=\myvec{r^2& rh \\rh &h^2}-\myvec{h^2&0\\0&h^2}=\myvec{r^2-h^2&rh\\rh&0}
+\end{align}
+\begin{align}
+\mydet{\sum-\lambda\vec{I}}=0\\
+\mydet{\myvec{r^2-h^2-\lambda&rh\\rh&-\lambda}}=0\\
+\brak{r^2-h^2-\lambda}\brak{-\lambda}-r^2h^2=0 \\
+\lambda^2-\brak{r^2-h^2}\lambda-r^2h^2=0\\
+\brak{\lambda-r^2}\brak{\lambda+h^2}=0
+\end{align}
+the eigen vectors are
+\begin{align}
+    \lambda=r^2\ \text{or}\ \lambda=-h^2
+\end{align}
+ Because the tangent passes through  origin
+ \begin{align}
+     \vec{m}=\vec{x} \\
+     \myvec{x&y}\myvec{r^2-h^2&rh\\rh&0}\myvec{x\\y}=0 \\
+     \myvec{x&y}\myvec{\brak{r^2-h^2}x+\brak{rh}y\\rhx}=0 \\
+     x\myvec{\brak{r^2-h^2}x+rhy}+y\brak{rhx}=0 \\
+     x^2\brak{r^2-h^2}+2rhxy=0 \\
+     x\brak{\brak{r^2-h^2}x+2rhy}=0 \\
+     x=0\ \text{and}\ \brak{r^2-h^2}x+2rhy=0
+ \end{align}
+\end{document}
