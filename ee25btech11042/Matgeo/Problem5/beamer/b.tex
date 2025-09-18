@@ -92,33 +92,68 @@
 	
 	
 	\begin{frame}{Theoretical Solution}
-		Consider normal form of a line:
+	Consider normal form of a line:
 	\begin{align}
-		\vec{n}^T\vec{x} = c, \text{where } \vec{n} = \begin{myvec}{\cos{\alpha}\\\sin{\alpha}}\end{myvec}
+		\vec{n}^T\vec{x} = c, \text{where } \vec{n} = \begin{myvec}{n_1\\ n_2}\end{myvec}
 	\end{align}
-	Given that equal intercepts are cut off we get 2 cases:
+	Given that equal intercepts are cut off we get 2 cases:\\
+	On substituting the intercepts in place of $\vec{x}$: \\
 	\textbf{Case 1: The intercepts are equal \brak{b = a}}
 	\begin{align}
-		\implies  \vec{n}^T\begin{myvec}{a \\ 0} \end{myvec} = c \implies a\cos{\alpha} = c \label{0.2}\\
-		\implies \vec{n}^T\begin{myvec}{0 \\ a} \end{myvec} =c \implies a\sin{\alpha} = c \label{0.3} \\
-		\eqref{0.2}/\eqref{0.3} \implies \tan{\alpha} = 1		
+		\implies  \vec{n}^T\begin{myvec}{a \\ 0} \end{myvec} = 1 \implies an_1 = 1 \label{0.2}\\
+		\implies \vec{n}^T\begin{myvec}{0 \\ a} \end{myvec} = 1 \implies an_2 = 1 \label{0.3} \\
 	\end{align}
 	\end{frame}
 	\begin{frame}{Theoretical Solution}
-			\textbf{Case 2: The intercepts are negatives of each other \brak{-b = a}}
+			from \eqref{0.2}
 		\begin{align}
-			\implies  \vec{n}^T\begin{myvec}{a \\ 0} \end{myvec} = c \implies a\cos{\alpha} = c \label{0.5}\\
-			\implies \vec{n}^T\begin{myvec}{0 \\ -a} \end{myvec} =c \implies -a\sin{\alpha} = c \label{0.6} \\
-			\eqref{0.5}/\eqref{0.6} \implies \tan{\alpha} = -1		
+			n_1 = \frac{1}{a} 
 		\end{align}
-		This gives us two values of slope $m=\tan{\alpha}$
+		from \eqref{0.3}
+		\begin{align}
+			n_2 = \frac{1}{a}
+			\therefore \vec{n} = \begin{myvec}{\frac{1}{a}\\ \frac{1}{a}}\end{myvec}	
+		\end{align}
+		A simpler direction vector would be
+		\begin{align}
+			\vec{n'} = 	\begin{myvec}{1\\ 1}\end{myvec}
+		\end{align}
+	\end{frame}
+		\begin{frame}{Theoretical Solution}
+		\textbf{Case 2: The intercepts are negatives of each other \brak{-b = a}}
+		\begin{align}
+			\implies  \vec{n}^T\begin{myvec}{a \\ 0} \end{myvec} = 1 \implies an_1 = 1 \label{0.5}\\
+			\implies \vec{n}^T\begin{myvec}{0 \\ -a} \end{myvec} =1\implies -an_2 = 1 \label{0.6} \\
+		\end{align}
+		\eqref{0.5}
+		\begin{align}
+			n_1 = \frac{1}{a} 
+		\end{align}
+		\eqref{0.6}
+		\begin{align}
+			n_2 = \frac{-1}{a} \\
+			\therefore \vec{n} = \begin{myvec}{\frac{1}{a}\\ \frac{-1}{a}}\end{myvec}
+		\end{align}
+	\end{frame}
+		\begin{frame}{Theoretical Solution}
+		A simpler direction vector would be
+		\begin{align}
+			\vec{n'} = 	\begin{myvec}{1\\ -1}\end{myvec}
+		\end{align}
+		
+		The direction vector is given \brak{\text{in general}} by:
+		\begin{align}
+			\vec{n'} = 	\begin{myvec}{1\\ m}\end{myvec} \text{  where $m$ is slope of given line }
+		\end{align}
+		
+		On comparing with the obtained direction vectors
 		\begin{align}
 			\therefore m = \pm1
 		\end{align}
-	\end{frame}
+		\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{C Code- Triangle Area function }
+		\frametitle{C Code}
 		
 		\begin{lstlisting}
 			#include <stdio.h>
