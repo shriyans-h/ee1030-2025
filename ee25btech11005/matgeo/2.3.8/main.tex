@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\title{\textbf{2.3.8}}
+\author{\textbf{EE25BTECH11005 - Aditya Mishra}}
+\date{September 12, 2025}
+\begin{document}
+\maketitle
+\section*{Question}
+If $ \vec{A} = \hat{i} + \hat{j} + \hat{k},\ \vec{B} = 2\hat{i} + 5\hat{j},\ \vec{C} = 3\hat{i} + 2\hat{j} - 3\hat{k},\ \vec{D} = \hat{i} - 6\hat{j} - \hat{k}$ are the position vectors of points A, B, C and D, then find the angle between the straight lines $AB$ and $CD$. Find whether $\vec{AB}$ and $\vec{CD}$ are collinear or not.
+
+\section*{Solution}
+Let the direction vectors be
+\begin{align}
+\vec{AB} = \vec{B} - \vec{A} &= \myvec{2\\5\\0} - \myvec{1\\1\\1} = \myvec{1\\4\\-1} \\
+\vec{CD} = \vec{D} - \vec{C} &= \myvec{1\\-6\\-1} - \myvec{3\\2\\-3} = \myvec{-2\\-8\\2}
+\end{align}
+
+The angle $\theta$ between $\vec{AB}$ and $\vec{CD}$ is given by
+\begin{align}
+\cos\theta = \frac{\vec{AB}^\top \vec{CD}}{|\vec{AB}|\,|\vec{CD}|}
+\end{align}
+
+Substitute the values:
+\begin{align}
+\vec{AB}^T \vec{CD} &= \myvec{1\\4\\-1}^\top \myvec{-2\\-8\\2} \\
+&= (1)(-2) + (4)(-8) + (-1)(2) \\
+&= -2 - 32 - 2 = -36 
+\end{align}
+
+Magnitudes:
+\begin{align}
+|\vec{AB}| &= \sqrt{1^2 + 4^2 + (-1)^2} = \sqrt{1 + 16 + 1} = \sqrt{18} \\
+|\vec{CD}| &= \sqrt{(-2)^2 + (-8)^2 + 2^2} = \sqrt{4 + 64 + 4} = \sqrt{72}
+\end{align}
+
+Thus,
+\begin{align}
+\cos\theta &= \frac{-36}{\sqrt{18}\sqrt{72}}
+= \frac{-36}{\sqrt{1296}}
+= \frac{-36}{36}
+= -1
+\end{align}
+\begin{align}
+\theta = \cos^{-1}(-1) = \pi \text{ radians } = 180^\circ
+\end{align}
+
+So, $\vec{AB}$ and $\vec{CD}$ are collinear but point in opposite directions, i.e., they are anti-parallel.
+
+\vspace{0.5cm}
+\centering
+The lines are collinear (anti-parallel).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{Figs/Figure.png}
+    \caption{Line directions}
+    \label{fig:ab_cd}
+\end{figure}
+\end{document}
