@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.2)  14 SEP 2025 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.2)  16 SEP 2025 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1667,75 +1667,75 @@ dvips/lm/lm-rm.enc}]
 
 ]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-02.
+15.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-102.
+115.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-102.
+115.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 102.
+(Font)              <10.95> on input line 115.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 102.
+(Font)              <8> on input line 115.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 102.
+(Font)              <6> on input line 115.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-02.
+15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-02.
+15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-02.
+15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-02.
+15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-02.
+15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 115.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 115.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 115.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 115.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 115.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 115.
 
 
 
@@ -1755,7 +1755,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 139
+Overfull \vbox (13.72923pt too high) detected at line 157
  []
 
 
@@ -1830,29 +1830,20 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [8
 
 ]
+<figs/fig3.png, id=261, 722.7pt x 578.16pt>
+File: figs/fig3.png Graphic file (type png)
+<use figs/fig3.png>
+Package pdftex.def Info: figs/fig3.png  used on input line 219.
+(pdftex.def)             Requested size: 293.03374pt x 234.427pt.
 
-LaTeX Warning: File `figs/fig3.png' not found on input line 201.
-
-
-! Package pdftex.def Error: File `figs/fig3.png' not found: using draft setting
-.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.201 \end{frame}
-                 
-? 
-
-Overfull \vbox (5.37332pt too high) detected at line 201
+Overfull \vbox (5.35625pt too high) detected at line 219
  []
 
 
 
 [9
 
-]
+ <./figs/fig3.png>]
 \tf@nav=\write7
 \openout7 = `main.nav'.
 
@@ -1878,10 +1869,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59089 strings out of 473197
- 1434004 string characters out of 5718606
+ 59066 strings out of 473197
+ 1433447 string characters out of 5718606
  2482230 words of memory out of 5000000
- 81346 multiletter control sequences out of 15000+600000
+ 81323 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1889,13 +1880,12 @@ Here is how much of TeX's memory you used:
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (9 pages, 172285 bytes).
+hare/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (9 pages, 287121 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
+ 343 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
  19 named destinations out of 1000 (max. 500000)
- 79 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
