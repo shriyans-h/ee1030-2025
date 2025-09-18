@@ -1,0 +1,13 @@
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+import matplotlib.pyplot as plt
+
+# PART 4: Final Conclusion + Plot
+x1,y1,x2,y2,x3,y3 = 3,2,-2,-3,2,3
+X,Y = [x1,x2,x3,x1],[y1,y2,y3,y1]
+plt.plot(X,Y,'bo-'); plt.grid(True); plt.gca().set_aspect('equal')
+plt.text(x1+0.1,y1+0.1,"A"); plt.text(x2+0.1,y2+0.1,"B"); plt.text(x3+0.1,y3+0.1,"C")
+plt.show()
+\end{lstlisting}
+
