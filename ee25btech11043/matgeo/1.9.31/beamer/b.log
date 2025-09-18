@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  17 SEP 2025 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  18 SEP 2025 10:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,8 +1819,8 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 [2
 
 {/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc/dvips/lm/lm
--mathex.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc
-/dvips/lm/lm-mathsy.enc}]
+-mathsy.enc}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/enc
+/dvips/lm/lm-mathex.enc}]
 
 [3
 
@@ -1854,7 +1854,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `b.vrb'.
 
  (./b.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 162
+Overfull \vbox (1.72923pt too high) detected at line 164
  []
 
 
@@ -1865,7 +1865,7 @@ Overfull \vbox (1.72923pt too high) detected at line 162
 \openout4 = `b.vrb'.
 
  (./b.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 186
+Overfull \vbox (1.72923pt too high) detected at line 188
  []
 
 
@@ -1876,7 +1876,7 @@ Overfull \vbox (1.72923pt too high) detected at line 186
 \openout4 = `b.vrb'.
 
  (./b.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 209
+Overfull \vbox (1.72923pt too high) detected at line 211
  []
 
 
@@ -1933,7 +1933,7 @@ Overfull \vbox (1.72923pt too high) detected at line 209
 tlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ))
-Overfull \vbox (1.72923pt too high) detected at line 344
+Overfull \vbox (1.72923pt too high) detected at line 346
  []
 
 
@@ -1951,7 +1951,7 @@ Overfull \vbox (1.72923pt too high) detected at line 344
 <../figs/fig1.png, id=517, 1050.8058pt x 558.6471pt>
 File: ../figs/fig1.png Graphic file (type png)
 <use ../figs/fig1.png>
-Package pdftex.def Info: ../figs/fig1.png  used on input line 373.
+Package pdftex.def Info: ../figs/fig1.png  used on input line 375.
 (pdftex.def)             Requested size: 342.2953pt x 181.97583pt.
 
 
@@ -1961,10 +1961,10 @@ Package pdftex.def Info: ../figs/fig1.png  used on input line 373.
 <../figs/fig2.png, id=547, 557.2017pt x 452.4102pt>
 File: ../figs/fig2.png Graphic file (type png)
 <use ../figs/fig2.png>
-Package pdftex.def Info: ../figs/fig2.png  used on input line 382.
+Package pdftex.def Info: ../figs/fig2.png  used on input line 384.
 (pdftex.def)             Requested size: 239.60567pt x 194.54639pt.
 
-Overfull \vbox (3.02007pt too high) detected at line 382
+Overfull \vbox (3.02007pt too high) detected at line 384
  []
 
 
@@ -1992,11 +1992,11 @@ Package rerunfilecheck Info: File `b.out' has not changed.
 Here is how much of TeX's memory you used:
  51879 strings out of 473190
  1241903 string characters out of 5704335
- 2193697 words of memory out of 5000000
+ 2193671 words of memory out of 5000000
  74189 multiletter control sequences out of 15000+600000
  600199 words of font info for 77 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1190b,1449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,1190b,1449s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/
 lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/t
 ype1/public/lm/lmss10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-
@@ -2008,7 +2008,7 @@ pt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lm
 sso8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/
 fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (19 pages, 273121 bytes).
+Output written on b.pdf (19 pages, 273572 bytes).
 PDF statistics:
  631 PDF objects out of 1000 (max. 8388607)
  537 compressed objects within 6 object streams
