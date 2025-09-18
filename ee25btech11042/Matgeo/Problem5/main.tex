@@ -61,10 +61,9 @@
 	\textbf{Question}:\\
 	Find the slope of a line which cuts off intercepts of equal length on the axes is. Solve using matrices. \\ 
 	\solution \\
-	
 	Consider normal form of a line:
 	\begin{align}
-		\vec{n}^\top\vec{x} = c, \text{where } \vec{n} = \begin{myvec}{n_1\\ n_2}\end{myvec}
+		\vec{n}^\top\vec{x} = 1
 	\end{align}
 	Given that equal intercepts are cut off we get 2 cases:\\
 	On substituting the intercepts in place of $\vec{x}$: \\
@@ -74,52 +73,46 @@
 		\implies \vec{n}^\top\begin{myvec}{0 \\ a} \end{myvec} = 1 \implies an_2 = 1 \label{0.3} \\
 	\end{align}
 	
-		from \eqref{0.2}
+		from \eqref{0.2} and from \eqref{0.3}
 		\begin{align}
-		n_1 = \frac{1}{a} 
+		\vec{n}^\top\begin{myvec}{a & 0 \\ 0 & a} \end{myvec} = \begin{myvec}{1 & 1} \end{myvec} \\
+		\implies a\vec{n}^\top\begin{myvec}{1 & 0 \\ 0 & 1}\end{myvec} = \begin{myvec}{1 & 1} \end{myvec}\\
+		\implies a\vec{n}^\top\vec{I} = \begin{myvec}{1 & 1} \end{myvec}
+		\implies a\vec{n}^\top = \begin{myvec}{1 & 1} \end{myvec}
+		\implies \vec{n} = \frac{1}{a}\begin{myvec}{1 // 1} \end{myvec}
 		\end{align}
-		from \eqref{0.3}
-	\begin{align}
-		n_2 = \frac{1}{a}
-		\therefore \vec{n} = \begin{myvec}{\frac{1}{a}\\ \frac{1}{a}}\end{myvec}	
-	\end{align}
-	A simpler direction vector would be
-	\begin{align}
-	\vec{n'} = 	\begin{myvec}{1\\ 1}\end{myvec}
-	\end{align}
+		Thus, direction vector $\vec{n} = \begin{myvec}{1 // 1}\end{myvec}$
+		
+
 	\textbf{Case 2: The intercepts are negatives of each other \brak{-b = a}}
 	\begin{align}
-		\implies  \vec{n}^\top\begin{myvec}{a \\ 0} \end{myvec} = 1 \implies an_1 = 1 \label{0.5}\\
-		\implies \vec{n}^\top\begin{myvec}{0 \\ -a} \end{myvec} =1\implies -an_2 = 1 \label{0.6} \\
+		\implies  \vec{n}^\top\begin{myvec}{a \\ 0} \end{myvec} = 1 \label{0.5}\\
+		\implies \vec{n}^\top\begin{myvec}{0 \\ -a} \end{myvec} =1\label{0.6} \\
 	\end{align}
-		\eqref{0.5}
+		By \eqref{0.5}, \eqref{0.6}:
 		\begin{align}
-			n_1 = \frac{1}{a} 
+		\vec{n}^\top\begin{myvec}{a & 0 \\ 0 & -a} \end{myvec} = \begin{myvec}{1 & 1} \end{myvec} \\
+		\implies a\vec{n}^\top\begin{myvec}{1 & 0 \\ 0 & -1}\end{myvec} = \begin{myvec}{1 & 1} \end{myvec}
+	\end{align}
+	Let $\vec{A} = \begin{myvec}{1 & 0 \\ 0 & -1}\end{myvec}$\\
+	For this matrix $\vec{A} = \vec{A}^{-1}$
+	\begin{align}
+		\implies a\vec{n}^\top = \begin{myvec}{1 & 1}\vec{A}^{-1} \end{myvec}
+		\implies a\vec{n}^\top = \begin{myvec}{1 & 1}\vec{A}^{-1} \end{myvec}
+		\implies \vec{n} = \frac{1}{a}\begin{myvec}{1 // -1} \end{myvec}
 		\end{align}
-		\eqref{0.6}
-		\begin{align}
-			n_2 = \frac{-1}{a} \\
-			\therefore \vec{n} = \begin{myvec}{\frac{1}{a}\\ \frac{-1}{a}}\end{myvec}
-		\end{align}
-			A simpler direction vector would be
-		\begin{align}
-			\vec{n'} = 	\begin{myvec}{1\\ -1}\end{myvec}
-		\end{align}
-
+		Thus, direction vector $\vec{n} = \begin{myvec}{1 // -1}\end{myvec}$
 		The direction vector is given \brak{\text{in general}} by:
 		\begin{align}
-			\vec{n'} = 	\begin{myvec}{1\\ m}\end{myvec} \text{  where $m$ is slope of given line }
-		\end{align}
-		
+			\vec{m} = 	\begin{myvec}{1\\ m}\end{myvec} \text{  where $m$ is slope of given line }
+		\end{align}		
 			On comparing with the obtained direction vectors
 	\begin{align}
 		\therefore m = \pm1
-	\end{align}
-
-	
+	\end{align}	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width = 0.8\columnwidth]{Figure_1.png}
+		\includegraphics[width = 0.6\columnwidth]{Figure_1.png}
 		\caption*{}
 		\label{fig1}
 	\end{figure}
