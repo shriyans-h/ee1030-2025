@@ -1,0 +1,114 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+% --- Assuming gvv-book and gvv packages define \solution, \brak, etc. ---
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                    
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                            
+\usepackage{multirow}                                         
+\usepackage{hhline}                                          
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+\begin{document}
+	
+	\bibliographystyle{IEEEtran}
+	\vspace{3cm}
+	
+	\title{4.3.32}
+	\author{EE25BTECH11042 - Nipun Dasari}
+	\maketitle
+	
+	\renewcommand{\thefigure}{\theenumi}
+	\renewcommand{\thetable}{\theenumi}
+	\setlength{\intextsep}{10pt} % Space between text and floats
+	
+	
+	\numberwithin{equation}{enumi}
+	\numberwithin{figure}{enumi}
+	\renewcommand{\thetable}{\theenumi}
+	
+	\textbf{Question}:\\
+	Find the slope of a line which cuts off intercepts of equal length on the axes is. Solve using matrices. \\ 
+	\solution \\
+	
+	Let the line cut the x-axis at an intercept 'a' and the y-axis at an intercept 'b'. The points where the line intersects the axes can be represented by position vectors (column matrices).
+	
+	The point of x-intercept is $P_1 = (a, 0)$. Its position vector is:
+	\begin{align}
+		\vec{p_1} = \begin{myvec}{a \\ 0} \end{myvec}
+	\end{align}
+	The point of y-intercept is $P_2 = (0, b)$. Its position vector is:
+	\begin{align}
+		\vec{p_2} = \begin{myvec}{0 \\ b} \end{myvec}
+	\end{align}
+	
+	A direction vector for the line can be found by taking the difference between the two position vectors:
+	\begin{align}
+		\vec{v} = \vec{p_2} - \vec{p_1} = \begin{myvec}{0 \\ b} \end{myvec} - \begin{myvec}{a \\ 0} \end{myvec} = \begin{myvec}{-a \\ b} \end{myvec} \label{eq:0.3}
+	\end{align}
+	
+	The slope, $m$, is defined as the ratio of the change in y to the change in x.
+	\begin{align}
+		m = \frac{\Delta y}{\Delta x} = \frac{b}{-a} \label{0.4}
+	\end{align}
+	
+	The problem states that the intercepts have equal length, which means their magnitudes are equal:
+	\begin{align}
+		|a| = |b|
+	\end{align}
+	
+	\textbf{Case 1: The intercepts are equal ($b = a$)}\\
+	Substituting $b=a$ into the slope equation (assuming $a \neq 0$):
+	By \eqref{0.4}
+	\begin{align}
+		m_1 = \frac{a}{-a} = -1
+	\end{align}
+	
+	\textbf{Case 2: The intercepts are opposite ($b = -a$)}\\
+	Substituting $b=-a$ into the slope equation (assuming $a \neq 0$):
+	By \eqref{0.4}
+	\begin{align}
+		m_2 = \frac{-a}{-a} = 1
+	\end{align}
+	
+	Thus, using a matrix representation for the points, we find that the two possible slopes are -1 and 1.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.8\columnwidth]{Figure_1.png}
+		\caption*{}
+		\label{fig1}
+	\end{figure}
+	
+\end{document}
