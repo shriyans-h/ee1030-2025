@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  18 SEP 2025 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  18 SEP 2025 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2352,9 +2352,9 @@ Overfull \vbox (27.3946pt too high) detected at line 458
 File: ../figs/fig2.png Graphic file (type png)
 <use ../figs/fig2.png>
 Package pdftex.def Info: ../figs/fig2.png  used on input line 467.
-(pdftex.def)             Requested size: 342.2953pt x 273.83487pt.
+(pdftex.def)             Requested size: 273.83728pt x 219.06789pt.
 
-Overfull \vbox (82.30855pt too high) detected at line 467
+Overfull \vbox (27.54156pt too high) detected at line 467
  []
 
 
@@ -2371,7 +2371,7 @@ Overfull \vbox (82.30855pt too high) detected at line 467
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250918154519 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250918154654 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2402,7 +2402,7 @@ so10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/
 fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/
 texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (24 pages, 293313 bytes).
+Output written on b.pdf (24 pages, 293305 bytes).
 PDF statistics:
  783 PDF objects out of 1000 (max. 8388607)
  673 compressed objects within 7 object streams
