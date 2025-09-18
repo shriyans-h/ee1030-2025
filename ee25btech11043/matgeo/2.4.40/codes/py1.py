@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the shared library
-lib_angle = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code3.so")
+lib_angle = ctypes.CDLL("./code3.so")
 
 # Define the argument types and return type for the C function
 lib_angle.findAngleBetweenLines.argtypes = [
