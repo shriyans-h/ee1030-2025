@@ -1,15 +1,11 @@
 \frametitle{Python and C Code}
 
 \begin{lstlisting}
-import subprocess
+# --- 4. Call the C function and get the returned value ---
+distance = lib.calculate_distance(m_val, n_val)
 
-# 1. Compile the C program
-subprocess.run(["gcc", "distance.c", "-o", "distance"])
-
-# 2. Run the compiled C program
-result = subprocess.run(["./distance"], capture_output=True, text=True)
-
-# 3. Print the output from the C program
-print(result.stdout)
+# --- 5. Print the result ---
+print("\n--- Calculation performed by C ---")
+print(f"Distance between the points ({m_val:.2f}, {-n_val:.2f}) and ({-m_val:.2f}, {n_val:.2f}) is: {distance:.4f}")
 \end{lstlisting}
 
