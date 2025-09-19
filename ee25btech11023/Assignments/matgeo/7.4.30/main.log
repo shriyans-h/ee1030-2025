@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  19 SEP 2025 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  19 SEP 2025 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1894,17 +1894,13 @@ Package pdftex.def Info: figs/fig1.png  used on input line 104.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  54425 strings out of 475171
  1289371 string characters out of 5767095
- 1895369 words of memory out of 5000000
+ 1895402 words of memory out of 5000000
  76588 multiletter control sequences out of 15000+600000
  622675 words of font info for 167 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
