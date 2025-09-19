@@ -24,67 +24,56 @@
 
 \begin{document}
 
-% Title frame
-\begin{frame}
-  \titlepage
-\end{frame}
+\frame{\titlepage}
 
-% Question
 \begin{frame}{Question}
-Find the values of $y$ for which the distance between the points 
-$\vec{P}(2,-3)$ and $\vec{Q}(10,y)$ is $10$ units.
+\textbf{Question}:\\
+Find the values of $y$ for which the distance between the points $\vec{P}(2,-3)$ and $\vec{Q}(10,$y$)$ is 10 units.
 \end{frame}
 
-% Solution part 1
 \begin{frame}{Solution}
+\textbf{Solution}:\\
 We are given the points
 \begin{align}
-\vec{P} &= \myvec{2\\-3}, \quad 
-\vec{Q} = \myvec{10\\y}
+\vec{P} = \myvec{2\\-3}, \quad 
+\vec{Q} = \myvec{10\\$y$}
 \end{align}
+\end{frame}
+
+\begin{frame}{Step 1}
 The distance between them is $10$ units, so
 \begin{align}
 \|\vec{P}-\vec{Q}\| &= 10
 \end{align}
+\end{frame}
+
+\begin{frame}{Step 2}
 Squaring both sides,
 \begin{align}
-\|\vec{P}-\vec{Q}\|^2 &= (\vec{P}-\vec{Q})^\top(\vec{P}-\vec{Q}) = 10^2
+\|\vec{P}-\vec{Q}\|^2 &= \|\vec{P}\|^2 + \|\vec{Q}\|^2 + 2\vec{P}^T\vec{Q} = 10^2
 \end{align}
 \end{frame}
 
-% Solution part 2
-\begin{frame}{Solution (continued)}
+\begin{frame}{Step 3}
 Substituting,
 \begin{align}
-\left( \myvec{2\\-3} - \myvec{10\\y} \right)^\top
-\left( \myvec{2\\-3} - \myvec{10\\y} \right) &= 100
-\end{align}
-\begin{align}
-\myvec{-8\\-3-y}^\top \myvec{-8\\-3-y} &= 100
-\end{align}
-\begin{align}
-(-8)^2 + (-3-y)^2 &= 100 \\
-64 + (y+3)^2 &= 100 \\
-(y+3)^2 &= 36 \\
-y+3 &= \pm 6
+13 + (10 + y)^2 + 2(20 -3y) = 100\\
+\implies y = 3 \quad \text{or} \quad y = -9
 \end{align}
 \end{frame}
 
-% Solution final
-\begin{frame}{Final Answer}
-\begin{align}
-y &= 3 \quad \text{or} \quad y = -9
-\end{align}
-\end{frame}
-
-% Figure
-\begin{frame}{Graphical Representation}
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figs/fig.png}
-\caption{Geometric visualization of the problem}
+\begin{frame}{Figure}
+See Fig. 0 ,
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\columnwidth]{figs/fig.png}
+\end{center}
+\caption{}
+\label{fig:Fig1}
 \end{figure}
 \end{frame}
+
+
 
 \begin{frame}[fragile]{C Code (code.c)}
 \begin{lstlisting}[language=C]
