@@ -69,8 +69,10 @@ ax.quiver(A[0], A[1], A[2], d[0]*arrow_scale, d[1]*arrow_scale, d[2]*arrow_scale
 
 # Verify the line is perpendicular to the plane
 # Plane normal vector is [1, 2, -5] (coefficients of x, y, z)
-plane_normal = np.array([1, 2, -5])
-dot_product = np.dot(d, plane_normal)
+if np.allclose(np.cross(d, plane_normal), 0, atol=1e-9):
+    print("Line is parallel to plane normal → line is perpendicular to plane")
+else:
+    print("Not perpendicular")
 
 # Set labels and title
 ax.set_xlabel('X', fontsize=12)
