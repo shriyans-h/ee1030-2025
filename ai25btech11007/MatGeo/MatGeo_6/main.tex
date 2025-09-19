@@ -71,90 +71,35 @@ BC = 5 \,\text{cm}, \quad \angle B = 60^\circ, \quad \text{and} \quad AC + AB = 
 
 
 \textbf{Solution:}\\
-\bigskip
- Set up points and given data
 
-Let
-\[
-\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}, \qquad
-\vec{C}=\begin{pmatrix}5\\0\end{pmatrix}.
-\]
-
-
-\[
-\vec{AC} = \vec{c}, \qquad \vec{AC} = \vec{b}, \qquad \vec{b+c}=7.5.
-\]
-
- Position vector of point $A$
-
-Since $\angle B=60^\circ$, the vector $\vec{BA}$ has length $c$ and direction $60^\circ$ above the $x$-axis. Thus
-\[
-\vec{A} = \vec{c}
-\begin{pmatrix}\cos 60^\circ \\ \sin 60^\circ\end{pmatrix}
-= \begin{pmatrix}\tfrac{\vec{c}}{2}\\[4pt]\tfrac{\vec{c}\sqrt{3}}{2}\end{pmatrix}.
-\]
-
- Expression for $AC$
+Using the cosine formula in $\triangle ABC$,
+\begin{align}
+\textbf{Cosine Formula :   } 
+    b^{2} &= a^{2} + c^{2} - 2ac\cos B \\
+\Rightarrow (7.5-c)^{2} &= 5^{2} + c^{2} - 2\cdot 5c \cos 60^\circ \\
+\Rightarrow c &= \frac{7.5^{2}-5^{2}}{2(7.5-5\cos 60^\circ)} 
+\end{align}
 
 \[
-\vec{AC} = \vec{C} - \vec{A}
-= \begin{pmatrix}5-\tfrac{\vec{c}}{2}\\[4pt]-\tfrac{\vec{c}\sqrt{3}}{2}\end{pmatrix},
-\]
-and
-\[
-b^2 = \Big(5-\tfrac{\vec{c}}{2}\Big)^2 + \tfrac{3\vec{c}^2}{4}.
+c = 3.125, 
+\qquad b = 7.5 - 3.125 = 4.375.
 \]
 
-  Apply $b+c=7.5$
-
-Since $b=7.5-c$, we have
+The coordinates of $\triangle ABC$ can then be expressed as
 \[
-(7.5-c)^2 = \Big(5-\tfrac{c}{2}\Big)^2 + \tfrac{3c^2}{4}.
-\]
-Expanding and simplifying gives,
-\[
-56.25 -15c + c^2 = 25 -5c + c^2,
-\]
-\[
-\quad c=3.125.
-\]
-Hence
-\[
-b = 7.5 - 3.125 = 4.375.
+A=\myvec{\tfrac{3.125\cos 60^\circ}{\sin 60^\circ}\\[6pt]\tfrac{3.125}{\sin 60^\circ}},\quad 
+B=\myvec{0\\0},\quad 
+C=\myvec{5\\0}.
 \]
 
- Coordinates of vertices
-
+The coordinates of $\triangle ABC$ are
 \[
-\vec{A} = \begin{pmatrix}\tfrac{3.125}{2}\\[4pt]\tfrac{3.125\sqrt{3}}{2}\end{pmatrix}
-= \begin{pmatrix}1.5625\\[4pt]2.7050\ldots\end{pmatrix},
+A=\myvec{\tfrac{3.125}{\sqrt{3}} \\[6pt] \tfrac{6.25}{\sqrt{3}}}
+\;\approx\;
+\myvec{1.804 \\[6pt] 3.608},\quad
+B=\myvec{0 \\ 0},\quad
+C=\myvec{5 \\ 0}.
 \]
-\[
-\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}, \quad
-\vec{C}=\begin{pmatrix}5\\0\end{pmatrix}.
-\]
-
-Verification
-
-\[
-\vec{BA}\cdot \vec{BC} = \tfrac{5c}{2}, \qquad
-|\vec{BA}|=c, \quad |\vec{BC}|=5,
-\]
-\[
-\cos \angle B = \frac{\tfrac{5c}{2}}{5c} = \tfrac{1}{2} = \cos 60^\circ.
-\]
-
-Final Answer,
-
-\[
-\boxed{
-\vec{A} = \begin{pmatrix}1.5625\\[4pt]2.7050\end{pmatrix},\quad
-\vec{B} = \begin{pmatrix}0\\0\end{pmatrix},\quad
-\vec{C} = \begin{pmatrix}5\\0\end{pmatrix}
-}
-\]
-with $AB=3.125$ cm, $AC=4.375$ cm, and $BC=5$ cm.\\
-
 
 \begin{figure}[H]
     \centering

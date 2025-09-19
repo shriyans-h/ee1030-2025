@@ -92,93 +92,34 @@ BC = 5 \,\text{cm}, \quad\angle B = 45^\circ, \quad \text{and} \quad AC + AB = 7
 \end{frame}
 
 \begin{frame}{Solution}
-    \bigskip
- Set up points and given data
+     Using the cosine formula in $\triangle ABC$,
+\begin{align}
+b^{2} &= a^{2} + c^{2} - 2ac\cos B \\
+\Rightarrow (7.5-c)^{2} &= 5^{2} + c^{2} - 2\cdot 5c \cos 60^\circ \\
+\Rightarrow c &= \frac{7.5^{2}-5^{2}}{2(7.5-5\cos 60^\circ)} 
+\end{align}
 
-Let
 \[
-\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}, \qquad
-\vec{C}=\begin{pmatrix}5\\0\end{pmatrix}.
+c = 3.125, 
+\qquad b = 7.5 - 3.125 = 4.375.
 \]
 
-
 \[
-\vec{AC} = \vec{c}, \qquad \vec{AC} = \vec{b}, \qquad \vec{b+c}=7.5.
-\]
-
- Position vector of point $A$
-
-Since $\angle B=60^\circ$, the vector $\vec{BA}$ has length $c$ and direction $60^\circ$ above the $x$-axis. Thus
-\[
-\vec{A} = \vec{c}
-\begin{pmatrix}\cos 60^\circ \\ \sin 60^\circ\end{pmatrix}
-= \begin{pmatrix}\tfrac{\vec{c}}{2}\\[4pt]\tfrac{\vec{c}\sqrt{3}}{2}\end{pmatrix}.
-\]
-
- Expression for $AC$
-
-\[
-\vec{AC} = \vec{C} - \vec{A}
-= \begin{pmatrix}5-\tfrac{\vec{c}}{2}\\[4pt]-\tfrac{\vec{c}\sqrt{3}}{2}\end{pmatrix},
+A=\myvec{\tfrac{3.125\cos 60^\circ}{\sin 60^\circ}\\[6pt]\tfrac{3.125}{\sin 60^\circ}},\quad 
+B=\myvec{0\\0},\quad 
+C=\myvec{5\\0}.
 \]
 \end{frame}
-\begin{frame}
-and
-\[
-b^2 = \Big(5-\tfrac{\vec{c}}{2}\Big)^2 + \tfrac{3\vec{c}^2}{4}.
-\]
 
-  Apply $b+c=7.5$
-
-Since $b=7.5-c$, we have
+\begin{frame}{Solution}
+The coordinates of $\triangle ABC$ are
 \[
-(7.5-c)^2 = \Big(5-\tfrac{c}{2}\Big)^2 + \tfrac{3c^2}{4}.
+A=\myvec{\tfrac{3.125}{\sqrt{3}} \\[6pt] \tfrac{6.25}{\sqrt{3}}}
+\;\approx\;
+\myvec{1.804 \\[6pt] 3.608},\quad
+B=\myvec{0 \\ 0},\quad
+C=\myvec{5 \\ 0}.
 \]
-Expanding and simplifying gives,
-\[
-56.25 -15c + c^2 = 25 -5c + c^2,
-\]
-\[
-\quad c=3.125.
-\]
-Hence
-\[
-b = 7.5 - 3.125 = 4.375.
-\]
-\end{frame}
-\begin{frame}
- Coordinates of vertices
-
-\[
-\vec{A} = \begin{pmatrix}\tfrac{3.125}{2}\\[4pt]\tfrac{3.125\sqrt{3}}{2}\end{pmatrix}
-= \begin{pmatrix}1.5625\\[4pt]2.7050\ldots\end{pmatrix},
-\]
-\[
-\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}, \quad
-\vec{C}=\begin{pmatrix}5\\0\end{pmatrix}.
-\]
-
-Verification
-
-\[
-\vec{BA}\cdot \vec{BC} = \tfrac{5c}{2}, \qquad
-|\vec{BA}|=c, \quad |\vec{BC}|=5,
-\]
-\[
-\cos \angle B = \frac{\tfrac{5c}{2}}{5c} = \tfrac{1}{2} = \cos 60^\circ.
-\]
-
-Final Answer,
-
-\[
-\boxed{
-\vec{A} = \begin{pmatrix}1.5625\\[4pt]2.7050\end{pmatrix},\quad
-\vec{B} = \begin{pmatrix}0\\0\end{pmatrix},\quad
-\vec{C} = \begin{pmatrix}5\\0\end{pmatrix}
-}
-\]
-
-with $AB=3.125$ cm, $AC=4.375$ cm, and $BC=5$ cm.\\
 \end{frame}
 
 \begin{frame}{Construction Plot}
@@ -196,54 +137,42 @@ with $AB=3.125$ cm, $AC=4.375$ cm, and $BC=5$ cm.\\
 #include <stdio.h>
 #include <math.h>
 
-// Function to compute dot product of 2D vectors
-double dotProduct(double A[], double B[]) {
-    return A[0]*B[0] + A[1]*B[1];
-}
+int main(void) {
+    /* Given data */
+    double a = 5.0;       /* BC */
+    double K = 7.5;       /* AC + AB = b + c */
+    double cosB = 0.5;    /* cos 60° */
+    double sinB = sqrt(3.0) / 2.0; /* sin 60° */
 
-// Function to compute magnitude of a 2D vector
-double magnitude(double V[]) {
-    return sqrt(V[0]*V[0] + V[1]*V[1]);
-}
+    /* Formula from your solution */
+    double c = (K*K - a*a) / (2.0 * (K - a * cosB));
+    double b = K - c;
+
+    /* Coordinates with B=(0,0), C=(a,0) */
+    double Ax = (c * cosB) / sinB;
+    double Ay = c / sinB;
+
+    
+
 \end{lstlisting}
 \end{frame}
 
 % C code part 2
 \begin{frame}[fragile]{C Code: Angle Calculation and Main}
 \begin{lstlisting}[language=C]
-// Function to calculate angle (in degrees) between two vectors
-double angleBetweenVectors(double A[], double B[]) {
-    double dot = dotProduct(A, B);
-    double magA = magnitude(A);
-    double magB = magnitude(B);
-    double cosTheta = dot / (magA * magB);
+printf("Computed values:\n");
+    printf("c (AC) = %.6f\n", c);
+    printf("b (AB) = %.6f\n", b);
+    printf("A = (%.6f, %.6f)\n", Ax, Ay);
+    printf("B = (0.000000, 0.000000)\n");
+    printf("C = (%.6f, 0.000000)\n", a);
 
-    // Clamp for numerical stability
-    if (cosTheta > 1.0) cosTheta = 1.0;
-    else if (cosTheta < -1.0) cosTheta = -1.0;
-
-    return acos(cosTheta) * (180.0 / M_PI);
-}
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]{C Code}
-\begin{lstlisting}[language=C]
-int main() {
-    // Coordinates of vertices
-    double A[2] = {1.5625, 2.705};
-    double B[2] = {0.0, 0.0};
-    double C[2] = {5.0, 0.0};
-
-    // Vectors BA and BC
-    double BA[2] = {A[0] - B[0], A[1] - B[1]};
-    double BC[2] = {C[0] - B[0], C[1] - B[1]};
-
-    printf("Angle at B: %.2f degrees\n", angleBetweenVectors(BA, BC));
     return 0;
 }
 \end{lstlisting}
 \end{frame}
+
+ 
 
 
 % Python code part 1
