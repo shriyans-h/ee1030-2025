@@ -1,10 +1,10 @@
 import numpy as np
-
+import numpy.linalg as LA
 A = np.array([[2,0,-1],
               [5,1,0],
               [0,1,3]])
 
-A_inv = np.linalg.inv(A)
+A_inv = LA.inv(A)
 
 print("Matrix A:")
 print(A)
