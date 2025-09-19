@@ -1,0 +1,166 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow} 
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{MatGeo Assignment 3.2.23}
+\author{AI25BTECH11007}
+ \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question:}\\
+
+Construct a triangle $ABC$ in which 
+\[
+BC = 5 \,\text{cm}, \quad \angle B = 60^\circ, \quad \text{and} \quad AC + AB = 7.5 \,\text{cm}.
+\]
+
+
+\textbf{Solution:}\\
+\bigskip
+ Set up points and given data
+
+Let
+\[
+\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}, \qquad
+\vec{C}=\begin{pmatrix}5\\0\end{pmatrix}.
+\]
+
+
+\[
+\vec{AC} = \vec{c}, \qquad \vec{AC} = \vec{b}, \qquad \vec{b+c}=7.5.
+\]
+
+ Position vector of point $A$
+
+Since $\angle B=60^\circ$, the vector $\vec{BA}$ has length $c$ and direction $60^\circ$ above the $x$-axis. Thus
+\[
+\vec{A} = \vec{c}
+\begin{pmatrix}\cos 60^\circ \\ \sin 60^\circ\end{pmatrix}
+= \begin{pmatrix}\tfrac{\vec{c}}{2}\\[4pt]\tfrac{\vec{c}\sqrt{3}}{2}\end{pmatrix}.
+\]
+
+ Expression for $AC$
+
+\[
+\vec{AC} = \vec{C} - \vec{A}
+= \begin{pmatrix}5-\tfrac{\vec{c}}{2}\\[4pt]-\tfrac{\vec{c}\sqrt{3}}{2}\end{pmatrix},
+\]
+and
+\[
+b^2 = \Big(5-\tfrac{\vec{c}}{2}\Big)^2 + \tfrac{3\vec{c}^2}{4}.
+\]
+
+  Apply $b+c=7.5$
+
+Since $b=7.5-c$, we have
+\[
+(7.5-c)^2 = \Big(5-\tfrac{c}{2}\Big)^2 + \tfrac{3c^2}{4}.
+\]
+Expanding and simplifying gives,
+\[
+56.25 -15c + c^2 = 25 -5c + c^2,
+\]
+\[
+\quad c=3.125.
+\]
+Hence
+\[
+b = 7.5 - 3.125 = 4.375.
+\]
+
+ Coordinates of vertices
+
+\[
+\vec{A} = \begin{pmatrix}\tfrac{3.125}{2}\\[4pt]\tfrac{3.125\sqrt{3}}{2}\end{pmatrix}
+= \begin{pmatrix}1.5625\\[4pt]2.7050\ldots\end{pmatrix},
+\]
+\[
+\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}, \quad
+\vec{C}=\begin{pmatrix}5\\0\end{pmatrix}.
+\]
+
+Verification
+
+\[
+\vec{BA}\cdot \vec{BC} = \tfrac{5c}{2}, \qquad
+|\vec{BA}|=c, \quad |\vec{BC}|=5,
+\]
+\[
+\cos \angle B = \frac{\tfrac{5c}{2}}{5c} = \tfrac{1}{2} = \cos 60^\circ.
+\]
+
+Final Answer,
+
+\[
+\boxed{
+\vec{A} = \begin{pmatrix}1.5625\\[4pt]2.7050\end{pmatrix},\quad
+\vec{B} = \begin{pmatrix}0\\0\end{pmatrix},\quad
+\vec{C} = \begin{pmatrix}5\\0\end{pmatrix}
+}
+\]
+with $AB=3.125$ cm, $AC=4.375$ cm, and $BC=5$ cm.\\
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figs/image.png}
+    \caption{Construction Plot}
+    \label{fig:placeholder}
+\end{figure}
+
+\end{document}
