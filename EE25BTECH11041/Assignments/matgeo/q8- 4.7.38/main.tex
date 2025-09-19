@@ -1,0 +1,111 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+
+
+\author{EE25BTECH11041-Naman Kumar }
+\graphicspath{./figs/}
+
+\begin{document}
+\begin{center}
+    \huge{4.11.18}\\
+    \large{EE25BTECH11041 - Naman Kumar}
+\end{center}
+Question:\\
+Find the equation of the plane which contains the line of intersection of the planes $\vec{r}\cdot(\imath-2\jmath+3\hat{k})-4=0$ and  $\vec{r}\cdot(-2\imath+\jmath+\hat{k})+5=0$ and whose intercept on X axis is equal to that of on Y axis.\\
+\solution \\
+Given Planes,
+\begin{align}
+    n_1^Tx=c_1,n_2^Tx=c_2
+\end{align}
+Where
+\begin{align}
+n_1=\begin{pmatrix}1\\-2\\3\end{pmatrix},n_2=\begin{pmatrix}-2\\1\\1\end{pmatrix},c_1=4,c_2=-5
+\end{align}
+Let Required equation of plane
+\begin{align}
+    n_3^Tx=c_3
+\end{align}
+Since we can write,
+\begin{align}
+P_3=P_1-\lambda P_2 \text{ (Where $P_1,P_2,P_3$ are equation of planes)}
+\end{align}
+Because All three planes intersect at same line,Therefore
+\begin{align}
+    (n_1-\lambda n_2)^Tx=c_1-\lambda c_2\\
+\end{align}
+Given,
+\begin{align}
+    X-intercept=Y-intercept\\
+\end{align}
+for X-intercept
+\begin{align}
+    (n_1-\lambda n_2)^T\begin{pmatrix}x\\0\\0\end{pmatrix}=c_1-\lambda c_2\\
+    (n_1-\lambda n_2)^Txe_1=c_1-\lambda c_2
+\end{align}
+Therefore,
+\begin{align}
+    X-intercept= \frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_1}\label{1}
+\end{align}
+Similarly
+\begin{align}
+    Y-intercept=\frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_2} \label{2}
+\end{align}
+\newpage
+Comparing equations $\eqref{1}$ and $\eqref{2}$
+\begin{align}
+    \frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_1}=\frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_2}\\
+    (n_1-\lambda n_2)^Te_1=(n_1-\lambda n_2)^Te_2\\
+    \begin{pmatrix}1+2\lambda\\-2-1\lambda\\3-1\lambda\end{pmatrix}^Te_1=\begin{pmatrix}1+2\lambda\\-2-1\lambda\\3-1\lambda\end{pmatrix}^Te_2\\
+    1+2\lambda=-2-1\lambda\\
+    \lambda=-1
+\end{align}
+Therefore equation of required plane is
+\begin{align}
+    \begin{pmatrix}1+2(-1)\\-2-1(-1)\\3-1(-1)\end{pmatrix}^Tx=4+5(-1)\\
+    \begin{pmatrix}-1\\-1\\4\end{pmatrix}^Tx=-1
+\end{align}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/Figure.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
