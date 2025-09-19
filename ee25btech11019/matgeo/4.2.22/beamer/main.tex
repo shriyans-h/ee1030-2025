@@ -45,7 +45,7 @@
 \end{titlepage}
 \end{frame}
 \begin{frame}{Question}
-\textbf{Question:}\\[6pt]
+\textbf{Question:}\\
 Show that the two lines
 \[
 a_1 x + b_1 y + c_1 = 0,\qquad a_2 x + b_2 y + c_2 = 0
@@ -56,50 +56,66 @@ where $b_1 b_2 \neq 0$ are parallel if
 \]
 \end{frame}
 
-\begin{frame}{Solution}
-Normal vector of first line:
+
+\begin{frame}{Solution: Step 1}
+
+Form the $2\times2$ coefficient matrix of normals:
 \[
-\vec{n}_1 = \myvec{a_1 \\ b_1}
-\]
-Normal vector of second line:
-\[
-\vec{n}_2 = \myvec{a_2 \\ b_2}
+\vec{M} = \myvec{a_1 & a_2 \\ b_1 & b_2}.
 \]
 \end{frame}
-\begin{frame}{Solution}
-If 
+
+
+\begin{frame}{Solution: Step 2}
+Assume 
 \[
-\frac{a_1}{b_1}=\frac{a_2}{b_2},
-\]
-then
-\[
-a_1 b_2 - a_2 b_1 = 0
-\]
-which can be written as
-\[
-a_1 b_2 - a_2 b_1 = 
-\det\myvec{a_1 & a_2 \\ b_1 & b_2}
-\]
-\end{frame}
-\begin{frame}{Solution}
-Thus,
-\[
-\det\myvec{\vec{n}_1, \vec{n}_2} = 0
-\]
-which means $\vec{n}_1$ and $\vec{n}_2$ are collinear, i.e.
-\[
-\vec{n}_1 = \lambda \vec{n}_2, \quad \lambda \in \mathbb{R}.
+\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}.
 \]
 
-Since normals are scalar multiples, the direction vectors of the two lines are also scalar multiples.  
-\end{frame}
-\begin{frame}{Conclusion}
-Therefore, the two lines have identical slopes and are parallel whenever
+Then there exists \(k \in \mathbb{R}\) such that
 \[
-\frac{a_1}{b_1} = \frac{a_2}{b_2}, 
-\quad b_1 b_2 \neq 0.
+a_2 = k a_1, 
+\qquad 
+b_2 = k b_1.
 \]
 \end{frame}
+
+
+\begin{frame}{Solution: Step 3}
+Write the rows of \vec{M} as row vectors:
+\[
+\text{Row}_1 = (a_1,\,a_2) = a_1(1,\,k),
+\]
+\[
+\text{Row}_2 = (b_1,\,b_2) = b_1(1,\,k).
+\]
+\end{frame}
+
+
+\begin{frame}{Solution: Step 4}
+Perform the row operation:
+\[
+\text{Row}_2 \;\leftarrow\; \text{Row}_2 - \frac{b_1}{a_1}\,\text{Row}_1
+\]
+(assuming \(a_1\neq 0\); if \(a_1=0\), swap roles).
+
+Since \(\text{Row}_2\) is a multiple of \(\text{Row}_1\), we get
+\[
+\text{Row}_2 = (0,0).
+\]
+\end{frame}
+
+
+\begin{frame}{Solution: Step 5}
+Thus the row-echelon form of \vec{M} has exactly one nonzero row:
+\[
+\operatorname{rank}(\vec{M}) = 1.
+\]
+
+Rank \(1\) means the two normal vectors are linearly dependent (collinear).  
+Therefore, the lines have the same slope and are parallel.
+\end{frame}
+
 
 \begin{frame}{Pyhton plot}
 \begin{figure}[h!]

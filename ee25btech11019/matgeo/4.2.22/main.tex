@@ -54,33 +54,39 @@ Show that the two lines
 \[
 a_1 x + b_1 y + c_1 = 0,\qquad a_2 x + b_2 y + c_2 = 0
 \]
-where $b_1 b_2 \neq 0$ are parallel if $\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}$.
+with \(b_1 b_2\neq 0\) are parallel iff \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
 \\
 \solution
 
 \begin{align}
-\text{Normal vector of first line: }\ &\vec{n}_1=\myvec{a_1\\b_1}, \\
-\text{Normal vector of second line: }\ &\vec{n}_2=\myvec{a_2\\b_2}
+&\text{Form the $2\times2$ coefficient matrix of normals: } 
+\vec{M}=\myvec{a_1 & a_2\\ b_1 & b_2}.
 \end{align}
 
-If \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\) then
+Assume \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\). Then there exists \(k\in\mathbb{R}\) such that
 \begin{align}
-a_1 b_2 - a_2 b_1 &= 0
+a_2 = k\,a_1,\qquad b_2 = k\,b_1.
 \end{align}
 
-Noting that
+Write the rows of \textbf{M} as row vectors:
 \begin{align}
-a_1 b_2 - a_2 b_1 &= \det\myvec{a_1 & a_2 \\ b_1 & b_2}
+\text{Row}_1 &= (a_1,\;a_2) = (a_1,\;k a_1) = a_1(1,\;k),\\
+\text{Row}_2 &= (b_1,\;b_2) = (b_1,\;k b_1) = b_1(1,\;k).
 \end{align}
 
-we have \(\det\! [\vec{n}_1,\vec{n}_2]=0\), which means the two normal vectors are collinear, i.e.
+Perform the row operation \( \text{Row}_2 \leftarrow \text{Row}_2 - \dfrac{b_1}{a_1}\,\text{Row}_1\) (assuming \(a_1\neq0\); if \(a_1=0\) use a symmetric argument swapping roles). Because Row\(_2\) is \( \dfrac{b_1}{a_1}\) times Row\(_1\), this operation yields the zero row:
 \begin{align}
-\vec{n}_1 = \lambda\,\vec{n}_2 \quad\text{for some }\lambda\in\mathbb{R}
+\text{Row}_2 &\mapsto \text{Row}_2 - \frac{b_1}{a_1}\text{Row}_1 = (0,0).
 \end{align}
 
-Since normals are scalar multiples, the direction vectors of the two lines are also scalar multiples, hence the two lines have identical slopes and are parallel.
+Thus the row-echelon form of \textbf{M} has exactly one nonzero row, so
+\begin{align}
+\operatorname{rank}(\vec{M})=1.
+\end{align}
 
-Therefore, the two lines are parallel whenever \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\) (with \(b_1 b_2\neq0\)).
+Rank \(1\) means the two column vectors (or equivalently the two normal vectors) are linearly dependent - i.e. collinear - hence the associated lines have the same slope and are parallel.
+
+Conversely, if \(\operatorname{rank}(\vec{M})=1\) then the two rows (or columns) are proportional, which gives \(a_2 = k a_1\) and \(b_2 = k b_1\) for some \(k\), and therefore \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
 
 \begin{figure}[H]
 \centering
