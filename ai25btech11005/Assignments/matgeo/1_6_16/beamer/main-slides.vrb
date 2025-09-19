@@ -1,0 +1,8 @@
+\frametitle{plot}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{beamer//figs/plot.png}
+    \caption{collinearity}
+    \label{fig:placeholder}
+\end{figure}
+
