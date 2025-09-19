@@ -18,173 +18,82 @@
 \definecolor{bg}{gray}{0.95}
 \lstset{
     language=C,
-        basicstyle=\ttfamily\small,
-            keywordstyle=\color{blue},
-                stringstyle=\color{orange},
-                    commentstyle=\color{green!60!black},
-                        numbers=left,
-                            numberstyle=\tiny\color{gray},
-                                breaklines=true,
-                                    showstringspaces=false,
-                                    }
-\title{2.3.8}
-                                    \author{Aditya Mishra - EE25BTECH11005}
-                                    \date{September 15, 2025}
-                                    \begin{document}
-                                    \frame{\titlepage}
-
-                                    \begin{frame}{Question}
-                                    If $\hat{i} + \hat{j} + \hat{k},\ 2\hat{i} + 5\hat{j},\ 3\hat{i} + 2\hat{j} - 3\hat{k},\ \hat{i} - 6\hat{j} - \hat{k}$ respectively are the position vectors of points $A, B, C,$ and $D$, then find the angle between the straight lines $\vec{AB}$ and $\vec{CD}$. Also, determine whether $\vec{AB}$ and $\vec{CD}$ are collinear.
-                                    \end{frame}
-
-                                    \begin{frame}{Given Information}
-                                    \centering
-                                    \label{tab:parameters}
-                                    Let $\vec{A} = \begin{pmatrix}1\\1\\1\end{pmatrix}$, $\vec{B} = \begin{pmatrix}2\\5\\0\end{pmatrix}$, $\vec{C} = \begin{pmatrix}3\\2\\-3\end{pmatrix}$, $\vec{D} = \begin{pmatrix}1\\-6\\-1\end{pmatrix}$
-
-                                    Direction vectors:
-                                    \begin{align*}
-                                    \vec{AB} &= \vec{B} - \vec{A} = \begin{pmatrix}1\\4\\-1\end{pmatrix} \\
-                                    \vec{CD} &= \vec{D} - \vec{C} = \begin{pmatrix}-2\\-8\\2\end{pmatrix}
-                                    \end{align*}
-                                    \end{frame}
-
-                                    \begin{frame}{Formula}
-                                   \begin{align}
-                                    \cos \theta = \frac{\vec{AB}^T \vec{CD}}{|\vec{AB}|\,|\vec{CD}|}
-                                    \end{align}
-                                    \begin{align}
-                                    \theta = \cos^{-1}\left(\frac{\vec{AB}^T \vec{CD}}{|\vec{AB}|\,|\vec{CD}|}\right)
-                                    \end{align}
-                                    Vectors are collinear if $\theta = 0^\circ$ or $180^\circ$.
-                                    \end{frame}
-
-                                    \begin{frame}{Solution}
-                                    \[
-                                    \vec{AB}^T \vec{CD}
-                                    = \begin{pmatrix}1 & 4 & -1\end{pmatrix}
-                                    \begin{pmatrix}-2 \\ -8 \\ 2\end{pmatrix}
-                                    = 1\times(-2) + 4\times(-8) + (-1)\times 2 = -2 -32 -2 = -36
-                                    \]
-                                    \[
-                                    |\vec{AB}| = \sqrt{1^2 + 4^2 + (-1)^2} = \sqrt{18}
-                                    \]
-                                    \[
-                                    |\vec{CD}| = \sqrt{(-2)^2 + (-8)^2 + 2^2} = \sqrt{4 + 64 + 4} = \sqrt{72}
-                                    \]
-                                    \[
-                                    \cos\theta = \frac{-36}{\sqrt{18}\times\sqrt{72}} = \frac{-36}{36} = -1
-                                    \]
-                                    \[
-                                    \theta = \cos^{-1}(-1) = 180^\circ
-                                    \]
-                                    Therefore, $\vec{AB}$ and $\vec{CD}$ are collinear but point in opposite directions.
-                                    \end{frame}
-
-
-\begin{frame}[fragile]
-\frametitle{Python Plot Code}
-\begin{lstlisting}[language=Python]
-import numpy as np
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.pyplot as plt
-A = np.array([1, 1, 1])
-B = np.array([2, 5, 0])
-C = np.array([3, 2, -3])
-D = np.array([1, -6, -1])
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.quiver(*A, *(B-A), color='b', label='AB')
-ax.quiver(*C, *(D-C), color='r', label='CD')
-\end{lstlisting} 
-\end{frame}
-\begin{frame}[fragile]
-\frametitle{Python Plot Code}
-
-\begin{lstlisting}
-ax.scatter(*A, color='blue')
-ax.scatter(*B, color='blue')
-ax.scatter(*C, color='red')
-ax.scatter(*D, color='red')
-ax.text(*A, 'A')
-ax.text(*B, 'B')
-ax.text(*C, 'C')
-ax.text(*D, 'D')
-plt.show()
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{C Code}
-\begin{lstlisting}[language=C]
-#include<stdio.h>
-#include<math.h>
-double dot(double *a, double *b) {
-double r=0;
-for(int i=0;i<3;i++)
-    r += a[i]*b[i];
-return r;
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
 }
-double norm(double *a) {
-return sqrt(a[0]*a[0] + a[1]*a[1] + a[2]*a[2]);}
-\end{lstlisting} 
+\title{2.3.8}
+\author{Aditya Mishra - EE25BTECH11005}
+\date{September 15, 2025}
+\begin{document}
+\frame{\titlepage}
+\begin{frame}{Question}
+If $\hat{i} + \hat{j} + \hat{k},\ 2\hat{i} + 5\hat{j},\ 3\hat{i} + 2\hat{j} - 3\hat{k},\ \hat{i} - 6\hat{j} - \hat{k}$ respectively are the position vectors of points $A, B, C,$ and $D$, then find the angle between the straight lines $(\vec{B}-\vec{A})$ and $(\vec{D}-\vec{C})$. Find whether $(\vec{B}-\vec{A})$ and $(\vec{D}-\vec{C})$ are collinear or not.
 \end{frame}
-\begin{frame}[fragile]
-\frametitle{C Code}
+\begin{frame}{Given Information}
+\centering
+\label{tab:parameters}
+Let $\vec{A}$ = $\begin{pmatrix}1\\1\\1\end{pmatrix}$,\ 
+$\vec{B}$ = $\begin{pmatrix}2\\5\\0\end{pmatrix}$,\
+$\vec{C}$ = $\begin{pmatrix}3\\2\\-3\end{pmatrix}$,\
+$\vec{D}$ = $\begin{pmatrix}1\\-6\\-1\end{pmatrix}$
 
-\begin{lstlisting}
-double angle_deg(double *a, double *b) {
-double d = dot(a, b);
-double n1 = norm(a);
-double n2 = norm(b);
-double ratio = d/(n1*n2);
-if (ratio > 1) ratio=1;
-if (ratio < -1) ratio=-1;
-return acos(ratio)*180.0/M_PI;}
-int collinear(double *a, double *b) {
-    double ang = angle_deg(a, b);
-    return (ang < 1e-8 || fabs(ang - 180) < 1e-8);
-    }
-\end{lstlisting}
+Direction vectors:
+\begin{align}
+\vec{B}-\vec{A} = \begin{pmatrix}1\\4\\-1\end{pmatrix} \\
+\vec{D}-\vec{C} = \begin{pmatrix}-2\\-8\\2\end{pmatrix}
+\end{align}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{Python and C Code}
-\begin{lstlisting}[language=Python]
-    import numpy as np
-    import ctypes
-    lib = ctypes.CDLL('./mat3.so')
-    lib.angle_deg.argtypes = [ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
-    lib.angle_deg.restype = ctypes.c_double
-    A = np.array([1., 1., 1.])
-    B = np.array([2., 5., 0.])
-    C = np.array([3., 2., -3.])
-    D = np.array([1., -6., -1.])                          
-    AB = B - A
-    CD = D - C
-    AB_c = np.ascontiguousarray(AB, dtype=np.double).ctypes.data_as(ctypes.POINTER(ctypes.c_double))
-    \end{lstlisting} 
-    \end{frame}
-    \begin{frame}[fragile]
-    \frametitle{Python and C Code}
+\begin{frame}{Formula}
+The angle $\theta$ between $(\vec{B}-\vec{A})$ and $(\vec{D}-\vec{C})$ is
+\begin{align}
+\cos \theta = \frac{(\vec{B}-\vec{A})^T (\vec{D}-\vec{C})}
+{|(\vec{B}-\vec{A})| |(\vec{D}-\vec{C})|}
+\end{align}
+\begin{align}
+\theta = \cos^{-1}\left(
+\frac{(\vec{B}-\vec{A})^T (\vec{D}-\vec{C})}
+{|(\vec{B}-\vec{A})| |(\vec{D}-\vec{C})|}\right)
+\end{align}
+Vectors are collinear if $\theta = 0^\circ$ or $180^\circ$.
+\end{frame}
+\begin{frame}{Solution}
+\[
+(\vec{B}-\vec{A})^T (\vec{D}-\vec{C})
+= \begin{pmatrix}1 & 4 & -1\end{pmatrix}
+\begin{pmatrix}-2 \\ -8 \\ 2\end{pmatrix}
+= 1\times(-2) + 4\times(-8) + (-1)\times 2 = -36
+\]
+\[
+|(\vec{B}-\vec{A})| = \sqrt{1^2 + 4^2 + (-1)^2} = \sqrt{18}
+\]
+\[
+|(\vec{D}-\vec{C})| = \sqrt{(-2)^2 + (-8)^2 + 2^2} = \sqrt{72}
+\]
+\[
+\cos\theta = \frac{-36}{\sqrt{18} \times \sqrt{72}} = \frac{-36}{36} = -1
+\]
+\[
+\theta = \cos^{-1}(-1) = 180^\circ
+\]
+Therefore, $(\vec{B}-\vec{A})$ and $(\vec{D}-\vec{C})$ are collinear but in opposite directions.
+\end{frame}
+\begin{frame}{Plot}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{Figs/Figure.png}
+\end{figure}
+\end{frame}
+\begin{frame}{Codes}
+\centering
+    For Codes, refer to the URL below:
+    https://github.com/Aditya-Mishra11005/ee1030-2025/tree/main/ee25btech11005/matgeo/2.3.8/Codes
+\end{frame}
+\end{document}
 
-    \begin{lstlisting}
-    CD_c = np.ascontiguousarray(CD, dtype=np.double).ctypes.data_as(ctypes.POINTER(ctypes.c_double))
-    angle = lib.angle_deg(AB_c, CD_c)
-    print("Angle between AB and CD (degrees):", angle)
-    lib.collinear.argtypes = [ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
-    
-    lib.collinear.restype = ctypes.c_int
-    is_collinear = lib.collinear(AB_c, CD_c)
-    print("Are AB and CD collinear?", "Yes" if is_collinear else "No")
-    \end{lstlisting}
-    \end{frame}
-
-                                                                                                                \begin{frame}{Plot}
-                                                                                                                \begin{figure}
-                                                                                                                    \centering
-                                                                                                                        \includegraphics[width=0.8\columnwidth]{Figs/Figure.png}
-                                                                                                                        \end{figure}
-                                                                                                                        \end{frame}
-
-                                                                                                                                \end{document}
