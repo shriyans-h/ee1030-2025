@@ -88,15 +88,15 @@ Find the equation of the plane which contains the line of intersection of the pl
 \begin{frame}{Solution}
 Given Planes,
 \begin{align}
-    n_1^Tx=c_1,n_2^Tx=c_2
+    \vec{n_1}^T\vec{x}=c_1,\vec{n_2}^T\vec{x}=c_2
 \end{align}
 Where
 \begin{align}
-n_1=\begin{pmatrix}1\\-2\\3\end{pmatrix},n_2=\begin{pmatrix}-2\\1\\1\end{pmatrix},c_1=4,c_2=-5
+\vec{n_1}=\begin{pmatrix}1\\-2\\3\end{pmatrix},\vec{n_2}=\begin{pmatrix}-2\\1\\1\end{pmatrix},c_1=4,c_2=-5
 \end{align}
 Let Required equation of plane
 \begin{align}
-    n_3^Tx=c_3
+    \vec{n_3}^T\vec{x}=c_3
 \end{align}
 \end{frame}
 \begin{frame}{Solution}
@@ -106,7 +106,7 @@ P_3=P_1-\lambda P_2 \text{ (Where $P_1,P_2,P_3$ are equation of planes)}
 \end{align}
 Because All three planes intersect at same line,Therefore
 \begin{align}
-    (n_1-\lambda n_2)^Tx=c_1-\lambda c_2\\
+    (\vec{n_1}-\lambda \vec{n_2})^T\vec{x}=c_1-\lambda c_2\\
 \end{align}
 Given,
 \begin{align}
@@ -116,32 +116,45 @@ Given,
 \begin{frame}{Solution}
 for X-intercept
 \begin{align}
-    (n_1-\lambda n_2)^T\begin{pmatrix}x\\0\\0\end{pmatrix}=c_1-\lambda c_2\\
-    (n_1-\lambda n_2)^Txe_1=c_1-\lambda c_2
+    (\vec{n_1}-\lambda \vec{n_2})^T\begin{pmatrix}x\\0\\0\end{pmatrix}=c_1-\lambda c_2\\
+    (\vec{n_1}-\lambda \vec{n_2})^Tx\vec{e_1}=c_1-\lambda c_2
 \end{align}
 Therefore,
 \begin{align}
-    X-intercept= \frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_1}\label{1}
+    X-intercept= \frac{c_1-\lambda c_2}{(\vec{n_1}-\lambda \vec{n_2})^T\vec{e_1}}\label{1}
 \end{align}
 \end{frame}
 \begin{frame}{Solution}
 Similarly
 \begin{align}
-    Y-intercept=\frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_2} \label{2}
+    Y-intercept=\frac{c_1-\lambda c_2}{(\vec{n_1}-\lambda \vec{n_2})^T\vec{e_2}} \label{2}
 \end{align}
 Comparing equations $\eqref{1}$ and $\eqref{2}$
 \begin{align}
-    \frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_1}=\frac{c_1-\lambda c_2}{(n_1-\lambda n_2)^Te_2}\\
-    (n_1-\lambda n_2)^Te_1=(n_1-\lambda n_2)^Te_2\\
-    \begin{pmatrix}1+2\lambda\\-2-1\lambda\\3-1\lambda\end{pmatrix}^Te_1=\begin{pmatrix}1+2\lambda\\-2-1\lambda\\3-1\lambda\end{pmatrix}^Te_2\\
-    1+2\lambda=-2-1\lambda\\
+    \frac{c_1-\lambda c_2}{(\vec{n_1}-\lambda \vec{n_2})^T\vec{e_1}}=\frac{c_1-\lambda c_2}{(\vec{n_1}-\lambda \vec{n_2})^T\vec{e_2}}\\
+    (\vec{n_1}-\lambda \vec{n_2})^T\vec{e_1}=(\vec{n_1}-\lambda \vec{n_2})^T\vec{e_2}\\
+    \vec{n_1}^T\vec{e_1}-\lambda\vec{n_2}^T\vec{e_1}=\vec{n_1}^T\vec{e_2}-\lambda\vec{n_2}^T\vec{e_2}
+\end{align}
+    \end{frame}
+\begin{frame}{Solution}
+\begin{align}
+    \lambda\vec{n_2}^T\vec{e_2}-\lambda\vec{n_2}^T\vec{e_1}=\vec{n_1}^T\vec{e_2}-\vec{n_1}^T\vec{e_1}\\
+    \lambda=\frac{\vec{n_1}^T\vec{e_2}-\vec{n_1}^T\vec{e_1}}{\vec{n_2}^T\vec{e_2}-\lambda\vec{n_2}^T\vec{e_1}}\\
+    \lambda=\frac{\vec{n_1^T(\vec{e_2}-\vec{e_1})}}{n_2^T(\vec{e_2}-\vec{e_1})}
+\end{align}
+    \end{frame}
+\begin{frame}{Solution}
+Now Putting values
+\begin{align}
+    \lambda=\frac{\begin{pmatrix}1\\-2\\3\end{pmatrix}^T\begin{pmatrix}-1\\1\\0\end{pmatrix}}{\begin{pmatrix}-2\\1\\1\end{pmatrix}^T\begin{pmatrix}-1\\1\\0\end{pmatrix}}\\
+    \lambda=\frac{-1-2}{2+1}\\
     \lambda=-1
 \end{align}
 \end{frame}
 \begin{frame}{Solution}
 Therefore equation of required plane is
 \begin{align}
-    \begin{pmatrix}1+2(-1)\\-2-1(-1)\\3-1(-1)\end{pmatrix}^Tx=4+5(-1)\\
+    \begin{pmatrix}1+2(-1)\\-2-1(-1)\\3-1(-1)\end{pmatrix}^T\vec{x}=4+5(-1)\\
     \begin{pmatrix}-1\\-1\\4\end{pmatrix}^Tx=-1
 \end{align}
 \end{frame}
