@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  20 SEP 2025 06:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  20 SEP 2025 06:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1516,13 +1516,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 86.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main-slides.aux.
+) (./main-slides.aux)
 \openout1 = `main-slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 86.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1619,6 +1619,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 86.
+
+(./main-slides.out) (./main-slides.out)
 \@outlinefile=\write7
 \openout7 = `main-slides.out'.
 
@@ -1694,15 +1696,12 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count408
-
-No file main-slides.nav.
-[1
+ (./main-slides.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
 3.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -1766,7 +1765,7 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 ] [4
 
 ]
-<../figs/fig1.png, id=140, 578.16pt x 433.62pt>
+<../figs/fig1.png, id=142, 578.16pt x 433.62pt>
 File: ../figs/fig1.png Graphic file (type png)
 <use ../figs/fig1.png>
 Package pdftex.def Info: ../figs/fig1.png  used on input line 120.
@@ -1775,7 +1774,7 @@ Package pdftex.def Info: ../figs/fig1.png  used on input line 120.
 [5
 
  <../figs/fig1.png>]
-<../figs/fig2.png, id=169, 578.16pt x 433.62pt>
+<../figs/fig2.png, id=170, 578.16pt x 433.62pt>
 File: ../figs/fig2.png Graphic file (type png)
 <use ../figs/fig2.png>
 Package pdftex.def Info: ../figs/fig2.png  used on input line 124.
@@ -1793,20 +1792,14 @@ Package pdftex.def Info: ../figs/fig2.png  used on input line 124.
 \openout10 = `main-slides.snm'.
 
  (./main-slides.aux)
-
-Package rerunfilecheck Warning: File `main-slides.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main-slides.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main-slides.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 55667 strings out of 476091
- 1333335 string characters out of 5794081
+ 55692 strings out of 476091
+ 1333590 string characters out of 5794081
  2112582 words of memory out of 5000000
- 75081 multiletter control sequences out of 15000+600000
+ 75098 multiletter control sequences out of 15000+600000
  542162 words of font info for 67 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,122p,1179b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1818,7 +1811,7 @@ texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main-slides.pdf (6 pages, 286737 bytes).
+Output written on main-slides.pdf (6 pages, 286756 bytes).
 PDF statistics:
  240 PDF objects out of 1000 (max. 8388607)
  197 compressed objects within 2 object streams

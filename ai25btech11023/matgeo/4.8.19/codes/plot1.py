@@ -37,7 +37,7 @@ coords = np.block([A]).flatten()
 ax.scatter(coords[0], coords[1], coords[2], color='red', s=50)  # scatter plot point A
 
 # Add text label for point A
-ax.text(coords[0], coords[1], coords[2], 'A', fontsize=12, ha='center', va='bottom')
+ax.text(coords[0], coords[1], coords[2], 'P', fontsize=12, ha='center', va='bottom')
 
 # Set labels and title (optional)
 ax.set_xlabel('X axis')
