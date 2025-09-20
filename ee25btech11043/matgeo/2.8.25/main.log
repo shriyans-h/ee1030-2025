@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 SEP 2025 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 SEP 2025 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1935,8 +1935,7 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/ot1
 txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 43.
@@ -2128,6 +2127,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 43.
+ (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -2174,13 +2174,6 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-
-LaTeX Warning: Reference `eq:equation' on page 1 undefined on input line 104.
-
-
-LaTeX Warning: Reference `eq:equation' on page 1 undefined on input line 104.
-
-
 Underfull \vbox (badness 1769) has occurred while \output is active []
 
 
@@ -2190,19 +2183,6 @@ dmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts
 /enc/dvips/base/8r.enc}
 
 ]
-
-LaTeX Warning: Reference `eq:equation' on page 2 undefined on input line 115.
-
-
-LaTeX Warning: Reference `eq:equation' on page 2 undefined on input line 115.
-
-
-LaTeX Warning: Reference `eq:equation' on page 2 undefined on input line 126.
-
-
-LaTeX Warning: Reference `eq:equation' on page 2 undefined on input line 126.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2212,7 +2192,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-<figs/fig1.png, id=77, 463.2507pt x 400.3758pt>
+<figs/fig1.png, id=101, 463.2507pt x 400.3758pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
 Package pdftex.def Info: figs/fig1.png  used on input line 135.
@@ -2224,27 +2204,14 @@ Package pdftex.def Info: figs/fig1.png  used on input line 135.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54455 strings out of 473190
- 1311267 string characters out of 5704335
- 1897469 words of memory out of 5000000
- 76856 multiletter control sequences out of 15000+600000
+ 54463 strings out of 473190
+ 1311363 string characters out of 5704335
+ 1897521 words of memory out of 5000000
+ 76858 multiletter control sequences out of 15000+600000
  622675 words of font info for 167 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,15n,109p,1194b,1028s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2257,10 +2224,10 @@ ellar/texlive/20250308_1/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></op
 t/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/urw/times/utm
 r8a.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 105294 bytes).
+Output written on main.pdf (3 pages, 104439 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 158 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  42 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
