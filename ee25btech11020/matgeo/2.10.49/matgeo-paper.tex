@@ -1,0 +1,122 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{problem}{Problem}
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{example}{Example}[section]
+%\newtheorem{definition}[problem]{Definition}
+
+\begin{document}
+
+\title{2.10.49}
+\author{EE25BTECH11020 - Darsh Pankaj Gajare}
+% \maketitle
+% \newpage
+% \bigskip
+%\begin{document}
+{\let\newpage\relax\maketitle}
+%\renewcommand{\thefigure}{\theenumi}
+%\renewcommand{\thetable}{\theenumi}
+Question:\\
+The unit vector which is orthogonal to the vector $3\hat{i}+2\hat{j} +6\hat{k}$ and is coplanar with vectors $2\hat{i}+\hat{j}+\hat{k}$ and $\hat{i}-\hat{j}+\hat{k}$ is
+\begin{multicols}{4}
+\begin{enumerate}
+\item$\frac{2\hat{i}-6\hat{j}+\hat{k}}{\sqrt{41}}$
+\item $\frac{2\hat{i}-3\hat{j}}{\sqrt{13}}$
+\item $\frac{3\hat{i}-\hat{k}}{\sqrt{10}}$
+\item $\frac{4\hat{i}+3\hat{j}-3\hat{k}}{\sqrt{34}}$
+\end{enumerate}
+\end{multicols}
+\textbf{Solution:}
+Given:
+\begin{table}[H]
+	\centering
+	\label{}
+	\caption{Given data}
+	\input{tables/table}
+\end{table}
+To find: $\vec{P}$
+\solution
+
+\begin{align}
+\vec{P} = \alpha\vec{A} + \beta\vec{B} 
+\end{align}
+
+\begin{align}
+\vec{P}^T \vec{C} &= 0 
+\end{align}
+\begin{align}
+    \myvec{\vec{A} & \vec{B}}^T \vec{C} \myvec{\alpha\\\beta} &= 0
+\end{align}
+\begin{align}
+\myvec{\vec{A}^T \vec{C} & \vec{B}^T \vec{C}}\myvec{\alpha\\\beta} = 0
+\end{align}
+\begin{align}
+ \myvec{\vec{A}^T \vec{C} & \vec{B}^T \vec{C}} = \myvec{14 & 7}
+\end{align}
+
+\begin{align}
+ 2\alpha+\beta = 0 \implies \beta = -2\alpha
+\end{align}
+\begin{align}
+\vec{P}=\myvec{2\alpha+\beta\\\alpha-\beta\\\alpha+\beta}
+\end{align}
+Therefore,
+\begin{align}
+\vec{P} &= \alpha\myvec{0\\3\\-1}
+\end{align}
+
+Normalizing,
+\begin{align}
+\vec{P} &= \pm \frac{1}{\sqrt{10}} \myvec{0\\3\\-1}
+\end{align}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img}
+	\caption*{Plot using C function}
+	\label{img}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{fig}
+	\caption*{Plot using Python}
+	\label{fig}
+\end{figure}
+\end{document}
