@@ -2,11 +2,10 @@
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
-\usepackage{tfrupee} % Include tfrupee package
+\usepackage{tfrupee} 
 
-\setlength{\headheight}{1cm} % Set the height of the header box
-\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}     
 
 \usepackage{gvv-book}
 \usepackage{gvv}
@@ -25,7 +24,6 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-% \usepackage{gvv}                                        
 \def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
@@ -37,12 +35,13 @@
 \usepackage{ifthen}                                           
 \usepackage{lscape}
 \usepackage{circuitikz}
+
+
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
     text width=4em, text centered, rounded corners, minimum height=3em]
 \tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
 \tikzstyle{input} = [coordinate]
 \tikzstyle{output} = [coordinate]
-
 
 \begin{document}
 
@@ -52,31 +51,31 @@
 \title{4.3.34}
 \author{EE25BTECH11044 - Sai Hasini Pappula}
  \maketitle
-% \newpage
-% \bigskip
 {\let\newpage\relax\maketitle}
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-\setlength{\intextsep}{10pt} % Space between text and floats
-
+\setlength{\intextsep}{10pt} 
 
 \numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
+
 \textbf{Question:}  
 If the line 
 \[
 \frac{x}{a} + \frac{y}{b} = 1
 \]
-passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$ 
+passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$. 
 
-\textbf{Solution (using $\vec{n}^T \vec{x} = c$):}
+---
+
+\textbf{Solution}
 
 The equation of a line can be expressed as
-\[
+\begin{equation}
 \vec{n}^T \vec{x} = c,
-\]
+\end{equation}
 where $\vec{n}$ is the normal vector to the line.
 
 ---
@@ -84,66 +83,64 @@ where $\vec{n}$ is the normal vector to the line.
 \textbf{Step 1: Direction vector of the line}
 
 The line passes through
-\[
-\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}, \quad
-\vec{x}_2 = \begin{bmatrix}4\\-5\end{bmatrix}.
-\]
+\begin{equation}
+\myvec{x}_1 = \myvec{2\\-3}, \quad
+\myvec{x}_2 = \myvec{4\\-5}.
+\end{equation}
 
 Hence, its direction vector is
-\[
-\vec{m} = \vec{x}_2 - \vec{x}_1
-= \begin{bmatrix}4-2 \\ -5 - (-3)\end{bmatrix}
-= \begin{bmatrix}2 \\ -2\end{bmatrix}.
-\]
+\begin{equation}
+\myvec{m} = \myvec{x}_2 - \myvec{x}_1
+= \myvec{2 \\ -2}.
+\end{equation}
 
 ---
 
-\textbf{Step 2: Find the normal vector $\vec{n}$}
+\textbf{Step 2: Find the normal vector $\myvec{n}$}
 
-The normal vector $\vec{n} = \begin{bmatrix}n_1 \\ n_2\end{bmatrix}$ must satisfy
-\[
+The normal vector $\myvec{n} = \myvec{n_1 \\ n_2}$ must satisfy
+\begin{equation}
 \vec{n}^T \vec{m} = 0.
-\]
+\end{equation}
 
 That is,
-\[
-\begin{bmatrix}n_1 & n_2\end{bmatrix}
-\begin{bmatrix}2 \\ -2\end{bmatrix} = 0,
-\]
-\[
+\begin{equation}
+\myvec{n_1 & n_2}\myvec{2 \\ -2} = 0,
+\end{equation}
+\begin{equation}
 2n_1 - 2n_2 = 0 \quad \Rightarrow \quad n_1 = n_2.
-\]
+\end{equation}
 
 So, a valid choice is
-\[
-\vec{n} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
-\]
+\begin{equation}
+\myvec{n} = \myvec{1 \\ 1}.
+\end{equation}
 
 ---
 
 \textbf{Step 3: Find $c$}
 
 Using the equation
-\[
+\begin{equation}
 \vec{n}^T \vec{x} = c,
-\]
-substitute $\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}$:
-\[
-\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}2 \\ -3\end{bmatrix}
-= 2 - 3 = -1.
-\]
+\end{equation}
+substitute $\myvec{x}_1 = \myvec{2\\-3}$:
+\begin{equation}
+\myvec{1 & 1}\myvec{2 \\ -3} = -1.
+\end{equation}
 
 Thus,
-\[
+\begin{equation}
 c = -1.
-\]
+\end{equation}
 
 ---
 
-\textbf{Final Answer:}
-\[
-\vec{n}^T \vec{x} = -1 \quad \Rightarrow \quad x+y=-1.
-\]
+\textbf{Final Answer (matrix form):}
+\begin{equation}
+\myvec{1 & 1}\myvec{x \\ y} = -1
+\quad \Rightarrow \quad x+y=-1.
+\end{equation}
 
 \begin{center}
     \includegraphics[width=0.8\columnwidth]{figs/plot6.png}

@@ -94,62 +94,66 @@ passes through the points $(2,-3)$ and $(4,-5)$, find $(a,b)$.
 \end{block}
 \end{frame}
 
-% ---------------- Solution 1 ----------------
 \begin{frame}{Solution: Step 1}
 The given points are
-\[
-\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}, \quad
-\vec{x}_2 = \begin{bmatrix}4\\-5\end{bmatrix}.
-\]
+\begin{equation}
+\myvec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}, \quad
+\myvec{x}_2 = \begin{bmatrix}4\\-5\end{bmatrix}.
+\end{equation}
 
 \bigskip
 The direction vector of the line is
-\[
-\vec{m} = \vec{x}_2 - \vec{x}_1
+\begin{equation}
+\myvec{m} = \myvec{x}_2 - \myvec{x}_1
 = \begin{bmatrix}2 \\ -2\end{bmatrix}.
-\]
+\end{equation}
 \end{frame}
 
-% ---------------- Solution 2 ----------------
 \begin{frame}{Solution: Step 2}
-The normal vector $\vec{n} = \begin{bmatrix}n_1 \\ n_2\end{bmatrix}$ must satisfy
-\[
+The normal vector $\myvec{n} = \begin{bmatrix}n_1 \\ n_2\end{bmatrix}$ must satisfy
+\begin{equation}
 \vec{n}^T \vec{m} = 0.
-\]
+\end{equation}
 
-\[
+\begin{equation}
 \begin{bmatrix}n_1 & n_2\end{bmatrix}
 \begin{bmatrix}2 \\ -2\end{bmatrix} = 0
 \quad \Rightarrow \quad n_1 = n_2.
-\]
+\end{equation}
 
 So we can take
-\[
-\vec{n} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
-\]
+\begin{equation}
+\myvec{n} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
+\end{equation}
 \end{frame}
 
-% ---------------- Solution 3 ----------------
 \begin{frame}{Solution: Step 3}
 The line equation is
-\[
+\begin{equation}
 \vec{n}^T \vec{x} = c
 \quad \Rightarrow \quad
 \begin{bmatrix}1 & 1\end{bmatrix}
 \begin{bmatrix}x \\ y\end{bmatrix} = c.
-\]
+\end{equation}
 
-Substitute point $\vec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}$:
-\[
+Substitute point $\myvec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}$:
+\begin{equation}
 c = 2 - 3 = -1.
-\]
+\end{equation}
 
 \bigskip
 \textbf{Final Equation:}
-\[
+\begin{equation}
 x + y = -1.
-\]
+\end{equation}
+The line equation can be expressed as
+\begin{equation}
+\begin{bmatrix}1 & 1\end{bmatrix}
+\begin{bmatrix}x \\ y\end{bmatrix} = -1
+\end{equation}
 \end{frame}
+
+
 
 % ---------------- C code 1 ----------------
 \begin{frame}[fragile]{C Code (Part 1)}
