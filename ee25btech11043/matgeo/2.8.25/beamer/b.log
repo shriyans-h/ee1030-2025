@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 SEP 2025 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 SEP 2025 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2759,7 +2759,7 @@ Overfull \vbox (7.87355pt too high) detected at line 514
 \tf@snm=\write10
 \openout10 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250920185048 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250920185627 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
