@@ -1,0 +1,371 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{4.7.41}
+\date{September 20, 2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{Sai Hasini  - EE25BTECH11044}
+
+
+
+
+\begin{document}
+
+% --- Frame: Problem Statement ---
+\begin{frame}{Problem Statement}
+\begin{block}{Question}
+Find the distance of the point
+\[
+\vec{P} = \begin{bmatrix} 2 \\ 4 \\ -1 \end{bmatrix}
+\]
+from the line
+\[
+\frac{x+5}{1} = \frac{y+3}{4} = \frac{z-6}{-9}.
+\]
+\end{block}
+\end{frame}
+
+
+% --- Frame: Vector form of line ---
+\begin{frame}{Line in Vector Form}
+\begin{equation}\label{eq:vectorform}
+\vec{r}=\vec{A}+\lambda\myvec{1\\4\\-9},\qquad
+\vec{A}=\myvec{-5\\-3\\6},\ \lambda\in\mathbb{R}.
+\end{equation}
+We seek the foot \(\vec{Q}=(x,y,z)^T\) on the line such that
+\((\vec{P}-\vec{Q})\cdot\myvec{1\\4\\-9}=0\).
+\end{frame}
+
+% --- Frame: Augmented matrix ---
+\begin{frame}{Matrix Form}
+From the perpendicularity condition we obtain the linear system
+\begin{equation}\label{eq:matrix}
+\left[\begin{array}{cccc}
+1 & 0 & 0 & -1\\[4pt]
+0 & 1 & 0 & -4\\[4pt]
+0 & 0 & 1 & 9 \\[4pt]
+-1&-4 & 9 & 0
+\end{array}\right]
+\begin{bmatrix}x\\y\\z\\\lambda\end{bmatrix}
+=
+\begin{bmatrix}-5\\-3\\6\\-27\end{bmatrix}.
+\end{equation}
+Write the augmented matrix for elimination:
+\begin{equation}\label{eq:aug}
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+-1&-4 & 9 & 0  & -27
+\end{array}\right]
+\end{equation}
+\end{frame}
+
+% --- Frame: Row operation 1-4 (numbered) ---
+\begin{frame}{Row-Reduction — Steps}
+\begin{equation}\label{eq:step1}
+R_4 \leftarrow R_4 + R_1
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & -4& 9 & -1 & -32
+\end{array}\right]
+\end{equation}
+
+\begin{equation}\label{eq:step2}
+R_4 \leftarrow R_4 + 4R_2
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & 0 & 9 & -17 & -44
+\end{array}\right]
+\end{equation}
+
+\begin{equation}\label{eq:step3}
+R_4 \leftarrow R_4 - 9R_3
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & 0 & 0 & -98 & -98
+\end{array}\right]
+\end{equation}
+\end{frame}
+
+% --- Frame: Final elimination to RREF ---
+\begin{frame}{Final Steps to RREF}
+\begin{equation}\label{eq:step4}
+R_4 \leftarrow \frac{1}{-98}R_4
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & 0 & 0 & 1 & 1
+\end{array}\right]
+\end{equation}
+
+Now eliminate the $\lambda$-entries above:
+\[
+R_1\leftarrow R_1+R_4,\quad
+R_2\leftarrow R_2+4R_4,\quad
+R_3\leftarrow R_3-9R_4
+\]
+which yields the RREF:
+\begin{equation}\label{eq:rref}
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & 0 & -4\\[4pt]
+0 & 1 & 0 & 0 & 1\\[4pt]
+0 & 0 & 1 & 0 & -3\\[4pt]
+0 & 0 & 0 & 1 & 1
+\end{array}\right].
+\end{equation}
+\end{frame}
+
+% --- Frame: Solution and distance ---
+\begin{frame}{Solution and Distance}
+Read off the solution from \eqref{eq:rref}:
+\begin{equation}\label{eq:sol}
+x=-4,\quad y=1,\quad z=-3,\quad \lambda=1,
+\qquad \vec{Q}=\myvec{-4\\1\\-3}.
+\end{equation}
+
+Compute the distance:
+\begin{equation}\label{eq:distance}
+\begin{aligned}
+d &= \|\vec{P}-\vec{Q}\|
+= \sqrt{(2-(-4))^2+(4-1)^2+(-1-(-3))^2}\\[4pt]
+  &= \sqrt{6^2+3^2+2^2}=\sqrt{49}=7.
+\end{aligned}
+\end{equation}
+
+\[
+\boxed{\,d=7\,}
+\]
+\end{frame}
+
+% --- Frame 2: C Code (part 1) ---
+\begin{frame}[fragile]{C Code (Part 1)}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <math.h>
+
+#define ROWS 4
+#define COLS 5   // 4 variables + 1 RHS
+
+// Function to perform Gaussian elimination to RREF
+void gaussJordan(double mat[ROWS][COLS]) {
+    int i, j, k;
+    for (i = 0; i < ROWS; i++) {
+        // Make the pivot element = 1
+        double pivot = mat[i][i];
+        if (pivot != 0) {
+            for (j = 0; j < COLS; j++) {
+                mat[i][j] /= pivot;
+            }
+        }
+\end{lstlisting}
+\end{frame}
+
+% --- Frame 3: C Code (part 2) ---
+\begin{frame}[fragile]{C Code (Part 2)}
+\begin{lstlisting}[language=C]
+        // Eliminate all other entries in column i
+        for (k = 0; k < ROWS; k++) {
+            if (k != i) {
+                double factor = mat[k][i];
+                for (j = 0; j < COLS; j++) {
+                    mat[k][j] -= factor * mat[i][j];
+                }
+            }
+        }
+    }
+}
+int main() {
+    // Augmented matrix for system in (x,y,z,lambda)
+    double mat[ROWS][COLS] = {
+        { 1,  0,  0, -1, -5},
+        { 0,  1,  0, -4, -3},
+        { 0,  0,  1,  9,  6},
+        {-1, -4,  9,  0, -27}
+    };
+\end{lstlisting}
+\end{frame}
+
+% --- Frame 4: C Code (main) ---
+\begin{frame}[fragile]{C Code (Part 3)}
+\begin{lstlisting}[language=C]
+
+
+    gaussJordan(mat);
+
+    double x = mat[0][4], y = mat[1][4];
+    double z = mat[2][4], lambda = mat[3][4];
+
+    printf("Solution: x = %.2f, y = %.2f, z = %.2f, λ = %.2f\n",
+           x, y, z, lambda);
+
+    // Given point P(2,4,-1)
+    double px = 2, py = 4, pz = -1;
+    double dist = sqrt((px-x)*(px-x) + (py-y)*(py-y) + (pz-z)*(pz-z));
+
+    printf("Distance = %.2f\n", dist);
+    return 0;
+}
+\end{lstlisting}
+\end{frame}
+
+
+% --- Frame 4: Python Code (part 1) ---
+\begin{frame}[fragile]{Python Code (Part 1)}
+\begin{lstlisting}[language=Python]
+import ctypes
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load shared library
+lib = ctypes.CDLL("gj.so")
+
+# Define function signature
+lib.distance.argtypes = [
+    ctypes.c_double, ctypes.c_double, ctypes.c_double
+]
+lib.distance.restype = ctypes.c_double
+
+# Point P
+px, py, pz = 2.0, 4.0, -1.0
+\end{lstlisting}
+\end{frame}
+
+% --- Frame 5: Python Code (part 2) ---
+\begin{frame}[fragile]{Python Code (Part 2)}
+\begin{lstlisting}[language=Python]
+# Call C function
+dist = lib.distance(px, py, pz)
+print("Distance =", dist)
+
+# Foot of perpendicular (from Gauss-Jordan result)
+Q = np.array([-1/7, 19/7, 45/7])
+P = np.array([px, py, pz])
+
+# Line definition
+A_line = np.array([-5, -3, 6])
+d = np.array([1, 4, -9])
+
+# Generate line points
+t_vals = np.linspace(-2, 3, 100)
+line_points = A_line.reshape(3,1) + d.reshape(3,1)*t_vals
+\end{lstlisting}
+\end{frame}
+
+% --- Frame 6: Python Code (Plot) ---
+\begin{frame}[fragile]{Python Code (Plot)}
+\begin{lstlisting}[language=Python]
+# Plot
+fig = plt.figure(figsize=(8,6))
+ax = fig.add_subplot(111, projection='3d')
+
+# Line, points, perpendicular
+ax.plot(line_points[0], line_points[1], line_points[2],
+        'b-', label="Line")
+ax.scatter(P[0], P[1], P[2], color='r', s=60, label="Point P")
+ax.scatter(Q[0], Q[1], Q[2], color='g', s=60, label="Foot Q")
+ax.plot([P[0], Q[0]], [P[1], Q[1]], [P[2], Q[2]],
+        'k--', label="Perpendicular")
+
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.legend()
+plt.show()
+\end{lstlisting}
+\end{frame}
+
+
+% --- Frame 6: Plot ---
+\begin{frame}{Plot}
+\centering
+\includegraphics[width=0.8\columnwidth]{figs/plot7.png}
+\end{frame}
+
+\end{document}

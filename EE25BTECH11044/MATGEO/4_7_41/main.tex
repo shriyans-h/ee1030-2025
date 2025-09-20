@@ -1,0 +1,207 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee} 
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}     
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.7.41}
+\author{EE25BTECH11044 - Sai Hasini Pappula}
+ \maketitle
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} 
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\section*{Question}
+Find the distance of the point \(\vec{P}=\myvec{2\\4\\-1}\) from the line
+\begin{equation}
+\frac{x+5}{1}=\frac{y+3}{4}=\frac{z-6}{-9}.
+\end{equation}
+
+\section*{Solution}
+Write the line in parametric form:
+\begin{equation}
+\vec{Q}=\myvec{-5\\-3\\6}+\lambda\myvec{1\\4\\-9},\qquad \lambda\in\mathbb{R},
+\end{equation}
+so that a general point on the line is
+\begin{equation}
+\vec{Q}=\myvec{-5+\lambda\\-3+4\lambda\\6-9\lambda}.
+\end{equation}
+The direction vector of the line is
+\begin{equation}
+\myvec{1\\4\\-9}.
+\end{equation}
+The perpendicularity condition for the foot of the perpendicular from \(\vec{P}\) to the line is
+\begin{equation}
+\myvec{1\\4\\-9}\cdot\big(\vec{P}-\vec{Q}\big)=0.
+\end{equation}
+
+Expanding and collecting the linear equations in the unknowns \(x,y,z,\lambda\) (where \(x,y,z\) are the coordinates of \(\vec{Q}\)) gives the system
+\begin{align}
+x-\lambda &= -5, \label{eq:1}\\
+y-4\lambda &= -3, \label{eq:2}\\
+z+9\lambda &= 6, \label{eq:3}\\
+-\,x-4y+9z &= -27. \label{eq:4}
+\end{align}
+
+\section*{Augmented matrix and full row-reduction steps}
+Write the augmented matrix for the linear system in the unknown order \((x,y,z,\lambda)\):
+\begin{equation}\label{eq:aug0}
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+-1& -4& 9 & 0  & -27
+\end{array}\right].
+\end{equation}
+
+We perform elementary row operations step by step.
+
+\medskip
+1. Eliminate the \(1^{\text{st}}\) column entry of row 4 by adding row 1 to row 4:
+\begin{equation}\label{eq:step1}
+R_4 \leftarrow R_4+R_1
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & -4& 9 & -1 & -32
+\end{array}\right]
+\end{equation}
+
+2. Eliminate the \(2^{\text{nd}}\) column entry of row 4 using row 2:
+\begin{equation}\label{eq:step2}
+R_4 \leftarrow R_4 + 4R_2
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & 0 & 9 & -17 & -44
+\end{array}\right]
+\end{equation}
+
+
+3. Eliminate the \(3^{\text{rd}}\) column entry of row 4 using row 3:
+\begin{equation}\label{eq:step3}
+R_4 \leftarrow R_4 - 9R_3
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & 0 & 0 & -98 & -98
+\end{array}\right]
+\end{equation}
+
+4. Scale row 4 to make a leading 1 (divide by \(-98\)):
+\begin{equation}\label{eq:step4}
+R_4 \leftarrow \frac{1}{-98}R_4
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & -1 & -5\\[4pt]
+0 & 1 & 0 & -4 & -3\\[4pt]
+0 & 0 & 1 & 9  & 6 \\[4pt]
+0 & 0 & 0 & 1 & 1
+\end{array}\right]
+\end{equation}
+
+
+5. Use the pivot in row 4 to eliminate the \(\lambda\)-entries above it:
+
+\begin{equation}\label{eq:step5}
+\begin{aligned}
+& R_1 \leftarrow R_1 + R_4,\\
+& R_2 \leftarrow R_2 + 4R_4,\\
+& R_3 \leftarrow R_3 - 9R_4,
+\end{aligned}
+\qquad\Longrightarrow\qquad
+\left[\begin{array}{cccc|c}
+1 & 0 & 0 & 0 & -4\\[4pt]
+0 & 1 & 0 & 0 & 1\\[4pt]
+0 & 0 & 1 & 0 & -3\\[4pt]
+0 & 0 & 0 & 1 & 1
+\end{array}\right].
+\end{equation}
+This matrix is now in RREF.
+
+\section*{Solution from RREF}
+ from (0.15):
+\begin{align}
+x &= -4, \\
+y &= 1, \\
+z &= -3, \\
+\lambda &= 1.
+\end{align}
+Thus the foot of the perpendicular (point on the line closest to \(\vec{P}\)) is
+\begin{equation}
+\vec{Q}=\myvec{-4\\1\\-3}.
+\end{equation}
+
+\section*{Distance}
+Compute \(\vec{P}-\vec{Q}\) and its norm:
+\begin{equation}
+\vec{P}-\vec{Q}=\myvec{2\\4\\-1}-\myvec{-4\\1\\-3}=\myvec{6\\3\\2},
+\end{equation}
+\begin{equation}
+\|\vec{P}-\vec{Q}\|=\sqrt{6^2+3^2+2^2}=\sqrt{36+9+4}=\sqrt{49}=7.
+\end{equation}
+
+\bigskip
+\noindent\textbf{Final Answer:} The distance from \(\vec{P}=\myvec{2\\4\\-1}\) to the given line is \(\boxed{7}\).
+
+
+\begin{center}
+    \includegraphics[width=0.8\columnwidth]{figs/plot7.png}
+\end{center}
+
+\end{document}

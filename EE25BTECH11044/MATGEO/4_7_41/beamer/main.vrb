@@ -1,0 +1,20 @@
+\frametitle{Python Code (Plot)}
+\begin{lstlisting}[language=Python]
+# Plot
+fig = plt.figure(figsize=(8,6))
+ax = fig.add_subplot(111, projection='3d')
+
+# Line, points, perpendicular
+ax.plot(line_points[0], line_points[1], line_points[2],
+        'b-', label="Line")
+ax.scatter(P[0], P[1], P[2], color='r', s=60, label="Point P")
+ax.scatter(Q[0], Q[1], Q[2], color='g', s=60, label="Foot Q")
+ax.plot([P[0], Q[0]], [P[1], Q[1]], [P[2], Q[2]],
+        'k--', label="Perpendicular")
+
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.legend()
+plt.show()
+\end{lstlisting}
