@@ -1,4 +1,4 @@
-\let\negmedspace\undefined
+ \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
@@ -53,8 +53,7 @@
 \setlength{\intextsep}{10pt} % Space between text and floats
 
 
-\numberwithin{equation}{enumi}:wq
-
+\numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
 
@@ -72,23 +71,22 @@ Let :
 
 For coincident lines:
 \begin{align}
-    \vec{r_2} = \kappa  \vec{r_1}
+   Rank( \vec{r_1} \quad \vec{r_2})  = \myvec{3 & -1\\
+                                              6 & -r}= 1
 \end{align}
 
-Solving using above equation 
+solving using above equation :
 \begin{align}
-    \myvec{6 & -r}\vec{x} + 16 = \kappa(\myvec{3 & -1 }\vec{x} + 8)\\
-     = \myvec{3\kappa & -1\kappa }\vec{x} + 8\kappa
+   R_2 = R_2 - 2R_1\\
+    =  \myvec{3 & -1\\
+               0 & -r + 2}= 1
 \end{align}
 
-By comparing we get :
+For the rank of above matrix to be one ,we need :
+
 \begin{align}
-    \kappa = 2\\
-     \myvec{6 & -r}\vec{x} + 16 = \myvec{6 & -2 }\vec{x} + 16
-\end{align}
-
-since LHS should be equal to RHS :
-\begin{align}    r = 2
+   -r + 2 =0 \\
+   r = 2 
 \end{align}
 
 \begin{figure}[h!]
@@ -97,6 +95,7 @@ since LHS should be equal to RHS :
    \caption{}
    \label{stemplot}
 \end{figure}
+
 
 
 
