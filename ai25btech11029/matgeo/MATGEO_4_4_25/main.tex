@@ -63,25 +63,26 @@ The normal vector $\vec{n}$
 \subsection*{Step 2: Dot Product Formulation}
 Using the dot product form of a line:
 \begin{align}
-\vec{n}^T (\vec{x} - \vec{p}) = 0
+\vec{n}^T (\vec{X} - \vec{p}) = 0
 \end{align}
 
 Substitute:
 \begin{align}
-\myvec{0 & -1} \myvec{\myvec{x \\ y} - \myvec{2 \\ -4}} = 0
+\myvec{0 & -1} \myvec{\vec{X} - \myvec{2 \\ -4}} = 0
 \end{align}
 
 \begin{align}
-\Rightarrow \myvec{0 & -1} \myvec{x - 2 \\ y + 4} = 0
+\Rightarrow \myvec{0 & -1}\vec{X} - \myvec{0 & -1}\myvec{2 \\ -4} = 0
 \end{align}
 
 \begin{align}
-\Rightarrow x - 2 = 0
+\Rightarrow \myvec{0 & -1}\vec{X} = -4
 \end{align}
+
 
 \subsection*{Final Answer}
 \begin{align}
-\boxed{x = 2}
+\boxed{\myvec{0 & -1}\vec{X} = -4}
 \end{align}
 
 \begin{figure}[H]
