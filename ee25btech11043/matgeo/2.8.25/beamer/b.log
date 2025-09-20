@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 SEP 2025 19:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  20 SEP 2025 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2759,7 +2759,7 @@ Overfull \vbox (7.87355pt too high) detected at line 514
 \tf@snm=\write10
 \openout10 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250920190619 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250920190927 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2771,10 +2771,10 @@ Package rerunfilecheck Info: File `b.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59650 strings out of 473190
- 1459867 string characters out of 5704335
- 2577909 words of memory out of 5000000
- 81834 multiletter control sequences out of 15000+600000
+ 59646 strings out of 473190
+ 1459712 string characters out of 5704335
+ 2576909 words of memory out of 5000000
+ 81830 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,16n,123p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2790,7 +2790,7 @@ so10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/
 fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/
 texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (27 pages, 320223 bytes).
+Output written on b.pdf (27 pages, 320196 bytes).
 PDF statistics:
  869 PDF objects out of 1000 (max. 8388607)
  752 compressed objects within 8 object streams
