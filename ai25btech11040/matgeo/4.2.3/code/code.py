@@ -13,6 +13,9 @@ o = np.array([0, 0]).reshape(-1, 1)
 n_unit = n / np.linalg.norm(n)
 d_unit = np.array([[0, -1], [1, 0]]).transpose() @ n_unit
 
+print("Normal vector: \n", n_unit)
+print("Direction vector: \n", d_unit)
+
 x_eg = np.array([0, 1])
 y_eg = (c[0] - n[0] * x_eg) / n[1]
 
