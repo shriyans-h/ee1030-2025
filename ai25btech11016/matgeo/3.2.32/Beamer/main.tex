@@ -91,6 +91,13 @@ Draw a right triangle ABC in which BC = 12 cm, AB = 5 cm and $\angle B$ = $90^\c
 \end{frame}
 \begin{frame}{Solution}
 
+\textbf{Let's consider the triangle with vertices,}
+\begin{align} 
+\vec{A}=\myvec{0\\5}
+\vec{B}=\myvec{0\\0}
+\vec{C}=\myvec{12\\0}
+\end{align}
+
 \begin{figure}[h!]
     \centering
 \includegraphics[width=0.6\textwidth]{figs/3.2.32.png}
@@ -118,7 +125,7 @@ void get_triangle_coords(double *coords) {
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-    \frametitle{C plus Pyhton Code}
+    \frametitle{C plus Py Code}
 \begin{lstlisting}
 import ctypes
 import matplotlib.pyplot as plt
@@ -139,7 +146,7 @@ C = (coords[4], coords[5])
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-    \frametitle{C plus Pyhton Code}
+    \frametitle{C plus Py Code}
 \begin{lstlisting}
 # Plot
 x_coords = [A[0], B[0], C[0], A[0]]
@@ -157,7 +164,7 @@ plt.plot([0, 0.5, 0.5, 0], [0, 0, 0.5, 0.5], 'k-')  # right angle marker
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-    \frametitle{C plus Pyhton Code}
+    \frametitle{C plus Py Code}
 \begin{lstlisting}
 plt.gca().set_aspect('equal', adjustable='box')
 plt.xlim(-1, 13)
@@ -168,7 +175,7 @@ plt.show()
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-    \frametitle{Pyhton Code}
+    \frametitle{Py Code}
 \begin{lstlisting}
 
 import matplotlib.pyplot as plt
@@ -189,7 +196,7 @@ plt.fill(x_coords, y_coords, 'lightblue', alpha=0.5)
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-    \frametitle{Pyhton Code}
+    \frametitle{Py Code}
 \begin{lstlisting}
 # Mark vertices
 for point, name in zip([A, B, C], ['A', 'B', 'C']):
@@ -201,7 +208,7 @@ plt.plot([0, 0.5, 0.5, 0], [0, 0, 0.5, 0.5], 'k-')
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
-    \frametitle{Pyhton Code}
+    \frametitle{Py Code}
 \begin{lstlisting}
 # Axes setup
 plt.gca().set_aspect('equal', adjustable='box')
