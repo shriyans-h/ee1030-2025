@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1758493531.1545 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.2.3/main.tex" "main.pdf" "main" 1758493531.68121 0
+["pdflatex"] 1758498524.97278 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.2.3/main.tex" "main.pdf" "main" 1758498525.57036 0
   "/etc/texmf/web2c/texmf.cnf" 1754154256.17489 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.2.3/main.tex" 1758493531.00975 1274 2dc01495311637f603609f00889a2a5e ""
+  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.2.3/main.tex" 1758498524.82898 1287 7a8df1c3aefe21606b979af1fc4c2522 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -45,6 +45,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -289,9 +290,9 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1754425266 8215844 a8669b1d38396b5b9aec55f004a41d83 ""
   "figs/plot.png" 1758493512.04569 24271 27623e71a2f8ffb40882a1407cdded39 ""
   "gvv.sty" 1758304913.62288 4701 37bd06f55411f9798df5697cb07e3d79 ""
-  "main.aux" 1758493531.6213 727 e4d57b5b974a0c597c8addc7b61563ba "pdflatex"
-  "main.out" 1758493531.6213 268 1220d6c4744017ff2782f487a2ccb085 "pdflatex"
-  "main.tex" 1758493531.00975 1274 2dc01495311637f603609f00889a2a5e ""
+  "main.aux" 1758498525.44929 727 e4d57b5b974a0c597c8addc7b61563ba "pdflatex"
+  "main.out" 1758498525.45029 268 1220d6c4744017ff2782f487a2ccb085 "pdflatex"
+  "main.tex" 1758498524.82898 1287 7a8df1c3aefe21606b979af1fc4c2522 ""
   (generated)
   "main.aux"
   "main.log"
