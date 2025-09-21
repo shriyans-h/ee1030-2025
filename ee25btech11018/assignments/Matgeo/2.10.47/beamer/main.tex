@@ -1,0 +1,402 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{gvv}
+\usepackage[T1]{fontenc}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\renewcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\renewcommand{\solution}{\noindent\textbf{Solution: }}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\let\vec\mathbf
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\numberwithin{equation}{section}
+
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  stringstyle=\color{orange},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  breaklines=true,
+  showstringspaces=false
+}
+
+\title{Problem 2.10.47}
+\author{EE25BTECH11018-Darisy Sreetej}
+
+\date{\today} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\section{Problem}
+
+\begin{frame}
+\frametitle{Problem}
+The value of $a$ so that the volume of parallelopiped formed by $\hat{i} + a\hat{j} + \hat{k}, \hat{j} + a\hat{k} \text{ and } a\hat{i} + \hat{k}$ becomes minimum is
+\begin{enumerate}
+\item $-3$
+\item $3$
+\item $\frac{1}{\sqrt{3}}$
+\item $\sqrt{3}$
+\end{enumerate}
+\end{frame}
+%\subsection{Literature}
+\section{Solution}
+
+\subsection{Formula}
+\setcounter{section}{1}
+\begin{frame}
+\frametitle{Formula}
+Volume of the parallelopiped
+\begin{align*}
+ V=\vec{p} \cdot (\vec{q} \times \vec{r}) = \sqrt{\mydet{\vec{G}}}  
+\end{align*}
+where $\vec{G}$ is the Gram matrix of the vectors
+\end{frame}
+\subsection{Obtaining the Gram Matrix}
+\begin{frame}
+\frametitle{Obtaining the Gram Matrix}
+Let us consider,
+\begin{align*}
+\vec{p}=\hat{i}+a\hat{j}+\hat{k}\\
+\vec{q}=\hat{j}+a\hat{k}\\
+\vec{r}=a\hat{i}+\hat{k}
+\end{align*}
+The Gram matrix $\vec{G} $ for the vectors $ \vec{p}, \vec{q}, \vec{r} $ is:
+\begin{align}
+\vec{G} = \myvec{
+\vec{p}^\top \vec{p} & \vec{p}^\top \vec{q} & \vec{p}^\top \vec{r} \\
+\vec{q}^\top \vec{p} & \vec{q}^\top \vec{q} & \vec{q}^\top \vec{r} \\
+\vec{r}^\top \vec{p} & \vec{r}^\top \vec{q} & \vec{r}^\top \vec{r}
+}
+\end{align}
+
+Now, calculate the dot products:
+
+\begin{align}
+\vec{p}^\top \vec{p} = 1^2 + a^2 + 1^2 = 2+a^2
+\end{align}
+\end{frame}
+\begin{frame}
+\frametitle{Obtaining the Gram Matrix}
+\begin{align}
+\vec{p}^\top \vec{q} = (1)(0) + (a)(1) + (1)(a) = 2a
+\end{align}
+
+\begin{align}
+\vec{p}^\top \vec{r} = (1)(a) + (a)(0) + (1)(1) = a+1
+\end{align}
+
+\begin{align}
+\vec{q}^\top \vec{p} = \vec{p}^\top \vec{q} = 2a
+\end{align}
+
+\begin{align}
+\vec{q}^\top \vec{q} = a^2 + 1^2 = 1 + a^2
+\end{align}
+
+\begin{align}
+\vec{q}^\top \vec{r} = (0)(a) + (1)(0) + (a)(1) = a
+\end{align}
+
+\begin{align}
+\vec{r}^\top \vec{p} = \vec{p}^\top \vec{r} = a + 1
+\end{align}
+
+ \end{frame}
+\begin{frame}
+\frametitle{Obtaining the Gram Matrix}
+\begin{align}
+\vec{r}^\top \vec{q} = \vec{q}^\top \vec{r} = a
+\end{align}
+
+\begin{align}
+\vec{r}^\top \vec{r} = a^2 + 1^2 = a^2 + 1 
+\end{align}
+
+Thus, the Gram matrix $ \vec{G} $ is:
+\begin{align}
+\vec{G} = \myvec{
+2+a^2 & 2a & a+1 \\
+2a & 1+a^2 & a \\
+a+1 & a & 1+a^2
+}
+\end{align}
+\end{frame}
+\subsection{Calculating Volume}
+\begin{frame}[fragile]
+\frametitle{Calculating Volume}
+    The characteristic equation is obtained by solving the determinant equation $ \mydet{\vec{G} - \lambda \vec{I}} = 0 $. The characteristic polynomial for the matrix is:
+
+\begin{align}
+\lambda^3 - (3a^2+4)\lambda^2 + (3a^4+2a^2+4)\lambda - (a^6-2a^4+2a^3+a^2-2a+1) = 0
+\end{align}
+
+The determinant of $ \vec{G} $ is the product of its eigenvalues:
+\begin{align}
+\mydet{\vec{G}} = \lambda_1 \lambda_2 \lambda_3 = (a^6-2a^4+2a^3+a^2-2a+1).
+\end{align}
+
+
+The scalar triple product is the square root of the determinant of \( \vec{G} \):
+\begin{align}
+\vec{p} \cdot (\vec{q} \times \vec{r}) = \sqrt{\mydet{\vec{G}}} = \sqrt{(a^6-2a^4+2a^3+a^2-2a+1)} = a^3-a+1
+\end{align}
+\begin{align}
+    V=a^3-a+1
+\end{align}
+\end{frame}
+
+\subsection{Finding a for minimum volume}
+\begin{frame}[fragile]
+\frametitle{Finding 'a' for minimum volume}
+    Now , consider
+\begin{align}
+    f(a)=a^3-a+1\\
+    f'(a)=3a^2+1
+\end{align}
+\begin{align*}
+\text{Set }f'(a)=0  \Rightarrow a^2=\frac{1}{\sqrt{3}} \Rightarrow a=\frac{1}{\sqrt{3}} or -\frac{1}{\sqrt{3}} 
+\end{align*}
+\begin{align}
+\text{Second derivative }f''(a)=6a\\
+\text{At }a=\frac{1}{\sqrt{3}},f''>0 \Rightarrow minimum\\
+\text{At }a=-\frac{1}{\sqrt{3}},f''<0 \Rightarrow maximum
+\end{align}
+Therefore , $a=\frac{1}{\sqrt{3}}$ for which the Volume of the parallelopiped becomes minimum.
+\end{frame}
+\subsection{Plot}
+\begin{frame}[fragile]
+\frametitle{Plot}
+
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.7\columnwidth]{figs/fig.png}
+	\caption*{Parallelopiped with Vectors $\vec{p},\vec{q},\vec{r}$ for which $a=\frac{1}{\sqrt{3}}$(Volume is minimum)}
+   \label{}
+\end{figure}
+\end{frame}
+
+\section{C Code}
+\begin{frame}[fragile]
+\frametitle{C Code}
+\begin{lstlisting}[language=C]
+// Determinant of Gram matrix calculation with inline dot product calculations
+double gram_determinant(double a) {
+    double G11 = 2 + a * a;
+    double G12 = 2 * a;
+    double G13 = a + 1;
+    double G21 = 2 * a;
+    double G22 = a * a + 1;
+    double G23 = a;
+    double G31 = a + 1;
+    double G32 = a;
+    double G33 = 1 + a * a;
+    double det = G11 * (G22 * G33 - G23 * G32) - G12 * (G21 * G33 - G23 * G31)+ G13 * (G21 * G32 - G22 * G31);
+               return det;
+}
+
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{C code}
+    \begin{lstlisting}[language=C]
+        // Volume calculation (sqrt of determinant)
+double volume(double a) {
+    double det = gram_determinant(a);
+    if (det < 0) det = -det; // use absolute value for volume
+    return sqrt(det);
+}
+int main() {
+    double options[] = {-3, 3, 1.0 / sqrt(3), sqrt(3)};
+    int num_options = 4;
+    double min_vol = 1e9;
+    double min_a = 0;
+    printf("%-10s %-15s %-15s\n", "a", "Determinant", "Volume");
+    for (int i = 0; i < num_options; i++) {
+        double a = options[i];
+        double det = gram_determinant(a);
+        double vol = volume(a);
+        printf("%-10.6f %-15.6f %-15.6f\n", a, det, vol);
+
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{C code}
+    \begin{lstlisting}[language=C]
+if (vol < min_vol) {
+            min_vol = vol;
+            min_a = a;
+        }
+    }
+    printf("\nMinimum volume is at a = %.6f with volume = %.6f\n", min_a, min_vol);
+    return 0;
+}
+     \end{lstlisting}
+\end{frame}
+\section{Python Code}
+\begin{frame}[fragile]
+\frametitle{Python Code for Solving}
+\begin{lstlisting}[language=Python]
+
+import ctypes
+import numpy as np
+
+lib = ctypes.CDLL('./volume.so')
+
+lib.volume.argtypes = [ctypes.c_double]
+lib.volume.restype = ctypes.c_double
+a_values = np.array([-3, 3, 1.0 / np.sqrt(3), np.sqrt(3)])
+min_volume = float('inf')
+min_a = None
+for a in a_values:
+    vol = lib.volume(a)
+    if vol < min_volume:
+        min_volume = vol
+        min_a = a
+
+print(f"The value of a for which the volume is minimum: {min_a:.6f}")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import matplotlib.patches as mpatches
+
+a_val = 1 / np.sqrt(3)
+p = np.array([1, a_val, 1])
+q = np.array([0, 1, a_val])
+r = np.array([a_val, 0, 1])
+origin = np.array([0, 0, 0])
+vertices = [
+    origin, p, q, r, p + q, q + r, r + p, p + q + r ]
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+faces = [
+    [vertices[0], vertices[1], vertices[4], vertices[2]],
+    [vertices[0], vertices[1], vertices[6], vertices[3]],
+    [vertices[0], vertices[2], vertices[5], vertices[3]],
+    [vertices[7], vertices[5], vertices[4], vertices[6]],
+    [vertices[7], vertices[6], vertices[1], vertices[3]],
+    [vertices[7], vertices[5], vertices[2], vertices[4]]
+]
+
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+color_p = '#FF7F0E'  # orange
+color_q = '#9467BD'  # purple
+color_r = '#17BECF'  # teal
+shaded_color = '#ffc0cb'  # pink
+# Plot vectors
+ax.quiver(*origin, *p, color=color_p, linewidth=3, arrow_length_ratio=0.15)
+
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+ax.quiver(*origin, *q, color=color_q, linewidth=3, arrow_length_ratio=0.15)
+ax.quiver(*origin, *r, color=color_r, linewidth=3, arrow_length_ratio=0.15)
+# Plot shaded volume - no automatic label, so use patch for legend
+poly3d = Poly3DCollection(faces, facecolors=shaded_color,edgecolors='gray', linewidths=1.2, alpha=0.7)
+ax.add_collection3d(poly3d)
+
+
+p_patch = mpatches.Patch(color=color_p, label='p')
+q_patch = mpatches.Patch(color=color_q, label='q')
+r_patch = mpatches.Patch(color=color_r, label='r')
+vol_patch = mpatches.Patch(color=shaded_color, label='Volume', alpha=0.7)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+ax.set_xlim([-0.5, 2.5])
+ax.set_ylim([-0.5, 2.5])
+ax.set_zlim([-0.5, 2.5])
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_zlabel('Z axis')
+ax.legend(handles=[p_patch, q_patch, r_patch, vol_patch])
+plt.show()
+plt.savefig("fig.png")
+
+\end{lstlisting}
+\end{frame}
+
+\end{document}
