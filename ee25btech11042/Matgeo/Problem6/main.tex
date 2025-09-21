@@ -103,13 +103,13 @@ text width=4em, text centered, rounded corners, minimum height=3em]
 		\vec{a}^\top\vec{a} + \vec{a}^\top\vec{b} = \vec{b}^\top\vec{b} + \vec{b}^\top\vec{a}
 	\end{align}
 	\begin{align}
-		\frac{\vec{a}^\top\vec{a} + \vec{a}^\top\vec{b}}{\norm{\vec{a}}\norm{\vec{a}+\vec{b}}} = \frac{\vec{b}^\top\vec{b} + \vec{b}^\top\vec{a}}{\norm{\vec{b}}\norm{\vec{a}+\vec{b}}}
+\frac{\vec{a}^\top\vec{a} + \vec{a}^\top\vec{b}}{\norm{\vec{a}}\norm{\vec{a}+\vec{b}}} = \frac{\vec{b}^\top\vec{b} + \vec{b}^\top\vec{a}}{\norm{\vec{b}}\norm{\vec{a}+\vec{b}}}
 	\end{align}
 	\begin{align}
-		\therefore \cos\alpha=	\cos\beta   \label{angle}
+	\therefore \cos\alpha=	\cos\beta   \label{angle}
 	\end{align}	
 	\begin{align}
-		\therefore	\alpha=\beta
+	\therefore	\alpha=\beta
 	\end{align}	
 	\textbf{Part 2}\\
 	Given:
@@ -128,34 +128,34 @@ text width=4em, text centered, rounded corners, minimum height=3em]
 	\begin{align}
 		\frac{\vec{a}^\top\brak{\vec{a}+\vec{b}}}{\norm{\vec{a}}\norm{\vec{a}+\vec{b}}} = \frac{\vec{b}^\top\brak{\vec{a}+\vec{b}}}{\norm{\vec{b}}\norm{\vec{a}+\vec{b}}}
 	\end{align}
-	\begin{align}
-		\norm{\vec{b}} (\norm{\vec{a}}^2 + \vec{a}^\top\vec{b}) = \norm{\vec{a}} (\norm{\vec{b}}^2 + \vec{a}^\top\vec{b}) \\
-		\norm{\vec{b}}\norm{\vec{a}}^2 + \norm{\vec{b}}(\vec{a}^\top\vec{b}) = \norm{\vec{a}}\norm{\vec{b}}^2 + \norm{\vec{a}}(\vec{a}^\top\vec{b})
-	\end{align}
+\begin{align}
+	\norm{\vec{b}} (\norm{\vec{a}}^2 + \vec{a}^\top\vec{b}) = \norm{\vec{a}} (\norm{\vec{b}}^2 + \vec{a}^\top\vec{b}) \\
+	\norm{\vec{b}}\norm{\vec{a}}^2 + \norm{\vec{b}}(\vec{a}^\top\vec{b}) = \norm{\vec{a}}\norm{\vec{b}}^2 + \norm{\vec{a}}(\vec{a}^\top\vec{b})
+\end{align}
+
+Rearrange the terms to group common factors:
+\begin{align}
+	\norm{\vec{b}}\norm{\vec{a}}^2 - \norm{\vec{a}}\norm{\vec{b}}^2 = \norm{\vec{a}}(\vec{a}^\top\vec{b}) - \norm{\vec{b}}(\vec{a}^\top\vec{b})
+\end{align}
+\begin{align}
+	\norm{\vec{a}}\norm{\vec{b}} (\norm{\vec{a}} - \norm{\vec{b}}) = (\vec{a}^\top\vec{b}) (\norm{\vec{a}} - \norm{\vec{b}})
+\end{align}
+
+\begin{align}
+	(\norm{\vec{a}} - \norm{\vec{b}}) (\norm{\vec{a}}\norm{\vec{b}} - \vec{a}^\top\vec{b}) = 0
+\end{align}
+
+This equation gives two possibilities:
+\begin{align}
+	\norm{\vec{a}} - \norm{\vec{b}} = 0 \implies \norm{\vec{a}} = \norm{\vec{b}}\\
+	\norm{\vec{a}}\norm{\vec{b}} - \vec{a}^\top\vec{b} = 0 \implies \vec{a}^\top\vec{b} = \norm{\vec{a}}\norm{\vec{b}}\text{} \label{np}
+\end{align}
+\eqref{np} is incorrect as parallel vectors are not being assumed.\\
+Thus proved
 	
-	Rearrange the terms to group common factors:
-	\begin{align}
-		\norm{\vec{b}}\norm{\vec{a}}^2 - \norm{\vec{a}}\norm{\vec{b}}^2 = \norm{\vec{a}}(\vec{a}^\top\vec{b}) - \norm{\vec{b}}(\vec{a}^\top\vec{b})
-	\end{align}
-	\begin{align}
-		\norm{\vec{a}}\norm{\vec{b}} (\norm{\vec{a}} - \norm{\vec{b}}) = (\vec{a}^\top\vec{b}) (\norm{\vec{a}} - \norm{\vec{b}})
-	\end{align}
-	
-	\begin{align}
-		(\norm{\vec{a}} - \norm{\vec{b}}) (\norm{\vec{a}}\norm{\vec{b}} - \vec{a}^\top\vec{b}) = 0
-	\end{align}
-	
-	This equation gives two possibilities:
-	\begin{align}
-		\norm{\vec{a}} - \norm{\vec{b}} = 0 \implies \norm{\vec{a}} = \norm{\vec{b}}\\
-		\norm{\vec{a}}\norm{\vec{b}} - \vec{a}^\top\vec{b} = 0 \implies \vec{a}^\top\vec{b} = \norm{\vec{a}}\norm{\vec{b}}\text{} \label{np}
-	\end{align}
-	\eqref{np} is incorrect as parallel vectors are not being assumed.\\
-	Thus proved
 	
 	
-	
-	\begin{figure}[H]
+		\begin{figure}[H]
 		\centering
 		\includegraphics[width = 0.6\columnwidth]{Figure_1.png}
 		\caption*{}
