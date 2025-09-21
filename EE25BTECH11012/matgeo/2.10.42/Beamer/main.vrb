@@ -1,14 +1,19 @@
 \frametitle{Python and C Code}
 
 \begin{lstlisting}
-import subprocess
+import ctypes
 
-# 1. Compile the C program
-subprocess.run(["gcc", "coplanar.c", "-o", "coplanar"])
+lib = ctypes.CDLL("./libscalartp.so")
 
-# 2. Run the compiled C program
-result = subprocess.run(["./coplanar"], capture_output=True, text=True)
+lib.computeX_py.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double,
+                            ctypes.c_double, ctypes.c_double, ctypes.c_double,
+                            ctypes.c_double, ctypes.c_double, ctypes.c_double]
+lib.computeX_py.restype = ctypes.c_double
 
-# 3. Print the output from the C program
-print(result.stdout)
+a = (1.0, 0.0, 0.0)
+b = (0.0, 1.0, 0.0)
+c = (0.6,0.8,0)
+
+X = lib.computeX_py(*a, *b, *c)
+print("X =", X)
 \end{lstlisting}

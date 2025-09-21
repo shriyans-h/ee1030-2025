@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  12 SEP 2025 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  20 SEP 2025 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2140,19 +2140,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.86 Hence, the value of \begin{bmatrix}
-                                        2\mathbf{a} - \mathbf{b} & 2\mathbf{...
-
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.86 ...c} & 2\mathbf{c} - \mathbf{a}\end{bmatrix}
-                                                   is $0$.\\
-? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
@@ -2209,7 +2196,7 @@ syc.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 times/utmb8a.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTe
 X/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 306630 bytes).
+Output written on main.pdf (2 pages, 302951 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)
