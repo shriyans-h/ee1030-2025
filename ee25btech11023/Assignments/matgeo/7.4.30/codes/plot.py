@@ -19,11 +19,12 @@ ax.add_patch(c1)
  
 x_vals = np.linspace(-10, 10, 400)
 y_vals = x_vals**2 / 4
-ax.plot(x_vals, y_vals, 'r-', label=f'Locus: $x^2=4y$')
-
+ax.plot(x_vals, y_vals, 'r-', label=f'Locus: $x^2=4y, y\leq 0$')
+ax.plot([0, 0], [-10, 0], 'r-') 
 ax.set_title("Locus of the Centre of the Touching Circle")
 ax.set_xlabel("x"); ax.set_ylabel("y")
 ax.grid(True); ax.axis('equal'); ax.legend()
 plt.show()
+
 plt.savefig('fig1.png')
  

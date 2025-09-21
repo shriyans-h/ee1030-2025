@@ -102,18 +102,24 @@ columns=fullflexible
 
 \begin{frame}
 \frametitle{Problem}
-\setcounter{section}{1}
-A circle is given by $x^2+(y - 1)^2=1$, another circle C touches it externally and also the $X$ axis, then the locus of its centre is 
+A circle is given by $x^2+(y - 1)^2=1$, another circle C touches it externally and also the $X$ axis, then the locus of its centre is \\
+\begin{enumerate}
+\item$ \cbrak{\brak{x,y}:x^2=4y} \bigcup \cbrak{\brak{x,y}:y\leq0}$
+\item  $ \cbrak{\brak{x,y}:x^2+\brak{y-1}^2 = 4} \bigcup \cbrak{\brak{x,y}:y\leq0} $
+\item  $\cbrak{\brak{x,y}:x^2=4y} \bigcup \cbrak{\brak{0,y}:y\leq0}$   
+\item $ \cbrak{\brak{x,y}:x^2=4y} \bigcup \cbrak{\brak{0,y}:y\leq0}$
+\end{enumerate}
 \end{frame}
 %\subsection{Literature}
 \section{Solution}
 
 \subsection{Formula}
+\setcounter{section}{1}
 \begin{frame}
 \frametitle{Formula}
- As the circle touches $X-$axis , Distance of a point from $x$-axis is given by
+As the circle touches $X-$axis , Distance of a point from $x$-axis is given by
 \begin{align}
-    r=\vec{n}^\top\vec{c}
+    r=|\vec{n}^\top\vec{c}|
 \end{align}
 where $\vec{n}$ is the unit vector normal to $x$-axis\\
 For the given circle with radius $r_1$ and center $c_1$
@@ -124,45 +130,68 @@ For the given circle with radius $r_1$ and center $c_1$
 Distance between their centers equal to sum of their radius
 \begin{align}
     \norm{\vec{c}-\vec{p}}&=r+r_1\\
-\norm{\vec{c}-\vec{n}}&=\vec{n}^\top\vec{c}+1 \\
-\norm{\vec{c}-\vec{n}}^2&=\brak{\vec{n}^\top\vec{c}+1}^2 
+\norm{\vec{c}-\vec{n}}&=|\vec{n}^\top\vec{c}|+1 \\
+\norm{\vec{c}-\vec{n}}^2&=\brak{|\vec{n}^\top\vec{c}|+1}^2 
+\end{align}
+\end{frame}
+\subsection{Squaring}
+\begin{frame}
+\frametitle{Squaring}
+\begin{align}
+\brak{\vec{c}-\vec{n}}\brak{\vec{c}^\top-\vec{n}^\top}=\brak{|\vec{n}^\top\vec{c}|+1}^2 
 \end{align}
 \begin{align}
-\brak{\vec{c}-\vec{n}}\brak{\vec{c}^\top-\vec{n}^\top}=\brak{\vec{n}^\top\vec{c}+1}^2 
+\vec{c}^\top\vec{c}+\vec{n}\vec{n}^\top-\vec{c}^\top\vec{n}-\vec{n}^\top\vec{c}&= \brak{|\vec{n}^\top\vec{c}|}^2+2|\vec{n}^\top\vec{c}|+1\\
+\vec{c}^\top\vec{c}+\vec{n}\vec{n}^\top-\vec{c}^\top\vec{n}-\vec{n}^\top\vec{c}&=\brak{\vec{n}^\top\vec{c}}^\top\brak{\vec{n}^\top\vec{c}}+2|\vec{n}^\top\vec{c}|+1\\
+\vec{c}^\top\vec{c}+\norm{\vec{n}}^2-2\vec{n}^\top\vec{c}&=\brak{\vec{c}^\top\vec{n}\vec{n}^\top\vec{c}}+2|\vec{n}^\top\vec{c}|+1 
+\end{align}
+\begin{align}
+\vec{c}^\top\vec{c}+1&=\brak{\vec{c}^\top\vec{n}\vec{n}^\top\vec{c}}+2\vec{n}^\top\vec{c}+2|\vec{n}^\top\vec{c}|+1 
+\end{align}
+\begin{align}
+\vec{c}^\top\vec{c}-\brak{\vec{c}^\top\vec{n}\vec{n}^\top\vec{c}}=2\vec{n}^\top\vec{c}+2|\vec{n}^\top\vec{c}| \\
+\vec{c}^\top\brak{\vec{I}-\vec{n}\vec{n}^\top}\vec{c}=2\vec{n}^\top\vec{c}+2|\vec{n}^\top\vec{c}| 
 \end{align}
 \end{frame}
 \subsection{Outer Product}
 \begin{frame}
 \frametitle{Outer Product}
 \begin{align}
-\vec{c}^\top\vec{c}+\vec{n}\vec{n}^\top-\vec{c}^\top\vec{n}-\vec{n}^\top\vec{c}&=\brak{\vec{n}^\top\vec{c}}^\top\brak{\vec{n}^\top\vec{c}}+2\vec{n}^\top\vec{c}+1\\
-\vec{c}^\top\vec{c}+\norm{\vec{n}}^2-2\vec{n}^\top\vec{c}&=\brak{\vec{c}^\top\vec{n}\vec{n}^\top\vec{c}}+2\vec{n}^\top\vec{c}+1 \\
-\vec{c}^\top\vec{c}+1&=\brak{\vec{c}^\top\vec{n}\vec{n}^\top\vec{c}}+4\vec{n}^\top\vec{c}+1 
+\vec{c}^\top\brak{\myvec{1&0\\0&1}-\myvec{0\\1}\myvec{0&1}}\vec{c}=2\myvec{0\\1}^\top\vec{c}+2\left|\myvec{0\\1}^\top\vec{c}\right| \\
+\vec{c}^\top\brak{\myvec{1&0\\0&1}-\myvec{0&0\\0&1}}\vec{c}=2\myvec{0&1}\vec{c}+2\left|\myvec{0&1}\vec{c}\right|\\
+\myvec{x&y}\brak{\myvec{1&0\\0&0}}\myvec{x\\y}=2\myvec{0&1}\myvec{x\\y}\pm2\myvec{0&1}\myvec{x\\y}
 \end{align}
 \begin{align}
-\vec{c}^\top\vec{c}-\brak{\vec{c}^\top\vec{n}\vec{n}^\top\vec{c}}=4\vec{n}^\top\vec{c} \\
-\vec{c}^\top\brak{\vec{I}-\vec{n}\vec{n}^\top}\vec{c}=4\vec{n}^\top\vec{c} 
+\myvec{x&0}\myvec{x\\y}=4\myvec{0&1}\myvec{x\\y}\ \brak{\textbf{or}}\ \myvec{x&0}\myvec{x\\y}=2\myvec{0\\y}-2\myvec{0\\y}
 \end{align}
 \begin{align}
-\vec{c}^\top\brak{\myvec{1&0\\0&1}-\myvec{0\\1}\myvec{0&1}}\vec{c}=4\myvec{0\\1}^\top\vec{c} \\
-\vec{c}^\top\brak{\myvec{1&0\\0&1}-\myvec{0&0\\0&1}}\vec{c}=4\myvec{0&1}\vec{c} 
+\myvec{x&0}\myvec{x\\y}=4y\ \brak{\textbf{or}}\ \myvec{x&0}\myvec{x\\y}=0 
 \end{align}
-\end{frame}
-\subsection{Conclusion}
+ \end{frame}
+ \subsection{Conclusion}
 \begin{frame}
 \frametitle{Conclusion}
 \begin{align}
- \myvec{x&y}\brak{\myvec{1&0\\0&0}}\myvec{x\\y}=4\myvec{0&1}\myvec{x\\y} 
- \end{align}
- \begin{align}
-\myvec{x&0}\myvec{x\\y}=4y \\
-x^2=4y
+x^2=4y\ \brak{\text{or}}\ x^2=0 \implies x=0
 \end{align}
-Hence y$\geq$0 . Then
+Case \brak{1}
 \begin{align}
-    \cbrak{\brak{x,y}:x^2=4y} \bigcup \cbrak{\brak{x,y}:y\geq0}
+x^2=4y \implies y\geq0
 \end{align}
- \end{frame}
+Case \brak{2}
+\begin{align}
+x&=0\\ 
+\vec{n}^\top\vec{c}\leq0 \implies& \myvec{0&1}\myvec{x\\y} \leq 0\\
+y&\leq0
+\end{align}
+Hence from Case \brak{1} and Case \brak{2}
+\begin{align}
+    \cbrak{\brak{x,y}:x^2=4y} \bigcup \cbrak{\brak{x,y}:x=0\ \text{AND}\ y\leq0}
+\end{align}
+\begin{align}
+    \cbrak{\brak{x,y}:x^2=4y} \bigcup \cbrak{\brak{0,y}:y\leq0}
+\end{align}
+\end{frame}
 \subsection{Plot}
 \begin{frame}[fragile]
 \frametitle{Plot}
@@ -206,8 +235,8 @@ def find_locus_equation():
     c1_x, c1_y, r1 = list(out_data_c)
     c1_center = (c1_x, c1_y)
  
-    h, k = sympy.symbols('h k', real=True, positive=True)
-    r = k
+    h, k = sympy.symbols('h k', real=True)
+    r = sympy.Abs(k)
     lhs = (h - c1_center[0])**2 + (k - c1_center[1])**2
 
 \end{lstlisting}
@@ -216,7 +245,7 @@ def find_locus_equation():
 \frametitle{Python Code for Solving}
 \begin{lstlisting}[language=Python]
    rhs = (r + r1)**2
-    equation = sympy.Eq(lhs, rhs.subs(r, k))
+    equation = sympy.Eq(lhs, rhs)
     locus_eq = sympy.simplify(equation.lhs - equation.rhs)
     x, y = sympy.symbols('x y')
     final_locus = locus_eq.subs([(h, x), (k, y)])
@@ -255,7 +284,7 @@ ax.add_patch(c1)
 x_vals = np.linspace(-10, 10, 400)
 y_vals = x_vals**2 / 4
 ax.plot(x_vals, y_vals, 'r-', label=f'Locus: $x^2=4y$')
-
+ax.plot([0, 0], [-10, 0], 'r-') 
 ax.set_title("Locus of the Centre of the Touching Circle")
 ax.set_xlabel("x"); ax.set_ylabel("y")
 ax.grid(True); ax.axis('equal'); ax.legend()

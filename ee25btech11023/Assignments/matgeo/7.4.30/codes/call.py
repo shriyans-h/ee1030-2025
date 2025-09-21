@@ -13,14 +13,14 @@ def find_locus_equation():
     c1_x, c1_y, r1 = list(out_data_c)
     c1_center = (c1_x, c1_y)
  
-    h, k = sympy.symbols('h k', real=True, positive=True)
+    h, k = sympy.symbols('h k', real=True)
  
-    r = k
+    r = sympy.Abs(k)
      
     lhs = (h - c1_center[0])**2 + (k - c1_center[1])**2
     rhs = (r + r1)**2
     
-    equation = sympy.Eq(lhs, rhs.subs(r, k))
+    equation = sympy.Eq(lhs, rhs)
     locus_eq = sympy.simplify(equation.lhs - equation.rhs)
    
     x, y = sympy.symbols('x y')
