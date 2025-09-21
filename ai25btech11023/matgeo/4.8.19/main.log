@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  20 SEP 2025 06:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  21 SEP 2025 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1927,6 +1927,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 Let the distance of point \vec
+                                   {P}(1,1,1) from the plane is d.
+? 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
@@ -1948,11 +1958,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52235 strings out of 476091
- 1233803 string characters out of 5794081
+ 52236 strings out of 476091
+ 1233807 string characters out of 5794081
  1862330 words of memory out of 5000000
  71786 multiletter control sequences out of 15000+600000
- 578992 words of font info for 167 fonts, out of 8000000 for 9000
+ 579223 words of font info for 168 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,10n,107p,1194b,883s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1964,7 +1974,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 231282 bytes).
+Output written on main.pdf (2 pages, 234751 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
