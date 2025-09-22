@@ -215,72 +215,121 @@ plt.show()
 \begin{frame}[fragile]
 \frametitle{C Code}
 \begin{lstlisting}
-  #include <stdio.h>
+ #include <stdio.h>
+#include <math.h>
 
-int main() {
-    // The problem statement is:
-    // The scalar product of vector 'a' with the unit vector along the sum of vectors 'b' and 'c' is equal to one.
-    // Vector a = i + j + k
-   // Vector b = 2i + 4j - 5k
-   // Vector c = λi + 2j + 3k
-
-    // Step 1: Find the sum vector, s = b + c
-    // s = (2+λ)i + (4+2)j + (-5+3)k
-    // s = (2+λ)i + 6j - 2k
-   //  The given condition is a · (s / |s|) = 1, which simplifies to a · s = |s|.
+/*f(lambda) = (lambda + 6)^2 - (lambda + 2)^2 - 40
+  We need f(lambda) = 0 */
+double f(double lambda) {
+    return (lambda + 6.0)*(lambda + 6.0)
+         - (lambda + 2.0)*(lambda + 2.0)
+         - 40.0;}
+int main(void) {
+    double left = -10.0;   // lower bound for search
+    double right =  10.0;  // upper bound for search
+    double mid;
+    double tol = 1e-8;     // desired accuracy
 \end{lstlisting}
-
 \end{frame}
+
 \begin{frame}[fragile]
 \frametitle{C Code}
 \begin{lstlisting}
-    //  Calculate the dot product a · s
-    // a · s = (1 * (2+λ)) + (1 * 6) + (1 * -2) = 2 + λ + 6 - 2 = λ + 6
+    // Bisection method
+    while ((right - left) > tol) {
+        mid = (left + right) / 2.0;
+        if (f(mid) == 0.0) break;
 
-    // Find the magnitude squared, |s|^2
-    // |s|^2 = (2+λ)^2 + 6^2 + (-2)^2 = (2+λ)^2 + 36 + 4 = (2+λ)^2 + 40
-    // Set up the equation (a · s)^2 = |s|^2
-    // (λ + 6)^2 = (2+λ)^2 + 40
-    // Step 6: Expand and simplify the equation
-    // λ^2 + 12λ + 36 = (λ^2 + 4λ + 4) + 40
-    // λ^2 + 12λ + 36 = λ^2 + 4λ + 44
-    // 12λ - 4λ = 44 - 36
-    // 8λ = 8
+        // Root lies where sign changes
+        if (f(left) * f(mid) < 0.0)
+            right = mid;
+        else
+            left = mid;
+    }
 \end{lstlisting}
 \end{frame}
+
 \begin{frame}[fragile]
 \frametitle{C Code}
 \begin{lstlisting}
-
-    // Solve for λ
-    float coefficient_of_lambda = 8.0;
-    float constant = 8.0;
-    float lambda = constant / coefficient_of_lambda;
-    // Display the final result
-    printf("The problem simplifies to the linear equation: 8 * lambda = 8\n");
-    printf("Solving for lambda...\n");
-    printf("The value of lambda is: %.0f\n", lambda);
-
-   return 0;}
+    double lambda = (left + right) / 2.0;
+    printf("Computed value of lambda: %.10f\n", lambda);
+ // Optional verification: compute the scalar product
+    double sx = lambda + 2.0;
+    double sy = 6.0;
+    double sz = -2.0;
 \end{lstlisting}
-
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{C Code}
+\begin{lstlisting}
+    double magnitude = sqrt(sx*sx + sy*sy + sz*sz);
+    double scalar_product = (1.0*sx + 1.0*sy + 1.0*sz) / magnitude;
+    printf("Verification (scalar product) : %.10f\n", scalar_product);
+   return 0;
+}
+\end{lstlisting}
+\end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Python and C Code}
-
 \begin{lstlisting}
-import subprocess
+# File: main.py
+import ctypes
+import platform
+# --- 1. Load the shared library ---
+if platform.system() == "Windows":
+    lib_path = "./liblambda.dll"
+else:
+    lib_path = "./liblambda.so"
+try:
+    lib = ctypes.CDLL(lib_path)
+except OSError as e:
+    print(f"Error loading library: {e}")
+    print("Have you compiled lambda_solver.c?")
+    exit()
+\end{lstlisting}
+\end{frame}
 
-# 1. Compile the C program
-subprocess.run(["gcc", "code.c", "-o", "code"])
+\begin{frame}[fragile]
+\frametitle{Python and C Code}
+\begin{lstlisting}
+# --- 2. Define function signatures ---
+# Signature for the first function: solve_for_lambda()
+lib.solve_for_lambda.argtypes = [ctypes.c_double, ctypes.c_double, ctypes.c_double]
+lib.solve_for_lambda.restype = ctypes.c_double
 
-# 2. Run the compiled C program
-result = subprocess.run(["./code"], capture_output=True, text=True)
+# Signature for the second function: verify_scalar_product()
+lib.verify_scalar_product.argtypes = [ctypes.c_double]
+lib.verify_scalar_product.restype = ctypes.c_double
+\end{lstlisting}
+\end{frame}
 
-# 3. Print the output from the C program
-print(result.stdout)
+\begin{frame}[fragile]
+\frametitle{Python and C Code}
+\begin{lstlisting}
+# --- 3. Prepare input data ---
+left_bound = -10.0
+right_bound = 10.0
+tolerance = 1e-8
+# --- 4. Call the C functions ---
+# Call the first C function to solve for lambda
+computed_lambda = lib.solve_for_lambda(left_bound, right_bound, tolerance)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Python and C Code}
+\begin{lstlisting}
+# Use the result to call the second C function for verification
+scalar_product = lib.verify_scalar_product(computed_lambda)
+
+# --- 5. Print the results ---
+print("--- Results from C library ---")
+print(f"Computed value of lambda: {computed_lambda:.10f}")
+print(f"Verification (scalar product) : {scalar_product:.10f}")
+
 \end{lstlisting}
 
 \end{frame}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  12 SEP 2025 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  17 SEP 2025 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2126,303 +2126,17 @@ l.9 ...at[0]*1.5, s_hat[1]*1.5, s_hat[2]*1.5, '≈ù'
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10    // Vector c = Œªi 
-                          + 2j + 3k
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13     // s = (2+Œª)
-                      i + (4+2)j + (-5+3)k
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14     // s = (2+Œª)
-                      i + 6j - 2k
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (¬\lst@EC∑).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15    //  The given condition is a ¬∑ 
-                                        (s / |s|) = 1, which simplifies to a...
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (¬\lst@EC∑).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...∑ (s / |s|) = 1, which simplifies to a ¬∑ 
-                                                  s = |s|.
-? 
-) [11
+ (main.vrb) [11
 
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb
-
-! LaTeX Error: Invalid UTF-8 byte sequence (¬\lst@EC∑).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3     //  Calculate the dot product a ¬∑ 
-                                           s
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (¬\lst@EC∑).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4     // a ¬∑ 
-                s = (1 * (2+Œª)) + (1 * 6) + (1 * -2) = 2 + Œª + 6 - 2 = Œª + 6
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4     // a ¬∑ s = (1 * (2+Œª)
-                               ) + (1 * 6) + (1 * -2) = 2 + Œª + 6 - 2 = Œª + 6
-
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...(1 * (2+Œª)) + (1 * 6) + (1 * -2) = 2 + Œª 
-                                                  + 6 - 2 = Œª + 6
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...+ (1 * 6) + (1 * -2) = 2 + Œª + 6 - 2 = Œª 
-                                                  + 6
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7     // |s|^2 = (2+Œª)
-                         ^2 + 6^2 + (-2)^2 = (2+Œª)^2 + 36 + 4 = (2+Œª)^2 + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...// |s|^2 = (2+Œª)^2 + 6^2 + (-2)^2 = (2+Œª)
-                                                  ^2 + 36 + 4 = (2+Œª)^2 + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...+ 6^2 + (-2)^2 = (2+Œª)^2 + 36 + 4 = (2+Œª)
-                                                  ^2 + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (¬\lst@EC∑).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8     // Set up the equation (a ¬∑ 
-                                     s)^2 = |s|^2
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9     // (Œª 
-               + 6)^2 = (2+Œª)^2 + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9     // (Œª + 6)^2 = (2+Œª)
-                              ^2 + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11     // Œª^
-               2 + 12Œª + 36 = (Œª^2 + 4Œª + 4) + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11     // Œª^2 + 12Œª 
-                        + 36 = (Œª^2 + 4Œª + 4) + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11     // Œª^2 + 12Œª + 36 = (Œª^
-                                   2 + 4Œª + 4) + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11     // Œª^2 + 12Œª + 36 = (Œª^2 + 4Œª 
-                                           + 4) + 40
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12     // Œª^
-               2 + 12Œª + 36 = Œª^2 + 4Œª + 44
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12     // Œª^2 + 12Œª 
-                        + 36 = Œª^2 + 4Œª + 44
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12     // Œª^2 + 12Œª + 36 = Œª^
-                                  2 + 4Œª + 44
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12     // Œª^2 + 12Œª + 36 = Œª^2 + 4Œª 
-                                          + 44
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13     // 12Œª 
-                 - 4Œª = 44 - 36
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13     // 12Œª - 4Œª 
-                       = 44 - 36
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14     // 8Œª 
-                = 8
-? 
-) [12
+ (main.vrb) [12
 
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb
-
-! LaTeX Error: Invalid UTF-8 byte sequence (Œ\lst@ECª).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4     // Solve for Œª
-                       
-? 
-) [13
+ (main.vrb) [13
 
 ]
 \openout4 = `main.vrb'.
@@ -2430,12 +2144,32 @@ l.4     // Solve for Œª
  (main.vrb) [14
 
 ]
-<Fig.png, id=427, 513.92pt x 411.5375pt>
+\openout4 = `main.vrb'.
+
+ (main.vrb) [15
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [16
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [17
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [18
+
+]
+<Fig.png, id=539, 513.92pt x 411.5375pt>
 File: Fig.png Graphic file (type png)
 <use Fig.png>
-Package pdftex.def Info: Fig.png  used on input line 290.
+Package pdftex.def Info: Fig.png  used on input line 339.
 (pdftex.def)             Requested size: 239.60567pt x 191.8716pt.
- [15
+ [19
 
  <./Fig.png>]
 \tf@nav=\write7
@@ -2466,10 +2200,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59422 strings out of 474486
- 1461041 string characters out of 5739471
- 2593082 words of memory out of 5000000
- 80676 multiletter control sequences out of 15000+600000
+ 59523 strings out of 474486
+ 1462786 string characters out of 5739471
+ 2570082 words of memory out of 5000000
+ 80761 multiletter control sequences out of 15000+600000
  626051 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1174b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2485,9 +2219,9 @@ dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
 /Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
 .pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 lm/lmtt10.pfb>
-Output written on main.pdf (15 pages, 296078 bytes).
+Output written on main.pdf (19 pages, 320543 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 628 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

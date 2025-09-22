@@ -51,4 +51,3 @@ plt.show()
 
 #plt.savefig('../figs/section1.png')
 #subprocess.run(shlex.split("termux-open ../figs/section1.png"))
-

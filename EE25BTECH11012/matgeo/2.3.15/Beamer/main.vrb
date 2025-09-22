@@ -1,15 +1,12 @@
 \frametitle{Python and C Code}
-
 \begin{lstlisting}
-import subprocess
+# Use the result to call the second C function for verification
+scalar_product = lib.verify_scalar_product(computed_lambda)
 
-# 1. Compile the C program
-subprocess.run(["gcc", "code.c", "-o", "code"])
+# --- 5. Print the results ---
+print("--- Results from C library ---")
+print(f"Computed value of lambda: {computed_lambda:.10f}")
+print(f"Verification (scalar product) : {scalar_product:.10f}")
 
-# 2. Run the compiled C program
-result = subprocess.run(["./code"], capture_output=True, text=True)
-
-# 3. Print the output from the C program
-print(result.stdout)
 \end{lstlisting}
 
