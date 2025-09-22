@@ -121,14 +121,19 @@ It is given that the algebraic sum of the perpendicular distances of three point
 
 \begin{frame}[fragile]
 \frametitle{Solution}
-
-Substituting the points:
+\begin{align}
+\frac{\vec{n}^T(\vec{x}_1 +\vec{x}_2+ \vec{x}_3)- 3c}{||n||} = 0
+\end{align}
+So, the required point is:
 
 \begin{align}
-\frac{\vec{n}^T\myvec{2\\0} - c}{||n||} + \frac{\vec{n}^T\myvec{0\\2} - c}{||n||} + \frac{\vec{n}^T\myvec{1\\1} - c}{||n||} = 0 \\
-\frac{\vec{n}^T\myvec{3\\3} - 3c}{||n||} = 0 \\
-\frac{\vec{n}^T\myvec{1\\1} - c}{||n||} = 0 \\
-\vec{n}^T\myvec{1\\1} = c
+\frac{(\vec{x}_1 +\vec{x}_2+ \vec{x}_3)}{3}
+\end{align}
+
+Substituting the points:
+\begin{align}
+\frac{\myvec{2\\0} + \myvec{0\\2} + \myvec{1\\1} }{3} =\\
+\myvec{1\\1}
 \end{align}\\
 Therefore the line passes through the fixed point (1,1).
 \end{frame}
