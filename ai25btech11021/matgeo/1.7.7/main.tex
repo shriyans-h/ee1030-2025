@@ -52,7 +52,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{1.2.29}
+\title{1.7.7}
 \author{AI25BTECH11021 - Abhiram Reddy N}
 % \maketitle
 % \newpage
@@ -72,69 +72,81 @@
 \textbf{Question}:\\For what value of p are the points (2, 1), (p, -1), and (-1, 3) collinear?
 
 
-\textbf{Solution}
+\textbf{Solution using Rank and RREF}
 
-The points \( A, B, C \) are collinear if the vectors \( \overrightarrow{AB} \) and \( \overrightarrow{AC} \) are linearly dependent. This means one is a scalar multiple of the other.
-
-We form the vectors:
+We are given the points
 \[
-\overrightarrow{AB} = (p - 2, -1 - 1) = (p - 2, -2)
-\]
-\[
-\overrightarrow{AC} = (-1 - 2, 3 - 1) = (-3, 2)
+A = (2,1), \quad B = (p,-1), \quad C = (-1,3).
 \]
 
-Create the matrix with these vectors as rows:
+\textbf{Step 1: Vectors for Collinearity}
+The points $A, B, C$ are collinear if the vectors 
+\(\overrightarrow{AB}\) and \(\overrightarrow{AC}\) are linearly dependent.  
+
+\[
+\overrightarrow{AB} = (p-2, -2), \qquad 
+\overrightarrow{AC} = (-3,2).
+\]
+
+\textbf{Step 2: Form Matrix}
+We form a matrix $M$ with these vectors as rows:
 \[
 M = \begin{bmatrix}
-p - 2 & -2 \\
+p-2 & -2 \\
 -3 & 2
-\end{bmatrix}
+\end{bmatrix}.
 \]
 
-Perform row operations to put the matrix into echelon form.
+For collinearity, the rank of $M$ must be $1$ (since the two rows are linearly dependent).
+
+\textbf{Step 3: Row Reduction (Echelon Form)}
+Perform row operations to reduce $M$ to echelon form.
 
 \[
-R_1 = [p-2 \quad -2]
+R_1 = \begin{bmatrix} p-2 & -2 \end{bmatrix}, 
+\quad R_2 = \begin{bmatrix} -3 & 2 \end{bmatrix}.
 \]
 
-Eliminate the first element of the second row:
+Eliminate the first element of $R_2$:
 \[
-R_2 \to R_2 + \frac{3}{p-2} R_1
-\]
-\[
-R_2 = [-3, 2] + \frac{3}{p-2}[p-2, -2] = [-3 + 3, \quad 2 - \frac{6}{p-2}] = [0, \quad 2 - \frac{6}{p-2}]
+R_2 \to R_2 + \frac{3}{p-2} R_1.
 \]
 
-For the vectors to be linearly dependent, the second row must be zero:
 \[
-2 - \frac{6}{p-2} = 0
+R_2 = \begin{bmatrix} -3 & 2 \end{bmatrix} 
++ \frac{3}{p-2}\begin{bmatrix} p-2 & -2 \end{bmatrix}
+= \begin{bmatrix} -3 + 3 & 2 - \frac{6}{p-2} \end{bmatrix}
+= \begin{bmatrix} 0 & \frac{2(p-2)-6}{p-2} \end{bmatrix}.
 \]
 
-Multiply both sides by \( p - 2 \):
+\textbf{Step 4: Condition for Rank $=1$}
+For rank to be $1$, the second row must vanish:
 \[
-2(p - 2) - 6 = 0
+\frac{2(p-2)-6}{p-2} = 0.
 \]
+
 \[
-2p - 4 - 6 = 0
+2(p-2) - 6 = 0 \quad \implies \quad 2p - 10 = 0.
 \]
-\[
-2p - 10 = 0
-\]
+
 \[
 \boxed{p = 5}
 \]
 
----
-
-\section*{Verification by plotting}
-
-The points become:
+\textbf{Step 5: Verification}
+When $p=5$, the points are
 \[
-A = (2, 1), \quad B = (5, -1), \quad C = (-1, 3)
+A = (2,1), \quad B = (5,-1), \quad C = (-1,3).
 \]
-
-These points lie on the same straight line.
+The slope of $AB$ is
+\[
+\frac{-1-1}{5-2} = \frac{-2}{3},
+\]
+and the slope of $AC$ is
+\[
+\frac{3-1}{-1-2} = \frac{2}{-3} = \frac{-2}{3}.
+\]
+Since slopes are equal, $A,B,C$ are collinear.
 
 
 
@@ -146,9 +158,9 @@ These points lie on the same straight line.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\columnwidth]{figs/python image.png} 
-\caption{Relative wind vector $\mathbf{R}$ obtained as $\mathbf{W}-\mathbf{V}$}
-\label{fig:wind}
+\includegraphics[width=0.8\columnwidth]{figs/python_plot.png} 
+\caption{plot}
+\label{fig:1}
 \end{figure}
 
 

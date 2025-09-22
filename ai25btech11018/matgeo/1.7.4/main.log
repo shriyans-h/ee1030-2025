@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.28)  8 SEP 2025 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.28)  13 SEP 2025 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1903,16 +1903,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--76
 
  []
 
-<Beamer/figs/collinear_points.png, id=31, 988.69376pt x 1027.84pt>
-File: Beamer/figs/collinear_points.png Graphic file (type png)
-<use Beamer/figs/collinear_points.png>
-Package pdftex.def Info: Beamer/figs/collinear_points.png  used on input line 1
-02.
+<figs/collinear_points.png, id=31, 988.69376pt x 1027.84pt>
+File: figs/collinear_points.png Graphic file (type png)
+<use figs/collinear_points.png>
+Package pdftex.def Info: figs/collinear_points.png  used on input line 131.
 (pdftex.def)             Requested size: 182.09764pt x 189.3005pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}
 
- <./Beamer/figs/collinear_points.png>]
+] [2 <./figs/collinear_points.png>]
 (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1932,23 +1931,23 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52946 strings out of 474222
- 1254739 string characters out of 5748733
- 1936975 words of memory out of 5000000
- 74395 multiletter control sequences out of 15000+600000
+ 52955 strings out of 474222
+ 1254822 string characters out of 5748733
+ 1942975 words of memory out of 5000000
+ 74397 multiletter control sequences out of 15000+600000
  623283 words of font info for 169 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,7n,109p,1194b,897s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,13n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main.pdf (1 page, 211958 bytes).
+Output written on main.pdf (2 pages, 212712 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

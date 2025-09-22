@@ -14,7 +14,7 @@ plt.gca().set_aspect('equal')
 
 # Save the figure as a PNG file
 plt.savefig('2D_vectors.png')
-plt.close()
+plt.close()end{lstlisting}
 
 \end{lstlisting}
 
