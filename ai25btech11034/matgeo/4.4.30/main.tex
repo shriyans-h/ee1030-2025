@@ -46,17 +46,40 @@
 Show that four points $\vec{A}(4,5,1)$, $\vec{B}(0,-1,-1)$, $\vec{C}(3,9,4)$, $\vec{D}(-4,4,4)$ are coplanar.\\[1cm]
 
 \textbf{Theory:} \\
+
 If $N$ points in $\mathbb{R}^3$ are given as 
 \[
 X_i = (x_i, y_i, z_i), \quad i = 1,2,\dots,N,
 \] 
+Let equation of the given plane be 
+
+all four point must satisfy the equation of plane 
+\begin{align}
+\myvec{\vec{A}&&\vec{B}&&\vec{C} && \vec{D}}=\vec{K}
+\end{align}
+Now equation will be 
+\begin{align}
+    \vec{K}^T\vec{n}=\myvec{1 \\ 1\\ 1\\ 1}
+\end{align}
+making augment matrix which is 
+
+    \begin{align}
+ \myvec{
+x_1 & y_1 & z_1 & | & 1 \\
+x_2 & y_2 & z_2 & | & 1 \\
+x_3 & y_3 & z_3 & | & 1 \\
+x_4 & y_4 & z_4 & | & 1
+} 
+\end{align}
+
+
 then the condition for coplanarity is that the augmented matrix
 \begin{align}
 A = \myvec{
 x_1 & y_1 & z_1 & 1 \\
 x_2 & y_2 & z_2 & 1 \\
-\vdots & \vdots & \vdots & \vdots \\
-x_N & y_N & z_N & 1
+x_3& y_3 & z_3 & 1 \\
+x_4 & y_4 & z_4 & 1
 }
 \end{align}
 satisfies
@@ -67,6 +90,18 @@ satisfies
 
 
 \textbf{Solution:} \\
+Equation of plane:
+\begin{align}
+    \vec{n}^\top\vec{x}=1
+\end{align}
+Now we have:
+Four point which satisfy the plane can be expressed as:
+\begin{align}
+    \myvec{4 && 5 && 1 \\
+           0 && -1 && -1 \\
+           3 && 9 && 4 \\
+           -4 && 4 && 4 } \vec{n}=\myvec{1 \\ 1 \\ 1 \\1}      
+\end{align}
 For the given four points to be coplanar, the rank of the following matrix must be less than 4:
 \begin{align}
 \mathbf{A}=\myvec{ 
