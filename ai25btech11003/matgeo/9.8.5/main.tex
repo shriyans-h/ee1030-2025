@@ -1,0 +1,117 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} 
+\usepackage{tfrupee} 
+
+\setlength{\headheight}{1cm} 
+\setlength{\headsep}{0mm}     
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{9.8.5}
+\author{AI25BTECH11003 - Bhavesh Gaikwad}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} 
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}: Let $\vec{S}$ be the focus of the parabola $y^2 = 8x$ and let PQ be the common chord of the circle $x^2 + y^2 - 2x - 4y = 0$ and the given parabola. The area of the triangle PQS is\\\\
+
+\textbf{Solution:}\\
+  $\text{Given: }$\\
+$\quad \text{Circle: }x^2 + y^2 - 2x - 4y = 0$\\
+$\text{Parabola: }y^2 = 8x$\\\\
+
+
+Parameters of the Circle:
+\begin{equation}
+\vec{V}_1 = \myvec{1 & 0 \\ 0 & 1}, \, \vec{u}_1 = \myvec{-1 \\ -2}, \, f_1 = 0   
+\end{equation}
+
+Parameters of the Parabola:
+\begin{equation}
+\vec{V}_2 = \myvec{0 & 0 \\ 0 & 1}, \, \vec{u}_2 = \myvec{-4 \\ 0}, \, f_2 = 0, \, \vec{S} = \myvec{2e \\ 0 } = \myvec{2 \\ 0}   
+\end{equation}
+
+Points of Intersection of Circle and Parabola can be given as:
+\begin{equation}
+\vec{X}^\top(\vec{V}_1+\mu\vec{V}_2)\vec{X} + 2(\vec{u}_1+\mu\vec{u}_2)^\top\vec{X} + (f_1 + \mu f_2)    
+\end{equation}
+
+\begin{equation}
+\vec{X}^\top\myvec{1 & 0 \\ 0 & 1+\mu}\vec{X} - 2\myvec{1+4\mu & 2}\vec{X} = 0    
+\end{equation}
+
+From Equation 0.4, We get
+\begin{equation}
+    \vec{X}=\myvec{1+4\mu \\ \dfrac{2}{1+\mu}}
+\end{equation}
+
+Putting Value of $\vec{X}$ in Equation 0.4, We get points of intersection as:
+\begin{equation}
+    \vec{X}_1 = \myvec{0 \\ 0} \qquad \& \qquad \vec{X}_2 = \myvec{2 \\ 4}
+\end{equation}
+
+Therefore,
+Let $\vec{P} = \myvec{0 \\ 0}$ and $\vec{Q} = \myvec{2 \\ 4}$\\\\
+
+\newpage
+
+The Area of Triangle PQS is:
+\begin{equation}
+    Area(\triangle PQS) = \dfrac{1}{2}\norm{\vec{SP} \times \vec{QP}} = 4
+\end{equation}
+
+\begin{align*}
+    \boxed{\text{The Area of $\triangle PQS$ is 4 sq.units.}}
+\end{align*}
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
+    \caption{Intersection of Two Conics and Triangle PQS}
+    \label{fig:figs/fig1.png}
+\end{figure}
+
+\end{document}  

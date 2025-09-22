@@ -1,0 +1,9 @@
+\frametitle{Theoretical Solution}
+ The Area of Triangle PQS is:
+\begin{equation}
+    Area(\triangle PQS) = \dfrac{1}{2}\norm{\vec{SP} \times \vec{QP}} = 4
+\end{equation}
+
+\begin{align*}
+    \boxed{\text{The Area of $\triangle PQS$ is 4 sq.units.}}
+\end{align*}
