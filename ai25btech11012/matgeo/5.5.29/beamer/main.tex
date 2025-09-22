@@ -1,0 +1,83 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+
+\title{5.5.29 Matgeo}
+\author{AI25BTECH11012 - Garige Unnathi}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Question frame
+\begin{frame}
+\frametitle{Question}
+If the inverse of the matrix  $\begin{bmatrix}7 &-3&-3\\
+                                    -1&1&0\\
+                                     -1&0&1\end{bmatrix}$is the matrix  $\begin{bmatrix}1&3&3\\1&\lambda&3\\1&3&4\end{bmatrix}$ , then find the value of $\lambda$ .
+\end{frame}
+
+
+% Solution steps
+\begin{frame}
+\frametitle{Solution}
+   
+Let : 
+\begin{align*}
+    \textbf{A}  = \begin{bmatrix}7 &-3&-3\\
+                      -1&1&0\\
+                      -1&0&1\end{bmatrix}
+\end{align*}
+The characteristic equation for a matrix $\vec{A}$ is  
+\begin{align}
+ f(\lambda) =  \lvert \textbf{A} - \lambda\textbf{I} \rvert = 0\\
+ f(\lambda) = \begin{vmatrix}7-\lambda &-3&-3\\
+                      -1&1-\lambda&0\\
+                      -1&0&1-\lambda\end{vmatrix} = 0
+\end{align}
+\end{frame}
+
+
+
+\begin{frame}
+Solving the above equation we get :
+
+\begin{align}
+  \lambda^3 - 9\lambda^2 + 9\lambda - 1 = 0
+\end{align}
+
+By Cayley-Hamilton theorem :
+\begin{align}
+  f(\lambda) = f(\textbf{A}) = 0 \\
+  \textbf{A}^3 -9\textbf{A}^2 + 9\textbf{A} -1 =0
+\end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution}
+Multiplying the equation 5 by $\textbf{A}^-1$ we get :
+\begin{align}
+  \textbf{A}^2 -9\textbf{A} +9\textbf{I} - \textbf{A}^{-1} = 0 \\
+  \textbf{A}^{-1} = \textbf{A}^2 -9\textbf{A} +9\textbf{I}
+\end{align}
+
+Solving the above equation we get :
+\begin{align}
+   \textbf{A}^{-1} = \begin{bmatrix}1&3&3\\1&4&3\\1&3&4\end{bmatrix}
+\end{align}
+Hence ,
+\begin{align}
+    \lambda = 4
+\end{align}
+\end{frame}
+
+
+\end{document}
