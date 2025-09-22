@@ -1,0 +1,15 @@
+\frametitle{Python code}
+    \begin{lstlisting}[language=Python]
+# Draw unit gradient vector
+plt.quiver(px, py, unit_grad_num[0], unit_grad_num[1],
+           angles="xy", scale_units="xy", scale=1, color="green", width=0.005,
+           label="Unit ∇f at (3,4)")
+
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.title("Gradient and Unit Gradient at (3,4) for f(x,y) = x² + y²")
+plt.legend()
+plt.axis("equal")
+plt.savefig("/home/user/Matrix Theory: workspace/Matgeo_assignments/12.560/figs/Figure_1.png")
+plt.show()
+    \end{lstlisting}
