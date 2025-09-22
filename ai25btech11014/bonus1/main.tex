@@ -1,0 +1,127 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Bonus question}
+\author{AI25BTECH11014 - Gooty Suhas}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\large\textbf{Problem}}
+\vspace{0.5cm}
+
+Prove that if \( s_1s_2 > 0 \), the points lie on the same side of the line, and if \( s_1s_2 < 0 \), they lie on opposite sides.
+
+\section*{\large\textbf{Solution}}
+\vspace{0.5cm}
+
+Let the points be:
+\[
+\vec{A} = \myvec{a_1 \\ a_2}, \quad
+\vec{B} = \myvec{b_1 \\ b_2}
+\]
+
+Let the line be defined by:
+\[
+\vec{n}^T \vec{x} + c = 0
+\]
+where \( \vec{n} = \myvec{n_1 \\ n_2} \) is the normal vector.
+
+\subsection*{Step 1: Signed Distance from Line}
+
+The signed distances of points \( A \) and \( B \) from the line are:
+\[
+s_1 = \vec{n}^T \vec{A} + c, \quad
+s_2 = \vec{n}^T \vec{B} + c
+\]
+
+\subsection*{Step 2: Point Dividing Line Segment}
+
+Let point \( P \) divide \( AB \) in the ratio \( m:n \). Then:
+\[
+\vec{P} = \frac{n\vec{A} + m\vec{B}}{m+n}
+\]
+
+Substitute \( \vec{P} \) into the line equation:
+\[
+\vec{n}^T \left( \frac{n\vec{A} + m\vec{B}}{m+n} \right) + c = 0
+\]
+
+Multiply both sides by \( m+n \):
+\[
+n(\vec{n}^T \vec{A}) + m(\vec{n}^T \vec{B}) + c(m+n) = 0
+\]
+
+Group terms:
+\[
+n(s_1) + m(s_2) = 0
+\Rightarrow \frac{m}{n} = -\frac{s_1}{s_2}
+\]
+
+\subsection*{Step 3: Ratio Interpretation}
+
+Hence, the ratio in which the line divides the segment \( AB \) is:
+\[
+m:n = -s_1 : s_2
+\]
+
+\subsection*{Step 4: Side Condition Proof}
+
+\begin{itemize}
+    \item If \( s_1 \cdot s_2 > 0 \), then both signed distances have the same sign. So, points \( A \) and \( B \) lie on the \textbf{same side} of the line.
+    \item If \( s_1 \cdot s_2 < 0 \), then the signs are opposite. So, points \( A \) and \( B \) lie on \textbf{different sides}.
+\end{itemize}
+
+\[
+\boxed{
+\text{If } s_1s_2 > 0 \Rightarrow \text{Same side}, \quad
+\text{If } s_1s_2 < 0 \Rightarrow \text{Opposite sides}
+}
+\]
+
+\end{document}
