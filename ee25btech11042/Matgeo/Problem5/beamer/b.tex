@@ -92,59 +92,64 @@
 	
 	
 	\begin{frame}{Theoretical Solution}
-	Let the line cut the x-axis at an intercept 'a' and the y-axis at an intercept 'b'. The points where the line intersects the axes can be represented by position vectors (column matrices).
-	
-	The point of x-intercept is $P_1 = (a, 0)$. Its position vector is:
+	Consider normal form of a line:
 	\begin{align}
-		\vec{p_1} = \begin{myvec}{a \\ 0} \end{myvec}
+		\vec{n}^T\vec{x} = c, \text{where } \vec{n} = \begin{myvec}{n_1\\ n_2}\end{myvec}
 	\end{align}
-	The point of y-intercept is $P_2 = (0, b)$. Its position vector is:
-	\begin{align}
-		\vec{p_2} = \begin{myvec}{0 \\ b} \end{myvec}
-	\end{align}
-	
-	A direction vector for the line can be found by taking the difference between the two position vectors:
-	\begin{align}
-		\vec{v} = \vec{p_2} - \vec{p_1} = \begin{myvec}{0 \\ b} \end{myvec} - \begin{myvec}{a \\ 0} \end{myvec} = \begin{myvec}{-a \\ b} \end{myvec} \label{eq:dir_vec}
-	\end{align}
-	\end{frame}
-	\begin{frame}{Theoretical Solution}
-		A direction vector for the line can be found by taking the difference between the two position vectors:
-		\begin{align}
-			\vec{v} = \vec{p_2} - \vec{p_1} = \begin{myvec}{0 \\ b} \end{myvec} - \begin{myvec}{a \\ 0} \end{myvec} = \begin{myvec}{-a \\ b} \end{myvec} \label{eq:dir_vec}
-		\end{align}
-		The direction vector $\vec{v}$ can be written as $\vec{v} = \begin{myvec}{\Delta x \\\Delta y}\end{myvec}$. The slope, $m$, is defined as the ratio of the change in y to the change in x.
-		\begin{align}
-			m = \frac{\Delta y}{\Delta x} = \frac{b}{-a} \label{0.4}
-		\end{align}
-		
-		The problem states that the intercepts have equal length, which means their magnitudes are equal:
-		\begin{align}
-			|a| = |b|
-		\end{align}
-	\end{frame}
-	\begin{frame}{Theoretical Solution}
-		\textbf{Case 1: The intercepts are equal ($b = a$)}\\
-		Substituting $b=a$ into the slope equation (assuming $a \neq 0$):
-		By \eqref{0.4}
-		\begin{align}
-			m_1 = \frac{a}{-a} = -1
-		\end{align}
-	\end{frame}
-	\begin{frame}{Theoretical Solution}
-	\textbf{Case 2: The intercepts are opposite ($b = -a$)}\\
-Substituting $b=-a$ into the slope equation (assuming $a \neq 0$):
-By \eqref{0.4}
+Consider normal form of a line:
 \begin{align}
-	m_2 = \frac{-a}{-a} = 1
+	\vec{n}^\top\vec{x} = 1
+\end{align}
+Given that equal intercepts are cut off we get 2 cases:\\
+On substituting the intercepts in place of $\vec{x}$: \\
+\textbf{Case 1: The intercepts are equal \brak{b = a}}
+\begin{align}
+	\implies  \vec{n}^\top\begin{myvec}{a \\ 0} \end{myvec} = 1  \label{0.2}\\
+	\implies \vec{n}^\top\begin{myvec}{0 \\ a} \end{myvec} = 1  \label{0.3} \\
 \end{align}
 
-Thus, using a matrix representation for the points, we find that the two possible slopes are -1 and 1.
+from \eqref{0.2} and from \eqref{0.3}
+\begin{align}
+	\vec{n}^\top\begin{myvec}{a & 0 \\ 0 & a} \end{myvec} = \begin{myvec}{1 & 1} \end{myvec} \\
+	\implies a\vec{n}^\top\begin{myvec}{1 & 0 \\ 0 & 1}\end{myvec} = \begin{myvec}{1 & 1} \end{myvec}\\
+	\implies a\vec{n}^\top\vec{I} = \begin{myvec}{1 & 1} \end{myvec}
+	\implies a\vec{n}^\top = \begin{myvec}{1 & 1} \end{myvec}
+	\implies \vec{n} = \frac{1}{a}\begin{myvec}{1 \\ 1} \end{myvec}
+\end{align}
+Thus, direction vector $\vec{n} = \begin{myvec}{1 \\ 1}\end{myvec}$
+		
 	\end{frame}
-
+		\begin{frame}{Theoretical Solution}
+			\textbf{Case 2: The intercepts are negatives of each other \brak{-b = a}}
+		\begin{align}
+			\implies  \vec{n}^\top\begin{myvec}{a \\ 0} \end{myvec} = 1 \label{0.5}\\
+			\implies \vec{n}^\top\begin{myvec}{0 \\ -a} \end{myvec} =1\label{0.6} \\
+		\end{align}
+		By \eqref{0.5}, \eqref{0.6}:
+		\begin{align}
+			\vec{n}^\top\begin{myvec}{a & 0 \\ 0 & -a} \end{myvec} = \begin{myvec}{1 & 1} \end{myvec} \\
+			\implies a\vec{n}^\top\begin{myvec}{1 & 0 \\ 0 & -1}\end{myvec} = \begin{myvec}{1 & 1} \end{myvec}
+		\end{align}
+		Let $\vec{A} = \begin{myvec}{1 & 0 \\ 0 & -1}\end{myvec}$\\
+		For this matrix $\vec{A} = \vec{A}^{-1}$
+		\begin{align}
+			\implies a\vec{n}^\top = \begin{myvec}{1 & 1}\vec{A}^{-1} \end{myvec}
+			\implies a\vec{n}^\top = \begin{myvec}{1 & 1}\vec{A}^{-1} \end{myvec}
+			\implies \vec{n} = \frac{1}{a}\begin{myvec}{1 \\ -1} \end{myvec}
+		\end{align}
+		Thus, direction vector $\vec{n} = \begin{myvec}{1 \\ -1}\end{myvec}$
+		The direction vector is given \brak{\text{in general}} by:
+		\begin{align}
+			\vec{m} = 	\begin{myvec}{1\\ m}\end{myvec} \text{  where $m$ is slope of given line }
+		\end{align}		
+		On comparing with the obtained direction vectors
+		\begin{align}
+			\therefore m = \pm1
+		\end{align}	
+		\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{C Code- Triangle Area function }
+		\frametitle{C Code}
 		
 		\begin{lstlisting}
 			#include <stdio.h>
