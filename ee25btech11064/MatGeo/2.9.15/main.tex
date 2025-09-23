@@ -45,7 +45,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{2.5.32}
+\title{2.9.15}
 \author{EE25BTECH11064 - Yojit Manral}
 
 \maketitle
@@ -58,7 +58,11 @@
 \setlength{\intextsep}{10pt} % Space between text and float
 
 \textbf{Question:}\\
-Show that the points $\brak{7,10}$, $\brak{-2,5}$ and $\brak{3,4}$ are vertices of an isosceles right triangle.\\
+If the points $\vec{A}\brak{2,0}$, $\vec{B}\brak{6,1}$, and $\vec{C}\brak{p,q}$ form a triangle of area 12 square units(positive only) and
+\begin{align}
+    2p + q = 10
+\end{align}
+then find the values of p and q.
 
 \textbf{Solution:}\\
 \begin{table}[h!]    
@@ -66,30 +70,32 @@ Show that the points $\brak{7,10}$, $\brak{-2,5}$ and $\brak{3,4}$ are vertices 
   \input{tables/table1.tex}
   \caption{List of Points}
   \label{Table_1}
-\end{table} \\
-$\rightarrow$ Let
+\end{table}\\
+
+$\rightarrow$ The are of the given $\triangle$ABC can be given by
 \begin{align}
-    \vec{a} = \vec{C} - \vec{B} &= \myvec{5\\-1}\\
-    \vec{b} = \vec{A} - \vec{C} &= \myvec{4\\6}\\
-    \vec{c} = \vec{B} - \vec{A} &= \myvec{-9\\-5}\\
-    \angle{A} &= \angle{BAC}\\
-    \angle{B} &= \angle{CBA}\\
-    \angle{C} &= \angle{ACB}
+    Area(\text{ABC}) &= \frac{1}{2} \left| \myvec{2 & 6 & p\\0& 1 & q\\1 & 1 & 1} \right| \\
+    2 \times Area(\text{ABC}) &= 2 \times \left| \myvec{1 & q\\1 & 1} \right| - 6 \times \left| \myvec{0 & q\\1 & 1} \right| + p \times \left| \myvec{0 & 1\\1 & 1} \right| \\
+    &= 2(1-q) - 6(0-q) + p(0-1) \\
+    &= 2 + 4q - p \\
+    Area(\text{ABC}) &= 12 \\
+    \left| 4q -p + 2 \right| &= 24 \\
+    4q - p &= \pm 24 - 2
 \end{align}
-$\rightarrow$ Then the cosines of the angles are
+
+$\rightarrow$ From (1) and (8), we get
+
 \begin{align}
-    \cos{A} = -\frac{\vec{b}^{T}\vec{c}}{\norm{\vec{b}}\norm{\vec{c}}} = \frac{66}{\sqrt{52}\sqrt{106}} = 0.889\\
-    \cos{B} = -\frac{\vec{c}^{T}\vec{a}}{\norm{\vec{c}}\norm{\vec{a}}} = \frac{40}{\sqrt{106}\sqrt{26}} = 0.762\\
-    \cos{C} = -\frac{\vec{a}^{T}\vec{b}}{\norm{\vec{a}}\norm{\vec{b}}} = -\frac{14}{\sqrt{26}\sqrt{52}} = -0.381 \\
-    \notag
+    \myvec{2 & 1\\-1 & 4} \myvec{p\\q} &= \myvec{10\\\pm 24 - 2} \\
+    \myvec{p\\q} &= \myvec{2 & 1\\-1 & 4}^{-1} \myvec{10\\ \pm 24 - 2} \\
+    &= \frac{1}{9} \myvec{4 & -1\\1 & 2} \myvec{10\\ \pm 24 - 2} \\
+    \myvec{p\\q} = \myvec{2\\6} &\text{ or } \myvec{p\\q} = \myvec{22/3\\ -14/3}
 \end{align}
-$\rightarrow$ As none of the cosines are equal, $\triangle$ABC is not isosceles. Also, since $\cos{C}$ is negative, $\triangle$ABC forms an obtuse angled triangle. \\
-$\implies$ $\triangle$ABC is neither isosceles nor right-angled triangle.
 
 \begin{figure}[h!]
    \centering
-   \includegraphics[width=0.7\linewidth]{figs/01.png}
-   \caption{Plot of $\triangle$ABC}
+   \includegraphics[width=\linewidth]{figs/01.png}
+   \caption{Plot of points and triangles}
    \label{Plot_1}
 \end{figure}
 \end{document}
