@@ -23,9 +23,9 @@
 \usepackage{tkz-euclide} 
 \usepackage{listings}                                      
 \def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}                                
+\usepackage[latin1]{inputenc}                   
 \usepackage{color}                                            
-\usepackage{array}                                            
+\usepackage{array}                                           
 \usepackage{longtable}                                       
 \usepackage{calc}                                             
 \usepackage{multirow}                                         
@@ -34,6 +34,9 @@
 \usepackage{lscape}
 \title{5.2.55}
 \author{EE25BTECH11052 - Shriyansh Kalpesh Chawda}
+
+
+
 \begin{document}
 	\maketitle
 	\textbf{Question}:\\
@@ -57,56 +60,37 @@
 	\begin{align}
 		A = \myvec{2 & 3 \\ 5 & 4}, \quad \vec{b} = \myvec{13 \\ -2}.
 	\end{align}
-	We solve using the inverse:
+	We solve using Gauss-Jordan elimination by reducing the augmented matrix $[A|\vec{b}]$ to $[I|\vec{x}]$.
+	
 	\begin{align}
-		\myvec{u \\ v} = A^{-1}\vec{b}.
+		\left[\begin{array}{cc|c}
+			2 & 3 & 13 \\
+			5 & 4 & -2
+		\end{array}\right]
+		&\xrightarrow{R_1 \rightarrow \frac{1}{2}R_1}
+		\left[\begin{array}{cc|c}
+			1 & \frac{3}{2} & \frac{13}{2} \\
+			5 & 4 & -2
+		\end{array}\right] \\
+		&\xrightarrow{R_2 \rightarrow R_2 - 5R_1}
+		\left[\begin{array}{cc|c}
+			1 & \frac{3}{2} & \frac{13}{2} \\
+			0 & -\frac{7}{2} & -\frac{69}{2}
+		\end{array}\right] \\
+		&\xrightarrow{R_2 \rightarrow -\frac{2}{7}R_2}
+		\left[\begin{array}{cc|c}
+			1 & \frac{3}{2} & \frac{13}{2} \\
+			0 & 1 & \frac{69}{7}
+		\end{array}\right] \\
+		&\xrightarrow{R_1 \rightarrow R_1 - \frac{3}{2}R_2}
+		\left[\begin{array}{cc|c}
+			1 & 0 & -\frac{58}{7} \\
+			0 & 1 & \frac{69}{7}
+		\end{array}\right]
 	\end{align}
-We start with the augmented matrix $[A|I]$.
-\begin{align}
-	\left[\begin{array}{cc|cc}
-		2 & 3 & 1 & 0 \\
-		5 & 4 & 0 & 1
-	\end{array}\right]
-	&\xrightarrow{R_1 \rightarrow \frac{1}{2}R_1}
-	\left[\begin{array}{cc|cc}
-		1 & \frac{3}{2} & \frac{1}{2} & 0 \\
-		5 & 4 & 0 & 1
-	\end{array}\right] \\
-	&\xrightarrow{R_2 \rightarrow R_2 - 5R_1}
-	\left[\begin{array}{cc|cc}
-		1 & \frac{3}{2} & \frac{1}{2} & 0 \\
-		0 & -\frac{7}{2} & -\frac{5}{2} & 1
-	\end{array}\right] \\
-	&\xrightarrow{R_2 \rightarrow -\frac{2}{7}R_2}
-	\left[\begin{array}{cc|cc}
-		1 & \frac{3}{2} & \frac{1}{2} & 0 \\
-		0 & 1 & \frac{5}{7} & -\frac{2}{7}
-	\end{array}\right] \\
-	&\xrightarrow{R_1 \rightarrow R_1 - \frac{3}{2}R_2}
-	\left[\begin{array}{cc|cc}
-		1 & 0 & -\frac{4}{7} & \frac{3}{7} \\
-		0 & 1 & \frac{5}{7} & -\frac{2}{7}
-	\end{array}\right]
-\end{align}
-The inverse matrix is:
-\[
-A^{-1} = 
-\begin{pmatrix}
-	-\frac{4}{7} & \frac{3}{7} \\
-	\frac{5}{7} & -\frac{2}{7}
-\end{pmatrix}
-= -\frac{1}{7}
-\begin{pmatrix}
-	4 & -3 \\
-	-5 & 2
-\end{pmatrix}
-\]
-\begin{align}
-	\myvec{u \\ v} 
-	&= A^{-1}\vec{b} = -\frac{1}{7}\myvec{4 & -3 \\ -5 & 2}\myvec{13 \\ -2} \\
-	&= -\frac{1}{7}\myvec{52+6 \\ -65-4} \\
-	&= -\frac{1}{7}\myvec{58 \\ -69} \\
-	&= \myvec{-\frac{58}{7} \\ \frac{69}{7}}
+	From the reduced row echelon form, we have the solution:
+	\begin{align}
+		\myvec{u \\ v} = \myvec{-\frac{58}{7} \\ \frac{69}{7}}
 	\end{align}
 	Back substituting:
 	\begin{align}
@@ -120,10 +104,6 @@ A^{-1} =
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{figs/equation_plot}
-		\caption{}
-		\label{fig:equationplot}
 	\end{figure}
-	
-	
 	
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.31)  23 SEP 2025 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.31)  23 SEP 2025 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1057,19 +1057,16 @@ dvips/lm/lm-mathex.enc}] [4
 ] [6
 
 ]
-[7
-
-]
-<../figs/equation_plot.png, id=214, 515.526pt x 393.6306pt>
+<../figs/equation_plot.png, id=188, 515.526pt x 393.6306pt>
 File: ../figs/equation_plot.png Graphic file (type png)
 <use ../figs/equation_plot.png>
-Package pdftex.def Info: ../figs/equation_plot.png  used on input line 179.
+Package pdftex.def Info: ../figs/equation_plot.png  used on input line 155.
 (pdftex.def)             Requested size: 307.28987pt x 234.64256pt.
 
-Overfull \vbox (34.37782pt too high) detected at line 179
+Overfull \vbox (34.37782pt too high) detected at line 155
  []
 
-[8
+[7
 
  <../figs/equation_plot.png>]
 \tf@nav=\write6
@@ -1090,10 +1087,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23014 strings out of 474222
- 435231 string characters out of 5748733
- 1944975 words of memory out of 5000000
- 44785 multiletter control sequences out of 15000+600000
+ 23010 strings out of 474222
+ 435198 string characters out of 5748733
+ 1937975 words of memory out of 5000000
+ 44783 multiletter control sequences out of 15000+600000
  586709 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,123p,379b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1103,10 +1100,10 @@ sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (8 pages, 238394 bytes).
+Output written on main.pdf (7 pages, 237058 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 16 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
