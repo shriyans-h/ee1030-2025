@@ -94,7 +94,7 @@ n = \myvec{-2\lambda\\\lambda\\1+3\lambda}
 \vec{n}^\top\vec{P}=1
 \end{align}
 \begin{align}
-\vec{P}^\top\vec{C}=0
+\vec{C}^\top\vec{P}=0
 \end{align}
 \begin{align}
 \myvec{-2\lambda & \lambda & 1+3\lambda \\ 3 & 2 & 6}\vec{P} = \myvec{1\\0}.
@@ -113,11 +113,18 @@ $R_2=R_2-6R_1$
 \augvec{3}{1}{-3.5\lambda & 0 & 1& 1 \\ 3+21\lambda & 2 & 0 & -6}.
 \end{align}
 \begin{align}
-    -3.5\lambda x+z=1\implies z=1+3.5\lambda x, \brak{3+21\lambda}x+2y=-6\implies y=-3-\frac{x}{2}\brak{3+21\lambda}
+-3.5\lambda x+z=1\implies z=1+3.5\lambda x
+\end{align}
+\begin{align}
+	\brak{3+21\lambda}x+2y=-6\implies y=-3-\frac{x}{2}\brak{3+21\lambda}
 \end{align}
 Let $x$ =$\mu$ a parameter
 \begin{align}
 \vec{P} = \myvec{\mu\\-3-\frac{\mu}{2}\brak{3+21\lambda}\\1+3.5\lambda\mu} =\myvec{0\\-3\\1}+\frac{\mu}{2}\myvec{2\\-3\\0}+7\lambda\frac{\mu}{2}\myvec{0\\-3\\1} .
+\end{align}
+Taking $\mu=0$ we get,
+\begin{align}
+	\vec{P}=\pm \myvec{0\\-3\\1}
 \end{align}
 Normalizing,
 \begin{align}
