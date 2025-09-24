@@ -91,7 +91,7 @@ Let $\vec{S}$ be the focus of the parabola $y^2 = 8x$ and let PQ be the common c
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
-     $\text{Given: }$\\
+      Given:\\
 $\quad \text{Circle: }x^2 + y^2 - 2x - 4y = 0$\\
 $\text{Parabola: }y^2 = 8x$\\\\
 
@@ -108,41 +108,93 @@ Parameters of the Parabola:
 
 Points of Intersection of Circle and Parabola can be given as:
 \begin{equation}
-\vec{X}^\top(\vec{V}_1+\mu\vec{V}_2)\vec{X} + 2(\vec{u}_1+\mu\vec{u}_2)^\top\vec{X} + (f_1 + \mu f_2)    
+\vec{X}^\top(\vec{V}_1+\mu\vec{V}_2)\vec{X} + 2(\vec{u}_1+\mu\vec{u}_2)^\top\vec{X} + (f_1 + \mu f_2) = 0
 \end{equation}
 \end{frame}
 
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
- \begin{equation}
+\begin{equation}
 \vec{X}^\top\myvec{1 & 0 \\ 0 & 1+\mu}\vec{X} - 2\myvec{1+4\mu & 2}\vec{X} = 0    
 \end{equation}
 
-From Equation 4, We get
+To degenerate a conic into a line, we can find values of $\mu$ by
 \begin{equation}
-    \vec{X}=\myvec{1+4\mu \\ \dfrac{2}{1+\mu}}
+\norm{\vec{M}_1 + \mu\vec{M}_2} =0
+\end{equation}
+where $\vec{M}_i = \myvec{\vec{V}_i & \vec{u}_i \\ \vec{u}_i^\top & f_i}$\\
+
+From Equation 5, we get 
+\begin{equation}
+    (4\mu+1)^2(\mu + 1) = -4
 \end{equation}
 
-Putting Value of $\vec{X}$ in Equation 4, We get points of intersection as:
 \begin{equation}
-    \vec{X}_1 = \myvec{0 \\ 0} \qquad \& \qquad \vec{X}_2 = \myvec{2 \\ 4}
+\Rightarrow \, \, \mu = \dfrac{-5}{4} \text{ (as the only real solution.)}    
 \end{equation}
-
-Therefore,
-Let $\vec{P} = \myvec{0 \\ 0}$ and $\vec{Q} = \myvec{2 \\ 4}$\\\\
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Theoretical Solution}
- The Area of Triangle PQS is:
+ Substituting the value of $\mu$ in Equation 4,
+\begin{equation}
+\vec{X}^\top\myvec{1 & 0 \\ 0 & -1/4}\vec{X} + \myvec{8 & -4}\vec{X} = 0
+\end{equation}
+
+\begin{equation}
+    (2x+y+16)(2x-y) = 0
+\end{equation}
+
+\begin{equation}
+   \Rightarrow \, \, 2x + y + 16 =0 \text{ OR } 2x-y=0
+\end{equation}
+
+From Line $2x + y + 16 =0$, we get no points of intersection with both the conics.\\
+Thus, Rejected this Case.\\
+
+From Line $2x-y=0$
+\begin{equation}
+    \vec{X} = k\myvec{2 \\ -1} 
+\end{equation}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Theoretical Solution}
+ The Intersection of the given conic with the given line can be written as:
+\begin{equation}
+    \vec{x}_j = \vec{h} + k_j\vec{m}
+\end{equation}
+
+\begin{equation}
+where, \, \vec{h} = \myvec{0 \\ 0} \, \& \, \vec{m} = \myvec{2 \\ -1}   
+\end{equation}
+
+\begin{equation}
+    k_{j} = \left( \dfrac{1}{\vec{m}^\top\vec{V}_i\vec{m}} \right) \left( 
+    -\vec{m}^\top(\vec{V}_i\vec{h}+\vec{u}_i) \, \pm \, \sqrt{[\vec{m}^\top(\vec{V}_i\vec{h}+\vec{u}_i)]^2 - g(h)(\vec{m}^\top\vec{V}_i\vec{m})} \right) 
+\end{equation}
+
+After Solving the Equation 12 with circle and parabola, We get common points of intersection as:
+\begin{equation}
+    \vec{X}_1 = \myvec{0 \\ 0} \qquad \& \qquad \vec{X}_2 = \myvec{2 \\ 4}
+\end{equation}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Theoretical Solution}
+ 
+Therefore,
+Let $\vec{P} = \myvec{0 \\ 0}$ and $\vec{Q} = \myvec{2 \\ 4}$\\\\
+
+The Area of Triangle PQS is:
 \begin{equation}
     Area(\triangle PQS) = \dfrac{1}{2}\norm{\vec{SP} \times \vec{QP}} = 4
 \end{equation}
 
 \begin{align*}
     \boxed{\text{The Area of $\triangle PQS$ is 4 sq.units.}}
-\end{align*}   
+\end{align*}
 \end{frame}
 
 
