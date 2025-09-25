@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  19 SEP 2025 22:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  25 SEP 2025 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2149,16 +2149,27 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 s/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
+<figs/plot.png, id=31, 1541.76pt x 1027.84pt>
+File: figs/plot.png Graphic file (type png)
+<use figs/plot.png>
+Package pdftex.def Info: figs/plot.png  used on input line 127.
+(pdftex.def)             Requested size: 364.1953pt x 242.79712pt.
+
 
 [1{/data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdfte
 x/updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-d
 ist/fonts/enc/dvips/base/8r.enc}
 
-] (./main.aux)
+]
+
+[2 <./figs/plot.png (PNG copy)>] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package rerunfilecheck Warning: File `main.out' has changed.
@@ -2170,13 +2181,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54499 strings out of 467801
- 1316711 string characters out of 5417843
- 1906940 words of memory out of 5000000
- 82340 multiletter control sequences out of 15000+600000
+ 54517 strings out of 467801
+ 1317055 string characters out of 5417843
+ 1907940 words of memory out of 5000000
+ 82356 multiletter control sequences out of 15000+600000
  689407 words of font info for 169 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,7n,107p,1194b,1024s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,7n,107p,1194b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/txfonts/rtxmi.pfb></data/data/com.termux/files/usr/share/texlive/2025/texm
 f-dist/fonts/type1/public/txfonts/rtxr.pfb></data/data/com.termux/files/usr/sha
@@ -2187,10 +2198,10 @@ public/txfonts/txsyc.pfb></data/data/com.termux/files/usr/share/texlive/2025/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></data/data/com.termux/files/usr/shar
 e/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.term
 ux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 45795 bytes).
+Output written on main.pdf (2 pages, 724283 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
