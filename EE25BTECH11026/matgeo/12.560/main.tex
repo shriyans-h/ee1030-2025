@@ -78,6 +78,7 @@ A scalar function is given by $f\brak{x,y}=x^2+y^2$. Take $\hat{i}$ and $\hat{j}
 \solution \\
 Let us solve the given question theoretically and then verify the solution computationally.\\
 \\
+\textbf{Approach-1:}
 The direction vector along which the function $f\brak{x,y}$ is given by the gradient direction vector of the function, which is given by
 \begin{align}
     \nabla f\brak{x,y}=\myvec{\tfrac{\partial f}{\partial x}\\\tfrac{\partial f}{\partial y}}
@@ -96,12 +97,34 @@ At $\brak{x,y}=\brak{3,4}$,
 \vspace*{0.25cm}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\columnwidth]{figs/Figure_1.png}
+    \includegraphics[width=0.7\columnwidth]{figs/Figure_1.png}
+    \caption{Graph for approach-1}
     \label{fig:1}
 \end{figure}
+\textbf{Approach-2: }As the point is given to be $\myvec{3\\4}$, it can be assumed that for the circle,
+\begin{align}
+    \vec{x}^{\top}\vec{V}\vec{x}=3^2+4^2=25 \label{eq:1}
+\end{align}
+where $\vec{V}=\vec{I}$.\\
+We can infer that the function will increse along the direction vector of normal at that point.
+The direction vector of normal is given by
+\begin{align}
+    \vec{n}=\brak{\vec{V}\vec{q}+\vec{u}}
+\end{align}
+where, $\vec{q}$ is the point of contact.
+\begin{align}
+    \therefore \vec{n}=\myvec{1&&0\\0&&1}\myvec{3\\4}+\myvec{0\\0}=\myvec{3\\4}
+\end{align}
 
+\newpage
+\vspace*{0.25cm}
 
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{figs/Figure_2.png}
+    \caption{Graph for approach-2}
+    \label{fig:2}
+\end{figure}
 
 \end{document}
 

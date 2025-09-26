@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.18)  22 SEP 2025 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.18)  26 SEP 2025 10:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main.ted
 (./main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1892,14 +1892,8 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 78--82
+Underfull \hbox (badness 10000) in paragraph at lines 78--83
 
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 78--82
-\OT1/txr/m/n/10 The di-rec-tion vec-tor along which the func-tion $\OML/txmi/m/
-it/10 f []$ \OT1/txr/m/n/10 is given by the gra-di-ent
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
@@ -1909,9 +1903,15 @@ dist/fonts/enc/dvips/base/8r.enc}
 <figs/Figure_1.png, id=52, 505.89pt x 433.62pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 99.
-(pdftex.def)             Requested size: 291.35735pt x 249.73978pt.
- [2 <./figs/Figure_1.png>] (./main.aux)
+Package pdftex.def Info: figs/Figure_1.png  used on input line 100.
+(pdftex.def)             Requested size: 254.9356pt x 218.51653pt.
+ [2 <./figs/Figure_1.png>]
+<figs/Figure_2.png, id=63, 462.528pt x 346.896pt>
+File: figs/Figure_2.png Graphic file (type png)
+<use figs/Figure_2.png>
+Package pdftex.def Info: figs/Figure_2.png  used on input line 124.
+(pdftex.def)             Requested size: 254.9356pt x 191.20625pt.
+ [3 <./figs/Figure_2.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1920,10 +1920,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52928 strings out of 474222
- 1253991 string characters out of 5748733
+ 52946 strings out of 474222
+ 1254289 string characters out of 5748733
  1940975 words of memory out of 5000000
- 74366 multiletter control sequences out of 15000+600000
+ 74378 multiletter control sequences out of 15000+600000
  623283 words of font info for 169 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,15n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1934,10 +1934,10 @@ xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 202302 bytes).
+Output written on main.pdf (3 pages, 227650 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
