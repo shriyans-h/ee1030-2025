@@ -35,11 +35,11 @@ The equation of the lines is :
 Combining both the equations 0.1 and 0.2 ,we get :
 \begin{align}
    \begin{bmatrix}-\sqrt{3} & 1\\
-           \sqrt{3} & 1 \end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}2\\2\end{bmatrix}
+           \sqrt{3} & 1 \end{bmatrix}\textbf{X} = \begin{bmatrix}2\\2\end{bmatrix}
 \end{align}
 Solving by row reduction we get :
 \begin{align}
-\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}0\\2\end{bmatrix}
+\textbf{Q} = \begin{bmatrix}0\\2\end{bmatrix}
 \end{align}
 \end{frame}
 
@@ -50,14 +50,14 @@ Solving by row reduction we get :
 The equation for the point $\mathbf{P_1}$ are:
 \begin{align}
 \begin{bmatrix}-\sqrt{3} & 1\end{bmatrix}\mathbf{P_1} = 2\\
-\lVert x &\quad y-2 \rVert = 5
+\lVert P_1 - Q \rVert = 5
 \end{align}
 
 The equation for the point $\mathbf{P_2}$ are:
 
 \begin{align}
-\begin{bmatrix}\sqrt{3} & 1\end{bmatrix}\mathbf{P_1} = 2\\
-\lVert x &\quad y-2 \rVert = 5
+\begin{bmatrix}\sqrt{3} & 1\end{bmatrix}\mathbf{P_2} = 2\\
+\lVert P_2 - Q \rVert = 5
 \end{align}
 
 Solving the equations we get :

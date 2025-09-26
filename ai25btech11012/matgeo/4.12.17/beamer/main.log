@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  25 SEP 2025 01:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.1)  26 SEP 2025 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -791,7 +791,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count354
 \l__pdf_internal_box=\box82
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -812,6 +812,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -869,6 +870,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 16.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -961,8 +964,7 @@ Package gensymb Info: Using \Omega for \ohm on input line 16.
 
 Package gensymb Warning: Not defining \micro.
 
-No file main.nav.
-
+(./main.nav)
 
 [1
 
@@ -1018,7 +1020,7 @@ Overfull \vbox (2.2081pt too high) detected at line 107
 
 ]
 </Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/4.12.17/figs/fig.pn
-g, id=201, 462.528pt x 346.896pt>
+g, id=202, 462.528pt x 346.896pt>
 File: /Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/4.12.17/figs/f
 ig.png Graphic file (type png)
 <use /Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/4.12.17/figs/fi
@@ -1046,21 +1048,14 @@ ng>]
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24773 strings out of 473190
- 494698 string characters out of 5715801
- 863989 words of memory out of 5000000
- 47524 multiletter control sequences out of 15000+600000
+ 24803 strings out of 473190
+ 494976 string characters out of 5715801
+ 864035 words of memory out of 5000000
+ 47546 multiletter control sequences out of 15000+600000
  566469 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,18n,123p,396b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1074,7 +1069,7 @@ sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
 sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (7 pages, 145374 bytes).
+Output written on main.pdf (7 pages, 145828 bytes).
 PDF statistics:
  280 PDF objects out of 1000 (max. 8388607)
  226 compressed objects within 3 object streams

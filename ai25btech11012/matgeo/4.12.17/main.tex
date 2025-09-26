@@ -53,7 +53,7 @@
 \setlength{\intextsep}{10pt} % Space between text and floats
 
 
-\numberwithin{equation}{enumi}:
+\numberwithin{equation}{enumi}
 \numberwithin{figure}{enumi}
 
 \vspace{-1cm}
@@ -76,20 +76,20 @@ Combining both the equations 0.1 and 0.2 ,we get :
 Solving by row reduction we get :
 
 \begin{align}
-\myvec{x\\y} = \myvec{0\\2}
+\vec{Q} = \myvec{0\\2}
 \end{align}
 
 The equation for the point $\vec{P_1}$ are:
 \begin{align}
-\myvec{-\sqrt{3} & 1}\vec{P_1} = 2\\
-\lVert x &\quad y-2 \rVert = 5
+\myvec{\sqrt{3} & 1}\vec{P_1} = 2\\
+\lVert \vec{P_1} -  \vec{Q} \rVert = 5
 \end{align}
 
 The equation for the point $\vec{P_2}$ are:
 
 \begin{align}
-\myvec{\sqrt{3} & 1}\vec{P_1} = 2\\
-\lVert x &\quad y-2 \rVert = 5
+\myvec{-\sqrt{3} & 1}\vec{P_2} = 2\\
+\lVert \vec{P_2} -  \vec{Q} \rVert = 5
 \end{align}
 
 Solving the equations we get :
@@ -141,4 +141,4 @@ and solving it for the line $\myvec{0\\1}^{T}\vec{x} = 2$, we get :
 
 \end{document}
 
-
+ 
