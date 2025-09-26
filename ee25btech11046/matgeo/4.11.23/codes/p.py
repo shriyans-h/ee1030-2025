@@ -35,7 +35,7 @@ ax.scatter(x[0], x[1], x[2], color='blue', s=100)
 ax.text(P1[0], P1[1], P1[2], fr'  $P_1${tuple(P1)}', color='red')
 ax.text(P2[0], P2[1], P2[2], fr'  $P_2${tuple(P2)}', color='red')
 ax.text(P3[0], P3[1], P3[2], fr'  $P_3${tuple(P3)}', color='red')
-ax.text(x[0], x[1], x[2], fr'  $\vec{x}${tuple(x)}', color='blue')
+ax.text(x[0], x[1], x[2], f'  x {tuple(x)}', color='blue')
 
 ax.set_xlabel('$x$')
 ax.set_ylabel('$y$')
