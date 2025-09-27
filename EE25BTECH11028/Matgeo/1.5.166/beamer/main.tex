@@ -85,7 +85,8 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Find the  coordinates point \(A\) where  \(AB\) is a diameter of the circle with center \(=(3,-1)\) and point \(B=(2,6)\).
+
+ \textbf{Question:} Find the point \(A\) if \(AB\) is a diameter of the circle with center \(C=(3,-1)\) and point \(B=(2,6)\).
  
 \end{frame}
  
@@ -97,7 +98,7 @@ Find the  coordinates point \(A\) where  \(AB\) is a diameter of the circle with
     \hline
     B & $ \myvec{2 \\ 6} $  \\
     \hline
-    P & $ \myvec{3 \\ -1} $   \\
+    C & $ \myvec{3 \\ -1} $   \\
     \hline  
     \end{tabular}
 \]
@@ -105,127 +106,75 @@ Find the  coordinates point \(A\) where  \(AB\) is a diameter of the circle with
    
 \end{frame}
 
-\begin{frame}{Theoretical Solution}
+\begin{frame}{Section Formula}
+If a point \(P\) divides the line joining \(A\) and \(B\) internally in the ratio \(m:n\), then
 
-\underline{\textbf{Theory :}} Center of a circle is the mid-point of the diameter. \\
+\begin{equation}
+\vec P = \frac{k\vec B + \vec A}{k+1}
+= \begin{pmatrix}\vec A & \vec B\end{pmatrix}
+\myvec{\tfrac{1}{k+1}\\[6pt]\tfrac{k}{k+1}}
+\tag{1}
+\end{equation}
 
-Let $P$ be the center of the given circle , with $AB$ as the diameter.
 
-Let $\vec{A}$ be the Vector to be found 
 
-\textit{Given :} 
-\[
-B \equiv \begin{pmatrix} 2 \\ 6 \end{pmatrix}, \quad P \equiv \begin{pmatrix} 3 \\ -1 \end{pmatrix}
-\]
+Here,\(C\) is the midpoint of \(AB\), i.e.\ ratio \(1:1\).
+
+\begin{equation}
+\vec{C} = \frac{\vec{A}+\vec{B}}{2}
+= \begin{pmatrix}\vec A & \vec B\end{pmatrix}
+\myvec{\tfrac{1}{2}\\[6pt]\tfrac{1}{2}}.
+\tag{2}
+\end{equation}
+ \end{frame}
+ 
+
+  \begin{frame}{Express A in terms of B and C :}
+ \begin{equation}    
+\vec{C} = \frac{\vec{A} + \vec{B}}{2}
+\quad \Rightarrow \quad
+2 \vec{C} = \vec{A} + \vec{B}
+\quad \Rightarrow \quad
+\vec{A} = 2 \vec{C} - \vec{B}.
+\tag{3}
+\end{equation}
+Using matrix notation,
+\begin{equation}
+\vec{A} = 2 \vec{C} - \vec{B} 
+= \begin{pmatrix} \vec{B} & \vec{C} \end{pmatrix}
+\myvec{-1 \\[6pt] 2}.
+\tag{4}
+\end{equation}
 \end{frame}
 
-\begin{frame}{Theoretical Solution}
-
-Center of a circle is the mid point of the diameter. For a circle with center $\vec{P}$ and ends of diameters represented by vectors $\vec{A}$ and $\vec{B}$  
+\begin{frame}{substitute values :}
+ Given
 \[
-\mathbf{P} = \frac{\mathbf{A} + \mathbf{B}}{2} \tag{0.1}
+\vec{B} = \myvec{2 \\ 6}, \quad \vec{C} = \myvec{3 \\ -1},
 \]
+we have,
+\begin{equation}
+\vec{A} = 2 \myvec{3 \\ -1} - \myvec{2 \\ 6} = \myvec{6 \\ -2} - \myvec{2 \\ 6} = \myvec{4 \\ -8}.
+\tag{5}
+\end{equation}
 
-Rearranging , we get:
-\[
-\mathbf{A} = 2\mathbf{P} - \mathbf{B} \tag{0.2}
-\]
+\begin{equation}
+\boxed{\vec{A} = \myvec{4 \\ -8}}.
+\tag{6}
+\end{equation}
 \end{frame}
 
-\begin{frame}{Theoretical Solution}
-Substituting the given vectors, we get:
-\[
-\mathbf{A} = 2 \begin{pmatrix} 3 \\ -1 \end{pmatrix} - \begin{pmatrix} 2 \\ 6 \end{pmatrix} \tag{0.3}
-\]
-\[
-\mathbf{A} = \begin{pmatrix} 6 \\ -2 \end{pmatrix} - \begin{pmatrix} 2 \\ 6 \end{pmatrix} \tag{0.4}
-\]
-\[
-\therefore \mathbf{A} \equiv \begin{pmatrix} 4 \\ -8 \end{pmatrix}
-\]
-
-\textbf{Hence , Coordinates of A are } 
-\[
-\begin{pmatrix} 4 \\ -8 \end{pmatrix}
-\]
+\begin{frame}{Figure}
+  
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/fig.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+  
 \end{frame}
 
-
-\begin{frame}[fragile]
-    \frametitle{C Code (1) - Function to find A matrix }
-
-    \begin{lstlisting}
-
-#include <stdio.h>
-#include <math.h>
-void func(double *P, double *B, double *A , int m )
-{
-    for ( int i = 0 ; i < m ; i++ )
-    {
-        A[i] = 2*P[i] - B[i] ; 
-    }
-
-}
-    \end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]
-    \frametitle{C Code (1) - Function to Find Radius}
-
-    \begin{lstlisting}
-
-double radius(double *P , double *B , int m )
-{
-    double sum = 0.0; 
-    for ( int i = 0 ; i < m ; i++ )
-    {
-        sum += pow(P[i]-B[i] , 2 );
-    }
-    return sqrt(sum) ; 
-}
-
-    \end{lstlisting}
-\end{frame}
-
-
-\begin{frame}[fragile]
-    \frametitle{C Code (2) - Function to Generate Points on Circle}
-
-    \begin{lstlisting}
-
-#include <math.h>
-
-void circle_gen(double *X , double *Y , double *P, int n , double r)
-{
-// n is no. of points to generates. x stores x coor , y stores y coor 
-    for (int i  = 0 ; i < n ; i++ )
-    {
-        double theta = 2.0 * M_PI * i / n ; 
-        X[i] = P[0] + r * cos(theta);
-        Y[i] = P[1] + r * sin (theta); 
-    }   
-}
-    \end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]
-    \frametitle{C Code (2) - Function to Generate Points on Line}
-
-    \begin{lstlisting}
-void line_gen (double *X, double *Y , double *A , double *B , int n , int m )
-{
-    double temp[m] ; 
-    for (int i = 0 ; i < m ; i++)
-    {
-        temp [ i ] = (B[i]- A[i]) /(double) n ; 
-    }
-    for (int i = 0 ; i <= n ; i++ )
-    {
-        X[i] = A[0] + temp[0] * i ; 
-        Y[i] = A[1] + temp[1] * i ;
-    }
-}
-
-    \end{lstlisting}
-\end{frame}
 \begin{frame}[fragile]
     \frametitle{Python Code}
     \begin{lstlisting}
@@ -312,10 +261,47 @@ plt.show()
 
 \end{lstlisting}
 \end{frame}
-\begin{frame}{Plot-Using Both C and Python}
-    \centering
-    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{figs/fig1.2.png}     
+
+ 
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{C Code}
+\begin{lstlisting}
+  
+#include <stdio.h>
+
+int main() {
+    // Given values
+    int xB = 2, yB = 6;
+    int xC = 3, yC = -1;  // Center of the circle
+
+    // Calculate coordinates of A using midpoint formula
+    int xA = 2 * xC - xB;
+    int yA = 2 * yC - yB;
+
+    // Print result
+    printf("Coordinates of point A are: (%d, %d)\n", xA, yA);
+
+    // Verify midpoint
+    float midX = (xA + xB) / 2.0;
+    float midY = (yA + yB) / 2.0;
+    printf("Midpoint of A and B is: (%.1f, %.1f)\n", midX, midY);
+
+    return 0;
+}
+
+
+
+
+
+
+\end{lstlisting}
+
 \end{frame}
+
 
 \begin{frame}[fragile]
 \frametitle{Python and C Code}
@@ -335,13 +321,14 @@ print(result.stdout)
 
 \end{frame}
 
-\begin{frame} {Graph}
+\begin{frame}
+    
 \begin{figure}[H]
     \centering
- \includegraphics[width=0.5\linewidth]{figs/Fig1.png}
+    \includegraphics[width=0.5\linewidth]{beamer/fig.png}
     \caption{}
     \label{fig:placeholder}
-\end{figure}
+\end{figure} 
 \end{frame}
-\end{document}
 
+\end{document}
