@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.11)  27 SEP 2025 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.11)  27 SEP 2025 12:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1803,12 +1803,8 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 File: ../figs/plot_c.jpg Graphic file (type jpg)
 <use ../figs/plot_c.jpg>
 Package pdftex.def Info: ../figs/plot_c.jpg  used on input line 170.
-(pdftex.def)             Requested size: 239.60567pt x 239.60551pt.
-
-Overfull \vbox (48.0792pt too high) detected at line 170
- []
-
-[9
+(pdftex.def)             Requested size: 171.14764pt x 171.14679pt.
+ [9
 
  <../figs/plot_c.jpg>]
 \tf@nav=\write8
@@ -1841,7 +1837,7 @@ lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 o10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (9 pages, 201623 bytes).
+Output written on main.pdf (9 pages, 201706 bytes).
 PDF statistics:
  327 PDF objects out of 1000 (max. 8388607)
  281 compressed objects within 3 object streams
