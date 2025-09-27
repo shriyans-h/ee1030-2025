@@ -1,0 +1,88 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{4.13.50}
+\author{Puni Aditya - EE25BTECH11046}
+\maketitle
+
+\textbf{Question:}
+
+Two equal sides of an isosceles triangle are given by the equations $7x - y + 3 = 0$ and $x + y - 3 = 0$ and its third side passes through the point $(1, -10)$. Determine the equation of the third side.
+
+\textbf{Solution:}
+Let the two equal sides of the isosceles triangle be represented by
+\begin{align*}
+    \vec{n_1}^\top\vec{x} &= c_1 \\
+    \vec{n_2}^\top\vec{x} &= c_2
+\end{align*}
+and the third side by the line
+\begin{align*}
+    \vec{n}^\top\vec{x} &= c
+\end{align*}
+The third side of the isosceles, the base, is perpendicular to the angle bisector of the two equal sides.
+\begin{align}
+    \frac{\abs{\vec{n}^\top\vec{n_1}}}{\norm{\vec{n}}\norm{\vec{n_1}}} &= \frac{\abs{\vec{n}^\top\vec{n_2}}}{\norm{\vec{n}}\norm{\vec{n_2}}} \\
+    \frac{\abs{\vec{n}^\top\vec{u_1}}}{\norm{\vec{n}}} &= \frac{\abs{\vec{n}^\top\vec{u_2}}}{\norm{\vec{n}}} \\
+    \abs{\vec{n}^\top\vec{u_1}} &= \abs{\vec{n}^\top\vec{u_2}} \\
+    \vec{n}^\top\vec{u_1} &= \pm \vec{n}^\top\vec{u_2} \\
+    \vec{n}^\top(\vec{u_1} \mp \vec{u_2}) &= 0
+\end{align}
+Here, $\vec{u_1}$ and $\vec{u_2}$ represent the unit vectors of $\vec{n_1}$ and $\vec{n_2}$ respectively.
+A vector perpendicular to given vector $\myvec{1 \\ m}$ is
+\begin{align}
+    \vec{n} = \myvec{-m \\ 1} \label{eq:40}
+\end{align}
+For the given question,
+\begin{align}
+    \vec{n_1} &= \myvec{7 \\ -1}\text{ and }\vec{n_2} = \myvec{1 \\ 1} \\
+    \norm{\vec{n_1}} &= \sqrt{50} = 5\sqrt{2} \\
+    \norm{\vec{n_2}} &= \sqrt{2} \\
+    \vec{u_1} = \frac{1}{5\sqrt{2}}\myvec{7 \\ -1},&\text{ }\vec{u_2} = \frac{1}{\sqrt{2}}\myvec{1 \\ 1} = \frac{5}{5\sqrt{2}}\myvec{1 \\ 1}
+\end{align}
+\begin{align}
+    \vec{u_1} - \vec{u_2} &= \frac{1}{5\sqrt{2}}\left(\myvec{7 \\ -1} - \myvec{5 \\ 5}\right) = \frac{1}{5\sqrt{2}}\myvec{2 \\ -6} \\
+    \vec{n_a} &= \myvec{1 \\ -3} \\
+    \vec{u_1} + \vec{u_2} &= \frac{1}{5\sqrt{2}}\left(\myvec{7 \\ -1} + \myvec{5 \\ 5}\right) = \frac{1}{5\sqrt{2}}\myvec{12 \\ 4} \\
+    \vec{n_b} &= \myvec{1 \\ \frac{1}{3}}
+\end{align}
+For the bisector parallel to $\vec{n_a}$, using \eqref{eq:40},
+\begin{align}
+    \vec{n_p} = \myvec{3 \\ 1}
+\end{align}
+For the bisector parallel to $\vec{n_b}$, using \eqref{eq:40},
+\begin{align}    
+    \vec{n_q} = \myvec{-\frac{1}{3} \\ 1}
+\end{align}
+For a line passing through a given point $\vec{p}$,
+\begin{align}
+    \vec{p} &= \myvec{1 \\ -10} \\
+    \vec{n}^\top\vec{x} &= \vec{n}^\top\vec{p}
+\end{align}
+For $\vec{n_p}$,
+\begin{align}
+    \vec{n} &= \myvec{3 \\ 1} \\
+    \myvec{3 & 1}\vec{x} &= \myvec{3 & 1}\myvec{1 \\ -10} \\
+	\myvec{3 & 1}\vec{x} &= -7
+\end{align}
+For $\vec{n_q}$,
+\begin{align}
+    \vec{n} &= \myvec{1 \\ -3} \\
+    \myvec{1 & -3}\vec{x} &= \myvec{1 & -3}\myvec{1 \\ -10} \\
+    \myvec{1 & -3}\vec{x} &= 31
+\end{align}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\columnwidth]{figs/plot_c.jpg}
+	\caption*(Isosceles Triangle)
+	\label(fig:fig)
+\end{figure}
+
+\end{document}
