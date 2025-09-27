@@ -98,82 +98,112 @@ a) 1.25 $\qquad$ b) 0.25 $\qquad$ c) 0.75 $\qquad$ d) 1
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
+\begin{equation}
+\text{Let }\vec{P} = \brak{\vec{u} \, \vec{v} \, \vec{w}} \text{ be the $3 \times 3$ orthogonal matrix of unit eigenvectors.}
+\end{equation}
+
+
+
+\begin{equation}
+\text{Let } \vec{D} = \myvec{-1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2} \text{ be the diagonal matrix of eigenvalues.}
+\end{equation}
+
+
+Since $\vec{M}$ is symmetric with these eigenvectors and eigenvalues:\\
+Eigen-Decomposition:
+\begin{equation}
+\vec{M} = \vec{P}\vec{D}\vec{P}^\top
+\end{equation}
+
+
+Let
+\begin{align}
+\vec{x} &= \vec{P}\vec{\alpha}, \quad \vec{y} = \vec{P}\vec{\beta}
+\end{align}
+
 Given:
 \begin{equation}
-\vec{M}\vec{u} = - \vec{u}, \; \vec{M}\vec{v} = \vec{v}, \; \vec{M}\vec{w} = 2\vec{w}
-\end{equation}
-
-Multiplying with $\vec{M}$ from the left side to all equations in Equation 0.1
-\begin{align}
-    \vec{M}^2\vec{u} &= - \vec{M}\vec{u} = \vec{u} \\
-    \vec{M}^2\vec{v} &= \vec{M}\vec{v} = \vec{v}\\
-    \vec{M}^2\vec{w} &= 2\vec{M}\vec{w} = 4\vec{w}
-\end{align}
-
-\begin{equation}
-\vec{M}^2\vec{u} = \vec{u}, \; \vec{M}^2\vec{v} = \vec{v}, \; \vec{M}^2\vec{w} = 4\vec{w}
-\end{equation}
-
-We know,
-\begin{equation}
-    \vec{M}\vec{x} = \vec{u} + 2(\vec{v} + \vec{w})
-\end{equation}
-
-From Equation 1,
-\begin{equation}
-    \vec{M}\vec{x} = -\vec{M}\vec{u} + 2\vec{M}\vec{v} + \vec{M}\vec{w}
+\vec{M}\vec{x} = \vec{u} + 2\brak{\vec{v} + \vec{w}}
 \end{equation}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
 \begin{equation}
-    \vec{M}(\vec{x} + \vec{u} - 2\vec{v} - \vec{w}) = 0
+\vec{u} + 2\brak{\vec{v} + \vec{w}} = \vec{P} \myvec{1 \\ 2 \\ 2}
 \end{equation}
 
-Since, Eigen values of $\vec{M}$ exists and are non-zero, Thus $\vec{M} \neq \vec{O}$.
-
 \begin{equation}
-    \therefore \; \vec{x} = 2\vec{v} + \vec{w} -\vec{u}
+\vec{M}\vec{x} = \vec{P}\vec{D}\vec{P}^\top \vec{P}\vec{\alpha} = \vec{P}\vec{D}\vec{\alpha}
 \end{equation}
 
-We know,
-\begin{equation}
-\vec{M}^2\vec{y} = \vec{u} - (\vec{v} + 2\vec{w})
-\end{equation} 
-
-From Equation 5
 \begin{align}
-    \vec{M}^2\vec{y} = \vec{M}^2\vec{u} - \vec{M}^2\vec{v} - \dfrac{1}{2}\vec{M}^2\vec{w} \\
-\vec{M}^2(\vec{y} - \vec{u} + \vec{v} + \dfrac{1}{2}\vec{w}) = 0
+\vec{P}\vec{D}\vec{\alpha} &= \vec{P} \myvec{1 \\ 2 \\ 2} \implies \vec{D}\vec{\alpha} = \myvec{1 \\ 2 \\ 2} \\
+&\implies \myvec{-1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2} \vec{\alpha}  = \myvec{1 \\ 2 \\ 2}
 \end{align}
 
-Since, Eigen values of $\vec{M}$ exists and are non-zero, Thus $\vec{M}^2 \neq \vec{O}$.
 \begin{equation}
-    \vec{y} = \vec{u} - \vec{v} - \dfrac{1}{2}\vec{w}
+\vec{\alpha} = \myvec{-1 \\ 2 \\ 1}
 \end{equation}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
 \begin{equation}
-    \vec{x} + \vec{y} = \vec{v} + \dfrac{1}{2}\vec{w}
+\therefore \; \vec{x} = \vec{P} \myvec{-1 \\ 2 \\ 1}
 \end{equation}
 
+
+Given:
+\begin{equation}
+\vec{M}^2\vec{y} = \vec{u} - \brak{\vec{v} + 2\vec{w}} = \vec{P} \myvec{1 \\ -1 \\ -2}
+\end{equation}
+
+\begin{equation}
+\vec{M}^2\vec{y} = \brak{\vec{P}\vec{D}\vec{P}^\top}\brak{\vec{P}\vec{D}\vec{P}^\top}\vec{P}\vec{\beta} = \vec{P}\vec{D}^2\vec{\beta}
+\end{equation}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Theoretical Solution}
 \begin{align}
-    \norm{\vec{x} + \vec{y}}^2 &= \left(\vec{v} + \frac{1}{2}\vec{w}\right)^\top\left(\vec{v} + \frac{1}{2}\vec{w}\right) \\
-     \norm{\vec{x} + \vec{y}}^2 &= \vec{v}^\top\vec{v} + \frac{\vec{w}^\top\vec{v}}{2} + \dfrac{\vec{v}^\top\vec{w}}{2} + \dfrac{\vec{w}^\top\vec{w}}{4} \\
-\norm{\vec{x}+\vec{y}}^2 &= \norm{\vec{v}}^2 + \vec{w}^\top\vec{v} + \dfrac{\norm{\vec{w}}^2}{4}
+\vec{P}\vec{D}^2\vec{\beta} &= \vec{P} \myvec{1 \\ -1 \\ -2} \implies \vec{D}^2\vec{\beta} = \myvec{1 \\ -1 \\ -2} \\
+&\implies \myvec{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 4} \vec{\beta} = \myvec{1 \\ -1 \\ -2}
 \end{align}
 
-Since eigen vectors are orthonormal and $\vec{v} \, \& \, \vec{w}$ are unit vectors.
+
+\begin{equation}
+\vec{\beta} = \myvec{1 \\ -1 \\ -\frac{1}{2}}
+\end{equation}
+
+\begin{equation}
+\therefore \; \vec{y} = \vec{P} \myvec{1 \\ -1 \\ -\frac{1}{2}}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Theoretical Solution}
 \begin{align}
-\norm{\vec{x} + \vec{y}}^2 &= 1 + 0 + \dfrac{1}{4} \\
-    \norm{\vec{x} + \vec{y}}^2 &= 1.25
+\vec{x} + \vec{y} &= \vec{P}\vec{\alpha} + \vec{P}\vec{\beta} = \vec{P}\brak{\vec{\alpha} + \vec{\beta}}
 \end{align}
+
+Since $\vec{P}$ is an orthogonal matrix and $\vec{u}, \, \vec{v}, \, \vec{w}$ are unit eigenvectors,
+\begin{align}
+\norm{\vec{x} + \vec{y}}^2 &= \norm{\vec{P}(\vec{\alpha} + \vec{\beta})}^2 = \left( \vec{\alpha} + \vec{\beta}\right)^\top (\vec{\alpha} + \vec{\beta})\\
+\norm{\vec{x} + \vec{y}}^2 &=  \vec{\alpha}^\top\vec{\alpha} + \vec{\alpha}^\top\vec{\beta} + \vec{\beta}^\top\vec{\alpha} + \vec{\beta}^\top\vec{\beta}\\
+\norm{\vec{x} + \vec{y}}^2 &= \norm{\vec{\alpha}}^2 + 2\vec{\alpha}^\top\vec{\beta} +
+\norm{\vec{\beta}}^2\\
+\norm{\vec{x} + \vec{y}}^2 &= 6 - 7 + \dfrac{9}{4}
+\end{align}
+
 \begin{align*}
-    \boxed{\text{Option-A is correct.}}
+    \boxed{\norm{\vec{x} + \vec{y}}^2 = 1.25}
 \end{align*}
+
+\begin{equation}
+\boxed{\text{Thus, Option-A is correct.}}
+\end{equation}
 \end{frame}
 
 \end{document}
