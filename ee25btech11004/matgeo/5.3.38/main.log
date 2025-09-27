@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  27 SEP 2025 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  27 SEP 2025 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1539,24 +1539,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
                 $
 l.32 \end{align}
                 \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32 \end{align}
+                \\
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32 \end{align}
+                \\
 ? R
 OK, entering \nonstopmode...
-! Missing $ inserted.
-<inserted text> 
-                $
-l.32 \end{align}
-                \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.32 \end{align}
-                \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -1805,7 +1801,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  52718 strings out of 473190
  1265267 string characters out of 5715800
- 1840717 words of memory out of 5000000
+ 1840718 words of memory out of 5000000
  75198 multiletter control sequences out of 15000+600000
  609087 words of font info for 164 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1816,7 +1812,7 @@ texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 42616 bytes).
+Output written on main.pdf (1 page, 43005 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
