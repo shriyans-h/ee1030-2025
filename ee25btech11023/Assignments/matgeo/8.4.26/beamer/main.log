@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  28 SEP 2025 14:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  28 SEP 2025 14:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1777,20 +1777,16 @@ Overfull \vbox (6.12984pt too high) detected at line 234
 \openout4 = `main.vrb'.
 
  (./main.vrb
-<figs/fig1.png, id=311, 339.669pt x 334.6101pt>
+<figs/fig1.png, id=311, 1378.1889pt x 709.6914pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
 Package pdftex.def Info: figs/fig1.png  used on input line 5.
-(pdftex.def)             Requested size: 239.60567pt x 236.0431pt.
+(pdftex.def)             Requested size: 239.60567pt x 123.37485pt.
 
 
 Package hyperref Warning: Ignoring empty anchor on input line 7.
 
 )
-Overfull \vbox (36.98088pt too high) detected at line 245
- []
-
-
 
 [10
 
@@ -1866,7 +1862,7 @@ Overfull \vbox (6.19333pt too high) detected at line 335
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250928143103 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250928143403 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1893,7 +1889,7 @@ public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist
 /fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/l
 mtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (14 pages, 223849 bytes).
+Output written on main.pdf (14 pages, 251640 bytes).
 PDF statistics:
  508 PDF objects out of 1000 (max. 8388607)
  454 compressed objects within 5 object streams
