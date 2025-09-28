@@ -88,15 +88,27 @@ Calculating $\vec{V}$ ,$\vec{u}$ and f by using the above equations we get :
    \vec{u} = \myvec{2\\16}\\
    f = 16
 \end{align}
-Substituting in the equation 0.3 we get :
+Finding eigen values of $\vec{V}$ :
 \begin{align}
-  \vec{x}^{T}\myvec{4 & 2\\2 & 1}\vec{x} + 2\myvec{2 & 16}\vec{x} +16 =0
+    det\lvert \vec{V} - \lambda\vec{I} \rvert = 0\\
+    \begin{vmatrix} 4 - \lambda & 2 \\ 2 & 1 - \lambda \end{vmatrix} = 0\\
+    \lambda^2 - 5\lambda = 0\\
+    \lambda = 5 \quad and \quad 0 
+\end{align}
+Eigen vectors $\vec{v}$ for any any square matrix $\vec{A}$ is defined as :
+\begin{align}
+    \vec{A}\vec{v} = \lambda\vec{v}\\
+    (\vec{A} - \lambda)\vec{v} = 0 \\
+    for \quad \lambda = 0 \quad v_1 = \myvec{1\\-2}\\
+        for \quad \lambda = 5 \quad v_2 = \myvec{2\\1}
 \end{align}
 
-Solving it we get :
+Substituting in the equation 0.3 we get the equation of the conic to be :
 \begin{align}
- 4x^{2} + 4xy + y^{2} + 4x + 32y + 16 = 0
+  \vec{x}^{T}\myvec{4 & 2\\2 & 1}\vec{x} + 2\myvec{2 \\ 16}^{T}\vec{x} +16 =0
 \end{align}
+
+
 
 
 

@@ -62,23 +62,45 @@ Calculating \textbf{V} ,\textbf{u} and f by using the above equations we get :
 \end{align}
 \end{frame}
 
+
+
+\begin{frame}
+\frametitle{Solution}
+Finding eigen values of $\textbf{V}$ :
+\begin{align}
+    det\lvert \textbf{V} - \lambda\textbf{I} \rvert = 0\\
+    \begin{vmatrix} 4 - \lambda & 2 \\ 2 & 1 - \lambda \end{vmatrix} = 0\\
+    \lambda^2 - 5\lambda = 0\\
+    \lambda = 5 \quad and \quad 0 
+\end{align}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution}
+Eigen vectors $\textbf{v}$ for any any square matrix $\textbf{A}$ is defined as :
+\begin{align}
+    \textbf{A}\textbf{v} = \lambda\textbf{v}\\
+    (\textbf{A} - \lambda)\textbf{v} = 0 \\
+    for \quad \lambda = 0 \quad v_1 = \begin{bmatrix}1\\-2\end{bmatrix}\\
+        for \quad \lambda = 5 \quad v_2 = \begin{bmatrix}2\\1\end{bmatrix}
+\end{align}
+
+\end{frame}
+
 \begin{frame}
 \frametitle{Solution}
 Substituting in the equation 0.3 we get :
 \begin{align}
-  \textbf{x}^{T}\begin{bmatrix}4 & 2\\2 & 1\end{bmatrix}\textbf{x} + 2\begin{bmatrix}2 & 16\end{bmatrix}\textbf{x} +16 =0
-\end{align}
-
-Solving it we get :
-\begin{align}
- 4x^{2} + 4xy + y^{2} + 4x + 32y + 16 = 0
+  \textbf{x}^{T}\begin{bmatrix}4 & 2\\2 & 1\end{bmatrix}\textbf{x} + 2\begin{bmatrix}2 \\ 16\end{bmatrix}^{T}\textbf{x} +16 =0
 \end{align}
 \end{frame}
 
+
+
 % Graphical representation
 \begin{frame}
-
-
 \frametitle{Graphical Representation}
 \begin{center}
 \includegraphics[width=0.6\linewidth]{/Users/unnathi/Documents/ee1030-2025/ai25btech11012/matgeo/8.2.48/figs/fig.png}
