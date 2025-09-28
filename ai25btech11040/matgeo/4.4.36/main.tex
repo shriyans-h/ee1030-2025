@@ -17,19 +17,24 @@ The area of the triangle formed by the lines $\frac{x}{a} + \frac{y}{b} = 1$ and
 
 \section{Solution: }
 Let the origin be $\vec{O}$, the x-intercept be $\vec{A}$, and the y-intercept be $\vec{B}$. We then need the area of triangle $OAB$.
-The x-intercept is found by setting $y=0$ in the equation of the line, written as $\vec{m}^{\mathrm{T}}\vec{x} = 1$, where $\vec{m} = \myvec{\frac{1}{a} \\ \frac{1}{b}}$ and $\vec{x}$ represents a point on the line. Similarly, the y-intercept is found by setting $x=0$.
+The x-intercept is some multiple of the basis vector $\vec{e_1}$, and the y-intercept is some multiple of the basis vector $\vec{e_2}$. Thus,
 \begin{align}
-    \therefore \vec{O} = \myvec{0 \\ 0}, \quad \vec{A} = \myvec{x \\ 0}, \quad \vec{B} = \myvec{0 \\ y}
+    \therefore \vec{O} = \myvec{0 \\ 0}, \quad \vec{A} = \lambda\vec{e_1}, \quad \vec{B} = \mu\vec{e_2}
 \end{align}
-Putting $\vec{A}$ and $\vec{B}$ in the equation of the line, we get
+The equation of the line can be written as
 \begin{align}
-    x = a, \quad y = b
+    \vec{n}^{\mathrm{T}}\vec{x} = 1
 \end{align}
-Clearly, the triangle formed is a right angled triangle, with the right angle at $\vec{O}$ (due to the axes being perpendicular). The area of the triangle is given by
+Where $\vec{n} = \myvec{\frac{1}{a} \\ \frac{1}{b}}$, and $\vec{x}$ is any point on the line.
+By putting the points $\vec{A}$ and $\vec{B}$ in the equation of the line, we get
 \begin{align}
-    \Delta\text{OAB} = \frac{1}{2} \times \text{base} \times \text{height},\,\text{in this case}\\
-    \Delta\text{OAB} = \frac{1}{2} \times OA \times OB\\
-    \Delta\text{OAB} = \frac{1}{2} \times |a| \times |b|\\
+    \lambda\vec{n}^{\mathrm{T}}\vec{e_1} = 1, \quad \mu\vec{n}^{\mathrm{T}}\vec{e_2} = 1\\
+    \implies \lambda = \frac{1}{\vec{n}^{\mathrm{T}}\vec{e_1}} = a, \quad \mu = \frac{1}{\vec{n}^{\mathrm{T}}\vec{e_2}} = b
+\end{align}
+Now,
+\begin{align}
+    \Delta\text{OAB} = \frac{1}{2}\left|\vec{A}\times\vec{B}\right|\\
+    \implies \Delta\text{OAB} = \frac{1}{2} \lambda \mu \left|\vec{e_1}\times\vec{e_2}\right|\\
     \therefore \Delta\text{OAB} = \left|\frac{ab}{2}\right|
 \end{align}
 
