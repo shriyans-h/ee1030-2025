@@ -1,21 +1,19 @@
-\frametitle{Python Code for Plotting}
-\begin{lstlisting}[language=Python]
+\frametitle{Python Code}
+    \begin{lstlisting}
 for i, txt in enumerate(vert_labels):
-    x, y = tri_coords[:, i]
-    plt.annotate(txt, (x, y),
-                 textcoords="offset points",
-                 xytext=(10, -10),
-                 ha='center')
+    plt.annotate(txt,
+            (plot_coords[0,i],plot_coords[1,i]),
+            textcoords="offset points",
+            xytext=(0,10),
+            ha='center')
 
-# Axes styling
-plt.axhline(0, color='black', linewidth=0.8)
-plt.axvline(0, color='black', linewidth=0.8)
-plt.grid(True)
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.title("Line Segment AB Divided by Y-axis")
+plt.legend(loc='best')
+plt.grid()
 plt.axis('equal')
-plt.legend()
-plt.title("Intersection of line AB with Y-axis")
 
-# Save & Show
-plt.savefig('../figs/fig1.png')
+plt.savefig("../figs/plot.png")
 plt.show()
-\end{lstlisting}
+    \end{lstlisting}

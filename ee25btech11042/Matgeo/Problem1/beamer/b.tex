@@ -75,7 +75,7 @@
 %Title page
 \title %optional
 {1.5.29}
-\date{January 9, 2025}
+
 %\subtitle{A short story}
 
 \author % (optional)
@@ -93,32 +93,44 @@
 	\end{frame}
 	\begin{frame}{allowframebreaks}
 		\frametitle{Equation}
-		
+	\textbf{The formula for internal division of vectors is where $\vec{P}$ divides $\vec{A}$ and $\vec{B}$ in the ratio k:1}
 		\centering
 		
 		\label{tab:parameters}
-		\begin{align}
-			\vec{P} = \frac{m\vec{A}+n\vec{B}}{m+n}
-		\end{align}
+		\begin{align*}
+
+		
+			\vec{P} =	\frac{k\vec{B}+\vec{A}}{1+k} 
+		
+		\end{align*}
 		
 	\end{frame}
 	
 	
 	\begin{frame}{Theoretical Solution}
-		Thus by formula
-	\begin{align}
-		\vec{P} = \frac{1}{3}\brak{\begin{myvec}{1\\3} \end{myvec}+2\begin{myvec}{4\\6} \end{myvec}}
-	\end{align}
-	\begin{align}
-		\vec{P} = \frac{1}{3}\brak{\begin{myvec}{1\\3} \end{myvec}+\begin{myvec}{8\\12} \end{myvec}}
-	\end{align}
-	\begin{align}
-		\vec{P} = \frac{1}{3}\begin{myvec}{9\\15}\end{myvec}
-	\end{align}
-	\begin{align}
-		\therefore	\vec{P} = \begin{myvec}{3\\5}\end{myvec}
-	\end{align}
-	\end{frame}
+	According to the question, \\
+Consider the coordinate as following vectors \\ 
+
+Given the points A and B
+
+\begin{align*}
+	\vec{A} = \begin{myvec}{1\\3} \end{myvec} , \vec{B} = \begin{myvec}{4\\6} \end{myvec}
+\end{align*}
+
+Thus by formula
+\begin{align*}
+	\vec{P} = \frac{1}{1+2}\brak{\begin{myvec}{1\\3} \end{myvec}+2\begin{myvec}{4\\6} \end{myvec}}
+\end{align*}
+\begin{align*}
+	\vec{P} = \frac{1}{3}\brak{\begin{myvec}{1\\3} \end{myvec}+\begin{myvec}{8\\12} \end{myvec}}
+\end{align*}
+\begin{align*}
+	\vec{P} = \frac{1}{3}\begin{myvec}{9\\15}\end{myvec}
+\end{align*}
+\begin{align*}
+	\therefore	\vec{P} = \begin{myvec}{3\\5}\end{myvec}
+\end{align*}
+\end{frame}
 	
 	\begin{frame}[fragile]
 		\frametitle{C Code - Section formula function }
@@ -154,7 +166,14 @@ lib.divide_point.restype = None
 # Given points A and B
 x1, y1 = 1.0, 3.0  # Point A
 x2, y2 = 4.0, 6.0  # Point B
+	\end{lstlisting}
+\end{frame}
 
+\begin{frame}[fragile]
+		\frametitle{Python Code through shared output}
+\begin{lstlisting}
+		
+	
 # Hardcoded ratio m:n
 m, n = 2.0, 1.0
 
@@ -167,6 +186,11 @@ Px, Py = out[0], out[1]
 
 # Print the coordinates of P
 print(f"Coordinates of P dividing AB in {m}:{n} ratio: ({Px}, {Py})")
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Python Code through shared output}
+	\begin{lstlisting}
 
 # Plot A, B, and P
 plt.figure()
@@ -181,24 +205,23 @@ plt.ylabel("Y")
 plt.title(f"Point dividing AB in {m}:{n} ratio")
 plt.grid(True)
 plt.show()
-	\end{lstlisting}
+\end{lstlisting}	
 \end{frame}
 
 	\begin{frame}[fragile]
 	\frametitle{Python code : Direct }
 	
 	\begin{lstlisting}
-import sys                                          
-sys.path.insert(0, '/home/nipun-dasari/Matgeo/matgeo/codes/CoordGeo')       
+import sys                                                 
 import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 #local imports
-from line.funcs import *
-from triangle.funcs import *
-from conics.funcs import circ_gen
+from libs.line.funcs import *
+from libs.triangle.funcs import *
+from libs.conics.funcs import circ_gen
 
 
 
@@ -208,7 +231,12 @@ B = np.array(([4,6])).reshape(-1,1)
 
 #Ratio
 n=2/1
-
+	\end{lstlisting}
+\end{frame}
+	\begin{frame}[fragile]
+	\frametitle{Python code : Direct }
+	
+	\begin{lstlisting}
 #Point
 P= (A+n*B)/(1+n) # calculating the coordinate points of R which divides the join between the two points
 #print(R)
@@ -230,6 +258,12 @@ plt.annotate(f'{txt}\n({tri_coords[0,i]:.0f}, {tri_coords[1,i]:.0f})',
 textcoords="offset points", # how to position the text
 xytext=(20,-10), # distance from text to points (x,y)
 ha='center') # horizontal alignment can be left, right or center
+	\end{lstlisting}
+\end{frame}
+	\begin{frame}[fragile]
+	\frametitle{Python code : Direct }
+	
+	\begin{lstlisting}
 # use set_position
 ax = plt.gca()
 #ax.spines['top'].set_color('none')

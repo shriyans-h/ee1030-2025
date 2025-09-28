@@ -1,51 +1,55 @@
-import sys
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Add your workspace path (adjust if needed)
+import sys 
+import math
 sys.path.insert(0, '/home/ganachari-vishwmabhar/Downloads/codes/CoordGeo')
+import numpy as np
+import numpy.linalg as LA
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
-# Local imports
-from line.funcs import line_gen
+#local imports
+from line.funcs import *
+from triangle.funcs import *
 
-# Read intersection point from values.dat (skip first two rows if it has header)
-data = np.loadtxt("values.dat", skiprows=2)
-xc, yc = data[0], data[1]
-C = np.array([xc, yc]).reshape(-1, 1)
+#if using termux
+#import subprocess
+#import shlex
 
-# Given points
-A = np.array([-1, -4]).reshape(-1, 1)
-B = np.array([5, -6]).reshape(-1, 1)
+def problem(A, B, k):
+    return (1*A + k*B) / (k + 1)
 
-# Generate line AB using helper function
-x_AB = line_gen(A, B)
+A = np.array([5, -6]).reshape(-1, 1)
+B = np.array([-1, -4]).reshape(-1, 1)
 
-# ---- Plotting ----
-plt.plot(x_AB[0, :], x_AB[1, :], label='$AB$')
+k=5
 
-# Collect points
-tri_coords = np.block([A, B, C])
-plt.scatter(tri_coords[0, :], tri_coords[1, :])
+P = problem(A, B, k).reshape(-1,1)
 
-# Labels
-vert_labels = ['A(-1,-4)', 'B(5,-6)', f'C({xc:.2f},{yc:.2f})']
+x_AB = line_gen_num(A,B,20)
+plt.plot(x_AB[0,:],x_AB[1,:], 'g--', label="Line Segment AB")
+
+plot_coords = np.block([[A, B, P]])
+plt.scatter(plot_coords[0,:], plot_coords[1,:], color='blue')
+
+vert_labels = [
+    f'A({A[0,0]}, {A[1,0]})',
+    f'B({B[0,0]}, {B[1,0]})',
+    f'P({P[0,0]}, {P[1,0]:.2f})'
+]
 
 for i, txt in enumerate(vert_labels):
-    x, y = tri_coords[:, i]
-    plt.annotate(txt, (x, y),
-                 textcoords="offset points",
-                 xytext=(10, -10),
-                 ha='center')
+    plt.annotate(txt,
+            (plot_coords[0,i], plot_coords[1,i]),
+            textcoords="offset points",
+            xytext=(0,10),
+            ha='center')
 
-# Axes styling
-plt.axhline(0, color='black', linewidth=0.8)
-plt.axvline(0, color='black', linewidth=0.8)
-plt.grid(True)
+plt.xlabel('$x$')
+plt.ylabel('$y$')
+plt.title("Line Segment AB Divided by Y-axis")
+plt.legend(loc='best')
+plt.grid()
 plt.axis('equal')
-plt.legend()
-plt.title("Intersection of line AB with Y-axis")
 
-# Save & Show
-plt.savefig('../figs/fig1.png')
+plt.savefig("../figs/plot_p.png")
 plt.show()
 

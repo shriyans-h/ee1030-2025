@@ -1,97 +1,68 @@
-\let\negmedspace\undefined
-\let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-
-\usepackage{tfrupee} 
-
-\setlength{\headheight}{1cm} 
-\setlength{\headsep}{0mm}     
-
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb,amsfonts,amsthm}
 \usepackage{gvv-book}
 \usepackage{gvv}
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\graphicspath{{figs/}}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage{txfonts}
-\usepackage{listings}
-\usepackage{enumitem}
-\usepackage{mathtools}
-\usepackage{gensymb}
-\usepackage{comment}
-\usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
-\usepackage{listings}
-                                    
-\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}                                
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow}                                         
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
-\usepackage{lscape}
+\usepackage{hyperref}
 
 \begin{document}
 
-\bibliographystyle{IEEEtran}
-
 \title{1.5.13}
 \author{EE25BTECH11025 - Ganachari Vishwambhar}
-
-{\let\newpage\relax\maketitle}
-
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\setlength{\intextsep}{10pt}
-
-
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\renewcommand{\thetable}{\theenumi}
+\maketitle
 
 \textbf{Question}:\newline
 Find the ratio in which the $Y$ axis divides the line segment joining the points $\vec{A}\brak{-1,-4}$ and $\vec{B}\brak{5,-6}$. Also find the coordinates of the point of intersection.\\
 \textbf{Solution: }\\
 
-\input{tables/variables}\\
-
-Slope of line segment joining $\vec{A}$ and $\vec{B}$:\\
+Given points are:
 \begin{align}
-m=\frac{\brak{-6}-\brak{-4}}{5-\brak{-1}}\\
-m=\brak{\frac{-1}{3}}
+\vec{A}=\myvec{-1\\-4}
+\vec{B}=\myvec{5\\-6}
 \end{align}
 
-Equation of the line joining the points $\vec{A}$ and $\vec{B}$ is\\
+Let the line segment joining $\vec{A}$ and $\vec{B}$ intersect the X=0 at point $\vec{C}$. Let the ratio in which the X=0 divide the line segment $\vec{B}-\vec{A}$ be $m:1$:
 \begin{align}
-\brak{Y-\brak{-6}}=m\brak{X-5}\\
-X+3Y=-13
+\vec{C}=\myvec{0\\a}
 \end{align}
 
-Equation of $Y$-axis is $X=0$
-
-The point of intersection of the given line segment and the $Y$-axis is:\\
+Points $\vec{A}$, $\vec{B}$ and $\vec{C}$ are collinear, so vectors $\vec{B}-\vec{A}$ and $\vec{C}-\vec{A}$ are parallel.\\
+Collinearity leads to:
 \begin{align}
-\myvec{1&3\\1&0}\myvec{x\\y}=\myvec{-13\\0}\\
-\myvec{x\\y}=\myvec{0\\\brak{\frac{-13}{3}}}
+    rank\brak{\vec{B}-\vec{A},\vec{C}-\vec{A}}
+\end{align}
+Matrix setup:
+\begin{align}
+    \myvec{-6&-5\\2&a+6}\\
+    R_2 \rightarrow R_2 + \frac{1}{3}R_3\\
+\end{align}
+Echelon form:
+\begin{align}
+    \myvec{-6&-5\\0&a+\frac{13}{3}}
+\end{align}
+For rank = 1, the second row must be all zeroes:
+\begin{align}
+    a+\frac{13}{3}=0\\
+    a=\brak{\frac{-13}{3}}
 \end{align}
 
-Hence the coordinates of $\vec{C}$ are $\brak{0,\brak{\frac{-13}{3}}}$
-
-The ratio in which the $Y$-axis divides the given line segment is:\\
+Thus the coordinates of point $\vec{C}$:
 \begin{align}
-    {\frac{AC}{CB}}=\frac{1}{5}
+    \vec{C}=\myvec{0\\\frac{-13}{3}}
 \end{align}
+
+Finding $m$ by projecting $\vec{C}-\vec{A}$ onto the direction of $\vec{B}-\vec{A}$:
+\begin{align}
+    m=\frac{\myvec{5 & \frac{-5}{3}}\myvec{1 \\ \frac{-1}{3}}}{\norm{\myvec{1 \\ \frac{-1}{3}}}^2}=5
+\end{align}
+
+Thus, the ratio in which the point $\vec{C}$ divides the line segment $\vec{B}-\vec{A}$ is \textbf{5:1}. \\
+
 \begin{figure}[h!]
    \centering
    \includegraphics[width=0.7\linewidth]{figs/plot.png}
-   \caption{Plot of line segment \textbf{AB}}
+   \caption{Plot of line segment \textbf{B-A}}
    \label{}
 \end{figure}
 \end{document}  
