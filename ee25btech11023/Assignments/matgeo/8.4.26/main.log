@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  28 SEP 2025 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  28 SEP 2025 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1884,27 +1884,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [2]
-<figs/fig1.png, id=83, 1378.1889pt x 709.6914pt>
+<figs/fig1.png, id=83, 339.669pt x 334.6101pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
 Package pdftex.def Info: figs/fig1.png  used on input line 162.
-(pdftex.def)             Requested size: 356.90982pt x 183.78987pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(pdftex.def)             Requested size: 356.90982pt x 351.60626pt.
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3 <./figs/fig1.png>] (./main.aux)
+
+
+[3]
+
+[4 <./figs/fig1.png>] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54462 strings out of 475171
- 1289882 string characters out of 5767095
+ 54463 strings out of 475171
+ 1289888 string characters out of 5767095
  1897408 words of memory out of 5000000
  76596 multiletter control sequences out of 15000+600000
  624025 words of font info for 169 fonts, out of 8000000 for 9000
@@ -1916,10 +1923,10 @@ blic/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (3 pages, 108561 bytes).
+Output written on main.pdf (4 pages, 80804 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

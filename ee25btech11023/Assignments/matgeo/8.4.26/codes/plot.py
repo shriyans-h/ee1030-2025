@@ -22,7 +22,7 @@ ax.text(8 + 0.5, 8, '$y^2=4ax(a=2)$', fontsize=12, color='blue')
 ax.axvline(x=0, color='g', linestyle='--', label='Directrix of Locus (x=0)')
 
 ax.scatter(focus[0], focus[1], color='black', s=100, zorder=5, label='Focus')
-ax.text(focus[0] + 0.2, focus[1] + 0.2, 'F')
+ax.text(focus[0] + 0.2, focus[1] + 0.2, 'F(2,0)')
 
 ax.set_title('Locus of the Midpoint',fontsize=14)
 ax.set_xlabel('X-axis',fontsize=14)
