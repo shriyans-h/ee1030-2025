@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  28 AUG 2025 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  9 SEP 2025 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,14 +1470,17 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./b.aux)
+) (./b.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+)
 \openout1 = `b.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 86.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 86.
@@ -1976,7 +1979,7 @@ l.6 		plt.ylabel("y"
 [9
 
 ]
-<figs/fig.png, id=291, 433.62pt x 433.62pt>
+<figs/fig.png, id=292, 433.62pt x 433.62pt>
 File: figs/fig.png Graphic file (type png)
 <use figs/fig.png>
 Package pdftex.def Info: figs/fig.png  used on input line 225.
@@ -1994,6 +1997,24 @@ Overfull \vbox (13.85645pt too high) detected at line 225
 [10
 
  <./figs/fig.png>]
+<figs/Figure_2.png, id=321, 433.62pt x 433.62pt>
+File: figs/Figure_2.png Graphic file (type png)
+<use figs/Figure_2.png>
+Package pdftex.def Info: figs/Figure_2.png  used on input line 235.
+(pdftex.def)             Requested size: 205.37926pt x 205.38277pt.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 235.
+
+
+Overfull \vbox (13.85645pt too high) detected at line 235
+ []
+
+
+
+[11
+
+ <./figs/Figure_2.png>]
 \tf@nav=\write7
 \openout7 = `b.nav'.
 
@@ -2003,7 +2024,7 @@ Overfull \vbox (13.85645pt too high) detected at line 225
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250828165157 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250909142315 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2013,16 +2034,16 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `b.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59133 strings out of 473197
- 1434066 string characters out of 5718606
+ 59145 strings out of 473197
+ 1434300 string characters out of 5718606
  2485016 words of memory out of 5000000
- 81378 multiletter control sequences out of 15000+600000
+ 81388 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1169b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2033,10 +2054,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (10 pages, 206246 bytes).
+Output written on b.pdf (11 pages, 231876 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 21 named destinations out of 1000 (max. 500000)
- 84 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 406 PDF objects out of 1000 (max. 8388607)
+ 335 compressed objects within 4 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
