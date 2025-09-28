@@ -10,12 +10,12 @@
 \usepackage{adjustbox}
 \usepackage{array}
 \usepackage{tabularx}
-\usepackage{gvv}
+\usepackage{gvv} 
 \usepackage{lmodern}
 \usepackage{circuitikz}
 \usepackage{tikz}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{comment}
 
 \setbeamertemplate{page number in head/foot}[totalframenumber]
 
@@ -23,7 +23,7 @@
 \tcbuselibrary{minted,breakable,xparse,skins}
 
 \definecolor{bg}{gray}{0.95}
-\DeclareTCBListing{lstlisting}{O{}m!O{}}{%
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
 breakable=true,
 listing engine=minted,
 listing only,
