@@ -1,0 +1,266 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+	breakable=true,
+	listing engine=minted,
+	listing only,
+	minted language=#2,
+	minted style=default,
+	minted options={%
+		linenos,
+		gobble=0,
+		breaklines=true,
+		breakafter=,,
+		fontsize=\small,
+		numbersep=8pt,
+		#1},
+	boxsep=0pt,
+	left skip=0pt,
+	right skip=0pt,
+	left=25pt,
+	right=0pt,
+	top=3pt,
+	bottom=3pt,
+	arc=5pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	bottomrule=2pt,
+	toprule=2pt,
+	colback=bg,
+	colframe=orange!70,
+	enhanced,
+	overlay={%
+		\begin{tcbclipinterior}
+			\fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+	\end{tcbclipinterior}},
+	#3,
+}
+\lstset{
+	language=C,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	stringstyle=\color{orange},
+	commentstyle=\color{green!60!black},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	breaklines=true,
+	showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{2.8.19}
+\date{}
+%\subtitle{A short story}
+
+\author % (optional)
+{M Chanakya Srinivas- EE25BTECH11036}
+
+
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+
+
+
+
+\begin{frame}{Problem Statement}
+If 
+\[
+\vec{r} \cdot \vec{a} = 0, \quad 
+\vec{r} \cdot \vec{b} = 0, \quad 
+\vec{r} \cdot \vec{c} = 0
+\]
+for some non-zero vector $\vec{r}$, find
+\[
+\vec{a} \cdot (\vec{b} \times \vec{c}).
+\]
+\end{frame}
+
+\begin{frame}{Solution: Step 1 -- Orthogonality}
+From
+\begin{align}
+\vec{r} \cdot \vec{a} &= 0, \label{eq:1} \\
+\vec{r} \cdot \vec{b} &= 0, \label{eq:2} \\
+\vec{r} \cdot \vec{c} &= 0, \label{eq:3}
+\end{align}
+we see that $\vec{a}, \vec{b}, \vec{c}$ lie in the subspace orthogonal to $\vec{r}$:
+\begin{align}
+\vec{a}, \vec{b}, \vec{c} \in \text{span}\{\vec{r}\}^{\perp}. \label{eq:4}
+\end{align}
+\end{frame}
+
+\begin{frame}{Step 2 -- Dimension Argument}
+Since $\vec{r} \neq \vec{0}$, the orthogonal subspace has dimension at most 2:
+\begin{align}
+\dim(\text{span}\{\vec{r}\}^{\perp}) = 2. \label{eq:5}
+\end{align}
+
+Thus, any three vectors in this atmost 2D subspace are linearly dependent:
+\begin{align}
+\vec{c} = \lambda_1 \vec{a} + \lambda_2 \vec{b}, \quad \text{for some scalars } \lambda_1, \lambda_2. \label{eq:6}
+\end{align}
+\end{frame}
+
+\begin{frame}{Step 3 -- Scalar Triple Product}
+The scalar triple product of linearly dependent vectors is zero:
+\begin{align}
+\vec{a} \cdot (\vec{b} \times \vec{c})
+&= \det 
+\myvec{
+a_1 & a_2 & a_3 \\
+b_1 & b_2 & b_3 \\
+c_1 & c_2 & c_3
+} \label{eq:7} \\
+&= 0. \label{eq:8}
+\end{align}
+\end{frame}
+
+\begin{frame}{Final Answer}
+\[
+\boxed{\vec{a} \cdot (\vec{b} \times \vec{c}) = 0}
+\]
+
+\textbf{Reasoning:} The vectors lie in a plane perpendicular to $\vec{r}$ and are therefore linearly dependent, making the scalar triple product vanish.
+\end{frame}
+\begin{frame}[fragile]{C Code}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+
+double scalar_triple(double a[3], double b[3], double c[3]) {
+    return a[0]*(b[1]*c[2] - b[2]*c[1])
+         - a[1]*(b[0]*c[2] - b[2]*c[0])
+         + a[2]*(b[0]*c[1] - b[1]*c[0]);
+}
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python code through shared output}
+\begin{lstlisting}
+import ctypes
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+# Load the shared library
+lib = ctypes.CDLL("./libstp.so")
+lib.scalar_triple.restype = ctypes.c_double
+# Define vectors
+a = (ctypes.c_double * 3)(1, 0, 0)
+b = (ctypes.c_double * 3)(0, 1, 0)
+c = (ctypes.c_double * 3)(1, 1, 0)
+# Call the C function
+result = lib.scalar_triple(a, b, c)
+print("Scalar triple product =", result)
+# Convert to numpy arrays for plotting
+a_vec = np.array([a[0], a[1], a[2]])
+b_vec = np.array([b[0], b[1], b[2]])
+c_vec = np.array([c[0], c[1], c[2]])
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Python code through shared output}
+\begin{lstlisting}
+# Plot vectors in 3D
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+origin = np.array([0, 0, 0])
+ax.quiver(*origin, *a_vec, color='r', label='a')
+ax.quiver(*origin, *b_vec, color='g', label='b')
+ax.quiver(*origin, *c_vec, color='b', label='c')
+ax.set_xlim([0, 1.5])
+ax.set_ylim([0, 1.5])
+ax.set_zlim([0, 1.5])
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+ax.set_title(f"Scalar Triple Product = {result}")
+ax.legend()
+plt.show()
+   \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Only Python code}
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+# Define 3 coplanar vectors (lying in xy-plane)
+a = np.array([1, 1, 0])
+b = np.array([1, 0, 0])
+c = np.array([0, 1, 0])
+# Cross product b x c
+b_cross_c = np.cross(b, c)
+# Scalar triple product a . (b x c)
+scalar_triple = np.dot(a, b_cross_c)
+# Print the scalar triple product (should be 0)
+print(f"Scalar triple product: {scalar_triple:.2f}")
+# Plotting
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{Only Python code}
+\begin{lstlisting}
+# Plot origin
+origin = np.array([0, 0, 0])
+# Plot vectors
+ax.quiver(*origin, *a, color='r', label='Vector a', linewidth=2)
+ax.quiver(*origin, *b, color='g', label='Vector b', linewidth=2)
+ax.quiver(*origin, *c, color='b', label='Vector c', linewidth=2)
+# Plot b x c
+ax.quiver(*origin, *b_cross_c, color='orange', linestyle='dashed', label='b x c', linewidth=2)
+ax.set_xlim([0, 1.5])
+ax.set_ylim([0, 1.5])
+ax.set_zlim([0, 1.5])
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title(f'Scalar Triple Product = {scalar_triple:.2f}')
+ax.legend()
+ax.grid(True)
+plt.show()
+  \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{PLOTS}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig41.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{frame}
+\begin{frame}[fragile]{PLOTS}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig42.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{frame}
+\end{document}
