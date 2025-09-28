@@ -1,0 +1,50 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{gvv}
+
+\title{Question 4.8.36}
+\author{AI25BTECH11040 - Vivaan Parashar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Question: }
+Find the equation of the plane determined by the points $\vec{A}$(3, -1, 2), $\vec{B}$(5, 2, 4) and $\vec{C}$(-1, -1, 6). Also find the distance of the point $\vec{P}$(6, 5, 9) from the plane.
+
+\section{Solution: }
+A plane in 3D is represented by the equation $\vec{n}^\mathrm{T}\vec{x} = c$, where the vector $\vec{n}$ represents the normal to the plane.
+This vector $\vec{n}$ can be determined by using the cross-product of two vectors lying on the plane that aren't collinear, eg $\vec{A} - \vec{B}$ and $\vec{A} - \vec{C}$.
+\begin{align}
+    \therefore \vec{n} \equiv (\vec{A}-\vec{B})\times(\vec{A}-\vec{C})\\
+    \implies \vec{n} = \left[\myvec{3 \\ -1 \\ 2} - \myvec{5 \\ 2 \\ 4}\right] \times \left[\myvec{3 \\ -1 \\ 2} - \myvec{-1 \\ -1 \\ 6}\right]\\
+    \implies \vec{n} = \myvec{12 \\ -16 \\ 12} \equiv \myvec{3 \\ -4 \\ 3}
+\end{align}
+The constant $c$ can be determined by substituting any of the three points in the plane into the plane equation.
+\begin{align}
+    \therefore c = \vec{n}^\mathrm{T}\vec{x_A} = \myvec{3 & -4 & 3}\myvec{3 \\ -1 \\ 2} = 19
+\end{align}
+Thus, the equation of the plane is given by:
+\begin{align}
+    \myvec{3 & -4 & 3}\vec{x} = 19
+\end{align}
+The distance $d$ of the point $\vec{P}$ from the plane is given by:
+\begin{align}
+    d = \frac{|\vec{n}^\mathrm{T}\vec{x_P} - c|}{\|\vec{n}\|}\\
+    \implies d = \frac{|\myvec{3 & -4 & 3}\myvec{6 \\ 5 \\ 9} - 19|}{\sqrt{(3)^2 + (-4)^2 + (3)^2}}\\
+    \implies d = \frac{6}{\sqrt{34}}
+\end{align}
+
+\section{Plot: }
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/plot.png}
+    \caption{Graph of plane and points A, B, C and P}
+    \label{fig:4.2.3}
+\end{figure}
+
+
+\end{document}
