@@ -1,15 +1,16 @@
-\frametitle{Python and C Code}
+\frametitle{Python Code}
+    \begin{lstlisting}
+  plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.grid(True)
+plt.gca().set_aspect('equal', adjustable='box')
 
-\begin{lstlisting}
- import subprocess
+#  Legend moved to top-right corner
+plt.legend(loc="upper right")
 
-# Compile the C program
-subprocess.run(["gcc", "midpoint.c", "-o", "midpoint"])
-
-# Run the compiled C program
-result = subprocess.run(["./midpoint"], capture_output=True, text=True)
-
-# Print the output from the C program
-print(result.stdout)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Circle with Diameter AB and Center P")
+plt.savefig("fig1.png")
+plt.show()
 \end{lstlisting}
-
