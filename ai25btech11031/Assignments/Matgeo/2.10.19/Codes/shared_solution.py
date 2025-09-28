@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load shared library
-lib = ctypes.CDLL("./libvectorops.so")
+lib = ctypes.CDLL("./Solution.so")
 
 # Define function signatures
 lib.dot.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int)]
