@@ -123,17 +123,17 @@ By using \eqref{eq:equation}
 
 \begin{align}
 \myvec{\vec{a} \times\vec{d}} \times\myvec{\vec{b} \times\vec{c}}&=
-\sbrak{\vec{a}^\top \myvec{\vec{b} \times \vec{c}}} \vec{d} - \sbrak{\vec{d}^\top \myvec{\vec{b} \times \vec{c}}} \vec{a}\\
+\myvec{\vec{a}^\top \myvec{\vec{b} \times \vec{c}}} \vec{d} - \myvec{\vec{d}^\top \myvec{\vec{b} \times \vec{c}}} \vec{a}\\
 &=\sbrak{\vec{a} \ \vec{b} \ \vec{c}}\vec{d} - \sbrak{\vec{d} \ \vec{b} \ \vec{c}}\vec{a} \\
 &= \sbrak{\vec{a} \ \vec{b} \ \vec{c}}\vec{d} - \sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a}
 \end{align}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Adding equations (1), (2), and (3):
+On adding :
 \begin{align}
 & \myvec{\vec{a} \times\vec{b}} \times\myvec{\vec{c} \times\vec{d}} + \myvec{\vec{a} \times\vec{c}} \times\myvec{\vec{d} \times\vec{b}} + \myvec{\vec{a} \times\vec{d}} \times\myvec{\vec{b} \times\vec{c}}\\
-&= \sbrak{\vec{a} \ \vec{c} \ \vec{d}}\vec{b} - \sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a} \quad -\sbrak{\vec{a} \ \vec{b} \ \vec{d}}\vec{c} + \sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a} \quad +\sbrak{\vec{a} \ \vec{b} \ \vec{c}}\vec{d} - \sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a}\\
+&= \sbrak{\vec{a} \ \vec{c} \ \vec{d}}\vec{b}-\sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a}-\sbrak{\vec{a} \ \vec{b} \ \vec{d}}\vec{c}+\sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a}+\sbrak{\vec{a} \ \vec{b} \ \vec{c}}\vec{d}-\sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a}\\
 &= \sbrak{\vec{a} \ \vec{c} \ \vec{d}}\vec{b} - \sbrak{\vec{a} \ \vec{b} \ \vec{d}}\vec{c} + \sbrak{\vec{a} \ \vec{b} \ \vec{c}}\vec{d} - \sbrak{\vec{b} \ \vec{c} \ \vec{d}}\vec{a}
 \end{align}
 \end{frame}
@@ -219,12 +219,12 @@ void calculate_vector_quad_cross(
 
     // Calculate V3 x V4
     double v3xv4_x, v3xv4_y, v3xv4_z;
+    
     cross_product(v3x, v3y, v3z, v4x, v4y, v4z, &v3xv4_x, &v3xv4_y, &v3xv4_z);
 
     // Calculate (V1 x V2) x (V3 x V4)
     cross_product(v1xv2_x, v1xv2_y, v1xv2_z, v3xv4_x, v3xv4_y, v3xv4_z,
-                  term_rx, term_ry, term_rz);
-}
+    term_rx, term_ry, term_rz);
 \end{lstlisting}
 \end{frame}
 
