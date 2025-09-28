@@ -1,47 +1,42 @@
-\let\negmedspace\undefined
-\let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{algorithmic}
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{advdate}
 \usepackage{graphicx}
-\graphicspath{{./figs/}}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage{txfonts}
-\usepackage{listings}
+\graphicspath{{../figs/}}
+\usepackage{adjustbox}
+\usepackage{subcaption}
 \usepackage{enumitem}
-\usepackage{mathtools}
-\usepackage{gensymb}
-\usepackage{comment}
-\usepackage{caption}
-\usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
-\usepackage{listings}
-\usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}     
-\usepackage{xparse}
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow}
 \usepackage{multicol}
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
-\usepackage{lscape}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{float}
-%\newtheorem{theorem}{Theorem}[section]
-%\newtheorem{theorem}{Theorem}[section]
-%\newtheorem{problem}{Problem}
-%\newtheorem{proposition}{Proposition}[section]
-%\newtheorem{lemma}{Lemma}[section]
-%\newtheorem{corollary}[theorem]{Corollary}
-%\newtheorem{example}{Example}[section]
-%\newtheorem{definition}[problem]{Definition}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+\let\solution\relax
+\usepackage{gvv}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\numberwithin{equation}{section}
+
+
 
 \begin{document}
 
@@ -60,7 +55,7 @@ Find the equation of the plane through the intersection of the planes $\vec{r}\c
 \begin{table}[H]
 	\centering
 	\caption{}
-	\input{tables/table}
+	\input{../tables/table}
 	\label{}
 \end{table}
 \solution
@@ -99,18 +94,16 @@ Thus, the required planes are
 	\myvec{1\\-2\\-2}^\top\vec{x}=-3
 \end{align}
 
-Plot using C libraries:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{img1}
-	\caption*{}
+	\includegraphics[scale=0.25]{img1}
+	\caption*{Plot using C libraries}
 	\label{img1}
 \end{figure}
-Plot using Python:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{img2}
-	\caption*{}
+	\includegraphics[scale=0.25]{img2}
+	\caption*{Plot using Python}
 	\label{img2}
 \end{figure}
 \end{document}
