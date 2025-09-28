@@ -1,0 +1,338 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+	breakable=true,
+	listing engine=minted,
+	listing only,
+	minted language=#2,
+	minted style=default,
+	minted options={%
+		linenos,
+		gobble=0,
+		breaklines=true,
+		breakafter=,,
+		fontsize=\small,
+		numbersep=8pt,
+		#1},
+	boxsep=0pt,
+	left skip=0pt,
+	right skip=0pt,
+	left=25pt,
+	right=0pt,
+	top=3pt,
+	bottom=3pt,
+	arc=5pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	bottomrule=2pt,
+	toprule=2pt,
+	colback=bg,
+	colframe=orange!70,
+	enhanced,
+	overlay={%
+		\begin{tcbclipinterior}
+			\fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+	\end{tcbclipinterior}},
+	#3,
+}
+\lstset{
+	language=C,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	stringstyle=\color{orange},
+	commentstyle=\color{green!60!black},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	breaklines=true,
+	showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{1.9.30}
+\date{January 9, 2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{Nipun Dasari - EE25BTECH11042}
+
+
+
+\begin{document}
+	
+	\frame{\titlepage}
+	\begin{frame}{Question}
+	Solve the following system of rational equations
+	\begin{align}
+		\frac{10}{x+y}+\frac{2}{x-y} = 4
+	\end{align}
+	\begin{align}
+		\frac{15}{x+y}-\frac{5}{x-y} = -2
+	\end{align}
+	
+	\end{frame}
+	
+	
+	\begin{frame}{Theoretical Solution}
+		Introduce $a$ and $b$ as follows:
+	\begin{align}
+		a = \frac{1}{x+y} \text{  } b = \frac{1}{x-y}
+	\end{align}
+	Also define
+	\begin{align}
+		\vec{a} = \begin{myvec}{a\\b} \end{myvec}
+	\end{align}
+	This gives us simplified equations
+	\begin{align}
+		\begin{myvec}{10 & 2} \end{myvec}\vec{a} = 4
+	\end{align}
+	
+	\begin{align}
+		\begin{myvec}{15 & -5} \end{myvec}\vec{a} = -2
+	\end{align}
+	
+	
+	Augmented matrix for the given system is
+	\begin{align}
+		\augvec{2}{1}{10&2&4\\15&-5&-2}
+	\end{align}
+	\end{frame}
+	\begin{frame}{Theoretical Solution}
+		By row reductions
+		\begin{align}
+			
+			\augvec{2}{1}{10&2&4\\15&-5&-2}
+			\xleftrightarrow{\,R_2 \gets R_2- \frac{3}{2} \times R_1}
+			\augvec{2}{1}{10&2&4\\0&-8&-8}  
+			\xleftrightarrow{\,R_1 \gets R_1+\frac{1}{4} \times R_2}
+			\augvec{2}{1}{10&0&2\\0&-8&-8}\\
+			\augvec{2}{1}{10&0&2\\0&-8&-8}
+			\xleftrightarrow{\,R_1 \gets \frac{1}{10} \times R_1}
+			\augvec{2}{1}{1&0&\frac{1}{5}\\0&-8&-8}
+			\xleftrightarrow{\,R_2 \gets \frac{1}{-8} \times R_2}
+			\augvec{2}{1}{1&0&\frac{1}{5}\\0&1&1}
+		\end{align}
+		\begin{align}
+			\vec{a} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
+		\end{align}
+		Substituting value of a and b again we get
+		\begin{align}
+			\begin{myvec}{\frac{1}{x+y} \\ \frac{1}{x-y}} \end{myvec} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
+		\end{align}
+	\end{frame}
+		\begin{frame}{Theoretical Solution}
+		\begin{align}
+			\implies \begin{myvec}{x+y \\ x-y} \end{myvec} = \begin{myvec}{5\\1} \end{myvec}
+		\end{align}
+		Introduce	
+		\begin{align}
+			\vec{x} = \begin{myvec}{x\\y} \end{myvec}
+		\end{align}
+		This gives us the equation
+		\begin{align}
+			\begin{myvec}{1&1 \\ 1&-1} \end{myvec}\vec{x} = \begin{myvec}{5\\1} \end{myvec}
+		\end{align}
+		
+		\begin{align}
+			\implies \vec{x} = 	\begin{myvec}{5\\1} \end{myvec}\begin{myvec}{1&1 \\ 1&-1} \end{myvec}^{-1}
+		\end{align}
+	\end{frame}
+		\begin{frame}{Theoretical Solution}
+		\begin{align}
+			\implies \vec{x} = 	\begin{myvec}{5\\1} \end{myvec}\begin{myvec}{\frac{1}{2}&\frac{1}{2} \\ \frac{1}{2}&-\frac{1}{2}} \end{myvec}
+		\end{align}
+		\begin{align}
+			\implies \vec{x} = 	\begin{myvec}{\frac{5}{2}+\frac{1}{2} \\ \frac{5}{2}-\frac{1}{2}} \end{myvec}
+		\end{align}
+		\begin{align}
+			\implies \vec{x} = 	\begin{myvec}{3 \\ 2} \end{myvec}
+		\end{align}
+		Thus $x=3$ and $y=2$
+		
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{C Code- equidistant check function }
+		
+		\begin{lstlisting}
+			#include <stdio.h>
+			
+			void rref_solver(double aug[2][3], double solution[2]) {
+				// Normalize first row (pivot = aug[0][0])
+				double pivot = aug[0][0];
+				for (int j = 0; j < 3; j++) {
+					aug[0][j] /= pivot;
+				}
+				
+				// Eliminate below pivot
+				double factor = aug[1][0];
+				for (int j = 0; j < 3; j++) {
+					aug[1][j] -= factor * aug[0][j];
+				}
+		\end{lstlisting}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{C Code- equidistant check function }
+		
+		\begin{lstlisting}
+			 pivot = aug[1][1];
+			for (int j = 0; j < 3; j++) {
+				aug[1][j] /= pivot;
+			}
+			
+			// Eliminate above pivot
+			factor = aug[0][1];
+			for (int j = 0; j < 3; j++) {
+				aug[0][j] -= factor * aug[1][j];
+			}
+			
+			// Extract solution
+			solution[0] = aug[0][2]; // x
+			solution[1] = aug[1][2]; // y
+			
+		\end{lstlisting}
+	\end{frame}
+
+	
+	\begin{frame}[fragile]
+		\frametitle{Python Code using shared output}
+		\begin{lstlisting}
+			import ctypes
+			import numpy as np
+			import matplotlib.pyplot as plt
+			import matplotlib as mp
+			# Load the shared C library
+			lib = ctypes.CDLL("./5.2.44.so")
+			# Define argument and return types
+			lib.rref_solver.argtypes = [ctypes.c_double * 6, ctypes.c_double * 2]
+			# Create augmented matrix for system:
+			aug = (ctypes.c_double * 6)(1, 1, 5,   1, -1, 1)  # Flattened 2x3
+			solution = (ctypes.c_double * 2)()
+		\end{lstlisting}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Python Code using shared output}
+		\begin{lstlisting}		
+			# Call C function
+			lib.rref_solver(aug, solution)
+			# Convert result to numpy vector (ensure flat)
+			x_sol = np.array([solution[0], solution[1]], dtype=float).flatten()
+			print("Solution vector from C:", x_sol) # This correctly prints [3. 2.]
+			# plot
+			x_vals = np.linspace(-2, 10, 400)
+			y1 = 5 - x_vals         # Correct for x + y = 5
+			y2 = x_vals - 1         # CORRECTED for x - y = 1
+			plt.plot(x_vals, y1, label=r"$x+y=5$")
+			plt.plot(x_vals, y2, label=r"$x-y=1$")
+			plt.scatter(x_sol[0], x_sol[1], color="red", zorder=5)
+			plt.text(float(x_sol[0])+0.2, float(x_sol[1]), f"({x_sol[0]:.1f}, {x_sol[1]:.1f})", color="red")
+		\end{lstlisting}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Python Code using shared output}
+		\begin{lstlisting}
+		plt.plot(x_vals, y1, label=r"$x+y=5$")
+		plt.plot(x_vals, y2, label=r"$x-y=1$")
+		plt.scatter(x_sol[0], x_sol[1], color="red", zorder=5)
+		plt.text(float(x_sol[0])+0.2, float(x_sol[1]), f"({x_sol[0]:.1f}, {x_sol[1]:.1f})", color="red")
+		plt.xlabel("x")
+		plt.ylabel("y")
+		plt.title("Graphical Solution of the Linear System")
+		plt.axhline(0, color="black", linewidth=0.8)
+		plt.axvline(0, color="black", linewidth=0.8)
+		plt.legend()
+		plt.grid(True)
+		plt.savefig("Figure_1_Corrected.png")
+		plt.show()
+		\end{lstlisting}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Python Code}
+	\begin{lstlisting}
+	import numpy as np
+	import matplotlib.pyplot as plt
+	import matplotlib as mp
+	mp.use("TkAgg")
+	A=np.array([[1,1],[1,-1]],dtype=float)
+	b=np.array([5,1], dtype=float)
+	x=np.linalg.solve(A,b)
+	print("Solution vector for the system of equations:",x)
+	\end{lstlisting}
+	
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Python Code}
+	\begin{lstlisting}
+		# Making a plot
+		x_vals = np.linspace(-2, 10, 400)
+		# Rearranged equations to express y in terms of x
+		y1 = (5 - x_vals)        # from x + 3y = 6
+		y2 = (x_vals-1)    # from 2x - 3y = 12
+		# Plot lines
+		plt.plot(x_vals, y1, label=r"$x + y = 5$")
+		plt.plot(x_vals, y2, label=r"$x - y = 1$")
+		# Mark solution
+		plt.scatter(x[0], x[1], color="red", zorder=5)
+		plt.text(x[0]+0.2, x[1], f"({x[0]:.1f}, {x[1]:.1f})", color="red")
+	\end{lstlisting}
+	
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Python Code}
+	\begin{lstlisting}
+		# Formatting
+		plt.xlabel("x")
+		plt.ylabel("y")
+		plt.title("Graphical Solution of the Linear System")
+		plt.axhline(0, color='black', linewidth=0.8)
+		plt.axvline(0, color='black', linewidth=0.8)
+		plt.legend()
+		plt.grid(True)
+		plt.savefig("Figure_2")
+		plt.show()
+	\end{lstlisting}
+	
+\end{frame}
+
+	
+	\begin{frame}{Plot by python using shared output from c}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\columnwidth]{figs/Figure_1.png}
+			\caption*{}
+			\label{fig1}
+		\end{figure}
+	\end{frame}
+	\begin{frame}{Plot by python}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width = 0.8\columnwidth]{figs/Figure_2.png}
+			\caption*{}
+			\label{fig2}
+		\end{figure}
+	\end{frame}
+\end{document}

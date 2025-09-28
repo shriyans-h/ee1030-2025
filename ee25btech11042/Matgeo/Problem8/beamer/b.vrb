@@ -1,0 +1,14 @@
+\frametitle{Python Code}
+	\begin{lstlisting}
+		# Formatting
+		plt.xlabel("x")
+		plt.ylabel("y")
+		plt.title("Graphical Solution of the Linear System")
+		plt.axhline(0, color='black', linewidth=0.8)
+		plt.axvline(0, color='black', linewidth=0.8)
+		plt.legend()
+		plt.grid(True)
+		plt.savefig("Figure_2")
+		plt.show()
+	\end{lstlisting}
+	

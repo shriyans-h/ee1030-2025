@@ -1,0 +1,155 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                    
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                            
+\usepackage{multirow}                                         
+\usepackage{hhline}                                          
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+
+\begin{document}
+	
+	\bibliographystyle{IEEEtran}
+	\vspace{3cm}
+	
+	\title{5.2.44}
+	\author{EE25BTECH11042 - Nipun Dasari}
+	\maketitle
+	
+	\renewcommand{\thefigure}{\theenumi}
+	\renewcommand{\thetable}{\theenumi}
+	\setlength{\intextsep}{10pt} % Space between text and floats
+	
+	
+	\numberwithin{equation}{enumi}
+	\numberwithin{figure}{enumi}
+	\renewcommand{\thetable}{\theenumi}
+	
+	\textbf{Question}:\\
+	Solve the following system of rational equations
+	\begin{align}
+		\frac{10}{x+y}+\frac{2}{x-y} = 4
+	\end{align}
+	\begin{align}
+		\frac{15}{x+y}-\frac{5}{x-y} = -2
+	\end{align}
+	
+	
+	\solution \\
+	Introduce $a$ and $b$ as follows:
+	\begin{align}
+		a = \frac{1}{x+y} \text{  } b = \frac{1}{x-y}
+	\end{align}
+	Also define
+	\begin{align}
+		\vec{a} = \begin{myvec}{a\\b} \end{myvec}
+	\end{align}
+	This gives us simplified equations
+	\begin{align}
+		\begin{myvec}{10 & 2} \end{myvec}\vec{a} = 4
+	\end{align}
+	
+	\begin{align}
+		\begin{myvec}{15 & -5} \end{myvec}\vec{a} = -2
+	\end{align}
+	
+
+	Augmented matrix for the given system is
+	\begin{align}
+			\augvec{2}{1}{10&2&4\\15&-5&-2}
+	\end{align}
+	By row reductions
+	\begin{align}
+		
+				\augvec{2}{1}{10&2&4\\15&-5&-2}
+			\xleftrightarrow{\,R_2 \gets R_2- \frac{3}{2} \times R_1}
+			\augvec{2}{1}{10&2&4\\0&-8&-8}  
+			\xleftrightarrow{\,R_1 \gets R_1+\frac{1}{4} \times R_2}
+			\augvec{2}{1}{10&0&2\\0&-8&-8}\\
+			\augvec{2}{1}{10&0&2\\0&-8&-8}
+			\xleftrightarrow{\,R_1 \gets \frac{1}{10} \times R_1}
+			\augvec{2}{1}{1&0&\frac{1}{5}\\0&-8&-8}
+			\xleftrightarrow{\,R_2 \gets \frac{1}{-8} \times R_2}
+			\augvec{2}{1}{1&0&\frac{1}{5}\\0&1&1}
+	\end{align}
+	\begin{align}
+		\vec{a} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
+	\end{align}
+	Substituting value of a and b again we get
+	\begin{align}
+		\begin{myvec}{\frac{1}{x+y} \\ \frac{1}{x-y}} \end{myvec} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
+	\end{align}
+	
+	\begin{align}
+		\implies \begin{myvec}{x+y \\ x-y} \end{myvec} = \begin{myvec}{5\\1} \end{myvec}
+	\end{align}
+	Introduce	
+	\begin{align}
+		\vec{x} = \begin{myvec}{x\\y} \end{myvec}
+	\end{align}
+	This gives us the equation
+	\begin{align}
+		\begin{myvec}{1&1 \\ 1&-1} \end{myvec}\vec{x} = \begin{myvec}{5\\1} \end{myvec}
+	\end{align}
+	
+	\begin{align}
+		\implies \vec{x} = 	\begin{myvec}{5\\1} \end{myvec}\begin{myvec}{1&1 \\ 1&-1} \end{myvec}^{-1}
+	\end{align}
+	\begin{align}
+		\implies \vec{x} = 	\begin{myvec}{5\\1} \end{myvec}\begin{myvec}{\frac{1}{2}&\frac{1}{2} \\ \frac{1}{2}&-\frac{1}{2}} \end{myvec}
+	\end{align}
+	\begin{align}
+		\implies \vec{x} = 	\begin{myvec}{\frac{5}{2}+\frac{1}{2} \\ \frac{5}{2}-\frac{1}{2}} \end{myvec}
+	\end{align}
+	\begin{align}
+		\implies \vec{x} = 	\begin{myvec}{3 \\ 2} \end{myvec}
+	\end{align}
+	Thus $x=3$ and $y=2$
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.8\columnwidth]{figs/Figure_1.png}
+		\caption*{}
+		\label{fig1}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.8\columnwidth]{figs/Figure_2.png}
+		\caption*{}
+		\label{fig2}
+	\end{figure}
+	
+	
+\end{document}
