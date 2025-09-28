@@ -1,0 +1,18 @@
+\frametitle{Python Code for Plotting}
+\begin{lstlisting}[language=Python]
+parabola_locus = all_data[2 + num_points*2 :].reshape((num_points, 2))
+fig, ax = plt.subplots(figsize=(10, 8))
+
+ax.plot(parabola_orig[:, 0], parabola_orig[:, 1], 'b-', label='$y^2=4ax$')
+ax.plot(parabola_locus[:, 0], parabola_locus[:, 1], 'r-', label='Locus Parabola')
+ax.text(8 + 0.5, 8, '$y^2=4ax$', fontsize=12, color='blue')
+ax.axvline(x=0, color='g', linestyle='--', label='Directrix of Locus (x=0)')
+
+ax.scatter(focus[0], focus[1], color='black', s=100, zorder=5, label='Focus')
+ax.text(focus[0] + 0.2, focus[1] + 0.2, 'F')
+ax.set_title('Locus of the Midpoint')
+ax.set_xlabel('X-axis');ax.set_ylabel('Y-axis')
+ax.grid(True);ax.axis('equal');ax.legend()
+plt.show()
+
+\end{lstlisting}
