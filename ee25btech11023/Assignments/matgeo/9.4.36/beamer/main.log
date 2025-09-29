@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1731,7 +1731,7 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 [4
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Overfull \vbox (0.52324pt too high) detected at line 133
+Overfull \vbox (44.4716pt too high) detected at line 135
  []
 
 
@@ -1740,13 +1740,13 @@ Overfull \vbox (0.52324pt too high) detected at line 133
 
 ]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 156.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 158.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 156.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 158.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 156.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 158.
 
 
 
@@ -1787,7 +1787,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Outline0.2})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \section{C Code}
+l.211 \section{C Code}
                       
 \openout4 = `main.vrb'.
 
@@ -1804,7 +1804,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (6.19333pt too high) detected at line 234
+Overfull \vbox (6.19333pt too high) detected at line 236
  []
 
 
@@ -1816,7 +1816,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Outline0.3})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 \section{Python Code}
+l.238 \section{Python Code}
                            
 \openout4 = `main.vrb'.
 
@@ -1834,7 +1834,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (6.19333pt too high) detected at line 282
+Overfull \vbox (6.19333pt too high) detected at line 284
  []
 
 
@@ -1886,7 +1886,7 @@ l.15 ...{B}}$\n({pointB[0]:.0f}, {pointB[1]:.0f})"
                                                   
 ? 
 )
-Overfull \vbox (6.19333pt too high) detected at line 306
+Overfull \vbox (6.19333pt too high) detected at line 308
  []
 
 
@@ -1951,7 +1951,7 @@ l.5 ax.set_xlabel("x"
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250929152225 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250929152650 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1979,7 +1979,7 @@ public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (15 pages, 257903 bytes).
+Output written on main.pdf (15 pages, 258011 bytes).
 PDF statistics:
  543 PDF objects out of 1000 (max. 8388607)
  486 compressed objects within 5 object streams
