@@ -48,13 +48,13 @@ def plot_line_with_intercepts(mid_x, mid_y):
     plt.axis('equal')
     plt.xlim(min(0, a, mid_x) - 2, max(0, a, mid_x) + 2)
     plt.ylim(min(0, b, mid_y) - 2, max(0, b, mid_y) + 2)
-    plt.savefig("line_intercept_midpoint.png")
+    plt.savefig("fig2.png")
     plt.show()
 
     print(f"The x-intercept is ({a}, 0)")
     print(f"The y-intercept is (0, {b})")
     print(f"The equation of the line is x/{a} + y/{b} = 1")
-    print("Figure saved as line_intercept_midpoint.png")
+    print("Figure saved as fig2.png")
 
 # Given midpoint coordinates
 mid_x_coord = 3
