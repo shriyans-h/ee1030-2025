@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  22 SEP 2025 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  27 SEP 2025 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1942,102 +1942,99 @@ No file main.nav.
 sers/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
 ]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-2.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-92.
+94.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-92.
+94.
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 92.
+(Font)              <10.95> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 92.
+(Font)              <8> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 92.
+(Font)              <6> on input line 94.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
-2.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya
 .fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
-2.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb
 .fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
-2.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr
 .fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
-2.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia
 .fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
-2.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc
 .fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 94.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 94.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 94.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 94.
  [2
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
-thit.enc}{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-mathsy.enc}] (tables/table.tex)
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \end{frame}
-                 
-? 
-[3
+thsy.enc}] (Tables/table.tex) [3
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
-thex.enc}]
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+thex.enc}] [4
 
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+]
+Overfull \vbox (6.544pt too high) detected at line 126
+ []
 
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
+[5
 
- [4
+]
+Overfull \vbox (2.75786pt too high) detected at line 143
+ []
 
-] [5
+[6
 
-] [6
+{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
+thit.enc}] [7
+
+] [8
 
 ]
 \openout4 = `main.vrb'.
@@ -2048,27 +2045,16 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
-
-{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm
-tt.enc}]
-\openout4 = `main.vrb'.
-
- (main.vrb
+)
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-10.
-
+7.
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [8
+)) [9
 
-{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts
-1.enc}]
-\openout4 = `main.vrb'.
-
- (main.vrb) [9
-
-]
+{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm
+tt.enc}{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
  (main.vrb) [10
@@ -2086,18 +2072,88 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
-
-(main.vrb) [13
+ (main.vrb)
+[13
 
 ]
-<line.jpg, id=399, 1084.05pt x 784.9325pt>
-File: line.jpg Graphic file (type jpg)
-<use line.jpg>
-Package pdftex.def Info: line.jpg  used on input line 262.
-(pdftex.def)             Requested size: 256.72147pt x 185.88443pt.
- [14
+\openout4 = `main.vrb'.
 
- <./line.jpg>]
+ (main.vrb) [14
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [15
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [16
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [17
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [18
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [19
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [20
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [21
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [22
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [23
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [24
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [25
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [26
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [27
+
+]
+<graph.png, id=792, 919.18407pt x 679.78969pt>
+File: graph.png Graphic file (type png)
+<use graph.png>
+Package pdftex.def Info: graph.png  used on input line 443.
+(pdftex.def)             Requested size: 256.72147pt x 189.86267pt.
+ [28
+
+ <./graph.png>]
 \tf@nav=\write7
 \openout7 = `main.nav'.
 
@@ -2126,13 +2182,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59412 strings out of 474486
- 1460671 string characters out of 5739471
- 2474082 words of memory out of 5000000
- 80675 multiletter control sequences out of 15000+600000
+ 59669 strings out of 474486
+ 1463811 string characters out of 5739471
+ 2543082 words of memory out of 5000000
+ 80880 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1174b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1174b,1520s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmex10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmmi10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/font
@@ -2142,12 +2198,13 @@ ograms/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Madhuri beeram/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Madhuri beer
 am/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Ma
 dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
-/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt1
-0.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/txfonts/txsya.pfb>
-Output written on main.pdf (14 pages, 386865 bytes).
+/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
+.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmtt10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/txfonts/txsya.pfb>
+Output written on main.pdf (28 pages, 755992 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 890 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

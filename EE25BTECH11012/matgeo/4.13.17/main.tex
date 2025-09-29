@@ -36,12 +36,13 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
+\usepackage{multicol}
 \begin{document}
 
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{4.5.14}
+\title{4.13.17}
 \author{EE25BTECH11012-BEERAM MADHURI}
 % \maketitle
 % \newpage
@@ -59,47 +60,58 @@
 
 
 \textbf{Question}:\\
- Find the equation of the line through the point $(5, 2, -4)$ and which is parallel to the vector $3\hat{i} + 2\hat{j} - 8\hat{k}$.
-
-\textbf{Solution}:\\
+Three distinct points $A$, $B$ and $C$ are given in the 2-dimensional coordinate plane such that the ratio of the distance of any one of them from the point $(1,0)$ to the distance from the point $(-1,0)$ is equal to $\frac{1}{3}$. Then the circumcentre of the triangle $ABC$ is at the point:
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\left(\frac{5}{4}, 0\right)$
+\item $\left(\frac{5}{2}, 0\right)$
+\item $\left(\frac{5}{3}, 0\right)$
+\item $(0, 0)$
+\end{multicols}
+\end{enumerate}
+\textbf{Solution:}
+let $\vec{F_1}$, $\vec{F_2}$ be the vectors such that:
 \begin{table}[h!]
     \centering
-    \input{tables/table}
-    \caption{4.5.14}
-    \label{table 4.5.14}
+    \input{tables/tables}
+    \caption{Variables used}
+    \label{table 1.9.1}
 \end{table}\\
-\text If the direction vector of the line is $\vec{A}$ and is passing through $\vec{B}$ then, \\
-Equation of the line is: $\vec{X}$ = $\vec{B}$ + $\lambda$ $\vec{A}$\\
-Given,
+  Let P $\myvec{x\\y}$ be any point in the plane of A,B,C.\\
+  given,
 \begin{align}
-\text{The line is parallel to the vector}
-\begin{pmatrix}3 \\2 \\-8\end{pmatrix}
+\frac{\| PF_1 \|}{\| PF_2 \|} = \frac{1}{3}\\
+\frac{\sqrt{(P-F_1)^T (P-F_1)}}{\sqrt{(P-F_2)^T (P-F_2)}} = \frac{1}{3}
 \end{align}
+By Substituting Values and Simplifying:
 \begin{align}
-\therefore \text{Direction vector is: } \lambda\begin{pmatrix}
-3 \\
-2 \\
--8
-\end{pmatrix}
+2x^2 + 2y^2 - 5x + 2 = 0\\
+\left\lVert
+\begin{pmatrix} x \\ y \end{pmatrix}
+-
+\begin{pmatrix} \tfrac{5}{4} \\ 0 \end{pmatrix}
+\right\lVert
+= \sqrt{\tfrac{21}{4}}
 \end{align}
-
-Equation of the line :-
+On comparing the equation with general form:-
 \begin{align}
-\vec{x} = \begin{pmatrix}5 \\2 \\-4\end{pmatrix} + \lambda \begin{pmatrix}3 \\2 \\-8\end{pmatrix}
+||P - C|| = r\\
+\text{
+where ,}
+\text{
+P = any point on the circle}\\
+\text{C = Center of circle}\\
+\text{
+r = radius of circle}\\
+\text{
+Center of circle =  } (\frac{5}{4}, 0)
 \end{align}
-\text{Where,}
-\begin{align}
-\vec{x}= \begin{pmatrix}\vec{x} \\\vec{y} \\\vec{z}\end{pmatrix}
-\end{align}
-Hence, Equation of the line passing through $\begin{pmatrix}5 \\2 \\-4\end{pmatrix}$ and Parallel to $\begin{pmatrix}3 \\2 \\-8\end{pmatrix}$ is:\\
-\begin{align*}
-\vec{x} = \begin{pmatrix}5 \\2 \\-4\end{pmatrix} + \lambda \begin{pmatrix}3 \\2 \\-8\end{pmatrix}
-\end{align*}
-
+Hence, the circumcenter of the triangle is $(\frac{5}{4}, 0)$
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\columnwidth]{figs/line.jpg}
-    \caption{}
-    \label{fig:LINE}
+    \includegraphics[width=0.85\columnwidth]{figs/graph9.png}
+    \caption{4.13.17}
+    \label{fig:placeholder}
 \end{figure}
+
 \end{document}

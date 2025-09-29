@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  22 SEP 2025 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  28 SEP 2025 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1533,6 +1533,77 @@ gfcircvoltage.tex
 gfcirccurrent.tex)
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\p
 gfcircflow.tex))
+(C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol
+.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count369
+\mult@box=\box94
+\multicol@leftmargin=\dimen375
+\c@unbalance=\count370
+\c@collectmore=\count371
+\doublecol@number=\count372
+\multicoltolerance=\count373
+\multicolpretolerance=\count374
+\full@width=\dimen376
+\page@free=\dimen377
+\premulticols=\dimen378
+\postmulticols=\dimen379
+\multicolsep=\skip68
+\multicolbaselineskip=\skip69
+\partial@page=\box95
+\last@line=\box96
+\mc@boxedresult=\box97
+\maxbalancingoverflow=\dimen380
+\mult@rightbox=\box98
+\mult@grightbox=\box99
+\mult@firstbox=\box100
+\mult@gfirstbox=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\c@minrows=\count375
+\c@columnbadness=\count376
+\c@finalcolumnbadness=\count377
+\last@try=\dimen381
+\multicolovershoot=\dimen382
+\multicolundershoot=\dimen383
+\mult@nat@firstbox=\box138
+\colbreak@box=\box139
+\mc@col@check@num=\count378
+)
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcol
 orbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
@@ -1552,19 +1623,19 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 mspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box94
-\tcb@upperbox=\box95
-\tcb@lowerbox=\box96
-\tcb@phantombox=\box97
-\c@tcbbreakpart=\count369
-\c@tcblayer=\count370
-\c@tcolorbox@number=\count371
-\l__tcobox_tmpa_box=\box98
-\l__tcobox_tmpa_dim=\dimen375
-\tcb@temp=\box99
-\tcb@temp=\box100
-\tcb@temp=\box101
-\tcb@temp=\box102
+\tcb@titlebox=\box140
+\tcb@upperbox=\box141
+\tcb@lowerbox=\box142
+\tcb@phantombox=\box143
+\c@tcbbreakpart=\count379
+\c@tcblayer=\count380
+\c@tcolorbox@number=\count381
+\l__tcobox_tmpa_box=\box144
+\l__tcobox_tmpa_dim=\dimen384
+\tcb@temp=\box145
+\tcb@temp=\box146
+\tcb@temp=\box147
+\tcb@temp=\box148
 )
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbm
 inted.code.tex
@@ -1590,11 +1661,11 @@ rb
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancy
 vrb.sty
 Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count372
+\FV@CodeLineNo=\count382
 \FV@InFile=\read4
-\FV@TabBox=\box103
-\c@FancyVerbLine=\count373
-\FV@StepNumber=\count374
+\FV@TabBox=\box149
+\c@FancyVerbLine=\count383
+\FV@StepNumber=\count384
 \FV@OutFile=\write5
 )
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquot
@@ -1609,48 +1680,48 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.
 sty
 Package: lineno 2025/05/13 line numbers on paragraphs v5.5
-\linenopenalty=\count375
+\linenopenalty=\count385
 \output=\toks58
-\linenoprevgraf=\count376
-\linenumbersep=\dimen376
-\linenumberwidth=\dimen377
-\c@linenumber=\count377
-\c@pagewiselinenumber=\count378
-\c@LN@truepage=\count379
-\c@internallinenumber=\count380
-\c@internallinenumbers=\count381
-\quotelinenumbersep=\dimen378
-\bframerule=\dimen379
-\bframesep=\dimen380
-\bframebox=\box104
-\@LN@amsmath@ams@eqpen=\count382
+\linenoprevgraf=\count386
+\linenumbersep=\dimen385
+\linenumberwidth=\dimen386
+\c@linenumber=\count387
+\c@pagewiselinenumber=\count388
+\c@LN@truepage=\count389
+\c@internallinenumber=\count390
+\c@internallinenumbers=\count391
+\quotelinenumbersep=\dimen387
+\bframerule=\dimen388
+\bframesep=\dimen389
+\bframebox=\box150
+\@LN@amsmath@ams@eqpen=\count392
 )
-\c@FancyVerbWriteLine=\count383
-\c@FancyVerbBufferLine=\count384
-\c@FV@TrueTabGroupLevel=\count385
-\c@FV@TrueTabCounter=\count386
-\FV@TabBox@Group=\box105
-\FV@bgcolorstructbox=\box106
-\FV@TmpLength=\skip68
-\c@FV@HighlightLinesStart=\count387
-\c@FV@HighlightLinesStop=\count388
-\FV@LoopCount=\count389
-\FV@NCharsBox=\box107
-\FV@BreakIndent=\dimen381
-\FV@BreakIndentNChars=\count390
-\FV@BreakSymbolSepLeft=\dimen382
-\FV@BreakSymbolSepLeftNChars=\count391
-\FV@BreakSymbolSepRight=\dimen383
-\FV@BreakSymbolSepRightNChars=\count392
-\FV@BreakSymbolIndentLeft=\dimen384
-\FV@BreakSymbolIndentLeftNChars=\count393
-\FV@BreakSymbolIndentRight=\dimen385
-\FV@BreakSymbolIndentRightNChars=\count394
-\c@FancyVerbLineBreakLast=\count395
-\FV@LineBox=\box108
-\FV@LineIndentBox=\box109
-\c@FV@BreakBufferDepth=\count396
-\FV@LineWidth=\dimen386
+\c@FancyVerbWriteLine=\count393
+\c@FancyVerbBufferLine=\count394
+\c@FV@TrueTabGroupLevel=\count395
+\c@FV@TrueTabCounter=\count396
+\FV@TabBox@Group=\box151
+\FV@bgcolorstructbox=\box152
+\FV@TmpLength=\skip70
+\c@FV@HighlightLinesStart=\count397
+\c@FV@HighlightLinesStop=\count398
+\FV@LoopCount=\count399
+\FV@NCharsBox=\box153
+\FV@BreakIndent=\dimen390
+\FV@BreakIndentNChars=\count400
+\FV@BreakSymbolSepLeft=\dimen391
+\FV@BreakSymbolSepLeftNChars=\count401
+\FV@BreakSymbolSepRight=\dimen392
+\FV@BreakSymbolSepRightNChars=\count402
+\FV@BreakSymbolIndentLeft=\dimen393
+\FV@BreakSymbolIndentLeftNChars=\count403
+\FV@BreakSymbolIndentRight=\dimen394
+\FV@BreakSymbolIndentRightNChars=\count404
+\c@FancyVerbLineBreakLast=\count405
+\FV@LineBox=\box154
+\FV@LineIndentBox=\box155
+\c@FV@BreakBufferDepth=\count406
+\FV@LineWidth=\dimen395
 )
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\l
 atex2pydata.sty
@@ -1671,15 +1742,15 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/float\float.st
 y
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count397
+\c@float@type=\count407
 \float@exts=\toks61
-\float@box=\box110
+\float@box=\box156
 \@float@everytoks=\toks62
-\@floatcapt=\box111
+\@floatcapt=\box157
 )
-\c@minted@FancyVerbLineTemp=\count398
+\c@minted@FancyVerbLineTemp=\count408
 \@float@every@listing=\toks63
-\c@listing=\count399
+\c@listing=\count409
 )
 
 Package minted Warning: Macro \minted@def@optcl is deprecated with minted v3 an
@@ -1694,7 +1765,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
 rocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
-\c@tcblisting=\count400
+\c@tcblisting=\count410
 ))
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbb
 reakable.code.tex
@@ -1705,9 +1776,9 @@ sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box112
-\tcb@totalupperbox=\box113
-\tcb@totallowerbox=\box114
+\tcb@testbox=\box158
+\tcb@totalupperbox=\box159
+\tcb@totallowerbox=\box160
 )
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbx
 parse.code.tex
@@ -1728,7 +1799,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzl
 ibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box115
+\l__tikzfill_img_box=\box161
 ))
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbs
 kinsjigsaw.code.tex
@@ -1836,16 +1907,16 @@ LaTeX Font Info:    ... okay on input line 86.
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
 pp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count401
-\scratchdimen=\dimen387
-\scratchbox=\box116
-\nofMPsegments=\count402
-\nofMParguments=\count403
+\scratchcounter=\count411
+\scratchdimen=\dimen396
+\scratchbox=\box162
+\nofMPsegments=\count412
+\nofMParguments=\count413
 \everyMPshowfont=\toks64
-\MPscratchCnt=\count404
-\MPscratchDim=\dimen388
-\MPnumerator=\count405
-\makeMPintoPDFobject=\count406
+\MPscratchCnt=\count414
+\MPscratchDim=\dimen397
+\MPnumerator=\count415
+\makeMPintoPDFobject=\count416
 \everyMPtoPDFconversion=\toks65
 )
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
@@ -1933,7 +2004,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 nslator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count407
+\c@lstlisting=\count417
 
 No file main.nav.
 [1
@@ -1941,89 +2012,79 @@ No file main.nav.
 {C:/Users/Madhuri beeram/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/U
 sers/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
 ]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-2.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+00.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-92.
+100.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-92.
+100.
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 92.
+(Font)              <10.95> on input line 100.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 92.
+(Font)              <8> on input line 100.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 92.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
-2.
+(Font)              <6> on input line 100.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
+00.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsya
 .fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
-2.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
+00.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyb
 .fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
-2.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
+00.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ot1txr
 .fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
-2.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
+00.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxmia
 .fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
-2.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
+00.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc
 .fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 100.
+
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 100.
+
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 92.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 100.
+
  [2
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
 thit.enc}{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-mathsy.enc}] (tables/table.tex)
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \end{frame}
-                 
-? 
-[3
-
-{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
-thex.enc}]
+/lm/lm-mathsy.enc}{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/
+enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
 (Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
 
@@ -2033,11 +2094,11 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 (Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 110.
 
- [4
+ (tables/tables.tex) [3
+
+] [4
 
 ] [5
-
-] [6
 
 ]
 \openout4 = `main.vrb'.
@@ -2048,7 +2109,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
+)) [6
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm
 tt.enc}]
@@ -2056,14 +2117,19 @@ tt.enc}]
 
  (main.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-10.
+4.
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [8
+)) [7
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts
 1.enc}]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [8
+
+]
 \openout4 = `main.vrb'.
 
  (main.vrb) [9
@@ -2081,23 +2147,54 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb) [12
+
+(main.vrb) [12
 
 ]
 \openout4 = `main.vrb'.
 
-
-(main.vrb) [13
+ (main.vrb) [13
 
 ]
-<line.jpg, id=399, 1084.05pt x 784.9325pt>
-File: line.jpg Graphic file (type jpg)
-<use line.jpg>
-Package pdftex.def Info: line.jpg  used on input line 262.
-(pdftex.def)             Requested size: 256.72147pt x 185.88443pt.
- [14
+\openout4 = `main.vrb'.
 
- <./line.jpg>]
+ (main.vrb) [14
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [15
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb)
+[16
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [17
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [18
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [19
+
+]
+<graph9.png, id=571, 722.7pt x 578.16pt>
+File: graph9.png Graphic file (type png)
+<use graph9.png>
+Package pdftex.def Info: graph9.png  used on input line 371.
+(pdftex.def)             Requested size: 256.72147pt x 205.37614pt.
+ [20
+
+ <./graph9.png>]
 \tf@nav=\write7
 \openout7 = `main.nav'.
 
@@ -2107,7 +2204,8 @@ Package pdftex.def Info: line.jpg  used on input line 262.
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
- (main.aux)
+
+(main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2126,13 +2224,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59412 strings out of 474486
- 1460671 string characters out of 5739471
- 2474082 words of memory out of 5000000
- 80675 multiletter control sequences out of 15000+600000
+ 59721 strings out of 474486
+ 1466568 string characters out of 5739471
+ 2533084 words of memory out of 5000000
+ 80954 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1174b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,123p,1174b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmex10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmmi10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/font
@@ -2141,13 +2239,13 @@ KTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Madhuri beeram/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Madhuri beeram/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Madhuri beer
 am/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Ma
-dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
-/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt1
+dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:
+/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy1
 0.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/txfonts/txsya.pfb>
-Output written on main.pdf (14 pages, 386865 bytes).
+/lm/lmtt10.pfb>
+Output written on main.pdf (20 pages, 340115 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 84 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
