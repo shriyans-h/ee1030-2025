@@ -1,0 +1,156 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{gensymb} % For using \degree symbol
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+% Title Information
+\title{2.7.15}
+\date{September 29, 2025}
+\author{ADHARVAN KSHATHRIYA BOMMAGANI - EE25BTECH11003}
+
+\begin{document}
+
+% Title Slide
+\frame{\titlepage}
+
+% Question Slide
+\begin{frame}{Question}
+Find the volume of a parallelepiped whose edges are given by:
+\begin{align*}
+\vec{a} = -3\hat{i} + 7\hat{j} + 5\hat{k}, \quad
+\vec{b} = -5\hat{i} + 7\hat{j} - 3\hat{k}, \quad
+\vec{c} = 7\hat{i} - 5\hat{j} - 3\hat{k}.
+\end{align*}
+\end{frame}
+
+% Step 1: Represent vectors and Gram matrix
+\begin{frame}{Theoretical Solution}
+Let the three vectors representing the edges be:
+\begin{align*}
+\vec{a} = \myvec{-3 \\ 7 \\ 5}, \quad
+\vec{b} = \myvec{-5 \\ 7 \\ -3}, \quad
+\vec{c} = \myvec{7 \\ -5 \\ -3}.
+\end{align*}
+
+The volume is given by:
+\begin{align*}
+V = \sqrt{\det(G)},
+\end{align*}
+where \(G\) is the Gram matrix formed by dot products of the vectors.
+
+The Gram matrix is:
+\begin{align*}
+G = 
+\myvec{
+83 & 49 & -71 \\
+49 & 83 & -61 \\
+-71 & -61 & 83
+}
+\end{align*}
+\end{frame}
+
+% Step 2: Row reduction - Step 1
+\begin{frame}{Theoretical Solution}
+We use row reduction to make \(G\) upper triangular.
+
+Perform the operations:
+\begin{align*}
+\myvec{
+83 & 49 & -71 \\
+49 & 83 & -61 \\
+-71 & -61 & 83
+}
+\xrightarrow{\textstyle R_2 \to R_2 - \frac{49}{83}R_1}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+-71 & -61 & 83
+}
+\end{align*}
+
+\end{frame}
+\begin{frame}{Theoretical Solution}
+
+\begin{align*}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+-71 & -61 & 83
+}
+\xrightarrow{\textstyle R_3 \to R_3 + \frac{71}{83}R_1}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
+}
+\end{align*}
+
+
+\end{frame}
+
+
+% Step 3: Row reduction - Step 2
+\begin{frame}{Theoretical Solution}
+
+\begin{align*}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
+}
+\xrightarrow{\textstyle R_3 \to R_3 + \frac{6}{17}R_2}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+0 & 0 & \tfrac{264}{17}
+}
+\end{align*}
+
+\end{frame}
+
+% Step 4: Determinant calculation
+\begin{frame}{Theoretical Solution}
+The matrix is now upper triangular, so the determinant is the product of the diagonal entries:
+\begin{align*}
+\det(G) = 83 \times \frac{4488}{83} \times \frac{264}{17}.
+\end{align*}
+
+Simplifying step-by-step:
+\begin{align*}
+\det(G) = 4488 \times \frac{264}{17} = (17 \times 264) \times \frac{264}{17} = 264 \times 264 = 69696
+\end{align*}
+
+The volume is:
+\begin{align*}
+V = \sqrt{\det(G)} = \sqrt{69696} = \mathbf{264} \ \text{cubic units.}
+\end{align*}
+\end{frame}
+
+% Step 5: Final figure
+\begin{frame}{Plot}
+\centering
+\textbf{Parallelepiped defined by } $\vec{a}, \vec{b}, \vec{c}$
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
+    \caption{3D Representation of the Parallelepiped}
+\end{figure}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,151 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\def\inputGnumericTable{}                            
+\usepackage[latin1]{inputenc}                            
+\usepackage{color}                                  
+\usepackage{array}                                  
+\usepackage{longtable}                               
+\usepackage{calc}                                   
+\usepackage{multirow}                               
+\usepackage{hhline}                                 
+\usepackage{ifthen}                                 
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.7.15}
+\author{EE25BTECH11003 - Adharvan Kshathriya Bommagani}
+{\newpage\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\textbf{Question}:\\
+Find the volume of a parallelepiped whose edges are given by $-3\hat{i} + 7\hat{j} + 5\hat{k}$, $-5\hat{i} + 7\hat{j} - 3\hat{k}$ and $7\hat{i} - 5\hat{j} - 3\hat{k}$.
+  
+\bigskip
+
+\textbf{Solution}:\\
+
+Let $\vec{a}$, $\vec{b}$ and $\vec{c}$ be three vectors representing the edges of the given parallelepiped.
+\begin{align}
+    \vec{a} = \myvec{ - 3 \\ 7 \\ 5 },  
+    \vec{b} = \myvec{ - 5 \\ 7 \\ - 3 },
+     \vec{c} = \myvec{ 7 \\ -5 \\ -3 }
+\end{align}
+
+The volume is given by $V = \sqrt{\det(G)}$, where $G$ is the Gram matrix formed by the dot products of the vectors. Based on calculations, the Gram matrix is:
+$$
+G = \myvec{
+83 & 49 & -71 \\
+49 & 83 & -61 \\
+-71 & -61 & 83
+}
+$$
+
+We use \textbf{row reduction} to convert $G$ into an upper triangular matrix $U$.  
+The determinant is unchanged by adding a multiple of one row to another.\\
+
+\textbf{Step 1:}
+\begin{align*}
+\myvec{
+83 & 49 & -71 \\
+49 & 83 & -61 \\
+-71 & -61 & 83
+}
+\xrightarrow{\;R_2 \to R_2 - \frac{49}{83}R_1\;}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+-71 & -61 & 83
+}
+\end{align*}
+
+
+\textbf{Step 2:}
+\begin{align*}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+-71 & -61 & 83
+}
+\xrightarrow{\;R_3 \to R_3 + \frac{71}{83}R_1\;}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
+}
+\end{align*}
+
+
+\textbf{Step 3:}
+\begin{align*}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
+}
+\xrightarrow{\;R_3 \to R_3 + \tfrac{6}{17}R_2\;}
+\myvec{
+83 & 49 & -71 \\
+0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
+0 & 0 & \tfrac{264}{17}
+}
+\end{align*}
+\newpage
+The matrix is now upper triangular. The determinant of $G$ is the product of the diagonal entries of $U$.
+\begin{align*}
+\det(G) &= 83 \times \frac{4488}{83} \times \frac{264}{17} \\
+&= 4488 \times \frac{264}{17} \\
+&= (17 \times 264) \times \frac{264}{17} \\
+&= 264 \times 264 = \mathbf{69696}
+\end{align*}
+\\
+The volume is the square root of the determinant.
+\begin{align*}
+\text{Volume} &= \sqrt{\det(G)} = \sqrt{69696} \\
+\text{Volume} &= \mathbf{264} \ \text{cubic units}
+\end{align*}
+\\
+
+
+Therefore, the volume of the parallelepiped is 264 cubic units.\\
+
+
+\textbf{Parallelopiped Defined by Vectors $\vec{a}$, $\vec{b}$ and $\vec{c}$ :}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
+    \caption{Figure for 2.7.15}
+    \label{fig1}
+\end{figure}
+
+
+
+\end{document}
