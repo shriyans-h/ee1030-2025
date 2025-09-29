@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 SEP 2025 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 SEP 2025 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2570,10 +2570,10 @@ l.6 ...igure saved as line_intercept_midpoint.png"
 <../figs/fig1.png, id=544, 753.7761pt x 544.1931pt>
 File: ../figs/fig1.png Graphic file (type png)
 <use ../figs/fig1.png>
-Package pdftex.def Info: ../figs/fig1.png  used on input line 358.
+Package pdftex.def Info: ../figs/fig1.png  used on input line 359.
 (pdftex.def)             Requested size: 308.06367pt x 222.4148pt.
 
-Overfull \vbox (30.88847pt too high) detected at line 358
+Overfull \vbox (30.88847pt too high) detected at line 359
  []
 
 
@@ -2584,10 +2584,10 @@ Overfull \vbox (30.88847pt too high) detected at line 358
 <../figs/fig2.png, id=575, 753.7761pt x 544.1931pt>
 File: ../figs/fig2.png Graphic file (type png)
 <use ../figs/fig2.png>
-Package pdftex.def Info: ../figs/fig2.png  used on input line 367.
+Package pdftex.def Info: ../figs/fig2.png  used on input line 368.
 (pdftex.def)             Requested size: 308.06367pt x 222.4148pt.
 
-Overfull \vbox (30.88847pt too high) detected at line 367
+Overfull \vbox (30.88847pt too high) detected at line 368
  []
 
 
@@ -2604,7 +2604,7 @@ Overfull \vbox (30.88847pt too high) detected at line 367
 \tf@snm=\write10
 \openout10 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250929132233 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20250929223511 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -2635,7 +2635,7 @@ sso8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/
 fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/
 texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (20 pages, 276327 bytes).
+Output written on b.pdf (20 pages, 277788 bytes).
 PDF statistics:
  666 PDF objects out of 1000 (max. 8388607)
  569 compressed objects within 6 object streams
