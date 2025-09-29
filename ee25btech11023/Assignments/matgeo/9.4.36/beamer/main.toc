@@ -1,6 +1,6 @@
 \beamer@sectionintoc {2}{Problem}{3}{0}{1}
 \beamer@sectionintoc {3}{Solution}{4}{0}{2}
-\beamer@subsectionintoc {3}{1}{Formula}{4}{0}{2}
+\beamer@subsectionintoc {3}{1}{Input}{4}{0}{2}
 \beamer@subsectionintoc {1}{2}{Equation}{5}{0}{2}
 \beamer@subsectionintoc {1}{3}{Formula}{6}{0}{2}
 \beamer@subsectionintoc {1}{4}{Finding the variables}{7}{0}{2}
