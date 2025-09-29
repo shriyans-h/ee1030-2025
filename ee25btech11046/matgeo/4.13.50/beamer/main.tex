@@ -15,6 +15,7 @@
 \usepackage{circuitikz}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{mathtools}
 
 \setbeamertemplate{page number in head/foot}[totalframenumber]
 
@@ -70,68 +71,81 @@
     breaklines=true,
     showstringspaces=false,
 }
-\title{4.7.43}
-\date{12th September, 2025}
+\title{4.13.50}
+\date{27th September, 2025}
 \author{Puni Aditya - EE25BTECH11046}
 
 \begin{document}
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Show that the points $\brak{\hat{i}-\hat{j}+3\hat{k}}$ and $3\brak{\hat{i}+\hat{j}+\hat{k}}$ are equidistant from the plane $\vec{r}\cdot\brak{5\hat{i}+2\hat{j}-7\hat{k}} + 9 = 0$ and lie on opposite sides of it.
+Two equal sides of an isosceles triangle are given by the equations $7x - y + 3 = 0$ and $x + y - 3 = 0$ and its third side passes through the point $(1, -10)$. Determine the equation of the third side.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Let the given points be $\vec{P_1} = \myvec{1 \\ -1 \\ 3}$ and $\vec{P_2} = \myvec{3 \\ 3 \\ 3}$.
-The equation of the given plane is
-\begin{align}
-    \myvec{5 & 2 & -7}\vec{x} + 9 = 0
-\end{align}
-This can be written in the standard form $\vec{n}^\top\vec{x} = k$. Here, $\vec{n} = \myvec{5 \\ 2 \\ -7}$ and $k = -9$.
-\begin{align}
-    \myvec{5 & 2 & -7}\vec{x} = -9 \label{eq:plane_eqn}
-\end{align}
+Let the two equal sides of the isosceles triangle be represented by
+\begin{align*}
+    \vec{n_1}^\top\vec{x} &= c_1 \\
+    \vec{n_2}^\top\vec{x} &= c_2
+\end{align*}
+and the third side by the line
+\begin{align*}
+    \vec{n}^\top\vec{x} &= c
+\end{align*}
+The third side of the isosceles, the base, is perpendicular to the angle bisector of the two equal sides.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-The reflection of point $\vec{Q}$ with respect to the plane $\vec{n}^\top\vec{x}=k$ is given by
+For a line passing through a given point $\vec{p}$,
 \begin{align}
-    \vec{R} = \vec{Q} - \frac{2\brak{\vec{n}^\top\vec{Q}-k}}{\norm{\vec{n}}^2}\vec{n}
+	\vec{n}^\top\vec{x} &= \vec{n}^\top\vec{p} \\
+    \text{Here, }\vec{p} &= \myvec{1 \\ -10}
 \end{align}
-
-Let the reflection of point $\vec{P_1}$ with respect to the plane be $\vec{Q}$.
+The third side of the isosceles, the base, is perpendicular to one of the angle bisector of the two equal sides and parallel to the other.
 \begin{align}
-    \vec{Q} &= \vec{P_1} - \frac{2\brak{\vec{n}^\top\vec{P_1}-k}}{\norm{\vec{n}}^2}\vec{n} \\
-    &= \myvec{1 \\ -1 \\ 3} - \frac{-18}{78}\myvec{5 \\ 2 \\ -7} \\
-    &= \myvec{\frac{28}{13} \\ -\frac{7}{13} \\ \frac{18}{13}}
-\end{align}
-\end{frame}
-
-\begin{frame}{Theoretical Solution}
-Let a plane parallel to given plane pass through $\vec{P_1}$. Let this be $\vec{n}^\top\vec{x}=c$
-\begin{align}
-    \vec{n}^\top\vec{Q} &= c \\
-    \myvec{5 & 2 & -7}\myvec{\frac{28}{13} \\ -\frac{7}{13} \\ \frac{18}{13}} &= c \\
-    c &= \frac{140}{13}-\frac{14}{13}-\frac{126}{13} \\
-    c &= 0
+    \vec{m_1} &= \frac{\vec{n_1}}{\norm{\vec{n_1}}} + \frac{\vec{n_2}}{\norm{\vec{n_2}}} \label{eq:31} \\
+    \vec{m_2} &= \frac{\vec{n_1}}{\norm{\vec{n_1}}} - \frac{\vec{n_2}}{\norm{\vec{n_2}}} \label{eq:32}
 \end{align}
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
+Hence,
 \begin{align}
-    \vec{n}^\top\vec{P_2} &= \myvec{5 & 2 & -7}\myvec{3 \\ 3 \\ 3} \\
-    &= 15+6-21 \\
-    &= 0 = c
+	\vec{n} = \vec{m_2}\text{ or }\vec{n} = \vec{m_1}
 \end{align}
+For the given question,
+\begin{align}
+    \vec{n_1} &= \myvec{7 \\ -1}\text{ and }\vec{n_2} = \myvec{1 \\ 1} \\
+    \norm{\vec{n_1}} &= \sqrt{50} = 5\sqrt{2} \\
+    \norm{\vec{n_2}} &= \sqrt{2}
+\end{align}
+\end{frame}
 
-$\because \vec{P_2}\text{ lies in the plane }\vec{n}^\top\vec{x}=c$, the point $\vec{P_2}$ and $\vec{P_1}$ are equidistant from the plane $\vec{n}^\top\vec{x} = k$ and lie on the opposite sides of the plane.
+\begin{frame}{Theoretical Solution}
+For the side parallel to $\vec{m_2}$, using \eqref{eq:31},
+\begin{align}
+    \vec{n} &= \frac{1}{5\sqrt{2}}\brak{\myvec{7 \\ -1} + \myvec{5 \\ 5}} = \frac{1}{5\sqrt{2}}\myvec{12 \\ 4} \\
+    \vec{n} &= \myvec{3 \\ 1} \\
+    \myvec{3 & 1}\vec{x} &= \myvec{3 & 1}\myvec{1 \\ -10} \\
+	\myvec{3 & 1}\vec{x} &= -7
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+For the side parallel to $\vec{m_1}$, using \eqref{eq:32},
+\begin{align}    
+    \vec{n} &= \frac{1}{5\sqrt{2}}\brak{\myvec{7 \\ -1} - \myvec{5 \\ 5}} = \frac{1}{5\sqrt{2}}\myvec{2 \\ -6} \\
+    \vec{n} &= \myvec{1 \\ -3} \\
+	\myvec{1 & -3}\vec{x} &= \myvec{1 & -3}\myvec{1 \\ -10} \\
+    \myvec{1 & -3}\vec{x} &= 31
+\end{align}
 \end{frame}
 
 \begin{frame}{Plot}
     \begin{figure}
         \centering
         \includegraphics[width=0.5\columnwidth]{../figs/plot_c.jpg}
-        \caption{Plot}
+        \caption{Isosceles Triangle}
         \label{fig:fig}
     \end{figure}
 \end{frame}
