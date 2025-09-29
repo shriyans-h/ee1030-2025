@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  1 SEP 2025 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.6)  10 SEP 2025 13:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2118,7 +2118,7 @@ Package hyperref Info: Link coloring OFF on input line 50.
 \openout5 = `main.out'.
 
 \c@lstlisting=\count426
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 77
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 78
 .
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/jknapl
@@ -2126,20 +2126,20 @@ tx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 7
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
 
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/amsfon
 ts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
 
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/amsfon
@@ -2147,14 +2147,14 @@ ts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 7
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 7
-7.
+8.
 
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
 s/ts1txr.fd
@@ -2166,36 +2166,14 @@ x/updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-d
 ist/fonts/enc/dvips/base/8r.enc}
 
 ]
+<figs/python_plot.png, id=43, 1083.04625pt x 921.4425pt>
+File: figs/python_plot.png Graphic file (type png)
+<use figs/python_plot.png>
+Package pdftex.def Info: figs/python_plot.png  used on input line 161.
+(pdftex.def)             Requested size: 291.35735pt x 247.87889pt.
 
-LaTeX Warning: File `figs/python image.png' not found on input line 149.
 
-
-! Package pdftex.def Error: File `figs/python image.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.149 ...h=0.8\columnwidth]{figs/python image.png}
-                                                  
-? <return>
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? R
-OK, entering \nonstopmode...
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-149.
-
-(/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/txfont
-s/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-)
-
-[2] (./main.aux)
+[2 <./figs/python_plot.png>] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2214,29 +2192,26 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54580 strings out of 467801
- 1318237 string characters out of 5417843
- 1906440 words of memory out of 5000000
- 82410 multiletter control sequences out of 15000+600000
- 691993 words of font info for 174 fonts, out of 8000000 for 9000
+ 54521 strings out of 467801
+ 1316881 string characters out of 5417843
+ 1911440 words of memory out of 5000000
+ 82356 multiletter control sequences out of 15000+600000
+ 692039 words of font info for 173 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,14n,107p,1194b,1034s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,14n,107p,1194b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/txfonts/rtxmi.pfb></data/data/com.termux/files/usr/share/texlive/2025/texm
 f-dist/fonts/type1/public/txfonts/rtxr.pfb></data/data/com.termux/files/usr/sha
-re/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb></data/data/com
-.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex
-.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1
-/public/txfonts/txsy.pfb></data/data/com.termux/files/usr/share/texlive/2025/te
-xmf-dist/fonts/type1/public/txfonts/txtt.pfb></data/data/com.termux/files/usr/s
-hare/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></data/data/com.t
-ermux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-</data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 54690 bytes).
+re/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></data/data/com.
+termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.
+pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/
+urw/times/utmb8a.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr/share/te
+xlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 163774 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 82 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.28)  9 SEP 2025 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.28)  13 SEP 2025 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1784,7 +1784,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 191
+Overfull \vbox (13.72923pt too high) detected at line 194
  []
 
 [5
@@ -1819,7 +1819,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (13.72923pt too high) detected at line 273
+Overfull \vbox (13.72923pt too high) detected at line 276
  []
 
 [8
@@ -1828,7 +1828,7 @@ Overfull \vbox (13.72923pt too high) detected at line 273
 \openout4 = `main-slides.vrb'.
 
  (./main-slides.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 299
+Overfull \vbox (13.72923pt too high) detected at line 302
  []
 
 [9
@@ -1836,7 +1836,7 @@ Overfull \vbox (13.72923pt too high) detected at line 299
 ]
 
 LaTeX Warning: File `Beamer/figs/parallelogram_diagonals.png' not found on inpu
-t line 312.
+t line 315.
 
 
 ! Package pdftex.def Error: File `Beamer/figs/parallelogram_diagonals.png' not 
@@ -1846,7 +1846,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.312 \end{frame}
+l.315 \end{frame}
                  
 ? 
 [10
@@ -1880,10 +1880,10 @@ Package rerunfilecheck Info: Checksums for `main-slides.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56988 strings out of 474222
- 1358020 string characters out of 5748733
+ 56995 strings out of 474222
+ 1358229 string characters out of 5748733
  2366299 words of memory out of 5000000
- 78238 multiletter control sequences out of 15000+600000
+ 78245 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1179b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1895,7 +1895,7 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main-slides.pdf (10 pages, 190207 bytes).
+Output written on main-slides.pdf (10 pages, 190305 bytes).
 PDF statistics:
  380 PDF objects out of 1000 (max. 8388607)
  313 compressed objects within 4 object streams

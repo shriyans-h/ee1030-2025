@@ -1,82 +1,76 @@
 \documentclass{beamer}
-\mode<presentation>
-\usepackage{amsmath}
-\usepackage{amssymb}
-%\usepackage{advdate}
-\usepackage{graphicx}
-\usepackage{adjustbox}
-\usepackage{subcaption}
-\usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{url}
-\def\UrlBreaks{\do\/\do-}
-\usetheme{Boadilla}
-\usecolortheme{lily}
-\setbeamertemplate{footline}
-{
-  \leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-  \end{beamercolorbox}}%
-  \vskip0pt%
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
 }
-\setbeamertemplate{navigation symbols}{}
-
-\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
-\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
-\providecommand{\mbf}{\mathbf}
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
-\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
-\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
-\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
-\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
-\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
-\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
-\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
-\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\vert#1\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\lVert#1\rVert}
-\providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E[ #1 ]}
-\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
-%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\vec{Solution:}{#1}}
-%\newcommand{\solution}{\noindent \vec{Solution: }}
-\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-
-
 \lstset{
-%language=C,
-frame=single, 
-breaklines=true,
-columns=fullflexible
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
 }
-\lstset{
-  language=C,
-  basicstyle=\ttfamily\footnotesize,
-  keywordstyle=\color{blue}\bfseries,
-  commentstyle=\color{gray}\itshape,
-  stringstyle=\color{orange},
-  numbers=left,
-  numberstyle=\tiny\color{gray},
-  breaklines=true,
-  frame=single,
-  showstringspaces=false,
-  tabsize=4,
-  captionpos=b
-}
+
 \numberwithin{equation}{section}
 \lstset{
   language=Python,
@@ -88,7 +82,6 @@ columns=fullflexible
   breaklines=true,
   showstringspaces=false
 }
-
 
 
 \title{Problem 2.10.20.}
@@ -107,10 +100,10 @@ columns=fullflexible
 \begin{multicols}{2}
 \begin{enumerate}[label=(\alph*)]
      
-\item $\mathbf{u} \cdot (\mathbf{v} \times \mathbf{w})$
-\item $(\mathbf{u} \cdot \mathbf{v}) \cdot \mathbf{w}$
-\item $(\mathbf{u} \cdot \mathbf{v})\ \mathbf{w}$
-\item $\mathbf{u} \times (\mathbf{v} \cdot \mathbf{w})$
+\item $\vec{u} \cdot (\vec{v} \times \vec{w})$
+\item $(\vec{u} \cdot \vec{v}) \cdot \vec{w}$
+\item $(\vec{u} \cdot \vec{v})\ \vec{w}$
+\item $\vec{u} \times (\vec{v} \cdot \vec{w})$
 
 \end{enumerate}
 \end{multicols}
@@ -119,44 +112,41 @@ columns=fullflexible
 \section{Solution}
 \begin{frame}[fragile]
     \frametitle{Solution}
-Let $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$ be vectors in $\mathbb{R}^3$.
-
-   Let \begin{align}
-    \mathbf{u} &= \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \quad
-  \mathbf{v} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}, \quad
-  \mathbf{w} = \begin{bmatrix} 0 \\ 5 \end{bmatrix}.
-  \\
+Let
+\begin{align}
+    \vec{u} &= \myvec{2 \\ 3}, \quad
+    \vec{v} = \myvec{4 \\ 1}, \quad
+    \vec{w} = \myvec{0 \\ 5}.
 \end{align}
-\begin{enumerate}[label=\alph*)]
-  \item \( \mathbf{u}^\top (\mathbf{v} \times \mathbf{w}) \)
 
+\begin{enumerate}[label=\alph*)]
+  \item \( \vec{u}^\top (\vec{v} \times \vec{w}) \)
+  
 \[
-\mathbf{v} \times \mathbf{w} =
-\begin{pmatrix}
+\vec{v} \times \vec{w} =
+\myvec{
 v_{23} & w_{23} \\
 v_{31} & w_{31} \\
 v_{12} & w_{12}
-\end{pmatrix}
+}
 =
-\begin{pmatrix}
+\myvec{
 v_2 w_3 - v_3 w_2 \\
 v_3 w_1 - v_1 w_3 \\
 v_1 w_2 - v_2 w_1
-\end{pmatrix}
+}
 =
-\begin{pmatrix}
+\myvec{
 1 \times 0 - 0 \times 5 \\
 0 \times 0 - 4 \times 0 \\
 4 \times 5 - 1 \times 0
-\end{pmatrix}
-\]
-\[
+}
 =
-\begin{pmatrix}
+\myvec{
 0 \\
 0 \\
 20
-\end{pmatrix}
+}
 \]
 
 \end{enumerate}
@@ -165,29 +155,30 @@ v_1 w_2 - v_2 w_1
     \frametitle{Solution}
 \begin{enumerate}[label=\alph*) ]
 \setcounter{enumi}{1} 
-    \[
-\mathbf{u}^\top (\mathbf{v} \times \mathbf{w}) =
-\begin{bmatrix} 2 & 3 & 0 \end{bmatrix}
-\begin{bmatrix}
+ 
+\[
+\vec{u}^\top (\vec{v} \times \vec{w}) =
+\myvec{2 & 3 & 0}  % row vector (transpose of u)
+\myvec{
 0 \\
 0 \\
 20
-\end{bmatrix} = 0
+}
+= 0
 \]
-Since the scalar (dot) product of two vectors is defined, the expression  \(\mathbf{u} ^\top(\mathbf{v} \times \mathbf{w})\) is meaningful.
-  \item \( (\mathbf{u}^\top \mathbf{v})^\top \mathbf{w} \)
+
+Since the scalar (dot) product of two vectors is defined, the expression  \(\vec{u}^\top(\vec{v} \times \vec{w})\) is meaningful.
+
+  \item \( (\vec{u}^\top \vec{v})^\top \vec{w} \)
 
   \begin{align*}
-  \mathbf{u}^\top \mathbf{v} &= \begin{bmatrix} 2 & 3 \end{bmatrix} \begin{bmatrix} 4 \\ 1 \end{bmatrix} = 2 \times 4 + 3 \times 1 = 11,
+  \vec{u}^\top \vec{v} &= \myvec{2 & 3} \myvec{4 \\ 1} = 2 \times 4 + 3 \times 1 = 11,
   \\
-  (\mathbf{u}^\top \mathbf{v})^\top \mathbf{w} &= 11^\top \mathbf{w} \quad \text{(scalar dot vector)} \quad \text{undefined}.
+  (\vec{u}^\top \vec{v})^\top \vec{w} &= 11^\top \myvec{0 \\ 5} \quad \text{(scalar dot vector -- undefined)}.
   \end{align*}
 
-  \item \( (\mathbf{u}^\top \mathbf{v}) \mathbf{w} \)
-
-  \begin{align*}
-  (\mathbf{u}^\top \mathbf{v}) \mathbf{w} &= 11 \times \begin{bmatrix} 0 \\ 5 \end{bmatrix} = \begin{bmatrix} 0 \\ 55 \end{bmatrix}.
-  \end{align*}
+  \item \( (\vec{u}^\top \vec{v}) \vec{w} \)
+  
 \end{enumerate}
 
 \end{frame}
@@ -197,21 +188,24 @@ Since the scalar (dot) product of two vectors is defined, the expression  \(\mat
 \setcounter{enumi}{3} 
  
 
-  This is meaningful scalar multiplication.
-
-  \item \( \mathbf{u} \times (\mathbf{v}^\top \mathbf{w}) \)
-
   \begin{align*}
-  \mathbf{v}^\top \mathbf{w} &= \begin{bmatrix} 4 & 1 \end{bmatrix} \begin{bmatrix} 0 \\ 5 \end{bmatrix} = 0 + 5 = 5,
-  \\
-  \mathbf{u} \times 5 &= \text{cross product of vector and scalar -- undefined}.
+  (\vec{u}^\top \vec{v}) \vec{w} &= 11 \times \myvec{0 \\ 5} = \myvec{0 \\ 55}.
   \end{align*}
   
+  This is meaningful scalar multiplication.
+
+  \item \( \vec{u} \times (\vec{v}^\top \vec{w}) \)
+  
+  \begin{align*}
+  \vec{v}^\top \vec{w} &= \myvec{4 & 1} \myvec{0 \\ 5} = 0 + 5 = 5,
+  \\
+  \vec{u} \times 5 &= \text{cross product of vector and scalar -- undefined}.
+  \end{align*}
+
 \end{enumerate}
 
 \textbf{Answer:}
 \boxed{\text{Only (a) and (c) are meaningful }}
-
 
 \end{frame}
 \section{Graph}
@@ -312,7 +306,7 @@ plt.gca().set_aspect('equal')
 
 # Save the figure as a PNG file
 plt.savefig('2D_vectors.png')
-plt.close()
+plt.close()end{lstlisting}
 
 \end{lstlisting}
 
