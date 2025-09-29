@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  17 SEP 2025 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  28 SEP 2025 07:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1536,37 +1536,38 @@ Package hyperref Info: Link coloring OFF on input line 45.
 \openout5 = `output.out'.
 
 \c@lstlisting=\count423
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 63.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 61.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 63.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 61.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 63.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 61.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 63.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 61.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Overfull \hbox (27.29129pt too wide) detected at line 133
-[]
+<fig3.4.5.png, id=31, 172.14313pt x 96.86188pt>
+File: fig3.4.5.png Graphic file (type png)
+<use fig3.4.5.png>
+Package pdftex.def Info: fig3.4.5.png  used on input line 115.
+(pdftex.def)             Requested size: 384.30559pt x 216.23764pt.
+
+Overfull \hbox (20.11029pt too wide) in paragraph at lines 115--117
+ [][] 
  []
 
 
@@ -1575,7 +1576,7 @@ Overfull \hbox (27.29129pt too wide) detected at line 133
 
 ]
 
-[2] (./output.aux)
+[2 <./fig3.4.5.png>] (./output.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1584,18 +1585,18 @@ Package rerunfilecheck Info: File `output.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54625 strings out of 467886
- 1303521 string characters out of 5434057
- 1901100 words of memory out of 5000000
- 82357 multiletter control sequences out of 15000+600000
- 690663 words of font info for 171 fonts, out of 8000000 for 9000
+ 54589 strings out of 467886
+ 1302232 string characters out of 5434057
+ 1907561 words of memory out of 5000000
+ 82312 multiletter control sequences out of 15000+600000
+ 692039 words of font info for 173 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,11n,107p,1194b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on output.pdf (2 pages, 55792 bytes).
+ 109i,19n,107p,1194b,1053s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on output.pdf (2 pages, 87693 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

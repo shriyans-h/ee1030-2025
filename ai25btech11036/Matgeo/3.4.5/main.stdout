@@ -27,6 +27,7 @@ Latexmk: Getting log file 'output.log'
 Latexmk: Examining 'output.fls'
 Latexmk: Examining 'output.log'
 Latexmk: References changed.
+Latexmk: References changed.
 Latexmk: Log file says output to 'output.pdf'
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
