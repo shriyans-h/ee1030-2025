@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the shared library
-lib_line = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/6code.so")
+lib_line = ctypes.CDLL("./code6.so")
 
 # Define the argument types and return type for the C function
 lib_line.findIntercepts.argtypes = [
