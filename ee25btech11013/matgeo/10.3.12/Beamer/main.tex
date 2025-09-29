@@ -93,33 +93,67 @@ The equation of the conic $\brak{parabola}$ can be written as
 \begin{align}
 \vec{V} = \myvec{1 & 0 \\ 0 & 0}, \vec{u} = \myvec{0 \\ -8}, f=0, \vec{m^T} = \myvec{1 \\ \sqrt{3}}
 \end{align}
+\begin{align}
+\vec{x} = \vec{h} + k_i\vec{m}    
+\end{align}
 
-Since the tangent is perpendicular to the normal of the conic at the point of contact$\brak{\vec{q}}$, we can write:
+The value of $k_i$ can be found out by solving the line and conic equation
+
+\begin{align}
+(\vec{h} + k_i \vec{m})^{\top} \vec{V} (\vec{h} + k_i \vec{m}) + 2\vec{u}^{\top} (\vec{h} + k_i \vec{m}) + f &= 0 \\
+\implies k_i^{2} \vec{m}^{\top}\vec{V}\vec{m} + 2k_i \vec{m}^{\top} (\vec{V}\vec{h} + \vec{u}) + \vec{h}^{\top}\vec{V}\vec{h} + 2\vec{u}^{\top}\vec{h} + f &= 0 \\
+\text{or, } k_i^{2} \vec{m}^{\top}\vec{V}\vec{m} + 2k_i \vec{m}^{\top} (\vec{V}\vec{h} + \vec{u}) + g(\vec{h}) &= 0
+\end{align}
+
+
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+Solving the above quadratic gives the equation
+\begin{align}
+k_i = \frac{1}{\vec{m}^{\top}\vec{V}\vec{m}}
+\brak{
+    -\vec{m}^{\top} (\vec{V}\vec{h} + \vec{u})
+    \;\pm\;
+    \sqrt{ \sbrak{\vec{m}^{\top}(\vec{V}\vec{h} + \vec{u})}^2
+    - g(\vec{h}) \, (\vec{m}^{\top}\vec{V}\vec{m}) }
+    }
+\end{align}
+Since the tangent passes through one point of the conic, and $g\brak{\vec{q}}=0$
 \begin{align}
 \vec{m^T}\brak{\vec{\vec{V}\vec{q} + \vec{u}}} = 0
+\end{align}
+\begin{align}
+\vec{m^T}\vec{V}\vec{q} = -\vec{m^T}\vec{u}
+\end{align}
+\begin{align}
+\vec{q} = -\frac{\brak{\vec{m^T}\vec{V}}^T\vec{m^T}\vec{u}}{\norm{\vec{m^T}\vec{V}}^2}
+\end{align}
+
+On solving, we get
+\begin{align}
+\vec{q} = \myvec{8\sqrt{3} \\ t}, t \in \mathbf{R}
 \end{align}
 \end{frame}
 
 \begin{frame}{Solution}
+Since $\vec{q}$ lies on the conic, 
 \begin{align}
-\myvec{1 & \sqrt{3}}\brak{\myvec{1 & 0 \\ 0 & 0}\vec{q} + \myvec{0 \\ -8}} = 0
+g\brak{\vec{\vec{q}}} = 0
 \end{align}
 \begin{align}
-\myvec{1 & 0}\vec{q} - 8\sqrt{3} = 0
+\implies \vec{q^T}\vec{V}\vec{q} + 2\vec{u^T}\vec{q} + f = 0
 \end{align}
+
+Substituting and solving gives $t=12$
+
 \begin{align}
-\myvec{1 & 0}\myvec{x \\ y} = 8\sqrt{3}
+\therefore \vec{q} = \myvec{8\sqrt{3} \\ 12}
 \end{align}
-\begin{align}
-\vec{x} = 8\sqrt{3}
-\end{align}
-Substituting the value of x in the parabola equation we get $y = 12$
-\begin{align}
-\vec{q} = \myvec{8\sqrt{3} \\ 12}
-\end{align}
-\begin{align}
-k = -12
-\end{align}
+
+Therefore $k = -12$    
 \end{frame}
 
 \begin{frame}{Plot}
