@@ -1,0 +1,121 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[article,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\graphicspath{{figs/}}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}
+\def\inputGnumericTable{}                                 
+\usepackage[utf8]{inputenc}                              
+\usepackage{color}                                         
+\usepackage{array}                                        
+\usepackage{longtable}                                     
+\usepackage{calc}                                          
+\usepackage{multirow}                                      
+\usepackage{hhline}                                        
+\usepackage{ifthen}                                        
+\usepackage{lscape}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\graphicspath{ {./Figures/} }
+\usepackage{float} % For the [H] float option
+\usepackage{textcomp}
+\usepackage{multicol}
+
+% --- myvec macro (wraps a bmatrix so your document keeps the same visual output
+%     while using the requested \myvec command) ---
+
+\begin{document}
+\textbf{Question}\\[2pt]
+Consider two points $P$ and $Q$ with position vectors
+\[
+\vec{OP}=3\vec{a}-2\vec{b},
+\qquad
+\vec{OQ}=\vec{a}+\vec{b}.
+\]
+Find the position vector of a point $R$ which divides the line joining $P$ and $Q$ in the ratio $2:1$,
+\begin{enumerate}
+    \item[(a)] internally, and
+    \item[(b)] externally.
+\end{enumerate}
+
+\vspace{6pt}
+\textbf{Solution}\\[2pt]
+In the basis $\{\vec a,\vec b\}$, we can write
+\[
+\vec A=\myvec{3\\-2},
+\qquad
+\vec B=\myvec{1\\1}. \tag{1}
+\]
+
+\textbf{(a) Internal Division.} If $R$ divides $AB$ in the ratio $k:1$ internally, then
+\[
+\vec R=\frac{k\vec B+\vec A}{k+1}. \tag{2}
+\]
+With $k=2$ 
+\begin{align}
+\vec R
+&=\frac{2\myvec{1\\1}+\myvec{3\\-2}}{2+1} \tag{3}\\
+&=\frac{\myvec{2\\2}+\myvec{3\\-2}}{3} \tag{4}\\
+&=\frac{\myvec{5\\0}}{3} \tag{5}\\
+&=\myvec{\tfrac{5}{3}\\0}. \tag{6}
+\end{align}
+\[
+\boxed{\;\vec R_{\text{internal}}=\myvec{\tfrac{5}{3}\\[2pt]0}\;}
+\]
+
+\bigskip
+\textbf{(b) External Division.} If $R$ divides $AB$ in the ratio $k:1$ externally, then
+\[
+\vec R=\frac{k\vec B-\vec A}{k-1}. \tag{7}
+\]
+With $k=2$ 
+\begin{align}
+\vec R
+&=\frac{2\myvec{1\\1}-\myvec{3\\-2}}{2-1} \tag{8}\\
+&=\myvec{2\\2}-\myvec{3\\-2} \tag{9}\\
+&=\myvec{-1\\4} \tag{10}
+\end{align}
+\[
+\boxed{\;\vec R_{\text{external}}=\myvec{-1\\[2pt]4}\;}
+\]
+From the calculations above, we obtain:
+
+\[
+\boxed{\;\;\Large \vec{R}_{\text{internal}} = \tfrac{5}{3}\vec{a}\;\;}
+\]
+
+\[
+\boxed{\;\;\Large \vec{R}_{\text{external}} = -\vec{a} + 4\vec{b}\;\;}
+\]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/mg1plot.png}
+\end{figure}
+
+\end{document}
