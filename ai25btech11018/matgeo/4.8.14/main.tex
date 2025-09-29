@@ -1,3 +1,4 @@
+
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
@@ -12,6 +13,7 @@
 \usepackage{gvv}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
@@ -49,7 +51,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{2.6.27}
+\title{4.8.14}
 \author{AI25BTECH11018-Hemanth Reddy}
  \maketitle
 % \newpage
@@ -66,75 +68,83 @@
 \renewcommand{\thetable}{\theenumi}
 
 \textbf{Question:}\\
-If A (-5,7),B(-4,-5),C(-1,-6) and D(4,5) are the vertices of a quadrilateral, find
- the area of quadrilateral ABCD.\\
-\textbf{Solution:}\\
 
-Area of quadrilateral ABCD = The area of triangle ABC + The area of triangle ACD\\Let 
-$\vec{A}$ \myvec{-5\\
-7},
-$\vec{B}$ \myvec{-4\\
--5},
-$\vec{C}$ \myvec{-1\\
--6},
-$\vec{D}$ \myvec{4\\
-5}
-be vectors\\
+Find the position vector of the foot of perpendicular and the perpendicular distance from the point  $ \vec{P}$ with position vector $  2\hat{i}  + 3  \hat{j}  + \hat{k} $ to the plane \textbf{r} $\cdot$ ( $ 2\hat{i}  +   \hat{j}  + 3\hat{k}$) -26 = 0.
+ Also find image of $ \vec{P}$  in the plane.\\
+\textbf{Solution:}\\
 \begin{align}
-    \overrightarrow{AB} =   \vec{B}  -  \vec{A}  =  \myvec{1\\
--12}
+   \text{ The position vector of point }  \vec{P} \text{ is }
+  \textbf{p} = \myvec{ 2 \\ 3 \\ 1 } 
+\end{align}
+ The normal vector of the plane is 
+\begin{align}
+    \textbf{n} = \myvec{ 2 \\ 1 \\ 3 }
 \end{align}
 
+
+
+The plane equation is
 \begin{align}
-    \overrightarrow{AC}  =   \vec{C}   -   \vec{A}   =  \myvec{4\\
--13}
+    \textbf{p}^T \cdot \textbf{n} - 26 = 0
+\end{align} \\
+
+1. Perpendicular Distance\\
+
+The dot product $\textbf{p} \cdot \textbf{n}$ is given by the matrix multiplication $\textbf{p}^T \textbf{n}$.\\
+
+\begin{align}
+    \textbf{p}^{T} \textbf{n} = \myvec{ 2 & 3 & 1 } \myvec{ 2 \\ 1 \\ 3 } = (2)(2) + (3)(1) + (1)(3) = 10
 \end{align}
  
-\begin{align}
-    \overrightarrow{AD}  =   \vec{D}   -   \vec{A}   =  \myvec{9\\
--2}
-\end{align}
 
 \begin{align}
-ar(ABC) &= \frac{1}{2} \, \|(\vec{B} - \vec{A}) \times (\vec{C} - \vec{A}) \|  =  17.5
+    |\textbf{n}| = \sqrt{\textbf{n}^T \textbf{n}} = \sqrt{\myvec{ 2 & 1 & 3 } \myvec{ 2 \\ 1 \\ 3 }} = \sqrt{4+1+9} = \sqrt{14}
 \end{align}
+
+
+
+
+
+The perpendicular distance d is:
 \begin{align}
-ar(ACD) &= \frac{1}{2} \, \|(\vec{C} - \vec{A}) \times (\vec{D} - \vec{A}) \|  =  54.5
+    d = \frac{|\textbf{p}^T \textbf{n} - 26|}{|\textbf{n}|} = \frac{|10-26|}{\sqrt{14}} = \frac{16}{\sqrt{14}}
 \end{align}
 
-Therefore area of quadrilateral ABCD = 17.5+54.5 = 72 sq. units
 
+2. Foot of Perpendicular\\
 
-\begin{center}
-    \textbf{OR}
-\end{center}
-
-Area of quadrilateral ABCD = $\frac{1}{2}|d_{1}\times d_{2}|$\\
-where $d_{1}$ = $\overrightarrow{AC}$  and $d_{2}$ = $\overrightarrow{BD}$
-
-
-\begin{align}
-    \overrightarrow{AC}  =   \vec{C}   -   \vec{A}   =  \myvec{4\\
--13}
-\end{align}
+The position vector of the foot of the perpendicular    $\textbf{q}$ is:
 
 \begin{align}
-    \overrightarrow{BD}  =   \vec{D}   -   \vec{B}   =  \myvec{8\\
-10}
+    \textbf{q} = \textbf{p} - \frac{(\textbf{p}^T \textbf{n} - 26)}{|\textbf{n}|^2} \textbf{n}
+\end{align}
+\begin{align}
+  \textbf{q}  = \myvec{ 2 \\ 3 \\ 1 } - \frac{10 - 26}{14} \myvec{ 2 \\ 1 \\ 3 } = \myvec{ 2 \\ 3 \\ 1 } + \frac{16}{14} \myvec{ 2 \\ 1 \\ 3 }
 \end{align}
 
+
 \begin{align}
-ar(ABCD) &= \frac{1}{2} \, \|(\vec{D} - \vec{B}) \times (\vec{C} - \vec{A}) \|  =  72  sq. units
+    \textbf{q} = \myvec{ 2 \\ 3 \\ 1 } + \frac{8}{7} \myvec{ 2 \\ 1 \\ 3 } = \myvec{ 2 + 16/7 \\ 3 + 8/7 \\ 1 + 24/7 } = \myvec{ 30/7 \\ 29/7 \\ 31/7 }
 \end{align}
+
+
+So the position vector of the foot of the perpendicular is $\frac{30}{7}\hat{i} + \frac{29}{7}\hat{j} + \frac{31}{7}\hat{k}$.
+
+3. Image of $ \vec{P}$\\
+
+The position vector of the image $\textbf{P'}$, is:\\
+
+\begin{align}
+     \textbf{P'} = 2\textbf{q} - \textbf{P} = 2 \myvec{ 30/7 \\ 29/7 \\ 31/7 } - \myvec{ 2 \\ 3 \\ 1 } = \myvec{ 60/7 - 14/7 \\ 58/7 - 21/7 \\ 62/7 - 7/7 } = \myvec{ 46/7 \\ 37/7 \\ 55/7 }
+\end{align}
+
+So the position vector of the image is $\frac{46}{7}\hat{i} + \frac{37}{7}\hat{j} + \frac{55}{7}\hat{k}$.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{figs/quadrilateral_ABCD.png}
+    \includegraphics[width=1\linewidth]{figs/3d_plane_solution.png}
     \caption{}
     \label{fig:placeholder}
 \end{figure}
-
-
-
 
 \end{document}
