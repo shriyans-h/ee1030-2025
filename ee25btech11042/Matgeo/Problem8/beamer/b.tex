@@ -123,97 +123,96 @@
 	\end{align}
 	\end{frame}
 	\begin{frame}{Theoretical Solution}
-		By row reductions
-		\begin{align}
-			
-			\augvec{2}{1}{10&2&4\\15&-5&-2}
-			\xleftrightarrow{\,R_2 \gets R_2- \frac{3}{2} \times R_1}
-			\augvec{2}{1}{10&2&4\\0&-8&-8}  
-			\xleftrightarrow{\,R_1 \gets R_1+\frac{1}{4} \times R_2}
-			\augvec{2}{1}{10&0&2\\0&-8&-8}\\
-			\augvec{2}{1}{10&0&2\\0&-8&-8}
-			\xleftrightarrow{\,R_1 \gets \frac{1}{10} \times R_1}
-			\augvec{2}{1}{1&0&\frac{1}{5}\\0&-8&-8}
-			\xleftrightarrow{\,R_2 \gets \frac{1}{-8} \times R_2}
-			\augvec{2}{1}{1&0&\frac{1}{5}\\0&1&1}
-		\end{align}
-		\begin{align}
-			\vec{a} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
-		\end{align}
-		Substituting value of a and b again we get
-		\begin{align}
-			\begin{myvec}{\frac{1}{x+y} \\ \frac{1}{x-y}} \end{myvec} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
-		\end{align}
+	 $\frac{A}{x+y} + \frac{B}{x-y} = C$ becomes:
+	\begin{align}
+		c(x^2 - y^2) - (a+b)x + (a-b)y = 0 \label{eq:hyperbola_form}
+	\end{align}
+	Matrix form: $\vec{x}^\top V \vec{x} + 2\vec{u}^\top \vec{x} = 0$, where:
+	\begin{align}
+		\vec{x} = \begin{myvec}{x \\ y}\end{myvec}, \quad
+		V = \begin{myvec}{c & 0 \\ 0 & -c}\end{myvec}, \quad
+		\vec{u} = \begin{myvec}{-(a+b)/2 \\ (a-b)/2}\end{myvec} \label{eq:matrix_defs}
+	\end{align}
+	The intersection points of the two hyperbolas lie on a Common chord, $c_1H_2-c_2H_1=0$, where $H_1=0$ and $H_2=0$ are the equations of each of hyperbolas. This results in the linear equation $\vec{n}^\top\vec{x}=0$,
+	\begin{align}
+		d = c_1(a_2+b_2) - c_2(a_1+b_1) \label{eq:D_coeff} \\
+		e = c_2(a_1-b_1) - c_1(a_2-b_2) \label{eq:E_coeff} \\
+		\text{where d and e are obtained by eliminating the quadratic terms  } \vec{n} = \begin{myvec}{d \\ e}\end{myvec}
+	\end{align}
 	\end{frame}
 		\begin{frame}{Theoretical Solution}
-		\begin{align}
-			\implies \begin{myvec}{x+y \\ x-y} \end{myvec} = \begin{myvec}{5\\1} \end{myvec}
-		\end{align}
-		Introduce	
-		\begin{align}
-			\vec{x} = \begin{myvec}{x\\y} \end{myvec}
-		\end{align}
-		This gives us the equation
-		\begin{align}
-			\begin{myvec}{1&1 \\ 1&-1} \end{myvec}\vec{x} = \begin{myvec}{5\\1} \end{myvec}
-		\end{align}
 		
-		\begin{align}
-			\implies \vec{x} = 	\begin{myvec}{5\\1} \end{myvec}\begin{myvec}{1&1 \\ 1&-1} \end{myvec}^{-1}
-		\end{align}
+	The solution is the non-trivial intersection point of this common chord and either hyperbola
+	\begin{align}
+		% --- Start with y in terms of x
+		y = -\frac{d}{e}x \label{eq:y_formula} \\
+		% --- Substitute y into the hyperbola equation
+		c_1\brak{x^2 - \brak{-\frac{d}{e}x}^2} - \brak{a_1+b_1}x + \brak{a_1-b_1}\brak{-\frac{d}{e}x} = 0 \\
+		% --- Factor out the common 'x' term. This is a critical step for correctness.
+		\implies x \brak{ x\brak{c_1\brak{\frac{e^2-d^2}{e^2}}} - \brak{\frac{e\brak{a_1+b_1} + d\brak{a_1-b_1}}{e}} } = 0 \\
+		% --- To find the non-trivial solution, set the inner bracket to zero and rearrange
+		\therefore x\brak{c_1\brak{\frac{e^2-d^2}{e^2}}} = \brak{\frac{e\brak{a_1+b_1}+d\brak{a_1-b_1}}{e}} \\
+		% --- Solve for x to get the final formula
+		x = \frac{e\brak{e\brak{a_1+b_1}+d\brak{a_1-b_1}}}{c_1\brak{e^2-d^2}} \label{eq:x_formula}
+	\end{align}
 	\end{frame}
 		\begin{frame}{Theoretical Solution}
+			For the given system, the coefficients are:
 		\begin{align}
-			\implies \vec{x} = 	\begin{myvec}{5\\1} \end{myvec}\begin{myvec}{\frac{1}{2}&\frac{1}{2} \\ \frac{1}{2}&-\frac{1}{2}} \end{myvec}
+			a_1 = 10, b_1 = 2, c_1 = 4 \quad \text{and} \quad a_2 = 15, b_2 = -5, c_2 = -2
 		\end{align}
+		Using \eqref{eq:D_coeff} and \eqref{eq:E_coeff}, we calculate the common chord coefficients:
 		\begin{align}
-			\implies \vec{x} = 	\begin{myvec}{\frac{5}{2}+\frac{1}{2} \\ \frac{5}{2}-\frac{1}{2}} \end{myvec}
+			d = 4\brak{15-5} - \brak{-2}\brak{10+2} = 4\brak{10} + 2\brak{12} = 64 \\
+			e = \brak{-2}\brak{10-2} - 4\brak{15--5} = -2(8) - 4(20) = -96
 		\end{align}
-		\begin{align}
-			\implies \vec{x} = 	\begin{myvec}{3 \\ 2} \end{myvec}
-		\end{align}
-		Thus $x=3$ and $y=2$
+		Substituting these into the formula for $x$ from \eqref{eq:x_formula}:
 		
+	\end{frame}	
+	\begin{frame}{Theoretical Solution}
+	\begin{align}
+		x = \frac{\brak{-96} \brak{\brak{-96}\brak{12} + \brak{64}\brak{8}}}{4\brak{\brak{-96}^2-\brak{64}^2}} \\
+		= \frac{-96  \brak{-1152 + 512}}{4\brak{9216 - 4096}} \\
+		= \frac{-96\brak{-640}}{4\brak{5120}} = \frac{61440}{20480} = 3 \label{eq:x_val}
+	\end{align}
+	Using the value of $x$ from \eqref{eq:x_val} in the formula for $y$ \eqref{eq:y_formula}:
+	\begin{align}
+		y = -\frac{64}{-96}(3) = \frac{2}{3}3 = 2 \label{eq:y_val}
+	\end{align}
+	Thus, from \eqref{eq:x_val} and \eqref{eq:y_val}, the solution is $x=3$ and $y=2$.
+	
 	\end{frame}
+	
 	\begin{frame}[fragile]
-		\frametitle{C Code- equidistant check function }
+		\frametitle{C Code}
 		
 		\begin{lstlisting}
-			#include <stdio.h>
-			
-			void rref_solver(double aug[2][3], double solution[2]) {
-				// Normalize first row (pivot = aug[0][0])
-				double pivot = aug[0][0];
-				for (int j = 0; j < 3; j++) {
-					aug[0][j] /= pivot;
-				}
-				
-				// Eliminate below pivot
-				double factor = aug[1][0];
-				for (int j = 0; j < 3; j++) {
-					aug[1][j] -= factor * aug[0][j];
-				}
+	void get_conic_data(double* data_out) {							// Hyperbola 1: V1=[[4,0],[0,-4]], u1=[-6,4]			data_out[0] = 4.0;  data_out[1] = 0.0;
+		data_out[2] = 0.0;  data_out[3] = -4.0;
+		data_out[4] = -6.0; data_out[5] = 4.0;
+		// Hyperbola 2: V2=[[-2,0],[0,2]], u2=[-5,10]
+		data_out[6] = -2.0; data_out[7] = 0.0;
+		data_out[8] = 0.0;  data_out[9] = 2.0;
+		data_out[10] = -5.0; data_out[11] = 10.0;
+		// Solution Point: [3, 2]
+	data_out[12] = 3.0; data_out[13] = 2.0;
+		}
 		\end{lstlisting}
 	\end{frame}
 	\begin{frame}[fragile]
-		\frametitle{C Code- equidistant check function }
+		\frametitle{Python Code using shared output}
 		
 		\begin{lstlisting}
-			 pivot = aug[1][1];
-			for (int j = 0; j < 3; j++) {
-				aug[1][j] /= pivot;
-			}
-			
-			// Eliminate above pivot
-			factor = aug[0][1];
-			for (int j = 0; j < 3; j++) {
-				aug[0][j] -= factor * aug[1][j];
-			}
-			
-			// Extract solution
-			solution[0] = aug[0][2]; // x
-			solution[1] = aug[1][2]; // y
-			
+# plot_from_so.py
+import ctypes
+import numpy as np
+import matplotlib.pyplot as plt
+# Load the shared library
+lib = ctypes.CDLL('./5.2.44.so')
+# Define the function signature
+get_data_func = lib.get_conic_data
+get_data_func.argtypes = [np.ctypeslib.ndpointer(dtype=np.double, ndim=1, flags='C_CONTIGUOUS')]
+get_data_func.restype = None		
 		\end{lstlisting}
 	\end{frame}
 
@@ -221,99 +220,121 @@
 	\begin{frame}[fragile]
 		\frametitle{Python Code using shared output}
 		\begin{lstlisting}
-			import ctypes
-			import numpy as np
-			import matplotlib.pyplot as plt
-			import matplotlib as mp
-			# Load the shared C library
-			lib = ctypes.CDLL("./5.2.44.so")
-			# Define argument and return types
-			lib.rref_solver.argtypes = [ctypes.c_double * 6, ctypes.c_double * 2]
-			# Create augmented matrix for system:
-			aug = (ctypes.c_double * 6)(1, 1, 5,   1, -1, 1)  # Flattened 2x3
-			solution = (ctypes.c_double * 2)()
+# Create a buffer and call the C function
+output_array = np.zeros(14, dtype=np.double)			get_data_func(output_array)
+# Unpack the data from C
+V1 = output_array[0:4].reshape((2, 2))
+u1 = output_array[4:6]
+V2 = output_array[6:10].reshape((2, 2))
+u2 = output_array[10:12]
+solution_point = output_array[12:14]
+# --- Plotting Code ---
+x_vals = np.linspace(-10, 15, 500)
+y_vals = np.linspace(-10, 15, 500)
+X, Y = np.meshgrid(x_vals, y_vals)
+eq1 = V1[0,0]*X**2 + V1[1,1]*Y**2 + 2*(u1[0]*X + u1[1]*Y)
+eq2 = V2[0,0]*X**2 + V2[1,1]*Y**2 + 2*(u2[0]*X + u2[1]*Y)		
 		\end{lstlisting}
 	\end{frame}
 	\begin{frame}[fragile]
 		\frametitle{Python Code using shared output}
 		\begin{lstlisting}		
-			# Call C function
-			lib.rref_solver(aug, solution)
-			# Convert result to numpy vector (ensure flat)
-			x_sol = np.array([solution[0], solution[1]], dtype=float).flatten()
-			print("Solution vector from C:", x_sol) # This correctly prints [3. 2.]
-			# plot
-			x_vals = np.linspace(-2, 10, 400)
-			y1 = 5 - x_vals         # Correct for x + y = 5
-			y2 = x_vals - 1         # CORRECTED for x - y = 1
-			plt.plot(x_vals, y1, label=r"$x+y=5$")
-			plt.plot(x_vals, y2, label=r"$x-y=1$")
-			plt.scatter(x_sol[0], x_sol[1], color="red", zorder=5)
-			plt.text(float(x_sol[0])+0.2, float(x_sol[1]), f"({x_sol[0]:.1f}, {x_sol[1]:.1f})", color="red")
+plt.figure(figsize=(10, 10))
+plt.contour(X, Y, eq1, levels=[0], colors='red')
+plt.contour(X, Y, eq2, levels=[0], colors='blue')
+plt.plot(x_vals, (2/3)*x_vals, 'g--', label='Common Chord')
+plt.plot(solution_point[0], solution_point[1], 'ko', markersize=10, label=f'Solution from C: ({solution_point[0]}, {solution_point[1]})')
+plt.title('Plot from C Shared Library Data', fontsize=16)
+plt.xlabel('x-axis'); plt.ylabel('y-axis')
+plt.grid(True, linestyle='--'); plt.axhline(0, color='k', lw=0.5); plt.axvline(0, color='k', lw=0.5)
+plt.gca().set_aspect('equal', adjustable='box'); plt.xlim(-5, 10); plt.ylim(-5, 10)
+plt.legend()
+plt.savefig('so_python_plot.png')
+print("Plot saved to so_python_plot.png")
+plt.show()			
 		\end{lstlisting}
 	\end{frame}
 	\begin{frame}[fragile]
-		\frametitle{Python Code using shared output}
+		\frametitle{Python Code}
 		\begin{lstlisting}
-		plt.plot(x_vals, y1, label=r"$x+y=5$")
-		plt.plot(x_vals, y2, label=r"$x-y=1$")
-		plt.scatter(x_sol[0], x_sol[1], color="red", zorder=5)
-		plt.text(float(x_sol[0])+0.2, float(x_sol[1]), f"({x_sol[0]:.1f}, {x_sol[1]:.1f})", color="red")
-		plt.xlabel("x")
-		plt.ylabel("y")
-		plt.title("Graphical Solution of the Linear System")
-		plt.axhline(0, color="black", linewidth=0.8)
-		plt.axvline(0, color="black", linewidth=0.8)
-		plt.legend()
-		plt.grid(True)
-		plt.savefig("Figure_1_Corrected.png")
-		plt.show()
+# Code to plot the solution of the system of rational equations
+import numpy as np
+import matplotlib.pyplot as plt
+# --- Define the parameters for the two hyperbolas ---
+# Hyperbola 1: 4(x^2 - y^2) - 12x + 8y = 0
+V1 = np.array([[4, 0], [0, -4]])
+u1 = np.array([-6, 4])
+f1 = 0
+# Hyperbola 2: -2(x^2 - y^2) - 10x + 20y = 0
+V2 = np.array([[-2, 0], [0, 2]])
+u2 = np.array([-5, 10])
+f2 = 0		
 		\end{lstlisting}
 	\end{frame}
 	\begin{frame}[fragile]
 		\frametitle{Python Code}
 	\begin{lstlisting}
-	import numpy as np
-	import matplotlib.pyplot as plt
-	import matplotlib as mp
-	mp.use("TkAgg")
-	A=np.array([[1,1],[1,-1]],dtype=float)
-	b=np.array([5,1], dtype=float)
-	x=np.linalg.solve(A,b)
-	print("Solution vector for the system of equations:",x)
+# --- Set up the plotting grid ---
+# Generate a grid of points to evaluate the equations on
+x_vals = np.linspace(-10, 15, 500)
+y_vals = np.linspace(-10, 15, 500)
+X, Y = np.meshgrid(x_vals, y_vals)
+# --- Define the hyperbola equations ---
+# Equation is x^T V x + 2u^T x + f = 0
+# For a point (x,y), the vector is [x, y]
+# So x^T V x becomes V[0,0]*x^2 + V[1,1]*y^2
+# and 2u^T x becomes 2*(u[0]*x + u[1]*y)
+eq1 = V1[0,0]*X**2 + V1[1,1]*Y**2 + 2*(u1[0]*X + u1[1]*Y) + f1
+eq2 = V2[0,0]*X**2 + V2[1,1]*Y**2 + 2*(u2[0]*X + u2[1]*Y) + f2
 	\end{lstlisting}
 	
 \end{frame}
 \begin{frame}[fragile]
 	\frametitle{Python Code}
 	\begin{lstlisting}
-		# Making a plot
-		x_vals = np.linspace(-2, 10, 400)
-		# Rearranged equations to express y in terms of x
-		y1 = (5 - x_vals)        # from x + 3y = 6
-		y2 = (x_vals-1)    # from 2x - 3y = 12
-		# Plot lines
-		plt.plot(x_vals, y1, label=r"$x + y = 5$")
-		plt.plot(x_vals, y2, label=r"$x - y = 1$")
-		# Mark solution
-		plt.scatter(x[0], x[1], color="red", zorder=5)
-		plt.text(x[0]+0.2, x[1], f"({x[0]:.1f}, {x[1]:.1f})", color="red")
+# --- Create the Plot ---
+plt.figure(figsize=(10, 10))
+# Plot the hyperbolas by finding where their equations equal zero
+plt.contour(X, Y, eq1, levels=[0], colors='red', linewidths=2)
+plt.contour(X, Y, eq2, levels=[0], colors='blue', linewidths=2)
+# --- Plot the Common Chord and Solution ---
+# The common chord is 64x - 96y = 0, which simplifies to 2x - 3y = 0
+# So, y = (2/3)x
+plt.plot(x_vals, (2/3)*x_vals, 'g--', label='Common Chord: $2x - 3y = 0$')
+# The solution point
+solution_point = np.array([3, 2])
+plt.plot(solution_point[0], solution_point[1], 'ko', markersize=10, label='Solution (3, 2)')
 	\end{lstlisting}
 	
 \end{frame}
 \begin{frame}[fragile]
 	\frametitle{Python Code}
 	\begin{lstlisting}
-		# Formatting
-		plt.xlabel("x")
-		plt.ylabel("y")
-		plt.title("Graphical Solution of the Linear System")
-		plt.axhline(0, color='black', linewidth=0.8)
-		plt.axvline(0, color='black', linewidth=0.8)
-		plt.legend()
-		plt.grid(True)
-		plt.savefig("Figure_2")
-		plt.show()
+plt.title('Intersection of Hyperbolas', fontsize=16)
+plt.xlabel('x-axis', fontsize=12)
+plt.ylabel('y-axis', fontsize=12)
+plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.gca().set_aspect('equal', adjustable='box')
+plt.xlim(-5, 10)
+plt.ylim(-5, 10)
+	\end{lstlisting}
+	
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Python Code}
+	\begin{lstlisting}
+# Create a legend
+plt.legend(handles=[
+plt.Line2D([0], [0], color='red', lw=2, label='Hyperbola 1'),
+plt.Line2D([0], [0], color='blue', lw=2, label='Hyperbola 2'),
+plt.Line2D([0], [0], color='g', linestyle='--', label='Common Chord'),
+plt.Line2D([0], [0], marker='o', color='k', linestyle='', markersize=8, label='Solution (3, 2)')
+])
+# Save and show the plot
+plt.savefig('hyperbola_intersection.png')
+plt.show()
 	\end{lstlisting}
 	
 \end{frame}

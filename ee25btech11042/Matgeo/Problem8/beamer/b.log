@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  28 SEP 2025 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.7)  29 SEP 2025 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1472,13 +1472,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file b.aux.
+) (./b.aux)
 \openout1 = `b.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 86.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1575,6 +1575,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 86.
+
+(./b.out) (./b.out)
 \@outlinefile=\write6
 \openout6 = `b.out'.
 
@@ -1650,9 +1652,7 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count416
-
-No file b.nav.
-
+ (./b.nav)
 
 [1
 
@@ -1736,141 +1736,24 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-Runaway argument?
- 
-! Paragraph ended before \align was complete.
-<to be read again> 
-                   \par 
-l.147 	\end{frame}
-                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.147 	\end{frame}
-                  
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.147 	\end{frame}
-                  
-? 
-! Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.147 	\end{frame}
-                  
-? 
-! Undefined control sequence.
-\beamer@doifinframe ...15&-5&-2} \xleftrightarrow 
-                                                  {\,R_2 \gets R_2- \frac {3...
-l.147 	\end{frame}
-                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.147 	\end{frame}
-                  
-? 
-! Extra }, or forgotten $.
-\beamer@doifinframe ...2- \frac {3}{2} \times R_1}
-                                                   \augvec {2}{1}{10&2&4\\0&...
-l.147 	\end{frame}
-                  
-? 
-! Undefined control sequence.
-\beamer@doifinframe ...\0&-8&-8} \xleftrightarrow 
-                                                  {\,R_1 \gets R_1+\frac {1}...
-l.147 	\end{frame}
-                  
-? 
-! Undefined control sequence.
-\beamer@doifinframe ...\0&-8&-8} \xleftrightarrow 
-                                                  {\,R_1 \gets \frac {1}{10}...
-l.147 	\end{frame}
-                  
-? 
-! Undefined control sequence.
-\beamer@doifinframe ...\0&-8&-8} \xleftrightarrow 
-                                                  {\,R_2 \gets \frac {1}{-8}...
-l.147 	\end{frame}
-                  
-? 
-! Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.147 	\end{frame}
-                  
-? 
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.147 	\end{frame}
-                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.147 	\end{frame}
-                  
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.147 	\end{frame}
-                  
-? 
-
-Overfull \hbox (1.45163pt too wide) in paragraph at lines 147--147
-[] [] [] [] [] []$  
- []
-
-! Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.147 	\end{frame}
-                  
-? 
-
-Overfull \hbox (75.16676pt too wide) detected at line 147
-[]
- []
-
-! Extra }, or forgotten \endgroup.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.147 	\end{frame}
-                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.147 	\end{frame}
-                  
-? 
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.147 	\end{frame}
-                  
-? 
-
-Overfull \vbox (4.8014pt too high) detected at line 147
+Overfull \vbox (32.67743pt too high) detected at line 142
  []
 
 
 
 [4
 
-]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [5
 
 ]
 
 [6
+
+]
+
+[7
 
 ]
 \openout4 = `b.vrb'.
@@ -1882,173 +1765,25 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[7
+[8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb)
-
-[8
-
-]
-\openout4 = `b.vrb'.
-
  (./b.vrb
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+9.
 
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 			lib = ctypes.CDLL("
-                          ./5.2.44.so")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 			lib = ctypes.CDLL("./5.2.44.so"
-                                      )
-? 
-)
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
 
 [9
 
-]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 			print("
-              Solution vector from C:", x_sol) # This correctly prints [3. 2.]
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 			print("Solution vector from C:"
-                                      , x_sol) # This correctly prints [3. 2.]
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 			plt.plot(x_vals, y1, label=r"
-                                     $x+y=5$")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 			plt.plot(x_vals, y1, label=r"$x+y=5$"
-                                             )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 			plt.plot(x_vals, y2, label=r"
-                                     $x-y=1$")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 			plt.plot(x_vals, y2, label=r"$x-y=1$"
-                                             )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 			plt.scatter(x_sol[0], x_sol[1], color="
-                                               red", zorder=5)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 ...lt.scatter(x_sol[0], x_sol[1], color="red"
-                                                  , zorder=5)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...t(float(x_sol[0])+0.2, float(x_sol[1]), f"
-                                                  ({x_sol[0]:.1f}, {x_sol[1]...
-
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...l[1]), f"({x_sol[0]:.1f}, {x_sol[1]:.1f})"
-                                                  , color="red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...({x_sol[0]:.1f}, {x_sol[1]:.1f})", color="
-                                                  red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 ...sol[0]:.1f}, {x_sol[1]:.1f})", color="red"
-                                                  )
-? 
-)
-Overfull \vbox (13.72923pt too high) detected at line 254
- []
-
-
+ (./b.vrb)
 
 [10
 
@@ -2063,8 +1798,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3 		plt.plot(x_vals, y1, label=r"
-                                   $x+y=5$")
+l.14 print("
+            Plot saved to so_python_plot.png")
 ? 
 
 ! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
@@ -2073,209 +1808,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3 		plt.plot(x_vals, y1, label=r"$x+y=5$"
-                                           )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 		plt.plot(x_vals, y2, label=r"
-                                   $x-y=1$")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 		plt.plot(x_vals, y2, label=r"$x-y=1$"
-                                           )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 		plt.scatter(x_sol[0], x_sol[1], color="
-                                             red", zorder=5)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 		plt.scatter(x_sol[0], x_sol[1], color="red"
-                                                 , zorder=5)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...xt(float(x_sol[0])+0.2, float(x_sol[1]), f"
-                                                  ({x_sol[0]:.1f}, {x_sol[1]...
-
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...ol[1]), f"({x_sol[0]:.1f}, {x_sol[1]:.1f})"
-                                                  , color="red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ..."({x_sol[0]:.1f}, {x_sol[1]:.1f})", color="
-                                                  red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ..._sol[0]:.1f}, {x_sol[1]:.1f})", color="red"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 		plt.xlabel("
-                  x")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 		plt.xlabel("x"
-                    )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 		plt.ylabel("
-                  y")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 		plt.ylabel("y"
-                    )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 		plt.title("
-                 Graphical Solution of the Linear System")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...e("Graphical Solution of the Linear System"
-                                                  )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 		plt.axhline(0, color="
-                             black", linewidth=0.8)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 		plt.axhline(0, color="black"
-                                   , linewidth=0.8)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 		plt.axvline(0, color="
-                             black", linewidth=0.8)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 		plt.axvline(0, color="black"
-                                   , linewidth=0.8)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 		plt.savefig("
-                    Figure_1_Corrected.png")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 		plt.savefig("Figure_1_Corrected.png"
-                                           )
+l.14 print("Plot saved to so_python_plot.png"
+                                             )
 ? 
 )
 
@@ -2284,279 +1818,65 @@ l.14 		plt.savefig("Figure_1_Corrected.png"
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 	mp.use("
-             TkAgg")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 	mp.use("TkAgg"
-                   )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 	print("
-             Solution vector for the system of equations:",x)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 ...ution vector for the system of equations:"
-                                                  ,x)
-? 
-)
+ (./b.vrb)
 
 [12
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 		plt.plot(x_vals, y1, label=r"
-                                   $x + y = 5$")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 		plt.plot(x_vals, y1, label=r"$x + y = 5$"
-                                               )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 		plt.plot(x_vals, y2, label=r"
-                                    $x - y = 1$")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 		plt.plot(x_vals, y2, label=r"$x - y = 1$"
-                                                )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 		plt.scatter(x[0], x[1], color="
-                                      red", zorder=5)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 		plt.scatter(x[0], x[1], color="red"
-                                          , zorder=5)
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 		plt.text(x[0]+0.2, x[1], f"
-                                  ({x[0]:.1f}, {x[1]:.1f})", color="red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ...[0]+0.2, x[1], f"({x[0]:.1f}, {x[1]:.1f})"
-                                                  , color="red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ...x[1], f"({x[0]:.1f}, {x[1]:.1f})", color="
-                                                  red")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 ..., f"({x[0]:.1f}, {x[1]:.1f})", color="red"
-                                                  )
-? 
-)
+ (./b.vrb)
 
 [13
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 		plt.xlabel("
-                  x")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 		plt.xlabel("x"
-                    )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 		plt.ylabel("
-                  y")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 		plt.ylabel("y"
-                    )
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 		plt.title("
-                 Graphical Solution of the Linear System")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...e("Graphical Solution of the Linear System"
-                                                  )
-? 
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-7.
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 		plt.savefig("
-                    Figure_2")
-? 
-
-! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 		plt.savefig("Figure_2"
-                             )
-? 
-)
+ (./b.vrb)
 
 [14
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<figs/Figure_1.png, id=430, 462.528pt x 346.896pt>
-File: figs/Figure_1.png Graphic file (type png)
-<use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 329.
-(pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
+]
+\openout4 = `b.vrb'.
 
-Overfull \vbox (13.86041pt too high) detected at line 329
- []
-
-
+ (./b.vrb)
 
 [15
 
- <./figs/Figure_1.png>]
-<figs/Figure_2.png, id=461, 462.528pt x 346.896pt>
-File: figs/Figure_2.png Graphic file (type png)
-<use figs/Figure_2.png>
-Package pdftex.def Info: figs/Figure_2.png  used on input line 337.
-(pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
+]
+\openout4 = `b.vrb'.
 
-Overfull \vbox (13.86041pt too high) detected at line 337
+ (./b.vrb)
+
+[16
+
+]
+<figs/Figure_1.png, id=505, 722.7pt x 722.7pt>
+File: figs/Figure_1.png Graphic file (type png)
+<use figs/Figure_1.png>
+Package pdftex.def Info: figs/Figure_1.png  used on input line 350.
+(pdftex.def)             Requested size: 273.83728pt x 273.83487pt.
+
+Overfull \vbox (82.30855pt too high) detected at line 350
  []
 
 
 
-[16
+[17
+
+ <./figs/Figure_1.png>]
+<figs/Figure_2.png, id=535, 722.7pt x 722.7pt>
+File: figs/Figure_2.png Graphic file (type png)
+<use figs/Figure_2.png>
+Package pdftex.def Info: figs/Figure_2.png  used on input line 358.
+(pdftex.def)             Requested size: 273.83728pt x 273.83487pt.
+
+Overfull \vbox (82.30855pt too high) detected at line 358
+ []
+
+
+
+[18
 
  <./figs/Figure_2.png>]
 \tf@nav=\write7
@@ -2568,43 +1888,38 @@ Overfull \vbox (13.86041pt too high) detected at line 337
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
+runsystem(latexminted cleantemp  --timestamp 20250929184908 92EB5FFEE6AE2FEC3AD
+71C777531578F)...executed safely (allowed).
+
  (./b.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `b.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `b.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `b.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59194 strings out of 473197
- 1435060 string characters out of 5718606
- 2561222 words of memory out of 5000000
- 81428 multiletter control sequences out of 15000+600000
+ 59352 strings out of 473197
+ 1436699 string characters out of 5718606
+ 2584222 words of memory out of 5000000
+ 81563 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,123p,1169b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (16 pages, 242725 bytes).
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
+
+Output written on b.pdf (18 pages, 340110 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
- 35 named destinations out of 1000 (max. 500000)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 540 compressed objects within 6 object streams
+ 47 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

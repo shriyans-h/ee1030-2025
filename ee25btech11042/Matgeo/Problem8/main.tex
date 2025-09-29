@@ -69,55 +69,66 @@ text width=4em, text centered, rounded corners, minimum height=3em]
 	\end{align}
 	
 	\solution \\
-	Introduce $a$ and $b$ as follows:
+	 $\frac{A}{x+y} + \frac{B}{x-y} = C$ becomes:
 	\begin{align}
-		a = \frac{1}{x+y}, \quad b = \frac{1}{x-y}
+		c(x^2 - y^2) - (a+b)x + (a-b)y = 0 \label{eq:hyperbola_form}
 	\end{align}
-	Also define the vector $\vec{a} = \begin{myvec}{a\\b}\end{myvec}$. This gives us the simplified linear system:
+	Matrix form: $\vec{x}^\top V \vec{x} + 2\vec{u}^\top \vec{x} = 0$, where:
 	\begin{align}
-		\begin{myvec}{10 & 2} \end{myvec}\vec{a} &= 4 \\
-		\begin{myvec}{15 & -5} \end{myvec}\vec{a} &= -2
+		\vec{x} = \begin{myvec}{x \\ y}\end{myvec}, \quad
+		V = \begin{myvec}{c & 0 \\ 0 & -c}\end{myvec}, \quad
+		\vec{u} = \begin{myvec}{-(a+b)/2 \\ (a-b)/2}\end{myvec} \label{eq:matrix_defs}
+	\end{align}
+	The intersection points of the two hyperbolas lie on a Common chord, $c_1H_2-c_2H_1=0$, where $H_1=0$ and $H_2=0$ are the equations of each of hyperbolas. This results in the linear equation $\vec{n}^\top\vec{x}=0$,
+	\begin{align}
+		d = c_1(a_2+b_2) - c_2(a_1+b_1) \label{eq:D_coeff} \\
+		e = c_2(a_1-b_1) - c_1(a_2-b_2) \label{eq:E_coeff} \\
+		\text{where d and e are obtained by eliminating the quadratic terms  } \vec{n} = \begin{myvec}{d \\ e}\end{myvec}
 	\end{align}
 	
-	The augmented matrix for this system is:
+	The solution is the non-trivial intersection point of this common chord and either hyperbola
 	\begin{align}
-		\augvec{2}{1}{10&2&4\\15&-5&-2}
-		&\xleftrightarrow{\,R_2 \gets R_2- \frac{3}{2} R_1}
-		\augvec{2}{1}{10&2&4\\0&-8&-8}  \nonumber \\
-		&\xleftrightarrow{\,R_1 \gets R_1+\frac{1}{4} R_2}
-		\augvec{2}{1}{10&0&2\\0&-8&-8} \nonumber \\
-		&\xleftrightarrow[\,R_2 \gets -\frac{1}{8} R_2]{\,R_1 \gets \frac{1}{10} R_1}
-		\augvec{2}{1}{1&0&\frac{1}{5}\\0&1&1}
+		% --- Start with y in terms of x
+		y &= -\frac{d}{e}x \label{eq:y_formula} \\
+		% --- Substitute y into the hyperbola equation
+		c_1\brak{x^2 - \brak{-\frac{d}{e}x}^2} - \brak{a_1+b_1}x + \brak{a_1-b_1}\brak{-\frac{d}{e}x} &= 0 \\
+		% --- Factor out the common 'x' term. This is a critical step for correctness.
+		\implies x \brak{ x\brak{c_1\brak{\frac{e^2-d^2}{e^2}}} - \brak{\frac{e\brak{a_1+b_1} + d\brak{a_1-b_1}}{e}} } &= 0 \\
+		% --- To find the non-trivial solution, set the inner bracket to zero and rearrange
+		\therefore x\brak{c_1\brak{\frac{e^2-d^2}{e^2}}} &= \brak{\frac{e\brak{a_1+b_1}+d\brak{a_1-b_1}}{e}} \\
+		% --- Solve for x to get the final formula
+		\implies x &= \frac{e\brak{e\brak{a_1+b_1}+d\brak{a_1-b_1}}}{c_1\brak{e^2-d^2}} \label{eq:x_formula}
 	\end{align}
-	From the reduced matrix, we have the solution:
+	For the given system, the coefficients are:
 	\begin{align}
-		\vec{a} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
+		a_1 = 10, b_1 = 2, c_1 = 4 \quad \text{and} \quad a_2 = 15, b_2 = -5, c_2 = -2
 	\end{align}
-	Substituting back for $x$ and $y$ gives:
+	Using \eqref{eq:D_coeff} and \eqref{eq:E_coeff}, we calculate the common chord coefficients:
 	\begin{align}
-		\begin{myvec}{\frac{1}{x+y} \\ \frac{1}{x-y}} \end{myvec} = \begin{myvec}{\frac{1}{5}\\1} \end{myvec}
-		\implies \begin{myvec}{x+y \\ x-y} \end{myvec} = \begin{myvec}{5\\1} \end{myvec}
+		d = 4\brak{15-5} - \brak{-2}\brak{10+2} = 4\brak{10} + 2\brak{12} = 64 \\
+		e = \brak{-2}\brak{10-2} - 4\brak{15--5} = -2(8) - 4(20) = -96
 	\end{align}
-	This is another linear system, $\begin{myvec}{1&1 \\ 1&-1} \end{myvec}\vec{x} = \begin{myvec}{5\\1} \end{myvec}$, where $\vec{x} = \begin{myvec}{x\\y}\end{myvec}$.
-	We can solve for $\vec{x}$ by multiplying by the inverse of the matrix:
+	Substituting these into the formula for $x$ from \eqref{eq:x_formula}:
 	\begin{align}
-		\vec{x} &= \begin{myvec}{1&1 \\ 1&-1} \end{myvec}^{-1} \begin{myvec}{5\\1} \end{myvec} \\
-		&= \begin{myvec}{\frac{1}{2}&\frac{1}{2} \\ \frac{1}{2}&-\frac{1}{2}} \end{myvec} \begin{myvec}{5\\1} \end{myvec} \\
-		&= \begin{myvec}{\frac{1}{2}(5) + \frac{1}{2}(1) \\ \frac{1}{2}(5) - \frac{1}{2}(1)} \end{myvec} \\
-		&= \begin{myvec}{\frac{6}{2} \\ \frac{4}{2}} \end{myvec} = \begin{myvec}{3 \\ 2} \end{myvec}
+		x = \frac{\brak{-96} \brak{\brak{-96}\brak{12} + \brak{64}\brak{8}}}{4\brak{\brak{-96}^2-\brak{64}^2}} \\
+		= \frac{-96  \brak{-1152 + 512}}{4\brak{9216 - 4096}} \\
+		= \frac{-96\brak{-640}}{4\brak{5120}} = \frac{61440}{20480} = 3 \label{eq:x_val}
 	\end{align}
-	Thus, the solution is $x=3$ and $y=2$.
-	
+	Using the value of $x$ from \eqref{eq:x_val} in the formula for $y$ \eqref{eq:y_formula}:
+	\begin{align}
+		y = -\frac{64}{-96}(3) = \frac{2}{3}3 = 2 \label{eq:y_val}
+	\end{align}
+	Thus, from \eqref{eq:x_val} and \eqref{eq:y_val}, the solution is $x=3$ and $y=2$.
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width = 0.8\columnwidth]{figs/Figure_1.png}
+		\includegraphics[width = 0.6\columnwidth]{figs/Figure_1.png}
 		\caption*{}
 		\label{fig1}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width = 0.8\columnwidth]{figs/Figure_2.png}
+		\includegraphics[width = 0.6\columnwidth]{figs/Figure_2.png}
 		\caption*{}
 		\label{fig2}
 	\end{figure}
