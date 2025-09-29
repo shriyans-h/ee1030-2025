@@ -66,68 +66,60 @@ columns=fullflexible
 
 \numberwithin{equation}{section}
 
-\title{2.6.35}
+\title{4.4.20}
 \author{AI25BTECH11024 - Pratyush Panda}
 \begin{document}
 \maketitle
 
 \begin{frame}
 \textbf{Question: } \\
-The value of $\hat{\Vec{i}}.\brak{\hat{\Vec{j}} \times \hat{\Vec{k}}} + \hat{\Vec{j}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{k}}} + \hat{\Vec{k}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{j}}}$ is \underline{\hspace{2cm}}
+The pair of linear equations $2x=5y+6$ and $15y=6x-18$ represents two lines which are: 
+\begin{enumerate}
+\item[(a)] intersecting
+\item[(b)] parallel
+\item[(c)] coincident
+\item[(d)] either intersecting or parallel
+\end{enumerate}
 \end{frame}
+
 
 \begin{frame}
 \textbf{Solution: } \\
-Given:
+First, let us rewrite the equation of lines as;
 \begin{align}
-\Vec{\hat{i}}=\Vec{e_1}=\myvec{1 \\ 0 \\ 0}, \, \Vec{\hat{j}}=\Vec{e_2}=\myvec{0 \\ 1 \\ 0}, \, \Vec{\hat{k}}=\Vec{e_3}=\myvec{0 \\ 0 \\ 1}
+ax+by=c \\
+2x-5y=6 \\
+6x-15y=18 \textit{ or } 2x-5y=6
 \end{align}
 
-Each term of the expression in the question can be found using the scalar triple product determinant.\\
-The first term can be written as:
+Normal vectors of the given lines can be written as:
 \begin{align}
-\brak{\hat{\Vec{i}}.\brak{\hat{\Vec{j}} \times \hat{\Vec{k}}}} = 
-\myvec{e_1 && e_2 && e_3} =
-\myvec{1 && 0 && 0 \\
-       0 && 1 && 0 \\
-       0 && 0 && 1}
-\end{align}
-Determinant of this matrix is 1. Thus, the value of first term is 1.
-\end{frame}
-
-\begin{frame}
-The second term can be written as:
-\begin{align}
-\brak{\hat{\Vec{j}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{k}}}} = 
-\myvec{e_2 && e_3 && e_1} =
-\myvec{0 && 0 && 1 \\
-       1 && 0 && 0 \\
-       0 && 1 && 0}
-\end{align}
-Determinant of this matrix is -1. Thus, the value of first term is -1.
-
-The third term can be written as:
-\begin{align}
-\brak{\hat{\Vec{k}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{j}}}} = 
-\myvec{e_3 && e_1 && e_2} =
-\myvec{0 && 1 && 0 \\
-       0 && 0 && 1 \\
-       1 && 0 && 0}
-\end{align}
-Determinant of this matrix is 1. Thus, the value of first term is 1.
-\end{frame}
-
-\begin{frame}
-So, the sum of all the terms is;
-\begin{align}
-\hat{\Vec{i}}.\brak{\hat{\Vec{j}} \times \hat{\Vec{k}}} + \hat{\Vec{j}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{k}}} + \hat{\Vec{k}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{j}}} = 1 + (-1) + 1
-\end{align}
-\begin{align}
-or, \, \hat{\Vec{i}}.\brak{\hat{\Vec{j}} \times \hat{\Vec{k}}} + \hat{\Vec{j}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{k}}} + \hat{\Vec{k}}.\brak{\hat{\Vec{i}} \times \hat{\Vec{j}}} = 1
+\Vec{n}=\myvec{a \\ b} \\
+\Vec{n_1}=\myvec{2 \\ -5} && \Vec{n_2}=\myvec{2 \\ -5}
 \end{align}
 \end{frame}
 
 \begin{frame}
+Let the matrix $\Vec{M}$ be;
+\begin{align}
+\Vec{M}=\myvec{n_1 & n_2}^T=\myvec{2 & -5 \\ 2 & -5}
+\end{align}
+
+After reducing it to its Echelon form;
+\begin{align}
+\myvec{2 & -5 \\ 2 & -5}\xrightarrow{R_2\longleftrightarrow R_2-R_1}\myvec{2 & -5 \\ 0 & 0}
+\end{align}
+
+We can see that the rank of $\Vec{M}$ is 1. Therefore, the given lines can be either parallel or coincident.
+\end{frame}
+
+\begin{frame}
+Now, consider the matrices $\Vec{P}$ and $\Vec{Q}$;
+\begin{align}
+\Vec{P}=\myvec{a_1 & c_1 \\ a_2 & c_2} && \Vec{Q}=\myvec{b_1 & c_1 \\ b_2 & c_2}
+\end{align}
+Since, the rank of both the matrices is 1. Thus, we can conclude that the the given lines are coincident.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\columnwidth]{figs/img.png}

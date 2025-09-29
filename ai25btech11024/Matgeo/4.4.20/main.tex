@@ -42,7 +42,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{2.2.17}
+\title{4.4.20}
 \author{AI25BTECH11024 - Pratyush Panda
 }
 \maketitle
@@ -60,43 +60,50 @@
 \renewcommand{\thetable}{\theenumi}
 
 \textbf{Question: } \\
-Find the angle between the lines: \\
-\begin{align}
-y=\brak{2-\sqrt{3}}\brak{x+5} \, \text{and}
-\end{align}
-
-\begin{align}
-y=\brak{2+\sqrt{3}}\brak{x-7}.
-\end{align}
+The pair of linear equations $2x=5y+6$ and $15y=6x-18$ represents two lines which are: 
+\begin{enumerate}
+\item intersecting
+\item parallel
+\item coincident
+\item either intersecting or parallel
+\end{enumerate}
+\vspace{0.7cm}
 
 \textbf{Solution: } \\
-The given equations can be written as;
+First, let us rewrite the equation of lines as;
 \begin{align}
-\brak{2-\sqrt{3}}x - y = \brak{\sqrt{3}-2}5
-\end{align}
-\begin{align}
-\brak{2+\sqrt{3}}x - y = \brak{2+\sqrt{3}}7
-\end{align}
-
-From this, we can see that the normal vectors of the lines can  be expressed as,
-
-\begin{align}
-\Vec{n_1}=\myvec{2-\sqrt{3} \\ -1}, \Vec{n_2}=\myvec{2+\sqrt{3} \\ -1}
+ax+by=c \\
+2x-5y=6 \\
+6x-15y=18 \textit{ or } 2x-5y=6
 \end{align}
 
-
-The angle between the lines can be obtained as;
-
+Normal vectors of the given lines can be written as:
 \begin{align}
-\cos{\theta}=\frac{n_1^Tn_2}{||n_1||\,||n_2||}=\frac{1}{2}
+\Vec{n}=\myvec{a \\ b} \\
+\Vec{n_1}=\myvec{2 \\ -5} && \Vec{n_2}=\myvec{2 \\ -5}
 \end{align}
+
+Let the matrix $\Vec{M}$ be;
 \begin{align}
-or, \, \theta=60^\circ
+\Vec{M}=\myvec{n_1 & n_2}^T=\myvec{2 & -5 \\ 2 & -5}
 \end{align}
+
+After reducing it to its Echelon form;
+\begin{align}
+\myvec{2 & -5 \\ 2 & -5}\xrightarrow{R_2\longleftrightarrow R_2-R_1}\myvec{2 & -5 \\ 0 & 0}
+\end{align}
+
+We can see that the rank of $\Vec{M}$ is 1. Therefore, the given lines can be either parallel or coincident.
+
+Now, consider the matrices $\Vec{P}$ and $\Vec{Q}$;
+\begin{align}
+\Vec{P}=\myvec{a_1 & c_1 \\ a_2 & c_2} && \Vec{Q}=\myvec{b_1 & c_1 \\ b_2 & c_2}
+\end{align}
+Since, the rank of both the matrices is 1. Thus, we can conclude that the the given lines are coincident.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\columnwidth]{figs/img.png}
+\includegraphics[width=0.8\columnwidth]{figs/img.png}
 \caption*{}
 \end{figure}
 
