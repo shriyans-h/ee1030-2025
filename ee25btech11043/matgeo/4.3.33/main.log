@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 SEP 2025 13:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  29 SEP 2025 13:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2184,7 +2184,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--61
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
@@ -2194,7 +2199,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
  []
 
 
-Underfull \vbox (badness 1990) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
 
 
 
@@ -2221,7 +2228,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  54441 strings out of 473190
  1311056 string characters out of 5704335
- 1890493 words of memory out of 5000000
+ 1891493 words of memory out of 5000000
  76857 multiletter control sequences out of 15000+600000
  625367 words of font info for 171 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -2234,7 +2241,7 @@ texmf-dist/fonts/type1/public/txfonts/txsy.pfb></opt/homebrew/Cellar/texlive/20
 r/texlive/20250308_1/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/ho
 mebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on main.pdf (2 pages, 79240 bytes).
+Output written on main.pdf (2 pages, 79233 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
