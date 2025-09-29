@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 15:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1798,74 +1798,29 @@ l.134 \end{frame}
 [5
 
 ]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.159  \end{frame}
-                  
-? 
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 161.
 
-! Package amsmath Error: \begin{align} allowed only in paragraph mode.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 161.
 
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159  \end{frame}
-                  
-? 
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 161.
 
-! Package amsmath Error: \begin{align} allowed only in paragraph mode.
 
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159  \end{frame}
-                  
-? 
-
-! Package amsmath Error: \begin{align} allowed only in paragraph mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159  \end{frame}
-                  
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.159  \end{frame}
-                  
-? 
-
-Overfull \hbox (131.60626pt too wide) in paragraph at lines 159--159
-\OT1/lmss/m/n/10.95 0\OT1/lmss/m/sl/10.95 whichcanbeexpressedastheconicTo^^Lndt
-herootsof\OT1/lmss/m/n/10.95 (9)\OML/lmm/m/it/10.95 ; \OT1/lmss/m/sl/10.95 we^^
-Lndthepointso^^Lntersectionoftheconicwiththex \OMS/lmsy/m/n/10.95 ^^@ 
+Overfull \vbox (34.14815pt too high) detected at line 161
  []
 
 
 
 [6
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 171.
-
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 171.
-
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 171.
-
-
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/
+fonts/enc/dvips/lm/lm-mathit.enc}]
 
 [7
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+]
 
 [8
 
@@ -1895,7 +1850,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Outline0.2})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \section{C Code}
+l.214 \section{C Code}
                       
 \openout4 = `main.vrb'.
 
@@ -1912,7 +1867,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (6.19333pt too high) detected at line 237
+Overfull \vbox (6.19333pt too high) detected at line 239
  []
 
 
@@ -1924,7 +1879,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Outline0.3})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.239 \section{Python Code}
+l.241 \section{Python Code}
                            
 \openout4 = `main.vrb'.
 
@@ -1942,7 +1897,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (6.19333pt too high) detected at line 285
+Overfull \vbox (6.19333pt too high) detected at line 287
  []
 
 
@@ -1994,7 +1949,7 @@ l.15 ...{B}}$\n({pointB[0]:.0f}, {pointB[1]:.0f})"
                                                   
 ? 
 )
-Overfull \vbox (6.19333pt too high) detected at line 309
+Overfull \vbox (6.19333pt too high) detected at line 311
  []
 
 
@@ -2059,7 +2014,7 @@ l.5 ax.set_xlabel("x"
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250929152822 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250929152957 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -2077,7 +2032,7 @@ Here is how much of TeX's memory you used:
  81901 multiletter control sequences out of 15000+600000
  600815 words of font info for 79 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 128i,16n,123p,1172b,1672s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,18n,123p,1172b,1672s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /lmss10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/share
@@ -2087,7 +2042,7 @@ public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (15 pages, 261511 bytes).
+Output written on main.pdf (15 pages, 257437 bytes).
 PDF statistics:
  543 PDF objects out of 1000 (max. 8388607)
  486 compressed objects within 5 object streams
