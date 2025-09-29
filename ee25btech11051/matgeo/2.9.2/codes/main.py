@@ -4,13 +4,6 @@ import ctypes
 import os
 import sys
 
-norm = ctypes.CDLL('./norm.so')
-norm.norm.argtypes = [
-        ctypes.POINTER(ctypes.c_double),
-        ctypes.c_int
-]
-
-norm.norm.restype = ctypes.c_double
 
 A=np.array([-5, 3], dtype=np.float64)
 B=np.array([5, 3], dtype=np.float64)
@@ -20,10 +13,7 @@ D=B-A
 
 fig, ax=plt.subplots()
 
-norm = norm.norm(
-        D.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-        m
-)
+norm = np.linalg.norm(D)
 
 t=(1.7/2)*norm
 
@@ -60,7 +50,7 @@ plt.annotate('(5,3)', xy=(B[0],B[1]), fontsize=12)
 plt.plot(C1[0], C1[1], 'bo', label='Point C1')  
 plt.annotate('(0,11.5)', xy=(C1[0],C1[1]), fontsize=12)
 plt.plot(C2[0], C2[1], 'bo', label='Point C2')  
-plt.annotate('(5,-5.5)', xy=(C2[0],C2[1]), fontsize=12)
+plt.annotate('(0,-5.5)', xy=(C2[0],C2[1]), fontsize=12)
 
 for axis in ['bottom', 'left']:
     ax.spines[axis].set_color('black')

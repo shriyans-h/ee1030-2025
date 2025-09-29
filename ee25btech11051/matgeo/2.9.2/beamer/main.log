@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  14 SEP 2025 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  28 SEP 2025 11:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1145,11 +1145,7 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 83.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./output.aux
-
-LaTeX Warning: Label `0.9' multiply defined.
-
-)
+) (./output.aux)
 \openout1 = `output.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 83.
@@ -1374,21 +1370,21 @@ l.101 \end{frame}
 pdfTeX warning (ext4): destination with the same identifier (name{0.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.111 \end{frame}
+l.118 \end{frame}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{0.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.118 \end{frame}
                  ]
 
 [5
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{0.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.127 \end{frame}
-                 
 pdfTeX warning (ext4): destination with the same identifier (name{0.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.127 \end{frame}
+l.131 \end{frame}
                  ]
 
 [6
@@ -1397,12 +1393,12 @@ l.127 \end{frame}
 pdfTeX warning (ext4): destination with the same identifier (name{0.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.142 \end{frame}
+l.144 \end{frame}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{0.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.142 \end{frame}
+l.144 \end{frame}
                  ]
 
 [7
@@ -1411,40 +1407,40 @@ l.142 \end{frame}
 pdfTeX warning (ext4): destination with the same identifier (name{0.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.151 \end{frame}
+l.160 \end{frame}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{0.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.160 \end{frame}
                  ]
-Overfull \hbox (47.8604pt too wide) detected at line 161
-[]
- []
-
-
 
 [8
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{0.8}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{0.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.161 \end{frame}
+l.174 \end{frame}
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{0.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.174 \end{frame}
                  ]
 
 [9
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{0.9}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{0.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.177 \end{frame}
+l.187 \end{frame}
                  
-pdfTeX warning (ext4): destination with the same identifier (name{0.9}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{0.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.177 \end{frame}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{0.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.177 \end{frame}
+l.187 \end{frame}
                  ]
 \openout4 = `output.vrb'.
 
@@ -1524,10 +1520,10 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [19
 
 ]
-<figs/fig1.png, id=579, 462.528pt x 346.896pt>
+<figs/fig1.png, id=586, 462.528pt x 346.896pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 337.
+Package pdftex.def Info: figs/fig1.png  used on input line 347.
 (pdftex.def)             Requested size: 273.83728pt x 205.38673pt.
 
 
@@ -1543,32 +1539,29 @@ Package pdftex.def Info: figs/fig1.png  used on input line 337.
 \tf@snm=\write9
 \openout9 = `output.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250914162554Z 78E6221F6393D1356681DB398F14CE6D)...executed.
+runsystem(latexminted cleantemp  --timestamp 20250928115719Z 78E6221F6393D1356681DB398F14CE6D)...executed.
 
 (./output.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `output.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59815 strings out of 467886
- 1452072 string characters out of 5434057
- 2510523 words of memory out of 5000000
- 87321 multiletter control sequences out of 15000+600000
+ 59821 strings out of 467886
+ 1452102 string characters out of 5434057
+ 2509523 words of memory out of 5000000
+ 87324 multiletter control sequences out of 15000+600000
  668492 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,18n,123p,1172b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,1172b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on output.pdf (20 pages, 215907 bytes).
+Output written on output.pdf (20 pages, 219140 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 579 compressed objects within 6 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 586 compressed objects within 6 object streams
+ 53 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

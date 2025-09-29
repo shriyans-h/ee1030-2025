@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  14 SEP 2025 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.27)  28 SEP 2025 11:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1370,11 +1370,7 @@ Package translations Info: No language package found. I am going to use `english
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 46.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-) (./output.aux
-
-LaTeX Warning: Label `0.9' multiply defined.
-
-)
+) (./output.aux)
 \openout1 = `output.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 46.
@@ -1578,41 +1574,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-<figs/fig1.png, id=50, 462.528pt x 346.896pt>
+<figs/fig1.png, id=54, 462.528pt x 346.896pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 151.
+Package pdftex.def Info: figs/fig1.png  used on input line 156.
 (pdftex.def)             Requested size: 291.35735pt x 218.52974pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[2 <./figs/fig1.png>] (./output.aux)
+
+
+[2]
+
+[3 <./figs/fig1.png>] (./output.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `output.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54578 strings out of 467886
- 1302062 string characters out of 5434057
- 1903432 words of memory out of 5000000
- 82307 multiletter control sequences out of 15000+600000
+ 54584 strings out of 467886
+ 1302112 string characters out of 5434057
+ 1903481 words of memory out of 5000000
+ 82310 multiletter control sequences out of 15000+600000
  690663 words of font info for 171 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,17n,107p,1194b,1035s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,107p,1194b,1035s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on output.pdf (2 pages, 75786 bytes).
+Output written on output.pdf (3 pages, 76156 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 108 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

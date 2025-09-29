@@ -78,73 +78,78 @@ Let the two given points be represented as vectors, \textbf{A} and \textbf{B}, r
 \end{align}
 
 Let us assume the third point be \textbf{C}.\\
-\textbf{C} must be equidistant from both \textbf{A} and \textbf{B}, and it lies on the perpendicular bisector to both \textbf{A} and \textbf{B}.
+We have to first find the line equation of the line joining the points A and B.
 
-The distance between \textbf{A} and \textbf{B}, is given by
 \begin{align}
-    \norm{\textbf{A}-\textbf{B}}=\norm{\myvec{-10\\0}}
+    \textbf{x} = \textbf{A} + t(\textbf{B}-\textbf{A})
     \label{0.2}
 \end{align}
 
-We know that the norm of a vector is given by
+This gives,
 
 \begin{align}
-    \norm{\textbf{A}-\textbf{B}}^2 = (\textbf{A}-\textbf{B})^\text{T}(\textbf{A}-\textbf{B}) \implies \myvec{-10&0}.\myvec{-10\\0}= 100
+    \textbf{x} = \myvec{-5\\3}+t\myvec{10\\0}
     \label{0.3}
 \end{align}
 
-As the norm of a vector is always greater than or equal to zero. From \ref{0.3} we get
+We have to find the lines aligned at $60^{\circ}$ to this line at both \textbf{A} and \textbf{B}.\\
+We can get this by multiplying a rotation vector to this vector, this is given by,
 
 \begin{align}
-    \norm{\textbf{A}-\textbf{B}} = 10
+    \textbf{V}(\theta) = \myvec{\cos\theta & -\sin\theta \\\sin\theta & \cos\theta}
     \label{0.4}
 \end{align}
 
-The midpoint to the line segment \textbf{AB} is given by
+By multiplying this to \ref{0.3} with $\theta = \pm 60^{\circ}$, we get the lines,
 
 \begin{align}
-        \frac{\textbf{A}+\textbf{B}}{2} = \frac{\myvec{-5\\3}+\myvec{5\\3}}{2} = \myvec{0\\3}
-        \label{0.5}
+    \textbf{x} = \myvec{-5\\3} + t(\textbf{V}(\pm 60^{\circ}))\myvec{1\\0}
+    \label{0.5}
 \end{align}
 
-Slope of line segment \textbf{AB} is given by
+The lines we get from this equation are,
+
 \begin{align}
-    \textbf{B}-\textbf{A}=k\myvec{1\\m}\text{, where m is the slope of the line segment}
+    \textbf{x} = \myvec{-5\\3}+t\myvec{\frac{1}{2}\\\frac{\sqrt{3}}{2}}
     \label{0.6}
 \end{align}
 
-On further solving
-
 \begin{align}
-    \textbf{B}-\textbf{A}=\myvec{10\\0} \implies m=0
+    \textbf{x} = \myvec{-5\\3}+t\myvec{\frac{1}{2}\\\frac{-\sqrt{3}}{2}}
     \label{0.7}
 \end{align}
 
-Therefore the perpendicular bisector for this line segment is a vertical line passing through the midpoint (0, 3).\\
-
-In parametric form
+By doing the same thing taking point B,
 
 \begin{align}
-    \textbf{}
-    \textbf{C}= \myvec{0\\t+3}\text{, where t is the distance between the point \textbf{C} and the line segment \textbf{AB}}
+    \textbf{x} = \myvec{5\\3}+t\myvec{\frac{1}{2}\\\frac{\sqrt{3}}{2}}
     \label{0.8}
 \end{align}
 
-We know for an equilateral triangle, distance between a point and the opposite edge is $\frac{\sqrt{3}}{2}$ times the length of an edge of that triangle.
-
 \begin{align}
-    t=\pm \frac{\sqrt{3}}{2}\norm{\textbf{A}-\textbf{B}} \implies t=\pm 5\sqrt{3}
+    \textbf{x} = \myvec{5\\3}+t\myvec{\frac{1}{2}\\\frac{-\sqrt{3}}{2}}
     \label{0.9}
 \end{align}
 
-Therefore the required points for \textbf{C} are given by
+We can get two possible points that fit the given conditions for an equilateral triangle, let us assume these to be \textbf{C1} and \textbf{C2}\\
 
+We can get \textbf{C1} by finding the point of intersection of \ref{0.6} and \ref{0.9}
 \begin{align}
-    \textbf{C} = \myvec{0\\\pm 5\sqrt{3}+3}
-    \label{0.9}
+    \myvec{-5\\3} + t\myvec{\frac{1}{2}\\\frac{\sqrt{3}}{2}} = \myvec{5\\3} +t\myvec{\frac{1}{2}\\\frac{-\sqrt{3}}{2}}
+    \label{0.10}
 \end{align}
 
-On plotting this gives us
+On further solving, we get the point to be,
+\begin{align}
+    \textbf{C1} = \myvec{0\\3+5\sqrt{3}} = \myvec{0\\11.5}
+    \label{0.11}
+\end{align}
+
+Similarly, on solving for the other two lines, \ref{0.7} and \ref{0.8}, we get,
+\begin{align}
+    \textbf{C2} = \myvec{0\\3-5\sqrt{3}} = \myvec{0\\-5.5}
+    \label{0.12}
+\end{align}
 
 \begin{figure}[H]
     \centering
@@ -152,10 +157,5 @@ On plotting this gives us
     \caption{2D Plot}
     \label{3D Plot}
 \end{figure}
-
-
-
-
-
 
 \end{document}
