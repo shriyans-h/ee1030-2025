@@ -91,27 +91,28 @@ The equation of a line is
 \begin{align}
 \vec{n}^\top\vec{x} = c
 \end{align}
-Where $\vec{n} = \myvec{n_1 \\ n_2}$ is the normal vector and $\vec{x} = \myvec{x \\ y}$ is the position vector.
+Where $\vec{n} = \myvec{n_1 \\ n_2}$ is the normal vector and $\vec{x}$ is the position vector.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-X-axis intercept
+X-axis intercept is at $\vec{A}$
 \begin{align}
- y=0\\
-x = \frac{c}{n_1}
+\vec{n}^\top\vec{A}=c\\
+\myvec{n_1&n_2}\myvec{a\\0}=c\\
+n_1a=c\\
+\vec{A}=\myvec{\frac{c}{n_1}\\0}
 \end{align}
-Thus, $\vec{A}$ is $\myvec{\frac{c}{n_1} \\ 0}$.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Y-axis intercept
+Y-axis intercept is at $\vec{B}$
 \begin{align}
-x=0\\
-y = \frac{c}{n_2}
+\vec{n}^\top\vec{B}=c\\
+\myvec{n_1&n_2}\myvec{0\\b}=c\\
+n_2b=c\\
+\vec{B}=\myvec{0\\\frac{c}{n_2}}
 \end{align}
-Thus, $\vec{B}$ is $\myvec{0 \\ \frac{c}{n_2}}$.
 \end{frame}
-
 \begin{frame}{Theoretical Solution}
 The $\vec{M}$ is the midpoint of $\vec{A}$ and $\vec{B}$\\
 Given $\vec{M} = \myvec{3 \\ 2}$.
@@ -136,7 +137,7 @@ c = 6 \times 2 = 12
 
 The final equation of the line is $\vec{n}^\top \vec{x} = c$
 \begin{align}
-\myvec{2 & 3} \myvec{x \\ y} = 12
+\myvec{2 & 3} \vec{x} = 12
 \end{align}
 \end{frame}
 
