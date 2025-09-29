@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  26 SEP 2025 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  29 SEP 2025 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1132,13 +1132,25 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 71.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 71.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 71.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 65.
 
-[2] [3] [4]
+[2] [3]
+<../figs//img.png, id=39, 462.528pt x 346.896pt>
+File: ../figs//img.png Graphic file (type png)
+<use ../figs//img.png>
+Package pdftex.def Info: ../figs//img.png  used on input line 122.
+(pdftex.def)             Requested size: 342.2953pt x 256.73607pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <../figs//img.png>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1153,13 +1165,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26844 strings out of 476091
- 515576 string characters out of 5794081
+ 26861 strings out of 476091
+ 515837 string characters out of 5794081
  1866330 words of memory out of 5000000
- 46675 multiletter control sequences out of 15000+600000
+ 46687 multiletter control sequences out of 15000+600000
  519919 words of font info for 59 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,18n,131p,398b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,18n,131p,398b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
@@ -1170,10 +1182,10 @@ nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (4 pages, 98858 bytes).
+Output written on main.pdf (5 pages, 155712 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,31 +2,28 @@ from ctypes import *
 
 filename = './libmain.so'
 
-
-# Load the shared object file (pgm.so)
 clib = CDLL(filename)
 
-class Vec2(Structure):
-    _fields_ = [('x',c_float),('y',c_float)]
-    def __init__(self,x, y):
-        super().__init__()
-        self.x=x
-        self.y=y
-    def __sub__(self,other):
-        return Vec2(self.x-other.x,self.y-other.y)
+def rank(arr):
+    m=len(arr)
+    n=len(arr[0])
+    r = clib.rank
+    r.restype = c_int
+    t = c_double*n*m
+    r.argtypes = [c_int, c_int , t]
+
+    t1 = c_double*n
+
+    a = t(t1(),t1())
+    for i in range(m):
+        for j in range(n):
+            a[i][j]=arr[i][j]
+
+    print(r(m,n,a))
 
 
-dotVec2 = clib.dotVec2
-dotVec2.restype=c_int
-dotVec2.argtypes=[Vec2,Vec2]
-
-A,B,C = Vec2(-2,3),Vec2(8,3),Vec2(6,7)
-a=B-C
-b=A-C
-c=A-B
-print(f"Dot prodouct of a and b ={dotVec2(a,b)}")
-print(f"Dot prodouct of a and c ={dotVec2(a,c)}")
-print(f"Dot prodouct of b and c ={dotVec2(b,c)}")
-
+a,d,a2,d2=0,2*5,8,4
+b,c,b2=0,5*5,10
+rank([[a2-d2,a2,a2+d2],[b2-d2,b2,b2+d2],[a-b+c-d,a-b,a-b-c+d]])
 
 
