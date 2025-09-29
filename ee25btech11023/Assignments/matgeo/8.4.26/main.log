@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  28 SEP 2025 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1899,10 +1899,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -1920,7 +1916,7 @@ blic/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pf
 b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (3 pages, 108379 bytes).
+Output written on main.pdf (3 pages, 113416 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  105 compressed objects within 2 object streams

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  28 SEP 2025 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1781,7 +1781,7 @@ Overfull \vbox (6.12984pt too high) detected at line 234
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
 Package pdftex.def Info: figs/fig1.png  used on input line 5.
-(pdftex.def)             Requested size: 239.60567pt x 123.37485pt.
+(pdftex.def)             Requested size: 342.2953pt x 176.2637pt.
 
 
 Package hyperref Warning: Ignoring empty anchor on input line 7.
@@ -1838,6 +1838,10 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
+Overfull \vbox (6.19333pt too high) detected at line 314
+ []
+
+
 
 [13
 
@@ -1845,12 +1849,23 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (6.19333pt too high) detected at line 335
+Overfull \vbox (6.19333pt too high) detected at line 333
  []
 
 
 
 [14
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (6.19333pt too high) detected at line 357
+ []
+
+
+
+[15
 
 ]
 \tf@nav=\write7
@@ -1862,7 +1877,7 @@ Overfull \vbox (6.19333pt too high) detected at line 335
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250928143403 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250929140742 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1874,10 +1889,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C08CEE19C47814D5502351B5119293E0;1055.
  ) 
 Here is how much of TeX's memory you used:
- 59933 strings out of 475171
- 1442589 string characters out of 5767095
- 2580222 words of memory out of 5000000
- 81889 multiletter control sequences out of 15000+600000
+ 59947 strings out of 475171
+ 1442698 string characters out of 5767095
+ 2628222 words of memory out of 5000000
+ 81899 multiletter control sequences out of 15000+600000
  600815 words of font info for 79 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
  128i,21n,123p,1172b,1672s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1889,10 +1904,10 @@ public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist
 /fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/l
 mtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (14 pages, 251640 bytes).
+Output written on main.pdf (15 pages, 259043 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 478 compressed objects within 5 object streams
+ 40 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
