@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  28 SEP 2025 23:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  29 SEP 2025 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -935,21 +935,37 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5
 
-] [6
+]
+Overfull \vbox (18.47714pt too high) detected at line 170
+ []
+
+[6
 
 ] [7
 
 ]
-<figs/circle_tangents.png, id=63, 578.16pt x 578.16pt>
-File: figs/circle_tangents.png Graphic file (type png)
-<use figs/circle_tangents.png>
-Package pdftex.def Info: figs/circle_tangents.png  used on input line 195.
-(pdftex.def)             Requested size: 205.37926pt x 205.37614pt.
-
-Overfull \vbox (2.103pt too high) detected at line 195
+Overfull \vbox (9.1105pt too high) detected at line 215
  []
 
 [8
+
+]
+Overfull \vbox (6.82608pt too high) detected at line 242
+ []
+
+[9
+
+]
+<figs/circle_tangents.png, id=80, 578.16pt x 578.16pt>
+File: figs/circle_tangents.png Graphic file (type png)
+<use figs/circle_tangents.png>
+Package pdftex.def Info: figs/circle_tangents.png  used on input line 253.
+(pdftex.def)             Requested size: 205.37926pt x 205.37614pt.
+
+Overfull \vbox (2.103pt too high) detected at line 253
+ []
+
+[10
 
  <./figs/circle_tangents.png>]
 \tf@nav=\write6
@@ -970,18 +986,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26650 strings out of 474222
- 504503 string characters out of 5748734
- 1935975 words of memory out of 5000000
- 48344 multiletter control sequences out of 15000+600000
+ 26664 strings out of 474222
+ 504615 string characters out of 5748734
+ 1939975 words of memory out of 5000000
+ 48351 multiletter control sequences out of 15000+600000
  567035 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,131p,398b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on main.pdf (8 pages, 134977 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb>
+Output written on main.pdf (10 pages, 154912 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

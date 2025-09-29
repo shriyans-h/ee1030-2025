@@ -103,23 +103,77 @@ Therefore,
 
 Therefore the locus of point $\vec{p}$ is a circle with center $\vec{0}$ and radius 8 cm.\\
 
-Consider point $\vec{P} = \myvec{8\\0}$ from which tangents are drawn.\\
-
-Let the slope of tangent be m and the tangent equationn is given as :
-
-\begin{align}
-  \vec{n}^\top\vec{x} &= \vec{n}^\top\vec{P} & \vec{n} &= \myvec{-m\\1}
-\end{align}
-
 \pagebreak
 
-The length of perpendicular from the center of the circle to the tangent is equal to the radius and is given by :
+Consider point $\vec{P} = \myvec{8\\0}$ (lies on the locus) from which tangents are drawn.\\
+
+Let the tangent equation passing through $\vec{P}$ be 
 
 \begin{align}
-  4 &= \frac{|\vec{n}^\top\vec{0} - \vec{n}^\top\vec{P}|}{\norm{\vec{n}}}\\
-  |\vec{n}^\top\vec{P}| &= 4\norm{\vec{n}}\\
-  |-8m| &= 4\sqrt{m^2 + 1}\\
-  m &= \pm \frac{1}{\sqrt{3}}
+  \vec{x} &= \vec{P} + k\vec{m}
+\end{align}
+
+Finding the point of contact :
+
+\begin{align}
+  g(\vec{x}) = \vec{x}^\top\vec{x} - 16 \label{eq:circle}\\
+  (\vec{P}+k\vec{m})^\top(\vec{P}+k\vec{m}) - 16 = 0\\
+  k^2\vec{m}^\top\vec{m} + 2k\vec{P}^\top\vec{m} + \vec{P}^\top\vec{P} - 16 = 0\\
+  k^2\vec{m}^\top\vec{m} + 2k\vec{P}^\top\vec{m} + g(\vec{P}) = 0\\
+\end{align}
+
+As the tangent intersects the conic at only one point(the point of contact),the discriminant for the quadratic in k is equal to 0
+
+\begin{align}
+    g(\vec{P}) = 48\\
+  \vec{m}^\top\myvec{-16 & 0\\0 & 48}\vec{m} = 0 \label{eq:mqm} \\
+  \vec{Q} = \myvec{-16 & 0\\0 & 48}\\ 
+\end{align}
+
+As $\vec{Q}$ is an upper triangular matrix , the eigen values are the diagonal entries :
+
+\begin{align}
+  \lambda_1 &= -16 & \lambda_2 &= 48
+\end{align}
+
+Applying eigen value decomposition for $\vec{Q}$ 
+
+\begin{align}
+  \vec{Q} = \vec{X}\vec{D}\vec{X}^\top\\
+  \vec{D} = \myvec{-16 & 0\\0 & 48}
+\end{align}
+
+$\vec{X}$ is an orthogonal matrix whose columns are the corresponding normalized eigenvectors of $\vec{Q}$\\
+As $\vec{Q}$ is a diagonal matrix , 
+
+\begin{align}
+  \vec{X} = \vec{I}
+\end{align}
+
+From \eqref{eq:mqm} ,
+
+\begin{align}
+  \vec{m}^\top\vec{X}\vec{D}\vec{X}^\top\vec{m} = 0\\
+  \vec{z} = \vec{X}^\top\vec{m}\\
+  \vec{z}^\top\vec{D}\vec{z} = 0\\
+  \myvec{z_1 & z_2}\myvec{-16 & 0\\0 & 48}\myvec{z_1\\z_2} = 0\\
+  \frac{z_1}{z_2} = \pm \sqrt{3} \label{eq:z} 
+\end{align}
+
+\pagebreak 
+
+Solving for $\vec{m}$ ,
+
+\begin{align}
+  \vec{I}\vec{m} = \vec{z}\\
+  \vec{m} = \myvec{z_1\\z_2}\\
+  \vec{m} = \myvec{1\\\tfrac{z_2}{z_1}}
+\end{align}
+
+From \eqref{eq:z} , the direction vectors for the tangents are given as :
+
+\begin{align}
+  \vec{m_1} &= \myvec{1\\\tfrac{1}{\sqrt{3}}} & \vec{m_2} &= \myvec{1\\-\tfrac{1}{\sqrt{3}}}
 \end{align}
 
 The normal vectors for the tangents are given as :
