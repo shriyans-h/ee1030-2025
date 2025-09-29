@@ -1,11 +1,8 @@
+// main.c
 #include <stdio.h>
-#include <math.h>
 
-void dot_product(double vector1[], double vector2[], int size, double* result) {
-    *result = 0.0;
-    for (int i = 0; i < size; i++) {
-        *result += vector1[i] * vector2[i];
-    }
+// Function to compute quadratic value
+double quadratic(double x, double c) {
+    return c*x*x - 6*c*x - 12;
 }
-
 
