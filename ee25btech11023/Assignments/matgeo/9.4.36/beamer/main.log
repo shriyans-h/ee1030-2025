@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  29 SEP 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1731,81 +1731,22 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 [4
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Runaway argument?
- \frac {1}{x-3}+\frac {1}{x+5}=\frac {1}{3} \\ \frac {\brak {x+5}+\brak \ETC.
-! Paragraph ended before \align was complete.
-<to be read again> 
-                   \par 
-l.134 \end{frame}
-                 
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.134 \end{frame}
-                 
-? 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.134 \end{frame}
-                 
-? 
-! Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.134 \end{frame}
-                 
-? 
-! Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.134 \end{frame}
-                 
-? 
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.134 \end{frame}
-                 
-? 
-! Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.134 \end{frame}
-                 
-? 
-! Extra }, or forgotten \endgroup.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.134 \end{frame}
-                 
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.134 \end{frame}
-                 
-? 
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.134 \end{frame}
-                 
-? 
+Overfull \vbox (0.52324pt too high) detected at line 133
+ []
+
 
 
 [5
 
 ]
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 152.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 151.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 152.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 151.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 152.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 151.
 
 
 
@@ -1846,7 +1787,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Outline0.2})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213 \section{C Code}
+l.212 \section{C Code}
                       
 \openout4 = `main.vrb'.
 
@@ -1863,7 +1804,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (6.19333pt too high) detected at line 238
+Overfull \vbox (6.19333pt too high) detected at line 237
  []
 
 
@@ -1875,7 +1816,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{Outline0.3})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 \section{Python Code}
+l.239 \section{Python Code}
                            
 \openout4 = `main.vrb'.
 
@@ -1893,7 +1834,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (6.19333pt too high) detected at line 286
+Overfull \vbox (6.19333pt too high) detected at line 285
  []
 
 
@@ -1945,7 +1886,7 @@ l.15 ...{B}}$\n({pointB[0]:.0f}, {pointB[1]:.0f})"
                                                   
 ? 
 )
-Overfull \vbox (6.19333pt too high) detected at line 310
+Overfull \vbox (6.19333pt too high) detected at line 309
  []
 
 
@@ -2010,7 +1951,7 @@ l.5 ax.set_xlabel("x"
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20250929153217 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250929153316 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -2038,7 +1979,7 @@ public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (15 pages, 257178 bytes).
+Output written on main.pdf (15 pages, 257822 bytes).
 PDF statistics:
  538 PDF objects out of 1000 (max. 8388607)
  481 compressed objects within 5 object streams
