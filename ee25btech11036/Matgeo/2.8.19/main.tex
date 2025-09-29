@@ -38,59 +38,73 @@
 \date{}
 \maketitle
 
-\section*{Problem Statement}
+
+
 \section*{Problem}
-If 
+Suppose for some non-zero vector \(\vec r\) we have
 \[
-\vec{r} \cdot \vec{a} = 0, \quad 
-\vec{r} \cdot \vec{b} = 0, \quad 
-\vec{r} \cdot \vec{c} = 0
+\vec r \cdot \vec a = 0,\quad
+\vec r \cdot \vec b = 0,\quad
+\vec r \cdot \vec c = 0.
 \]
-for some non-zero vector $\vec{r}$, then find the value of 
-\[
-\vec{a} \cdot (\vec{b} \times \vec{c}).
-\]
+Show that the scalar triple product \((\vec a\ \vec b\ \vec c) = 0\).
 
 \section*{Solution}
 
-Since
+\subsection*{Step 1: Write as matrix equation}
+
+The three scalar equations can be written as
 \begin{align}
-\vec{r} \cdot \vec{a} &= 0, \label{eq:1} \\
-\vec{r} \cdot \vec{b} &= 0, \label{eq:2} \\
-\vec{r} \cdot \vec{c} &= 0, \label{eq:3}
-\end{align}
-we conclude that the vectors $\vec{a}, \vec{b}, \vec{c}$ all lie in the subspace orthogonal to $\vec{r}$:
-\begin{align}
-\vec{a}, \vec{b}, \vec{c} \in \text{span}\{\vec{r}\}^{\perp}. \label{eq:4}
+\vec r^\top \vec a &= 0 \\
+\vec r^\top \vec b &= 0 \\
+\vec r^\top \vec c &= 0
 \end{align}
 
-Since $\vec{r} \neq \vec{0}$, the orthogonal subspace $\text{span}\{\vec{r}\}^{\perp}$ is **at most 2-dimensional**:
+Stack them into a single matrix equation:
 \begin{align}
-\dim(\text{span}\{\vec{r}\}^{\perp}) = 2. \label{eq:5}
-\end{align}
-
-Thus, any three vectors lying in this at most 2-dimensional subspace are **linearly dependent**:
-\begin{align}
-\vec{c} = \lambda_1 \vec{a} + \lambda_2 \vec{b} \quad \text{for some scalars } \lambda_1, \lambda_2. \label{eq:6}
-\end{align}
-
-The **scalar triple product** of linearly dependent vectors is zero:
-\begin{align}
-\vec{a} \cdot (\vec{b} \times \vec{c})
-&= \det 
 \myvec{
-a_1 & a_2 & a_3 \\
-b_1 & b_2 & b_3 \\
-c_1 & c_2 & c_3
-} \label{eq:7} \\
-&= 0. \label{eq:8}
+\vec a^\top \\[2mm]
+\vec b^\top \\[2mm]
+\vec c^\top
+} \vec r
+=
+\myvec{0\\0\\0}.
 \end{align}
 
-\section*{Final Answer}
+\subsection*{Step 2: Define the matrix}
+
+Let 
 \begin{align}
-\boxed{\vec{a} \cdot (\vec{b} \times \vec{c}) = 0}
+A = \big[\vec a\ \vec b\ \vec c\big]
 \end{align}
-\begin{figure}
+be the \(3\times 3\) matrix with columns \(\vec a,\vec b,\vec c\).  
+Then the stacked equation becomes
+\begin{align}
+A^\top \vec r = \myvec{0\\0\\0}.
+\end{align}
+
+\subsection*{Step 3: Deduce singularity}
+
+Since \(\vec r \neq \vec 0\) and \(A^\top \vec r = 0\), the matrix \(A^\top\) is singular. Therefore,
+\begin{align}
+\det(A^\top) = 0.
+\end{align}
+
+\subsection*{Step 4: Relate to scalar triple product}
+
+But \(\det(A^\top) = \det(A)\), and the determinant of \(A\) is exactly the scalar triple product:
+\begin{align}
+(\vec a\ \vec b\ \vec c) = \det\big[\vec a\ \vec b\ \vec c\big] = \det(A) = 0.
+\end{align}
+
+\subsection*{Conclusion}
+
+\[
+\boxed{(\vec a\ \vec b\ \vec c) = 0}.
+\]
+
+
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.9\columnwidth]{figs/fig41.png}
     \caption{}
