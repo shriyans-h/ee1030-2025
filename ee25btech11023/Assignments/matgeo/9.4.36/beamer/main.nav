@@ -33,11 +33,13 @@
 \headcommand {\beamer@subsectionentry {0}{1}{5}{8}{Finding the solutions}}
 \headcommand {\slideentry {1}{5}{0}{8/8}{Finding the variables}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{5}{1}{9/9}{Finding the variables}{0}}
+\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\beamer@subsectionentry {0}{1}{6}{9}{Conclusion}}
+\headcommand {\slideentry {1}{6}{1}{9/9}{Conclusion}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionpages {7}{9}}
-\headcommand {\beamer@subsectionentry {0}{1}{6}{10}{Plot}}
-\headcommand {\slideentry {1}{6}{1}{10/10}{Plot}{0}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{1}{7}{10}{Plot}}
+\headcommand {\slideentry {1}{7}{1}{10/10}{Plot}{0}}
 \headcommand {\beamer@framepages {10}{10}}
 \headcommand {\beamer@sectionpages {4}{10}}
 \headcommand {\beamer@subsectionpages {10}{10}}
