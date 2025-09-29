@@ -118,25 +118,29 @@ The plane $3y$ $-$ $z=0$ can be expressed in vector form as:
     \frametitle{Solution}
 therefore, \begin{align}\vec{n}_2 = \myvec{0\\3\\-1} \end{align}
 
-The vector parallel to both planes will be perpendicular to the normal vectors of both planes. Therefore it can be expressed as
-\begin{align} \vec{n}_1 \times \vec{n}_2 \end{align}
+The direction vector of the line is given by:
+\begin{align}
+\myvec{ 1&2&0 \\ 0&3&-1}\vec{m} = 0 
+\end{align}
 
-To calculate the cross product of the two vectors \vec{a} and \vec{b}, we use the following determinant:
-\begin{center}
-\myvec{|\vec{A_{11}} \vec{B_{23}}| \\ |\vec{A_{11}}   \vec{B_{23}}| \\ |\vec{A_{11}} \vec{B_{23}}| }
-\end{center}
-Where \vec{X_{ij}} = \myvec{$x_i$ \\ $x_j$}.
+\begin{align}
+\myvec{ 1&2&0 \\ 0&3&-1}\vec{m} = 0 \xrightarrow{\text{R_1 \rightarrow $R_1- \frac{2}{3}R_2$}} \myvec{1&0&\frac{2}{3} \\ 0&3&-1} \xrightarrow{\text{R_1 \rightarrow $R_1/3$}} \myvec{1&0&\frac{2}{3} \\ 0 & 1 & \frac{-1}{3}} 
+\end{align}
+
 \end{frame}
+
 
 \begin{frame}[fragile]
     \frametitle{Solution}
-Expanding the determinants, we get: \begin{align}
-\myvec{ ((-2) - 0) \\ (1-0)  \\ (3-0))} = \myvec{-2\\1\\3} \end{align}\\ 
 
-Since the line passes through (3,0,1), the line can therefore be expressed as: \\
 \begin{align}
-\frac{x-3}{-2} = \frac{y}{1} = \frac{z-1}{3}
-\end{align} 
+\vec{m}= \myvec{-2\\1\\3}
+\end{align}
+
+Therefore the equation of the line is:
+\begin{align}
+\vec{x} = \myvec{3\\0\\1} + \lambda\myvec{-2\\1\\3}
+\end{align}
 \end{frame}
 
 

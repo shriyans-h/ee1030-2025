@@ -1,15 +1,9 @@
 \frametitle{Python and C Code}
 
 \begin{lstlisting}
-import subprocess
-
-# 1. Compile the C program
-subprocess.run(["gcc", "planes.c", "-o", "planes"])
-
-# 2. Run the compiled C program
-result = subprocess.run(["./planes"], capture_output=True, text=True)
-
-# 3. Print the output from the C program
-print(result.stdout)
+# --- 4. Print the final results ---
+print("--- Logic from main() recreated in Python, using C functions for math ---")
+print(f"Angle between the two planes (radians): {angle_radians}")
+print(f"Angle between the two planes (degrees): {angle_degrees}")
 \end{lstlisting}
 
