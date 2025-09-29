@@ -77,27 +77,31 @@ Now,
 
 For collinearity, we require
 \begin{align}
-\vec{C} - \vec{A} = \lambda (\vec{B} - \vec{A}).
+    \quad \text{rank}\,\myvec{\vec{B}-\vec{A} & \vec{C}-\vec{A}} = 1
 \end{align}
-
-Thus,
 \begin{align}
-\myvec{a-60 \\ -55} &= \lambda \myvec{-20 \\ -9}.
+    \quad \text{rank}\,\myvec{-20 & a-60 \\ -9 & -55} = 1
 \end{align}
-
-From the second component,
 \begin{align}
--55 &= -9\lambda \\
-\Rightarrow \lambda &= \frac{55}{9}.
+R_2 &\to R_1 - \tfrac{20}{9}R_2
 \end{align}
-
-Substituting in the first component,
 
 \begin{align}
-a = -\frac{560}{9}.
+\myvec{-20 & a-60 \\ -9 & -55}
+\;\xrightarrow{\,R_2 \to R_1 - \frac{20}{9}R_2\,}\;
+\myvec{-20 & a-60 \\[6pt] 0 & a + \frac{560}{9}}
 \end{align}
+\begin{align}
+    \quad \text{rank}\,\myvec{-20 & a-60 \\ 0 & a + \frac{560}{9}} = 1
+\end{align}
+Therefore, equating the last row to 0, we have
+\begin{align}
+    a + \frac{560}{9} = 0
+    \implies a = -\frac{560}{9}
+\end{align}
+
 Therefore, the answer is (d) None of these.\\\\\\
-\newpage
+
 See Fig. 0 ,
 \begin{figure}[H]
 \begin{center}
