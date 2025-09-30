@@ -33,19 +33,21 @@ Since there are 4 more girls than boys, $b+4=g$, which can be expressed as:
 \begin{align}
 \myvec{-1 \\ 1}^T\vec{x} = -4
 \end{align}\\
-Organising these two equations into a matrix:
+Organising these two equations into the form $\vec{A}\vec{x} = \vec{b}$:
 \begin{align}
 \myvec{1&1 \\ -1&1} \vec{x} = \myvec{10\\-4}
 \end{align}\\
-Forming an augmented matrix and performing row operations:
+Normalising $\vec{A}$: 
 \begin{align}
-\myvec{1&1&10 \\ -1&1&-4} \xrightarrow{\text{R_2 \rightarrow $R_2+ R_1$}}
-\myvec{1&1&10\\0&2&6} \xrightarrow{\text{R_2 \rightarrow $R_2/2$}} 
-\myvec{1&1&10\\0&1&3} \xrightarrow{\text{R_1 \rightarrow $R_1-  R_2$}}
-\myvec{1&0&7\\0&1&3}
+\sqrt{2} \myvec{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\  \frac{-1}{\sqrt{2}}& \frac{1}{\sqrt{2}}} \vec{x} = \myvec{10\\-4}
 \end{align}\\
-Therefore:
+$\vec{A}$ is orthogonal, so we $\vec{A}\vec{A^T} = \vec{I}$\\
+Multiplying by $\vec{A^T}$ on both the sides:
 \begin{align}
+\sqrt{2}\vec{x} = \myvec{\frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\  \frac{1}{\sqrt{2}}& \frac{1}{\sqrt{2}}} \myvec{10\\-4}\\
+\vec{x} = \frac{1}{\sqrt{2}}\myvec{\frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\  \frac{1}{\sqrt{2}}& \frac{1}{\sqrt{2}}} \myvec{10\\-4}
+\end{align}\\
+Solving we get:\begin{align}
 \vec{x} = \myvec{7\\3} \\
 g = 7\\
 b=3
