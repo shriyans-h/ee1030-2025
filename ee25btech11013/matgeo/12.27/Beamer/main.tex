@@ -115,19 +115,43 @@ This can be converted into an augmented matrix and can be solved by Gaussian eli
 \myvec{\frac{1}{x} \\ \frac{1}{y}} = \myvec{\frac{1}{3600} \\ \frac{1}{3000}}
 \end{align}
 
-A man can finish the work in 3600 weeks, a woman can finish the work in 3000 weeks
-Therefore 3600 men are required for completing the task in 1 week
+A man can finish the work in 3600 weeks; a woman can finish the work in 3000 weeks.
+Therefore 3600 men are required for completing the task in 1 week.
+
+The theoretical solution can be verified from the following graph. \\
+From the plot, $x = \frac{1}{u} = 3600$ and $y = \frac{1}{v} = 3000$ 
+
 \end{frame}
+
+\begin{frame}{Plot}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=0.5\textheight, keepaspectratio]{figs/Figure_1.png}
+    \label{figure_1}
+\end{figure}
+\end{frame} 
 
 
 
 \begin{frame}[fragile]
     \frametitle{C Code}
     \begin{lstlisting}
-void mat_vec_mult(double* a, double* x, double* result) {
-    result[0] = a[0] * x[0] + a[1] * x[1];
-    result[1] = a[2] * x[0] + a[3] * x[1];
+#include <stdio.h>
+
+int solve_2x2(double A[4], double b[2], double x[2]) {
+    double det = A[0]*A[3] - A[1]*A[2]; 
+
+    if (det == 0.0) {
+        return -1; 
+    }
+
+    x[0] = (b[0]*A[3] - b[1]*A[1]) / det;
+    x[1] = (A[0]*b[1] - A[2]*b[0]) / det;
+
+    return 0; 
 }
+
 
 
     \end{lstlisting}
@@ -136,22 +160,19 @@ void mat_vec_mult(double* a, double* x, double* result) {
     \frametitle{Python + C Code}
     \begin{lstlisting}
 import numpy as np
+import matplotlib.pyplot as plt
 import ctypes
-lib_path = "./libcode.so" 
-c_lib = ctypes.CDLL(lib_path)
-c_lib.mat_vec_mult.argtypes = [
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.POINTER(ctypes.c_double)
-]
-c_lib.mat_vec_mult.restype = None
+lib = ctypes.CDLL("./libcode.so")
 
-a = np.array([[1200, 500], [900, 250]], dtype=np.float64)
-b = np.array([[1/2], [1/3]], dtype=np.float64)
+lib.solve_2x2.argtypes = [ctypes.POINTER(ctypes.c_double),
+                          ctypes.POINTER(ctypes.c_double),
+                          ctypes.POINTER(ctypes.c_double)]
+lib.solve_2x2.restype = ctypes.c_int
 
-x = np.linalg.solve(a, b)
-result_from_c = np.zeros_like(b)
-a_ptr = a.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+
+A = np.array([[1200, 500],
+              [900, 250]], dtype=np.float64)
+b = np.array([0.5, 1/3], dtype=np.float64)
 
 
     \end{lstlisting}
@@ -159,19 +180,48 @@ a_ptr = a.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
 \begin{frame}[fragile]
     \frametitle{Python + C Code}
     \begin{lstlisting}
-x_ptr = x.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
-result_ptr = result_from_c.ctypes.data_as(ctypes.POINTER(ctypes.c_double))
+x = np.zeros(2, dtype=np.float64)
 
-c_lib.mat_vec_mult(a_ptr, x_ptr, result_ptr)
+status = lib.solve_2x2(A.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+                       b.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+                       x.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
 
-print("Numpy result:")
-print(1/x[0])
-print(1/x[1])
-print("\nResult of A*x from C code (for verification):")
-print(result_from_c[0])
-print(result_from_c[1])
-if np.allclose(result_from_c, b):
-    print("\nVerification successful: The C result matches 'b'.")
+if status == 0:
+    u, v = x
+    man_weeks, woman_weeks = 1/u, 1/v
+    men_required = round(man_weeks)
+
+    print(f"One man finishes in {man_weeks:.0f} weeks")
+    print(f"One woman finishes in {woman_weeks:.0f} weeks")
+    print(f"Men required in 1 week: {men_required}")
+
+
+
+
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Python + C Code}
+    \begin{lstlisting}
+    u_vals = np.linspace(0, u*2, 400)
+    v1 = (0.5 - 1200*u_vals) / 500
+    v2 = ((1/3) - 900*u_vals) / 250
+
+    plt.plot(u_vals, v1, label='1200u + 500v = 1/2')
+    plt.plot(u_vals, v2, label='900u + 250v = 1/3')
+
+    plt.plot(u, v, 'ro', label=f'({u:.6f}, {v:.6f})')
+    plt.annotate(f'({u:.6f}, {v:.6f})', xy=(u, v), xytext=(u*1.1, v*1.1))
+    plt.legend(); plt.grid(True)
+    plt.xlabel("u = 1/x"); plt.ylabel("v = 1/y")
+
+    plt.title("Bridge Work Problem")
+
+    plt.savefig("/mnt/c/Users/bharg/Documents/backupmatrix/ee25btech11013/matgeo/12.27/figs/Figure_1.png")
+    plt.show()
+
+else:
+    print("No unique solution.")
 
 
 
@@ -184,11 +234,46 @@ if np.allclose(result_from_c, b):
 import numpy as np
 import matplotlib.pyplot as plt
 
-a = np.array([[1200, 500], [900, 250]])
-b = np.array([[1/2], [1/3]])
-x = np.linalg.solve(a, b)
-print("Man can finish the task in ", 1/x[0], " weeks")
-print("Woman can finish the task in ", 1/x[1], " weeks")
+A = np.array([[1200, 500],
+              [900, 250]], dtype=float)
+
+b = np.array([0.5, 1/3], dtype=float)
+
+u, v = np.linalg.solve(A, b)
+
+man_weeks = 1 / u
+woman_weeks = 1 / v
+men_required = round(man_weeks)
+
+print(f"One man finishes in {man_weeks:.0f} weeks")
+print(f"One woman finishes in {woman_weeks:.0f} weeks")
+print(f"Men required in 1 week: {men_required}")
+
+
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+u_vals = np.linspace(0, u*2, 400)
+v1 = (0.5 - 1200*u_vals) / 500
+v2 = ((1/3) - 900*u_vals) / 250
+
+plt.figure(figsize=(7,6))
+plt.plot(u_vals, v1, label='1200u + 500v = 1/2')
+plt.plot(u_vals, v2, label='900u + 250v = 1/3')
+
+
+plt.plot(u, v, 'ro', markersize=8, label=f'Solution ({u:.6f}, {v:.6f})')
+plt.annotate(f'({u:.6f}, {v:.6f})', xy=(u, v), xytext=(u*1.1, v*1.1))
+
+plt.xlabel("u = 1/x")
+plt.ylabel("v = 1/y")
+plt.title("Bridge Work Problem")
+plt.legend()
+plt.grid(True)
+plt.savefig("/mnt/c/Users/bharg/Documents/backupmatrix/ee25btech11013/matgeo/12.27/figs/Figure_1.png")
+plt.show()
 
 
 

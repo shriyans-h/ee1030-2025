@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  29 SEP 2025 20:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  30 SEP 2025 12:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1831,36 +1831,63 @@ File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathit.enc}]
+<figs/Figure_1.png, id=147, 505.89pt x 433.62pt>
+File: figs/Figure_1.png Graphic file (type png)
+<use figs/Figure_1.png>
+Package pdftex.def Info: figs/Figure_1.png  used on input line 133.
+(pdftex.def)             Requested size: 151.94571pt x 130.24007pt.
+ [5
+
+ <./figs/Figure_1.png>]
 \openout4 = `main.vrb'.
 
- (./main.vrb
+
+(./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [5
+)) [6
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [6
+ (./main.vrb) [7
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [8
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-15.
+7.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
+))
+Overfull \vbox (37.72923pt too high) detected at line 230
+ []
+
+[9
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [8
+ (./main.vrb) [10
+
+]
+\openout4 = `main.vrb'.
+
+
+(./main.vrb)
+Overfull \vbox (49.72923pt too high) detected at line 281
+ []
+
+[11
 
 ]
 \tf@nav=\write8
@@ -1879,6 +1906,9 @@ L3 programming layer <2020/03/25>
  ***********
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
@@ -1888,13 +1918,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57592 strings out of 474222
- 1368685 string characters out of 5748733
- 2341239 words of memory out of 5000000
- 78826 multiletter control sequences out of 15000+600000
+ 57667 strings out of 474222
+ 1369560 string characters out of 5748733
+ 2437239 words of memory out of 5000000
+ 78890 multiletter control sequences out of 15000+600000
  595430 words of font info for 79 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,19n,123p,1172b,1488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,1172b,1477s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/pu
@@ -1903,10 +1933,10 @@ are/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mtt10.pfb>
-Output written on main.pdf (8 pages, 179458 bytes).
+Output written on main.pdf (11 pages, 227655 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
- 17 named destinations out of 1000 (max. 500000)
- 79 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
