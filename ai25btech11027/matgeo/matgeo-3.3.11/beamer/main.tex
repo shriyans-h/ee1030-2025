@@ -88,17 +88,27 @@ Sum of angles in a triangle is $180^\circ$\\
     30^\circ+60^\circ+\angle C=180^\circ\\
     \angle C=90^\circ
 \end{align}
-Use sin rule\\
 \begin{align}
-    \frac{AB}{\sin 90^\circ}=\frac{AC}{\sin 60^\circ}=\frac{BC}{\sin 30^\circ}
+    a \cos B+b \cos A=c\\
+    a \sin B-b \sin A=0	
 \end{align}
        \begin{align}
-           AC=6\sin 60^\circ\\
-         \implies  AC=3\sqrt{3}
+	       \vec{P}=\myvec{\cos B & \cos A\\ \sin B & -\sin A},\vec{x}=\myvec{a\\b},\vec{Q}=\myvec{c\\0}
        \end{align} 
+Consider the augmented matrix for solving $\vec{P}\vec{x}=\vec{Q}$
 \begin{align}
-    BC=6\sin 30^\circ\\
-    \implies BC=3
+	\myvec{\cos B &\cos A & c\\ \sin B & -\sin A &0}
+\end{align}
+\begin{align}
+	\myvec{\frac{1}{2} & \frac{\sqrt{3}}{2}&6\\ \frac{\sqrt{3}}{2} & -\frac{1}{2}&0}
+\end{align}
+By doing Row operations\\
+\begin{align}
+	\myvec{\frac{1}{2} & \frac{\sqrt{3}}{2}&6\\0&-2&-6\sqrt{3}}
+\end{align}
+On solving
+\begin{align}
+	BC=a=3,AC=b=3\sqrt{3}
 \end{align}
 \begin{align}
     \vec{C}=\myvec{3\sqrt{3} \cos 30^\circ\\3\sqrt{3} \sin 30^\circ}
