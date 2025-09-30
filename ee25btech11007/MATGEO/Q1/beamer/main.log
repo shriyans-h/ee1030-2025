@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.9.18)  29 SEP 2025 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.9.18)  30 SEP 2025 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,8 +1744,7 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/listin
 gs/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 85.
@@ -1857,6 +1856,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 85.
+ (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -1934,9 +1934,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 LaTeX Encoding Info:    Redeclaring text command \k (encoding T1) on input line
  85.
 \c@lstlisting=\count428
-
-No file main.nav.
-
+ (./main.nav)
 
 [1
 
@@ -2037,45 +2035,12 @@ ts/enc/dvips/lm/lm-mathsy.enc}{/data/data/com.termux/files/usr/share/texlive/20
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
 lm/lm-mathex.enc}]
-Overfull \vbox (11.68526pt too high) detected at line 128
- []
-
-
 
 [4
 
 ]
 
 [5
-
-]
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 155.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 155.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 155.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 155.
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 155.
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 155.
-LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <7> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 155.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 155.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 155.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 155.
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 155.
-
-
-
-[6
 
 ]
 \openout4 = `main.vrb'.
@@ -2088,6 +2053,13 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
 mtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
+
+[6
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
 
 [7
 
@@ -2134,21 +2106,14 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [13
 
 ]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-
-[14
-
-]
-<figs/mg1plot.png, id=431, 358.33875pt x 356.83313pt>
+<figs/mg1plot.png, id=421, 358.33875pt x 356.83313pt>
 File: figs/mg1plot.png Graphic file (type png)
 <use figs/mg1plot.png>
-Package pdftex.def Info: figs/mg1plot.png  used on input line 319.
+Package pdftex.def Info: figs/mg1plot.png  used on input line 341.
 (pdftex.def)             Requested size: 209.26372pt x 208.38445pt.
 
 
-[15
+[14
 
  <./figs/mg1plot.png>]
 \tf@nav=\write7
@@ -2160,29 +2125,25 @@ Package pdftex.def Info: figs/mg1plot.png  used on input line 319.
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
+runsystem(latexminted cleantemp  --timestamp 20250930144518 FAD58DE7366495DB465
+0CFEFAC2FCD61)...executed safely (allowed).
+
  (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59768 strings out of 467800
- 1469601 string characters out of 5417814
+ 59780 strings out of 467800
+ 1469539 string characters out of 5417814
  2586618 words of memory out of 5000000
- 87391 multiletter control sequences out of 15000+600000
- 711817 words of font info for 118 fonts, out of 8000000 for 9000
+ 87393 multiletter control sequences out of 15000+600000
+ 676973 words of font info for 84 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,16n,123p,1172b,1305s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1172b,1305s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/lm/lmex10.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-di
 st/fonts/type1/public/lm/lmmi10.pfb></data/data/com.termux/files/usr/share/texl
@@ -2192,12 +2153,14 @@ ta/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lms
 s8.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/typ
 e1/public/lm/lmssbx10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
 exmf-dist/fonts/type1/public/lm/lmsso10.pfb></data/data/com.termux/files/usr/sh
-are/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></data/data/com.te
-rmux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (15 pages, 226725 bytes).
+are/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></data/data/com.te
+rmux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
+/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publi
+c/lm/lmtt10.pfb>
+Output written on main.pdf (14 pages, 241763 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 435 compressed objects within 5 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 511 PDF objects out of 1000 (max. 8388607)
+ 431 compressed objects within 5 object streams
+ 38 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
