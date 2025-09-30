@@ -1,0 +1,39 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{gvv}
+
+\title{Question 4.13.5}
+\author{AI25BTECH11040 - Vivaan Parashar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Question: }
+The set of lines $ax + by + c = 0$, where $3a + 2b + 4c = 0$ are concurrent at the point \underline{\hspace{2cm}}.
+
+\section{Solution: }
+We are given the fact that $3a + 2b + 4c = 0$. This can be written as:
+\begin{align}
+    \implies \frac{3a}{4} + \frac{b}{2} = -c\\
+    \implies \myvec{\frac{3}{4} & \frac{1}{2}} \myvec{a \\ b} = -c \label{eq1}
+\end{align}
+Any arbitrary point on the line $ax + by + c = 0$ satisfies the equation:
+\begin{align}
+    \vec{x}^\mathrm{T} \myvec{a \\ b} = -c \label{eq2}
+\end{align}
+From equations (\ref{eq1}) and (\ref{eq2}), we can clearly see that for all values of $(a, b, c) \in \mathbb{R}^3$, the point $\vec{P} = \myvec{\frac{3}{4} \\ \frac{1}{2}}$ satisfies the equation of the line $ax + by + c = 0$ (by substituting $\vec{x} = \vec{P}$ in equation \ref{eq2}). Thus, all lines of the form $ax + by + c = 0$ where $3a + 2b + 4c = 0$ are concurrent at the point $\myvec{\frac{3}{4} \\ \frac{1}{2}}$.
+
+\section{Plot: }
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figs/plot.png}
+    \caption{Graph of lines with randomly generated values of $a$ and $b$ satisfying $3a + 2b + 4c = 0$. All lines are concurrent at the point $\myvec{\frac{3}{4} \\ \frac{1}{2}}$ (marked in red).}
+    \label{fig:4.13.5}
+\end{figure}
+
+
+\end{document}
