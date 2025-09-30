@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1759073730.63937 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.8.36/main.tex" "main.pdf" "main" 1759073732.09401 0
-  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.8.36/main.tex" 1759073728.05527 1929 06c12537ccc4d502509e2cbe654c9564 ""
+["pdflatex"] 1759201891.80895 "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.8.36/main.tex" "main.pdf" "main" 1759201892.77944 0
+  "/home/vivaan/workingfolder/college/matrix/ee1030-2025/ai25btech11040/matgeo/4.8.36/main.tex" 1759201891.61101 1998 f90a0637273bad29e7d414c6a854a88d ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1755987285 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1755987285 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -47,6 +47,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1755987285 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1755987285 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1755987285 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1755987285 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1755987285 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1755987285 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1755987285 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -289,11 +290,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1755987285 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1756377475 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1756377384 2008251 c09ae576d11b16e5877a579e71adcb21 ""
-  "figs/plot.png" 1759073731.07127 102157 e3b2c90ae3796cdf752d67fd61df0cbf ""
-  "gvv.sty" 1759062504.154 4701 37bd06f55411f9798df5697cb07e3d79 ""
-  "main.aux" 1759073731.98027 711 6578c11b86c921e0e90e242189abdbd1 "pdflatex"
-  "main.out" 1759073731.98127 268 1220d6c4744017ff2782f487a2ccb085 "pdflatex"
-  "main.tex" 1759073728.05527 1929 06c12537ccc4d502509e2cbe654c9564 ""
+  "figs/plot.png" 1759201380.47527 102157 e3b2c90ae3796cdf752d67fd61df0cbf ""
+  "gvv.sty" 1759201380.47527 4701 37bd06f55411f9798df5697cb07e3d79 ""
+  "main.aux" 1759201892.68301 711 6578c11b86c921e0e90e242189abdbd1 "pdflatex"
+  "main.out" 1759201892.68401 268 1220d6c4744017ff2782f487a2ccb085 "pdflatex"
+  "main.tex" 1759201891.61101 1998 f90a0637273bad29e7d414c6a854a88d ""
   (generated)
   "main.aux"
   "main.log"

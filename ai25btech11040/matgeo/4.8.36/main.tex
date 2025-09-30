@@ -16,16 +16,18 @@
 Find the equation of the plane determined by the points $\vec{A}$(3, -1, 2), $\vec{B}$(5, 2, 4) and $\vec{C}$(-1, -1, 6). Also find the distance of the point $\vec{P}$(6, 5, 9) from the plane.
 
 \section{Solution: }
-A plane in 3D is represented by the equation $\vec{n}^\mathrm{T}\vec{x} = c$, where the vector $\vec{n}$ represents the normal to the plane.
-This vector $\vec{n}$ can be determined by using the cross-product of two vectors lying on the plane that aren't collinear, eg $\vec{A} - \vec{B}$ and $\vec{A} - \vec{C}$.
+A plane in 3D is represented by the equation $\vec{n}^\mathrm{T}\vec{x} = c$, where the vector $\vec{n}$ represents the normal to the plane, and $c$ is an arbitrary constant, that can be set to $1$ for simplicity.
+We have three points that lie on the plane, $\vec{A}$, $\vec{B}$, and $\vec{C}$. We therefore have the following equations:
 \begin{align}
-    \therefore \vec{n} \equiv (\vec{A}-\vec{B})\times(\vec{A}-\vec{C})\\
-    \implies \vec{n} = \left[\myvec{3 \\ -1 \\ 2} - \myvec{5 \\ 2 \\ 4}\right] \times \left[\myvec{3 \\ -1 \\ 2} - \myvec{-1 \\ -1 \\ 6}\right]\\
-    \implies \vec{n} = \myvec{12 \\ -16 \\ 12} \equiv \myvec{3 \\ -4 \\ 3}
+    \vec{n}^\mathrm{T}\vec{A} = 1\\
+    \vec{n}^\mathrm{T}\vec{B} = 1\\
+    \vec{n}^\mathrm{T}\vec{C} = 1\\
+    \implies\vec{n}^\mathrm{T}\myvec{\vec{A} & \vec{B} & \vec{C}} = \myvec{1 & 1 & 1}\\
 \end{align}
-The constant $c$ can be determined by substituting any of the three points in the plane into the plane equation.
+Let's call the matrix $\myvec{\vec{A} & \vec{B} & \vec{C}}$ $\vec{M}$. Multiply both sides by $\vec{M}^\mathrm{-1}$ on the right:
 \begin{align}
-    \therefore c = \vec{n}^\mathrm{T}\vec{x_A} = \myvec{3 & -4 & 3}\myvec{3 \\ -1 \\ 2} = 19
+    \therefore \vec{n}^\mathrm{T} = \myvec{1 & 1 & 1}\vec{M}^\mathrm{-1} = \myvec{1 & 1 & 1}\myvec{3 & 5 & -1 \\ -1 & 2 & -1 \\ 2 & 4 & 6}^\mathrm{-1}\\
+    \implies \vec{n}^\mathrm{T} = \frac{1}{19}\myvec{3 & -4 & 3}
 \end{align}
 Thus, the equation of the plane is given by:
 \begin{align}
