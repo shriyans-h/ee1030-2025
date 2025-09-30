@@ -81,84 +81,12 @@ then, the Volume of the parallelopiped formed by $\vec{p},\vec{q},\vec{r}$ is ,
 \begin{align}
     V = \vec{p}\cdot(\vec{q}\times\vec{r})
 \end{align}
-
-The Gram matrix $\vec{G} $ for the vectors $ \vec{p}, \vec{q}, \vec{r} $ is:
 \begin{align}
-\vec{G} = \myvec{
-\vec{p}^\top \vec{p} & \vec{p}^\top \vec{q} & \vec{p}^\top \vec{r} \\
-\vec{q}^\top \vec{p} & \vec{q}^\top \vec{q} & \vec{q}^\top \vec{r} \\
-\vec{r}^\top \vec{p} & \vec{r}^\top \vec{q} & \vec{r}^\top \vec{r}
-}
-\end{align}
-
-Now, calculate the dot products:
-
-\begin{align}
-\vec{p}^\top \vec{p} = 1^2 + a^2 + 1^2 = 2+a^2
-\end{align}
-
-\begin{align}
-\vec{p}^\top \vec{q} = (1)(0) + (a)(1) + (1)(a) = 2a
-\end{align}
-
-\begin{align}
-\vec{p}^\top \vec{r} = (1)(a) + (a)(0) + (1)(1) = a+1
-\end{align}
-
-\begin{align}
-\vec{q}^\top \vec{p} = \vec{p}^\top \vec{q} = 2a
-\end{align}
-
-\begin{align}
-\vec{q}^\top \vec{q} = a^2 + 1^2 = 1 + a^2
-\end{align}
-
-\begin{align}
-\vec{q}^\top \vec{r} = (0)(a) + (1)(0) + (a)(1) = a
-\end{align}
-
-\begin{align}
-\vec{r}^\top \vec{p} = \vec{p}^\top \vec{r} = a + 1
-\end{align}
-
-\begin{align}
-\vec{r}^\top \vec{q} = \vec{q}^\top \vec{r} = a
-\end{align}
-
-\begin{align}
-\vec{r}^\top \vec{r} = a^2 + 1^2 = a^2 + 1 
-\end{align}
-
-Thus, the Gram matrix $ \vec{G} $ is:
-\begin{align}
-\vec{G} = \myvec{
-2+a^2 & 2a & a+1 \\
-2a & 1+a^2 & a \\
-a+1 & a & 1+a^2
-}
-\end{align}
-
-The characteristic equation is obtained by solving the determinant equation \( \mydet{\vec{G} - \lambda \vec{I}} = 0 \). The characteristic polynomial for the matrix is:
-
-\begin{align}
-\lambda^3 - (3a^2+4)\lambda^2 + (3a^4+2a^2+4)\lambda - (a^6-2a^4+2a^3+a^2-2a+1) = 0
-\end{align}
-
-
-To find the eigenvalues, we solve the cubic equation:
-\begin{align*}
-\lambda^3 - (3a^2+4)\lambda^2 + (3a^4+2a^2+4)\lambda - (a^6-2a^4+2a^3+a^2-2a+1) = 0
-\end{align*}
-
-The determinant of $ \vec{G} $ is the product of its eigenvalues:
-\begin{align}
-\mydet{\vec{G}} = \lambda_1 \lambda_2 \lambda_3 = (a^6-2a^4+2a^3+a^2-2a+1).
-\end{align}
-
-
-The box product (scalar triple product) is the square root of the determinant of \( \vec{G} \):
-\begin{align}
-\vec{p} \cdot (\vec{q} \times \vec{r}) = \sqrt{\mydet{\vec{G}}} = \sqrt{(a^6-2a^4+2a^3+a^2-2a+1)} = a^3-a+1
+V=\mydet{
+    1 && a && 1\\
+    0 && 1 && a\\
+    a && 0 && 1
+    }
 \end{align}
 \begin{align}
     V=a^3-a+1

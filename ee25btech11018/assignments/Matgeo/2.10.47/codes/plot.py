@@ -1,64 +1,59 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-import matplotlib.patches as mpatches
 
-a_val = 1 / np.sqrt(3)
+# Define vectors for a = 1/sqrt(3)
+a = 1/np.sqrt(3)
+p = np.array([1, 0, a])
+q = np.array([a, 1, 0])
+r = np.array([1, a, 1])
 
-p = np.array([1, a_val, 1])
-q = np.array([0, 1, a_val])
-r = np.array([a_val, 0, 1])
-origin = np.array([0, 0, 0])
+# Parallelepiped vertices (8 corners)
+O  = np.array([0, 0, 0])     # origin
+P  = p
+Q  = q
+R  = r
+PQ = p + q
+PR = p + r
+QR = q + r
+PQR = p + q + r
 
-vertices = [
-    origin, p, q, r, p + q, q + r, r + p, p + q + r
-]
+vertices = [O, P, Q, PQ, R, PR, QR, PQR]
 
+# Faces of parallelepiped (each face is a list of 4 vertices)
 faces = [
-    [vertices[0], vertices[1], vertices[4], vertices[2]],
-    [vertices[0], vertices[1], vertices[6], vertices[3]],
-    [vertices[0], vertices[2], vertices[5], vertices[3]],
-    [vertices[7], vertices[5], vertices[4], vertices[6]],
-    [vertices[7], vertices[6], vertices[1], vertices[3]],
-    [vertices[7], vertices[5], vertices[2], vertices[4]]
+    [O, P, PQ, Q],
+    [O, P, PR, R],
+    [O, Q, QR, R],
+    [P, PQ, PQR, PR],
+    [Q, PQ, PQR, QR],
+    [R, PR, PQR, QR]
 ]
 
-fig = plt.figure(figsize=(10, 8))
+# Plot
+fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(111, projection='3d')
 
-color_p = '#FF7F0E'  # orange
-color_q = '#9467BD'  # purple
-color_r = '#17BECF'  # teal
-shaded_color = '#ffc0cb'  # pink
+# Draw faces
+ax.add_collection3d(Poly3DCollection(faces, facecolors='cyan', 
+                                     edgecolors='black', alpha=0.6))
 
-# Plot vectors
-ax.quiver(*origin, *p, color=color_p, linewidth=3, arrow_length_ratio=0.15)
-ax.quiver(*origin, *q, color=color_q, linewidth=3, arrow_length_ratio=0.15)
-ax.quiver(*origin, *r, color=color_r, linewidth=3, arrow_length_ratio=0.15)
+# Draw vectors p, q, r
+ax.quiver(0, 0, 0, *p, color='r', label='p')
+ax.quiver(0, 0, 0, *q, color='g', label='q')
+ax.quiver(0, 0, 0, *r, color='b', label='r')
 
-# Plot shaded volume - no automatic label, so use patch for legend
-poly3d = Poly3DCollection(faces, facecolors=shaded_color,
-                         edgecolors='gray', linewidths=1.2, alpha=0.7)
-ax.add_collection3d(poly3d)
+# Set limits
+all_points = np.array(vertices)
+ax.set_xlim([np.min(all_points[:,0])-0.5, np.max(all_points[:,0])+0.5])
+ax.set_ylim([np.min(all_points[:,1])-0.5, np.max(all_points[:,1])+0.5])
+ax.set_zlim([np.min(all_points[:,2])-0.5, np.max(all_points[:,2])+0.5])
 
-# Create custom legend handles
-p_patch = mpatches.Patch(color=color_p, label='p')
-q_patch = mpatches.Patch(color=color_q, label='q')
-r_patch = mpatches.Patch(color=color_r, label='r')
-vol_patch = mpatches.Patch(color=shaded_color, label='Volume', alpha=0.7)
-
-ax.set_xlim([-0.5, 2.5])
-ax.set_ylim([-0.5, 2.5])
-ax.set_zlim([-0.5, 2.5])
-
-ax.set_xlabel('X axis')
-ax.set_ylabel('Y axis')
-ax.set_zlabel('Z axis')
-ax.set_title('3D Parallelepiped and Vectors for a=1/sqrt(3)')
-
-# Add legend with custom patches
-ax.legend(handles=[p_patch, q_patch, r_patch, vol_patch])
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+ax.set_title("Parallelopiped formed by p, q, r (a = 1/sqrt(3))")
+ax.legend()
 
 plt.show()
 

@@ -116,104 +116,29 @@ The value of $a$ so that the volume of parallelopiped formed by $\hat{i} + a\hat
 \frametitle{Formula}
 Volume of the parallelopiped
 \begin{align*}
- V=\vec{p} \cdot (\vec{q} \times \vec{r}) = \sqrt{\mydet{\vec{G}}}  
+ V=\vec{p} \cdot (\vec{q} \times \vec{r}) 
 \end{align*}
-where $\vec{G}$ is the Gram matrix of the vectors
 \end{frame}
-\subsection{Obtaining the Gram Matrix}
+\subsection{Obtaining Volume}
 \begin{frame}
-\frametitle{Obtaining the Gram Matrix}
-Let us consider,
-\begin{align*}
-\vec{p}=\hat{i}+a\hat{j}+\hat{k}\\
-\vec{q}=\hat{j}+a\hat{k}\\
-\vec{r}=a\hat{i}+\hat{k}
-\end{align*}
-The Gram matrix $\vec{G} $ for the vectors $ \vec{p}, \vec{q}, \vec{r} $ is:
+\frametitle{Obtaining Volume}
+The Volume of the parallelopiped formed by $\vec{p},\vec{q},\vec{r}$ is ,
 \begin{align}
-\vec{G} = \myvec{
-\vec{p}^\top \vec{p} & \vec{p}^\top \vec{q} & \vec{p}^\top \vec{r} \\
-\vec{q}^\top \vec{p} & \vec{q}^\top \vec{q} & \vec{q}^\top \vec{r} \\
-\vec{r}^\top \vec{p} & \vec{r}^\top \vec{q} & \vec{r}^\top \vec{r}
-}
+    V = \vec{p}\cdot(\vec{q}\times\vec{r})
 \end{align}
-
-Now, calculate the dot products:
-
 \begin{align}
-\vec{p}^\top \vec{p} = 1^2 + a^2 + 1^2 = 2+a^2
-\end{align}
-\end{frame}
-\begin{frame}
-\frametitle{Obtaining the Gram Matrix}
-\begin{align}
-\vec{p}^\top \vec{q} = (1)(0) + (a)(1) + (1)(a) = 2a
-\end{align}
-
-\begin{align}
-\vec{p}^\top \vec{r} = (1)(a) + (a)(0) + (1)(1) = a+1
-\end{align}
-
-\begin{align}
-\vec{q}^\top \vec{p} = \vec{p}^\top \vec{q} = 2a
-\end{align}
-
-\begin{align}
-\vec{q}^\top \vec{q} = a^2 + 1^2 = 1 + a^2
-\end{align}
-
-\begin{align}
-\vec{q}^\top \vec{r} = (0)(a) + (1)(0) + (a)(1) = a
-\end{align}
-
-\begin{align}
-\vec{r}^\top \vec{p} = \vec{p}^\top \vec{r} = a + 1
-\end{align}
-
- \end{frame}
-\begin{frame}
-\frametitle{Obtaining the Gram Matrix}
-\begin{align}
-\vec{r}^\top \vec{q} = \vec{q}^\top \vec{r} = a
-\end{align}
-
-\begin{align}
-\vec{r}^\top \vec{r} = a^2 + 1^2 = a^2 + 1 
-\end{align}
-
-Thus, the Gram matrix $ \vec{G} $ is:
-\begin{align}
-\vec{G} = \myvec{
-2+a^2 & 2a & a+1 \\
-2a & 1+a^2 & a \\
-a+1 & a & 1+a^2
-}
-\end{align}
-\end{frame}
-\subsection{Calculating Volume}
-\begin{frame}[fragile]
-\frametitle{Calculating Volume}
-    The characteristic equation is obtained by solving the determinant equation $ \mydet{\vec{G} - \lambda \vec{I}} = 0 $. The characteristic polynomial for the matrix is:
-
-\begin{align}
-\lambda^3 - (3a^2+4)\lambda^2 + (3a^4+2a^2+4)\lambda - (a^6-2a^4+2a^3+a^2-2a+1) = 0
-\end{align}
-
-The determinant of $ \vec{G} $ is the product of its eigenvalues:
-\begin{align}
-\mydet{\vec{G}} = \lambda_1 \lambda_2 \lambda_3 = (a^6-2a^4+2a^3+a^2-2a+1).
-\end{align}
-
-
-The scalar triple product is the square root of the determinant of \( \vec{G} \):
-\begin{align}
-\vec{p} \cdot (\vec{q} \times \vec{r}) = \sqrt{\mydet{\vec{G}}} = \sqrt{(a^6-2a^4+2a^3+a^2-2a+1)} = a^3-a+1
+V=\mydet{
+    1 && a && 1\\
+    0 && 1 && a\\
+    a && 0 && 1
+    }
 \end{align}
 \begin{align}
     V=a^3-a+1
 \end{align}
-\end{frame}
 
+
+\end{frame}
 \subsection{Finding a for minimum volume}
 \begin{frame}[fragile]
 \frametitle{Finding 'a' for minimum volume}
@@ -239,8 +164,8 @@ Therefore , $a=\frac{1}{\sqrt{3}}$ for which the Volume of the parallelopiped be
 \begin{figure}[h!]
    \centering
    \includegraphics[width=0.7\columnwidth]{figs/fig.png}
-	\caption*{Parallelopiped with Vectors $\vec{p},\vec{q},\vec{r}$ for which $a=\frac{1}{\sqrt{3}}$(Volume is minimum)}
-   \label{}
+	\caption{Parallelopiped with Vectors $\vec{p},\vec{q},\vec{r}$ for which $a=\frac{1}{\sqrt{3}}$(Volume is minimum)}
+    \label{}
 \end{figure}
 \end{frame}
 
@@ -248,55 +173,55 @@ Therefore , $a=\frac{1}{\sqrt{3}}$ for which the Volume of the parallelopiped be
 \begin{frame}[fragile]
 \frametitle{C Code}
 \begin{lstlisting}[language=C]
-// Determinant of Gram matrix calculation with inline dot product calculations
-double gram_determinant(double a) {
-    double G11 = 2 + a * a;
-    double G12 = 2 * a;
-    double G13 = a + 1;
-    double G21 = 2 * a;
-    double G22 = a * a + 1;
-    double G23 = a;
-    double G31 = a + 1;
-    double G32 = a;
-    double G33 = 1 + a * a;
-    double det = G11 * (G22 * G33 - G23 * G32) - G12 * (G21 * G33 - G23 * G31)+ G13 * (G21 * G32 - G22 * G31);
-               return det;
-}
+#include <stdio.h>
+#include <math.h>
+// Function to calculate determinant of 3x3 matrix
+double determinant(double a) {
+    double mat[3][3] = {
+        {1, a, 1},
+        {0, 1, a},
+        {a, 0, 1}
+    };
+    double det = mat[0][0]*(mat[1][1]*mat[2][2] - mat[1][2]*mat[2][1])
+               - mat[0][1]*(mat[1][0]*mat[2][2] - mat[1][2]*mat[2][0])
+               + mat[0][2]*(mat[1][0]*mat[2][1] - mat[1][1]*mat[2][0]);
 
+    return det; }
     \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{C code}
     \begin{lstlisting}[language=C]
-        // Volume calculation (sqrt of determinant)
-double volume(double a) {
-    double det = gram_determinant(a);
-    if (det < 0) det = -det; // use absolute value for volume
-    return sqrt(det);
+// Function f(a) = a^3 - a + 1
+double f(double a) {
+    return (a*a*a - a + 1);
+}
+// Function to check if a given 'a' is a local minimum
+int isLocalMinimum(double a) {
+    double secondDerivative = 6*a;
+    return (secondDerivative > 0); // local min if f''(a) > 0
 }
 int main() {
-    double options[] = {-3, 3, 1.0 / sqrt(3), sqrt(3)};
-    int num_options = 4;
-    double min_vol = 1e9;
-    double min_a = 0;
-    printf("%-10s %-15s %-15s\n", "a", "Determinant", "Volume");
-    for (int i = 0; i < num_options; i++) {
-        double a = options[i];
-        double det = gram_determinant(a);
-        double vol = volume(a);
-        printf("%-10.6f %-15.6f %-15.6f\n", a, det, vol);
+    double options[4] = {-3, 3, 1.0/sqrt(3), sqrt(3)};
+    int i;
 
+    printf("Checking all options:\n");
     \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{C code}
     \begin{lstlisting}[language=C]
-if (vol < min_vol) {
-            min_vol = vol;
-            min_a = a;
-        }
+  for (i = 0; i < 4; i++) {
+        double a = options[i];
+        double vol = determinant(a);
+
+        printf("a = %lf, Determinant = %lf, f(a) = %lf", a, vol, f(a));
+
+        if (fabs(a - 1.0/sqrt(3)) < 1e-6 && isLocalMinimum(a)) {
+        
+        printf("\n");
     }
-    printf("\nMinimum volume is at a = %.6f with volume = %.6f\n", min_a, min_vol);
+    printf("\nTherefore, the local minimum occurs at a = 1/sqrt(3).\n");
     return 0;
 }
      \end{lstlisting}
@@ -305,24 +230,34 @@ if (vol < min_vol) {
 \begin{frame}[fragile]
 \frametitle{Python Code for Solving}
 \begin{lstlisting}[language=Python]
-
 import ctypes
-import numpy as np
+import math
+# Load the compiled shared library
+lib = ctypes.CDLL("./volume.so")
 
-lib = ctypes.CDLL('./volume.so')
+# Declare function signatures
+lib.determinant.argtypes = [ctypes.c_double]
+lib.determinant.restype = ctypes.c_double
+lib.f.argtypes = [ctypes.c_double]
+lib.f.restype = ctypes.c_double
+lib.isLocalMinimum.argtypes = [ctypes.c_double]
+lib.isLocalMinimum.restype = ctypes.c_int
 
-lib.volume.argtypes = [ctypes.c_double]
-lib.volume.restype = ctypes.c_double
-a_values = np.array([-3, 3, 1.0 / np.sqrt(3), np.sqrt(3)])
-min_volume = float('inf')
-min_a = None
-for a in a_values:
-    vol = lib.volume(a)
-    if vol < min_volume:
-        min_volume = vol
-        min_a = a
-
-print(f"The value of a for which the volume is minimum: {min_a:.6f}")
+# Options to check
+options = [-3, 3, 1.0/math.sqrt(3), math.sqrt(3)]
+print("Checking all options:\n")
+\end{lstlisting}
+\end{frame}
+\section{Python Code}
+\begin{frame}[fragile]
+\frametitle{Python Code for Solving}
+\begin{lstlisting}[language=Python]
+for a in options:
+    det_val = lib.determinant(a)
+    f_val = lib.f(a)
+    is_min = lib.isLocalMinimum(a)
+    print(f"a = {a:.6f}, Determinant = {det_val:.6f}, f(a) = {f_val:.6f}", end="")
+print("\nTherefore, the local minimum occurs at a = 1/sqrt(3).")
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
@@ -330,73 +265,69 @@ print(f"The value of a for which the volume is minimum: {min_a:.6f}")
 \begin{lstlisting}[language=Python]
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-import matplotlib.patches as mpatches
 
-a_val = 1 / np.sqrt(3)
-p = np.array([1, a_val, 1])
-q = np.array([0, 1, a_val])
-r = np.array([a_val, 0, 1])
-origin = np.array([0, 0, 0])
-vertices = [
-    origin, p, q, r, p + q, q + r, r + p, p + q + r ]
+# Define vectors for a = 1/sqrt(3)
+a = 1/np.sqrt(3)
+p = np.array([1, 0, a])
+q = np.array([a, 1, 0])
+r = np.array([1, a, 1])
+
+# Parallelepiped vertices (8 corners)
+O  = np.array([0, 0, 0])     # origin
+P  = p
+Q  = q
+R  = r
+PQ = p + q
+PR = p + r
+QR = q + r
+PQR = p + q + r
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Python Code for Plotting}
 \begin{lstlisting}[language=Python]
+vertices = [O, P, Q, PQ, R, PR, QR, PQR]
+
+# Faces of parallelepiped (each face is a list of 4 vertices)
 faces = [
-    [vertices[0], vertices[1], vertices[4], vertices[2]],
-    [vertices[0], vertices[1], vertices[6], vertices[3]],
-    [vertices[0], vertices[2], vertices[5], vertices[3]],
-    [vertices[7], vertices[5], vertices[4], vertices[6]],
-    [vertices[7], vertices[6], vertices[1], vertices[3]],
-    [vertices[7], vertices[5], vertices[2], vertices[4]]
+    [O, P, PQ, Q],
+    [O, P, PR, R],
+    [O, Q, QR, R],
+    [P, PQ, PQR, PR],
+    [Q, PQ, PQR, QR],
+    [R, PR, PQR, QR]
 ]
 
-fig = plt.figure(figsize=(10, 8))
+# Plot
+fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(111, projection='3d')
-color_p = '#FF7F0E'  # orange
-color_q = '#9467BD'  # purple
-color_r = '#17BECF'  # teal
-shaded_color = '#ffc0cb'  # pink
-# Plot vectors
-ax.quiver(*origin, *p, color=color_p, linewidth=3, arrow_length_ratio=0.15)
+
+# Draw faces
+ax.add_collection3d(Poly3DCollection(faces, facecolors='cyan', 
+                                     edgecolors='black', alpha=0.6))
 
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Python Code for Plotting}
 \begin{lstlisting}[language=Python]
-ax.quiver(*origin, *q, color=color_q, linewidth=3, arrow_length_ratio=0.15)
-ax.quiver(*origin, *r, color=color_r, linewidth=3, arrow_length_ratio=0.15)
-# Plot shaded volume - no automatic label, so use patch for legend
-poly3d = Poly3DCollection(faces, facecolors=shaded_color,edgecolors='gray', linewidths=1.2, alpha=0.7)
-ax.add_collection3d(poly3d)
+# Draw vectors p, q, r
+ax.quiver(0, 0, 0, *p, color='r', label='p')
+ax.quiver(0, 0, 0, *q, color='g', label='q')
+ax.quiver(0, 0, 0, *r, color='b', label='r')
 
-
-p_patch = mpatches.Patch(color=color_p, label='p')
-q_patch = mpatches.Patch(color=color_q, label='q')
-r_patch = mpatches.Patch(color=color_r, label='r')
-vol_patch = mpatches.Patch(color=shaded_color, label='Volume', alpha=0.7)
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Python Code for Plotting}
-\begin{lstlisting}[language=Python]
-ax.set_xlim([-0.5, 2.5])
-ax.set_ylim([-0.5, 2.5])
-ax.set_zlim([-0.5, 2.5])
-ax.set_xlabel('X axis')
-ax.set_ylabel('Y axis')
-ax.set_zlabel('Z axis')
-ax.legend(handles=[p_patch, q_patch, r_patch, vol_patch])
+# Set limits
+all_points = np.array(vertices)
+ax.set_xlim([np.min(all_points[:,0])-0.5, np.max(all_points[:,0])+0.5])
+ax.set_ylim([np.min(all_points[:,1])-0.5, np.max(all_points[:,1])+0.5])
+ax.set_zlim([np.min(all_points[:,2])-0.5, np.max(all_points[:,2])+0.5])
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+ax.set_title("Parallelopiped formed by p, q, r (a = 1/sqrt(3))")
+ax.legend()
 plt.show()
-plt.savefig("fig.png")
-
 \end{lstlisting}
 \end{frame}
-
 \end{document}

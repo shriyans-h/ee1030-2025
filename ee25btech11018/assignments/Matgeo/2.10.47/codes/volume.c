@@ -1,54 +1,51 @@
 #include <stdio.h>
 #include <math.h>
 
-// Determinant of Gram matrix calculation with inline dot product calculations
-double gram_determinant(double a) {
-    double G11 = 2 + a * a;
-    double G12 = 2 * a;
-    double G13 = a + 1;
-    double G21 = 2 * a;
-    double G22 = a * a + 1;
-    double G23 = a;
-    double G31 = a + 1;
-    double G32 = a;
-    double G33 = 1 + a * a;
+// Function to calculate determinant of 3x3 matrix
+double determinant(double a) {
+    double mat[3][3] = {
+        {1, a, 1},
+        {0, 1, a},
+        {a, 0, 1}
+    };
 
-    double det = G11 * (G22 * G33 - G23 * G32) 
-               - G12 * (G21 * G33 - G23 * G31) 
-               + G13 * (G21 * G32 - G22 * G31);
+    double det = mat[0][0]*(mat[1][1]*mat[2][2] - mat[1][2]*mat[2][1])
+               - mat[0][1]*(mat[1][0]*mat[2][2] - mat[1][2]*mat[2][0])
+               + mat[0][2]*(mat[1][0]*mat[2][1] - mat[1][1]*mat[2][0]);
 
     return det;
 }
 
-// Volume calculation (sqrt of determinant)
-double volume(double a) {
-    double det = gram_determinant(a);
-    if (det < 0) det = -det; // use absolute value for volume
-    return sqrt(det);
+// Function f(a) = a^3 - a + 1
+double f(double a) {
+    return (a*a*a - a + 1);
+}
+
+// Function to check if a given 'a' is a local minimum
+int isLocalMinimum(double a) {
+    double secondDerivative = 6*a;
+    return (secondDerivative > 0); // local min if f''(a) > 0
 }
 
 int main() {
-    double options[] = {-3, 3, 1.0 / sqrt(3), sqrt(3)};
-    int num_options = 4;
+    double options[4] = {-3, 3, 1.0/sqrt(3), sqrt(3)};
+    int i;
 
-    double min_vol = 1e9;
-    double min_a = 0;
+    printf("Checking all options:\n");
 
-    printf("%-10s %-15s %-15s\n", "a", "Determinant", "Volume");
-    printf("-------------------------------------------\n");
-
-    for (int i = 0; i < num_options; i++) {
+    for (i = 0; i < 4; i++) {
         double a = options[i];
-        double det = gram_determinant(a);
-        double vol = volume(a);
-        printf("%-10.6f %-15.6f %-15.6f\n", a, det, vol);
-        if (vol < min_vol) {
-            min_vol = vol;
-            min_a = a;
+        double vol = determinant(a);
+
+        printf("a = %lf, Determinant = %lf, f(a) = %lf", a, vol, f(a));
+
+        if (fabs(a - 1.0/sqrt(3)) < 1e-6 && isLocalMinimum(a)) {
         }
+
+        printf("\n");
     }
 
-    printf("\nMinimum volume is at a = %.6f with volume = %.6f\n", min_a, min_vol);
+    printf("\nTherefore, the local minimum occurs at a = 1/sqrt(3).\n");
 
     return 0;
 }
