@@ -127,24 +127,20 @@ Combine into a single system:
 \end{frame}
 \begin{frame}{solution}
 
-Multiply both sides by the transpose of the coefficient matrix:
+\noindent
+Observe that the right-hand side vector can itself be written as the coefficient 
+matrix multiplied by a simple vector:
 \begin{align}
-\myvec{p & q \\ q & -p}^\top \myvec{p & q \\ q & -p} \vec{x} = \myvec{p & q \\ q & -p}^\top \myvec{p-q \\ p+q}
+\myvec{p & q\\ q & -p}\,\vec{x}
+&= \myvec{p-q\\ p+q} \\[6pt]
+&= \myvec{p & q\\ q & -p}\,\myvec{1\\ -1}. \tag{6}
 \end{align}
 
-Compute the products:
+\noindent
+Since the same coefficient matrix appears on both sides, and it is invertible 
+whenever $p^2+q^2 \neq 0$, we may cancel it to obtain
 \begin{align}
-\myvec{p^2+q^2 & 0 \\ 0 & p^2+q^2} \vec{x} = \myvec{p^2 + q^2 \\ -(p^2+q^2)}
-\end{align}
-
-Factor out $(p^2+q^2)$ as a scalar multiplying the identity matrix:
-\begin{align}
-(p^2+q^2) \vec{I} \vec{x} = \myvec{p^2+q^2 \\ -(p^2+q^2)}
-\end{align}
-
-Divide both sides by $p^2+q^2$:
-\begin{align}
-\vec{I} \vec{x} = \myvec{1 \\ -1}
+\vec{x} &= \myvec{1\\ -1}.
 \end{align}
 
 
