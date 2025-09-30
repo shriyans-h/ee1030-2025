@@ -1,22 +1,31 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import ctypes
 
 """
 Find the area of the triangle whose vertices are
 A(1,−1,2),B(2,0,−1),C(3,−1,2).
 """
 
-A = np.array([1, -1, 2])
-B = np.array([2, 0, -1])
-C = np.array([3, -1, 2])
+A = np.array([1, -1, 2], dtype=np.float64)
+B = np.array([2, 0, -1], dtype=np.float64)
+C = np.array([3, -1, 2], dtype=np.float64)
 
-AB = B - A
-AC = C - A
+# Load the shared library
+lib = ctypes.CDLL("./main.so")
 
-# Area calculation
-area = 0.5 * np.linalg.norm(np.cross(AB, AC))
-print("Area of triangle ABC:", area)
+# Set argument and return types
+lib.main.argtypes = [ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double), ctypes.POINTER(ctypes.c_double)]
+lib.main.restype = ctypes.c_double
+
+# Call the C function
+area = lib.main(A.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+                 B.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
+                          C.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
+
+
+print("Area of triangle ABC (Python):", area)
 
 # Create figure
 fig = plt.figure()

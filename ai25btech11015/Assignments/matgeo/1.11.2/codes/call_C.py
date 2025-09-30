@@ -1,13 +1,23 @@
-
+import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
 
+# import platform
+# print(platform.architecture())
 
-# Solve for unit vector in direction of PQ
+# defining given points
 P = np.array([2,1,-1])
 Q = np.array([4,4,-7])
-unit_vec = (Q - P) / np.linalg.norm(Q - P)
 O = np.array([0,0,0])
+
+# calling C function to get unit vector
+dll = ctypes.CDLL('./main.so')
+unit_vector = dll.get_unit_vector
+unit_vector.argtypes = [ctypes.POINTER(ctypes.c_double)]
+out = np.zeros(3, dtype=np.float64)
+unit_vector(out.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
+print(out)  # This is the unit vector
+unit_vec = np.array(out) 
 
 
 # Create 3D plot
