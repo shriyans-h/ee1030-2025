@@ -1,13 +1,29 @@
 import numpy as np 
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import ctypes
 import matplotlib.pyplot as plt
 
+# Load the shared object file
+main_lib = ctypes.CDLL('./main.so')
 
+
+# Define input and return types for the C function
 a = np.array([3, 1, 4],dtype=np.float64)
 b = np.array([1, -1, 1],dtype=np.float64)
-area =np.linalg.norm(np.cross(a, b))
-print(f"Python :  {area}")
+
+main_lib.main.argtypes = [ctypes.POINTER(ctypes.c_double), 
+    ctypes.POINTER(ctypes.c_double)]
+
+main_lib.main.restype = ctypes.c_double
+
+# Call the C function to calculate the area
+area_value = main_lib.main(a.ctypes.data_as(ctypes.POINTER(ctypes.c_double)), 
+	b.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
+
+print(f"Python :  {area_value}")
+
+area = area_value
 
 O = np.array([0, 0, 0])
 
