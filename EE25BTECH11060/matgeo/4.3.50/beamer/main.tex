@@ -86,7 +86,6 @@ Let
 \text{Vector} & coordinate \\ \hline
 \vec{A} & (-3, 0) \\ \hline
 \vec{B} & (0, 2) \\ \hline
-\vec{n} & (a, b) \\ \hline
 \end{array}
 \]
 As equation of line is given by 
@@ -97,17 +96,13 @@ As equation of line is given by
 \begin{frame}{Solution}
    So, for $\vec{A}$
  \begin{align}
- \begin{pmatrix}
-     a \\ b 
- \end{pmatrix}^\top\begin{pmatrix}
+  \vec{n}^\top\begin{pmatrix}
      -3  \\ 0
  \end{pmatrix}=1
   \end{align}
   for $\vec{B}$
  \begin{align}
- \begin{pmatrix}
-     a \\ b 
- \end{pmatrix}^\top\begin{pmatrix}
+  \vec{n}^\top\begin{pmatrix}
      0  \\  2
  \end{pmatrix}=1\\ 
 \end{align}
@@ -118,9 +113,7 @@ As equation of line is given by
     \begin{pmatrix}
      -3 & 0 \\
      0 & 2 
- \end{pmatrix}\begin{pmatrix}
-     a \\ b 
- \end{pmatrix}=\begin{pmatrix}
+ \end{pmatrix} \vec{n}=\begin{pmatrix}
      1 \\ 1
  \end{pmatrix}
     \end{align}
@@ -131,7 +124,7 @@ In augmented matrix form\\
 0 & 2 & \big| & 1
 \end{bmatrix}
 \end{align}
-Divide Row 1 by -3
+Divide Row 1 by 3
 \begin{align}
 \begin{bmatrix}
 -1 & 0 & \big| & \frac{1}{3}\\
@@ -143,10 +136,12 @@ Divide Row 1 by -3
   Divide Row 2 by 2
 \begin{align}
 \begin{bmatrix}
-  -1 & 0 & \big| & \frac{-1}{3}\\
+  -1 & 0 & \big| & \frac{1}{3}\\
   0  &  1 & \big| & \frac{1}{2}
 \end{bmatrix}\\
-a=\frac{-1}{3}\; and\; b=\frac{1}{2}\\
+ \vec{n}=\begin{pmatrix}
+     \frac{-1}{3}
+& \frac{1}{2}\end{pmatrix}
 \end{align}
 So from 1 Equation of line is 
 \begin{pmatrix}

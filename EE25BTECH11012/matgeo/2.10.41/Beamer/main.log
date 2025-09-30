@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  15 SEP 2025 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  17 SEP 2025 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2313,16 +2313,47 @@ l.8 .../ Example vectors satisfying (a×b)×(c×d)
  (main.vrb) [16
 
 ]
-<graph .jpg, id=485, 1084.05pt x 1050.92625pt>
+\openout4 = `main.vrb'.
+
+ (main.vrb) [17
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [18
+
+]
+\openout4 = `main.vrb'.
+
+
+(main.vrb) [19
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [20
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [21
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [22
+
+]
+<graph .jpg, id=654, 1084.05pt x 1050.92625pt>
 File: graph .jpg Graphic file (type jpg)
 <use graph .jpg>
-Package pdftex.def Info: graph .jpg  used on input line 321.
+Package pdftex.def Info: graph .jpg  used on input line 414.
 (pdftex.def)             Requested size: 256.72147pt x 248.87596pt.
 
-Overfull \vbox (26.94025pt too high) detected at line 321
+Overfull \vbox (26.94025pt too high) detected at line 414
  []
 
-[17
+[23
 
  <./graph .jpg>]
 \tf@nav=\write7
@@ -2353,10 +2384,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59621 strings out of 474486
- 1464561 string characters out of 5739471
+ 59757 strings out of 474486
+ 1465863 string characters out of 5739471
  2483084 words of memory out of 5000000
- 80874 multiletter control sequences out of 15000+600000
+ 80986 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1174b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2375,9 +2406,9 @@ lm/lmsy10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/lm/lmsy8.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/lm/lmtt10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/txfonts/txsya.pfb>
-Output written on main.pdf (17 pages, 496627 bytes).
+Output written on main.pdf (23 pages, 534472 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
+ 756 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
