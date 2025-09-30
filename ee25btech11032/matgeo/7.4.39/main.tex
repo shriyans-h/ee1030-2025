@@ -1,0 +1,120 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee} 
+\setlength{\headheight}{1cm} 
+\setlength{\headsep}{0mm}     
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+%\usepackage{wasysym}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{7.4.39}
+\author{EE25BTECH11032 - Kartik Lahoti}
+\maketitle
+
+\subsection*{Question: } 
+
+If $\brak{m_i , \frac{1}{m_i}}$ , $m_i > 0 , i = 1, 2,3,4$ are four distinct points on a circle, then show that $m_1m_2m_3m_4 = 1 $
+
+\textbf{Solution}:\\
+
+
+Let the circle equation be 
+\begin{align}
+    \norm{\vec{x}}^2 + 2\vec{u}^{\top}\vec{x} + f = 0 
+\end{align}
+
+where, $\vec{u} = \myvec{a \\ b}$ with $a$ and $b$ as constants.
+
+Let $\vec{P} = \myvec{m \\ \frac{1}{m}}$ be a arbitrary vector in space.
+
+Putting $\vec{P}$ in the circle , we get 
+
+
+\begin{align}
+    \norm{\vec{P}}^2 + 2\vec{u}^{\top}\vec{P} + f = 0 
+\end{align}
+
+\begin{align}
+    m^2 + \frac{1}{m^2} + 2am + \frac{2b}{m} + f = 0
+\end{align}
+
+\begin{align}
+    m^4 + 2am^3 + fm^2 + 2bm + 1 = 0 \label{eq_1}
+\end{align}
+
+For a general polynomial of degree $n$
+
+\begin{align}
+    a_0x^n + a_1x^{n-1} + a_2x^{n-2} \dots + a_nx^0 = 0  
+\end{align}
+
+Product of roots is given by 
+\begin{align}
+    \brak{-1}^n\frac{a_n}{a_0}
+\end{align}
+
+Since , $m_i , $ where $ i \in \cbrak{1,2,3,4} $ satisfies the equation \ref{eq_1}.
+
+we can say 
+
+\begin{align}
+    m_1m_2m_3m_4 = 1 
+\end{align}
+
+Hence Proved
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\columnwidth]{figs/graph1.png}
+    \caption*{}
+    \label{fig:placeholder}
+\end{figure}
+
+\end{document}
+
+
