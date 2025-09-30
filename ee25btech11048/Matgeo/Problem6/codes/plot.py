@@ -1,47 +1,37 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import ctypes
 
-# ------------------------
-# Load C library to get normal vector
-# ------------------------
-lib = ctypes.CDLL("./points.so")
-n1 = ctypes.c_double()
-n2 = ctypes.c_double()
-lib.get_normal_vector(ctypes.byref(n1), ctypes.byref(n2))
-print("Normal vector from C:", n1.value, n2.value)
+# Given line: x + y + 1 = 0
+# Perpendicular line through (1,2): slope = 1 => equation: x - y + 1 = 0
 
-# ------------------------
-# Points A and B
-# ------------------------
-A = np.array([3, 1])
-B = np.array([9, 3])
+# Define range for x
+x = np.linspace(-5, 5, 400)
 
-# Direction vector along line
-D = B - A
+# Equations of lines
+y_given = -x - 1          # x + y + 1 = 0
+y_perp  = x + 1           # x - y + 1 = 0
 
-# Parameter t for plotting line
-t = np.linspace(-1, 2, 100)
-line_points = A[:, None] + D[:, None]*t
+# Plot given line
+plt.plot(x, y_given, 'b', label="Given line: x + y + 1 = 0")
 
-# ------------------------
-# Plot line and points in 2D
-# ------------------------
-plt.figure(figsize=(6,6))
-plt.plot(line_points[0], line_points[1], color='r', label='Line through A and B')
-plt.scatter([A[0], B[0]], [A[1], B[1]], color='b', s=50, label='Points A and B')
+# Plot perpendicular line
+plt.plot(x, y_perp, 'r', label="Perpendicular line: x - y + 1 = 0")
 
-# Optional: plot normal vector from origin
-origin = np.array([0,0])
-plt.quiver(*origin, n1.value, n2.value, angles='xy', scale_units='xy', scale=1,
-           color='g', label='Normal vector')
+# Plot the point (1,2)
+plt.scatter(1, 2, color='k', zorder=5)
+plt.text(1.1, 2.1, "(1,2)", fontsize=10)
 
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Line and Normal Vector for Points (3,1) & (9,3)')
+# Add axes
+plt.axhline(0, color='gray', linewidth=0.8)
+plt.axvline(0, color='gray', linewidth=0.8)
+
+# Title and labels
+plt.title("Line and its Perpendicular through (1,2)")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.legend()
 plt.grid(True)
 plt.axis('equal')
-plt.legend()
-plt.savefig("line_normal_2d.png")
+
 plt.show()
 

@@ -1,19 +1,13 @@
 #include <stdio.h>
 
-// Function to compute normal vector for line through A(3,1) and B(9,3)
-void get_normal_vector(double *n1, double *n2) {
-    int x1 = 3, y1 = 1;
-    int x2 = 9, y2 = 3;
+// Compute slope of required line
+double compute_slope() {
+    // Given line: x + y + 1 = 0 → slope = -1
+    double slope_given = -1.0;
 
-    // Normal vector = [y2-y1, -(x2-x1)]
-    *n1 = y2 - y1;    // 3 - 1 = 2
-    *n2 = -(x2 - x1); // -(9 - 3) = -6
-}
+    // Required line ⟂ given line → slope = -1 / slope_given
+    double slope_required = -1.0 / slope_given;
 
-int main() {
-    double n1, n2;
-    get_normal_vector(&n1, &n2);
-    printf("Normal vector: n1=%lf, n2=%lf\n", n1, n2);
-    return 0;
+    return slope_required;  // should be 1.0
 }
 

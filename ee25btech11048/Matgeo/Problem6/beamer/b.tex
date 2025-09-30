@@ -36,7 +36,7 @@ basicstyle=\ttfamily\tiny
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \let\vec\mathbf
 
-\title{Matgeo Presentation - Problem 4.3.38}
+\title{Matgeo Presentation - Problem 4.7.45}
 \author{Revanth Siva Kumar.D -- EE25BTECH11048}
 
 \begin{document}
@@ -45,136 +45,61 @@ basicstyle=\ttfamily\tiny
 \titlepage
 \end{frame}
 
-\begin{frame}{Problem Statement}
-Find the equation of the line joining the points $(3,1)$ and $(9,3)$. 
-\end{frame}
+\begin{frame}{QUESTION}
+The equation of the line passing through the point $(1, 2)$ and perpendicular to the line $x + y + 1 = 0$ is\end{frame}
 
 \begin{frame}{Solution:}
-\textbf{Solution :} 
-
-Given 
+Let desired line :
 \begin{align}
-    \vec{A}=\myvec{3\\1} \vec{B}=\myvec{9\\3} 
-    \label{eq:points}
+    \vec{n}^T\vec{x}=c
+    \label{eq:question}
 \end{align}
-Let us assume line equation to be:
+Given line equation and point say A:
 \begin{align}
-    \vec{n}^T \vec{x} = c
-\end{align} 
-    We get the line equation on solving \[\myvec{\vec{A}&\vec{B}}^T\vec{n}=c\myvec{1\\1}\] 
-
-The line passes through the points from \eqref{eq:points} substituting, we get:
+    x+y+1=0
+    \label{eq:line}\\
+    y=-x-1\\
+    \vec{A}=\myvec{1\\2}
+\end{align}
+Since, the line from eq \eqref{eq:line} is perpendicular to \eqref{eq:question} \\
+We get the normal vector which is equal to:
 \begin{align}
-    \myvec{3 & 9 \\
-       1 & 3  }^T\vec{n}=c\myvec{1 \\ 1}
+   \vec{n} =\myvec{1\\-1}
 \end{align}
 
+Because line \eqref{eq:line} is perpendicular, the equation of the line can be changed as:
 \begin{align}
-    \myvec{3 & 1 \\
-       9 & 3  }\vec{n}=c\myvec{1 \\ 1}
+    \vec{n}^T\myvec{\vec{x} - \vec{A}}=0
 \end{align}
 \end{frame}
 \begin{frame}{Solution:}
-Now by Gaussian Elimination solve:
-\begin{align}
-\myvec{3 & 1 & \big| & 1 \\
-         9 & 3 & \big| & 1 }
-\end{align}
+Thus the equation of line:
 
 \begin{align}
-R_{1} &\leftarrow \frac{1}{3}R_{1} \nonumber\\
-\Rightarrow\ 
-&\myvec{1 & \frac{1}{3} & \big| & \frac{1}{3} \\
-         9 & 3 & \big| & 1 }
+    \myvec{1&-1}\myvec{\vec{x} - \myvec{1\\2}}=0\\
+    \implies  \myvec{1&-1}\vec{x}-\myvec{1&-1}\myvec{1\\2}=0\\
+    \implies \myvec{1&-1}\vec{x}=-1
 \end{align}
 
-\begin{align}
-R_{2} &\leftarrow R_{2}-9R_{1} \nonumber\\
-\Rightarrow\ 
-&\myvec{1 & \frac{1}{3} & \big| & \frac{1}{3} \\
-         0 & 0 & \big| & -2 }
-\end{align}
-By the assumption that line equation is $\vec{n}^T\vec{x}=1$ which doesn't pass through origin we are not getting any solution.So our assumption is wrong and origin lies on the line . 
-So consider \begin{align}
-    \vec{n}^T \vec{x} = 0
-\end{align} 
-\end{frame}
-\begin{frame}{Solution:}
-$c=0$ because origin lies on the line and solving:
-so now,Assume the line equation:
-\[
-\vec{n}^T \vec{x} = 0, \quad 
-\vec{n} = \myvec{n_1\\n_2}
-\]
-Line passes through points $\vec{A}$ and $\vec{B}$
-
-\begin{align}
-\vec{n}^T \vec{A} = 0 \implies 3 n_1 + 1 n_2 = 0
-\end{align}
-\begin{align}
-    \vec{n}^T \vec{B} = 0 \implies 9 n_1 + 3 n_2 = 0
-\end{align}
-
-
-Matrix form:
-\begin{align}
-    \myvec{3 & 1 \\ 9 & 3} \myvec{n_1\\n_2} = \myvec{0\\0}
-\end{align}
-
-Augmented matrix:
-\begin{align}
-\myvec{3 & 1 &\big|& 0 \\ 9 & 3 & \big| & 0}
-\end{align}
-\end{frame}
-\begin{frame}{Solution:}
-\begin{align}R_{1} &\leftarrow \frac{1}{3}R_{1} \nonumber\\&
-\Rightarrow \myvec{1 & \frac{1}{3} & \big| & 0 \\ 9 & 3 & \big| & 0}
-\end{align}
-
-\begin{align}R_{2} &\leftarrow R_{2}-9R_{1} \nonumber\\&
-\Rightarrow \myvec{1 & \frac{1}{3} & \big| & 0 \\ 0 & 0 & \big| & 0}
-\end{align}
-
-From first row:
-\begin{align}
-n_1 + \frac{1}{3} n_2 = 0 \implies n_1 = -\frac{1}{3} n_2\\
-\end{align}
-\end{frame}
-\begin{frame}{Solution:}
-Let,
-\begin{align}
-n_2 = 3 \implies n_1 = -1\\
-\vec{n} = \myvec{-1\\3}
-\end{align}
-
-\begin{align}
-    \vec{n}^T \vec{x} = 0 \implies \myvec{-1 & 3} \vec{x} = 0 
-\end{align}
 \textbf{Final Answer}
-Required Equation is \begin{align*}
-\boxed{\myvec{-1 & 3} \vec{x} = 0}
+The desired line equation is as follows
+\begin{align*}
+    \myvec{1&-1}\vec{x}=-1
 \end{align*}
 \end{frame}
-
 \begin{frame}[fragile]{C Source Code: points.c}
 \begin{lstlisting}[language=C]
 #include <stdio.h>
 
-// Function to compute normal vector for line through A(3,1) and B(9,3)
-void get_normal_vector(double *n1, double *n2) {
-    int x1 = 3, y1 = 1;
-    int x2 = 9, y2 = 3;
+// Compute slope of required line
+double compute_slope() {
+    // Given line: x + y + 1 = 0 → slope = -1
+    double slope_given = -1.0;
 
-    // Normal vector = [y2-y1, -(x2-x1)]
-    *n1 = y2 - y1;    // 3 - 1 = 2
-    *n2 = -(x2 - x1); // -(9 - 3) = -6
-}
+    // Required line ⟂ given line → slope = -1 / slope_given
+    double slope_required = -1.0 / slope_given;
 
-int main() {
-    double n1, n2;
-    get_normal_vector(&n1, &n2);
-    printf("Normal vector: n1=%lf, n2=%lf\n", n1, n2);
-    return 0;
+    return slope_required;  // should be 1.0
 }
 
 \end{lstlisting}
@@ -183,20 +108,31 @@ int main() {
 \begin{frame}[fragile]{Python Script: call c.py}
 \begin{lstlisting}[language=Python]
 import ctypes
+import numpy as np
 
-# Load C shared library
+# Load shared library
 lib = ctypes.CDLL("./points.so")
 
-# Prepare ctypes doubles
-n1 = ctypes.c_double()
-n2 = ctypes.c_double()
+# Prepare array for slopes
+slopes = (ctypes.c_double * 2)()
+lib.compute_slopes(slopes)
 
-# Call C function
-lib.get_normal_vector(ctypes.byref(n1), ctypes.byref(n2))
-print("Normal vector from C:", n1.value, n2.value)
+slope_given = slopes[0]
+slope_perp = slopes[1]
 
-# Save normal vector for plotting
-normal_vector = (n1.value, n2.value)
+# Known point
+x0, y0 = 1, 2
+
+# Equation form: y = mx + c
+def line_eqn(m, x0, y0):
+    c = y0 - m * x0
+    return m, c
+
+m1, c1 = line_eqn(slope_given, x0, y0)
+m2, c2 = line_eqn(slope_perp, x0, y0)
+
+print("Given line:        y =", m1, "x +", c1)
+print("Perpendicular line: y =", m2, "x +", c2)
 
 \end{lstlisting}
 \end{frame}
@@ -205,63 +141,56 @@ normal_vector = (n1.value, n2.value)
 \begin{lstlisting}[language=Python]
 import numpy as np
 import matplotlib.pyplot as plt
-import ctypes
 
-# ------------------------
-# Load C library to get normal vector
-# ------------------------
-lib = ctypes.CDLL("./points.so")
-n1 = ctypes.c_double()
-n2 = ctypes.c_double()
-lib.get_normal_vector(ctypes.byref(n1), ctypes.byref(n2))
-print("Normal vector from C:", n1.value, n2.value)
+# Given line: x + y + 1 = 0
+# Perpendicular line through (1,2): slope = 1 => equation: x - y + 1 = 0
 
-# ------------------------
-# Points A and B
-# ------------------------
-A = np.array([3, 1])
-B = np.array([9, 3])
+# Define range for x
+x = np.linspace(-5, 5, 400)
 
-# Direction vector along line
-D = B - A
+# Equations of lines
+y_given = -x - 1          # x + y + 1 = 0
+y_perp  = x + 1           # x - y + 1 = 0
 
-# Parameter t for plotting line
-t = np.linspace(-1, 2, 100)
-line_points = A[:, None] + D[:, None]*t
-\end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]{Python Script: plot.py}
-\begin{lstlisting}[language=Python]
+# Plot given line
+plt.plot(x, y_given, 'b', label="Given line: x + y + 1 = 0")
 
-# ------------------------
-# Plot line and points in 2D
-# ------------------------
-plt.figure(figsize=(6,6))
-plt.plot(line_points[0], line_points[1], color='r', label='Line through A and B')
-plt.scatter([A[0], B[0]], [A[1], B[1]], color='b', s=50, label='Points A and B')
-
-# Optional: plot normal vector from origin
-origin = np.array([0,0])
-plt.quiver(*origin, n1.value, n2.value, angles='xy', scale_units='xy', scale=1,
-           color='g', label='Normal vector')
-
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Line and Normal Vector for Points (3,1) & (9,3)')
+# Plot perpendicular line
+plt.plot(x, y_perp, 'r', label="Perpendicular line: x - y + 1 = 0")
+# Plot the point (1,2)
+plt.scatter(1, 2, color='k', zorder=5)
+plt.text(1.1, 2.1, "(1,2)", fontsize=10)
+# Add axes
+plt.axhline(0, color='gray', linewidth=0.8)
+plt.axvline(0, color='gray', linewidth=0.8)
+# Title and labels
+plt.title("Line and its Perpendicular through (1,2)")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.legend()
 plt.grid(True)
 plt.axis('equal')
-plt.legend()
-plt.savefig("line_normal_2d.png")
 plt.show()
 
 \end{lstlisting}
 \end{frame}
 
-\begin{figure}
-     \centering
-     \includegraphics[width=0.7\columnwidth]{figs/Figure_1.png}
-     \caption{Plot for the unit vector along PQ}
-     \label{fig2}
- \end{figure}
-
+\begin{frame}{Result Plot}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\columnwidth]{figs/Figure_1.png}
+\caption*{Triangle $ABC$ plotted using shared output}
+\end{figure}
+\end{frame}
 \end{document}
+
+
+
+
+
+
+
+
+
+
+

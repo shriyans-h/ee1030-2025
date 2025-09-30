@@ -1,16 +1,27 @@
 import ctypes
+import numpy as np
 
-# Load C shared library
+# Load shared library
 lib = ctypes.CDLL("./points.so")
 
-# Prepare ctypes doubles
-n1 = ctypes.c_double()
-n2 = ctypes.c_double()
+# Prepare array for slopes
+slopes = (ctypes.c_double * 2)()
+lib.compute_slopes(slopes)
 
-# Call C function
-lib.get_normal_vector(ctypes.byref(n1), ctypes.byref(n2))
-print("Normal vector from C:", n1.value, n2.value)
+slope_given = slopes[0]
+slope_perp = slopes[1]
 
-# Save normal vector for plotting
-normal_vector = (n1.value, n2.value)
+# Known point
+x0, y0 = 1, 2
+
+# Equation form: y = mx + c
+def line_eqn(m, x0, y0):
+    c = y0 - m * x0
+    return m, c
+
+m1, c1 = line_eqn(slope_given, x0, y0)
+m2, c2 = line_eqn(slope_perp, x0, y0)
+
+print("Given line:        y =", m1, "x +", c1)
+print("Perpendicular line: y =", m2, "x +", c2)
 

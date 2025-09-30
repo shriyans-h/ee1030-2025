@@ -2,7 +2,8 @@
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-\usepackage{tfrupee}
+\usepackage{lmodern} 
+\usepackage{tfrupee} 
 
 \setlength{\headheight}{1cm} 
 \setlength{\headsep}{0mm}     
@@ -23,122 +24,69 @@
 \usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{multirow}                                         
 
 \begin{document}
 
 \bibliographystyle{IEEEtran}
-\vspace{3cm}
 
-\title{2.10.76}
-\author{EE25BTECH11048 - Revanth Siva Kumar.D}
+\title{4.7.45}
+\author{Revanth Siva Kumar D - EE25BTECH11048
+}
 {\let\newpage\relax\maketitle}
-\textbf{Question}
-Find the equation of the line joining the points $(3,1)$ and $(9,3)$. 
 
-\textbf{Solution :} 
+\textbf{Question} The equation of the line passing through the point $(1, 2)$ and perpendicular to the line $x + y + 1 = 0$ is\\
+\textbf{Solution}
+Let desired line :
+\begin{align}
+    \vec{n}^T\vec{x}=c
+    \label{eq:question}
+\end{align}
+Given line equation and point say A:
+\begin{align}
+    x+y+1=0
+    \label{eq:line}\\
+    y=-x-1\\
+    \vec{A}=\myvec{1\\2}
+\end{align}
+Since, the line from eq \eqref{eq:line} is perpendicular to \eqref{eq:question} \\
+We get the normal vector which is equal to:
+\begin{align}
+   \vec{n} =\myvec{1\\-1}
+\end{align}
 
-Given 
+Because line \eqref{eq:line} is perpendicular, the equation of the line can be changed as:
 \begin{align}
-    \vec{A}=\myvec{3\\1} \vec{B}=\myvec{9\\3} 
-    \label{eq:points}
+    \vec{n}^T\myvec{\vec{x} - \vec{A}}=0
 \end{align}
-Let us assume line equation to be:
-\begin{align}
-    \vec{n}^T \vec{x} = c
-\end{align} 
-    We get the line equation on solving \[\myvec{\vec{A}&\vec{B}}^T\vec{n}=c\myvec{1\\1}\] 
-
-The line passes through the points from \eqref{eq:points} substituting, we get:
-\begin{align}
-    \myvec{3 & 9 \\
-       1 & 3  }^T\vec{n}=c\myvec{1 \\ 1}
-\end{align}
-
-\begin{align}
-    \myvec{3 & 1 \\
-       9 & 3  }\vec{n}=c\myvec{1 \\ 1}
-\end{align}
-Now by Gaussian Elimination solve:
-\begin{align}
-\myvec{3 & 1 & \big| & 1 \\
-         9 & 3 & \big| & 1 }
-\end{align}
+Thus the equation of line:
 
 \begin{align}
-R_{1} &\leftarrow \frac{1}{3}R_{1} \nonumber\\
-\Rightarrow\ 
-&\myvec{1 & \frac{1}{3} & \big| & \frac{1}{3} \\
-         9 & 3 & \big| & 1 }
+    \myvec{1&-1}\myvec{\vec{x} - \myvec{1\\2}}=0\\
+    \implies  \myvec{1&-1}\vec{x}-\myvec{1&-1}\myvec{1\\2}=0\\
+    \implies \myvec{1&-1}\vec{x}=-1
 \end{align}
 
-\begin{align}
-R_{2} &\leftarrow R_{2}-9R_{1} \nonumber\\
-\Rightarrow\ 
-&\myvec{1 & \frac{1}{3} & \big| & \frac{1}{3} \\
-         0 & 0 & \big| & -2 }
-\end{align}
-By the assumption that line equation is $\vec{n}^T\vec{x}=1$ which doesn't pass through origin we are not getting any solution.So our assumption is wrong and origin lies on the line . 
-So consider \begin{align}
-    \vec{n}^T \vec{x} = 0
-\end{align} 
-$c=0$ because origin lies on the line and solving:
-so now,Assume the line equation:
-\[
-\vec{n}^T \vec{x} = 0, \quad 
-\vec{n} = \myvec{n_1\\n_2}
-\]
+\textbf{Final Answer}
+The desired line equation is as follows
+\begin{align*}
+    \myvec{1&-1}\vec{x}=-1
+\end{align*}
 
- 
-
-Line passes through points $\vec{A}$ and $\vec{B}$
-
-\begin{align}
-\vec{n}^T \vec{A} = 0 \implies 3 n_1 + 1 n_2 = 0
-\end{align}
-\begin{align}
-    \vec{n}^T \vec{B} = 0 \implies 9 n_1 + 3 n_2 = 0
-\end{align}
-
-
-Matrix form:
-\begin{align}
-    \myvec{3 & 1 \\ 9 & 3} \myvec{n_1\\n_2} = \myvec{0\\0}
-\end{align}
-
-Augmented matrix:
-\begin{align}
-\myvec{3 & 1 &\big|& 0 \\ 9 & 3 & \big| & 0}
-\end{align}
-\begin{align}R_{1} &\leftarrow \frac{1}{3}R_{1} \nonumber\\&
-\Rightarrow \myvec{1 & \frac{1}{3} & \big| & 0 \\ 9 & 3 & \big| & 0}
-\end{align}
-
-\begin{align}R_{2} &\leftarrow R_{2}-9R_{1} \nonumber\\&
-\Rightarrow \myvec{1 & \frac{1}{3} & \big| & 0 \\ 0 & 0 & \big| & 0}
-\end{align}
-
-From first row:
-\begin{align}
-n_1 + \frac{1}{3} n_2 = 0 \implies n_1 = -\frac{1}{3} n_2\\
-\end{align}
-Let,
-\begin{align}
-n_2 = 3 \implies n_1 = -1\\
-\vec{n} = \myvec{-1\\3}
-\end{align}
-
-\begin{align}
-    \vec{n}^T \vec{x} = 0 \implies \myvec{-1 & 3} \vec{x} = 0 
-\end{align}
-The equation of the line passing through $(3,1)$ and $(9,3)$ is:
-\[\boxed{\myvec{-1 & 3} \vec{x} = 0 }\]
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics[width=0.8\columnwidth]{figs/Figure_1.png}
-    \caption{PLOT}
+    \caption{Plot}
     \label{fig:fig1}
 \end{figure}
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
