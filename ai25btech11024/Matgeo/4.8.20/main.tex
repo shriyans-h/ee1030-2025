@@ -1,0 +1,99 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                               
+
+\def\inputGnumericTable{}                      
+\usepackage[latin1]{inputenc}                    
+\usepackage{color}                              
+\usepackage{array}                             
+\usepackage{longtable}                          
+\usepackage{calc}                               
+\usepackage{multirow}                           
+\usepackage{hhline}                            
+\usepackage{ifthen}                          
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.8.20}
+\author{AI25BTECH11024 - Pratyush Panda
+}
+\maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question: } \\
+Find the distance between the point $\brak{2,3,4}$ measured along the line $\frac{x-4}{3}=\frac{y+5}{6}=\frac{z+1}{2}$ from the plane $3x+2y+2z+5=0$
+\vspace{0.7cm}
+
+\textbf{Solution: } \\
+Let the vector $\Vec{A}$ be $\myvec{2 \\ 3 \\ 4}$, and the direction vector of the line $\Vec{b}=\myvec{3 \\ 6 \\ 2}$. \\
+The equation of the plane can be written as;
+\begin{align}
+\Vec{n}^T\Vec{X}=1 \hspace{1cm} where, \, \Vec{n}=\myvec{3 \\ 2 \\ 2}
+\end{align}
+
+The perpendicular distance between the point and the plane $\brak{x}$ can be written as;
+\begin{align}
+x=\frac{\Vec{n}^T\Vec{A}}{||\Vec{n}||}=\frac{20}{\sqrt{17}}
+\end{align}
+
+Now, the distance along the given line can be written as $\frac{x}{\cos\theta}$. \\
+Where $\cos\theta$ is the angle between $\Vec{b}$ \brak{\text{direction vector of the line}} and $\Vec{n}$ \brak{\text{normal vector of the plane}}. \\
+
+Thus $\cos\theta$ can be written as;
+\begin{align}
+\cos\theta = \frac{\Vec{n}^T\Vec{b}}{||\Vec{n}||.||\Vec{b}||}=\frac{25}{7.\sqrt{17}}
+\end{align}
+
+Thus, the final distance along the line can be written as;
+\begin{align}
+d=||\Vec{b}||.\frac{\Vec{n}^T\Vec{A}}{\Vec{n}^T\Vec{b}}=\frac{28}{5}
+\end{align}
+
+Thus, the distance between the point $\brak{2,3,4}$ measured along the line $\frac{x-4}{3}=\frac{y+5}{6}=\frac{z+1}{2}$ from the plane $3x+2y+2z+5=0$ is $5.6$
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\columnwidth]{figs/img.png}
+\caption*{}
+\end{figure}
+
+\end{document}
