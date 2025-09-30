@@ -1,0 +1,99 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.3.25}
+\author{EE25BTECH11036 - M Chanakya Srinivas}
+\maketitle
+
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\renewcommand\theequation{\arabic{equation}}
+
+
+\section*{Problem}
+Find the ratio in which the $YZ$ plane divides the line segment joining the points 
+\[
+\vec{A} = \myvec{-2\\4\\7}, \quad 
+\vec{B} = \myvec{3\\-5\\8}.
+\]
+
+\section*{Solution}
+
+The line joining $\vec{A}$ and $\vec{B}$ can be written in parametric form as
+\begin{align}
+\vec{R} &= \vec{A} + \lambda\brak{\vec{B}-\vec{A}} \label{eq:line}
+\end{align}
+
+Substitute $\vec{A}$ and $\vec{B}$:
+\begin{align}
+\vec{R} 
+&= \myvec{-2\\4\\7} + \lambda \brak{\myvec{3\\-5\\8}-\myvec{-2\\4\\7}} \\
+&= \myvec{-2\\4\\7} + \lambda \myvec{5\\-9\\1} \label{eq:expand}
+\end{align}
+
+So
+\begin{align}
+\vec{R} = \myvec{-2+5\lambda \\ 4-9\lambda \\ 7+\lambda}
+\end{align}
+
+The $YZ$-plane has the equation 
+\begin{align}
+\myvec{1 & 0 & 0}\vec{R} = 0 \label{eq:yzplane}
+\end{align}
+
+Substituting $\vec{R}$:
+\begin{align}
+\myvec{1 & 0 & 0}\myvec{-2+5\lambda \\ 4-9\lambda \\ 7+\lambda} &= 0 \\
+-2+5\lambda &= 0 \\
+\lambda &= \tfrac{2}{5} \label{eq:lambda}
+\end{align}
+
+Thus, the point of intersection is
+\begin{align}
+\vec{P} &= \vec{A} + \frac{2}{5}\brak{\vec{B}-\vec{A}} \\
+&= \frac{3}{5}\vec{A} + \frac{2}{5}\vec{B}
+\end{align}
+
+Therefore, the ratio in which the $YZ$-plane divides $AB$ is
+\begin{align}
+AP : PB = 2 : 3
+\end{align}
+
+\section*{Answer}
+The $YZ$-plane divides the line segment internally in the ratio $\boxed{2:3}$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig_61.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/Fig -62.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
