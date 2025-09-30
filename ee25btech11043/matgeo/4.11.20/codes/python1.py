@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Load the shared library
-lib_geometry = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code8.so")
+lib_geometry = ctypes.CDLL("./code8.so")
 
 # Define the argument types and return type for the C function
 lib_geometry.findIntersectionAndAngle.argtypes = [
