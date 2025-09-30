@@ -92,70 +92,70 @@
 
 
 
+
+
 \begin{frame}{Problem Statement}
-Let $OACB$ be a parallelogram with $O$ at the origin and $OC$ a diagonal. Let $D$ be the midpoint of $OA$. 
-
-\begin{itemize}
-    \item Prove that $BD$ and $CO$ intersect in the same ratio.
-    \item Determine this ratio.
-\end{itemize}
+Let \(OACB\) be a parallelogram with \(O\) at the origin and \(OC\) a diagonal.\\
+Let \(D\) be the midpoint of \(OA\).\\
+Using vector methods, prove that \(BD\) and \(CO\) intersect in the same ratio. Determine this ratio.
 \end{frame}
 
-\begin{frame}{Step 1: Define Position Vectors}
+\begin{frame}{Step 1: Define position vectors}
 \begin{align}
-\vec{O} &= \myvec{0\\0}, &
-\vec{A} &= \myvec{a_1\\a_2}, &
-\vec{B} &= \myvec{a_1 + b_1\\a_2 + b_2}, &
-\vec{C} &= \myvec{b_1\\b_2}
-\end{align}
-
-Midpoint $D$ of $OA$:
-\begin{align}
-\vec{D} &= \frac{\vec{O} + \vec{A}}{2} = \frac{1}{2} \myvec{a_1\\a_2}
+\vec{O} &= \myvec{0\\0}, \\
+\vec{A} &= \vec{a}, \\
+\vec{C} &= \vec{c}, \\
+\vec{B} &= \vec{A} + \vec{C}, \\
+\vec{D} &= \frac{\vec{O} + \vec{A}}{2} = \frac{1}{2}\vec{A}.
 \end{align}
 \end{frame}
 
-\begin{frame}{Step 2: Lines in Vector Form}
-Line $BD$:
+\begin{frame}{Step 2: Vector equations of lines}
+\textbf{Line \(BD\):}
 \begin{align}
-\vec{R_1} &= \vec{B} + \lambda (\vec{D} - \vec{B}) \notag \\
-&= \myvec{a_1 + b_1\\a_2 + b_2} - \lambda \left(\frac{1}{2} \myvec{a_1\\a_2} + \myvec{b_1\\b_2}\right)
+\vec{R_1} &= \vec{B} + \lambda (\vec{D} - \vec{B}) \\
+&= \vec{B} - \lambda \left(\frac{1}{2}\vec{A} + \vec{C}\right)
 \end{align}
 
-Line $CO$:
+\textbf{Line \(CO\):}
 \begin{align}
-\vec{R_2} &= \vec{C} + \mu (\vec{O} - \vec{C}) \notag \\
-&= (1 - \mu) \myvec{b_1\\b_2}
-\end{align}
-\end{frame}
-
-\begin{frame}{Step 3: Find Intersection}
-Equate lines:
-\begin{align}
-\myvec{a_1 + b_1\\a_2 + b_2} - \lambda \left(\frac{1}{2} \myvec{a_1\\a_2} + \myvec{b_1\\b_2}\right) &= (1 - \mu) \myvec{b_1\\b_2}
-\end{align}
-
-Solve coefficients:
-
-For $\vec{a}$:
-\begin{align}
-1 - \frac{\lambda}{2} &= 0 \implies \lambda = 2
-\end{align}
-
-For $\vec{b}$:
-\begin{align}
-1 - \lambda &= 1 - \mu \implies \mu = 2
+\vec{R_2} &= \vec{C} + \mu (\vec{O} - \vec{C}) = (1-\mu)\vec{C}
 \end{align}
 \end{frame}
 
-\begin{frame}{Step 4: Intersection Ratio}
-- On $BD$, $\lambda = 2$ $\Rightarrow$ intersection divides $BD$ in ratio $2:1$  
-- On $CO$, $\mu = 2$ $\Rightarrow$ intersection divides $CO$ in ratio $2:1$
-
+\begin{frame}{Step 3: Intersection condition}
 \[
-\boxed{\text{The lines $BD$ and $CO$ intersect in the ratio } 2:1.}
+\vec{R_1} = \vec{R_2} \quad \Rightarrow \quad 
+\vec{B} - \lambda \left(\frac{1}{2}\vec{A} + \vec{C}\right) = (1-\mu)\vec{C}
+\]
+
+Substitute \(\vec{B} = \vec{A} + \vec{C}\):
+\[
+\vec{A} + \vec{C} - \lambda \left(\frac{1}{2}\vec{A} + \vec{C}\right) = (1-\mu)\vec{C}
 \]
 \end{frame}
+
+\begin{frame}{Step 4: Equate coefficients of vectors}
+\begin{align}
+\text{Coefficient of } \vec{A}: & \quad 1 - \frac{\lambda}{2} = 0 \quad \Rightarrow \quad \lambda = 2 \\
+\text{Coefficient of } \vec{C}: & \quad 1 - \lambda = 1 - \mu \quad \Rightarrow \quad \mu = 2
+\end{align}
+\end{frame}
+
+\begin{frame}{Step 5: Interpret the ratio}
+\begin{itemize}
+\item On \(BD\), \(\lambda = 2\) \(\Rightarrow\) intersection divides \(BD\) in ratio \(2:1\).  
+\item On \(CO\), \(\mu = 2\) \(\Rightarrow\) intersection divides \(CO\) in ratio \(2:1\).  
+\end{itemize}
+
+\begin{align}
+\boxed{\text{The lines $BD$ and $CO$ intersect in the ratio } 2:1.}
+\end{align}
+\end{frame}
+
+
+
+
 
 
 \begin{frame}[fragile]{C code}
