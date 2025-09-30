@@ -1,0 +1,118 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.3.16}
+\author{EE25btech11028 - J.Navya sri}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+
+\textbf{Question:} \\
+Find the equation of the plane through the points  
+\[
+(2,1,0), \quad (3,-2,-2), \quad (3,1,7).
+\]
+\textbf{Solution:}
+Given three points:
+\[
+P_1(2,1,0), \quad P_2(3,-2,-2), \quad P_3(3,1,7)
+\]
+
+The direction vectors are:
+\begin{equation}
+\myvec{v}_1 =\myvec{P_2 - P_1} = (3-2,\,-2-1,\,-2-0) = (1,-3,-2)
+\end{equation}
+
+\begin{equation}
+\myvec{v}_2 =\myvec{P_3 - P_1 }= (3-2,\;1-1,\;7-0) = (1,0,7)
+\end{equation}
+
+The normal vector to the plane is given by the cross product:
+\begin{equation}
+\myvec{n} = \myvec{v}_1 \times \myvec{v}_2
+\end{equation}
+
+\begin{equation}
+\myvec{n} = 
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & -3 & -2 \\
+1 & 0 & 7
+\end{vmatrix}
+\end{equation}
+
+\begin{equation}
+\myvec{n} = (-21,\,-9,\;3) = (-7,\,-3,\;1)
+\end{equation}
+
+Hence, the equation of the plane is:
+\begin{equation}
+-7(x-2) - 3(y-1) + (z-0) = 0
+\end{equation}
+
+Simplifying:
+\begin{equation}
+-7x + 14 - 3y + 3 + z = 0
+\end{equation}
+
+\begin{equation}
+7x + 3y - z - 17 = 0
+\end{equation}
+\textbf{Final answer:}
+\[
+\boxed{7x + 3y - z - 17 = 0}
+\]
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\columnwidth]{figs/fig6.png}
+\end{center}
+\caption{}
+\label{fig:Fig}
+\end{figure}
+
+
+\end{document}
