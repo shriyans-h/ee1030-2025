@@ -1,0 +1,94 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.7.11}
+\author{EE25btech11028 - J.Navya sri}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+
+\textbf{Question:} \\
+Find the distance of the plane 
+2x - 3y + 4z - 6 = 0
+from the origin.
+
+
+\bigskip
+
+\textbf{Solution:} \\
+The distance of a plane $Ax + By + Cz + D = 0$ from a point $(x_0, y_0, z_0)$ is given by:
+\begin{equation}
+\text{Distance} = \frac{|A x_0 + B y_0 + C z_0 + D|}{\sqrt{A^2 + B^2 + C^2}}
+\end{equation}
+
+For the plane 
+\begin{equation}
+2x - 3y + 4z - 6 = 0
+\end{equation} 
+\[a = 2 , b = -3, c =4 , d = -6
+\]
+and the origin $(0,0,0)$, we have:
+\begin{equation}
+\text{Distance} = \frac{|2(0) - 3(0) + 4(0) - 6|}{\sqrt{2^2 + (-3)^2 + 4^2}}
+= \frac{|-6|}{\sqrt{4 + 9 + 16}}
+= \frac{6}{\sqrt{29}}
+\end{equation}
+
+
+Thus, the distance of the plane from the origin is 
+\begin{equation}
+\boxed{\frac{6}{\sqrt{29}}}
+\end{equation}
+
+
+\textbf{Graph presentation:}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\columnwidth]{Figs/fig7.png}
+\end{center}
+\caption{}
+\label{fig:Fig}
+\end{figure}
+\end{document}
