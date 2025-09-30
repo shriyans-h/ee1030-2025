@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  28 SEP 2025 08:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  30 SEP 2025 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1309,269 +1309,56 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2022/06/24 version 5.1.1 text color boxes
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 3
+6.
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks55
-\verbatim@line=\toks56
-\verbatim@in@stream=\read3
-)
-(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-\tcb@titlebox=\box94
-\tcb@upperbox=\box95
-\tcb@lowerbox=\box96
-\tcb@phantombox=\box97
-\c@tcbbreakpart=\count366
-\c@tcblayer=\count367
-\c@tcolorbox@number=\count368
-\tcb@temp=\box98
-\tcb@temp=\box99
-\tcb@temp=\box100
-\tcb@temp=\box101
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
-Library (tcolorbox): 'tcbminted.code.tex' version '5.1.1'
-(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
-Package: minted 2022/12/12 v2.7 Yet another Pygments shim for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
-
-(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
-\FV@CodeLineNo=\count369
-\FV@InFile=\read4
-\FV@TabBox=\box102
-\c@FancyVerbLine=\count370
-\FV@StepNumber=\count371
-\FV@OutFile=\write5
-)
-(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-))
-(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2023/01/19 line numbers on paragraphs v5.1
-\linenopenalty=\count372
-\output=\toks57
-\linenoprevgraf=\count373
-\linenumbersep=\dimen375
-\linenumberwidth=\dimen376
-\c@linenumber=\count374
-\c@pagewiselinenumber=\count375
-\c@LN@truepage=\count376
-\c@internallinenumber=\count377
-\c@internallinenumbers=\count378
-\quotelinenumbersep=\dimen377
-\bframerule=\dimen378
-\bframesep=\dimen379
-\bframebox=\box103
-\linenoamsmath@ams@eqpen=\count379
-LaTeX Info: Redefining \\ on input line 3131.
-)
-\c@FV@TrueTabGroupLevel=\count380
-\c@FV@TrueTabCounter=\count381
-\FV@TabBox@Group=\box104
-\FV@TmpLength=\skip67
-\c@FV@HighlightLinesStart=\count382
-\c@FV@HighlightLinesStop=\count383
-\FV@LoopCount=\count384
-\FV@NCharsBox=\box105
-\FV@BreakIndent=\dimen380
-\FV@BreakIndentNChars=\count385
-\FV@BreakSymbolSepLeft=\dimen381
-\FV@BreakSymbolSepLeftNChars=\count386
-\FV@BreakSymbolSepRight=\dimen382
-\FV@BreakSymbolSepRightNChars=\count387
-\FV@BreakSymbolIndentLeft=\dimen383
-\FV@BreakSymbolIndentLeftNChars=\count388
-\FV@BreakSymbolIndentRight=\dimen384
-\FV@BreakSymbolIndentRightNChars=\count389
-\c@FancyVerbLineBreakLast=\count390
-\FV@LineBox=\box106
-\FV@LineIndentBox=\box107
-\c@FV@BreakBufferDepth=\count391
-\FV@LineWidth=\dimen385
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count392
-\calc@Bcount=\count393
-\calc@Adimen=\dimen386
-\calc@Bdimen=\dimen387
-\calc@Askip=\skip68
-\calc@Bskip=\skip69
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count394
-\calc@Cskip=\skip70
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
-
-(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
-
-) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count395
-\decimalpart=\count396
-)
-Package: xstring 2023/01/14 v1.85 String manipulations (CT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip71
-\fb@frw=\dimen388
-\fb@frh=\dimen389
-\FrameRule=\dimen390
-\FrameSep=\dimen391
-)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count397
-\float@exts=\toks58
-\float@box=\box108
-\@float@everytoks=\toks59
-\@floatcapt=\box109
-)
-\minted@appexistsfile=\read5
-\minted@bgbox=\box110
-\minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count398
-\c@minted@pygmentizecounter=\count399
-\@float@every@listing=\toks60
-\c@listing=\count400
-)
-runsystem(mkdir -p _minted-main)...disabled (restricted).
-
-
-
-! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \RequirePackage{minted}[2021/12/24]
-                                        
-? 
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
-Library (tcolorbox): 'tcblistingscore.code.tex' version '5.1.1'
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
-Library (tcolorbox): 'tcbprocessing.code.tex' version '5.1.1'
-)
-\c@tcblisting=\count401
-)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '5.1.1'
-(/usr/share/texlive/texmf-dist/tex/latex/pdfcol/pdfcol.sty
-Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
-)
-Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box111
-\tcb@totalupperbox=\box112
-\tcb@totallowerbox=\box113
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
-Library (tcolorbox): 'tcbxparse.code.tex' version '5.1.1'
-) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '5.1.1'
-\tcb@waterbox=\box114
-(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.1.1'
-)) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)
-runsystem(which pygmentize && touch main.aex)...disabled (restricted).
-
-
-
-! Package minted Error: You must have `pygmentize' installed to use this packag
-e.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 \begin{document}
-                     
-? 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 7
-7.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 No file main.aux.
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 77.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 36.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-77.
+36.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 36.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-77.
+36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 36.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-77.
+36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 77.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 7
-7.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 36.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 3
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1609,17 +1396,17 @@ LaTeX Font Info:    ... okay on input line 77.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count402
-\scratchdimen=\dimen392
-\scratchbox=\box115
-\nofMPsegments=\count403
-\nofMParguments=\count404
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count405
-\MPscratchDim=\dimen393
-\MPnumerator=\count406
-\makeMPintoPDFobject=\count407
-\everyMPtoPDFconversion=\toks62
+\scratchcounter=\count366
+\scratchdimen=\dimen375
+\scratchbox=\box94
+\nofMPsegments=\count367
+\nofMParguments=\count368
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count369
+\MPscratchDim=\dimen376
+\MPnumerator=\count370
+\makeMPintoPDFobject=\count371
+\everyMPtoPDFconversion=\toks56
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1629,56 +1416,56 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 77.
-\@outlinefile=\write7
-\openout7 = `main.out'.
+Package hyperref Info: Link coloring OFF on input line 36.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 77.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 77.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 77.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 77.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 36.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 77.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 77.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 77.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 77.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 77.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 77.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 77.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 77.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 36.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 77.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 77.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 77.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 36.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 77.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 77.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 77.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 77.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 77.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 36.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 77.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1704,84 +1491,84 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count408
+\c@lstlisting=\count372
 
 No file main.nav.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-88.
+46.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-8.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+6.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-88.
+46.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-88.
+46.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 88.
+(Font)              <10.95> on input line 46.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 88.
+(Font)              <8> on input line 46.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 88.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 8
-8.
+(Font)              <6> on input line 46.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 4
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 8
-8.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 4
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 8
-8.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 8
-8.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 4
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 8
-8.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 4
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 88.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 88.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 88.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 88.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 88.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 88.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 46.
  [2
 
 ] [3
@@ -1822,13 +1609,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-6.
- (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-[10
+ (./main.vrb) [10
 
 ]
 \openout4 = `main.vrb'.
@@ -1839,28 +1620,25 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 <Figs/fig1.png, id=328, 462.528pt x 346.896pt>
 File: Figs/fig1.png Graphic file (type png)
 <use Figs/fig1.png>
-Package pdftex.def Info: Figs/fig1.png  used on input line 250.
+Package pdftex.def Info: Figs/fig1.png  used on input line 221.
 (pdftex.def)             Requested size: 266.98991pt x 200.25232pt.
 
-Overfull \vbox (8.726pt too high) detected at line 250
+Overfull \vbox (8.726pt too high) detected at line 221
  []
 
 [12
 
  <./Figs/fig1.png>]
-\tf@nav=\write8
-\openout8 = `main.nav'.
+\tf@nav=\write6
+\openout6 = `main.nav'.
 
-\tf@toc=\write9
-\openout9 = `main.toc'.
+\tf@toc=\write7
+\openout7 = `main.toc'.
 
-\tf@snm=\write10
-\openout10 = `main.snm'.
+\tf@snm=\write8
+\openout8 = `main.snm'.
 
  (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 
 Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -1871,28 +1649,28 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56597 strings out of 476091
- 1342753 string characters out of 5794081
- 2233647 words of memory out of 5000000
- 75963 multiletter control sequences out of 15000+600000
- 564490 words of font info for 78 fonts, out of 8000000 for 9000
+ 49856 strings out of 476091
+ 1174949 string characters out of 5794081
+ 1993697 words of memory out of 5000000
+ 69329 multiletter control sequences out of 15000+600000
+ 564185 words of font info for 77 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,122p,1172b,1590s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/f
-onts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmtt10.pfb>
-Output written on main.pdf (12 pages, 248842 bytes).
+ 128i,15n,122p,1172b,1444s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
+10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmtt10.pfb>
+Output written on main.pdf (12 pages, 262724 bytes).
 PDF statistics:
  419 PDF objects out of 1000 (max. 8388607)
- 364 compressed objects within 4 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 363 compressed objects within 4 object streams
+ 25 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
