@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.25)  28 SEP 2025 19:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.25)  30 SEP 2025 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1898,16 +1898,11 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 3
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-)
-Underfull \hbox (badness 10000) in paragraph at lines 51--13
-
- []
-
-)
+))
 <figs/figure.png, id=31, 462.528pt x 346.896pt>
 File: figs/figure.png Graphic file (type png)
 <use figs/figure.png>
-Package pdftex.def Info: figs/figure.png  used on input line 77.
+Package pdftex.def Info: figs/figure.png  used on input line 78.
 (pdftex.def)             Requested size: 364.1953pt x 273.16086pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1924,10 +1919,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52961 strings out of 474222
- 1254928 string characters out of 5748733
+ 52960 strings out of 474222
+ 1254910 string characters out of 5748733
  1947975 words of memory out of 5000000
- 74389 multiletter control sequences out of 15000+600000
+ 74388 multiletter control sequences out of 15000+600000
  624599 words of font info for 171 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  109i,18n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1937,7 +1932,7 @@ xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main.pdf (2 pages, 98068 bytes).
+Output written on main.pdf (2 pages, 98101 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
