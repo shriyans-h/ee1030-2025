@@ -21,7 +21,7 @@
 
 % Title Information
 \title{2.7.15}
-\date{September 29, 2025}
+\date{September 30, 2025}
 \author{ADHARVAN KSHATHRIYA BOMMAGANI - EE25BTECH11003}
 
 \begin{document}
@@ -35,122 +35,57 @@ Find the volume of a parallelepiped whose edges are given by:
 \begin{align*}
 \vec{a} = -3\hat{i} + 7\hat{j} + 5\hat{k}, \quad
 \vec{b} = -5\hat{i} + 7\hat{j} - 3\hat{k}, \quad
-\vec{c} = 7\hat{i} - 5\hat{j} - 3\hat{k}.
+\vec{c} = 7\hat{i} - 5\hat{j} - 3\hat{k}
 \end{align*}
 \end{frame}
 
-% Step 1: Represent vectors and Gram matrix
+% Vectors definition
 \begin{frame}{Theoretical Solution}
-Let the three vectors representing the edges be:
+Let $\vec{a}$, $\vec{b}$ and $\vec{c}$ be the vectors representing the edges of the parallelepiped:
 \begin{align*}
-\vec{a} = \myvec{-3 \\ 7 \\ 5}, \quad
-\vec{b} = \myvec{-5 \\ 7 \\ -3}, \quad
-\vec{c} = \myvec{7 \\ -5 \\ -3}.
-\end{align*}
-
-The volume is given by:
-\begin{align*}
-V = \sqrt{\det(G)},
-\end{align*}
-where \(G\) is the Gram matrix formed by dot products of the vectors.
-
-The Gram matrix is:
-\begin{align*}
-G = 
-\myvec{
-83 & 49 & -71 \\
-49 & 83 & -61 \\
--71 & -61 & 83
-}
+\vec{a} &= \myvec{-3 \\ 7 \\ 5}, \\
+\vec{b} &= \myvec{-5 \\ 7 \\ -3}, \\
+\vec{c} &= \myvec{7 \\ -5 \\ -3}
 \end{align*}
 \end{frame}
 
-% Step 2: Row reduction - Step 1
+% Volume definition using scalar triple product
 \begin{frame}{Theoretical Solution}
-We use row reduction to make \(G\) upper triangular.
-
-Perform the operations:
+The volume is given by the scalar triple product:
 \begin{align*}
-\myvec{
-83 & 49 & -71 \\
-49 & 83 & -61 \\
--71 & -61 & 83
-}
-\xrightarrow{\textstyle R_2 \to R_2 - \frac{49}{83}R_1}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
--71 & -61 & 83
-}
+V = \left| [\vec{a} \ \vec{b} \ \vec{c}] \right|
 \end{align*}
-
+This is equivalent to the determinant:
+\begin{align*}
+V = \left| \myvec{ -3 & -5 & 7 \\ 7 & 7 & -5 \\ 5 & -3 & -3 } \right|
+\end{align*}
 \end{frame}
+
+% Determinant calculation
 \begin{frame}{Theoretical Solution}
-
+Expanding the determinant:
 \begin{align*}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
--71 & -61 & 83
-}
-\xrightarrow{\textstyle R_3 \to R_3 + \frac{71}{83}R_1}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
-0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
-}
+\det 
+&= -3(-21 - 15) + 5(-21 + 25) + 7(-21 - 35) \\
+&= -3(-36) + 5(4) + 7(-56) \\
+&= 108 + 20 - 392 = -264
 \end{align*}
-
-
 \end{frame}
 
-
-% Step 3: Row reduction - Step 2
+% Final Volume
 \begin{frame}{Theoretical Solution}
-
+Taking the absolute value of the determinant:
 \begin{align*}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
-0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
-}
-\xrightarrow{\textstyle R_3 \to R_3 + \frac{6}{17}R_2}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
-0 & 0 & \tfrac{264}{17}
-}
+V &= |{-264}| = 264 \text{ cubic units}
 \end{align*}
-
+Therefore, the volume of the parallelepiped is 264 cubic units.
 \end{frame}
 
-% Step 4: Determinant calculation
-\begin{frame}{Theoretical Solution}
-The matrix is now upper triangular, so the determinant is the product of the diagonal entries:
-\begin{align*}
-\det(G) = 83 \times \frac{4488}{83} \times \frac{264}{17}.
-\end{align*}
-
-Simplifying step-by-step:
-\begin{align*}
-\det(G) = 4488 \times \frac{264}{17} = (17 \times 264) \times \frac{264}{17} = 264 \times 264 = 69696
-\end{align*}
-
-The volume is:
-\begin{align*}
-V = \sqrt{\det(G)} = \sqrt{69696} = \mathbf{264} \ \text{cubic units.}
-\end{align*}
-\end{frame}
-
-% Step 5: Final figure
+% Figure slide
 \begin{frame}{Plot}
 \centering
-\textbf{Parallelepiped defined by } $\vec{a}, \vec{b}, \vec{c}$
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
-    \caption{3D Representation of the Parallelepiped}
-\end{figure}
+\includegraphics[width=0.8\linewidth]{figs/fig1.png}
+\captionof{figure}{Parallelepiped Defined by Vectors $\vec{a}$, $\vec{b}$, and $\vec{c}$}
 \end{frame}
 
 \end{document}

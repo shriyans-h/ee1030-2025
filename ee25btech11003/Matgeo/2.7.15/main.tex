@@ -2,10 +2,10 @@
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-\usepackage{tfrupee} % Include tfrupee package
+\usepackage{tfrupee}
 
-\setlength{\headheight}{1cm} % Set the height of the header box
-\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
 
 \usepackage{gvv-book}
 \usepackage{gvv}
@@ -34,118 +34,67 @@
 \usepackage{hhline}                                 
 \usepackage{ifthen}                                 
 \usepackage{lscape}
+\usepackage{float}  % <-- Add this to allow [H] in figures
+
 \begin{document}
 
+
 \bibliographystyle{IEEEtran}
-\vspace{3cm}
 
 \title{2.7.15}
 \author{EE25BTECH11003 - Adharvan Kshathriya Bommagani}
-{\newpage\maketitle}
+\maketitle
+
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \setlength{\intextsep}{10pt} % Space between text and floats
 \textbf{Question}:\\
-Find the volume of a parallelepiped whose edges are given by $-3\hat{i} + 7\hat{j} + 5\hat{k}$, $-5\hat{i} + 7\hat{j} - 3\hat{k}$ and $7\hat{i} - 5\hat{j} - 3\hat{k}$.
+Find the volume of a parallelepiped whose edges are given by $-3\hat{i} + 7\hat{j} + 5\hat{k}$, $-5\hat{i} + 7\hat{j} - 3\hat{k}$ and $7\hat{i} - 5\hat{j} - 3\hat{k}$.\\
   
-\bigskip
 
-\textbf{Solution}:\\
 
-Let $\vec{a}$, $\vec{b}$ and $\vec{c}$ be three vectors representing the edges of the given parallelepiped.
+\textbf{Solution:}
+Let $\vec{a}$, $\vec{b}$ and $\vec{c}$ be the vectors representing the edges of the parallelepiped.
 \begin{align}
-    \vec{a} = \myvec{ - 3 \\ 7 \\ 5 },  
-    \vec{b} = \myvec{ - 5 \\ 7 \\ - 3 },
-     \vec{c} = \myvec{ 7 \\ -5 \\ -3 }
+\vec{a} &= \myvec{-3 \\ 7 \\ 5}, \quad 
+\vec{b} = \myvec{-5 \\ 7 \\ -3}, \quad 
+\vec{c} = \myvec{7 \\ -5 \\ -3}
 \end{align}
 
-The volume is given by $V = \sqrt{\det(G)}$, where $G$ is the Gram matrix formed by the dot products of the vectors. Based on calculations, the Gram matrix is:
-$$
-G = \myvec{
-83 & 49 & -71 \\
-49 & 83 & -61 \\
--71 & -61 & 83
-}
-$$
 
-We use \textbf{row reduction} to convert $G$ into an upper triangular matrix $U$.  
-The determinant is unchanged by adding a multiple of one row to another.\\
 
-\textbf{Step 1:}
+The volume of the parallelepiped is given by the absolute value of the scalar triple product:
 \begin{align*}
-\myvec{
-83 & 49 & -71 \\
-49 & 83 & -61 \\
--71 & -61 & 83
-}
-\xrightarrow{\;R_2 \to R_2 - \frac{49}{83}R_1\;}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
--71 & -61 & 83
-}
+V = \left| \left[ \vec{a} \ \vec{b} \ \vec{c} \right] \right|
+\end{align*}
+
+which is equivalent to the determinant of the matrix formed by the components of $\vec{a}$, $\vec{b}$, and $\vec{c}$:
+\begin{align*}
+V = \left| \myvec{ -3 & -5 & 7 \\ 7 & 7 & -5 \\ 5 & -3 & -3 } \right|
 \end{align*}
 
 
-\textbf{Step 2:}
+
+The determinant expression:
 \begin{align*}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
--71 & -61 & 83
-}
-\xrightarrow{\;R_3 \to R_3 + \frac{71}{83}R_1\;}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
-0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
-}
+\det = -3(-36) + 5(4) + 7(-56) = 108 + 20 - 392 = -264
 \end{align*}
 
-
-\textbf{Step 3:}
+Thus, the volume is:
 \begin{align*}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
-0 & \tfrac{-1584}{83} & \tfrac{1848}{83}
-}
-\xrightarrow{\;R_3 \to R_3 + \tfrac{6}{17}R_2\;}
-\myvec{
-83 & 49 & -71 \\
-0 & \tfrac{4488}{83} & \tfrac{-1584}{83} \\
-0 & 0 & \tfrac{264}{17}
-}
+V = \left| -264 \right| = 264 \text{ cubic units}
 \end{align*}
+
+Therefore, the volume of the parallelepiped is 264 cubic units.
+
 \newpage
-The matrix is now upper triangular. The determinant of $G$ is the product of the diagonal entries of $U$.
-\begin{align*}
-\det(G) &= 83 \times \frac{4488}{83} \times \frac{264}{17} \\
-&= 4488 \times \frac{264}{17} \\
-&= (17 \times 264) \times \frac{264}{17} \\
-&= 264 \times 264 = \mathbf{69696}
-\end{align*}
-\\
-The volume is the square root of the determinant.
-\begin{align*}
-\text{Volume} &= \sqrt{\det(G)} = \sqrt{69696} \\
-\text{Volume} &= \mathbf{264} \ \text{cubic units}
-\end{align*}
-\\
-
-
-Therefore, the volume of the parallelepiped is 264 cubic units.\\
-
-
-\textbf{Parallelopiped Defined by Vectors $\vec{a}$, $\vec{b}$ and $\vec{c}$ :}
-\begin{figure}[h!]
+\textbf{Parellelopiped Defined by Vectors a, b and c:}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\columnwidth]{figs/fig1.png}
+    \includegraphics[width=1.1\columnwidth]{figs/fig1.png}
     \caption{Figure for 2.7.15}
     \label{fig1}
 \end{figure}
-
-
 
 \end{document}
