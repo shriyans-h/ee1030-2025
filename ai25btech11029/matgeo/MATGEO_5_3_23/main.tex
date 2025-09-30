@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[a4paper, left = 1.5cm, right = 1.5cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+\large
+    \textbf{Samyak Gondane-AI25BTECH11029}
+\end{center}
+\date{}
+
+\section*{Question}
+For what value of $k$, will the following pain of equations have infinitly many solutions\\
+
+$2x + 3y = 7$ and $(k + 2)x - 3(1 - k)y = 5k + 1$
+
+\section*{Solution}
+
+\begin{align}
+2x + 3y &= 7 \quad \text{(1)} \\
+(k + 2)x - 3(1 - k)y &= 5k + 1 \quad \text{(2)}
+\end{align}
+
+
+
+\subsubsection*{Matrix Representation}
+Write the system as an augmented matrix:
+\begin{align}
+\myvec{
+2 & 3 & \vert &7 \\
+k+2 & -3(1-k) & \vert &5k + 1
+} 
+= 
+\myvec{
+2 & 3 & \vert &7 \\
+k+2 & -3 + 3k & \vert & 5k + 1
+}
+\end{align}
+
+
+\subsection*{Condition for Infinitely Many Solutions}
+For infinitely many solutions, the second row must be a scalar multiple of the first row. Let the scalar be $\lambda$. Then:
+
+\begin{align}
+k + 2 &= 2\lambda \quad \text{(i)} \\
+-3 + 3k &= 3\lambda \quad \text{(ii)} \\
+5k + 1 &= 7\lambda \quad \text{(iii)}
+\end{align}
+
+From (i), solve for $\lambda$:
+
+\begin{align}
+\lambda = \frac{k + 2}{2}
+\end{align}
+
+Substitute into (ii):
+
+\begin{align}
+-3 + 3k = 3 (\frac{k + 2}{2})\\
+-3 + 3k = \frac{3k + 6}{2}\\
+-6 + 6k = 3k + 6\\
+3k = 12\\
+k = 4
+\end{align}
+
+
+\subsection*{Verification}
+Check with equation (iii):
+
+\begin{align}
+\lambda = \frac{4 + 2}{2} = 3 \\
+7\lambda = 21 \\
+5k + 1 = 5(4) + 1 = 21
+\end{align}
+
+
+\subsection*{Final Answer}
+
+\begin{align}
+\boxed{k = 4}
+\end{align}
+
+\end{document}
