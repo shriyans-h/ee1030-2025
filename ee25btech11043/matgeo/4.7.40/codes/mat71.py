@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Load the shared library
-lib_perpendicular = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code7.so")
+lib_perpendicular = ctypes.CDLL("./code7.so")
 
 # Define the argument types and return type for the C function
 lib_perpendicular.find_perpendicular_details.argtypes = [
