@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  30 SEP 2025 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2025.8.13)  30 SEP 2025 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1093,8 +1093,7 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 end/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count391
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
@@ -1115,6 +1114,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
 LaTeX Font Info:    ... okay on input line 80.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
 LaTeX Font Info:    ... okay on input line 80.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1177,6 +1177,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 80.
+ (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1272,9 +1273,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count398
-
-No file main.nav.
-
+ (./main.nav)
 
 [1
 
@@ -1320,10 +1319,6 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 [3
 
 ]
-Overfull \vbox (4.97633pt too high) detected at line 156
- []
-
-
 
 [4
 
@@ -1349,7 +1344,7 @@ Overfull \hbox (94.60497pt too wide) in paragraph at lines 21--21
  []
 
 )
-Overfull \vbox (14.52696pt too high) detected at line 179
+Overfull \vbox (14.52696pt too high) detected at line 175
  []
 
 
@@ -1385,7 +1380,7 @@ ouble)][]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (14.52696pt too high) detected at line 224
+Overfull \vbox (14.52696pt too high) detected at line 220
  []
 
 
@@ -1411,10 +1406,10 @@ cm-super/cm-super-ts1.enc}]
 <figs/fig1.png, id=71, 433.62pt x 433.62pt>
 File: figs/fig1.png Graphic file (type png)
 <use figs/fig1.png>
-Package pdftex.def Info: figs/fig1.png  used on input line 266.
+Package pdftex.def Info: figs/fig1.png  used on input line 262.
 (pdftex.def)             Requested size: 239.60567pt x 239.60992pt.
 
-Overfull \vbox (36.33678pt too high) detected at line 266
+Overfull \vbox (36.33678pt too high) detected at line 262
  []
 
 
@@ -1436,24 +1431,14 @@ Overfull \vbox (36.33678pt too high) detected at line 266
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26817 strings out of 467801
- 520762 string characters out of 5417842
- 900133 words of memory out of 5000000
- 54890 multiletter control sequences out of 15000+600000
+ 26853 strings out of 467801
+ 521088 string characters out of 5417842
+ 896133 words of memory out of 5000000
+ 54918 multiletter control sequences out of 15000+600000
  636257 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,131p,379b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1472,7 +1457,7 @@ les/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb></data/data/com.termux/files/usr/share/texlive/2025/t
 exmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (10 pages, 140728 bytes).
+Output written on main.pdf (10 pages, 140629 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
