@@ -1,0 +1,22 @@
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+import matplotlib.pyplot as plt
+
+# Part 4: Plot setup and show
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+ax.set_xlim([0, 6])
+ax.set_ylim([0, 6])
+ax.set_zlim([0, 6])
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('Vector Addition: a + b + c')
+ax.legend()
+
+plt.show()
+
+\end{lstlisting}
+

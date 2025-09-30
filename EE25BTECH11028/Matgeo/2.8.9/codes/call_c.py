@@ -1,49 +1,39 @@
+import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
 
-# ==========================================
-# Part 1: Input vectors
-# ==========================================
-a = np.array([3.0, 0, 0])   # Along X-axis
-b = np.array([0, 4.0, 0])   # Along Y-axis
-c = np.array([0, 0, 5.0])   # Along Z-axis
+# Load the compiled C library
+lib = ctypes.CDLL("./vector_calc.so")   # use "vector_calc.dll" on Windows
 
-print("---- Part 1: Input Vectors ----")
-print("a =", a)
-print("b =", b)
-print("c =", c)
+# Call the C function
+lib.vector_magnitude.restype = ctypes.c_double
+magnitude = lib.vector_magnitude()
+print("Result from C code |a+b+c| =", magnitude)
 
-# ==========================================
-# Part 2: Resultant vector calculation
-# ==========================================
-res = a + b + c
-sumSq = np.dot(a, a) + np.dot(b, b) + np.dot(c, c)
-result = np.linalg.norm(res)
+# ---- Plotting in Python ----
+a = np.array([3, 0, 0])
+b = np.array([0, 4, 0])
+c = np.array([0, 0, 5])
+resultant = a + b + c
 
-print("\n---- Part 2: Resultant ----")
-print(f"||a + b + c|| = sqrt({sumSq:.0f}) = {result:.4f}")
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection="3d")
 
-# ==========================================
-# Part 3: Plot vectors
-# ==========================================
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+# plot vectors
+origin = np.array([0, 0, 0])
+ax.quiver(*origin, *a, color='r', label='a (3)')
+ax.quiver(*origin, *b, color='g', label='b (4)')
+ax.quiver(*origin, *c, color='b', label='c (5)')
+ax.quiver(*origin, *resultant, color='m', label='a+b+c')
 
-ax.quiver(0, 0, 0, a[0], a[1], a[2], color='r', label='a (3)')
-ax.quiver(0, 0, 0, b[0], b[1], b[2], color='g', label='b (4)')
-ax.quiver(0, 0, 0, c[0], c[1], c[2], color='b', label='c (5)')
-ax.quiver(0, 0, 0, res[0], res[1], res[2], color='k', linewidth=2, label='a+b+c')
+ax.set_xlim([0, 8])
+ax.set_ylim([0, 8])
+ax.set_zlim([0, 8])
 
-# ==========================================
-# Part 4: Plot setup and show
-# ==========================================
-ax.set_xlim([0, 6])
-ax.set_ylim([0, 6])
-ax.set_zlim([0, 6])
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-ax.set_title('Vector Addition: a + b + c')
+ax.set_xlabel("X axis")
+ax.set_ylabel("Y axis")
+ax.set_zlabel("Z axis")
+ax.set_title("C code calculation + Python plot")
+
 ax.legend()
-
 plt.show()

@@ -3,17 +3,17 @@
 
 int main() {
     // Given magnitudes
-    double a = 3.0;
-    double b = 4.0;
-    double c = 5.0;
+    int a = 3, b = 4, c = 5;
 
-    // Since a, b, c are mutually perpendicular:
-    double sumSq = a*a + b*b + c*c;
+    // Since a, b, c are mutually perpendicular (proved in solution),
+    // |a + b + c|^2 = |a|^2 + |b|^2 + |c|^2
+    int sum_sq = a*a + b*b + c*c;
 
-    // Magnitude of (a+b+c)
-    double result = sqrt(sumSq);
+    // Calculate magnitude
+    double magnitude = sqrt(sum_sq);
 
-    printf("||a + b + c|| = sqrt(%.0f) = %.4f\n", sumSq, result);
+    // Print result
+    printf("The magnitude |a + b + c| = %.2f\n", magnitude);
 
     return 0;
 }

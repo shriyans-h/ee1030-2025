@@ -57,32 +57,34 @@ Find $|\vec{a}+\vec{b}+\vec{c}|$.
 \bigskip
 
 \textbf{Solution:} \\
-Let $\mathbf a,\mathbf b,\mathbf c$ be three vectors with magnitudes given by
+
+Let 
 \begin{equation}
-\|\mathbf a\| = 3,\qquad \|\mathbf b\| = 4,\qquad \|\mathbf c\| = 5
+|\vec{a}|=3,\quad |\vec{b}|=4,\quad |\vec{c}|=5
 \end{equation}
 
-Each vector is perpendicular to the sum of the other two, so
+Since each vector is perpendicular to the sum of the other two, we have:
 \begin{equation}
-\mathbf a\cdot(\mathbf b+\mathbf c)=0,\qquad
-\mathbf b\cdot(\mathbf c+\mathbf a)=0,\qquad
-\mathbf c\cdot(\mathbf a+\mathbf b)=0
+\vec{a}\cdot(\vec{b}+\vec{c})=0,\quad 
+\vec{b}\cdot(\vec{c}+\vec{a})=0,\quad 
+\vec{c}\cdot(\vec{a}+\vec{b})=0
 \end{equation}
 
-{Introduce notation:}
+Introduce notation:
 \begin{equation}
-s=\mathbf a\cdot\mathbf b,\qquad t=\mathbf b\cdot\mathbf c,\qquad u=\mathbf c\cdot\mathbf a
+s=\vec{a}\cdot\vec{b},\quad t=\vec{b}\cdot\vec{c},\quad u=\vec{c}\cdot\vec{a}
 \end{equation}
 
-From (2) the equations become
+From (2), the equations become:
 \begin{equation}
-s+u=0,\qquad t+s=0,\qquad u+t=0
+s+u=0,\quad t+s=0,\quad u+t=0
 \end{equation}
 
 From the first equation,
 \begin{equation}
 u=-s
 \end{equation}
+
 From the second equation,
 \begin{equation}
 t=-s
@@ -90,7 +92,7 @@ t=-s
 
 Substitute (5) and (6) into the third equation:
 \begin{equation}
-(-s)+(-s) = -2s = 0 \quad\Rightarrow\quad s=0
+(-s)+(-s)=-2s=0 \;\;\Rightarrow\;\; s=0
 \end{equation}
 
 Hence,
@@ -98,30 +100,34 @@ Hence,
 s=t=u=0
 \end{equation}
 
-Thus $\mathbf a,\mathbf b,\mathbf c$ are mutually perpendicular Now compute the square of the magnitude:
+This shows that $\vec{a},\vec{b},\vec{c}$ are mutually perpendicular.
+
+Now,
 \begin{equation}
-\|\mathbf a+\mathbf b+\mathbf c\|^2
-= \|\mathbf a\|^2 + \|\mathbf b\|^2 + \|\mathbf c\|^2 + 2(s+t+u)
+\|\vec{a}+\vec{b}+\vec{c}\|^2
+= \|\vec{a}\|^2+\|\vec{b}\|^2+\|\vec{c}\|^2 + 2(s+t+u)
 \end{equation}
 
 Substitute values from (1) and (8):
 \begin{equation}
-= 3^2 + 4^2 + 5^2 + 2(0+0+0)
+= 3^2+4^2+5^2+2(0+0+0)
 \end{equation}
+
 \begin{equation}
-= 9 + 16 + 25 = 50
+= 9+16+25=50
 \end{equation}
 
 Therefore,
 \begin{equation}
-\|\mathbf a+\mathbf b+\mathbf c\| = \sqrt{50} = 5\sqrt{2}.
+\|\vec{a}+\vec{b}+\vec{c}\|=\sqrt{50}=5\sqrt{2}
 \end{equation}
+
+\bigskip
 
 \textbf{Final Answer:} 
 \[
 \boxed{5\sqrt{2}}
 \]
-
 
 
 \textbf{Graphical Representation:}
@@ -160,7 +166,7 @@ Therefore,
 
 \end{tikzpicture}
         % Add "Fig. 4" text down the figure
-    \vspace{0.5cm}% space between figure and text
+    \vspace{0.5cm}
 \centerline{\textbf{Fig. 4}}
 \end{figure}
 \end{document}

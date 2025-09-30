@@ -1,0 +1,418 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{2.8.9}
+\date{september 2025}
+%\subtitle{A short story}
+
+\author % (optional)
+{J.NAVYASRI- EE25BTECH11028}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}{Question}
+Let $\vec{a}, \vec{b}, \vec{c}$ be three vectors such that 
+$|\vec{a}|=3,\; |\vec{b}|=4,\; |\vec{c}|=5$, and each one of them is perpendicular to the sum of the other two. 
+Find $|\vec{a}+\vec{b}+\vec{c}|$.
+\end{frame}
+
+% Step 1: Theoretical solution
+\begin{frame}{Theoretical solution}
+Let 
+\begin{equation}
+|\vec{a}|=3,\quad |\vec{b}|=4,\quad |\vec{c}|=5
+\end{equation}
+
+Since each vector is perpendicular to the sum of the other two, we have:
+\begin{equation}
+\vec{a}\cdot(\vec{b}+\vec{c})=0,\quad 
+\vec{b}\cdot(\vec{c}+\vec{a})=0,\quad 
+\vec{c}\cdot(\vec{a}+\vec{b})=0
+\end{equation}
+
+Introduce notation:
+\begin{equation}
+s=\vec{a}\cdot\vec{b},\quad t=\vec{b}\cdot\vec{c},\quad u=\vec{c}\cdot\vec{a}
+\end{equation}
+
+From (2), the equations become:
+\begin{equation}
+s+u=0,\quad t+s=0,\quad u+t=0
+\end{equation}
+\end{frame}
+
+% Step 2: Theoretical solution 
+\begin{frame}{Theoretical solution}
+From the first equation,
+\begin{equation}
+u=-s
+\end{equation}
+
+From the second equation,
+\begin{equation}
+t=-s
+\end{equation}
+
+Substitute (5) and (6) into the third equation:
+\begin{equation}
+(-s)+(-s)=-2s=0 \;\;\Rightarrow\;\; s=0
+\end{equation}
+
+Hence,
+\begin{equation}
+s=t=u=0
+\end{equation}
+
+This shows that $\vec{a},\vec{b},\vec{c}$ are mutually perpendicular.
+
+Now,
+\begin{equation}
+\|\vec{a}+\vec{b}+\vec{c}\|^2
+= \|\vec{a}\|^2+\|\vec{b}\|^2+\|\vec{c}\|^2 + 2(s+t+u)
+\end{equation}
+\end{frame}
+
+% Step 3: Theoretical solution 
+\begin{frame}{Theoretical solution}
+Substitute values from (1) and (8):
+\begin{equation}
+= 3^2+4^2+5^2+2(0+0+0)
+\end{equation}
+
+\begin{equation}
+= 9+16+25=50
+\end{equation}
+
+Therefore,
+\begin{equation}
+\|\vec{a}+\vec{b}+\vec{c}\|=\sqrt{50}=5\sqrt{2}
+\end{equation}
+
+\bigskip
+
+\textbf{Final Answer:} 
+\[
+\boxed{5\sqrt{2}}
+\]
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+
+# Define vectors
+a = np.array([3, 0, 0])   # vector a
+b = np.array([0, 4, 0])   # vector b
+c = np.array([0, 0, 5])   # vector c
+
+# Origin
+O = np.array([0, 0, 0])
+
+# Resultant
+R = a + b + c
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot coordinate axes
+ax.quiver(0, 0, 0, 6, 0, 0, arrow_length_ratio=0.1, color='k')
+ax.quiver(0, 0, 0, 0, 6, 0, arrow_length_ratio=0.1, color='k')
+ax.quiver(0, 0, 0, 0, 0, 6, arrow_length_ratio=0.1, color='k')
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+# Plot vectors a, b, c
+ax.quiver(*O, *a, color='black', linewidth=2)
+ax.text(*a, r'$\vec{a}$', color='black')
+
+ax.quiver(*O, *b, color='black', linewidth=2)
+ax.text(*b, r'$\vec{b}$', color='black')
+
+ax.quiver(*O, *c, color='black', linewidth=2)
+ax.text(*c, r'$\vec{c}$', color='black')
+
+# Plot resultant
+ax.quiver(*O, *R, color='red', linewidth=2)
+ax.text(*R, r'$\vec{a}+\vec{b}+\vec{c}$', color='red')
+
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+# Draw dashed parallelepiped edges
+ax.plot([a[0], R[0]], [a[1], R[1]], [a[2], R[2]], 'k--')
+ax.plot([b[0], R[0]], [b[1], R[1]], [b[2], R[2]], 'k--')
+ax.plot([c[0], R[0]], [c[1], R[1]], [c[2], R[2]], 'k--')
+
+# Labels
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+ax.set_title("Fig. 4")
+
+# Set limits
+ax.set_xlim([0, 6])
+ax.set_ylim([0, 6])
+ax.set_zlim([0, 6])
+
+plt.show()
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{C Code}
+\begin{lstlisting}
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Given magnitudes
+    double a = 3.0;
+    double b = 4.0;
+    double c = 5.0;
+
+    // Since a, b, c are mutually perpendicular:
+    double sumSq = a*a + b*b + c*c;
+
+    // Magnitude of (a+b+c)
+    double result = sqrt(sumSq);
+
+    printf("||a + b + c|| = sqrt(%.0f) = %.4f\n", sumSq, result);
+
+    return 0;
+}
+\end{lstlisting}
+
+\end{frame}
+
+    \begin{frame}[fragile]
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+import numpy as np
+
+# Part 1: Input vectors
+a = np.array([3.0, 0, 0])   # Along X-axis
+b = np.array([0, 4.0, 0])   # Along Y-axis
+c = np.array([0, 0, 5.0])   # Along Z-axis
+
+print("---- Part 1: Input Vectors ----")
+print("a =", a)
+print("b =", b)
+print("c =", c)
+
+\end{lstlisting}
+
+\end{frame}
+
+
+    \begin{frame}[fragile]
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+import numpy as np
+
+# Part 2: Resultant vector calculation
+a = np.array([3.0, 0, 0])
+b = np.array([0, 4.0, 0])
+c = np.array([0, 0, 5.0])
+
+res = a + b + c
+sumSq = np.dot(a, a) + np.dot(b, b) + np.dot(c, c)
+result = np.linalg.norm(res)
+
+print("\n---- Part 2: Resultant ----")
+print(f"||a + b + c|| = sqrt({sumSq:.0f}) = {result:.4f}")
+
+\end{lstlisting}
+
+\end{frame}
+
+
+    \begin{frame}[fragile]
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Part 3: Plot vectors
+a = np.array([3.0, 0, 0])
+b = np.array([0, 4.0, 0])
+c = np.array([0, 0, 5.0])
+res = a + b + c
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+ax.quiver(0, 0, 0, a[0], a[1], a[2], color='r', label='a (3)')
+ax.quiver(0, 0, 0, b[0], b[1], b[2], color='g', label='b (4)')
+ax.quiver(0, 0, 0, c[0], c[1], c[2], color='b', label='c (5)')
+ax.quiver(0, 0, 0, res[0], res[1], res[2], color='k', linewidth=2, label='a+b+c')
+
+\end{lstlisting}
+
+\end{frame}
+
+
+
+    \begin{frame}[fragile]
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+import matplotlib.pyplot as plt
+
+# Part 4: Plot setup and show
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+ax.set_xlim([0, 6])
+ax.set_ylim([0, 6])
+ax.set_zlim([0, 6])
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('Vector Addition: a + b + c')
+ax.legend()
+
+plt.show()
+
+\end{lstlisting}
+
+\end{frame}
+
+
+
+\textbf{Graphical Representation:}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[tdplot_main_coords, scale=0.9]
+
+  % axes
+  \draw[->] (0,0,0) -- (6.5,0,0) node[anchor=north east]{$x$};
+  \draw[->] (0,0,0) -- (0,6.5,0) node[anchor=north west]{$y$};
+  \draw[->] (0,0,0) -- (0,0,6.5) node[anchor=south]{$z$};
+
+  % vector lengths: |a|=3, |b|=4, |c|=5matgeo
+  \coordinate (O) at (0,0,0);
+  \coordinate (A) at (3,0,0);
+  \coordinate (B) at (0,4,0);
+  \coordinate (C) at (0,0,5);
+
+  % resultant a+b+c
+  \coordinate (R) at (3,4,5);
+
+  % draw vectors
+  \draw[->, line width=1pt] (O) -- (A) node[midway, below right] {$\vec a$};
+  \draw[->, line width=1pt] (O) -- (B) node[midway, above left] {$\vec b$};
+  \draw[->, line width=1pt] (O) -- (C) node[midway, right] {$\vec c$};
+
+  % resultant
+  \draw[->, very thick, red] (O) -- (R) node[pos=0.85, above right] {$\vec a+\vec b+\vec c$};
+
+  % dashed parallelepiped edges
+  \draw[dashed] (A) -- (3,4,0) -- (B);
+  \draw[dashed] (A) -- (3,0,5) -- (C);
+  \draw[dashed] (B) -- (0,4,5) -- (C);
+  \draw[dashed] (3,4,0) -- (3,4,5);
+
+\end{tikzpicture}
+        % Add "Fig. 4" text down the figure
+    \vspace{0.5cm}
+\centerline{\textbf{Fig. 4}}
+\end{figure}
+\end{document}
+

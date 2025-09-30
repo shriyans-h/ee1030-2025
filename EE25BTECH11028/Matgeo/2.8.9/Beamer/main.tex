@@ -85,33 +85,26 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-Let $\vec{a}, \vec{b}, \vec{c}$ be three vectors such that 
-$|\vec{a}|=3,\; |\vec{b}|=4,\; |\vec{c}|=5$, and each one of them is perpendicular to the sum of the other two. 
-Find $|\vec{a}+\vec{b}+\vec{c}|$.
-\end{frame}
-
-% Step 1: Theoretical solution
-\begin{frame}{Theoretical solution}
-Let 
+Let $\mathbf a,\mathbf b,\mathbf c$ be three vectors with magnitudes given by
 \begin{equation}
-|\vec{a}|=3,\quad |\vec{b}|=4,\quad |\vec{c}|=5
+\|\mathbf a\| = 3,\qquad \|\mathbf b\| = 4,\qquad \|\mathbf c\| = 5
 \end{equation}
 
-Since each vector is perpendicular to the sum of the other two, we have:
+Each vector is perpendicular to the sum of the other two, so
 \begin{equation}
-\vec{a}\cdot(\vec{b}+\vec{c})=0,\quad 
-\vec{b}\cdot(\vec{c}+\vec{a})=0,\quad 
-\vec{c}\cdot(\vec{a}+\vec{b})=0
+\mathbf a\cdot(\mathbf b+\mathbf c)=0,\qquad
+\mathbf b\cdot(\mathbf c+\mathbf a)=0,\qquad
+\mathbf c\cdot(\mathbf a+\mathbf b)=0
 \end{equation}
 
-Introduce notation:
+{Introduce notation:}
 \begin{equation}
-s=\vec{a}\cdot\vec{b},\quad t=\vec{b}\cdot\vec{c},\quad u=\vec{c}\cdot\vec{a}
+s=\mathbf a\cdot\mathbf b,\qquad t=\mathbf b\cdot\mathbf c,\qquad u=\mathbf c\cdot\mathbf a
 \end{equation}
 
-From (2), the equations become:
+From (2) the equations become
 \begin{equation}
-s+u=0,\quad t+s=0,\quad u+t=0
+s+u=0,\qquad t+s=0,\qquad u+t=0
 \end{equation}
 \end{frame}
 
@@ -121,7 +114,6 @@ From the first equation,
 \begin{equation}
 u=-s
 \end{equation}
-
 From the second equation,
 \begin{equation}
 t=-s
@@ -129,40 +121,35 @@ t=-s
 
 Substitute (5) and (6) into the third equation:
 \begin{equation}
-(-s)+(-s)=-2s=0 \;\;\Rightarrow\;\; s=0
+(-s)+(-s) = -2s = 0 \quad\Rightarrow\quad s=0
 \end{equation}
 
 Hence,
 \begin{equation}
 s=t=u=0
 \end{equation}
-
-This shows that $\vec{a},\vec{b},\vec{c}$ are mutually perpendicular.
-
-Now,
-\begin{equation}
-\|\vec{a}+\vec{b}+\vec{c}\|^2
-= \|\vec{a}\|^2+\|\vec{b}\|^2+\|\vec{c}\|^2 + 2(s+t+u)
-\end{equation}
 \end{frame}
 
 % Step 3: Theoretical solution 
 \begin{frame}{Theoretical solution}
-Substitute values from (1) and (8):
+Thus $\mathbf a,\mathbf b,\mathbf c$ are mutually perpendicular Now compute the square of the magnitude:
 \begin{equation}
-= 3^2+4^2+5^2+2(0+0+0)
+\|\mathbf a+\mathbf b+\mathbf c\|^2
+= \|\mathbf a\|^2 + \|\mathbf b\|^2 + \|\mathbf c\|^2 + 2(s+t+u)
 \end{equation}
 
+Substitute values from (1) and (8):
 \begin{equation}
-= 9+16+25=50
+= 3^2 + 4^2 + 5^2 + 2(0+0+0)
+\end{equation}
+\begin{equation}
+= 9 + 16 + 25 = 50
 \end{equation}
 
 Therefore,
 \begin{equation}
-\|\vec{a}+\vec{b}+\vec{c}\|=\sqrt{50}=5\sqrt{2}
+\|\mathbf a+\mathbf b+\mathbf c\| = \sqrt{50} = 5\sqrt{2}.
 \end{equation}
-
-\bigskip
 
 \textbf{Final Answer:} 
 \[
@@ -173,36 +160,17 @@ Therefore,
 \begin{frame}[fragile]
     \frametitle{Python Code}
     \begin{lstlisting}
-import matplotlib.pyplot as plt
 import numpy as np
-from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 
-# Define vectors
-a = np.array([3, 0, 0])   # vector a
-b = np.array([0, 4, 0])   # vector b
-c = np.array([0, 0, 5])   # vector c
+# Define mutually perpendicular vectors
+a = np.array([3, 0, 0])
+b = np.array([0, 4, 0])
+c = np.array([0, 0, 5])
+s = a + b + c   # resultant (3,4,5)
 
-# Origin
-O = np.array([0, 0, 0])
-
-# Resultant
-R = a + b + c
-
-\end{lstlisting}
-\end{frame}
-
-
-\begin{frame}[fragile]
-    \frametitle{Python Code}
-    \begin{lstlisting}
 fig = plt.figure(figsize=(8, 6))
 ax = fig.add_subplot(111, projection='3d')
-
-# Plot coordinate axes
-ax.quiver(0, 0, 0, 6, 0, 0, arrow_length_ratio=0.1, color='k')
-ax.quiver(0, 0, 0, 0, 6, 0, arrow_length_ratio=0.1, color='k')
-ax.quiver(0, 0, 0, 0, 0, 6, arrow_length_ratio=0.1, color='k')
-
 \end{lstlisting}
 \end{frame}
 
@@ -210,46 +178,41 @@ ax.quiver(0, 0, 0, 0, 0, 6, arrow_length_ratio=0.1, color='k')
 \begin{frame}[fragile]
     \frametitle{Python Code}
     \begin{lstlisting}
-# Plot vectors a, b, c
-ax.quiver(*O, *a, color='black', linewidth=2)
-ax.text(*a, r'$\vec{a}$', color='black')
-
-ax.quiver(*O, *b, color='black', linewidth=2)
-ax.text(*b, r'$\vec{b}$', color='black')
-
-ax.quiver(*O, *c, color='black', linewidth=2)
-ax.text(*c, r'$\vec{c}$', color='black')
+# Plot main vectors
+ax.quiver(0, 0, 0, *a, color='r', linewidth=2,
+          arrow_length_ratio=0.08, normalize=False, label='a (3)')
+ax.quiver(0, 0, 0, *b, color='g', linewidth=2,
+          arrow_length_ratio=0.08, normalize=False, label='b (4)')
+ax.quiver(0, 0, 0, *c, color='b', linewidth=2,
+          arrow_length_ratio=0.08, normalize=False, label='c (5)')
 
 # Plot resultant
-ax.quiver(*O, *R, color='red', linewidth=2)
-ax.text(*R, r'$\vec{a}+\vec{b}+\vec{c}$', color='red')
-
+ax.quiver(0, 0, 0, *s, color='m', linewidth=2,
+          arrow_length_ratio=0.05, normalize=False,
+          label='a+b+c')
 \end{lstlisting}
 \end{frame}
+
 
 \begin{frame}[fragile]
     \frametitle{Python Code}
     \begin{lstlisting}
-# Draw dashed parallelepiped edges
-ax.plot([a[0], R[0]], [a[1], R[1]], [a[2], R[2]], 'k--')
-ax.plot([b[0], R[0]], [b[1], R[1]], [b[2], R[2]], 'k--')
-ax.plot([c[0], R[0]], [c[1], R[1]], [c[2], R[2]], 'k--')
+# Axis limits
+ax.set_xlim(0, 8)
+ax.set_ylim(0, 8)
+ax.set_zlim(0, 8)
 
-# Labels
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
-ax.set_title("Fig. 4")
+# Axis labels
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.set_title("Mutually Perpendicular Vectors and their Resultant")
 
-# Set limits
-ax.set_xlim([0, 6])
-ax.set_ylim([0, 6])
-ax.set_zlim([0, 6])
-
+ax.legend()
 plt.show()
+
 \end{lstlisting}
 \end{frame}
-
 
 \begin{frame}[fragile]
 \frametitle{C Code}
@@ -259,17 +222,15 @@ plt.show()
 
 int main() {
     // Given magnitudes
-    double a = 3.0;
-    double b = 4.0;
-    double c = 5.0;
+    int a = 3, b = 4, c = 5;
+    // Since a, b, c are mutually perpendicular (proved in solution),
+    // |a + b + c|^2 = |a|^2 + |b|^2 + |c|^2
+    int sum_sq = a*a + b*b + c*c;
 
-    // Since a, b, c are mutually perpendicular:
-    double sumSq = a*a + b*b + c*c;
+    double magnitude = sqrt(sum_sq);
 
-    // Magnitude of (a+b+c)
-    double result = sqrt(sumSq);
-
-    printf("||a + b + c|| = sqrt(%.0f) = %.4f\n", sumSq, result);
+    // Print result
+    printf("The magnitude |a + b + c| = %.2f\n", magnitude);
 
     return 0;
 }
@@ -277,142 +238,77 @@ int main() {
 
 \end{frame}
 
-    \begin{frame}[fragile]
-\frametitle{Python and C Code}
 
-\begin{lstlisting}
-import numpy as np
-
-# Part 1: Input vectors
-a = np.array([3.0, 0, 0])   # Along X-axis
-b = np.array([0, 4.0, 0])   # Along Y-axis
-c = np.array([0, 0, 5.0])   # Along Z-axis
-
-print("---- Part 1: Input Vectors ----")
-print("a =", a)
-print("b =", b)
-print("c =", c)
-
-\end{lstlisting}
-
+\begin{frame}{Plot-Using by Python}
+    \centering
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{fig4.png}     
 \end{frame}
 
 
-    \begin{frame}[fragile]
+\begin{frame}[fragile]
 \frametitle{Python and C Code}
 
 \begin{lstlisting}
-import numpy as np
-
-# Part 2: Resultant vector calculation
-a = np.array([3.0, 0, 0])
-b = np.array([0, 4.0, 0])
-c = np.array([0, 0, 5.0])
-
-res = a + b + c
-sumSq = np.dot(a, a) + np.dot(b, b) + np.dot(c, c)
-result = np.linalg.norm(res)
-
-print("\n---- Part 2: Resultant ----")
-print(f"||a + b + c|| = sqrt({sumSq:.0f}) = {result:.4f}")
-
-\end{lstlisting}
-
-\end{frame}
-
-
-    \begin{frame}[fragile]
-\frametitle{Python and C Code}
-
-\begin{lstlisting}
+import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Part 3: Plot vectors
-a = np.array([3.0, 0, 0])
-b = np.array([0, 4.0, 0])
-c = np.array([0, 0, 5.0])
-res = a + b + c
+# Load the compiled C library
+lib = ctypes.CDLL("./vector_calc.so")   # use "vector_calc.dll" on Windows
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-
-ax.quiver(0, 0, 0, a[0], a[1], a[2], color='r', label='a (3)')
-ax.quiver(0, 0, 0, b[0], b[1], b[2], color='g', label='b (4)')
-ax.quiver(0, 0, 0, c[0], c[1], c[2], color='b', label='c (5)')
-ax.quiver(0, 0, 0, res[0], res[1], res[2], color='k', linewidth=2, label='a+b+c')
-
+# Call the C function
+lib.vector_magnitude.restype = ctypes.c_double
+magnitude = lib.vector_magnitude()
+print("Result from C code |a+b+c| =", magnitude)
 \end{lstlisting}
 
 \end{frame}
-
-
-
-    \begin{frame}[fragile]
+\begin{frame}[fragile]
 \frametitle{Python and C Code}
 
 \begin{lstlisting}
-import matplotlib.pyplot as plt
+# ---- Plotting in Python ----
+a = np.array([3, 0, 0])
+b = np.array([0, 4, 0])
+c = np.array([0, 0, 5])
+resultant = a + b + c
 
-# Part 4: Plot setup and show
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection="3d")
 
-ax.set_xlim([0, 6])
-ax.set_ylim([0, 6])
-ax.set_zlim([0, 6])
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-ax.set_title('Vector Addition: a + b + c')
+# plot vectors
+origin = np.array([0, 0, 0])
+ax.quiver(*origin, *a, color='r', label='a (3)')
+ax.quiver(*origin, *b, color='g', label='b (4)')
+ax.quiver(*origin, *c, color='b', label='c (5)')
+ax.quiver(*origin, *resultant, color='m', label='a+b+c')
+\end{lstlisting}
+
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{Python and C Code}
+
+\begin{lstlisting}
+ax.set_xlim([0, 8])
+ax.set_ylim([0, 8])
+ax.set_zlim([0, 8])
+
+ax.set_xlabel("X axis")
+ax.set_ylabel("Y axis")
+ax.set_zlabel("Z axis")
+ax.set_title("C code calculation + Python plot")
+
 ax.legend()
-
 plt.show()
-
 \end{lstlisting}
 
 \end{frame}
 
+\begin{frame}{Plot-Using by both C and Python}
+    \centering
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{figs/fig4.1.png}     
+\end{frame}
 
-
-\textbf{Graphical Representation:}
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}[tdplot_main_coords, scale=0.9]
-
-  % axes
-  \draw[->] (0,0,0) -- (6.5,0,0) node[anchor=north east]{$x$};
-  \draw[->] (0,0,0) -- (0,6.5,0) node[anchor=north west]{$y$};
-  \draw[->] (0,0,0) -- (0,0,6.5) node[anchor=south]{$z$};
-
-  % vector lengths: |a|=3, |b|=4, |c|=5matgeo
-  \coordinate (O) at (0,0,0);
-  \coordinate (A) at (3,0,0);
-  \coordinate (B) at (0,4,0);
-  \coordinate (C) at (0,0,5);
-
-  % resultant a+b+c
-  \coordinate (R) at (3,4,5);
-
-  % draw vectors
-  \draw[->, line width=1pt] (O) -- (A) node[midway, below right] {$\vec a$};
-  \draw[->, line width=1pt] (O) -- (B) node[midway, above left] {$\vec b$};
-  \draw[->, line width=1pt] (O) -- (C) node[midway, right] {$\vec c$};
-
-  % resultant
-  \draw[->, very thick, red] (O) -- (R) node[pos=0.85, above right] {$\vec a+\vec b+\vec c$};
-
-  % dashed parallelepiped edges
-  \draw[dashed] (A) -- (3,4,0) -- (B);
-  \draw[dashed] (A) -- (3,0,5) -- (C);
-  \draw[dashed] (B) -- (0,4,5) -- (C);
-  \draw[dashed] (3,4,0) -- (3,4,5);
-
-\end{tikzpicture}
-        % Add "Fig. 4" text down the figure
-    \vspace{0.5cm}
-\centerline{\textbf{Fig. 4}}
-\end{figure}
 \end{document}
+
 
