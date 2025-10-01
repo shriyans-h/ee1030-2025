@@ -1,0 +1,163 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.10.3}
+\author{AI25BTECH11014 - Gooty Suhas}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\large\textbf{Problem}}
+
+Find the unit vector perpendicular to the plane determined by the points:
+\[
+\vec{P} = \myvec{1 \\ -1 \\ 2}, \quad
+\vec{Q} = \myvec{2 \\ 0 \\ -1}, \quad
+\vec{R} = \myvec{0 \\ 2 \\ 1}
+\]
+
+\section*{\large\textbf{Solution}}
+
+Let the points be:
+\[
+\vec{P} = \myvec{1 \\ -1 \\ 2}, \quad
+\vec{Q} = \myvec{2 \\ 0 \\ -1}, \quad
+\vec{R} = \myvec{0 \\ 2 \\ 1}
+\]
+
+Define direction vectors:
+\[
+\vec{U} = \vec{Q} - \vec{P} = \myvec{1 \\ 1 \\ -3}, \quad
+\vec{V} = \vec{R} - \vec{P} = \myvec{-1 \\ 3 \\ -1}
+\]
+
+We seek a normal vector \( \vec{N} \) such that:
+\[
+\vec{N}^T \vec{U} = 0, \quad \vec{N}^T \vec{V} = 0
+\]
+
+Stacking the system:
+\[
+\begin{bmatrix}
+\vec{U}^T \\
+\vec{V}^T
+\end{bmatrix}
+\vec{N} = \vec{0}
+\Rightarrow
+\begin{bmatrix}
+1 & 1 & -3 \\
+-1 & 3 & -1
+\end{bmatrix}
+\vec{N} = \vec{0}
+\]
+
+Solving this homogeneous system yields:
+\[
+\vec{N} = \myvec{8 \\ 2 \\ 4}
+\]
+
+Normalize:
+\[
+\|\vec{N}\| = \sqrt{8^2 + 2^2 + 4^2} = \sqrt{84}
+\Rightarrow
+\hat{n} = \frac{1}{\sqrt{84}} \myvec{8 \\ 2 \\ 4}
+\]
+
+Compute:
+\[
+\hat{n}^T \vec{P} = \frac{1}{\sqrt{84}} \myvec{8 & 2 & 4} \myvec{1 \\ -1 \\ 2}
+= \frac{1}{\sqrt{84}} (8 - 2 + 8) = \frac{14}{\sqrt{84}}
+\]
+
+So the plane equation is:
+\[
+\hat{n}^T \vec{x} = \frac{14}{\sqrt{84}}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{\large\textbf{Plot}}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{Figs/fig1.png} \caption{Plane and its unit normal}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
