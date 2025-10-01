@@ -33,6 +33,8 @@
 \usepackage{lscape}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{listings}
+\lstset{language=C, basicstyle=\ttfamily\footnotesize, keywordstyle=\color{blue}, commentstyle=\color{green!50!black}}
 \usepackage{float}
 %\newtheorem{theorem}{Theorem}[section]
 %\newtheorem{theorem}{Theorem}[section]
@@ -84,5 +86,25 @@ $R_2=R_2-R_1$
 \begin{align}
 	\vec{A}^{-1}=\myvec{4&-1\\-7&2}
 \end{align}
+C function to find inverse:
+\begin{lstlisting}
+int inverse2x2(double mat[4], double inv[4]) {
+    double a = mat[0], b = mat[1];
+    double c = mat[2], d = mat[3];
+
+    double det = a*d - b*c;
+    if(det == 0.0) {
+        return -1;  // not invertible
+    }
+
+    inv[0] =  d / det;
+    inv[1] = -b / det;
+    inv[2] = -c / det;
+    inv[3] =  a / det;
+
+    return 0; // success
+}
+\end{lstlisting}
+
 \end{document}
 
