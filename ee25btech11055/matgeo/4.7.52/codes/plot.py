@@ -55,14 +55,14 @@ ax = fig.add_subplot(111, projection="3d")
 
 ax.scatter(x_plane, y_plane, z_plane, alpha=0.3, s=5, label="Given Plane")
 
-ax.scatter(A1[0], A1[1], A1[2], color="red", s=120, label=f"A₁ (1, 1, 1)")
+ax.scatter(A1[0], A1[1], A1[2], color="red", s=120, label=f"A1 (1, 1, 1)")
 ax.scatter(
     A2[0],
     A2[1],
     A2[2],
     color="magenta",
     s=120,
-    label=f"A₂ (1, 1, 7/3)",
+    label=f"A2 (1, 1, 7/3)",
 )
 ax.scatter(B[0], B[1], B[2], color="blue", s=120, label="B (-3, 0, 1)")
 ax.text(B[0], B[1], B[2], "B (-3, 0, 1)")
