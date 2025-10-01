@@ -92,76 +92,63 @@
 
 
 
-\begin{frame}
-\frametitle{Problem}
 
-Find the ratio in which the $YZ$ plane divides the line segment joining the points 
-\[
-\vec{A} = \myvec{-2\\4\\7}, \quad 
-\vec{B} = \myvec{3\\-5\\8}.
-\]
-
+\begin{frame}{Problem Statement}
+Find the ratio in which the $YZ$ plane divides the line segment joining the points
+$$
+\vec{A} = \vec{\myvec{-2\\4\\7}}, \quad 
+\vec{B} = \vec{\myvec{3\\-5\\8}}.
+$$
 \end{frame}
 
-\begin{frame}
-\frametitle{Solution}
-
-The line joining $\vec{A}$ and $\vec{B}$ can be written in parametric form as
+\begin{frame}{Step 1: Vector and Matrix Forms}
+\textbf{Line segment in vector form:}
 \begin{align}
-\vec{R} &= \vec{A} + \lambda\brak{\vec{B}-\vec{A}} \label{eq:line}
+\vec{R} &= \vec{A} + \lambda (\vec{B}-\vec{A}) \label{eq:line_vector}
 \end{align}
 
-Substitute $\vec{A}$ and $\vec{B}$:
+\textbf{Parametric vector:}
 \begin{align}
-\vec{R} 
-&= \myvec{-2\\4\\7} + \lambda \brak{\myvec{3\\-5\\8}-\myvec{-2\\4\\7}} \\
-&= \myvec{-2\\4\\7} + \lambda \myvec{5\\-9\\1} \label{eq:expand}
+\vec{R} &= \vec{\myvec{x\\y\\z}} \label{eq:R_vector}
 \end{align}
 
-So
+\textbf{$YZ$-plane as a matrix equation:}
 \begin{align}
-\vec{R} = \myvec{-2+5\lambda \\ 4-9\lambda \\ 7+\lambda}
+\myvec{1 & 0 & 0} \vec{R} = 0 \label{eq:YZ_matrix}
 \end{align}
-
 \end{frame}
 
-\begin{frame}
-
-The $YZ$-plane has the equation 
+\begin{frame}{Step 2: Intersection Symbolically}
+\textbf{Intersection point $\vec{P}$:}
 \begin{align}
-\myvec{1 & 0 & 0}\vec{R} = 0 \label{eq:yzplane}
+\vec{P} &= \vec{A} + \lambda (\vec{B}-\vec{A}) \label{eq:P_vector} \\
+\myvec{1 & 0 & 0} \vec{P} &= 0 \label{eq:P_matrix}
 \end{align}
 
-Substituting $\vec{R}$:
+\textbf{Ratio along the line:}
 \begin{align}
-\myvec{1 & 0 & 0}\myvec{-2+5\lambda \\ 4-9\lambda \\ 7+\lambda} &= 0 \\
--2+5\lambda &= 0 \\
-\lambda &= \tfrac{2}{5} \label{eq:lambda}
+AP : PB &= \lambda : (1-\lambda) \label{eq:ratio_vector}
 \end{align}
-
 \end{frame}
 
-\begin{frame}
-
-Thus, the point of intersection is
+\begin{frame}{Step 3: Numerical Algebra}
 \begin{align}
-\vec{P} &= \vec{A} + \frac{2}{5}\brak{\vec{B}-\vec{A}} \\
-&= \frac{3}{5}\vec{A} + \frac{2}{5}\vec{B}
+\vec{B}-\vec{A} &= \vec{\myvec{3\\-5\\8}-\myvec{-2\\4\\7}} = \vec{\myvec{5\\-9\\1}} \label{eq:B_minus_A} \\
+\vec{R} &= \vec{\myvec{-2\\4\\7}} + \lambda \vec{\myvec{5\\-9\\1}} = \vec{\myvec{-2 + 5\lambda\\ 4 - 9\lambda\\ 7 + \lambda}} \label{eq:R_numeric} \\
+\myvec{1 & 0 & 0} \vec{R} &= -2 + 5\lambda = 0 \label{eq:solve_lambda} \\
+\lambda &= \frac{2}{5} \label{eq:lambda_final} \\
+\vec{P} &= \vec{\myvec{-2\\4\\7}} + \frac{2}{5}\vec{\myvec{5\\-9\\1}} = \vec{\myvec{0\\ 2/5 \\ 37/5}} \approx \vec{\myvec{0\\0.4\\7.4}} \label{eq:P_numeric} \\
+AP : PB &= 2 : 3 \label{eq:final_ratio}
 \end{align}
-
-Therefore, the ratio in which the $YZ$-plane divides $AB$ is
-\begin{align}
-AP : PB = 2 : 3
-\end{align}
-
 \end{frame}
 
-\begin{frame}
-\frametitle{Answer}
-The $YZ$-plane divides the line segment internally in the ratio 
-\[
-\boxed{2:3}.
-\]
+\begin{frame}{Answer}
+The $YZ$-plane divides the line segment $\vec{AB}$ internally in the ratio
+$$
+\boxed{2:3}
+$$
+
+
 \end{frame}
 
 \begin{frame}[fragile]{C Code}
