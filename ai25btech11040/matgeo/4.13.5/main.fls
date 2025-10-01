@@ -585,12 +585,12 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT ./figs/plot.png
+INPUT ./figs/plot.png
+INPUT ./figs/plot.png
+INPUT ./figs/plot.png
+INPUT ./figs/plot.png
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./figs/plot.png
-INPUT ./figs/plot.png
-INPUT ./figs/plot.png
-INPUT ./figs/plot.png
-INPUT ./figs/plot.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
