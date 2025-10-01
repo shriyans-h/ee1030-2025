@@ -49,7 +49,7 @@ ax.scatter(c[0], c[1], c[2], color="green", label="Point")
 ax.set_xlabel("X Axis")
 ax.set_ylabel("Y Axis")
 ax.set_zlabel("Z Axis")
-ax.set_title("2.9.6")
+ax.set_title("4.3.45")
 ax.legend()
 ax.grid(True)
 
