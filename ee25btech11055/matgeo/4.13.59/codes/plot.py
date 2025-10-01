@@ -1,8 +1,6 @@
 import ctypes
 import numpy as np
-import numpy.linalg as LA
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 libline = ctypes.CDLL("./line.so")
 
@@ -15,43 +13,51 @@ get_point.argtypes = [
 ]
 get_point.restype = None
 
-DoubleArray3 = ctypes.c_double * 3
-a = DoubleArray3(5, 1, 6)
-b = DoubleArray3(3, 4, 1)
-c = DoubleArray3(13 / 5, 23 / 5, 0)
-
-fig = plt.figure(figsize=(8, 6))
-ax = fig.add_subplot(111, projection="3d")
+DoubleArray2 = ctypes.c_double * 2
+a = DoubleArray2(-7, 5)
+b = DoubleArray2(1 / 3, 1 / 9)
+c = DoubleArray2(5 / 4, 7 / 8)
 
 t_values = np.linspace(0, 1, 100)
-line_points_x, line_points_y, line_points_z = [], [], []
+line_points_x, line_points_y = [], []
 
 for t in t_values:
-    result_arr = DoubleArray3()
+    result_arr = DoubleArray2()
+
+    get_point(a, b, t, result_arr)
+
+    line_points_x.append(result_arr[0])
+    line_points_y.append(result_arr[1])
+
+plt.plot(line_points_x, line_points_y, color="blue")
+
+for t in t_values:
+    result_arr = DoubleArray2()
+
+    get_point(c, b, t, result_arr)
+
+    line_points_x.append(result_arr[0])
+    line_points_y.append(result_arr[1])
+
+plt.plot(line_points_x, line_points_y, color="green")
+
+for t in t_values:
+    result_arr = DoubleArray2()
 
     get_point(a, c, t, result_arr)
 
     line_points_x.append(result_arr[0])
     line_points_y.append(result_arr[1])
-    line_points_z.append(result_arr[2])
 
-ax.plot(
-    line_points_x,
-    line_points_y,
-    line_points_z,
-    color="gray",
-)
+plt.plot(line_points_x, line_points_y, color="orange")
 
-ax.scatter(b[0], b[1], b[2], color="blue", label="b")
-ax.scatter(a[0], a[1], a[2], color="red", label="a")
-ax.scatter(c[0], c[1], c[2], color="green", label="Point")
+a_values = np.concatenate((np.linspace(-1.5, -1, 100), np.linspace(1 / 3, 1, 100)))
 
-ax.set_xlabel("X Axis")
-ax.set_ylabel("Y Axis")
-ax.set_zlabel("Z Axis")
-ax.set_title("2.9.6")
-ax.legend()
-ax.grid(True)
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.title("4.13.59")
+plt.legend()
+plt.grid(True)
 
 plt.savefig("../figs/plot.png")
 plt.show()
