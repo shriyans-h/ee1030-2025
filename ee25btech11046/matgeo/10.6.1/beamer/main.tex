@@ -1,0 +1,176 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+\title{10.6.1}
+\date{1st October, 2025}
+\author{Puni Aditya - EE25BTECH11046}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}{Question}
+Draw a circle of radius 2.5cm. Take a point P outside the circle at a distance of 7cm from the center. Then construct a pair of tangents to the circle from point P.
+
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+We first derive the formula for the chord of contact from the general tangent equation.
+\begin{align*}
+    g\brak{\vec{x}} = \vec{x}^\top\vec{V}\vec{x} + 2\vec{u}^\top\vec{x} + f = 0
+\end{align*}
+The equation of the tangent at a point of contact $\vec{q}$ is:
+\begin{align}
+    \brak{\vec{V}\vec{q} + \vec{u}}^\top\vec{x} + \vec{u}^\top\vec{q} + f = 0 \label{eq:tangent}
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+Since the tangent passes through the external point $\vec{h}$:
+\begin{align}
+    \brak{\vec{V}\vec{q} + \vec{u}}^\top\vec{h} + \vec{u}^\top\vec{q} + f = 0 \label{eq:point_on_tangent}
+\end{align}
+\begin{align}
+    \vec{h}^\top\vec{V}\vec{q} + \vec{u}^\top\vec{q} + \vec{u}^\top\vec{h} + f = 0 \label{eq:rearranged}
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+The previous equation shows that any point of contact $\vec{q}$ lies on the following line, the chord of contact:
+\begin{align}
+    \brak{\vec{V}\vec{h} + \vec{u}}^\top\vec{x} + \vec{u}^\top\vec{h} + f = 0 \label{eq:chord_of_contact}
+\end{align}
+For the given circle, the circle is centered at the origin, so its conic parameters are:
+\begin{align}
+    \vec{V} = \vec{I}, \text{ } \vec{u} = \vec{0}, \text{ } f = -r^2, \text{ } \vec{h} = d\vec{e_1}
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+Substituting these into \eqref{eq:chord_of_contact}:
+\begin{align}
+    \brak{\vec{I}\brak{d\vec{e_1}} + \vec{0}}^\top\vec{x} + \vec{0}^\top\brak{d\vec{e_1}} - r^2 &= 0 \\
+    \brak{d\vec{e_1}}^\top\vec{x} - r^2 &= 0
+\end{align}
+This line, $L$, contains the points of contact. Its parametric form is $\vec{x} = \vec{h_L} + \kappa\vec{m_L}$.
+\begin{align}
+    d x - r^2 = 0 \implies \vec{h_L} = \frac{r^2}{d}\vec{e_1}, \text{ } \vec{m_L} = \vec{e_2}
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+The points of contact are the intersection of line $L$ with the circle $g\brak{\vec{x}} = \vec{x}^\top\vec{x}-r^2=0$.
+We use the intersection formula for the parameter $\kappa$:
+\begin{align}
+    \kappa_{1,2} = \frac{-\vec{m_L}^\top\brak{\vec{V}\vec{h_L}+\vec{u}} \pm \sqrt{\brak{\vec{m_L}^\top\brak{\vec{V}\vec{h_L}+\vec{u}}}^2 - \brak{\vec{m_L}^\top\vec{V}\vec{m_L}}g\brak{\vec{h_L}}}}{\vec{m_L}^\top\vec{V}\vec{m_L}} \label{eq:57}
+\end{align}
+Calculating the terms with $\vec{V}=\vec{I}, \vec{u}=\vec{0}$:
+\begin{align}
+    \vec{m_L}^\top\vec{V}\vec{m_L} &= \vec{e_2}^\top\vec{I}\vec{e_2} = 1 \\
+    \vec{m_L}^\top\brak{\vec{V}\vec{h_L}+\vec{u}} &= \vec{e_2}^\top\brak{\vec{I}\frac{r^2}{d}\vec{e_1}+\vec{0}} = 0 \\
+    g\brak{\vec{h_L}} &= \brak{\frac{r^2}{d}\vec{e_1}}^\top\brak{\frac{r^2}{d}\vec{e_1}} - r^2 = \frac{r^4}{d^2} - r^2
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+Substituting these into \eqref{eq:57},
+\begin{align}
+    \kappa = \frac{0 \pm \sqrt{0 - 1\brak{\frac{r^4}{d^2}-r^2}}}{1} = \pm\sqrt{r^2 - \frac{r^4}{d^2}} = \pm \frac{r}{d}\sqrt{d^2-r^2}
+\end{align}
+The points of contact are $\vec{q} = \vec{h_L} + \kappa\vec{m_L}$.
+\begin{align}
+    \vec{q} = \frac{r^2}{d}\vec{e_1} \pm \frac{r}{d}\sqrt{d^2-r^2}\vec{e_2}
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+Substituting the given values $r=2.5$ and $d=7$:
+\begin{align}
+    \vec{q} &= \frac{\brak{2.5}^2}{7}\vec{e_1} \pm \frac{2.5}{7}\sqrt{7^2 - \brak{2.5}^2}\vec{e_2} \\
+    &= \frac{6.25}{7}\vec{e_1} \pm \frac{2.5}{7}\sqrt{42.75}\vec{e_2}
+\end{align}
+The coordinates of the two points of contact are:
+\begin{align}
+    \vec{q_{1,2}} = \myvec{\frac{25}{28} \\ \pm \frac{2.5\sqrt{42.75}}{7}}
+\end{align}
+\end{frame}
+
+\begin{frame}{Plot}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\columnwidth]{../figs/plot_c.jpg}
+	\caption{Plot}
+	\label{fig:fig}
+\end{figure}
+\end{frame}
+
+\end{document}
