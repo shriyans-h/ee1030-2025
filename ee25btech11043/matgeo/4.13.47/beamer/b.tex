@@ -1,6 +1,5 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
-
 \usetheme{Madrid}
 \usecolortheme{default}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -15,14 +14,11 @@
 \usepackage{circuitikz}
 \usepackage{tikz}
 \usepackage{graphicx}
-\usepackage{xparse} % Required for DeclareTCBListing
+\setbeamertemplate{page number in head/foot}[totalframenumber]
 \usepackage{tcolorbox}
 \tcbuselibrary{minted,breakable,xparse,skins}
-
-\setbeamertemplate{page number in head/foot}[totalframenumber]
-
 \definecolor{bg}{gray}{0.95}
-\DeclareTCBListing{lstlisting}{O{}m!O{}}{%
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
 breakable=true,
 listing engine=minted,
 listing only,
@@ -80,7 +76,7 @@ showstringspaces=false,
 \frame{\titlepage}
 
 \begin{frame}{Question}
-The ends $A$, $B$ of a straight line segment of constant length $c$ slide upon the fixed rectangular axes $OX$, $OY$ respectively. If the rectangle $OAPB$ be completed, then show that the locus of the foot of perpendicular drawn from $P$ to $AB$ is $x^{\frac{2}{3}} + y^{\frac{2}{3}} = c^{\frac{2}{3}}$.
+The ends $\vec{A}$, $\vec{B}$ of a straight line segment of constant length $c$ slide upon the fixed rectangular axes $OX$, $OY$ respectively. If the rectangle $OAPB$ be completed, then show that the locus of the foot of perpendicular drawn from $\vec{P}$ to $\vec{AB}$ is $x^{\frac{2}{3}} + y^{\frac{2}{3}} = c^{\frac{2}{3}}$.
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
@@ -89,7 +85,7 @@ Given
 \vec{A} &= \myvec{a\\0} \\
 \vec{B} &= \myvec{0\\b}
 \end{align}
-Since $OAPB$ is a rectangle, the opposite corner $P$ is:
+Since $OAPB$ is a rectangle, the opposite corner $\vec{P}$ is:
 \begin{align}
 \vec{P} &= \vec{A} + \vec{B} \\
 &= \myvec{a \\ b}
@@ -522,7 +518,7 @@ generate_locus_image()
 \begin{frame}{Plot by Python using shared output from C}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\columnwidth]{../figs/fig1.png}
+\includegraphics[width=0.7\columnwidth]{../figs/fig1.png}
 \caption{}
 \label{fig:1}
 \end{figure}
@@ -531,7 +527,7 @@ generate_locus_image()
 \begin{frame}{Plot by Python only}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\columnwidth]{../figs/fig2.png}
+\includegraphics[width=0.7\columnwidth]{../figs/fig2.png}
 \caption{}
 \label{fig:2}
 \end{figure}
