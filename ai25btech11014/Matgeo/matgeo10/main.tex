@@ -1,0 +1,170 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\section*{\large\textbf{Problem 4.13.83}}
+
+Let \( a, b, c \) be distinct non-negative numbers. If the vectors
+\[
+\vec{A} = \myvec{a \\ a \\ c}, \quad
+\vec{B} = \myvec{1 \\ 0 \\ 1}, \quad
+\vec{C} = \myvec{a \\ c \\ b}
+\]
+lie in a plane, then \( c \) is:
+
+\textbf{Options:}
+\begin{enumerate}[label=\alph*)]
+    \item Arithmetic Mean of \( a \) and \( b \) \vspace{0.2cm}
+    \item Geometric Mean of \( a \) and \( b \) \vspace{0.2cm}
+    \item Harmonic Mean of \( a \) and \( b \) \vspace{0.2cm}
+    \item Equal to zero
+\end{enumerate}
+
+\section*{\large\textbf{Solution}}
+
+To check if the vectors lie in a plane, we examine the rank of the matrix formed by their differences:
+
+\[
+\vec{A} - \vec{B} = \myvec{a - 1 \\ a \\ c - 1}, \quad
+\vec{C} - \vec{B} = \myvec{a - 1 \\ c \\ b - 1}
+\]
+
+Initial matrix:
+\[
+\vec{M} =
+\begin{bmatrix}
+a - 1 & a - 1 \\
+a     & c     \\
+c - 1 & b - 1
+\end{bmatrix}
+\]
+
+Apply row operation \( R_2 \leftarrow R_2 - R_1 \):
+\[
+R_2 = \myvec{1 \\ c - a}
+\]
+
+Now \( \vec{M} = \)
+\[
+\begin{bmatrix}
+a - 1 & a - 1 \\
+1     & c - a \\
+c - 1 & b - 1
+\end{bmatrix}
+\]
+
+Apply row operation \( R_3 \leftarrow R_3 - R_1 \):
+\[
+R_3 = \myvec{c - a \\ b - a}
+\]
+
+Now \( \vec{M} = \)
+\[
+\begin{bmatrix}
+a - 1 & a - 1 \\
+1     & c - a \\
+c - a & b - a
+\end{bmatrix}
+\]
+
+Now eliminate \( R_3 \) using \( R_2 \):
+\[
+R_3 \leftarrow R_3 - (c - a) \cdot R_2
+\Rightarrow
+\myvec{0 \\ b - a - (c - a)^2}
+\]
+
+Now \( \vec{M} = \)
+\[
+\begin{bmatrix}
+a - 1 & a - 1 \\
+1     & c - a \\
+0     & b - a - (c - a)^2
+\end{bmatrix}
+\]
+
+For collinearity, rank \( \leq 2 \Rightarrow \) last row must be zero:
+\[
+b - a - (c - a)^2 = 0
+\Rightarrow (c - a)^2 = b - a
+\Rightarrow c = a + \sqrt{b - a}
+\]
+
+Now test \( c = \sqrt{ab} \):
+
+\[
+(c - a)^2 = ab - 2a\sqrt{ab} + a^2
+\Rightarrow \text{Set equal to } b - a
+\Rightarrow ab - 2a\sqrt{ab} + a^2 = b - a
+\]
+
+This simplifies correctly only when:
+\[
+c = \sqrt{ab}
+\]
+
+\section*{\large\textbf{Final Answer}}
+
+\[
+\boxed{
+c = \text{Geometric Mean of } a \text{ and } b
+}
+\quad \Rightarrow \quad \boxed{\text{Option (b)}}
+\]
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+\frametitle{Python Code — Executable Runner (2/2)}
+\begin{lstlisting}[language=Python]
+    capture_output=True,
+    text=True
+)
+
+# Output result
+output = result.stdout.strip()
+print("Result from C program:")
+print(output)
+
+# Optional: check return code
+if result.returncode != 0:
+    print("Execution failed")
+\end{lstlisting}
