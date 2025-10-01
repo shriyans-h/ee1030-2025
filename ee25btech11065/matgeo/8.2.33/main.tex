@@ -1,0 +1,131 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                     
+\def\inputGnumericTable{}                               
+\usepackage[latin1]{inputenc}                           
+\usepackage{color}                                      
+\usepackage{array}                                      
+\usepackage{longtable}                                  
+\usepackage{calc}                                       
+\usepackage{multirow}                                   
+\usepackage{hhline}                                     
+\usepackage{ifthen}                                     
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{8.2.33}
+\author{EE25BTECH11065 - Yoshita J}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\textbf{Question}:\\
+Find the equation of the conic with length of major axis 26, foci $(\pm 5, 0)$.
+\\
+
+\textbf{Solution:} \\
+The given foci are $\mathbf{F}_1 = \myvec{5 \\ 0}$ and $\mathbf{F}_2 = \myvec{-5 \\ 0}$.
+\\
+
+The center of the conic is the midpoint of the foci:
+\begin{align}
+    \mathbf{u} = \frac{\mathbf{F}_1 + \mathbf{F}_2}{2} = \myvec{0 \\ 0}
+\end{align}
+\\
+
+The length of the major axis is given as $2a = 26$
+So, The distance from the center to a focus is $c=5$.
+
+Eccentricity:
+\begin{align}
+    e = \frac{c}{a} = \frac{5}{13}
+\end{align}
+\\
+
+
+The general equation of a conic is given by :
+\begin{align}
+    g(\mathbf{x}) = \mathbf{x}^T\mathbf{V}\mathbf{x} + 2\mathbf{u}^T\mathbf{x} + f = 0
+\end{align}
+where, x is a vertex on the major axis, 
+\\
+
+
+Since the center $\mathbf{u}=\mathbf{0}$, the equation simplifies to
+\begin{align}
+\mathbf{x}^T\mathbf{V}\mathbf{x} + f = 0.
+\end{align}
+\\
+
+
+where,
+\begin{align}
+    \mathbf{V} = ||\mathbf{n}||^2 \mathbf{I} - e^2\mathbf{n}\mathbf{n}^T
+\end{align}
+
+This simplifies to:
+\begin{align}
+    \mathbf{V} = \myvec{1-e^2 & 0 \\ 0 & 1}
+\end{align}
+
+Substituting,
+\begin{align}
+    \mathbf{V} = \myvec{1 - (5/13)^2 & 0 \\ 0 & 1} = \myvec{144/169 & 0 \\ 0 & 1}
+\end{align}
+\\
+
+
+Simplifying equation (5) and (4),
+\begin{align}
+    \myvec{13 & 0} \myvec{144/169 & 0 \\ 0 & 1} \myvec{13 \\ 0} + f &= 0 \nonumber \\
+    144 + f = 0 \Rightarrow f &= -144
+\end{align}
+\\
+
+
+Final equation of the conic,
+\begin{align*}
+\mathbf{x}^T \myvec{144/169 & 0 \\ 0 & 1} \mathbf{x} - 144 = 0.
+\end{align*}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\columnwidth]{figs/fig3.png}
+\end{center}
+\label{fig:Fig.1}
+\end{figure}
+\end{document}
+
+

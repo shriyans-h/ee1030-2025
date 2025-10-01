@@ -1,0 +1,249 @@
+
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+\begin{document}
+
+\title 
+{8.2.33}
+\date{September 19,2025}
+
+
+\author 
+{EE25BTECH11065-Yoshita J}
+
+
+
+
+
+
+\frame{\titlepage}
+\begin{frame}{Question}
+Find the equation of the conic with length of major axis 26, foci $(\pm 5, 0)$.
+
+\end{frame}
+
+
+\begin{frame}{Theoretical Solution}
+The given foci are $\mathbf{F}_1 = \myvec{5 \\ 0}$ and $\mathbf{F}_2 = \myvec{-5 \\ 0}$.
+
+
+The center of the conic is the midpoint of the foci:
+\begin{align}
+    \mathbf{u} = \frac{\mathbf{F}_1 + \mathbf{F}_2}{2} = \myvec{0 \\ 0}
+\end{align}
+\\
+
+The length of the major axis is given as $2a = 26$
+So, The distance from the center to a focus is $c=5$.
+
+Eccentricity:
+\begin{align}
+    e = \frac{c}{a} = \frac{5}{13}
+\end{align}
+\\
+
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+The general equation of a conic is given by :
+\begin{align}
+    g(\mathbf{x}) = \mathbf{x}^T\mathbf{V}\mathbf{x} + 2\mathbf{u}^T\mathbf{x} + f = 0
+\end{align}
+where, x is a vertex on the major axis, 
+\\
+Since the center $\mathbf{u}=\mathbf{0}$, the equation simplifies to
+\begin{align}
+\mathbf{x}^T\mathbf{V}\mathbf{x} + f = 0.
+\end{align}
+\\
+where,
+\begin{align}
+    \mathbf{V} = ||\mathbf{n}||^2 \mathbf{I} - e^2\mathbf{n}\mathbf{n}^T
+\end{align}
+
+This simplifies to:
+\begin{align}
+    \mathbf{V} = \myvec{1-e^2 & 0 \\ 0 & 1}
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+Substituting,
+\begin{align}
+    \mathbf{V} = \myvec{1 - (5/13)^2 & 0 \\ 0 & 1} = \myvec{144/169 & 0 \\ 0 & 1}
+\end{align}
+\\
+
+Simplifying equation (5) and (4),
+\begin{align}
+    \myvec{13 & 0} \myvec{144/169 & 0 \\ 0 & 1} \myvec{13 \\ 0} + f &= 0 \nonumber \\
+    144 + f = 0 \Rightarrow f &= -144
+\end{align}
+\\
+
+Final equation of the conic,
+\begin{align*}
+\mathbf{x}^T \myvec{144/169 & 0 \\ 0 & 1} \mathbf{x} - 144 = 0.
+\end{align*}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{C Code}
+
+    \begin{lstlisting}
+
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.1415926535
+
+double calculate_circular_sector_area() {
+    double radius = 2.0;
+    double angle_in_radians = PI / 6.0;
+    double area = 0.5 * radius * radius * angle_in_radians;
+    
+    return area;
+}
+
+
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+
+a = 13
+b = 12
+c = 5
+theta = np.linspace(0, 2 * np.pi, 200)
+
+x = a * np.cos(theta)
+y = b * np.sin(theta)
+
+plt.figure(figsize=(10, 8))
+ax = plt.gca()
+
+ax.plot(x, y, label='Ellipse: $x^2/169 + y^2/144 = 1$')
+
+ax.plot(0, 0, 'ko', label='Center (0, 0)')
+ax.plot(c, 0, 'ro', label='Focus 1 (5, 0)')
+ax.plot(-c, 0, 'ro', label='Focus 2 (-5, 0)')
+
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Python Code}
+    \begin{lstlisting}
+ax.set_title('Plot of the Ellipse', fontsize=16)
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+
+ax.set_aspect('equal', adjustable='box')
+
+ax.grid(True, linestyle='--')
+ax.legend()
+
+ax.set_xlim(-a - 2, a + 2)
+ax.set_ylim(-b - 2, b + 2)
+
+ax.axhline(0, color='black', linewidth=0.5)
+ax.axvline(0, color='black', linewidth=0.5)
+
+plt.show()
+   
+    \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Plot}
+
+    
+    \begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\columnwidth]{figs/fig3.png}
+\end{center}
+\label{fig:Fig.1}
+\end{figure}
+    
+\end{frame}    
+    
+  
+
+\end{document}
