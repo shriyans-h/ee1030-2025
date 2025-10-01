@@ -1,83 +1,278 @@
 \documentclass{beamer}
-\mode<presentation>
-\usepackage{amsmath,amssymb,mathtools}
-\usepackage{textcomp}
-\usepackage{gensymb}
-\usepackage{adjustbox}
-\usepackage{subcaption}
-\usepackage{enumitem}
-\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{url}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
 \usepackage{graphicx}
-\def\UrlBreaks{\do/\do-}
 
-\usetheme{Boadilla}
-\usecolortheme{lily}
-\setbeamertemplate{footline}{
-\leavevmode
-\hbox{
-\begin{beamercolorbox}[wd=\paperwidth,ht=2ex,dp=1ex,right]{author in head/foot}
-\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
-\end{beamercolorbox}}
-\vskip0pt
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+	breakable=true,
+	listing engine=minted,
+	listing only,
+	minted language=#2,
+	minted style=default,
+	minted options={%
+		linenos,
+		gobble=0,
+		breaklines=true,
+		breakafter=,,
+		fontsize=\small,
+		numbersep=8pt,
+		#1},
+	boxsep=0pt,
+	left skip=0pt,
+	right skip=0pt,
+	left=25pt,
+	right=0pt,
+	top=3pt,
+	bottom=3pt,
+	arc=5pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	bottomrule=2pt,
+	toprule=2pt,
+	colback=bg,
+	colframe=orange!70,
+	enhanced,
+	overlay={%
+		\begin{tcbclipinterior}
+			\fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+	\end{tcbclipinterior}},
+	#3,
 }
-\setbeamertemplate{navigation symbols}{}
-
 \lstset{
-frame=single,
-breaklines=true,
-columns=fullflexible,
-basicstyle=\ttfamily\tiny
+	language=C,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	stringstyle=\color{orange},
+	commentstyle=\color{green!60!black},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	breaklines=true,
+	showstringspaces=false,
 }
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{4.11.25}
+%\subtitle{A short story}
 
-\numberwithin{equation}{section}
+\author % (optional)
+{Revanth Siva Kumar.D - EE25BTECH11048}
 
-\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-\let\vec\mathbf
 
-\title{Matgeo Presentation - Problem 4.7.45}
-\author{Revanth Siva Kumar.D -- EE25BTECH11048}
 
 \begin{document}
-
-\begin{frame}
-\titlepage
-\end{frame}
-
-\begin{frame}{QUESTION}
-For any three vectors $\vec{a},\vec{b},\vec{c}$, prove or disprove
-\begin{align*}
-    (\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big) = 2\vec{a}\cdot(\vec{b}\times \vec{c}).
-\end{align*}\end{frame}
-
-\begin{frame}{Solution:}
-We write the scalar triple product in determinant form:
+	
+	\frame{\titlepage}
+	\begin{frame}{Question}
+			Find the distance of the point $\myvec{1,-2,9}$ from the point of intersection of the line
+\[
+\vec{r} = 4\hat{i} + 2\hat{j} + 7\hat{k} + \lambda \myvec{3\hat{i} + 4\hat{j} + 2\hat{k}}
+\]
+and the plane
+\[
+\vec{r}\cdot\myvec{\hat{i} - \hat{j} + \hat{k}} = 10.
+\]
+	\end{frame}
+	
+	
+	\begin{frame}{Theoretical Solution}
+			The line is
 \begin{align}
-(\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big)
-= \det\myvec{ (\vec{a}-\vec{b})^T \\ (\vec{b}-\vec{c})^T \\ (\vec{c}-\vec{a})^T }.
+    \vec{r} &= \vec{r}_0 + \lambda \vec{d}, \\
+    \vec{r}_0 &= \myvec{4 \\ 2 \\ 7}, \quad
+    \vec{d} = \myvec{3 \\ 4 \\ 2}.
 \end{align}
 
-Now observe that
+The plane has normal
 \begin{align}
-(\vec{a}-\vec{b}) + (\vec{b}-\vec{c}) + (\vec{c}-\vec{a}) = \vec{0}.
+    \vec{n} = \myvec{1 \\ -1 \\ 1}, \quad \vec{r}^T \vec{n} = 10.
 \end{align}
-Thus the three rows of the determinant are linearly dependent. From matrix theory, the determinant of a matrix with linearly dependent rows is zero. Hence
-\begin{align}
-(\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big) = 0.
-\end{align}
-\end{frame}
-\begin{frame}{Solution:}
-On the other hand, the right-hand side is
-\begin{align}
-2\vec{a}\cdot(\vec{b}\times\vec{c})
-= 2\det\myvec{\vec{a}^T \\ \vec{b}^T \\ \vec{c}^T},
-\end{align}
-which is not identically zero for arbitrary $\vec{a},\vec{b},\vec{c}$.
-\end{frame}
-\begin{frame}{Conclusion}The given statement is \textbf{false}. 
 
-The left-hand side  $(\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big)$is  always zero, 
-while the right-hand side $2\vec{a}\cdot(\vec{b}\times \vec{c})$ can be nonzero.
+Substitute $\vec{r} = \vec{r}_0 + \lambda \vec{d}$ into the plane equation:
+\begin{align}
+    \vec{n}^T\myvec{\vec{r}_0 + \lambda \vec{d}} &= 10 \\
+    \implies \vec{n}^T\vec{d}\,\lambda &= 10 - \vec{n}^T\vec{r}_0.
+\end{align}
 \end{frame}
-\end{document}
+\begin{frame}{Theoretical Solution}
+Now,
+\begin{align}
+    \vec{n}^T\vec{d} &= \myvec{1 & -1 & 1}\myvec{3 \\ 4 \\ 2} = 1, \\
+    \vec{n}^T\vec{r}_0 &= \myvec{1 & -1 & 1}\myvec{4 \\ 2 \\ 7} = 9.
+\end{align}
+
+Thus,
+\begin{align}
+    \lambda &= \frac{10-9}{1} = 1.
+\end{align}
+
+Hence, the intersection point is
+\begin{align}
+    P &= \vec{r}_0 + \lambda \vec{d} \\
+     &= \myvec{7 \\ 6 \\ 9}.
+\end{align}
+\end{frame}
+\begin{frame}{Theoretical Solution}
+Given point is
+\begin{align}
+    A = \myvec{1 \\ -2 \\ 9}.
+\end{align}
+The displacement vector is
+\begin{align}
+    \vec{v} &= P - A = \myvec{6 \\ 8 \\ 0}.
+\end{align}
+Therefore, the distance is
+\begin{align}
+    d &= \norm{\vec{v}} = \sqrt{\vec{v}^T\vec{v}} \\
+      &= \sqrt{6^2 + 8^2 + 0^2} \\
+      &= \sqrt{100} = 10.
+\end{align}
+\end{frame}
+\begin{frame}{Conclusion}
+\textbf{Final Answer: } The required distance is 
+\[
+\boxed{10}
+\]
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{C Code }
+		
+		\begin{lstlisting}
+			#include <stdio.h>
+#include <math.h>
+
+// Function to compute distance between A(1,-2,9) and P(7,6,9)
+double compute_distance() {
+    double A[3] = {1, -2, 9};
+    double P[3] = {7, 6, 9};
+    double v[3];
+    double sum = 0.0;
+
+    for(int i=0; i<3; i++) {
+        v[i] = P[i] - A[i];
+        sum += v[i]*v[i];
+    }
+
+    return sqrt(sum);
+}
+				
+			\end{lstlisting}
+		\end{frame}
+		
+		
+		\begin{frame}[fragile]
+			\frametitle{Python Code using shared output}
+			\begin{lstlisting}
+import ctypes
+
+# Load the shared C library
+lib = ctypes.CDLL("./points.so")
+
+# Specify the return type of the C function
+lib.compute_distance.restype = ctypes.c_double
+
+# Call the C function
+distance = lib.compute_distance()
+
+# Store the distance in another variable
+final_distance = distance
+
+# Print the distance
+print("Distance from point (1,-2,9) to intersection point (7,6,9):", final_distance)
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+			\frametitle{Python Code using shared output}
+			\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Given point
+A = np.array([1, -2, 9])
+
+# Line: r = r0 + lambda*d
+r0 = np.array([4, 2, 7])
+d = np.array([3, 4, 2])
+lambda_vals = np.linspace(-1, 2, 100)
+line_points = r0.reshape(3,1) + d.reshape(3,1) * lambda_vals
+
+# Intersection point
+P = r0 + d
+
+# Plane: x - y + z = 10 => z = 10 - x + y
+x_plane = np.linspace(-5, 10, 20)
+y_plane = np.linspace(-5, 10, 20)
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+			\frametitle{Python Code using shared output}
+			\begin{lstlisting}
+X, Y = np.meshgrid(x_plane, y_plane)
+Z = 10 - X + Y
+
+# 3D plot
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot plane
+ax.plot_surface(X, Y, Z, alpha=0.3, color='cyan', rstride=1, cstride=1, edgecolor='none')
+
+# Plot line
+ax.plot(line_points[0,:], line_points[1,:], line_points[2,:], color='blue', label="Line r=r0+λd")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+			\frametitle{Python Code using shared output}
+			\begin{lstlisting}
+# Plot points
+ax.scatter(A[0], A[1], A[2], color='red', s=50, label="Point A(1,-2,9)")
+ax.scatter(P[0], P[1], P[2], color='green', s=50, label="Intersection P(7,6,9)")
+
+# Dotted line from A to P
+ax.plot([A[0], P[0]], [A[1], P[1]], [A[2], P[2]], color='magenta', linestyle='--', label="Distance d")
+
+# Labels
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('Z-axis')
+ax.set_title("Distance from Point to Line-Plane Intersection")
+ax.legend()
+plt.show()
+
+			\end{lstlisting}
+			
+		\end{frame}
+		
+		\begin{frame}{Plot}
+		    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{figs/Figure_1.png}
+    \caption{PLOT}
+    \label{fig:fig1}
+\end{figure}
+		\end{frame}
+		
+	\end{document}
