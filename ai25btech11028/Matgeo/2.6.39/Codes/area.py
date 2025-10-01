@@ -20,10 +20,14 @@ print("Area (NumPy) =", area)
 fig = plt.figure()
 ax = fig.add_subplot(111, projection="3d")
 
-X = [A[0], B[0], D[0], C[0], A[0]]
-Y = [A[1], B[1], D[1], C[1], A[1]]
-Z = [A[2], B[2], D[2], C[2], A[2]]
+X = [A[0], B[0], C[0], D[0], A[0]]
+Y = [A[1], B[1], C[1], D[1], A[1]]
+Z = [A[2], B[2], C[2], D[2], A[2]]
 
 ax.plot(X, Y, Z, 'r-', marker='o')
-ax.set_title("Quadrilateral in 3D (NumPy)")
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ # Save before show
+plt.savefig("/storage/emulated/0/matrix/Matgeo/2.6.39/figs/Figure_1.png", dpi=300, bbox_inches='tight')
 plt.show()

@@ -29,10 +29,12 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection="3d")
 
 # Connect vertices in order A-B-D-C-A
-X = [A[0], B[0], D[0], C[0], A[0]]
-Y = [A[1], B[1], D[1], C[1], A[1]]
-Z = [A[2], B[2], D[2], C[2], A[2]]
+X = [A[0], B[0], C[0], D[0], A[0]]
+Y = [A[1], B[1], C[1], D[1], A[1]]
+Z = [A[2], B[2], C[2], D[2], A[2]]
 
 ax.plot(X, Y, Z, 'b-', marker='o')
-ax.set_title("Quadrilateral in 3D (ctypes + C)")
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
 plt.show()
