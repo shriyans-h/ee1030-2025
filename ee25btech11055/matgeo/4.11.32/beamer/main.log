@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.23)  1 OCT 2025 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.23)  1 OCT 2025 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1157,17 +1157,19 @@ Overfull \vbox (9.12254pt too high) detected at line 139
 
 [7
 
+] [8
+
 ]
-<../figs/plot.png, id=120, 578.16pt x 433.62pt>
+<../figs/plot.png, id=125, 578.16pt x 433.62pt>
 File: ../figs/plot.png Graphic file (type png)
 <use ../figs/plot.png>
-Package pdftex.def Info: ../figs/plot.png  used on input line 149.
+Package pdftex.def Info: ../figs/plot.png  used on input line 162.
 (pdftex.def)             Requested size: 273.83728pt x 205.37614pt.
 
-Overfull \vbox (2.76965pt too high) detected at line 149
+Overfull \vbox (2.76965pt too high) detected at line 162
  []
 
-[8
+[9
 
  <../figs/plot.png>]
 \openout4 = `main.vrb'.
@@ -1194,11 +1196,10 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 3.
 
-) [9
+) [10
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 \openout4 = `main.vrb'.
-
 
 (./main.vrb
 LaTeX Font Info:    Trying to load font information for OML+cmss on input line 
@@ -1210,12 +1211,12 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textless' on input line 14.
 
-) [10
+) [11
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [11
+ (./main.vrb) [12
 
 ]
 \openout4 = `main.vrb'.
@@ -1223,23 +1224,14 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
  (./main.vrb
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-)) [12
+)) [13
 
 ]
 \openout4 = `main.vrb'.
 
 
 (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 243
- []
-
-[13
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 265
+Overfull \vbox (0.11983pt too high) detected at line 256
  []
 
 [14
@@ -1248,32 +1240,36 @@ Overfull \vbox (0.11983pt too high) detected at line 265
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 287
+Overfull \vbox (0.11983pt too high) detected at line 278
  []
 
 [15
 
 ]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (0.11983pt too high) detected at line 300
+ []
+
+[16
+
+]
 File: ../figs/plot.png Graphic file (type png)
 <use ../figs/plot.png>
-Package pdftex.def Info: ../figs/plot.png  used on input line 296.
+Package pdftex.def Info: ../figs/plot.png  used on input line 309.
 (pdftex.def)             Requested size: 273.83728pt x 205.37614pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:plot}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.296 \end{frame}
+l.309 \end{frame}
                  
-Overfull \vbox (2.76965pt too high) detected at line 296
+Overfull \vbox (2.76965pt too high) detected at line 309
  []
 
-[16
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [17
+[17
 
 ]
 \openout4 = `main.vrb'.
@@ -1281,22 +1277,27 @@ Overfull \vbox (2.76965pt too high) detected at line 296
  (./main.vrb) [18
 
 ]
-<../figs/python.png, id=178, 578.16pt x 578.16pt>
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [19
+
+]
+<../figs/python.png, id=184, 578.16pt x 578.16pt>
 File: ../figs/python.png Graphic file (type png)
 <use ../figs/python.png>
-Package pdftex.def Info: ../figs/python.png  used on input line 346.
+Package pdftex.def Info: ../figs/python.png  used on input line 359.
 (pdftex.def)             Requested size: 256.72147pt x 256.72018pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:plot}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.346 \end{frame}
+l.359 \end{frame}
                  
-Overfull \vbox (54.1137pt too high) detected at line 346
+Overfull \vbox (54.1137pt too high) detected at line 359
  []
 
-[19
+[20
 
  <../figs/python.png>]
 \tf@nav=\write6
@@ -1316,13 +1317,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 144BC56F83CD001DA6CCB47AA4F44CEF;948.
+(rerunfilecheck)             Checksum: 3308CBED84983E176167ABD6A4451A03;948.
  ) 
 Here is how much of TeX's memory you used:
- 27442 strings out of 477985
- 521627 string characters out of 5839380
+ 27446 strings out of 477985
+ 521662 string characters out of 5839380
  2061388 words of memory out of 6000000
- 47019 multiletter control sequences out of 15000+600000
+ 47021 multiletter control sequences out of 15000+600000
  520925 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,19n,131p,426b,1500s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1338,10 +1339,10 @@ blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfss1
 095.pfb>
-Output written on main.pdf (19 pages, 457505 bytes).
+Output written on main.pdf (20 pages, 458795 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
