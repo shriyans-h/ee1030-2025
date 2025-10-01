@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  30 SEP 2025 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.1)  1 OCT 2025 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1863,13 +1863,13 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             After:  14D7387A7C7DC5D486D12EC82907EF25;173.
  ) 
 Here is how much of TeX's memory you used:
- 56488 strings out of 474222
- 1352283 string characters out of 5748734
- 2187018 words of memory out of 5000000
- 77765 multiletter control sequences out of 15000+600000
+ 56490 strings out of 474222
+ 1352315 string characters out of 5748734
+ 2182018 words of memory out of 5000000
+ 77766 multiletter control sequences out of 15000+600000
  596089 words of font info for 74 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1879,10 +1879,10 @@ sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb>
-Output written on main.pdf (6 pages, 122719 bytes).
+Output written on main.pdf (6 pages, 125155 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 13 named destinations out of 1000 (max. 500000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
