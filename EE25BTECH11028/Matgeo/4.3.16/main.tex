@@ -1,0 +1,144 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.3.16}
+\author{EE25btech11028 - J.Navya sri}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+
+\textbf{Question:} \\
+Find the equation of the plane through the points  
+\[
+(2,1,0), \quad (3,-2,-2), \quad (3,1,7).
+\]
+\textbf{Solution:}
+The given points are
+\[
+P_1 = \myvec{2\\1\\0}, \quad 
+P_2 = \myvec{3\\2\\-2}, \quad 
+P_3 = \myvec{3\\1\\7}.
+\]
+\subsection*{Step 1: General plane equation}
+\[
+ax + by + cz + d = 0 \tag{1}
+\]
+\subsection*{Step 2: Substitution of points}
+Substituting each point:
+
+\[
+2a + b + d = 0 \tag{2}
+\]
+\[
+3a + 2b - 2c + d = 0 \tag{3}
+\]
+\[
+3a + b + 7c + d = 0 \tag{4}
+\]
+\subsection*{Step 3: Matrix form}
+\[
+\myvec{
+2 & 1 & 0 & 1\\
+3 & 2 & -2 & 1\\
+3 & 1 & 7 & 1
+}
+\myvec{a\\ b\\ c\\ d}
+\myvec{0\\0\\0}
+\tag{5}
+\]
+\subsection*{Step 4: Solving the system}
+From (2):
+\[
+d = -2a - b \tag{6}
+\]
+
+Substitute in (3):
+\[
+3a + 2b - 2c - 2a - b = 0 \;\;\Rightarrow\;\; a + b - 2c = 0 \tag{7}
+\]
+
+Substitute in (4):
+\[
+3a + b + 7c - 2a - b = 0 \;\;\Rightarrow\;\; a + 7c = 0 \tag{8}
+\]
+
+From (8):
+\[
+a = -7c \tag{9}
+\]
+
+From (7):
+\[
+-7c + b - 2c = 0 \;\;\Rightarrow\;\; b = 9c \tag{10}
+\]
+
+From (6):
+\[
+d = -2(-7c) - 9c = 5c \tag{11}
+\]
+\subsection*{Step 5: Final result}
+\[
+\myvec{a\\ b\\ c\\ d} = c \myvec{-7\\ 9\\ 1\\ 5}
+\]
+
+Choosing \(c=1\), the plane equation is
+\[
+-7x + 9y + z + 5 = 0 \tag{12}
+\]
+
+Or equivalently,
+\[
+\boxed{7x - 9y - z - 5 = 0 }\tag{13}
+\]
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\columnwidth]{figs/fig6.png}
+\end{center}
+\caption{}
+\label{fig:Fig}
+\end{figure}
+
+
+\end{document}
