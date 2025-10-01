@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  1 OCT 2025 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.3.15)  1 OCT 2025 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1737,7 +1737,7 @@ tmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-78.
+74.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ot1lmss.
 fd
@@ -1745,52 +1745,52 @@ File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./b.aux)
 \openout1 = `b.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 78.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 74.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-78.
+74.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/oml
 txmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 74.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-78.
+74.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/oms
 txsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 74.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-78.
+74.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/omx
 txex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 74.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 7
-8.
+4.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/utx
 exa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1853,57 +1853,57 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 78.
+Package hyperref Info: Link coloring OFF on input line 74.
  (./b.out) (./b.out)
 \@outlinefile=\write6
 \openout6 = `b.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 78.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 78.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 78.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 78.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 74.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 78.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 78.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 78.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 78.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 78.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 78.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 78.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 78.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 78.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 78.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 78.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 78.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 78.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 78.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 78.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 78.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 78.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 78.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 78.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 74.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 78.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 74.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/translator/
 translator-basic-dictionary-English.dict
@@ -1938,85 +1938,84 @@ Dictionary: translator-theorem-dictionary, Language: English
 ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/e
 nc/dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-4.
+0.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/omllmm.f
 d
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-84.
+80.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/omslmsy.
 fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-84.
+80.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/omxlmex.
 fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 84.
+(Font)              <10.95> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 84.
+(Font)              <8> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 84.
+(Font)              <6> on input line 80.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 8
-4.
+0.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/utx
 sya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 8
-4.
+0.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/utx
 syb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 8
-4.
+0.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/ot1
 txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 8
-4.
+0.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/utx
 mia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 8
-4.
+0.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/txfonts/utx
 syc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 84.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 84.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 84.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 80.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 80.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 80.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 80.
 
 
 [2
 
 ]
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 97.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 97.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 97.
-
 
 [3
 
@@ -2051,83 +2050,13 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 \openout4 = `b.vrb'.
 
  (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 #i
-      nclude <math.h>
-? 
-\g__tcobox_out_iow=\write7
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.13 \end{lstlisting}
-                     
-? 
-\pydata@fh@_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted=\write8
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted config  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD71C
-777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20251001183751 92EB5FFEE6AE2FEC3
-AD71C777531578F)...executed safely (allowed).
-
-
-(./_minted/default.style.minted)
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.13 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.13 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:13: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \end{lstlisting}
-                     
-? 
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-13.
+2.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ot1lmtt.
 fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-3.
-
-(/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ot1lmr.f
-d
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 13.
-LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 13.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 13.
-)
+))
 
 [10
 
@@ -2135,42 +2064,14 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
 -rmtt.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-\openout7 = `b.listing'.
-
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:15: Pygments lexer "/" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [11
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-\openout7 = `b.listing'.
-
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_minted/9B00088EDDAEA9B3D83BFF785E098206.highlight.minted))
+ (./b.vrb)
 
 [12
 
@@ -2178,24 +2079,25 @@ runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
 \openout4 = `b.vrb'.
 
  (./b.vrb
-\openout7 = `b.listing'.
 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:18: Pygments lexer "i" is unknown.
-
-See the minted package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \end{lstlisting}
-                     
+l.6 lib_geometry = ctypes.CDLL("
+                                ./code9.so")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 lib_geometry = ctypes.CDLL("./code9.so"
+                                           )
 ? 
 )
 
@@ -2205,27 +2107,68 @@ l.18 \end{lstlisting}
 \openout4 = `b.vrb'.
 
  (./b.vrb
-\openout7 = `b.listing'.
 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:16: Pygments lexer "l" is unknown.
-
-See the minted package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \end{lstlisting}
-                     
+l.6 "
+     ""
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ""
+      "
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 """
+       
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 "
+     ""
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ""
+      "
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 """
+       
 ? 
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-16.
+11.
 
 (/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/tex/latex/lm/ts1lmtt.
 fd
@@ -2238,283 +2181,42 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 -ts1.enc}]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 # 
-      Initialize lists to store the coordinates of the foot of the perpendic...
-
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.17 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.17 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.17 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:17: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [15
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3     # 
-          Complete the rectangle OAPB
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.17 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.17 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.17 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:17: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [16
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 # 
-      --- Plotting ---
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.15 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.15 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.15 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:15: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [17
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 # 
-      Recalculate foot for demo using C function
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.16 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.16 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.16 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:16: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [18
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 # 
-      Plot the demo rectangle and points
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.10 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.10 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.10 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:10: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [19
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-\openout7 = `b.listing'.
-
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:15: Pygments lexer "p" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [20
 
@@ -2522,24 +2224,25 @@ l.15 \end{lstlisting}
 \openout4 = `b.vrb'.
 
  (./b.vrb
-\openout7 = `b.listing'.
 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:16: Pygments lexer "p" is unknown.
-
-See the minted package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \end{lstlisting}
-                     
+l.13 plt.savefig("
+                  fig1.png")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 plt.savefig("fig1.png"
+                           )
 ? 
 )
 
@@ -2548,223 +2251,42 @@ l.16 \end{lstlisting}
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-\openout7 = `b.listing'.
-
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:17: Pygments lexer "i" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [22
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-\openout7 = `b.listing'.
-
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:16: Pygments lexer "f" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [23
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3     # 
-          Vector A-P
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.17 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.17 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.17 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:17: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [24
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 # 
-      For illustrative purposes, let's plot one instance of the rectangle an...
-
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.16 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.16 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.16 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:16: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [25
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-! Illegal parameter number in definition of \kvtcb@minted@language.
-<to be read again> 
-                   }
-l.3 # 
-      Plot the axes
-? 
-\openout7 = `b.listing'.
-
-! Illegal parameter number in definition of \minted@lexer.
-<to be read again> 
-                   }
-l.14 \end{lstlisting}
-                     
-? 
-! Illegal parameter number in definition of \pydata@tmp.
-<to be read again> 
-                   }
-l.14 \end{lstlisting}
-                     
-? 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
-(./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Illegal parameter number in definition of  .
-<to be read again> 
-                   "
-l.14 \end{lstlisting}
-                     
-? 
-! Package minted Error: 
- => ./b.vrb:14: Pygments lexer "##" is unknown.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 \end{lstlisting}
-                     
-? 
-)
+ (./b.vrb)
 
 [26
 
 ]
 \openout4 = `b.vrb'.
 
- (./b.vrb
-\openout7 = `b.listing'.
-
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_minted/D8FCB26219ED60A2220B89B6E871C26A.highlight.minted))
+ (./b.vrb)
 
 [27
 
@@ -2772,37 +2294,38 @@ runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
 \openout4 = `b.vrb'.
 
  (./b.vrb
-\openout7 = `b.listing'.
 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
 
-runsystem(latexminted highlight  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD
-71C777531578F)...executed safely (allowed).
-
- (./_92EB5FFEE6AE2FEC3AD71C777531578F.message.minted)
-
-! Package minted Error: 
- => ./b.vrb:15: Pygments lexer "p" is unknown.
-
-See the minted package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 \end{lstlisting}
-                     
+l.12 plt.savefig("
+                  fig2.png")
+? 
+
+! LaTeX Error: Command \textquotedbl unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 plt.savefig("fig2.png"
+                           )
 ? 
 )
 
 [28
 
 ]
-<../figs/fig1.png, id=833, 578.16pt x 578.16pt>
+<../figs/fig1.png, id=829, 578.16pt x 578.16pt>
 File: ../figs/fig1.png Graphic file (type png)
 <use ../figs/fig1.png>
-Package pdftex.def Info: ../figs/fig1.png  used on input line 529.
-(pdftex.def)             Requested size: 273.83728pt x 273.83487pt.
+Package pdftex.def Info: ../figs/fig1.png  used on input line 525.
+(pdftex.def)             Requested size: 239.60567pt x 239.60551pt.
 
-Overfull \vbox (82.30855pt too high) detected at line 529
+Overfull \vbox (48.0792pt too high) detected at line 525
  []
 
 
@@ -2810,13 +2333,13 @@ Overfull \vbox (82.30855pt too high) detected at line 529
 [29
 
  <../figs/fig1.png>]
-<../figs/fig2.png, id=863, 578.16pt x 578.16pt>
+<../figs/fig2.png, id=859, 578.16pt x 578.16pt>
 File: ../figs/fig2.png Graphic file (type png)
 <use ../figs/fig2.png>
-Package pdftex.def Info: ../figs/fig2.png  used on input line 538.
-(pdftex.def)             Requested size: 273.83728pt x 273.83487pt.
+Package pdftex.def Info: ../figs/fig2.png  used on input line 534.
+(pdftex.def)             Requested size: 239.60567pt x 239.60551pt.
 
-Overfull \vbox (82.30855pt too high) detected at line 538
+Overfull \vbox (48.0792pt too high) detected at line 534
  []
 
 
@@ -2824,19 +2347,17 @@ Overfull \vbox (82.30855pt too high) detected at line 538
 [30
 
  <../figs/fig2.png>]
-\tf@nav=\write9
-\openout9 = `b.nav'.
+\tf@nav=\write7
+\openout7 = `b.nav'.
 
-\tf@toc=\write10
-\openout10 = `b.toc'.
+\tf@toc=\write8
+\openout8 = `b.toc'.
 
-\tf@snm=\write11
-\openout11 = `b.snm'.
+\tf@snm=\write9
+\openout9 = `b.snm'.
 
-\openout8 = `_92EB5FFEE6AE2FEC3AD71C777531578F.data.minted'.
-
-runsystem(latexminted clean  --timestamp 20251001183751 92EB5FFEE6AE2FEC3AD71C7
-77531578F)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20251001184317 92EB5FFEE6AE2FEC3AD
+71C777531578F)...executed safely (allowed).
 
  (./b.aux)
  ***********
@@ -2847,36 +2368,31 @@ Package rerunfilecheck Info: File `b.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59163 strings out of 473190
- 1461094 string characters out of 5704335
- 2340977 words of memory out of 5000000
- 81280 multiletter control sequences out of 15000+600000
- 617269 words of font info for 92 fonts, out of 8000000 for 9000
+ 59437 strings out of 473190
+ 1456677 string characters out of 5704335
+ 2568016 words of memory out of 5000000
+ 81614 multiletter control sequences out of 15000+600000
+ 600504 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,16n,123p,1169b,1344s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,123p,1169b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/
 lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/t
 ype1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-
-dist/fonts/type1/public/lm/lmmi6.pfb></opt/homebrew/Cellar/texlive/20250308_1/s
-hare/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/2
-0250308_1/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar
-/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb></opt/hom
-ebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmss12.p
-fb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public
-/lm/lmss8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/t
-ype1/public/lm/lmssbx10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texm
-f-dist/fonts/type1/public/lm/lmsso10.pfb></opt/homebrew/Cellar/texlive/20250308
-_1/share/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></opt/homebrew/Cellar/texl
-ive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew
-/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></o
-pt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lm
-sy8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/p
-ublic/lm/lmtt10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/f
-onts/type1/public/lm/lmtti10.pfb>
-Output written on b.pdf (30 pages, 374937 bytes).
+dist/fonts/type1/public/lm/lmmi8.pfb></opt/homebrew/Cellar/texlive/20250308_1/s
+hare/texmf-dist/fonts/type1/public/lm/lmss10.pfb></opt/homebrew/Cellar/texlive/
+20250308_1/share/texmf-dist/fonts/type1/public/lm/lmss12.pfb></opt/homebrew/Cel
+lar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmss8.pfb></opt/h
+omebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmssbx
+10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/type1/pu
+blic/lm/lmsso10.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/f
+onts/type1/public/lm/lmsso8.pfb></opt/homebrew/Cellar/texlive/20250308_1/share/
+texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20250
+308_1/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt/homebrew/Cellar/te
+xlive/20250308_1/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on b.pdf (30 pages, 324909 bytes).
 PDF statistics:
- 982 PDF objects out of 1000 (max. 8388607)
- 842 compressed objects within 9 object streams
+ 962 PDF objects out of 1000 (max. 8388607)
+ 830 compressed objects within 9 object streams
  63 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
