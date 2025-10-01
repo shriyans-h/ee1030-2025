@@ -1,0 +1,178 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+                                         
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+
+\bibliographystyle{IEEEtran}
+
+\title{5.8.19}
+\author{EE25BTECH11021 - Dhanush sagar}
+% \maketitle
+% \newpage
+% \bigskip
+\maketitle \vspace{-1cm}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question:}  \\
+If we add 1 to the numerator and subtract 1 from the denominator, a fraction reduces
+to 1. It becomes 1/2 if we only add 1 to the denominator. What is the fraction?
+
+
+\textbf{Solution:}
+% Represent the unknown fraction as a homogeneous vector
+Given
+Let the unknown fraction be represented as:
+\begin{align}
+\vec{v} &= \myvec{x \\ y \\ 1}
+\end{align}
+so that the fraction equals:
+\begin{align}
+\frac{x}{y}.
+\end{align}
+
+% Transformation: add 1 to numerator and subtract 1 from denominator
+case 1 :Adding 1 to the numerator and subtracting 1 from the denominator:
+\begin{align}
+\vec{T_1} &= \myvec{1 & 0 & 1 \\ 0 & 1 & -1 \\ 0 & 0 & 1} \\
+\vec{T_1} \vec{v} &= \myvec{x+1 \\ y-1 \\ 1}
+\end{align}
+
+
+
+case 2 :Adding 1 to the denominator:
+\begin{align}
+\vec{\vec{T_2}} &= \myvec{1 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 1} \\
+\vec{\vec{T_2}} \vec{v} &= \myvec{x \\ y+1 \\ 1}
+\end{align}
+
+% Fraction condition as linear functional
+Condition for a fraction $\frac{a}{b}=k$:
+\begin{align}
+\myvec{1 & -k & 0} \myvec{a \\ b \\ 1} &= 0
+\end{align}
+
+% Apply condition for T1*v = 1
+Applying the first condition ($\vec{T_1}*\vec{v}$ = 1):
+\begin{align}
+\vec{r_1} &= \myvec{1 & -1 & 0} \vec{T_1} \\
+    &= \myvec{1 & -1 & 2} \\
+\vec{r_1} \vec{v} &= 0
+\end{align}
+
+
+% Apply condition for T2*v = 1/2
+Applying the second condition ($\vec{T_2}*\vec{v}$ = 1/2):
+\begin{align}
+\vec{r_2} &= \myvec{2 & -1 & 0} \vec{\vec{T_2}} \\
+    &= \myvec{2 & -1 & -1} \\
+\vec{r_2} \vec{v} &= 0
+\end{align}
+
+% Stack equations into system
+System of equations in matrix form:
+\begin{align}
+\vec{M} \vec{v} &= 0 \\
+\vec{M} &= \myvec{1 & -1 & 2 \\ 2 & -1 & -1}
+\end{align}
+
+% Partition matrix
+
+
+
+% Solve with Gaussian elimination
+Partitioning M into A and c, and vector v into u:
+\begin{align}
+\vec{M} &= \myvec{\vec{A} & \vec{c}} \\
+\vec{A} &= \myvec{1 & -1 \\ 2 & -1}, \quad \vec{c} = \myvec{2 \\ -1} \\
+\vec{v} &= \myvec{\vec{u} \\ 1} \\
+\vec{A} \vec{u} + \vec{c} &= 0 \implies \vec{A} \vec{u} = -\vec{c}
+\end{align}
+
+% Solve with Gaussian elimination using \augvec
+
+
+Form the augmented matrix:
+\begin{align}
+\left[\myvec{1 & -1 \\ 2 & -1} \;\middle|\; \myvec{-2 \\ 1}\right]
+\end{align}
+
+% Step 2: Eliminate the entry below the pivot (column 1)
+Eliminate below the pivot using 
+\(r_2 \leftarrow r_2 - 2 r_1\):
+\begin{align}
+\left[\myvec{1 & -1 \\ 0 & 1} \;\middle|\; \myvec{-2 \\ 5}\right]
+\end{align}
+
+
+% Step 3: Eliminate the entry above the pivot (column 2)
+Eliminate above the pivot using 
+\(r_1 \leftarrow r_1 + r_2\):
+\begin{align}
+\left[\myvec{1 & 0 \\ 0 & 1} \;\middle|\; \myvec{3 \\ 5}\right]
+\end{align}
+
+
+
+% Solution for u
+Reading off the solution for u:
+\begin{align}
+\vec{u} &= \myvec{3 \\ 5}
+\end{align}
+
+% Final fraction
+Hence the homogeneous vector and fraction:
+\begin{align}
+\vec{v} &= \myvec{3 \\ 5 \\ 1} \\
+\frac{x}{y} &= \frac{3}{5}
+\end{align}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/fig1.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
