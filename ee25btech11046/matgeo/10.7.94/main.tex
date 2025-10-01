@@ -1,0 +1,83 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{10.7.94}
+\author{Puni Aditya - EE25BTECH11046}
+\maketitle
+
+\textbf{Question:}
+
+A circle touches the X axis and also touches the circle with centre at \brak{0, 3} and radius 2. The locus of the centre of the circle is
+\begin{enumerate}
+    \item an ellipse
+    \item a circle
+    \item a hyperbola
+    \item a parabola
+\end{enumerate}
+
+\textbf{Solution:}
+
+Let the center of the moving circle be 
+\begin{align*} 
+    \vec{c} = \myvec{x \\ y}
+\end{align*}
+and its radius be $r$.
+The circle touches the X-axis, so its radius is the y-coordinate of its center.
+\begin{align}
+    r = y = \vec{e_2}^\top\vec{c} \text{ } \brak{y>0}
+\end{align}
+The fixed circle has center 
+\begin{align} 
+    \vec{c}_f = 3\vec{e_2}
+\end{align} 
+and radius 
+\begin{align}
+    r_f=2
+\end{align}
+The distance between the centers of two touching circles is the sum of their radii (for external tangency).
+\begin{align}
+    \norm{\vec{c}-\vec{c}_f} &= r + r_f \\
+    \norm{\vec{c}-3\vec{e_2}} &= \vec{e_2}^\top\vec{c} + 2
+\end{align}
+Squaring both sides,
+\begin{align}
+    \brak{\vec{c}-3\vec{e_2}}^\top\brak{\vec{c}-3\vec{e_2}} &= \brak{\vec{e_2}^\top\vec{c} + 2}^2 \\
+    \vec{c}^\top\vec{c} - 6\vec{e_2}^\top\vec{c} + 9 &= \brak{\vec{e_2}^\top\vec{c}}^2 + 4\vec{e_2}^\top\vec{c} + 4
+\end{align}
+\begin{align}
+    x^2 + y^2 - 6y + 9 &= y^2 + 4y + 4 \\
+    x^2 - 10y + 5 &= 0
+\end{align}
+The locus in the standard form of the conic is
+\begin{align}
+    \myvec{x & y}\myvec{1 & 0 \\ 0 & 0}\myvec{x \\ y} + 2\myvec{0 & -5}\myvec{x \\ y} + 5 = 0
+\end{align}
+The matrix of the quadratic part is
+\begin{align}
+    \vec{V} = \myvec{1 & 0 \\ 0 & 0}
+\end{align}
+The type of conic section is determined by the eigenvalues of $\vec{V}$. For a diagonal matrix, the eigenvalues are the diagonal entries.
+\begin{align}
+    \lambda_1 = 1, \text{ } \lambda_2 = 0
+\end{align}
+\begin{align}
+    \mydet{\vec{V}} = \lambda_1\lambda_2 = 1 \cdot 0 = 0
+\end{align}
+Since one of the eigenvalues is zero, the locus is a parabola. \\
+The correct option is \textbf{4) a parabola}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\columnwidth]{figs/plot_c.jpg}
+	\caption*{Plot}
+	\label{fig:fig}
+\end{figure}
+
+\end{document}
