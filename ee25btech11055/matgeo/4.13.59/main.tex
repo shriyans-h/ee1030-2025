@@ -1,0 +1,116 @@
+% Preamble templated from Mihir-Divyansh/Course-Setup
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{gvv}
+%\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{multicol}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+%\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+%\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment 9: 4.13.59}
+\author{EE25BTECH11055 - Subhodeep Chakraborty}
+\maketitle
+\hrulefill
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question:}\par
+Determine all values of $\alpha$ for which the point \brak{\alpha,\alpha^2} lies inside the triangle formed by the lines. \hfill\brak{1992}
+\begin{align*}
+ 2x+3y-1&=0\\
+ x+2y-3&=0\\
+ 5x-6y-1&=0
+\end{align*}
+\par
+\textbf{Solution:}\par
+
+Given:
+\begin{align}
+ \vec{n_1}^\top\vec{x}&=c_1 &\vec{n_1}=\myvec{2\\3} c_1 = 1 \\
+ \vec{n_2}^\top\vec{x}&=c_2 &\vec{n_2}=\myvec{1\\2} c_2 = 3 \\
+ \vec{n_3}^\top\vec{x}&=c_3 &\vec{n_3}=\myvec{5\\-6} c_3 = 1 \\
+ \vec{P} &= \myvec{\alpha \\ \alpha^2} &
+\end{align}
+
+For finding vertices:
+\begin{align}
+ \myvec{n_1 & n_2}^\top\vec{V_3} = \myvec{c1 \\ c2} \\
+ \implies \vec{V_3} = \myvec{n_1 & n_2}^{-\top}\myvec{c1 \\ c2} \\
+ \vec{V_2} = \myvec{n_3 & n_1}^{-\top}\myvec{c3 \\ c1} \\
+ \vec{V_1} = \myvec{n_2 & n_3}^{-\top}\myvec{c2 \\ c3}
+\end{align}
+The normal matrices are invertible as the lines are not parallel.
+Let us define $d_i = \vec{n_i}^\top\vec{V_i}-c_i$ as the sign denoting which side of the line the vertex opposite to it lies on. Also define matrix $\vec{D} = \text{diag}\brak{d_1,d_2,d_3}$ \par\noindent
+For point to lie inside triangle, we need $d_i\cdot\brak{\vec{n_i}^\top\vec{P}-c_i} > 0$. In matrix form, this is written as:
+\begin{align}
+\vec{D} &= \myvec{d_1 & 0 & 0 \\ 0 & d_2 & 0 \\ 0 & 0 & d_3} \\
+  &\vec{D}\myvec{\vec{n_1}^\top\vec{P}-c_1 \\ \vec{n_2}^\top\vec{P}-c_2 \\ \vec{n_3}^\top\vec{P}-c_3} > \vec{0}
+\end{align}
+Let
+\begin{align}
+ \vec{N} = \myvec{n_1 & n_2 & n_3}^\top \\
+ \vec{C} = \myvec{c_1 \\ c_2 \\ c_3}
+\end{align}
+Thus representing everything in terms of matrices,
+\begin{align}
+ \vec{D}\brak{\vec{N}\vec{P}-\vec{C}} > \vec{0}
+\end{align}
+is the required inequality. On substituting values, we get
+\begin{align}
+ \alpha
+\end{align}
+\begin{figure}[H]
+    \centering
+    \includegraphics{figs/plot.png}
+    \caption*{}
+    \label{fig:plot}
+\end{figure}
+\end{document}
