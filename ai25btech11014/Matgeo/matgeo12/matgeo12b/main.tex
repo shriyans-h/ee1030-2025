@@ -1,0 +1,341 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+  breakable=true,
+  listing engine=minted,
+  listing only,
+  minted language=#2,
+  minted style=default,
+  minted options={%
+    linenos,
+    gobble=0,
+    breaklines=true,
+    breakafter=,,
+    fontsize=\small,
+    numbersep=8pt,
+    #1},
+  boxsep=0pt,
+  left skip=0pt,
+  right skip=0pt,
+  left=25pt,
+  right=0pt,
+  top=3pt,
+  bottom=3pt,
+  arc=5pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  bottomrule=2pt,
+  toprule=2pt,
+  colback=bg,
+  colframe=orange!70,
+  enhanced,
+  overlay={%
+    \begin{tcbclipinterior}
+    \fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+    \end{tcbclipinterior}},
+  #3,
+}
+
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{orange},
+    commentstyle=\color{green!60!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    showstringspaces=false,
+}
+
+\title{5.5.31}
+\author{AI25BTECH11014 - Suhas}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Question}
+Solve the following system using matrix row operations.  
+Let \( \vec{M} = \myvec{\dfrac{1}{x} \\ \dfrac{1}{y} \\ \dfrac{1}{z}} \), and find its value.
+
+\[
+\begin{aligned}
+2 \cdot \dfrac{1}{x} + 3 \cdot \dfrac{1}{y} + 10 \cdot \dfrac{1}{z} &= 4 \\
+4 \cdot \dfrac{1}{x} + 6 \cdot \dfrac{1}{y} + 5 \cdot \dfrac{1}{z} &= 1 \\
+6 \cdot \dfrac{1}{x} + 9 \cdot \dfrac{1}{y} + 20 \cdot \dfrac{1}{z} &= 2
+\end{aligned}
+\]
+\end{frame}
+
+\begin{frame}{Matrix Form}
+Augmented matrix:
+\[
+\left[
+\begin{array}{c}
+\myvec{2 & 3 & 10 & 4} \\
+\myvec{4 & 6 & 5 & 1} \\
+\myvec{6 & 9 & 20 & 2}
+\end{array}
+\right]
+\]
+\end{frame}
+
+\begin{frame}{Row Operations}
+Step 1: \( R_1 \leftarrow R_1 \div 2 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 5 & 2} \\
+\myvec{4 & 6 & 5 & 1} \\
+\myvec{6 & 9 & 20 & 2}
+\end{array}
+\right]
+\]
+
+Step 2: \( R_2 \leftarrow R_2 - 4 \cdot R_1 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 5 & 2} \\
+\myvec{0 & 0 & -15 & -7} \\
+\myvec{6 & 9 & 20 & 2}
+\end{array}
+\right]
+\]
+\end{frame}
+
+\begin{frame}{Row Operations (contd.)}
+Step 3: \( R_3 \leftarrow R_3 - 6 \cdot R_1 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 5 & 2} \\
+\myvec{0 & 0 & -15 & -7} \\
+\myvec{0 & 0 & -10 & -10}
+\end{array}
+\right]
+\]
+
+Step 4: \( R_3 \leftarrow R_3 - R_2 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 5 & 2} \\
+\myvec{0 & 0 & -15 & -7} \\
+\myvec{0 & 0 & 5 & -3}
+\end{array}
+\right]
+\]
+\end{frame}
+
+\begin{frame}{Row Operations (contd.)}
+Step 5: \( R_3 \leftarrow R_3 \div 5 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 5 & 2} \\
+\myvec{0 & 0 & -15 & -7} \\
+\myvec{0 & 0 & 1 & -\dfrac{3}{5}}
+\end{array}
+\right]
+\]
+
+Step 6: \( R_2 \leftarrow R_2 + 15 \cdot R_3 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 5 & 2} \\
+\myvec{0 & 0 & 0 & \dfrac{4}{5}} \\
+\myvec{0 & 0 & 1 & -\dfrac{3}{5}}
+\end{array}
+\right]
+\]
+\end{frame}
+
+\begin{frame}{Row Operations (final)}
+Step 7: \( R_1 \leftarrow R_1 - 5 \cdot R_3 \)
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 0 & 5} \\
+\myvec{0 & 0 & 0 & \dfrac{4}{5}} \\
+\myvec{0 & 0 & 1 & -\dfrac{3}{5}}
+\end{array}
+\right]
+\]
+\end{frame}
+
+\begin{frame}{Conclusion}
+From the final matrix:
+\[
+\left[
+\begin{array}{c}
+\myvec{1 & \dfrac{3}{2} & 0 & 5} \\
+\myvec{0 & 0 & 0 & \dfrac{4}{5}} \\
+\myvec{0 & 0 & 1 & -\dfrac{3}{5}}
+\end{array}
+\right]
+\]
+
+This corresponds to:
+\[
+\begin{aligned}
+\dfrac{1}{x} &= 5 \\
+\dfrac{1}{z} &= -\dfrac{3}{5} \\
+0 &= \dfrac{4}{5} \quad \text{(contradiction)}
+\end{aligned}
+\]
+
+\vspace{0.3cm}
+Since the second row implies a false statement,  
+\[
+\boxed{\text{The system is inconsistent and has no solution.}}
+\]
+\end{frame}
+
+
+\begin{frame}[fragile]{Python Code (Part 1)}
+\begin{lstlisting}[language=Python]
+import numpy as np
+
+A = np.array([
+    [2, 3, 10],
+    [4, 6, 5],
+    [6, 9, 20]
+], dtype=np.float32)
+
+B = np.array([4, 1, 2], dtype=np.float32)
+
+U, residuals, rank, s = np.linalg.lstsq(A, B, rcond=None)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python Code (Part 2)}
+\begin{lstlisting}[language=Python]
+if residuals.size > 0 and residuals[0] > 1e-6:
+    print("System is inconsistent. No exact solution exists.")
+else:
+    u, v, w = U
+    x, y, z = 1/u, 1/v, 1/w
+    print(f"x = {x:.3f}, y = {y:.3f}, z = {z:.3f}")
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python Code Using .so (Part 3)}
+\begin{lstlisting}[language=Python]
+# After calling solve_system(...)
+if abs(U[0]*2 + U[1]*3 + U[2]*10 - 4) > 1e-3 or \
+   abs(U[0]*4 + U[1]*6 + U[2]*5 - 1) > 1e-3 or \
+   abs(U[0]*6 + U[1]*9 + U[2]*20 - 2) > 1e-3:
+    print("System is inconsistent. No exact solution exists.")
+else:
+    x, y, z = 1/U[0], 1/U[1], 1/U[2]
+    print(f"x = {x}, y = {y}, z = {z}")
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Python Code Using .so (Part 1)}
+\begin{lstlisting}[language=Python]
+import ctypes
+import numpy as np
+
+lib = ctypes.CDLL('./libsystem.so')
+lib.solve_system.argtypes = [
+    ctypes.POINTER(ctypes.c_float),
+    ctypes.POINTER(ctypes.c_float),
+    ctypes.POINTER(ctypes.c_float)
+]
+
+lib.solve_system.restype = None
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]{Python Code Using .so (Part 2)}
+\begin{lstlisting}[language=Python]
+A = np.array([
+    [2, 3, 10],
+    [4, 6, 5],
+    [6, 9, 20]
+], dtype=np.float32).flatten()
+
+B = np.array([4, 1, 2], dtype=np.float32)
+U = np.zeros(3, dtype=np.float32)
+
+lib.solve_system(
+    A.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
+    B.ctypes.data_as(ctypes.POINTER(ctypes.c_float)),
+    U.ctypes.data_as(ctypes.POINTER(ctypes.c_float))
+)
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Python Code Using .so (Part 3)}
+\begin{lstlisting}[language=Python]
+def check_inconsistency(A, B, U):
+    A = A.reshape(3, 3)
+    residuals = A @ U - B
+    return np.any(np.abs(residuals) > 1e-3)
+
+if check_inconsistency(A, B, U):
+    print("System is inconsistent. No exact solution exists.")
+else:
+    x, y, z = 1/U[0], 1/U[1], 1/U[2]
+    print(f"x = {x:.3f}, y = {y:.3f}, z = {z:.3f}")
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Plot}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figs/Fig1.png}
+    \caption{Approximate solution}
+    \label{fig:fig1}
+\end{figure}
+\end{frame}
+
+\end{document}
+
+
+
+
+
+

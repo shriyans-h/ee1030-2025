@@ -1,0 +1,13 @@
+\frametitle{Python Code Using .so (Part 3)}
+\begin{lstlisting}[language=Python]
+def check_inconsistency(A, B, U):
+    A = A.reshape(3, 3)
+    residuals = A @ U - B
+    return np.any(np.abs(residuals) > 1e-3)
+
+if check_inconsistency(A, B, U):
+    print("System is inconsistent. No exact solution exists.")
+else:
+    x, y, z = 1/U[0], 1/U[1], 1/U[2]
+    print(f"x = {x:.3f}, y = {y:.3f}, z = {z:.3f}")
+\end{lstlisting}
