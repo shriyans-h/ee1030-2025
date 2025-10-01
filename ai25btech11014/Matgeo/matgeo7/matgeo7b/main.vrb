@@ -1,0 +1,17 @@
+\frametitle{Python Code — With .so}
+\begin{lstlisting}[language=Python]
+import subprocess
+
+inputs = [2.0, 1.0, 8.0, 1.0, 3.0, -1.0]
+input_str = ' '.join(map(str, inputs))
+
+result = subprocess.run(
+    ["./k_solver"],
+    input=input_str,
+    capture_output=True,
+    text=True
+)
+
+k_value = float(result.stdout.strip())
+print(k_value)
+\end{lstlisting}
