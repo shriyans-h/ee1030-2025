@@ -167,7 +167,7 @@ def generate_locus_image():
     plt.axis('equal')
     plt.xlim(-0.1, c + 1)
     plt.ylim(-0.1, c + 1)
-    plt.savefig("locus_of_perpendicular_foot.png")
+    plt.savefig("fig2.png")
     plt.show()
 
 # Call the function to generate the plot
