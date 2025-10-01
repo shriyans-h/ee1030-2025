@@ -2,7 +2,7 @@ import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
 
-lib_geometry = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code9.so")
+lib_geometry = ctypes.CDLL("./code9.so")
 
 # Define the argument types and return type for the C function
 lib_geometry.calculateFootOfPerpendicular.argtypes = [
@@ -124,7 +124,7 @@ def generate_locus_image():
     plt.axis('equal')
     plt.xlim(-0.1, c + 1)
     plt.ylim(-0.1, c + 1)
-    plt.savefig("locus_of_perpendicular_foot_c_python.png")
+    plt.savefig("fig1.png")
     plt.show()
 
 # Call the function to generate the plot
