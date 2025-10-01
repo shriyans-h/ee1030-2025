@@ -1,0 +1,83 @@
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{graphicx}
+\def\UrlBreaks{\do/\do-}
+
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}{
+\leavevmode
+\hbox{
+\begin{beamercolorbox}[wd=\paperwidth,ht=2ex,dp=1ex,right]{author in head/foot}
+\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+\end{beamercolorbox}}
+\vskip0pt
+}
+\setbeamertemplate{navigation symbols}{}
+
+\lstset{
+frame=single,
+breaklines=true,
+columns=fullflexible,
+basicstyle=\ttfamily\tiny
+}
+
+\numberwithin{equation}{section}
+
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\title{Matgeo Presentation - Problem 4.7.45}
+\author{Revanth Siva Kumar.D -- EE25BTECH11048}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{QUESTION}
+For any three vectors $\vec{a},\vec{b},\vec{c}$, prove or disprove
+\begin{align*}
+    (\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big) = 2\vec{a}\cdot(\vec{b}\times \vec{c}).
+\end{align*}\end{frame}
+
+\begin{frame}{Solution:}
+We write the scalar triple product in determinant form:
+\begin{align}
+(\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big)
+= \det\myvec{ (\vec{a}-\vec{b})^T \\ (\vec{b}-\vec{c})^T \\ (\vec{c}-\vec{a})^T }.
+\end{align}
+
+Now observe that
+\begin{align}
+(\vec{a}-\vec{b}) + (\vec{b}-\vec{c}) + (\vec{c}-\vec{a}) = \vec{0}.
+\end{align}
+Thus the three rows of the determinant are linearly dependent. From matrix theory, the determinant of a matrix with linearly dependent rows is zero. Hence
+\begin{align}
+(\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big) = 0.
+\end{align}
+\end{frame}
+\begin{frame}{Solution:}
+On the other hand, the right-hand side is
+\begin{align}
+2\vec{a}\cdot(\vec{b}\times\vec{c})
+= 2\det\myvec{\vec{a}^T \\ \vec{b}^T \\ \vec{c}^T},
+\end{align}
+which is not identically zero for arbitrary $\vec{a},\vec{b},\vec{c}$.
+\end{frame}
+\begin{frame}{Conclusion}The given statement is \textbf{false}. 
+
+The left-hand side  $(\vec{a}-\vec{b})\cdot \big((\vec{b}-\vec{c})\times(\vec{c}-\vec{a})\big)$is  always zero, 
+while the right-hand side $2\vec{a}\cdot(\vec{b}\times \vec{c})$ can be nonzero.
+\end{frame}
+\end{document}
