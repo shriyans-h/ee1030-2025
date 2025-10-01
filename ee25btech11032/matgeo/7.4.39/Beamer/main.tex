@@ -112,9 +112,9 @@ Putting $\vec{P}$ in the circle , we get
 \begin{align}
     m^2 + \frac{1}{m^2} + 2am + \frac{2b}{m} + f = 0
 \end{align}
-
+Let,
 \begin{align}
-    m^4 + 2am^3 + fm^2 + 2bm + 1 = 0 \label{eq_1}
+  p\brak{m} = m^4 + 2am^3 + fm^2 + 2bm + 1 = 0 \label{eq_1}
 \end{align}
 
 \end{frame}
@@ -139,7 +139,8 @@ For the question ,
     \vec{C} = \myvec{0&0&0&-1\\
                      1&0&0&-2b\\
                      0&1&0&-f\\
-                     0&0&1&-2a}
+                     0&0&1&-2a}\\
+    \mydet{m\vec{I}-\vec{C}} = p\brak{m}
 \end{align}
 
 Here Eigen values of $\vec{C}$ are $m_i$ where $i \in \cbrak{1,2,3,4}$
@@ -157,12 +158,10 @@ The Matrix $\vec{J}$ flips Rows when pre-multiplied and flips column when post-m
 
 \begin{frame}{Theoretical Solution}
 
-Thus , if $\vec{C}$ represents $p\brak{m}$
-
 Then,
 
 \begin{align}
-    \vec{J}\vec{C}\vec{J} = m^4p\brak{\frac{1}{m}}
+  \mydet{\frac{1}{m}\vec{I}-\vec{J}\vec{C}\vec{J}} = p\brak{\frac{1}{m}}
 \end{align}
 
 Since $p\brak{\frac{1}{m}}$ has eigen values $1/m_i$ , we can say 
