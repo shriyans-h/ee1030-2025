@@ -52,6 +52,13 @@ for t in t_values:
 plt.plot(line_points_x, line_points_y, color="orange")
 
 a_values = np.concatenate((np.linspace(-1.5, -1, 100), np.linspace(1 / 3, 1, 100)))
+a_points_x, a_points_y = [],[]
+
+for val in a_values:
+    a_points_x.append(val)
+    a_points_y.append(val**2)
+
+plt.plot(a_points_x, a_points_y)
 
 plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
