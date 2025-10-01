@@ -87,72 +87,86 @@ For what value of $k$, will the following pair of equations have infinitly many 
 $2x + 3y = 7$ and $(k + 2)x - 3(1 - k)y = 5k + 1$
 \end{frame}
 
+
 \begin{frame}{Solution}
 
+\textbf{Given}:
+
 \begin{align}
-2x + 3y &= 7 \quad \text{(1)} \\
-(k + 2)x - 3(1 - k)y &= 5k + 1 \quad \text{(2)}
+2x + 3y &= 7 \\
+(k + 2)x - 3(1 - k)y &= 5k + 1
 \end{align}
 
-\textbf{Matrix Representation}\\
-Write the system as an augmented matrix:
+\textbf{Augmented Matrix}\\
+Convert the system to an augmented matrix:
+
 \begin{align}
-\myvec{
-2 & 3 & \vert &7 \\
-k+2 & -3(1-k) & \vert &5k + 1
-} 
-= 
-\myvec{
-2 & 3 & \vert &7 \\
-k+2 & -3 + 3k & \vert & 5k + 1
-}
+\myvec{2 & 3 & \vert & 7 \\
+k+2 & -3 + 3k & \vert & 5k + 1}
+\end{align}
+\end{frame}
+
+
+\begin{frame}{Solution}
+Let the second row be:
+\begin{align}
+R_2 = \myvec{a & b & \vert & c}
+\quad \text{where} \quad
+a = k+2,\quad b = -3 + 3k,\quad c = 5k + 1
+\end{align}
+
+
+\textbf{Eliminate First Entry of Row 2}
+
+Apply row operation:
+\begin{align}
+R_2 \rightarrow R_2 - \frac{a}{2} R_1
 \end{align}
 \end{frame}
 
 \begin{frame}{Solution}
-\textbf{Condition for Infinitely Many Solutions}\\
-For infinitely many solutions, the second row must be a scalar multiple of the first row. Let the scalar be $\lambda$. Then:
+Compute each entry:
+\begin{align*}
+\text{New second entry} &= b - \frac{a}{2} \cdot 3 \\
+&= (-3 + 3k) - \frac{3(k + 2)}{2} \\
+&= \frac{-6 + 6k - 3k - 6}{2} = \frac{3k - 12}{2}
+\end{align*}
 
-\begin{align}
-k + 2 &= 2\lambda \quad \text{(i)} \\
--3 + 3k &= 3\lambda \quad \text{(ii)} \\
-5k + 1 &= 7\lambda \quad \text{(iii)}
-\end{align}
+
+\begin{align*}
+\text{New third entry} &= c - \frac{a}{2} \cdot 7 \\
+&= (5k + 1) - \frac{7(k + 2)}{2} \\
+&= \frac{10k + 2 - 7k - 14}{2} = \frac{3k - 12}{2}
+\end{align*}
 \end{frame}
 
 \begin{frame}{Solution}
-From (i), solve for $\lambda$:
+So the matrix becomes:
 
 \begin{align}
-\lambda = \frac{k + 2}{2}
+\myvec{2 & 3 & \vert & 7 \\
+0 & \frac{3k - 12}{2} & \vert & \frac{3k - 12}{2}}
 \end{align}
 
-Substitute into (ii):
 
+\textbf{Condition for Infinitely Many Solutions}
+
+For infinitely many solutions, the second row must reduce to:
 \begin{align}
--3 + 3k = 3 (\frac{k + 2}{2})\\
--3 + 3k = \frac{3k + 6}{2}\\
--6 + 6k = 3k + 6\\
-3k = 12\\
-k = 4
+0x + 0y = 0
+\Rightarrow \frac{3k - 12}{2} = 0
+\Rightarrow 3k - 12 = 0
+\Rightarrow k = 4
 \end{align}
-\end{frame}
 
-\begin{frame}{Solution}
-\textbf{Verification}\\
-Check with equation (iii):
-
-\begin{align}
-\lambda = \frac{4 + 2}{2} = 3 \\
-7\lambda = 21 \\
-5k + 1 = 5(4) + 1 = 21
-\end{align}
 
 \textbf{Final Answer}
 
 \begin{align}
 \boxed{k = 4}
 \end{align}
+
+
 \end{frame}
 
 \end{document}
