@@ -48,7 +48,7 @@
 	\title{4.3.32}
 	\author{EE25BTECH11042 - Nipun Dasari}
 	\maketitle
-	
+		
 	\renewcommand{\thefigure}{\theenumi}
 	\renewcommand{\thetable}{\theenumi}
 	\setlength{\intextsep}{10pt} % Space between text and floats
@@ -61,52 +61,58 @@
 	\textbf{Question}:\\
 	Find the slope of a line which cuts off intercepts of equal length on the axes is. Solve using matrices. \\ 
 	\solution \\
-	
-	Let the line cut the x-axis at an intercept 'a' and the y-axis at an intercept 'b'. The points where the line intersects the axes can be represented by position vectors (column matrices).
-	
-	The point of x-intercept is $P_1 = (a, 0)$. Its position vector is:
+	Consider normal form of a line:
 	\begin{align}
-		\vec{p_1} = \begin{myvec}{a \\ 0} \end{myvec}
+		\vec{n}^\top\vec{x} = 1
 	\end{align}
-	The point of y-intercept is $P_2 = (0, b)$. Its position vector is:
+	Given that equal intercepts are cut off we get 2 cases:\\
+	On substituting the intercepts in place of $\vec{x}$: \\
+	\textbf{Case 1: The intercepts are equal \brak{b = a}}
 	\begin{align}
-		\vec{p_2} = \begin{myvec}{0 \\ b} \end{myvec}
-	\end{align}
-	
-	A direction vector for the line can be found by taking the difference between the two position vectors:
-	\begin{align}
-		\vec{v} = \vec{p_2} - \vec{p_1} = \begin{myvec}{0 \\ b} \end{myvec} - \begin{myvec}{a \\ 0} \end{myvec} = \begin{myvec}{-a \\ b} \end{myvec} \label{eq:0.3}
+		\implies  \vec{n}^\top\begin{myvec}{a \\ 0} \end{myvec} = 1 \label{0.2}\\
+		\implies \vec{n}^\top\begin{myvec}{0 \\ a} \end{myvec} = 1 \label{0.3} \\
 	\end{align}
 	
-	The slope, $m$, is defined as the ratio of the change in y to the change in x.
+		from \eqref{0.2} and from \eqref{0.3}
+		\begin{align}
+		\vec{n}^\top\begin{myvec}{a & 0 \\ 0 & a} \end{myvec} = \begin{myvec}{1 & 1} \end{myvec} \\
+		\implies a\vec{n}^\top\begin{myvec}{1 & 0 \\ 0 & 1}\end{myvec} = \begin{myvec}{1 & 1} \end{myvec}\\
+		\implies a\vec{n}^\top\vec{I} = \begin{myvec}{1 & 1} \end{myvec}
+		\implies a\vec{n}^\top = \begin{myvec}{1 & 1} \end{myvec}
+		\implies \vec{n} = \frac{1}{a}\begin{myvec}{1 \\ 1} \end{myvec}
+		\end{align}
+		Thus, direction vector $\vec{n} = \begin{myvec}{1 \\ 1}\end{myvec}$
+		
+
+	\textbf{Case 2: The intercepts are negatives of each other \brak{-b = a}}
 	\begin{align}
-		m = \frac{\Delta y}{\Delta x} = \frac{b}{-a} \label{0.4}
+		\implies  \vec{n}^\top\begin{myvec}{a \\ 0} \end{myvec} = 1 \label{0.5}\\
+		\implies \vec{n}^\top\begin{myvec}{0 \\ -a} \end{myvec} =1\label{0.6} \\
 	\end{align}
-	
-	The problem states that the intercepts have equal length, which means their magnitudes are equal:
+		By \eqref{0.5}, \eqref{0.6}:
+		\begin{align}
+		\vec{n}^\top\begin{myvec}{a & 0 \\ 0 & -a} \end{myvec} = \begin{myvec}{1 & 1} \end{myvec} \\
+		\implies a\vec{n}^\top\begin{myvec}{1 & 0 \\ 0 & -1}\end{myvec} = \begin{myvec}{1 & 1} \end{myvec}
+	\end{align}
+	Let $\vec{A} = \begin{myvec}{1 & 0 \\ 0 & -1}\end{myvec}$\\
+	For this matrix $\vec{A} = \vec{A}^{-1}$
 	\begin{align}
-		|a| = |b|
-	\end{align}
-	
-	\textbf{Case 1: The intercepts are equal ($b = a$)}\\
-	Substituting $b=a$ into the slope equation (assuming $a \neq 0$):
-	By \eqref{0.4}
+		\implies a\vec{n}^\top = \begin{myvec}{1 & 1}\vec{A}^{-1} \end{myvec}
+		\implies a\vec{n}^\top = \begin{myvec}{1 & 1}\vec{A}^{-1} \end{myvec}
+		\implies \vec{n} = \frac{1}{a}\begin{myvec}{1 \\ -1} \end{myvec}
+		\end{align}
+		Thus, direction vector $\vec{n} = \begin{myvec}{1 \\ -1}\end{myvec}$
+		The direction vector is given \brak{\text{in general}} by:
+		\begin{align}
+			\vec{m} = 	\begin{myvec}{1\\ m}\end{myvec} \text{  where $m$ is slope of given line }
+		\end{align}		
+			On comparing with the obtained direction vectors
 	\begin{align}
-		m_1 = \frac{a}{-a} = -1
-	\end{align}
-	
-	\textbf{Case 2: The intercepts are opposite ($b = -a$)}\\
-	Substituting $b=-a$ into the slope equation (assuming $a \neq 0$):
-	By \eqref{0.4}
-	\begin{align}
-		m_2 = \frac{-a}{-a} = 1
-	\end{align}
-	
-	Thus, using a matrix representation for the points, we find that the two possible slopes are -1 and 1.
-	
+		\therefore m = \pm1
+	\end{align}	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width = 0.8\columnwidth]{Figure_1.png}
+		\includegraphics[width = 0.6\columnwidth]{Figure_1.png}
 		\caption*{}
 		\label{fig1}
 	\end{figure}
