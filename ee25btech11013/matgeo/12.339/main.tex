@@ -1,0 +1,93 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{comment}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\DeclareMathOperator{\Tr}{Tr}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+%\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{circuitikz}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=4em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{sum} = [draw, fill=blue!10, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{12.339}
+\author{EE25BTECH11013 - Bhargav}
+\maketitle
+    {\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}: \\
+If
+\begin{align}
+\vec{A} = \myvec{3 & -3 \\ -3 & 4}
+\end{align}
+then 
+\begin{align}
+\det{\brak{-\vec{A}^2 + 7\vec{A} - 3\vec{I}}}
+\end{align}
+is \\ \\
+\solution \\
+\begin{align}
+\det{\brak{\vec{A}}} = 3, \Tr{\brak{\vec{A}}} = 3 + 4 = 7
+\end{align}
+(where $\Tr{\brak{\vec{A}}}$ represents the trace of matrix $\vec{A}$, i.e. the sum of the diagonal entries of $\vec{A}$) \\ \\ 
+
+The determinant of the expression can be found out by using the Cayley-Hamilton theorem.\\
+\begin{align}
+\vec{A}^2 - \brak{\Tr{\brak{\vec{A}}}}\vec{A} + \det{\brak{\vec{A}}}\vec{I} = 0 
+\end{align}
+\begin{align}
+\vec{A}^2 - 7\vec{A} + 3\vec{I} = 0 \implies -\vec{A}^2 + 7\vec{A} - 3\vec{I} = 0
+\end{align}
+\begin{align}
+\therefore \det{\brak{-\vec{A}^2 + 7\vec{A} - 3\vec{I}}} = 0
+\end{align}
+\end{document}
