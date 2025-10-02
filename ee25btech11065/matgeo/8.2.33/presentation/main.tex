@@ -94,67 +94,74 @@ Find the equation of the conic with length of major axis 26, foci $(\pm 5, 0)$.
 
 
 \begin{frame}{Theoretical Solution}
-The given foci are $\mathbf{F}_1 = \myvec{5 \\ 0}$ and $\mathbf{F}_2 = \myvec{-5 \\ 0}$.
-
-
-The center of the conic is the midpoint of the foci:
+The equation of a conic is
 \begin{align}
-    \mathbf{u} = \frac{\mathbf{F}_1 + \mathbf{F}_2}{2} = \myvec{0 \\ 0}
+x^T V x + 2u^T x + f = 0 \tag{1}
 \end{align}
-\\
-
-The length of the major axis is given as $2a = 26$
-So, The distance from the center to a focus is $c=5$.
-
-Eccentricity:
+where
 \begin{align}
-    e = \frac{c}{a} = \frac{5}{13}
-\end{align}
-\\
-
-\end{frame}
-
-\begin{frame}{Theoretical Solution}
-The general equation of a conic is given by :
-\begin{align}
-    g(\mathbf{x}) = \mathbf{x}^T\mathbf{V}\mathbf{x} + 2\mathbf{u}^T\mathbf{x} + f = 0
-\end{align}
-where, x is a vertex on the major axis, 
-\\
-Since the center $\mathbf{u}=\mathbf{0}$, the equation simplifies to
-\begin{align}
-\mathbf{x}^T\mathbf{V}\mathbf{x} + f = 0.
-\end{align}
-\\
-where,
-\begin{align}
-    \mathbf{V} = ||\mathbf{n}||^2 \mathbf{I} - e^2\mathbf{n}\mathbf{n}^T
+V = \|n\|^2 I - e^2nn^T \tag{2}
 \end{align}
 
-This simplifies to:
+The foci are
 \begin{align}
-    \mathbf{V} = \myvec{1-e^2 & 0 \\ 0 & 1}
+F_1 = \myvec{5\\0},\quad F_2 = \myvec{-5\\0} \tag{3}
+\end{align}
+
+The centre is
+\begin{align}
+u = \frac{F_1+F_2}{2} = \myvec{0\\0} \tag{4}
+\end{align}
+
+The axis vector is
+\begin{align}
+n = F_1-F_2 = \myvec{1\\0} \tag{5}
 \end{align}
 
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-Substituting,
-\begin{align}
-    \mathbf{V} = \myvec{1 - (5/13)^2 & 0 \\ 0 & 1} = \myvec{144/169 & 0 \\ 0 & 1}
-\end{align}
-\\
 
-Simplifying equation (5) and (4),
+Therefore, substituting $n=\myvec{1\\0}$ in (2), we get
 \begin{align}
-    \myvec{13 & 0} \myvec{144/169 & 0 \\ 0 & 1} \myvec{13 \\ 0} + f &= 0 \nonumber \\
-    144 + f = 0 \Rightarrow f &= -144
+V = \myvec{1-e^2 & 0 \\ 0 & 1} \tag{6}
 \end{align}
-\\
 
-Final equation of the conic,
+From the formula for the length of the major axis,
+\begin{align}
+2\sqrt{\frac{|f|}{\lambda_1}} \tag{7}
+\end{align}
+where $\lambda_1 = 1-e^2$. Hence
+\begin{align}
+26 = 2\sqrt{\frac{|f|}{1-e^2}} \tag{8}
+\end{align}
+
+The relation between focus and eccentricity is
+\begin{align}
+\pm ce^2 = 5 \tag{9}
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+The distance $c$ is
+\begin{align}
+c = \pm \frac{1}{e}\sqrt{\frac{|f|}{|e^2-1|}} \tag{10}
+\end{align}
+
+Thus from (8)--(10), solving the unknowns $(c,e,f)$ we get
+\begin{align}
+e = \tfrac{5}{13},\quad c = \pm 5, \quad |f| = 144. \tag{11}
+\end{align}
+
+Let $x=\myvec{0\\\alpha}$ be a vertex on the minor axis. Substituting in (1):
+\begin{align}
+\frac{12^2}{1} + f = 0 \implies f=-144. \tag{12}
+\end{align}
+
+Hence the equation of the conic is
 \begin{align*}
-\mathbf{x}^T \myvec{144/169 & 0 \\ 0 & 1} \mathbf{x} - 144 = 0.
+x^T \myvec{\tfrac{144}{169} & 0 \\ 0 & 1} x - 144 = 0. \tag{13}
 \end{align*}
 \end{frame}
 
