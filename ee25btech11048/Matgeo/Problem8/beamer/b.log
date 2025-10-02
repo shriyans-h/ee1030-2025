@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.16)  1 OCT 2025 13:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.16)  2 OCT 2025 22:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1720,10 +1720,6 @@ dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
 [3
 
 ]
-Overfull \vbox (9.25357pt too high) detected at line 136
- []
-
-
 
 [4
 
@@ -1736,6 +1732,10 @@ Overfull \vbox (9.25357pt too high) detected at line 136
 [6
 
 ]
+
+[7
+
+]
 \openout4 = `b.vrb'.
 
  (./b.vrb
@@ -1745,7 +1745,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[7
+[8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `b.vrb'.
@@ -1794,18 +1794,18 @@ l.18 ...t (1,-2,9) to intersection point (7,6,9):"
 ? 
 )
 
-[8
+[9
 
 ]
 \openout4 = `b.vrb'.
 
  (./b.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 229
+Overfull \vbox (1.72923pt too high) detected at line 242
  []
 
 
 
-[9
+[10
 
 ]
 \openout4 = `b.vrb'.
@@ -1848,7 +1848,7 @@ l.14 ...[2,:], color='blue', label="Line r=r0+λd"
 ? 
 )
 
-[10
+[11
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `b.vrb'.
@@ -1936,17 +1936,17 @@ l.14 ...nce from Point to Line-Plane Intersection"
 ? 
 )
 
-[11
+[12
 
 ]
-<figs/Figure_1.png, id=345, 462.528pt x 346.896pt>
+<figs/Figure_1.png, id=373, 462.528pt x 346.896pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 276.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 289.
 (pdftex.def)             Requested size: 239.60567pt x 179.70413pt.
 
 
-[12
+[13
 
  <./figs/Figure_1.png>]
 \tf@nav=\write7
@@ -1958,7 +1958,7 @@ Package pdftex.def Info: figs/Figure_1.png  used on input line 276.
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20251001133208 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20251002222301 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -1970,10 +1970,10 @@ Package rerunfilecheck Info: File `b.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59027 strings out of 475102
- 1430246 string characters out of 5764877
+ 59031 strings out of 475102
+ 1430281 string characters out of 5764877
  2503186 words of memory out of 5000000
- 81034 multiletter control sequences out of 15000+600000
+ 81036 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  101i,15n,107p,1169b,1461s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1984,10 +1984,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (12 pages, 268438 bytes).
+Output written on b.pdf (13 pages, 272973 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 28 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

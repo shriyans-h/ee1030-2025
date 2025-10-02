@@ -48,68 +48,79 @@ and the plane
 
 \textbf{Solution:} \\
 
-The line is
+The line can be written as
 \begin{align}
     \vec{r} &= \vec{r}_0 + \lambda \vec{d}, \\
     \vec{r}_0 &= \myvec{4 \\ 2 \\ 7}, \quad
     \vec{d} = \myvec{3 \\ 4 \\ 2}.
 \end{align}
 
-The plane has normal
+The plane equation is
 \begin{align}
-    \vec{n} = \myvec{1 \\ -1 \\ 1}, \quad \vec{r}^T \vec{n} = 10.
+    \vec{n}^T \vec{r} = c, \quad
+    \vec{n} = \myvec{1 \\ -1 \\ 1}, \; c = 10.
 \end{align}
 
-Substitute $\vec{r} = \vec{r}_0 + \lambda \vec{d}$ into the plane equation:
+\textbf{Step 1: Intersection point of line and plane} \\
+Substitute $\vec{r} = \vec{r}_0 + \lambda \vec{d}$:
 \begin{align}
-    \vec{n}^T\myvec{\vec{r}_0 + \lambda \vec{d}} &= 10 \\
-    \implies \vec{n}^T\vec{d}\,\lambda &= 10 - \vec{n}^T\vec{r}_0.
+    \vec{n}^T(\vec{r}_0 + \lambda \vec{d}) &= c \\
+    \implies \lambda &= \frac{c - \vec{n}^T\vec{r}_0}{\vec{n}^T\vec{d}}.
 \end{align}
 
-Now,
+Thus, the intersection point is
 \begin{align}
-    \vec{n}^T\vec{d} &= \myvec{1 & -1 & 1}\myvec{3 \\ 4 \\ 2} = 1, \\
-    \vec{n}^T\vec{r}_0 &= \myvec{1 & -1 & 1}\myvec{4 \\ 2 \\ 7} = 9.
+    \vec{P} = \vec{r}_0 + 
+    \frac{c - \vec{n}^T\vec{r}_0}{\vec{n}^T\vec{d}} \vec{d}.
 \end{align}
 
-Thus,
-\begin{align}
-    \lambda &= \frac{10-9}{1} = 1.
-\end{align}
-
-Hence, the intersection point is
-\begin{align}
-    \vec{P} &= \vec{r}_0 + \lambda \vec{d} \\
-      &= \myvec{4 \\ 2 \\ 7} + \myvec{3 \\ 4 \\ 2} \\
-      &= \myvec{7 \\ 6 \\ 9}.
-\end{align}
-Given point is
+\textbf{Step 2: Distance formula} \\
+Let the given point be 
 \begin{align}
     \vec{A} = \myvec{1 \\ -2 \\ 9}.
 \end{align}
-The displacement vector is
+Then the displacement vector is
 \begin{align}
-    \vec{v} &= \vec{P} - \vec{A} = \myvec{6 \\ 8 \\ 0}.
+    \vec{v} &= \vec{P} - \vec{A}.
 \end{align}
-Therefore, the distance is
+So the distance is
 \begin{align}
-    d &= \norm{\vec{v}} = \sqrt{\vec{v}^T\vec{v}} \\
-      &= \sqrt{6^2 + 8^2 + 0^2} \\
-      &= \sqrt{100} = 10.
+    d &= \|\vec{v}\| = \sqrt{\vec{v}^T \vec{v}}.
 \end{align}
-\textbf{Final Answer: } The required distance is 
+
+\textbf{Step 3: Substitution of values} \\
+Now substituting:
+\begin{align}
+    \vec{n}^T\vec{d} &= \myvec{1 & -1 & 1}\myvec{3 \\ 4 \\ 2} = 1, \\
+    \vec{n}^T\vec{r}_0 &= \myvec{1 & -1 & 1}\myvec{4 \\ 2 \\ 7} = 9, \\
+    \lambda &= \frac{10-9}{1} = 1.
+\end{align}
+
+Hence
+\begin{align}
+    \vec{P} &= \vec{r}_0 + \vec{d} = \myvec{4 \\ 2 \\ 7} + \myvec{3 \\ 4 \\ 2} = \myvec{7 \\ 6 \\ 9}.
+\end{align}
+\begin{align}
+    \vec{v} &= \vec{P} - \vec{A} = \myvec{7 \\ 6 \\ 9} - \myvec{1 \\ -2 \\ 9} = \myvec{6 \\ 8 \\ 0}.
+\end{align}
+\begin{align}
+    d &= \sqrt{6^2+8^2+0^2} = \sqrt{100} = 10.
+\end{align}
+
+\textbf{Final Answer: } 
 \[
 \boxed{10}
 \]
+
 \pagebreak
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\columnwidth]{figs/Figure_1.png}
-    \caption{PLOT}
+    \caption{Intersection point $P$, given point $A$, and distance $AP$.}
     \label{fig:fig1}
 \end{figure}
-\end{document}
 
+\end{document}
 
 
 
