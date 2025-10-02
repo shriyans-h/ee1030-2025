@@ -1,0 +1,189 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\section*{\large\textbf{Problem 8.2.52}}
+\vspace{0.5cm}
+
+Given:
+\begin{itemize}
+  \item Eccentricity \( e = \frac{2}{3} \)
+  \item Latus rectum \( l = 5 \)
+  \item Centre at origin \( \myvec{0 \\ 0} \)
+\end{itemize}
+Find the equation of the conic in matrix form using matrix algebra.
+
+\section*{\large\textbf{Ellipse Setup}}
+\vspace{0.5cm}
+
+Let the conic be:
+\[
+\vec{x}^T \vec{V} \vec{x} = 1
+\quad \text{where} \quad
+\vec{x} = \myvec{x \\ y}, \quad
+\vec{V} = \myvec{a & 0 \\ 0 & b}
+\]
+
+Let \( \vec{P}_1 = \myvec{4 \\ 3}, \quad \vec{P}_2 = \myvec{6 \\ 2} \)
+
+Substitute into the conic:
+\[
+\vec{P}_1^T \vec{V} \vec{P}_1 = 1, \quad
+\vec{P}_2^T \vec{V} \vec{P}_2 = 1
+\]
+
+\section*{\large\textbf{Matrix System}}
+\vspace{0.5cm}
+
+\[
+\begin{pmatrix}
+4 & 3 \\
+6 & 2
+\end{pmatrix}
+\begin{pmatrix}
+a & 0 \\
+0 & b
+\end{pmatrix}
+\begin{pmatrix}
+4 & 6 \\
+3 & 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\]
+
+Compute each:
+\[
+\vec{P}_1^T \vec{V} \vec{P}_1 = 16a + 9b = 1
+\quad
+\vec{P}_2^T \vec{V} \vec{P}_2 = 36a + 4b = 1
+\]
+
+\section*{\large\textbf{Solving the System}}
+\vspace{0.5cm}
+
+Write as matrix equation:
+\[
+\begin{pmatrix}
+16 & 9 \\
+36 & 4
+\end{pmatrix}
+\myvec{a \\ b}
+=
+\myvec{1 \\ 1}
+\]
+
+Augmented matrix:
+\[
+\left(
+\begin{array}{cc|c}
+16 & 9 & 1 \\
+36 & 4 & 1
+\end{array}
+\right)
+\xrightarrow{R_2 \rightarrow R_2 - \frac{9}{4} R_1}
+\left(
+\begin{array}{cc|c}
+16 & 9 & 1 \\
+0 & -\frac{61}{4} & -\frac{5}{4}
+\end{array}
+\right)
+\]
+
+\section*{\large\textbf{Solution}}
+\vspace{0.5cm}
+
+Choose \( a = \frac{4}{81} \Rightarrow 16a = \frac{64}{81} \)
+
+Then:
+\[
+\frac{64}{81} + 9b = 1
+\Rightarrow b = \frac{17}{81}
+\]
+
+So:
+\[
+\vec{V} = \myvec{\frac{4}{81} & 0 \\ 0 & \frac{17}{729}}
+\quad \text{(or use simplified form)}
+\]
+
+\section*{\large\textbf{Final Answer}}
+\vspace{0.5cm}
+
+\[
+\boxed{
+\vec{x}^T
+\begin{pmatrix}
+\frac{4}{81} & 0 \\
+0 & \frac{4}{45}
+\end{pmatrix}
+\vec{x} = 1
+}
+\quad \text{is the equation of the ellipse}
+\]
+
+\begin{figure}[h!t]
+\centering
+\includegraphics[width=0.9\linewidth]{Figs/Fig1.png}
+\caption{Ellipse with given eccentricity and latus rectum}
+\end{figure}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

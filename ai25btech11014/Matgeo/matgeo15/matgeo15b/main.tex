@@ -1,0 +1,222 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\title{8.2.52}
+\author{AI25BTECH11014 - Gooty Suhas}
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Problem}
+Given:
+\begin{itemize}
+  \item Eccentricity \( e = \frac{2}{3} \)
+  \item Latus rectum \( l = 5 \)
+  \item Centre at origin \( \myvec{0 \\ 0} \)
+\end{itemize}
+Find the equation of the conic in matrix form using matrix algebra.
+\end{frame}
+
+\begin{frame}{Ellipse Setup}
+Let the conic be:
+\[
+\vec{x}^T \vec{V} \vec{x} = 1
+\quad \text{where} \quad
+\vec{V} = \myvec{a & 0 \\ 0 & b}
+\]
+Choose two points:
+\[
+\vec{P}_1 = \myvec{4 \\ 3}, \quad
+\vec{P}_2 = \myvec{6 \\ 2}
+\]
+Substitute:
+\[
+\vec{P}_1^T \vec{V} \vec{P}_1 = 1, \quad
+\vec{P}_2^T \vec{V} \vec{P}_2 = 1
+\]
+\end{frame}
+
+\begin{frame}{Matrix System}
+From substitution:
+\[
+16a + 9b = 1, \quad
+36a + 4b = 1
+\]
+Write as matrix equation:
+\[
+\begin{pmatrix}
+16 & 9 \\
+36 & 4
+\end{pmatrix}
+\myvec{a \\ b}
+=
+\myvec{1 \\ 1}
+\]
+\end{frame}
+
+\begin{frame}{Row Reduction}
+Augmented matrix:
+\[
+\left(
+\begin{array}{cc|c}
+16 & 9 & 1 \\
+36 & 4 & 1
+\end{array}
+\right)
+\xrightarrow{R_2 \rightarrow R_2 - \frac{9}{4} R_1}
+\left(
+\begin{array}{cc|c}
+16 & 9 & 1 \\
+0 & -\frac{61}{4} & -\frac{5}{4}
+\end{array}
+\right)
+\]
+\end{frame}
+
+\begin{frame}{Solution}
+Choose \( a = \frac{4}{81} \Rightarrow 16a = \frac{64}{81} \)
+
+Then:
+\[
+\frac{64}{81} + 9b = 1
+\Rightarrow b = \frac{17}{81}
+\]
+
+So:
+\[
+\vec{V} = \myvec{\frac{4}{81} & 0 \\ 0 & \frac{17}{81}}
+\]
+\end{frame}
+
+\begin{frame}{Final Answer}
+\[
+\boxed{
+\vec{x}^T
+\begin{pmatrix}
+\frac{4}{81} & 0 \\
+0 & \frac{17}{81}
+\end{pmatrix}
+\vec{x} = 1
+}
+\quad \text{is the equation of the ellipse}
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Python Code}
+\lstset{language=Python}
+\begin{lstlisting}
+from sympy import Rational, symbols, solve, Eq
+
+e = Rational(2, 3)
+l = 5
+a = symbols('a')
+
+b2 = a**2 * (1 - e**2)
+eq = Eq(2 * b2 / a, l)
+a_val = solve(eq, a)[0]
+b2_val = a_val**2 * (1 - e**2)
+
+print("a =", a_val)
+print("b² =", b2_val)
+print("V = [[{:.6f}, 0], [0, {:.6f}]]".format(
+    1 / a_val**2, 1 / b2_val))
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{C Code}
+\lstset{language=C}
+\begin{lstlisting}
+#include <math.h>
+#include <stdio.h>
+
+void solve_matrix(float* V) {
+  float e = 2.0 / 3.0;
+  float l = 5.0;
+
+  float a = 9.0 / 2.0;
+  float b2 = a * a * (1 - e * e);
+
+  V[0] = 1 / (a * a);
+  V[1] = 1 / b2;
+}
+\end{lstlisting}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Python Wrapper Code}
+\lstset{language=Python}
+\begin{lstlisting}
+import ctypes
+
+lib = ctypes.CDLL('./libellipse.so')
+lib.solve_matrix.argtypes = [ctypes.POINTER(ctypes.c_float)]
+lib.solve_matrix.restype = None
+
+V = (ctypes.c_float * 2)()
+lib.solve_matrix(V)
+
+print("Ellipse equation: xᵀ V x = 1")
+print(f"V = [[{V[0]:.6f}, 0], [0, {V[1]:.6f}]]")
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Diagram}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\linewidth]{Figs/Fig1.png}
+\caption{Ellipse with given eccentricity and latus rectum}
+\end{figure}
+\end{frame}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
