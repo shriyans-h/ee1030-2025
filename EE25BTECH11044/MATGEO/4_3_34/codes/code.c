@@ -1,25 +1,39 @@
 #include <stdio.h>
 
 int main() {
-    // Input: two points (x1,y1), (x2,y2)
-    double x1 = 2, y1 = -3;
-    double x2 = 4, y2 = -5;
+    // Augmented matrix for the system:
+    // 2u - 3v = 1
+    // 4u - 5v = 1
+    double A[2][3] = {
+        {2, -3, 1},
+        {4, -5, 1}
+    };
 
-    // Step 1: Direction vector m = (x2-x1, y2-y1)
-    double m1 = x2 - x1;
-    double m2 = y2 - y1;
+    // Step 1: R2 -> R2 - 2R1
+    A[1][0] = A[1][0] - 2*A[0][0];
+    A[1][1] = A[1][1] - 2*A[0][1];
+    A[1][2] = A[1][2] - 2*A[0][2];
 
-    // Step 2: Find normal vector n = (n1,n2)
-    // Condition: n^T * m = 0  => n1*m1 + n2*m2 = 0
-    // One valid solution is n = (m2, -m1)
-    double n1 = m2;
-    double n2 = -m1;
+    // Step 2: R1 -> R1 + 3R2
+    A[0][0] = A[0][0] + 3*A[1][0];
+    A[0][1] = A[0][1] + 3*A[1][1];
+    A[0][2] = A[0][2] + 3*A[1][2];
 
-    // Step 3: Find c using point (x1,y1)
-    double c = n1*x1 + n2*y1;
+    // Step 3: R1 -> R1 / 2
+    A[0][0] /= 2;
+    A[0][1] /= 2;
+    A[0][2] /= 2;
 
-    // Final line equation: n1*x + n2*y = c
-    printf("Equation of line: %.2lf*x + %.2lf*y = %.2lf\n", n1, n2, c);
+    // Now matrix is in reduced row echelon form
+    double u = A[0][2];
+    double v = A[1][2];
+
+    // Back substitute to find a, b
+    double a = 1.0 / u;
+    double b = 1.0 / v;
+
+    printf("u = %lf, v = %lf\n", u, v);
+    printf("a = %lf, b = %lf\n", a, b);
 
     return 0;
 }

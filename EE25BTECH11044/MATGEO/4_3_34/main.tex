@@ -72,75 +72,77 @@ passes through the points $(2,-3)$ and $(4,-5)$, then find $(a,b)$.
 
 \textbf{Solution}
 
-The equation of a line can be expressed as
+The line in intercept form is
 \begin{equation}
-\vec{n}^T \vec{x} = c,
+\frac{x}{a} + \frac{y}{b} = 1.
 \end{equation}
-where $\vec{n}$ is the normal vector to the line.
-
----
-
-\textbf{Step 1: Direction vector of the line}
-
-The line passes through
+Substituting the points $\vec{x}_1=(2,-3)^T$ and $\vec{x}_2=(4,-5)^T$ yields
 \begin{equation}
-\myvec{x}_1 = \myvec{2\\-3}, \quad
-\myvec{x}_2 = \myvec{4\\-5}.
+\frac{2}{a} - \frac{3}{b} = 1, \qquad
+\frac{4}{a} - \frac{5}{b} = 1.
 \end{equation}
 
-Hence, its direction vector is
+Introduce unknowns
 \begin{equation}
-\myvec{m} = \myvec{x}_2 - \myvec{x}_1
-= \myvec{2 \\ -2}.
+u=\frac{1}{a}, \quad v=\frac{1}{b},
+\end{equation}
+so the system becomes the linear matrix equation
+\begin{equation}
+\begin{bmatrix}
+2 & -3\\[4pt]
+4 & -5
+\end{bmatrix}
+\begin{bmatrix} u\\[2pt] v\end{bmatrix}
+=
+\begin{bmatrix}1\\[2pt]1\end{bmatrix}.
 \end{equation}
 
----
-
-\textbf{Step 2: Find the normal vector $\myvec{n}$}
-
-The normal vector $\myvec{n} = \myvec{n_1 \\ n_2}$ must satisfy
+Write the augmented matrix and perform Gauss--Jordan elimination:
 \begin{equation}
-\vec{n}^T \vec{m} = 0.
+\left[\begin{array}{cc|c}
+2 & -3 & 1\\[4pt]
+4 & -5 & 1
+\end{array}\right]
+\overset{R_2\leftarrow R_2-2R_1}{\longrightarrow}
+\left[\begin{array}{cc|c}
+2 & -3 & 1\\[4pt]
+0 & 1 & -1
+\end{array}\right]
+\end{equation}
+\begin{equation}
+\overset{R_1\leftarrow R_1+3R_2}{\longrightarrow}
+\left[\begin{array}{cc|c}
+2 & 0 & -2\\[4pt]
+0 & 1 & -1
+\end{array}\right]
+\overset{R_1\leftarrow \tfrac{1}{2}R_1}{\longrightarrow}
+\left[\begin{array}{cc|c}
+1 & 0 & -1\\[4pt]
+0 & 1 & -1
+\end{array}\right].
 \end{equation}
 
-That is,
-\begin{equation}
-\myvec{n_1 & n_2}\myvec{2 \\ -2} = 0,
-\end{equation}
-\begin{equation}
-2n_1 - 2n_2 = 0 \quad \Rightarrow \quad n_1 = n_2.
-\end{equation}
+Thus the solution for the unknown vector is
+\[
+\begin{bmatrix} u\\ v\end{bmatrix}
+=
+\begin{bmatrix} -1\\ -1\end{bmatrix}.
+\]
 
-So, a valid choice is
+Back-substitute $u=\dfrac{1}{a},\, v=\dfrac{1}{b}$:
 \begin{equation}
-\myvec{n} = \myvec{1 \\ 1}.
-\end{equation}
-
----
-
-\textbf{Step 3: Find $c$}
-
-Using the equation
-\begin{equation}
-\vec{n}^T \vec{x} = c,
-\end{equation}
-substitute $\myvec{x}_1 = \myvec{2\\-3}$:
-\begin{equation}
-\myvec{1 & 1}\myvec{2 \\ -3} = -1.
+\frac{1}{a}=-1 \Rightarrow a=-1,\qquad
+\frac{1}{b}=-1 \Rightarrow b=-1.
 \end{equation}
 
-Thus,
+\textbf{Final Answer:}
 \begin{equation}
-c = -1.
+(a,b)=(-1,-1),
 \end{equation}
-
----
-
-\textbf{Final Answer (matrix form):}
-\begin{equation}
-\myvec{1 & 1}\myvec{x \\ y} = -1
-\quad \Rightarrow \quad x+y=-1.
-\end{equation}
+and the line becomes
+\[
+\frac{x}{-1}+\frac{y}{-1}=1 \quad\Longrightarrow\quad x+y=-1.
+\]
 
 \begin{center}
     \includegraphics[width=0.8\columnwidth]{figs/plot6.png}

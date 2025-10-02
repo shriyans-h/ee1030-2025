@@ -94,102 +94,127 @@ passes through the points $(2,-3)$ and $(4,-5)$, find $(a,b)$.
 \end{block}
 \end{frame}
 
-\begin{frame}{Solution: Step 1}
-The given points are
+% --- Frame 2: Matrix Formulation ---
+\begin{frame}{Solution}
+Substituting the points:
+\begin{align}
+\frac{2}{a} - \frac{3}{b} &= 1, \\
+\frac{4}{a} - \frac{5}{b} &= 1.
+\end{align}
+
+Let
 \begin{equation}
-\myvec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}, \quad
-\myvec{x}_2 = \begin{bmatrix}4\\-5\end{bmatrix}.
+u = \frac{1}{a}, \quad v = \frac{1}{b}.
 \end{equation}
 
-\bigskip
-The direction vector of the line is
+Then the system becomes
 \begin{equation}
-\myvec{m} = \myvec{x}_2 - \myvec{x}_1
-= \begin{bmatrix}2 \\ -2\end{bmatrix}.
-\end{equation}
-\end{frame}
-
-\begin{frame}{Solution: Step 2}
-The normal vector $\myvec{n} = \begin{bmatrix}n_1 \\ n_2\end{bmatrix}$ must satisfy
-\begin{equation}
-\vec{n}^T \vec{m} = 0.
-\end{equation}
-
-\begin{equation}
-\begin{bmatrix}n_1 & n_2\end{bmatrix}
-\begin{bmatrix}2 \\ -2\end{bmatrix} = 0
-\quad \Rightarrow \quad n_1 = n_2.
-\end{equation}
-
-So we can take
-\begin{equation}
-\myvec{n} = \begin{bmatrix}1 \\ 1\end{bmatrix}.
+\begin{bmatrix}
+2 & -3 \\
+4 & -5
+\end{bmatrix}
+\begin{bmatrix}
+u \\ v
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \\ 1
+\end{bmatrix}.
 \end{equation}
 \end{frame}
 
-\begin{frame}{Solution: Step 3}
-The line equation is
-\begin{equation}
-\vec{n}^T \vec{x} = c
-\quad \Rightarrow \quad
-\begin{bmatrix}1 & 1\end{bmatrix}
-\begin{bmatrix}x \\ y\end{bmatrix} = c.
-\end{equation}
+% --- Frame 3: Gauss-Jordan Elimination ---
+\begin{frame}{Solution}
+Start with the augmented matrix:
+\[
+\left[\begin{array}{cc|c}
+2 & -3 & 1 \\
+4 & -5 & 1
+\end{array}\right]
+\]
 
-Substitute point $\myvec{x}_1 = \begin{bmatrix}2\\-3\end{bmatrix}$:
-\begin{equation}
-c = 2 - 3 = -1.
-\end{equation}
+Row operations:
+\begin{align}
+R_2 &\to R_2 - 2R_1, \\
+R_1 &\to R_1 + 3R_2, \\
+R_1 &\to \tfrac{1}{2}R_1.
+\end{align}
 
-\bigskip
-\textbf{Final Equation:}
-\begin{equation}
-x + y = -1.
-\end{equation}
-The line equation can be expressed as
-\begin{equation}
-\begin{bmatrix}1 & 1\end{bmatrix}
-\begin{bmatrix}x \\ y\end{bmatrix} = -1
-\end{equation}
+Final reduced form:
+\[
+\left[\begin{array}{cc|c}
+1 & 0 & -1 \\
+0 & 1 & -1
+\end{array}\right]
+\]
 \end{frame}
 
+% --- Frame 4: Final Answer ---
+\begin{frame}{Final Answer}
+Thus,
+\begin{equation}
+\begin{bmatrix} u \\ v \end{bmatrix}
+= \begin{bmatrix} -1 \\ -1 \end{bmatrix}.
+\end{equation}
 
+Back-substitute:
+\begin{align}
+u &= \frac{1}{a} = -1 \;\Rightarrow\; a=-1, \\
+v &= \frac{1}{b} = -1 \;\Rightarrow\; b=-1.
+\end{align}
 
-% ---------------- C code 1 ----------------
+\begin{equation}
+\boxed{(a,b) = (-1,-1)}
+\end{equation}
+
+Hence, the line is
+\begin{equation}
+x+y = -1.
+\end{equation}
+\end{frame}
+% --- Frame 1: C Code (Part 1) ---
 \begin{frame}[fragile]{C Code (Part 1)}
-\lstset{language=C}
 \begin{lstlisting}
 #include <stdio.h>
-
 int main() {
-    double x1 = 2, y1 = -3;
-    double x2 = 4, y2 = -5;
-
-    // Direction vector
-    double m1 = x2 - x1;
-    double m2 = y2 - y1;
-
-    // Normal vector (perpendicular)
-    double n1 = m2;
-    double n2 = -m1;
+    // Augmented matrix for the system:
+    // 2u - 3v = 1
+    // 4u - 5v = 1
+    double A[2][3] = {
+        {2, -3, 1},
+        {4, -5, 1}
+    };
+    // Step 1: R2 -> R2 - 2R1
+    A[1][0] = A[1][0] - 2*A[0][0];
+    A[1][1] = A[1][1] - 2*A[0][1];
+    A[1][2] = A[1][2] - 2*A[0][2];
 \end{lstlisting}
 \end{frame}
 
-% ---------------- C code 2 ----------------
+% --- Frame 2: C Code (Part 2) ---
 \begin{frame}[fragile]{C Code (Part 2)}
-\lstset{language=C}
 \begin{lstlisting}
-    // Constant c
-    double c = n1*x1 + n2*y1;
-
-    // Line equation
-    printf("Equation of line: %.2lf*x + %.2lf*y = %.2lf\n",
-           n1, n2, c);
-
+    // Step 2: R1 -> R1 + 3R2
+    A[0][0] = A[0][0] + 3*A[1][0];
+    A[0][1] = A[0][1] + 3*A[1][1];
+    A[0][2] = A[0][2] + 3*A[1][2];
+    // Step 3: R1 -> R1 / 2
+    A[0][0] /= 2;
+    A[0][1] /= 2;
+    A[0][2] /= 2;
+    // Extract solution
+    double u = A[0][2];
+    double v = A[1][2];
+    double a = 1.0 / u;
+    double b = 1.0 / v;
+    printf("u = %lf, v = %lf\n", u, v);
+    printf("a = %lf, b = %lf\n", a, b);
+    
     return 0;
 }
 \end{lstlisting}
 \end{frame}
+
 
 % ---------------- Python code 1 ----------------
 \begin{frame}[fragile]{Python Code (Part 1)}
@@ -200,7 +225,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the shared library
-lib = ctypes.CDLL("./c.so")
+lib = ctypes.CDLL("code.so")
 
 # Define the function signature for points
 lib.points.argtypes = [
