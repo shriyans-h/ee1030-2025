@@ -1,0 +1,169 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{tfrupee}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{5.13.1}
+\author{AI25BTECH11014 - Gooty Suhas}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{\large\textbf{Problem}}
+
+If the system of linear equations
+\begin{align}
+x + 2a y + a z &= 0 \\
+x + 3b y + b z &= 0 \\
+x + 4c y + c z &= 0
+\end{align}
+has a non-zero solution, then \( a, b, c \)
+\begin{enumerate}[label=\alph*)]
+    \item satisfy \( a + 2b + 3c = 0 \)
+    \item are in A.P.
+    \item are in G.P.
+    \item are in H.P.
+\end{enumerate}
+
+\section*{\large\textbf{Solution}}
+
+We write the system in matrix form:
+\[
+\vec{M}_0 =
+\begin{bmatrix}
+1 & 2a & a \\
+1 & 3b & b \\
+1 & 4c & c
+\end{bmatrix}
+\]
+
+Apply row operations. First, subtract Row 1 from Rows 2 and 3:
+\[
+\vec{M}_1 =
+\begin{bmatrix}
+1 & 2a & a \\
+0 & 3b - 2a & b - a \\
+0 & 4c - 2a & c - a
+\end{bmatrix}
+\]
+
+Now subtract Row 2 from Row 3:
+\[
+\vec{M}_2 =
+\begin{bmatrix}
+1 & 2a & a \\
+0 & 3b - 2a & b - a \\
+0 & 4c - 3b & c - b
+\end{bmatrix}
+\]
+
+For a non-zero solution to exist, the rows must be linearly dependent. So Row 3 must be a scalar multiple of Row 2:
+\[
+\frac{4c - 3b}{3b - 2a} = \frac{c - b}{b - a}
+\]
+
+Cross-multiplying:
+\[
+(4c - 3b)(b - a) = (c - b)(3b - 2a)
+\]
+
+Expanding both sides:
+\begin{align}
+4bc - 4ac - 3b^2 + 3ab &= 3bc - 2ac - 3b^2 + 2ab
+\end{align}
+
+Cancel \( -3b^2 \) and rearrange:
+\[
+4bc - 4ac + 3ab = 3bc - 2ac + 2ab
+\]
+
+Bring all terms to one side:
+\[
+(4bc - 3bc) + (3ab - 2ab) + (-4ac + 2ac) = 0
+\Rightarrow bc + ab - 2ac = 0
+\]
+
+\section*{\large\textbf{Correct Condition}}
+
+\[
+\boxed{ab + bc = 2ac}
+\]
+
+\section*{\large\textbf{Verification of Option d}}
+
+If \( a, b, c \) are in H.P., then \( \frac{1}{a}, \frac{1}{b}, \frac{1}{c} \) are in A.P.:
+\[
+\frac{2}{b} = \frac{1}{a} + \frac{1}{c}
+\]
+
+Multiply both sides by \( abc \):
+\[
+2ac = bc + ab
+\Rightarrow ab + bc = 2ac
+\]
+
+Which matches our derived condition:
+\[
+\boxed{ab + bc = 2ac}
+\]
+
+Thus, option d) is correct.
+
+\section*{\large\textbf{Final Answer}}
+\[
+\boxed{\text{Option d) } a, b, c \text{ are in H.P.}}
+\]
+
+\end{document}
+
+
+
+
+
+
+
+
+
