@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[a4paper, left = 1.5cm, right = 1.5cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+\large
+    \textbf{Samyak Gondane-AI25BTECH11029}
+\end{center}
+\date{}
+
+\section*{Question}
+If the latus rectum of an ellipse is equal to half of minor axis, then find its eccentric
+
+\section*{Solution}
+
+
+\subsection*{Matrix Representation of an Ellipse}
+
+The general quadratic form of a centered ellipse is:
+
+
+\begin{align}
+\mathbf{x}^T A \mathbf{x} = 1
+\quad \text{where } A = 
+\begin{bmatrix}
+\frac{1}{a^2} & 0 \\
+0 & \frac{1}{b^2}
+\end{bmatrix}
+\end{align}
+
+
+
+Here, $a$ and $b$ are the semi-major and semi-minor axes respectively.
+
+\subsection*{Geometric Condition}
+
+The latus rectum $L$ of an ellipse is given by:
+
+
+\begin{align}
+L = \frac{2b^2}{a}
+\end{align}
+
+
+
+Given:
+\begin{align}
+L = \frac{1}{2} \cdot 2b = b
+\quad \Rightarrow \quad \frac{2b^2}{a} = b
+\quad \Rightarrow \quad 2b = a
+\end{align}
+
+Thus, we have:
+
+\begin{align}
+a = 2b
+\end{align}
+
+\subsection*{Eccentricity Calculation}
+
+Eccentricity $e$ of an ellipse is:
+
+
+\begin{align}
+e = \sqrt{1 - \frac{b^2}{a^2}}
+\end{align}
+
+Substituting $a = 2b$:
+
+\begin{align}
+e = \sqrt{1 - \frac{b^2}{(2b)^2}} = \sqrt{1 - \frac{1}{4}} = \sqrt{\frac{3}{4}} = \frac{\sqrt{3}}{2}
+\end{align}
+
+
+
+\subsection*{Final Answer}
+
+
+
+\begin{align}
+\boxed{e = \frac{\sqrt{3}}{2}}
+\end{align}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{./figs/Figure_1.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+
+\end{document}
