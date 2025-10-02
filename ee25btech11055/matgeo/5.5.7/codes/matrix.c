@@ -5,10 +5,6 @@
 int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
     // Read up on memory
     double *augmented = (double *)malloc(n * 2 * n * sizeof(double));
-    if (augmented == NULL) {
-        fprintf(stderr, "Error: Memory allocation failed.\n");
-        return 0;
-    }
 
     int i, j, k;
     const int width = 2 * n;
