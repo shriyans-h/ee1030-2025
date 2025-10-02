@@ -197,7 +197,7 @@ import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
 
-lib = ctypes.CDLL('./libcollinear.so')
+lib = ctypes.CDLL('./func.so')
 
 
 lib.are_collinear.argtypes = [ctypes.POINTER(ctypes.c_float),
