@@ -1,20 +1,21 @@
-\frametitle{Python Script:fraction matrix.py}
+\frametitle{Python Script: plot matrix.py}
 \begin{verbatim}
-print("\nSolution (X,Y,Z) = ({}, {}, {})".format(X, Y, Z))
-# Symbolic answer
-symbolic_points = []
-for sx, sy, sz in itertools.product([1, -1], repeat=3):
-    symbolic_points.append((f"{'+' if sx>0 else '-'}a",
-                            f"{'+' if sy>0 else '-'}b",
-                            f"{'+' if sz>0 else '-'}c"))
-print("\nSymbolic solutions (in terms of a,b,c):")
-for p in symbolic_points:
-    print(p)
-a, b, c = 2.0, 3.0, 1.0   # change these values
-numeric_points = [(sx*a, sy*b, sz*c) for sx, sy, sz in itertools.product([1,-1],[1,-1],[1,-1])]
-print("\nNumeric solutions (for a={}, b={}, c={}):".format(a, b, c))
-for p in numeric_points:
-    print(p)
-np.savetxt("points_abc.txt", numeric_points)
-print("\nSaved numeric points to points_abc.txt")
+ax.plot_surface(XX, YY, Z2, color="green", alpha=0.2)
+ax.plot_surface(XX, YY, Z3, color="blue", alpha=0.2)
+# Add plane equations as text
+ax.text(1.3, 0.2, Z1[0,-1], "X + Y - Z = 1", color='red', fontsize=12)
+ax.text(1.3, 0.2, Z2[0,-1], "X - Y + Z = 1", color='green', fontsize=12)
+ax.text(1.3, 0.2, Z3[0,-1], "-X + Y + Z = 1", color='blue', fontsize=12)
+# Plot the single intersection point (1,1,1)
+ax.scatter(1,1,1, color='red', s=200, edgecolor='black', label='Point (1,1,1)')
+# Annotate the intersection point
+ax.text(1.02, 1.02, 1.02, "(1,1,1)", fontsize=12, color='red')
+# Axes labels
+ax.set_xlabel("X = x²/a²")
+ax.set_ylabel("Y = y²/b²")
+ax.set_zlabel("Z = z²/c²")
+ax.set_title("Planes with Single Intersection Point Highlighted")
+ax.legend()
+plt.show()
+
 \end{verbatim}
