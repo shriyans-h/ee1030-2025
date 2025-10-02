@@ -44,6 +44,7 @@
 
 \end{titlepage}
 \end{frame}
+
 \begin{frame}{Question}
 \textbf{Question:}\\
 Show that the two lines
@@ -57,70 +58,55 @@ where $b_1 b_2 \neq 0$ are parallel if
 \end{frame}
 
 
-\begin{frame}{Solution: Step 1}
+\begin{frame}{Solution}
 
 Form the $2\times2$ coefficient matrix of normals:
-\[
+
+\begin{align}
 \vec{M} = \myvec{a_1 & a_2 \\ b_1 & b_2}.
-\]
-\end{frame}
+\end{align}
 
-
-\begin{frame}{Solution: Step 2}
 Assume 
 \[
 \dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}.
 \]
 
 Then there exists \(k \in \mathbb{R}\) such that
-\[
+\begin{align}
 a_2 = k a_1, 
 \qquad 
 b_2 = k b_1.
-\]
+\end{align}
 \end{frame}
 
 
-\begin{frame}{Solution: Step 3}
-Write the rows of \vec{M} as row vectors:
-\[
-\text{Row}_1 = (a_1,\,a_2) = a_1(1,\,k),
-\]
-\[
-\text{Row}_2 = (b_1,\,b_2) = b_1(1,\,k).
-\]
+\begin{frame}{Solution}
+Write the rows of \textbf{M} as row vectors:
+\begin{align}
+\text{R}_1 &= \myvec{a_1 & a_2} = \myvec{a_1 & k a_1} = a_1\myvec{1 & k}.\\
+\text{R}_2 &= \myvec{b_1 & b_2} = \myvec{b_1 & k b_1} = b_1\myvec{1 & k}.
+\end{align}
+\begin{align}
+\text{R}_2 &\mapsto \text{R}_2 - \frac{b_1}{a_1}\text{R}_1 ,\qquad \text{R}_2 = (0,0).
+\end{align}
+
 \end{frame}
 
 
-\begin{frame}{Solution: Step 4}
-Perform the row operation:
-\[
-\text{Row}_2 \;\rightarrow\; \text{Row}_2 - \frac{b_1}{a_1}\,\text{Row}_1
-\]
-(assuming \(a_1\neq 0\); if \(a_1=0\), swap roles).
+\begin{frame}{Solution}
+Thus the row-echelon form of \textbf{M} has exactly one nonzero row, so
+\begin{align}
+\operatorname{rank}(\vec{M})=1.
+\end{align}
 
-Since \(\text{Row}_2\) is a multiple of \(\text{Row}_1\), we get
-\[
-\text{Row}_2 = (0,0).
-\]
-\end{frame}
-
-
-\begin{frame}{Solution: Step 5}
-Thus the row-echelon form of \vec{M} has exactly one nonzero row:
-\[
-\operatorname{rank}(\vec{M}) = 1.
-\]
-
-Rank \(1\) means the two normal vectors are linearly dependent (collinear).  
-Therefore, the lines have the same slope and are parallel.
+if \(\operatorname{rank}(\vec{M})=1\) then the two rows (or columns) are proportional, therefore \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
 \end{frame}
 
 
 \begin{frame}{Pyhton plot}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.75\textwidth]{figs/5.png}
+    \includegraphics[width=0.75\textwidth]{figs/6.png}
     \caption{parallel lines}
     \label{fig:example_image}
     
