@@ -48,66 +48,67 @@ and the plane
 
 \textbf{Solution:} \\
 
-The line can be written as
+\textbf{Step 1: General setup} \\
+Let the line be
 \begin{align}
-    \vec{r} &= \vec{r}_0 + \lambda \vec{d}, \\
-    \vec{r}_0 &= \myvec{4 \\ 2 \\ 7}, \quad
-    \vec{d} = \myvec{3 \\ 4 \\ 2}.
+    \vec{r} = \vec{r}_0 + \lambda \vec{d},
+\end{align}
+and the plane be
+\begin{align}
+    \vec{n}^T \vec{r} = c,
+\end{align}
+where $\vec{r}_0$ is a point on the line, $\vec{d}$ is its direction vector, $\vec{n}$ is the plane normal, and $c$ is a constant.  
+The given external point is $\vec{A}$.
+
+\textbf{Step 2: Intersection point of line and plane} \\
+Substitute $\vec{r}=\vec{r}_0+\lambda\vec{d}$ into the plane equation:
+\begin{align}
+    \vec{n}^T(\vec{r}_0+\lambda \vec{d}) = c.
+\end{align}
+This gives
+\begin{align}
+    \lambda = \frac{c - \vec{n}^T\vec{r}_0}{\vec{n}^T \vec{d}}.
+\end{align}
+Hence, the intersection point is
+\begin{align}
+    \vec{P} = \vec{r}_0 + \frac{c - \vec{n}^T\vec{r}_0}{\vec{n}^T\vec{d}} \vec{d}.
 \end{align}
 
-The plane equation is
+\textbf{Step 3: Distance formula} \\
+The displacement vector is
 \begin{align}
-    \vec{n}^T \vec{r} = c, \quad
-    \vec{n} = \myvec{1 \\ -1 \\ 1}, \; c = 10.
+    \vec{v} = \vec{P} - \vec{A},
+\end{align}
+and therefore the required distance is
+\begin{align}
+    d = \|\vec{v}\| = \sqrt{\vec{v}^T\vec{v}}.
 \end{align}
 
-\textbf{Step 1: Intersection point of line and plane} \\
-Substitute $\vec{r} = \vec{r}_0 + \lambda \vec{d}$:
+\textbf{Step 4: Substitution from the question} \\
+From the problem statement,
 \begin{align}
-    \vec{n}^T(\vec{r}_0 + \lambda \vec{d}) &= c \\
-    \implies \lambda &= \frac{c - \vec{n}^T\vec{r}_0}{\vec{n}^T\vec{d}}.
-\end{align}
-
-Thus, the intersection point is
-\begin{align}
-    \vec{P} = \vec{r}_0 + 
-    \frac{c - \vec{n}^T\vec{r}_0}{\vec{n}^T\vec{d}} \vec{d}.
-\end{align}
-
-\textbf{Step 2: Distance formula} \\
-Let the given point be 
-\begin{align}
+    \vec{r}_0 = \myvec{4 \\ 2 \\ 7}, \quad
+    \vec{d} = \myvec{3 \\ 4 \\ 2}, \quad
+    \vec{n} = \myvec{1 \\ -1 \\ 1}, \quad
+    c = 10, \quad
     \vec{A} = \myvec{1 \\ -2 \\ 9}.
 \end{align}
-Then the displacement vector is
+
+Now compute:
 \begin{align}
-    \vec{v} &= \vec{P} - \vec{A}.
-\end{align}
-So the distance is
-\begin{align}
-    d &= \|\vec{v}\| = \sqrt{\vec{v}^T \vec{v}}.
+    \vec{n}^T\vec{d} &= 1, \\
+    \vec{n}^T\vec{r}_0 &= 9, \\
+    \lambda &= \frac{10 - 9}{1} = 1.
 \end{align}
 
-\textbf{Step 3: Substitution of values} \\
-Now substituting:
+So
 \begin{align}
-    \vec{n}^T\vec{d} &= \myvec{1 & -1 & 1}\myvec{3 \\ 4 \\ 2} = 1, \\
-    \vec{n}^T\vec{r}_0 &= \myvec{1 & -1 & 1}\myvec{4 \\ 2 \\ 7} = 9, \\
-    \lambda &= \frac{10-9}{1} = 1.
+    \vec{P} &= \myvec{4 \\ 2 \\ 7} + 1 \cdot \myvec{3 \\ 4 \\ 2} = \myvec{7 \\ 6 \\ 9}, \\
+    \vec{v} &= \vec{P} - \vec{A} = \myvec{6 \\ 8 \\ 0}, \\
+    d &= \sqrt{6^2 + 8^2 + 0^2} = 10.
 \end{align}
 
-Hence
-\begin{align}
-    \vec{P} &= \vec{r}_0 + \vec{d} = \myvec{4 \\ 2 \\ 7} + \myvec{3 \\ 4 \\ 2} = \myvec{7 \\ 6 \\ 9}.
-\end{align}
-\begin{align}
-    \vec{v} &= \vec{P} - \vec{A} = \myvec{7 \\ 6 \\ 9} - \myvec{1 \\ -2 \\ 9} = \myvec{6 \\ 8 \\ 0}.
-\end{align}
-\begin{align}
-    d &= \sqrt{6^2+8^2+0^2} = \sqrt{100} = 10.
-\end{align}
-
-\textbf{Final Answer: } 
+\textbf{Final Answer: }
 \[
 \boxed{10}
 \]
