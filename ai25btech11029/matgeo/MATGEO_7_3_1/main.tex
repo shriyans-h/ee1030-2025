@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[a4paper, left = 1.5cm, right = 1.5cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+\large
+    \textbf{Samyak Gondane-AI25BTECH11029}
+\end{center}
+\date{}
+
+\section*{Question}
+Find the equation of the circle passing through $(0, 0)$ and making intercepts $a$ and $b$ on the coordinate axes.
+
+
+\section*{Solution}
+
+We use the general matrix form of a conic:
+
+
+\begin{align}
+\vec{x}^T \vec{V} \vec{x} + 2\vec{u}^T \vec{x} + f = 0
+\end{align}
+
+
+where:
+
+
+\begin{align}
+\vec{x} = \myvec{x \\ y}, \quad
+\vec{V} = \myvec{1 & 0 \\ 0 & 1}, \quad
+\vec{u} = \myvec{u_1 \\ u_2}, \quad
+f \in \mathbb{R}
+\end{align}
+
+
+
+Substitute the three points:
+
+\begin{itemize}
+  \item At $(0, 0)$: $f = 0$
+  \item At $(a, 0)$: $a^2 + 2u_1 a = 0 \Rightarrow u_1 = -\frac{a}{2}$
+  \item At $(0, b)$: $b^2 + 2u_2 b = 0 \Rightarrow u_2 = -\frac{b}{2}$
+\end{itemize}
+
+So,
+
+
+\begin{align}
+\vec{u} = \myvec{-\frac{a}{2} \\ -\frac{b}{2}}, \quad f = 0
+\end{align}
+
+
+
+Substitute back into the general form:
+
+
+\begin{align}
+\vec{x}^T \myvec{1 & 0 \\ 0 & 1} \vec{x}
++ 2 \myvec{-\frac{a}{2} & -\frac{b}{2}} \vec{x}
+= 0
+\end{align}
+
+
+
+Simplify:
+
+
+\begin{align}
+x^2 + y^2 - ax - by = 0
+\end{align}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{./figs/Figure_1.png}
+    \caption{}
+    \label{fig:fig1}
+\end{figure}
+
+\end{document}
