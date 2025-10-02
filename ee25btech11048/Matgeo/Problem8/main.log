@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.16)  2 OCT 2025 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.16)  2 OCT 2025 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1910,7 +1910,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figs/Figure_1.png, id=61, 462.528pt x 346.896pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 119.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 120.
 (pdftex.def)             Requested size: 254.9356pt x 191.20625pt.
 
 
@@ -1925,7 +1925,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  54329 strings out of 475102
  1291910 string characters out of 5764877
- 1880309 words of memory out of 5000000
+ 1881309 words of memory out of 5000000
  76514 multiletter control sequences out of 15000+600000
  624051 words of font info for 169 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
@@ -1936,7 +1936,7 @@ exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 127863 bytes).
+Output written on main.pdf (3 pages, 127918 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

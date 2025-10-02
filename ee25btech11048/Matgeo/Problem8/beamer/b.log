@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.16)  2 OCT 2025 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.16)  2 OCT 2025 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1807,7 +1807,7 @@ l.14 ...m (1,-2,9) to intersection point (7,6,9):"
 \openout4 = `b.vrb'.
 
  (./b.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 246
+Overfull \vbox (1.72923pt too high) detected at line 247
  []
 
 
@@ -1949,7 +1949,7 @@ l.13 ...nce from Point to Line-Plane Intersection"
 <figs/Figure_1.png, id=428, 462.528pt x 346.896pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 290.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 291.
 (pdftex.def)             Requested size: 239.60567pt x 179.70413pt.
 
 
@@ -1965,7 +1965,7 @@ Package pdftex.def Info: figs/Figure_1.png  used on input line 290.
 \tf@snm=\write9
 \openout9 = `b.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20251002225334 92EB5FFEE6AE2FEC3AD
+runsystem(latexminted cleantemp  --timestamp 20251002230842 92EB5FFEE6AE2FEC3AD
 71C777531578F)...executed safely (allowed).
 
  (./b.aux)
@@ -1991,7 +1991,7 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (15 pages, 272809 bytes).
+Output written on b.pdf (15 pages, 272971 bytes).
 PDF statistics:
  516 PDF objects out of 1000 (max. 8388607)
  438 compressed objects within 5 object streams
