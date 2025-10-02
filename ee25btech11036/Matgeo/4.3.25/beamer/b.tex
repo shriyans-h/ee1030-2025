@@ -93,63 +93,106 @@
 
 
 
-\begin{frame}{Problem Statement}
-Find the ratio in which the $YZ$ plane divides the line segment joining the points
-$$
-\vec{A} = \vec{\myvec{-2\\4\\7}}, \quad 
-\vec{B} = \vec{\myvec{3\\-5\\8}}.
-$$
+
+
+
+
+
+%---------------- Question ----------------%
+\begin{frame}{Question}
+Find the ratio in which the line joining the points
+\[
+\vec{A} = \myvec{-2 \\ 4 \\ 7}, \quad 
+\vec{B} = \myvec{3 \\ -5 \\ 8}
+\]
+is divided by the YZ-plane.
 \end{frame}
 
-\begin{frame}{Step 1: Vector and Matrix Forms}
-\textbf{Line segment in vector form:}
+%---------------- Step 1: Line Equation ----------------%
+\begin{frame}{Step 1: Equation of Line}
+\textbf{Direction vector of line:}
 \begin{align}
-\vec{R} &= \vec{A} + \lambda (\vec{B}-\vec{A}) \label{eq:line_vector}
+\vec{d} &= \vec{B} - \vec{A}.
 \end{align}
 
-\textbf{Parametric vector:}
+\textbf{Parametric form of line:}
 \begin{align}
-\vec{R} &= \vec{\myvec{x\\y\\z}} \label{eq:R_vector}
-\end{align}
-
-\textbf{$YZ$-plane as a matrix equation:}
-\begin{align}
-\myvec{1 & 0 & 0} \vec{R} = 0 \label{eq:YZ_matrix}
-\end{align}
-\end{frame}
-
-\begin{frame}{Step 2: Intersection Symbolically}
-\textbf{Intersection point $\vec{P}$:}
-\begin{align}
-\vec{P} &= \vec{A} + \lambda (\vec{B}-\vec{A}) \label{eq:P_vector} \\
-\myvec{1 & 0 & 0} \vec{P} &= 0 \label{eq:P_matrix}
-\end{align}
-
-\textbf{Ratio along the line:}
-\begin{align}
-AP : PB &= \lambda : (1-\lambda) \label{eq:ratio_vector}
+\vec{R}(\lambda) &= \vec{A} + \lambda \vec{d}, \quad \lambda \in \mathbb{R}.
 \end{align}
 \end{frame}
 
-\begin{frame}{Step 3: Numerical Algebra}
+%---------------- Step 2: YZ-plane ----------------%
+\begin{frame}{Step 2: Equation of YZ-plane}
+The equation of the YZ-plane is:
 \begin{align}
-\vec{B}-\vec{A} &= \vec{\myvec{3\\-5\\8}-\myvec{-2\\4\\7}} = \vec{\myvec{5\\-9\\1}} \label{eq:B_minus_A} \\
-\vec{R} &= \vec{\myvec{-2\\4\\7}} + \lambda \vec{\myvec{5\\-9\\1}} = \vec{\myvec{-2 + 5\lambda\\ 4 - 9\lambda\\ 7 + \lambda}} \label{eq:R_numeric} \\
-\myvec{1 & 0 & 0} \vec{R} &= -2 + 5\lambda = 0 \label{eq:solve_lambda} \\
-\lambda &= \frac{2}{5} \label{eq:lambda_final} \\
-\vec{P} &= \vec{\myvec{-2\\4\\7}} + \frac{2}{5}\vec{\myvec{5\\-9\\1}} = \vec{\myvec{0\\ 2/5 \\ 37/5}} \approx \vec{\myvec{0\\0.4\\7.4}} \label{eq:P_numeric} \\
-AP : PB &= 2 : 3 \label{eq:final_ratio}
+x &= 0.
+\end{align}
+
+In vector form:
+\begin{align}
+\vec{n}^T \vec{x} &= 0, \quad 
+\vec{n} = \myvec{1 \\ 0 \\ 0}.
 \end{align}
 \end{frame}
 
-\begin{frame}{Answer}
-The $YZ$-plane divides the line segment $\vec{AB}$ internally in the ratio
-$$
-\boxed{2:3}
-$$
+%---------------- Step 3: Condition for Intersection ----------------%
+\begin{frame}{Step 3: Condition for Intersection}
+Substitute $\vec{R}(\lambda)$ into the plane equation:
+\begin{align}
+\vec{n}^T \brak{\vec{A} + \lambda \vec{d}} &= 0.
+\end{align}
 
+Solve for $\lambda$:
+\begin{align}
+\lambda &= -\frac{\vec{n}^T \vec{A}}{\vec{n}^T \vec{d}}.
+\end{align}
 
+Ratio along the line:
+\begin{align}
+AP : PB &= \lambda : (1-\lambda).
+\end{align}
 \end{frame}
+
+%---------------- Step 4: Numerical Substitution ----------------%
+\begin{frame}{Step 4: Numerical Substitution}
+Substitute coordinates:
+\begin{align}
+\vec{A} &= \myvec{-2 \\ 4 \\ 7}, \quad
+\vec{B} = \myvec{3 \\ -5 \\ 8}, \\
+\vec{d} &= \myvec{5 \\ -9 \\ 1}.
+\end{align}
+
+\begin{align}
+\lambda &= -\frac{\myvec{1 & 0 & 0}\myvec{-2 \\ 4 \\ 7}}
+{\myvec{1 & 0 & 0}\myvec{5 \\ -9 \\ 1}} \\
+&= \frac{2}{5}.
+\end{align}
+
+Hence,
+\[
+AP : PB = \frac{2}{5} : \frac{3}{5} = 2:3.
+\]
+\end{frame}
+
+%---------------- Step 5: Verification ----------------%
+\begin{frame}{Step 5: Verification}
+Intersection point:
+\begin{align}
+\vec{P} &= \vec{A} + \frac{2}{5}\vec{d} \\
+&= \myvec{-2 \\ 4 \\ 7} + \frac{2}{5}\myvec{5 \\ -9 \\ 1} \\
+&= \myvec{0 \\ \tfrac{2}{5} \\ \tfrac{37}{5}}.
+\end{align}
+
+Since $x=0$, $\vec{P}$ lies on the YZ-plane.  
+\[
+\boxed{AP:PB = 2:3}
+\]
+\end{frame}
+
+%---------------- Figure ----------------%
+
+
+
 
 \begin{frame}[fragile]{C Code}
 \begin{lstlisting}

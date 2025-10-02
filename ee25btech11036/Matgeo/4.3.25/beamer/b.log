@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.29)  1 OCT 2025 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.8.29)  2 OCT 2025 08:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1646,75 +1646,75 @@ No file b.nav.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-02.
+09.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-102.
+109.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-102.
+109.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 102.
+(Font)              <10.95> on input line 109.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 102.
+(Font)              <8> on input line 109.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 102.
+(Font)              <6> on input line 109.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-02.
+09.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-02.
+09.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-02.
+09.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-02.
+09.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-02.
+09.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 109.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 109.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 109.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 109.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 109.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 102.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 109.
 
 
 
@@ -1734,8 +1734,16 @@ dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 [5
 
 ]
+Overfull \vbox (43.998pt too high) detected at line 175
+ []
+
+
 
 [6
+
+]
+
+[7
 
 ]
 \openout4 = `b.vrb'.
@@ -1747,7 +1755,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[7
+[8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `b.vrb'.
@@ -1760,7 +1768,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[8
+[9
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `b.vrb'.
@@ -1847,12 +1855,12 @@ l.15     print(f"1 - λ = {omt.value:.4f}"
                                           )
 ? 
 )
-Overfull \vbox (61.72923pt too high) detected at line 220
+Overfull \vbox (61.72923pt too high) detected at line 263
  []
 
 
 
-[9
+[10
 
 ]
 \openout4 = `b.vrb'.
@@ -1972,12 +1980,12 @@ l.19 ...B_len:.4f} (should be close to {a/b:.4f})"
                                                   )
 ? 
 )
-Overfull \vbox (25.72923pt too high) detected at line 241
+Overfull \vbox (25.72923pt too high) detected at line 284
  []
 
 
 
-[10
+[11
 
 ]
 \openout4 = `b.vrb'.
@@ -2005,12 +2013,12 @@ l.21 ...[0]:.2f}, {point[1]:.2f}, {point[2]:.2f})"
                                                   ,
 ? 
 )
-Overfull \vbox (73.72923pt too high) detected at line 265
+Overfull \vbox (73.72923pt too high) detected at line 308
  []
 
 
 
-[11
+[12
 
 ]
 \openout4 = `b.vrb'.
@@ -2107,17 +2115,10 @@ l.19         f"Length PB = {PB_len:.2f}"
                                         
 ? 
 )
-Overfull \vbox (37.72923pt too high) detected at line 289
+Overfull \vbox (37.72923pt too high) detected at line 332
  []
 
 
-
-[12
-
-]
-\openout4 = `b.vrb'.
-
- (./b.vrb)
 
 [13
 
@@ -2127,6 +2128,13 @@ Overfull \vbox (37.72923pt too high) detected at line 289
  (./b.vrb)
 
 [14
+
+]
+\openout4 = `b.vrb'.
+
+ (./b.vrb)
+
+[15
 
 ]
 \openout4 = `b.vrb'.
@@ -2153,12 +2161,12 @@ l.23 ratio_str = "2 : 3"
                         
 ? 
 )
-Overfull \vbox (49.72923pt too high) detected at line 349
+Overfull \vbox (49.72923pt too high) detected at line 392
  []
 
 
 
-[15
+[16
 
 ]
 \openout4 = `b.vrb'.
@@ -2185,12 +2193,12 @@ l.18 ...[0]:.2f}, {point[1]:.2f}, {point[2]:.2f})"
                                                   ,
 ? 
 )
-Overfull \vbox (25.72923pt too high) detected at line 370
+Overfull \vbox (25.72923pt too high) detected at line 413
  []
 
 
 
-[16
+[17
 
 ]
 \openout4 = `b.vrb'.
@@ -2229,42 +2237,42 @@ l.18 ...B = {ratio_str}\nP lies on YZ-plane (x=0)"
                                                   ,
 ? 
 )
-Overfull \vbox (13.72923pt too high) detected at line 392
+Overfull \vbox (13.72923pt too high) detected at line 435
  []
 
 
-
-[17
-
-]
-\openout4 = `b.vrb'.
-
- (./b.vrb)
 
 [18
 
 ]
 \openout4 = `b.vrb'.
 
+ (./b.vrb)
+
+[19
+
+]
+\openout4 = `b.vrb'.
+
  (./b.vrb
-<figs/fig_61.png, id=555, 722.7pt x 578.16pt>
+<figs/fig_61.png, id=573, 722.7pt x 578.16pt>
 File: figs/fig_61.png Graphic file (type png)
 <use figs/fig_61.png>
 Package pdftex.def Info: figs/fig_61.png  used on input line 4.
 (pdftex.def)             Requested size: 308.06367pt x 246.45139pt.
 )
-Overfull \vbox (54.92506pt too high) detected at line 418
+Overfull \vbox (54.92506pt too high) detected at line 461
  []
 
 
 
-[19
+[20
 
  <./figs/fig_61.png>]
 \openout4 = `b.vrb'.
 
  (./b.vrb
-<figs/Fig -62.png, id=588, 722.7pt x 578.16pt>
+<figs/Fig -62.png, id=606, 722.7pt x 578.16pt>
 File: figs/Fig -62.png Graphic file (type png)
 <use figs/Fig -62.png>
 Package pdftex.def Info: figs/Fig -62.png  used on input line 4.
@@ -2276,12 +2284,12 @@ er}) has been already used, duplicate ignored
                    \relax 
 l.6     \label{fig:placeholder}
                                )
-Overfull \vbox (54.92506pt too high) detected at line 426
+Overfull \vbox (54.92506pt too high) detected at line 469
  []
 
 
 
-[20
+[21
 
  <./figs/Fig -62.png>]
 \tf@nav=\write7
@@ -2312,23 +2320,25 @@ Package rerunfilecheck Info: Checksums for `b.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59243 strings out of 475178
- 1432701 string characters out of 5766539
- 2592941 words of memory out of 5000000
- 81203 multiletter control sequences out of 15000+600000
+ 59225 strings out of 475178
+ 1432514 string characters out of 5766539
+ 2592940 words of memory out of 5000000
+ 81195 multiletter control sequences out of 15000+600000
  600504 words of font info for 78 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 101i,15n,107p,1169b,1461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,107p,1169b,1461s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on b.pdf (20 pages, 446228 bytes).
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/txfonts/txsyb.pfb>
+Output written on b.pdf (21 pages, 463723 bytes).
 PDF statistics:
- 677 PDF objects out of 1000 (max. 8388607)
- 579 compressed objects within 6 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 701 PDF objects out of 1000 (max. 8388607)
+ 597 compressed objects within 6 object streams
+ 44 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

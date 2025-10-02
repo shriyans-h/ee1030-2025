@@ -34,80 +34,101 @@
 
 
 
-
-
-\section*{Problem}
-Find the ratio in which the $YZ$ plane divides the line segment joining the points 
-$$
-\vec{A} = \vec{\myvec{-2\\4\\7}}, \quad 
-\vec{B} = \vec{\myvec{3\\-5\\8}}.
-$$
+\section*{Question}
+Find the ratio in which the line joining the points 
+\[
+\vec{A} = \myvec{-2 \\ 4 \\ 7}, \quad 
+\vec{B} = \myvec{3 \\ -5 \\ 8}
+\]
+is divided by the YZ-plane.
 
 \section*{Solution}
 
-\subsection*{Step 1: Vector and Matrix Forms}
-
-\paragraph{Line segment in vector form:} The line joining $\vec{A}$ and $\vec{B}$ can be expressed as
+\subsection*{Step 1: Algebraic Derivation}
+Let the direction vector be
 \begin{align}
-\vec{R} &= \vec{A} + \lambda (\vec{B}-\vec{A}) \label{eq:line_vector}
+\vec{d} &= \vec{B} - \vec{A}.
 \end{align}
 
-\paragraph{Parametric form as a vector:} Using $\lambda$ as a parameter,
+The parametric equation of the line is
 \begin{align}
-\vec{R} &= \vec{\myvec{x\\y\\z}} \label{eq:R_vector}
+\vec{R}(\lambda) &= \vec{A} + \lambda \vec{d}.
 \end{align}
 
-\paragraph{YZ-plane as a matrix equation:} 
+The equation of the YZ-plane is
 \begin{align}
-\myvec{1 & 0 & 0} \vec{R} = 0 \label{eq:YZ_matrix}
+\vec{n}^\top \vec{x} &= 0, \quad 
+\vec{n} = \myvec{1 \\ 0 \\ 0}.
 \end{align}
 
-\subsection*{Step 2: Symbolic intersection using vectors}
-
-\paragraph{Intersection point $\vec{P}$:} Solve symbolically using
+Substituting $\vec{R}(\lambda)$,
 \begin{align}
-\vec{P} &= \vec{A} + \lambda (\vec{B}-\vec{A}) \label{eq:P_vector} \\
-\myvec{1 & 0 & 0} \vec{P} &= 0 \label{eq:P_matrix}
+\vec{n}^\top \brak{\vec{A} + \lambda \vec{d}} &= 0.
 \end{align}
 
-\paragraph{Ratio along the line:} Using parameter $\lambda$, the ratio is
+Thus,
 \begin{align}
-AP : PB = \lambda : (1-\lambda) \label{eq:ratio_vector}
+\lambda &= -\frac{\vec{n}^\top \vec{A}}{\vec{n}^\top \vec{d}}.
 \end{align}
 
-\subsection*{Step 3: Algebraic Substitution (Numerical)}
-
+If $P$ is the intersection point, then the section ratio is
 \begin{align}
-\vec{B}-\vec{A} &= \vec{\myvec{3\\-5\\8}-\myvec{-2\\4\\7}} = \vec{\myvec{5\\-9\\1}} \label{eq:B_minus_A} \\
-\vec{R} &= \vec{\myvec{-2\\4\\7}} + \lambda \vec{\myvec{5\\-9\\1}} = \vec{\myvec{-2 + 5\lambda\\ 4 - 9\lambda\\ 7 + \lambda}} \label{eq:R_numeric} \\
-\myvec{1 & 0 & 0} \vec{R} &= -2 + 5\lambda = 0 \label{eq:solve_lambda} \\
-\lambda &= \frac{2}{5} \label{eq:lambda_final} \\
-\vec{P} &= \vec{\myvec{-2\\4\\7}} + \frac{2}{5}\vec{\myvec{5\\-9\\1}} = \vec{\myvec{0\\ 2/5 \\ 37/5}} \approx \vec{\myvec{0\\0.4\\7.4}} \label{eq:P_numeric} \\
-AP : PB &= 2 : 3 \label{eq:final_ratio}
+AP : PB &= \lambda : (1-\lambda).
 \end{align}
 
-\section*{Answer}
+---
 
-The $YZ$-plane divides the line segment $AB$ internally in the ratio
-$$
+\subsection*{Step 2: Numerical Substitution}
+Now substitute the given coordinates:
+
+\begin{align}
+\vec{A} &= \myvec{-2 \\ 4 \\ 7}, \quad
+\vec{B} = \myvec{3 \\ -5 \\ 8}, \\[1ex]
+\vec{d} &= \vec{B} - \vec{A} = \myvec{5 \\ -9 \\ 1}.
+\end{align}
+
+\begin{align}
+\lambda &= -\frac{\myvec{1 & 0 & 0}\vec{A}}
+{\myvec{1 & 0 & 0}\vec{d}} 
+= -\frac{\myvec{1 & 0 & 0}\myvec{-2 \\ 4 \\ 7}}
+{\myvec{1 & 0 & 0}\myvec{5 \\ -9 \\ 1}} \\
+&= \frac{2}{5}.
+\end{align}
+
+Hence,
+\begin{align}
+AP : PB &= \frac{2}{5} : \brak{1-\frac{2}{5}} = 2:3.
+\end{align}
+
+\[
 \boxed{2:3}
-$$
+\]
+
+---
+
+\subsection*{Step 3: Verification}
+The intersection point is
+\begin{align}
+\vec{P} &= \vec{A} + \frac{2}{5}\vec{d} \\
+&= \myvec{-2 \\ 4 \\ 7} + \frac{2}{5}\myvec{5 \\ -9 \\ 1} \\
+&= \myvec{0 \\ \tfrac{2}{5} \\ \tfrac{37}{5}}.
+\end{align}
+
+Clearly, $x=0$, so $P$ lies on the YZ-plane.  
+Thus, the ratio is verified as $2:3$.
+
+
+
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\columnwidth]{figs/fig_61.png}
-    \caption{2D representation of the line segment and intersection with $YZ$-plane}
-    \label{fig:fig1}
+    \caption{Line segment $AB$ intersecting the $YZ$-plane}
 \end{figure}
-
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=0.9\columnwidth]{figs/Fig -62.png}
-    \caption{2D plot of intersection point on the $YZ$-plane}
-    \label{fig:fig2}
+    \caption{}
+    \label{fig:placeholder}
 \end{figure}
-
 \end{document}
-
-
-
