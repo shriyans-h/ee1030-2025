@@ -114,18 +114,43 @@ By performing row operation $R_1 \xrightarrow{} R_1 - R_2$, all elements in $R_1
 
 \end{frame}
 
+\begin{frame}[fragile]
+    \frametitle{Solution}
+For example, consider a matrix $\vec{A}$ = \myvec{3&3&3\\3&3&3\\ 1&4&2}. $\vec{A}$ has only integer entries.
+\begin{align*}
+\myvec{3&3&3\\3&3&3\\ 1&4&2} \xrightarrow{\text{R_1 \rightarrow $R_1 - R_2$}} \myvec{0&0&0\\3&3&3\\ 1&4&2}
+\end{align*}\\
+
+Since $R_1$ consists of only 0's, $|\vec{A}|$ = 0. Hence $\vec{A}$ is not invertible.
+
+\end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Solution}
 \underline{B)}\\
 
-This option is wrong according to the previous reasoning.\\
+For example, consider a matrix $\vec{A} = \myvec{2 & 1 \\ 2 & 2}$. $|\vec{A}| = 2$
+\begin{align*}
+    \vec{A^{-1}} = \frac{1}{2}\myvec{2 & -1 \\ -2 & 2} = \myvec{1 & -1/2 \\ 1 & 1}.
+\end{align*}\\
+
+This is a counterexample to the statement; hence, option \textbf{B} is wrong.
+
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Solution}
 
 \underline{D)}\\
 
 We know that if $|\vec{A}| \neq 0$, $\vec{A^{-1}}$ exists. By this logic, this option is wrong.\\
 
+For example, consider a matrix $\vec{A}$ = $\myvec{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}$. $|\vec{A}| = 1$, and since this is an orthogonal matrix, 
+\begin{align*}
+\vec{A^{-1}} = \vec{A^T} = \myvec{\frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}. \end{align*}\\
+
+$\vec{A^{-1}}$ exists, which is a contradiction to the statement in option \textbf{D}.
 Therefore, the correct answer is \texbtf{C)}.
 \end{frame}
+
 
 \end{document}
