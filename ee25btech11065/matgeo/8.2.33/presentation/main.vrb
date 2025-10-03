@@ -16,5 +16,4 @@ ax.axhline(0, color='black', linewidth=0.5)
 ax.axvline(0, color='black', linewidth=0.5)
 
 plt.show()
-
     \end{lstlisting}

@@ -57,29 +57,29 @@ Find the equation of the conic with length of major axis $26$, foci $\brak{\pm 5
 \textbf{Solution}\\
 The equation of a conic is
 \begin{align}
-x^T V x + 2u^T x + f = 0 \tag{1}
+\vec{x}^T V \vec{x} + 2\vec{u}^T \vec{x} + f = 0 \tag{1}
 \end{align}
 where
 \begin{align}
-V = \|n\|^2 I - e^2nn^T \tag{2}
+V = \|\vec{n}\|^2 I - e^2\vec{n}\vec{n}^T \tag{2}
 \end{align}
 
 The foci are
 \begin{align}
-F_1 = \myvec{5\\0},\quad F_2 = \myvec{-5\\0} \tag{3}
+\vec{F}_1 = \myvec{5\\0},\quad \vec{F}_2 = \myvec{-5\\0} \tag{3}
 \end{align}
 
 The centre is
 \begin{align}
-u = \frac{F_1+F_2}{2} = \myvec{0\\0} \tag{4}
+\vec{u} = \frac{\vec{F}_1+\vec{F}_2}{2} = \myvec{0\\0} \tag{4}
 \end{align}
 
 The axis vector is
 \begin{align}
-n = F_1-F_2 = \myvec{1\\0} \tag{5}
+\vec{n} = \vec{F}_1-\vec{F}_2 = \myvec{1\\0} \tag{5}
 \end{align}
 
-Therefore, substituting $n=\myvec{1\\0}$ in (2), we get
+Therefore, substituting $\vec{n}=\myvec{1\\0}$ in (2), we get
 \begin{align}
 V = \myvec{1-e^2 & 0 \\ 0 & 1} \tag{6}
 \end{align}
@@ -108,14 +108,14 @@ Thus from (8)--(10), solving the unknowns $(c,e,f)$ we get
 e = \tfrac{5}{13},\quad c = \pm 5, \quad |f| = 144. \tag{11}
 \end{align}
 
-Let $x=\myvec{0\\\alpha}$ be a vertex on the minor axis. Substituting in (1):
+Let $\vec{x}=\myvec{0\\\alpha}$ be a vertex on the minor axis. Substituting in (1):
 \begin{align}
 \frac{12^2}{1} + f = 0 \implies f=-144. \tag{12}
 \end{align}
 
 Hence the equation of the conic is
 \begin{align*}
-x^T \myvec{\tfrac{144}{169} & 0 \\ 0 & 1} x - 144 = 0. \tag{13}
+\vec{x}^T \myvec{\tfrac{144}{169} & 0 \\ 0 & 1} \vec{x} - 144 = 0. \tag{13}
 \end{align*}
 
 \begin{figure}[H]
