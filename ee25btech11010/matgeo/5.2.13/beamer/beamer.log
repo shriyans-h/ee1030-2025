@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  4 OCT 2025 00:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  4 OCT 2025 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1217,8 +1217,6 @@ Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@cols=\count365
 \TX@ftn=\toks55
 ) (./gvv.sty
-\c@rem=\count366
-
 
 ! LaTeX Error: Command \solution already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -1227,36 +1225,10 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 ...{\solution}{\noindent \textbf{Solution: }}
+l.49 ...{\solution}{\noindent \textbf{Solution: }}
                                                   
 ? r
 OK, entering \nonstopmode...
-
-! LaTeX Error: Command \rem already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 \newtheorem{rem}
-                      {Remark}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 \newtheorem{rem}{R
-                        emark}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 
 ! LaTeX Error: Command \sgn already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -1265,7 +1237,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.160 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+l.156 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
                                               
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1279,7 +1251,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.165 \DeclareMathOperator*{\Res}{Res}
+l.161 \DeclareMathOperator*{\Res}{Res}
                                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1293,7 +1265,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.171 ...\solution}{\noindent \textbf{Solution: }}
+l.167 ...\solution}{\noindent \textbf{Solution: }}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1307,7 +1279,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.172 \newcommand{\cosec}{\,\text{cosec}\,}
+l.168 \newcommand{\cosec}{\,\text{cosec}\,}
                                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1321,7 +1293,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182 }
+l.178 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1335,7 +1307,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.183 ...suremath{\begin{pmatrix}#1\end{pmatrix}}}
+l.179 ...suremath{\begin{pmatrix}#1\end{pmatrix}}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1349,7 +1321,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.186 }
+l.182 }
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1363,7 +1335,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.187 ...suremath{\begin{vmatrix}#1\end{vmatrix}}}
+l.183 ...suremath{\begin{vmatrix}#1\end{vmatrix}}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1377,7 +1349,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 ...rmcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+l.187 ...rmcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1391,7 +1363,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.192 ...ommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+l.188 ...ommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1405,7 +1377,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.193 ...ommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+l.189 ...ommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1419,7 +1391,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.198 \newcommand\figref{Fig.~\ref}
+l.194 \newcommand\figref{Fig.~\ref}
                                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1433,7 +1405,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.199 \newcommand\appref{Appendix~\ref}
+l.195 \newcommand\appref{Appendix~\ref}
                                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1447,7 +1419,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.200 \newcommand\probref{Problem~\ref}
+l.196 \newcommand\probref{Problem~\ref}
                                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1461,7 +1433,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.201 \newcommand\tabref{Table~\ref}
+l.197 \newcommand\tabref{Table~\ref}
                                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1475,7 +1447,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 \newcommand{\sinc}{\,\text{sinc}\,}
+l.198 \newcommand{\sinc}{\,\text{sinc}\,}
                                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1489,7 +1461,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.203 \newcommand{\rect}{\,\text{rect}\,}
+l.199 \newcommand{\rect}{\,\text{rect}\,}
                                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1501,7 +1473,7 @@ or  <return>  to continue without it.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.221  {\end{array}\right)}
+l.217  {\end{array}\right)}
                            
 
 You have used \NewDocumentEnvironment with an environment that already has a
@@ -1516,7 +1488,7 @@ The existing definition of 'amatrix' will not be altered.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.226 }
+l.222 }
        
 
 You have used \NewDocumentCommand with a command that already has a
@@ -1531,7 +1503,7 @@ The existing definition of '\makeamatrix' will not be altered.
 For immediate help type H <return>.
  ...                                              
                                                   
-l.241 }
+l.237 }
        
 
 You have used \NewDocumentCommand with a command that already has a
@@ -1540,8 +1512,8 @@ definition.
 The existing definition of '\system' will not be altered.
 
 
-\c@matchleft=\count367
-\c@matchright=\count368
+\c@matchleft=\count366
+\c@matchright=\count367
 
 ! LaTeX Error: Command \c@matchleft already defined.
                Or name \end... illegal, see p.192 of the manual.
@@ -1550,7 +1522,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.268 \newcounter{matchleft}
+l.264 \newcounter{matchleft}
                             \newcounter{matchright}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1564,7 +1536,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.268 ...counter{matchleft}\newcounter{matchright}
+l.264 ...counter{matchleft}\newcounter{matchright}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1578,7 +1550,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277 }{\endtabularx}
+l.273 }{\endtabularx}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1648,9 +1620,9 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@arrows@the@rigidity=\dimen372
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count369
-\pgf@circ@count@b=\count370
-\pgf@circ@count@c=\count371
+\pgf@circ@count@a=\count368
+\pgf@circ@count@b=\count369
+\pgf@circ@count@c=\count370
 \pgf@circ@res@up=\dimen373
 \pgf@circ@res@down=\dimen374
 \pgf@circ@res@zero=\dimen375
@@ -1671,7 +1643,7 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count372
+\pgf@circ@res@count=\count371
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
@@ -1700,9 +1672,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box96
 \tcb@lowerbox=\box97
 \tcb@phantombox=\box98
-\c@tcbbreakpart=\count373
-\c@tcblayer=\count374
-\c@tcolorbox@number=\count375
+\c@tcbbreakpart=\count372
+\c@tcblayer=\count373
+\c@tcolorbox@number=\count374
 \l__tcobox_tmpa_box=\box99
 \l__tcobox_tmpa_dim=\dimen385
 \tcb@temp=\box100
@@ -1721,11 +1693,11 @@ b
 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count376
+\FV@CodeLineNo=\count375
 \FV@InFile=\read4
 \FV@TabBox=\box104
-\c@FancyVerbLine=\count377
-\FV@StepNumber=\count378
+\c@FancyVerbLine=\count376
+\FV@StepNumber=\count377
 \FV@OutFile=\write5
 )
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -1737,50 +1709,50 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
-\linenopenalty=\count379
+\linenopenalty=\count378
 \output=\toks58
-\linenoprevgraf=\count380
+\linenoprevgraf=\count379
 \linenumbersep=\dimen386
 \linenumberwidth=\dimen387
-\c@linenumber=\count381
-\c@pagewiselinenumber=\count382
-\c@LN@truepage=\count383
-\c@internallinenumber=\count384
-\c@internallinenumbers=\count385
+\c@linenumber=\count380
+\c@pagewiselinenumber=\count381
+\c@LN@truepage=\count382
+\c@internallinenumber=\count383
+\c@internallinenumbers=\count384
 \quotelinenumbersep=\dimen388
 \bframerule=\dimen389
 \bframesep=\dimen390
 \bframebox=\box105
-\linenoamsmath@ams@eqpen=\count386
+\linenoamsmath@ams@eqpen=\count385
 LaTeX Info: Redefining \\ on input line 3180.
 )
-\c@FancyVerbWriteLine=\count387
-\c@FancyVerbBufferIndex=\count388
-\c@FancyVerbBufferLength=\count389
-\c@FancyVerbBufferLine=\count390
-\c@FV@oldbufferlength=\count391
-\c@FV@TrueTabGroupLevel=\count392
-\c@FV@TrueTabCounter=\count393
+\c@FancyVerbWriteLine=\count386
+\c@FancyVerbBufferIndex=\count387
+\c@FancyVerbBufferLength=\count388
+\c@FancyVerbBufferLine=\count389
+\c@FV@oldbufferlength=\count390
+\c@FV@TrueTabGroupLevel=\count391
+\c@FV@TrueTabCounter=\count392
 \FV@TabBox@Group=\box106
 \FV@TmpLength=\skip71
-\c@FV@HighlightLinesStart=\count394
-\c@FV@HighlightLinesStop=\count395
-\FV@LoopCount=\count396
+\c@FV@HighlightLinesStart=\count393
+\c@FV@HighlightLinesStop=\count394
+\FV@LoopCount=\count395
 \FV@NCharsBox=\box107
 \FV@BreakIndent=\dimen391
-\FV@BreakIndentNChars=\count397
+\FV@BreakIndentNChars=\count396
 \FV@BreakSymbolSepLeft=\dimen392
-\FV@BreakSymbolSepLeftNChars=\count398
+\FV@BreakSymbolSepLeftNChars=\count397
 \FV@BreakSymbolSepRight=\dimen393
-\FV@BreakSymbolSepRightNChars=\count399
+\FV@BreakSymbolSepRightNChars=\count398
 \FV@BreakSymbolIndentLeft=\dimen394
-\FV@BreakSymbolIndentLeftNChars=\count400
+\FV@BreakSymbolIndentLeftNChars=\count399
 \FV@BreakSymbolIndentRight=\dimen395
-\FV@BreakSymbolIndentRightNChars=\count401
-\c@FancyVerbLineBreakLast=\count402
+\FV@BreakSymbolIndentRightNChars=\count400
+\c@FancyVerbLineBreakLast=\count401
 \FV@LineBox=\box108
 \FV@LineIndentBox=\box109
-\c@FV@BreakBufferDepth=\count403
+\c@FV@BreakBufferDepth=\count402
 \FV@LineWidth=\dimen396
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
@@ -1808,8 +1780,8 @@ Package ifplatform Warning:
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count404
-\xs_countb=\count405
+\xs_counta=\count403
+\xs_countb=\count404
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
@@ -1823,7 +1795,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count406
+\c@float@type=\count405
 \float@exts=\toks59
 \float@box=\box110
 \@float@everytoks=\toks60
@@ -1832,10 +1804,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \minted@appexistsfile=\read5
 \minted@bgbox=\box112
 \minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count407
-\c@minted@pygmentizecounter=\count408
+\c@minted@FancyVerbLineTemp=\count406
+\c@minted@pygmentizecounter=\count407
 \@float@every@listing=\toks61
-\c@listing=\count409
+\c@listing=\count408
 )
 runsystem(mkdir -p _minted-beamer)...disabled (restricted).
 
@@ -1857,7 +1829,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
-\c@tcblisting=\count410
+\c@tcblisting=\count409
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
 (/usr/share/texlive/texmf-dist/tex/latex/pdfcol/pdfcol.sty
@@ -1992,16 +1964,16 @@ LaTeX Font Info:    ... okay on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count411
+\scratchcounter=\count410
 \scratchdimen=\dimen401
 \scratchbox=\box117
-\nofMPsegments=\count412
-\nofMParguments=\count413
+\nofMPsegments=\count411
+\nofMParguments=\count412
 \everyMPshowfont=\toks62
-\MPscratchCnt=\count414
+\MPscratchCnt=\count413
 \MPscratchDim=\dimen402
-\MPnumerator=\count415
-\makeMPintoPDFobject=\count416
+\MPnumerator=\count414
+\makeMPintoPDFobject=\count415
 \everyMPtoPDFconversion=\toks63
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -2087,7 +2059,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count417
+\c@lstlisting=\count416
 \symgns@font=\mathgroup12
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
 (Font)                  TS1/lmss/m/n --> TS1/lmss/b/n on input line 81.
@@ -2101,20 +2073,16 @@ Package gensymb Info: Using \textohm for \ohm on input line 81.
 Package gensymb Info: Using \textmu for \micro on input line 81.
 
 No file beamer.nav.
-
-Overfull \vbox (12.0pt too high) has occurred while \output is active []
-
- [1
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}]
-
-[2
+dvips/lm/lm-ec.enc}] [2
 
 ] (./tables/table.tex
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
 1.
- (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
+
+(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
@@ -2195,7 +2163,7 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
 dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] [4
 
 ]
-<figs/q10.png, id=148, 479.8728pt x 461.0826pt>
+<figs/q10.png, id=147, 479.8728pt x 461.0826pt>
 File: figs/q10.png Graphic file (type png)
 <use figs/q10.png>
 Package pdftex.def Info: figs/q10.png  used on input line 121.
@@ -2282,10 +2250,10 @@ Package rerunfilecheck Info: Checksums for `beamer.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57952 strings out of 474222
- 1372423 string characters out of 5748734
- 2390280 words of memory out of 5000000
- 79166 multiletter control sequences out of 15000+600000
+ 57944 strings out of 474222
+ 1372366 string characters out of 5748734
+ 2390225 words of memory out of 5000000
+ 79159 multiletter control sequences out of 15000+600000
  624243 words of font info for 98 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,19n,123p,1174b,1475s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2295,12 +2263,11 @@ sr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfss1095.pfb>
-Output written on beamer.pdf (11 pages, 213538 bytes).
+texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on beamer.pdf (11 pages, 206131 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
+ 408 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
  24 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
