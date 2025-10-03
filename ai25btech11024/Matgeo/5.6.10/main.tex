@@ -1,0 +1,82 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                               
+
+\def\inputGnumericTable{}                      
+\usepackage[latin1]{inputenc}                    
+\usepackage{color}                              
+\usepackage{array}                             
+\usepackage{longtable}                          
+\usepackage{calc}                               
+\usepackage{multirow}                           
+\usepackage{hhline}                            
+\usepackage{ifthen}                          
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{5.6.10}
+\author{AI25BTECH11024 - Pratyush Panda
+}
+\maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question: } \\
+If $\Vec{A}=\myvec{3 & 1 \\ -1 & 2}$, show that $\Vec{A}^2-5\Vec{A}+7\Vec{I}=0$.
+\vspace{0.7cm}
+
+\textbf{Solution: } \\
+Given matrix $\Vec{A}=\myvec{3 & 1 \\ -1 & 2}$.\\
+
+We can write the character equation for the matrix by,
+\begin{align}
+f\brak{\lambda}=|\Vec{A}-\lambda\Vec{I}| \\
+f\brak{\lambda}=\vline\myvec{3-\lambda & 1 \\ -1 & 2-\lambda}\vline\\
+f\brak{\lambda}=\lambda^2-5\lambda+7
+\end{align}
+
+Since we know by the Caley Hamilton theorem, the matrix itself satisfies its own characteristic equation. Thus, we get;
+\begin{align}
+\Vec{A}^2-5\Vec{A}+7\Vec{I}=0
+\end{align}
+Hence proved.
+
+\end{document}
