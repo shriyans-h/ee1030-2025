@@ -61,113 +61,88 @@ to 1. It becomes 1/2 if we only add 1 to the denominator. What is the fraction?
 
 
 \textbf{Solution:}
-% Represent the unknown fraction as a homogeneous vector
-Given
-Let the unknown fraction be represented as:
+
+
+Let the unknown fraction be represented as
 \begin{align}
-\vec{v} &= \myvec{x \\ y \\ 1}
-\end{align}
-so that the fraction equals:
-\begin{align}
+\vec{u} &= \myvec{x \\ y}, \qquad 
 \frac{x}{y}.
 \end{align}
 
-% Transformation: add 1 to numerator and subtract 1 from denominator
-case 1 :Adding 1 to the numerator and subtracting 1 from the denominator:
+Affine transformations are written as a vector plus a translation.\\
+
+case 1:add 1 to numerator, subtract 1 from denominator
 \begin{align}
-\vec{T_1} &= \myvec{1 & 0 & 1 \\ 0 & 1 & -1 \\ 0 & 0 & 1} \\
-\vec{T_1} \vec{v} &= \myvec{x+1 \\ y-1 \\ 1}
+T_1(\vec{u}) &= \vec{u} + \myvec{1 \\ -1}, \quad 
+\end{align}
+
+case 2:add 1 to denominator
+\begin{align}
+T_2(\vec{u}) &= \vec{u} + \myvec{0 \\ 1}, \quad
+\end{align}
+
+Condition for a fraction:  
+For any vector $\myvec{a \\ b}$, the requirement $\tfrac{a}{b}=k$ is equivalent to the linear equation
+\begin{align}
+\vec{r}_k \myvec{a \\ b} = 0, 
+\qquad \vec{r}_k = \myvec{1 & -k},
+\end{align}
+since $\vec{r}_k \myvec{a \\ b} = a - kb = 0 \iff \tfrac{a}{b}=k$.
+
+
+
+Case 1: $T_1(\vec{u})$ must yield fraction $1$.use $\vec{r}_1 = \myvec{1 & -1}$
+\begin{align}
+\vec{r}_1 \big(T_1(\vec{u})\big) &= 0 \\
+\implies \vec{r}_1\vec{u} + \vec{r}_1\myvec{1 \\ -1} &= 0 \\
+\myvec{1 & -1}\vec{u} + 2 &= 0 
+\end{align}
+This gives the first equation.
+
+
+
+Case 2: $T_2(\vec{u})$ must yield fraction $\tfrac{1}{2}$.  
+To avoid fractions, multiply the functional by $2$, i.e., use $\vec{r}_2 = \myvec{2 & -1}$.
+\begin{align}
+\vec{r}_2 \big(T_2(\vec{u})\big) &= 0 \\
+\implies \vec{r}_2\vec{u} + \vec{r}_2\myvec{0 \\ 1} &= 0 \\
+\myvec{2 & -1}\vec{u} - 1 &= 0 
+\end{align}
+This gives the second equation.
+
+
+
+System of equations:  
+Both conditions together form the system
+\begin{align}
+\myvec{1 & -1 \\ 2 & -1}\vec{u} &= \myvec{-2 \\ 1}.
 \end{align}
 
 
 
-case 2 :Adding 1 to the denominator:
+Gaussian elimination:  
+Form the augmented matrix
 \begin{align}
-\vec{\vec{T_2}} &= \myvec{1 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 1} \\
-\vec{\vec{T_2}} \vec{v} &= \myvec{x \\ y+1 \\ 1}
+\left[\myvec{1 & -1 \\ 2 & -1} \;\middle|\; \myvec{-2 \\ 1}\right].
 \end{align}
-
-% Fraction condition as linear functional
-Condition for a fraction $\frac{a}{b}=k$:
+Eliminate the entry below the pivot:
 \begin{align}
-\myvec{1 & -k & 0} \myvec{a \\ b \\ 1} &= 0
+R_2 \leftarrow R_2 - 2R_1 \;\;\Rightarrow\;\;
+\left[\myvec{1 & -1 \\ 0 & 1} \;\middle|\; \myvec{-2 \\ 5}\right].
 \end{align}
-
-% Apply condition for T1*v = 1
-Applying the first condition ($\vec{T_1}*\vec{v}$ = 1):
+Now eliminate above the pivot:
 \begin{align}
-\vec{r_1} &= \myvec{1 & -1 & 0} \vec{T_1} \\
-    &= \myvec{1 & -1 & 2} \\
-\vec{r_1} \vec{v} &= 0
-\end{align}
-
-
-% Apply condition for T2*v = 1/2
-Applying the second condition ($\vec{T_2}*\vec{v}$ = 1/2):
-\begin{align}
-\vec{r_2} &= \myvec{2 & -1 & 0} \vec{\vec{T_2}} \\
-    &= \myvec{2 & -1 & -1} \\
-\vec{r_2} \vec{v} &= 0
-\end{align}
-
-% Stack equations into system
-System of equations in matrix form:
-\begin{align}
-\vec{M} \vec{v} &= 0 \\
-\vec{M} &= \myvec{1 & -1 & 2 \\ 2 & -1 & -1}
-\end{align}
-
-% Partition matrix
-
-
-
-% Solve with Gaussian elimination
-Partitioning M into A and c, and vector v into u:
-\begin{align}
-\vec{M} &= \myvec{\vec{A} & \vec{c}} \\
-\vec{A} &= \myvec{1 & -1 \\ 2 & -1}, \quad \vec{c} = \myvec{2 \\ -1} \\
-\vec{v} &= \myvec{\vec{u} \\ 1} \\
-\vec{A} \vec{u} + \vec{c} &= 0 \implies \vec{A} \vec{u} = -\vec{c}
-\end{align}
-
-% Solve with Gaussian elimination using \augvec
-
-
-Form the augmented matrix:
-\begin{align}
-\left[\myvec{1 & -1 \\ 2 & -1} \;\middle|\; \myvec{-2 \\ 1}\right]
-\end{align}
-
-% Step 2: Eliminate the entry below the pivot (column 1)
-Eliminate below the pivot using 
-\(r_2 \leftarrow r_2 - 2 r_1\):
-\begin{align}
-\left[\myvec{1 & -1 \\ 0 & 1} \;\middle|\; \myvec{-2 \\ 5}\right]
-\end{align}
-
-
-% Step 3: Eliminate the entry above the pivot (column 2)
-Eliminate above the pivot using 
-\(r_1 \leftarrow r_1 + r_2\):
-\begin{align}
-\left[\myvec{1 & 0 \\ 0 & 1} \;\middle|\; \myvec{3 \\ 5}\right]
+R_1 \leftarrow R_1 + R_2 \;\;\Rightarrow\;\;
+\left[\myvec{1 & 0 \\ 0 & 1} \;\middle|\; \myvec{3 \\ 5}\right].
 \end{align}
 
 
 
-% Solution for u
-Reading off the solution for u:
+Final solution:
 \begin{align}
-\vec{u} &= \myvec{3 \\ 5}
+\vec{u} &= \myvec{3 \\ 5}, \\
+\frac{x}{y} &= \frac{3}{5}.
 \end{align}
-
-% Final fraction
-Hence the homogeneous vector and fraction:
-\begin{align}
-\vec{v} &= \myvec{3 \\ 5 \\ 1} \\
-\frac{x}{y} &= \frac{3}{5}
-\end{align}
-
 
 \begin{figure}[H]
     \centering
@@ -175,4 +150,9 @@ Hence the homogeneous vector and fraction:
     \caption{}
     \label{fig:placeholder}
 \end{figure}
+
+
+
+
+
 \end{document}
