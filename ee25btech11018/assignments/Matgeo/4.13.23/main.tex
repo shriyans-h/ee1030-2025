@@ -1,0 +1,125 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{problem}{Problem}
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{example}{Example}[section]
+%\newtheorem{definition}[problem]{Definition}
+
+\begin{document}
+
+\title{4.13.23}
+\author{EE25BTECH11018 - Darisy Sreetej}
+% \maketitle
+% \newpage
+% \bigskip
+%\begin{document}
+{\let\newpage\relax\maketitle}
+%\renewcommand{\thefigure}{\theenumi}
+%\renewcommand{\thetable}{\theenumi}
+\textbf{Question:}\\
+Let $a, b, c ,d$ be non-zero numbers. If the point of intersection of the lines $4a\vec{x} +2a\vec{y} + c = 0$ and $5b\vec{x} + 2b\vec{y} + d = 0$ lies in the fourth quadrant and is equidistant from the two axes then
+\begin{enumerate}
+    \item $3bc-2ad=0$
+    \item $2bc-3ad=0$
+    \item $3bc+2ad=0$
+    \item $2bc+3ad=0$
+\end{enumerate}
+\solution\\
+The two lines are
+\begin{align}
+	4a\vec{x} +2a\vec{y} + c = 0  , \\
+    5b\vec{x} + 2b\vec{y} + d = 0
+\end{align}
+This equation can be expressed in terms of matrices
+\begin{align}
+    \myvec{4a\\2a}^\top\myvec{\vec{x}\\\vec{y}}=-c\\
+   \myvec{5b\\2b}^\top\myvec{\vec{x}\\\vec{y}}=-d
+\end{align}
+They can be represented as,
+\begin{align}
+    \myvec{4a&5b\\2a&2b}^\top\myvec{\vec{x}\\\vec{y}}=\myvec{-c\\-d}
+\end{align}
+Using augmented matrix,
+\begin{align}
+\augvec{2}{1}{4a&2a&-c\\5b&2b&-d}
+\end{align}
+$R_1=\frac{R_1}{4a}$
+\begin{align}
+\augvec{2}{1}{1&\frac{1}{2}&\frac{-c}{4a}\\5b&2b&-d}
+\end{align}
+$R_2=R_2-5bR_1$
+\begin{align}
+\augvec{2}{1}{1&\frac{1}{2}&\frac{-c}{4a}\\0&\frac{-b}{2}&\frac{-4ad+5bc}{4a}}
+\end{align}
+\begin{align}
+\vec{y}\frac{-b}{2}=\frac{-4ad+5bc}{4a}
+\end{align}
+\begin{align}
+\vec{y}=\frac{4ad-5bc}{2ab}
+\end{align}
+Also,
+\begin{align}
+\vec{x}+\frac{1}{2}\vec{y}=\frac{-c}{4a}
+\end{align}
+\begin{align}
+\vec{x}=\frac{bc-ad}{ab}
+\end{align}
+\begin{align}
+\myvec{\vec{x}\\\vec{y}}=\myvec{\frac{bc-ad}{ab}\\\frac{4ad-5bc}{2ab}}
+\end{align}
+Therefore , the point of intersection is $\brak{\frac{bc-ad}{ab},\frac{4ad-5bc}{2ab}}$\\
+According to the condition,the intersection point is equidistant from the axes and lies in the fourth quadrant, so its coordinates satisfy $y=-x$ \\
+Therefore,
+\begin{align}
+\frac{4ad-5bc}{2ab}=-\frac{bc-ad}{ab}\\
+2ad-2bc=4ad-5bc
+\end{align}
+\begin{align}
+3bc=2ad
+\end{align}
+Therefore, option(a) is correct
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=0.5\textheight, keepaspectratio]{figs/fig.png}
+    \label{figure_1}
+\end{figure}
+\end{document}
+
