@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  16 AUG 2025 15:23
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.6)  16 AUG 2025 08:43
->>>>>>> d734831 (Assignment)
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,7 +419,6 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 )
 \c@problem=\count296
 
-<<<<<<< HEAD
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count297
@@ -498,12 +493,6 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count307
 \l__pdf_internal_box=\box104
-=======
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
-\l__pdf_internal_box=\box58
->>>>>>> d734831 (Assignment)
 )
 No file main.aux.
 \openout1 = `main.aux'.
@@ -529,7 +518,6 @@ LaTeX Font Info:    ... okay on input line 16.
 -- Lines per column: 50 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-<<<<<<< HEAD
 \scratchcounter=\count308
 \scratchdimen=\dimen199
 \scratchbox=\box105
@@ -540,18 +528,6 @@ LaTeX Font Info:    ... okay on input line 16.
 \MPscratchDim=\dimen256
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
-=======
-\scratchcounter=\count298
-\scratchdimen=\dimen190
-\scratchbox=\box59
-\nofMPsegments=\count299
-\nofMParguments=\count300
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen191
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
->>>>>>> d734831 (Assignment)
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -568,32 +544,18 @@ Package hyperref Info: Link coloring OFF on input line 16.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
 
-=======
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
->>>>>>> d734831 (Assignment)
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
-=======
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
->>>>>>> d734831 (Assignment)
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
 2.
 
@@ -601,61 +563,31 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 74--77
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
-
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
-6.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
->>>>>>> d734831 (Assignment)
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 (./tables/table1.tex) [2]
 Underfull \hbox (badness 10000) in paragraph at lines 163--166
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 95--98
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 174--177
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 185--188
 
  []
@@ -677,118 +609,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 218--220
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
-
- []
-
-(./tables/table1.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
->>>>>>> d734831 (Assignment)
 
  []
 
 [3]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 223--226
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 182--184
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 236--239
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 247--249
-=======
-Overfull \hbox (13.83443pt too wide) in paragraph at lines 211--213
-[]\OT1/ptm/m/n/12 Let $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT
-1/cmr/m/n/12 ) = []\OML/cmm/m/it/12 ; e[]$\OT1/ptm/m/n/12 , where $[]$ is the c
-om-plex con-ju-gate of $\OML/cmm/m/it/12 z$\OT1/ptm/m/n/12 . Then, it is dif-fe
-r-en-tiable on  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 250--252
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 224--226
->>>>>>> d734831 (Assignment)
 
  []
 
 [4]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 270--273
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 250--252
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 281--284
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 293--296
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 269--271
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 304--307
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 326--329
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
->>>>>>> d734831 (Assignment)
 
  []
 
 [5]
-<<<<<<< HEAD
 <figs/B/fig1.png, id=154, 422.32782pt x 191.21437pt>
 File: figs/B/fig1.png Graphic file (type png)
 <use figs/B/fig1.png>
@@ -796,119 +670,45 @@ Package pdftex.def Info: figs/B/fig1.png  used on input line 342.
 (pdftex.def)             Requested size: 361.19843pt x 163.5425pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 347--348
-=======
-Overfull \hbox (30.13872pt too wide) in paragraph at lines 307--309
-[]\OT1/ptm/m/n/12 For sta-ble equi-lib-rium of a float-ing body, which one of t
-he fol-low-ing state-ments is cor-rect?  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--322
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
-
- []
-
-<figs/B/fig1.png, id=157, 422.32782pt x 191.21437pt>
-File: figs/B/fig1.png Graphic file (type png)
-<use figs/B/fig1.png>
-Package pdftex.def Info: figs/B/fig1.png  used on input line 389.
-(pdftex.def)             Requested size: 361.19843pt x 163.5425pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
->>>>>>> d734831 (Assignment)
-
- []
-
-
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 350--352
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 398--401
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 354--356
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 358--361
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
-
- []
-
-[7 <./figs/B/fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 422--424
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 369--372
 
  []
 
 [6 <./figs/B/fig1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 382--385
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 435--437
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 396--398
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 448--452
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 406--409
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 462--464
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 417--420
 
  []
@@ -931,35 +731,10 @@ Package pdftex.def Info: figs/B/fig3.png  used on input line 450.
 (pdftex.def)             Requested size: 206.39685pt x 216.591pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 456--458
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 475--477
-
- []
-
-[8]
-<figs/B/fig2.png, id=206, 453.94594pt x 137.7647pt>
-File: figs/B/fig2.png Graphic file (type png)
-<use figs/B/fig2.png>
-Package pdftex.def Info: figs/B/fig2.png  used on input line 492.
-(pdftex.def)             Requested size: 283.80157pt x 86.13004pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
-
- []
-
-<figs/B/fig3.png, id=207, 350.81062pt x 368.1253pt>
-File: figs/B/fig3.png Graphic file (type png)
-<use figs/B/fig3.png>
-Package pdftex.def Info: figs/B/fig3.png  used on input line 514.
-(pdftex.def)             Requested size: 206.39685pt x 216.591pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--523
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 460--462
 
  []
@@ -987,118 +762,50 @@ Package pdftex.def Info: figs/B/fig5.png  used on input line 484.
 (pdftex.def)             Requested size: 387.0pt x 241.21793pt.
 [9 <./figs/B/fig4.png> <./figs/B/fig5.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 507--510
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 526--528
-
- []
-
-[9 <./figs/B/fig2.png> <./figs/B/fig3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 531--533
-
- []
-
-<figs/B/fig4.png, id=223, 429.10312pt x 167.87718pt>
-File: figs/B/fig4.png Graphic file (type png)
-<use figs/B/fig4.png>
-Package pdftex.def Info: figs/B/fig4.png  used on input line 540.
-(pdftex.def)             Requested size: 361.19843pt x 141.313pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 544--545
-
- []
-
-[10 <./figs/B/fig4.png>]
-<figs/B/fig5.png, id=233, 271.76532pt x 169.38281pt>
-File: figs/B/fig5.png Graphic file (type png)
-<use figs/B/fig5.png>
-Package pdftex.def Info: figs/B/fig5.png  used on input line 552.
-(pdftex.def)             Requested size: 387.0pt x 241.21793pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
-
- []
-
-[11 <./figs/B/fig5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 576--578
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 518--519
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 589--590
->>>>>>> d734831 (Assignment)
 
  []
 
 (./tables/table2.tex)
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 522--525
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 533--536
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 606--608
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 544--547
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 619--621
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 555--557
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 632--634
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 637--639
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 559--562
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 650--653
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
  []
 
 [10]
 Underfull \hbox (badness 10000) in paragraph at lines 582--584
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 663--665
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 594--596
 
  []
@@ -1171,9 +878,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 681--683
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 685--687
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 676--678
->>>>>>> d734831 (Assignment)
 
  []
 
@@ -1183,90 +887,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 689--691
  []
 
 [13]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 706--709
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
-
- []
-
-(./tables/table3.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 707--708
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 717--720
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 718--720
-
- []
-
-<figs/C/fig1.png, id=299, 175.40532pt x 169.38281pt>
-File: figs/C/fig1.png Graphic file (type png)
-<use figs/C/fig1.png>
-Package pdftex.def Info: figs/C/fig1.png  used on input line 735.
-(pdftex.def)             Requested size: 258.0pt x 249.18356pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 740--741
-
- []
-
-[14 <./figs/C/fig1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 744--746
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 729--732
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 749--751
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 740--743
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 754--756
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 751--754
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 759--761
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 762--765
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 764--766
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 773--776
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 769--771
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Overfull \hbox (13.3924pt too wide) in paragraph at lines 784--787
 []\OT1/ptm/m/n/12 The cor-rect or-der of glass tran-si-tion tem-per-a-ture ($\O
 ML/cmm/m/it/12 T[]$\OT1/ptm/m/n/12 ) for the poly-mers listed be-low is (PC=pol
@@ -1280,76 +935,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 784--787
 
 [14]
 Underfull \hbox (badness 10000) in paragraph at lines 795--798
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 774--776
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 807--808
 
  []
 
 (./tables/table4.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 811--813
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 778--780
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 821--822
 
  []
 
 (./tables/table5.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 825--827
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 783--785
->>>>>>> d734831 (Assignment)
 
  []
 
 [15]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 837--838
 
  []
 
 (./tables/table6.tex)
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 802--804
-
- []
-
-
-Overfull \hbox (7.80756pt too wide) in paragraph at lines 815--817
-[]\OT1/ptm/m/n/12 Which of the fol-low-ing poly-mers can be syn-the-sized by ri
-ng open-ing poly-mer-iza-tion?  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 815--817
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 828--830
-
- []
-
-
->>>>>>> d734831 (Assignment)
 Underfull \hbox (badness 10000) in paragraph at lines 841--843
 
  []
 
 
-<<<<<<< HEAD
 Overfull \hbox (69.29433pt too wide) in paragraph at lines 851--854
 []\OT1/ptm/m/n/12 The or-der of lim-it-ing oxy-gen in-dex for the fol-low-ing p
 oly-mers is (PP=polypropylene; PTFE=polytetrafluoroethylene;
@@ -1357,28 +976,20 @@ oly-mers is (PP=polypropylene; PTFE=polytetrafluoroethylene;
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 851--854
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 854--856
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 862--863
 
  []
 
 (./tables/table7.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 866--868
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 867--869
->>>>>>> d734831 (Assignment)
 
  []
 
 [16]
-<<<<<<< HEAD
 Overfull \hbox (68.9708pt too wide) in paragraph at lines 878--880
 \OT1/ptm/m/n/12 (PS=polystyrene, PPO=polyphenylene ox-ide, PDMS=poly(dimethyl s
 ilox-ane), PP=polypropylene, PE=polyethylene,
@@ -1392,17 +1003,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 878--880
 (./tables/table8.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 883--885
 
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 880--882
-
- []
-
-
-Overfull \hbox (13.3924pt too wide) in paragraph at lines 893--895
-[]\OT1/ptm/m/n/12 The cor-rect or-der of glass tran-si-tion tem-per-a-ture ($\O
-ML/cmm/m/it/12 T[]$\OT1/ptm/m/n/12 ) for the poly-mers listed be-low is (PC=pol
-ycarbonate;
->>>>>>> d734831 (Assignment)
  []
 
 
@@ -1411,16 +1011,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 893--895
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 897--899
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 906--908
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 902--903
 
  []
@@ -1437,92 +1032,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 910--912
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 914--916
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 919--920
-
- []
-
-(./tables/table4.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 923--924
->>>>>>> d734831 (Assignment)
 
  []
 
 [17]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 919--921
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 935--936
-
- []
-
-(./tables/table5.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 950--951
-
- []
-
-(./tables/table6.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 954--955
-
- []
-
-
-Overfull \hbox (69.29433pt too wide) in paragraph at lines 966--968
-[]\OT1/ptm/m/n/12 The or-der of lim-it-ing oxy-gen in-dex for the fol-low-ing p
-oly-mers is (PP=polypropylene; PTFE=polytetrafluoroethylene;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 966--968
->>>>>>> d734831 (Assignment)
 
  []
 
 [18]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 939--942
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 979--980
-
- []
-
-(./tables/table7.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 983--984
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 951--954
-=======
-Overfull \hbox (68.9708pt too wide) in paragraph at lines 995--997
-\OT1/ptm/m/n/12 (PS=polystyrene, PPO=polyphenylene ox-ide, PDMS=poly(dimethyl s
-ilox-ane), PP=polypropylene, PE=polyethylene,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 995--997
-
- []
-
-(./tables/table8.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 962--965
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1015
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 973--976
 
  []
@@ -1549,134 +1082,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 1013--1015
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1017--1019
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1020
->>>>>>> d734831 (Assignment)
 
  []
 
 [19]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
 
  []
 
 (./tables/table9.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1025--1027
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1035--1036
 
  []
 
 (./tables/table10.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1038--1040
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
 
  []
 
 (./tables/table11.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1052--1054
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1036
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
 
  []
 
 (./tables/table12.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1066--1068
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1042
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
->>>>>>> d734831 (Assignment)
 
  []
 
 [20]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
 
  []
 
 (./tables/table13.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1081--1083
-=======
-Overfull \hbox (33.51031pt too wide) in paragraph at lines 1065--1067
-[]\OT1/ptm/m/n/12 Colloidal sta-bil-ity of milk ca-sein is be-cause of the high
-ly hy-drated car-bo-hy-drate residues in  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1065--1067
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1092--1094
-=======
-Overfull \hbox (22.592pt too wide) in paragraph at lines 1078--1080
-[]\OT1/ptm/m/n/12 Rice bran is sta-bi-lized prior to oil ex-trac-tion to pro-te
-ct it from the ac-tiv-ity of $[]$.  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1080
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1096--1098
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1094
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1100--1102
-=======
-Overfull \hbox (24.70313pt too wide) in paragraph at lines 1105--1107
-[]\OT1/ptm/m/n/12 Thearubigins and theaflavins in black tea are formed by the o
-x-i-da-tion and dimer-iza-tion of  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1104--1106
 
  []
@@ -1688,135 +1162,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1112--1114
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1120
->>>>>>> d734831 (Assignment)
 
  []
 
 [21]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1116--1118
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1133
->>>>>>> d734831 (Assignment)
 
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1120--1122
 
  []
 
 [22] (./main.aux)
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 1144--1146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1149--1151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1159--1160
-
- []
-
-(./tables/table9.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1163--1164
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 1175--1176
-
- []
-
-(./tables/table10.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1178--1179
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1190--1191
-
- []
-
-(./tables/table11.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1195
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
-
- []
-
-(./tables/table12.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1210--1211
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
-
- []
-
-[23] (./tables/table13.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1226--1227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1238--1241
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1246
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1256
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1259--1262
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1265--1267
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1272
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1277
-
- []
-
-[25] (./main.aux)
->>>>>>> d734831 (Assignment)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1835,7 +1194,6 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
  12897 strings out of 474222
  203218 string characters out of 5748734
  1942975 words of memory out of 5000000
@@ -1843,15 +1201,6 @@ Here is how much of TeX's memory you used:
  595255 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,79p,685b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
-=======
- 12761 strings out of 474222
- 200671 string characters out of 5748734
- 1938975 words of memory out of 5000000
- 34413 multiletter control sequences out of 15000+600000
- 595255 words of font info for 115 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 75i,10n,79p,697b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
->>>>>>> d734831 (Assignment)
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -1866,18 +1215,10 @@ cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-<<<<<<< HEAD
 Output written on main.pdf (22 pages, 330216 bytes).
 PDF statistics:
  676 PDF objects out of 1000 (max. 8388607)
  603 compressed objects within 7 object streams
  419 named destinations out of 1000 (max. 500000)
-=======
-Output written on main.pdf (25 pages, 329424 bytes).
-PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 614 compressed objects within 7 object streams
- 422 named destinations out of 1000 (max. 500000)
->>>>>>> d734831 (Assignment)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
