@@ -93,35 +93,34 @@ d=\Big\lVert\Big(I-\frac{\mathbf m\mathbf m^{T}}{\mathbf m^{T}\mathbf m}\Big)(\m
 
 \subsection*{Equivalent scalar form}
 Let \(\mathbf w=\mathbf p-\mathbf a\). Using \(P=\dfrac{\mathbf m\mathbf m^{T}}{\mathbf m^{T}\mathbf m}\) we get
-\[
+\begin{equation}
 d^{2}=\mathbf w^{T}(I-P)\mathbf w
 = \mathbf w^{T}\mathbf w - \mathbf w^{T}\frac{\mathbf m\mathbf m^{T}}{\mathbf m^{T}\mathbf m}\mathbf w
 = \lVert\mathbf w\rVert^{2} - \frac{(\mathbf m^{T}\mathbf w)^{2}}{\mathbf m^{T}\mathbf m}.
-\]
+\end{equation}
 This form is often quicker for computation.
 
 \subsection*{Substitute the given vectors}
-\[
+\begin{equation}
 \mathbf p=\begin{bmatrix}2\\[2pt]4\\[2pt]-1\end{bmatrix},\qquad
 \mathbf p-\mathbf a=\mathbf w=\begin{bmatrix}7\\[2pt]7\\[2pt]-7\end{bmatrix}.
-\]
+\end{equation}
 Compute the denominator:
-\[
+\begin{equation}
 \mathbf m^{T}\mathbf m = 1^{2}+4^{2}+(-9)^{2}=1+16+81=98.
-\]
+\end{equation}
 Compute the inner product \(\mathbf m^{T}\mathbf w\):
-\[
+\begin{equation}
 \mathbf m^{T}\mathbf w = 1\cdot 7 + 4\cdot 7 + (-9)\cdot(-7) = 7+28+63=98.
-\]
+\end{equation}
 Now use the scalar form:
-\[
+\begin{equation}
 \lVert\mathbf w\rVert^{2} = 7^{2}+7^{2}+(-7)^{2}=49+49+49=147,
-\]
+\end{equation}
 so
-\[
-d^{2}=147-\frac{98^{2}}{98}=147-98=49,
-\qquad d=\sqrt{49}=7.
-\]
+\begin{equation}
+d^{2}=147-\frac{98^{2}}{98}=147-98=49
+\end{equation}
 
 \section*{Final Answer}
 \[
