@@ -2,11 +2,11 @@
 \usepackage{tfrupee} 
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern} 
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern} 
 \usepackage{listings}
 \usepackage{xcolor} 
 \usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+
 \definecolor{myblue}{RGB}{48, 63, 159}
 \setbeamercolor{palette primary}{bg=myblue, fg=white}
 \setbeamercolor{structure}{fg=myblue}
@@ -14,16 +14,13 @@
 \setbeamercolor{title}{bg=myblue, fg=white}
 \setbeamercolor{footlinecolor}{bg=myblue, fg=white}
 
-
 \defbeamertemplate*{title page}{mytemplate}{
 	\vfill
 	\begin{center}
-		
 		\begin{beamercolorbox}[wd=0.8\paperwidth, center, rounded=true, shadow=true]{title}
 			\usebeamerfont{title}\inserttitle\par
 		\end{beamercolorbox}
 		\vspace{2cm} 
-		
 		\usebeamerfont{author}\insertauthor
 		\vspace{1cm} 
 		\usebeamerfont{date}\insertdate
@@ -31,13 +28,11 @@
 	\vfill
 }
 
-
 \defbeamertemplate*{frametitle}{mytemplate}{
 	\begin{beamercolorbox}[wd=\paperwidth, ht=2.5ex, dp=1.5ex, left]{frametitle}
 		\hspace{1em}\usebeamerfont{frametitle}\insertframetitle
 	\end{beamercolorbox}
 }
-
 
 \setbeamertemplate{footline}{
 	\begin{beamercolorbox}[wd=\paperwidth, ht=2.25ex, dp=1ex]{footlinecolor}
@@ -49,7 +44,6 @@
 	\end{beamercolorbox}
 }
 
-
 \setbeamerfont{author in footline}{size=\tiny}
 \setbeamerfont{title in footline}{size=\tiny}
 \setbeamerfont{date in footline}{size=\tiny}
@@ -57,115 +51,202 @@
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
 
-
-\title{10.6.8}
+\title{10.6.8 - Eigenvector Method}
 \author{Shriyansh Chawda-EE25BTECH11052}
-
-
-
 
 \begin{document}
 	
-
-		\setbeamertemplate{footline}{} 
-		\frame{\titlepage}
+	\setbeamertemplate{footline}{} 
+	\frame{\titlepage}
 	
+	\begin{frame}{Question} 
+		Construct a pair of tangents to a circle of radius 4cm from a point P lying outside the circle at 
+		a distance of 6cm from the centre.
+		\hfill{(10, 2023)}\\
+		\vspace{1em}
+		\textbf{Method: Using Eigenvector Decomposition}
+	\end{frame}
 	
-\begin{frame}{Question} 
-
-Construct a pair of tangents to a circle of radius 4cm from a point P lying outside the circle at 
-a distance of 6cm from the centre.
-\hfill{(10, 2023)}\\
-\end{frame}
-	\begin{frame}{Solution}
-	Let the center of the circle be at origin,The equation is $x^2 + y^2 = 16$ and Point P (at distance 6 from center along x-axis) 
-\begin{align}
-	O = \myvec{0\\0}\\
-	P = \myvec{6\\0} \\
-	\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0
-\end{align}
-where
-\begin{equation}
-	\vec{V} = \myvec{1 & 0\\0 & 1}, \quad \vec{u} = \myvec{0\\0}, \quad f = -16
-\end{equation}
-The center and radius are:
-\begin{equation}
-	\vec{c} = -\vec{u} = \myvec{0\\0}, \quad
-	r = r = \sqrt{\lVert \vec{u} \rVert^2 - f} = \sqrt{0 + 16} = 4
-\end{equation}
-The equation of a tangent line at a point of contact $\vec{q}$ on the circle is given by:
-\end{frame}
-
-
-
-\begin{frame}{Solution}
-	\begin{equation}
-	\brak{\vec{V}\vec{q} + \vec{u}}^\top \vec{x} + \vec{u}^\top \vec{q} + f = 0
-\end{equation}
-For this tangent to pass through the external point $P = \myvec{6\\0}$, the equation must hold when $\vec{x}=P$. Since $\vec{V}=\vec{I}$ and $\vec{u}=\vec{0}$:
-\begin{equation}
-	\brak{\vec{I}\vec{q}}^\top P + f = 0
-\end{equation}
-\begin{equation}
-	\vec{q}^\top P - 16 = 0
-\end{equation}
-
-Let $\vec{q} = \myvec{q_1\\q_2}$ be a point of contact. It must satisfy two conditions:
-\begin{enumerate}
-	\item[(a)] $\vec{q}$ lies on the circle: $q_1^2 + q_2^2 = 16$
-	\item[(b)] The tangent at $\vec{q}$ passes through $P$: $\vec{q}^\top P = 16$
-\end{enumerate}
-\end{frame}
-
-
-
-\begin{frame}{Solution}
-From condition (a) \& (b):
-\begin{align}
-	\myvec{q_1 & q_2}\myvec{6\\0} = 16 \implies 6q_1 = 16 \implies q_1 = \frac{8}{3}\\
-	\brak{\frac{8}{3}}^2 + q_2^2 = 16 \implies \frac{64}{9} + q_2^2 = 16 \implies q_2^2 = \frac{80}{9}\\
-	q_2 = \pm\frac{4\sqrt{5}}{3}
-\end{align}
-The two points of contact are:
-\begin{equation}
-	\vec{q}_1 = \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}, \quad \vec{q}_2 = \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
-\end{equation}
-The equation of the tangent at a point $\vec{q}$ is $\brak{\vec{V}\vec{q} + \vec{u}}^\top \vec{x} + \vec{u}^\top \vec{q} + f = 0$.\\
-\textbf{Tangent 1} at $\vec{q}_1 $:
-\end{frame}
-
-\begin{frame}{Solution}
-\begin{align}
-	\vec{V}\vec{q}_1 &= \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}\\
-	\myvec{\frac{8}{3} & \frac{4\sqrt{5}}{3}}\myvec{x\\y} - 16 &= 0\\
-	\frac{8}{3}x + \frac{4\sqrt{5}}{3}y &= 16\\
-	2x + \sqrt{5}y &= 12
-\end{align}
-\textbf{Tangent 2} at $\vec{q}_2 $:
-
-
-\end{frame}
-
-\begin{frame}{Solution}
-\begin{align}
-	\myvec{\frac{8}{3} & -\frac{4\sqrt{5}}{3}}\myvec{x\\y} - 16 &= 0\\
-	2x - \sqrt{5}y &= 12
-\end{align}
-The equations of tangents are:
-\begin{align}
-	\boxed{2x + \sqrt{5}y = 12 \quad \text{and} \quad 2x - \sqrt{5}y = 12}
-\end{align}
-\end{frame}
-
-\begin{frame}{Plot}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\linewidth]{figs/tangents_plot}
-	\caption{}
-	\label{fig:tangentsplot}
-\end{figure}
-
-\end{frame}
-
-
+	\begin{frame}{Problem Setup}
+		Let the center of the circle be at origin. The equation is $x^2 + y^2 = 16$ and Point P is at distance 6 from center along x-axis.
+		\begin{align}
+			O &= \myvec{0\\0}\\
+			P &= \myvec{6\\0} \\
+			\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f &= 0
+		\end{align}
+		where
+		\begin{equation}
+			\vec{V} = \myvec{1 & 0\\0 & 1}, \quad \vec{u} = \myvec{0\\0}, \quad f = -16
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}{Step 1: Eigenvalue Decomposition}
+		The eigenvalue equation is:
+		\begin{equation}
+			\vec{V}\vec{p} = \lambda\vec{p}
+		\end{equation}
+		The characteristic equation:
+		\begin{align}
+			\det(\vec{V} - \lambda\vec{I}) &= 0\\
+			\det\myvec{1-\lambda & 0\\0 & 1-\lambda} &= 0\\
+			(1-\lambda)^2 &= 0
+		\end{align}
+		\textbf{Eigenvalues:} $\lambda_1 = \lambda_2 = 1$
+	\end{frame}
+	
+	\begin{frame}{Step 2: Finding Eigenvectors}
+		For $\lambda_1 = 1$:
+		\begin{align}
+			(\vec{V} - \lambda_1\vec{I})\vec{p}_1 &= 0\\
+			\myvec{0 & 0\\0 & 0}\myvec{p_{11}\\p_{12}} &= \myvec{0\\0}
+		\end{align}
+		Choose normalized eigenvector: $\vec{p}_1 = \myvec{1\\0}$
+		
+		\vspace{1em}
+		For $\lambda_2 = 1$, choose orthogonal eigenvector:
+		\begin{equation}
+			\vec{p}_2 = \myvec{0\\1}
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}{Step 3: Eigenvector Matrix}
+		The orthogonal eigenvector matrix is:
+		\begin{equation}
+			\vec{P} = \myvec{\vec{p}_1 & \vec{p}_2} = \myvec{1 & 0\\0 & 1} = \vec{I}
+		\end{equation}
+		
+		\textbf{Spectral Decomposition:}
+		\begin{align}
+			\vec{V} &= \vec{P}\vec{D}\vec{P}^\top\\
+			&= \myvec{1 & 0\\0 & 1}\myvec{1 & 0\\0 & 1}\myvec{1 & 0\\0 & 1} = \vec{I}
+		\end{align}
+		where $\vec{D} = \myvec{\lambda_1 & 0\\0 & \lambda_2} = \myvec{1 & 0\\0 & 1}$
+	\end{frame}
+	
+	\begin{frame}{Step 4: Principal Axes Transformation}
+		Transform to principal coordinates:
+		\begin{equation}
+			\vec{y} = \vec{P}^\top(\vec{x} - \vec{c})
+		\end{equation}
+		where $\vec{c} = -\vec{V}^{-1}\vec{u} = \myvec{0\\0}$
+		
+		\vspace{1em}
+		In principal axes, the conic equation becomes:
+		\begin{equation}
+			\lambda_1 y_1^2 + \lambda_2 y_2^2 = -f
+		\end{equation}
+		\begin{equation}
+			y_1^2 + y_2^2 = 16
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}{Step 5: Semi-axes from Eigenvalues}
+		The radius along each eigenvector direction:
+		\begin{equation}
+			a = b = \sqrt{\frac{-f}{\lambda_1}} = \sqrt{\frac{16}{1}} = 4
+		\end{equation}
+		
+		This confirms:
+		\begin{itemize}
+			\item Circle is symmetric in all directions
+			\item Eigenvectors $\vec{p}_1$ and $\vec{p}_2$ form principal axes
+			\item Radius = 4 cm along both axes
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Step 6: Transform Point P}
+		Transform external point $P$ to principal coordinates:
+		\begin{equation}
+			\vec{y}_P = \vec{P}^\top(P - \vec{c}) = \vec{I}\myvec{6\\0} = \myvec{6\\0}
+		\end{equation}
+		
+		\vspace{1em}
+		For tangent from external point, contact point $\vec{q}$ must satisfy:
+		\begin{enumerate}
+			\item[(a)] $\vec{q}$ lies on circle: $\vec{q}^\top\vec{V}\vec{q} + f = 0$
+			\item[(b)] Tangent passes through $P$: $(\vec{V}\vec{q})^\top P + f = 0$
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{Step 7: Finding Contact Points}
+		From condition (b) with $\vec{V} = \vec{I}$:
+		\begin{align}
+			\vec{q}^\top P + f &= 0\\
+			\myvec{q_1 & q_2}\myvec{6\\0} &= 16\\
+			6q_1 &= 16 \implies q_1 = \frac{8}{3}
+		\end{align}
+		
+		From condition (a):
+		\begin{align}
+			q_1^2 + q_2^2 &= 16\\
+			\brak{\frac{8}{3}}^2 + q_2^2 &= 16\\
+			q_2^2 &= \frac{80}{9} \implies q_2 = \pm\frac{4\sqrt{5}}{3}
+		\end{align}
+	\end{frame}
+	
+	\begin{frame}{Step 8: Express in Eigenvector Basis}
+		The contact points expressed as linear combinations of eigenvectors:
+		\begin{align}
+			\vec{q}_1 &= \frac{8}{3}\vec{p}_1 + \frac{4\sqrt{5}}{3}\vec{p}_2\\
+			&= \frac{8}{3}\myvec{1\\0} + \frac{4\sqrt{5}}{3}\myvec{0\\1}\\
+			&= \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}
+		\end{align}
+		
+		\begin{align}
+			\vec{q}_2 &= \frac{8}{3}\vec{p}_1 - \frac{4\sqrt{5}}{3}\vec{p}_2\\
+			&= \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
+		\end{align}
+	\end{frame}
+	
+	\begin{frame}{Step 9: Tangent Equations}
+		The tangent at $\vec{q}$ is: $(\vec{V}\vec{q})^\top \vec{x} + f = 0$
+		
+		\vspace{1em}
+		\textbf{Tangent 1} at $\vec{q}_1$:
+		\begin{align}
+			\vec{V}\vec{q}_1 &= \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}\\
+			\myvec{\frac{8}{3} & \frac{4\sqrt{5}}{3}}\myvec{x\\y} - 16 &= 0\\
+			\frac{8}{3}x + \frac{4\sqrt{5}}{3}y &= 16\\
+			2x + \sqrt{5}y &= 12
+		\end{align}
+	\end{frame}
+	
+	\begin{frame}{Step 10: Second Tangent}
+		\textbf{Tangent 2} at $\vec{q}_2$:
+		\begin{align}
+			\myvec{\frac{8}{3} & -\frac{4\sqrt{5}}{3}}\myvec{x\\y} - 16 &= 0\\
+			2x - \sqrt{5}y &= 12
+		\end{align}
+		
+		\vspace{1em}
+		\textbf{Final Answer:}
+		\begin{equation}
+			\boxed{2x + \sqrt{5}y = 12 \quad \text{and} \quad 2x - \sqrt{5}y = 12}
+		\end{equation}
+	\end{frame}
+	
+	\begin{frame}{Summary of Eigenvector Method}
+		\begin{enumerate}
+			\item Found eigenvalues: $\lambda_1 = \lambda_2 = 1$
+			\item Computed eigenvectors: $\vec{p}_1 = \myvec{1\\0}$, $\vec{p}_2 = \myvec{0\\1}$
+			\item Spectral decomposition: $\vec{V} = \vec{P}\vec{D}\vec{P}^\top$
+			\item Transformed to principal axes
+			\item Calculated semi-axes using: $a = \sqrt{-f/\lambda_1}$
+			\item Found contact points in eigenvector basis
+			\item Derived tangent equations
+		\end{enumerate}
+		
+		\vspace{0.5em}
+		\textbf{Key Insight:} Eigenvectors define the natural coordinate system for the conic!
+	\end{frame}
+	
+	\begin{frame}{Plot}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.85\linewidth]{figs/tangents_plot}
+			\caption{Circle with tangents from external point P}
+			\label{fig:tangentsplot}
+		\end{figure}
+	\end{frame}
+	
 \end{document}

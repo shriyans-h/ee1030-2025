@@ -45,69 +45,123 @@
 	a distance of 6cm from the centre.
 	\hfill{(10, 2023)}\\
 	\textbf{Solution}\\
-	Let the center of the circle be at origin,The equation is $x^2 + y^2 = 16$ and Point P (at distance 6 from center along x-axis) 
+	Let the center of the circle be at origin. The equation is $x^2 + y^2 = 16$ and Point P is at distance 6 from center along x-axis.
 	\begin{align}
-		O = \myvec{0\\0}\\
-		P = \myvec{6\\0} \\
-		\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0
+		O &= \myvec{0\\0}\\
+		P &= \myvec{6\\0} \\
+		\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f &= 0
 	\end{align}
 	where
 	\begin{equation}
 		\vec{V} = \myvec{1 & 0\\0 & 1}, \quad \vec{u} = \myvec{0\\0}, \quad f = -16
 	\end{equation}
-	The center and radius are:
+\textbf{Eigenvalue Decomposition of $\vec{V}$}:\\
+	The eigenvalue equation is:
 	\begin{equation}
-		\vec{c} = -\vec{u} = \myvec{0\\0}, \quad
-		r = \sqrt{\norm{\vec{u}}^2 - f} = \sqrt{0 + 16} = 4
+		\vec{V}\vec{p} = \lambda\vec{p}
 	\end{equation}
-The equation of a tangent line at a point of contact $\vec{q}$ on the circle is given by:
+The characteristic equation is:
+	\begin{align}
+		\det(\vec{V} - \lambda\vec{I}) &= 0\\
+		\det\myvec{1-\lambda & 0\\0 & 1-\lambda} &= 0\\
+		(1-\lambda)^2 &= 0\\
+		\lambda_1 = \lambda_2 &= 1
+	\end{align}
+For $\lambda_1 = 1$, the eigenvector $\vec{p}_1$:
+	\begin{align}
+		(\vec{V} - \lambda_1\vec{I})\vec{p}_1 &= 0\\
+		\myvec{0 & 0\\0 & 0}\myvec{p_{11}\\p_{12}} &= \myvec{0\\0}
+	\end{align}
+Choose $\vec{p}_1 = \myvec{1\\0}$ (normalized)
+For $\lambda_2 = 1$, the eigenvector $\vec{p}_2$:
 	\begin{equation}
-		\brak{\vec{V}\vec{q} + \vec{u}}^\top \vec{x} + \vec{u}^\top \vec{q} + f = 0
+		 \vec{p}_2 = \myvec{0\\1} \text{ (orthogonal to } \vec{p}_1\text{)}
 	\end{equation}
-	For this tangent to pass through the external point $P = \myvec{6\\0}$, the equation must hold when $\vec{x}=P$. Since $\vec{V}=\vec{I}$ and $\vec{u}=\vec{0}$:
+The eigenvector matrix (orthogonal) is:
 	\begin{equation}
-		\brak{\vec{I}\vec{q}}^\top P + f = 0
+		\vec{P} = \myvec{1 & 0\\0 & 1} = \vec{I}
 	\end{equation}
+	\textbf{Now using Spectral Decomposition:}\\
+	\begin{align}
+		\vec{V} &= \vec{P}\vec{D}\vec{P}^\top\\
+		&= \myvec{1 & 0\\0 & 1}\myvec{1 & 0\\0 & 1}\myvec{1 & 0\\0 & 1}\\
+		&= \vec{I}
+	\end{align}
+	where $\vec{D} = \myvec{\lambda_1 & 0\\0 & \lambda_2} = \myvec{1 & 0\\0 & 1}$
+	
+	\textbf{Step 3: Principal Axes Representation}\\
+	The conic in principal axes coordinates: Since $\vec{P} = \vec{I}$ and $\vec{u} = \vec{0}$, the transformation is trivial.
 	\begin{equation}
-		\vec{q}^\top P - 16 = 0
+		\text{Let } \vec{y} = \vec{P}^\top(\vec{x} - \vec{c}), \text{ where } \vec{c} = -\vec{V}^{-1}\vec{u} = \myvec{0\\0}
 	\end{equation}
 	
-	Let $\vec{q} = \myvec{q_1\\q_2}$ be a point of contact. It must satisfy two conditions:
-	\begin{enumerate}
-		\item[(a)] $\vec{q}$ lies on the circle: $q_1^2 + q_2^2 = 16$
-		\item[(b)] The tangent at $\vec{q}$ passes through $P$: $\vec{q}^\top P = 16$
-	\end{enumerate}
-From condition (a) \& (b):
-	\begin{align}
-		\myvec{q_1 & q_2}\myvec{6\\0} = 16 \implies 6q_1 = 16 \implies q_1 = \frac{8}{3}\\
-		\brak{\frac{8}{3}}^2 + q_2^2 = 16 \implies \frac{64}{9} + q_2^2 = 16 \implies q_2^2 = \frac{80}{9}\\
-		q_2 = \pm\frac{4\sqrt{5}}{3}
-	\end{align}
-The two points of contact are:
+	In principal axes:
 	\begin{equation}
-		\vec{q}_1 = \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}, \quad \vec{q}_2 = \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
+		\lambda_1 y_1^2 + \lambda_2 y_2^2 = -f \implies y_1^2 + y_2^2 = 16
 	\end{equation}
-	The equation of the tangent at a point $\vec{q}$ is $\brak{\vec{V}\vec{q} + \vec{u}}^\top \vec{x} + \vec{u}^\top \vec{q} + f = 0$.\\
-	\textbf{Tangent 1} at $\vec{q}_1 $:
+	
+	This confirms the circle has semi-axes along eigenvector directions with radii:
+	\begin{equation}
+		a = b = \sqrt{\frac{-f}{\lambda_1}} = \sqrt{\frac{16}{1}} = 4
+	\end{equation}
+	
+	\textbf{Step 4: Finding Contact Points using Eigenvector Framework}\\
+	Transform point $P$ to principal coordinates:
+	\begin{equation}
+		\vec{y}_P = \vec{P}^\top(P - \vec{c}) = \vec{I}\myvec{6\\0} = \myvec{6\\0}
+	\end{equation}
+	
+	For tangent from external point, contact point $\vec{q}$ satisfies:
+	\begin{enumerate}
+		\item[(a)] $\vec{q}$ lies on circle: $\vec{q}^\top\vec{V}\vec{q} + f = 0$
+		\item[(b)] Tangent passes through $P$: $(\vec{V}\vec{q})^\top P + f = 0$
+	\end{enumerate}
+	
+	From condition (b) with $\vec{V} = \vec{I}$:
+	\begin{align}
+		\vec{q}^\top P + f &= 0\\
+		\myvec{q_1 & q_2}\myvec{6\\0} &= 16\\
+		6q_1 &= 16 \implies q_1 = \frac{8}{3}
+	\end{align}
+	
+	From condition (a):
+	\begin{align}
+		q_1^2 + q_2^2 &= 16\\
+		\brak{\frac{8}{3}}^2 + q_2^2 &= 16\\
+		\frac{64}{9} + q_2^2 &= 16\\
+		q_2^2 &= \frac{80}{9}\\
+		q_2 &= \pm\frac{4\sqrt{5}}{3}
+	\end{align}
+Expressing contact points using eigenvectors:
+	\begin{align}
+		\vec{q}_1 &= \frac{8}{3}\vec{p}_1 + \frac{4\sqrt{5}}{3}\vec{p}_2 = \frac{8}{3}\myvec{1\\0} + \frac{4\sqrt{5}}{3}\myvec{0\\1} = \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}\\
+		\vec{q}_2 &= \frac{8}{3}\vec{p}_1 - \frac{4\sqrt{5}}{3}\vec{p}_2 = \frac{8}{3}\myvec{1\\0} - \frac{4\sqrt{5}}{3}\myvec{0\\1} = \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
+	\end{align}
+	The tangent at $\vec{q}$ is: $(\vec{V}\vec{q})^\top \vec{x} + f = 0$
+	
+	\textbf{Tangent 1} at $\vec{q}_1$:
 	\begin{align}
 		\vec{V}\vec{q}_1 &= \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}\\
 		\myvec{\frac{8}{3} & \frac{4\sqrt{5}}{3}}\myvec{x\\y} - 16 &= 0\\
 		\frac{8}{3}x + \frac{4\sqrt{5}}{3}y &= 16\\
 		2x + \sqrt{5}y &= 12
 	\end{align}
-	\textbf{Tangent 2} at $\vec{q}_2 $:
+	
+	\textbf{Tangent 2} at $\vec{q}_2$:
 	\begin{align}
 		\myvec{\frac{8}{3} & -\frac{4\sqrt{5}}{3}}\myvec{x\\y} - 16 &= 0\\
 		2x - \sqrt{5}y &= 12
 	\end{align}
-The equations of tangents are:
+	
+	The equations of tangents are:
 	\begin{align}
 		\boxed{2x + \sqrt{5}y = 12 \quad \text{and} \quad 2x - \sqrt{5}y = 12}
 	\end{align}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.1\linewidth]{figs/tangents_plot}
-\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.1\linewidth]{figs/tangents_plot}
+	\end{figure}
 	
 	
 \end{document}
