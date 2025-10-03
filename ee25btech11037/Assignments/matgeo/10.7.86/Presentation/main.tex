@@ -97,6 +97,63 @@ This is equation of an ellipse because it is of form
 with focii  as $\vec{O_1}$ , $\vec{O_2}$ and length of the major axis as $r_1 + r_2$
 \end{frame}
 \begin{frame}{Solution}
+\begin{align}
+    \norm{\vec{x} - \vec{O}_1} + \norm{\vec{x} - \vec{O}_2} = K, \ K=r_1+r_2
+\end{align}
+To eliminate square roots from the norms, we rearrange and square the equation.
+\begin{align}
+ \norm{\vec{x} - \vec{O}_1} = K - \norm{\vec{x} - \vec{O}_2}
+\end{align}
+Squaring both sides and using the property $\norm{\vec{v}}^2 = \vec{v}^{\top}\vec{v}$:
+\begin{align}
+ \norm{\vec{x} - \vec{O}_1}^2 = (K - \norm{\vec{x} - \vec{O}_2})^2
+\end{align}
+\end{frame}
+
+
+\begin{frame}{Solution}
+\begin{align}
+    \norm{\vec{x} - \vec{O_1}} + \norm{\vec{x} - \vec{O_2}} = K, \ K=r_1+r_2
+\end{align}
+To eliminate square roots from the norms, we rearrange and square the equation.
+\begin{align}
+ \norm{\vec{x} - \vec{O_1}} = K - \norm{\vec{x} - \vec{O_2}}
+\end{align}
+Squaring both sides and using the property $\norm{\vec{v}}^2 = \vec{v}^{\top}\vec{v}$:
+\begin{align}
+ \norm{\vec{x} - \vec{O_1}}^2 = \brak{K - \norm{\vec{x} - \vec{O_2}}}^2
+\end{align}
+\end{frame}
+\begin{frame}{Solution}
+Let $S = K^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2$ and $\vec{v} = 2\brak{\vec{O_1} - \vec{O_2}}$. The equation becomes:
+\begin{align}
+ 2K\norm{\vec{x} - \vec{O_2}} = S + \vec{v}^{\top}\vec{x}
+\end{align}
+Squaring both sides again:
+\begin{align}
+ 4K^2\norm{\vec{x} - \vec{O_2}}^2 = (S + \vec{v}^{\top}\vec{x})^2
+\end{align}
+\begin{align}
+ 4K^2\brak{\vec{x}^{\top}\vec{x} - 2\vec{O_2}^{\top}\vec{x} + \norm{\vec{O_2}}^2} = S^2 + 2S\brak{\vec{v}^{\top}\vec{x}} + \brak{\vec{v}^{\top}\vec{x}}^2
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
+Using the identity $\brak{\vec{v}^{\top}\vec{x}}^2 = \vec{x}^{\top}\brak{\vec{v}\vec{v}^{\top}}\vec{x}$, we group all terms to one side to match the form $\vec{x}^{\top}V\vec{x} + 2\vec{u}^{\top}\vec{x} + f = 0$.
+\begin{align}
+ \vec{x}^{\top}\brak{4K^2I - \vec{v}\vec{v}^{\top}}\vec{x} + 2\brak{-4K^2\vec{O_2} - S\vec{v}}^{\top}\vec{x} + \brak{4K^2\norm{\vec{O_2}}^2 - S^2}= 0
+\end{align}
+
+\end{frame}
+\begin{frame}{Solution}
+    Compared with the general conic equation, we identify the matrix $V$, the vector $\vec{u}$, and the scalar $f$:
+\begin{align}
+    \vec{V} = 4K^2I - \vec{v}\vec{v}^{\top} = 4\brak{r_1 + r_2}^2I - 4\brak{\vec{O_1}-\vec{O_2}}\brak{\vec{O_1}-\vec{O_2}}^{\top} \\
+    \vec{u} = -4K^2\vec{O_2} - S\vec{v} = -4\brak{r_1 + r_2}^2\vec{O_2} - \nonumber\\ \brak{\brak{r_1 + r_2}^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2 }\cdot 2\brak{\vec{O_1}-\vec{O_2}} \\
+    f = 4K^2\norm{\vec{O_2}}^2 - S^2 = 4\brak{r_1 + r_2}^2\norm{\vec{O_2}}^2 - \nonumber\\ \brak{\brak{r_1 + r_2}^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2}^2
+\end{align}
+\end{frame}
+\begin{frame}{Solution}
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\columnwidth]{figs/1.png}

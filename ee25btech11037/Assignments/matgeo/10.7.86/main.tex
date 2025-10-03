@@ -69,17 +69,59 @@ Substitute $\vec{O}$ as $\vec{x}$
 \begin{align}
     \norm{\vec{x} - \vec{O_1}} + \norm{\vec{x} - \vec{O_2}} = r_1 + r_2
 \end{align}
-This is equation of an ellipse because it is of form 
+This is the equation of an ellipse because it is of form 
 \begin{align}
     \norm{\vec{x} - \vec{S_1}} + \norm{\vec{x} - \vec{S_2}} = 2a
 \end{align}
-with focii  as $\vec{O_1}$ , $\vec{O_2}$ and length of the major axis as $r_1 + r_2$
+with foci  as $\vec{O_1}$ , $\vec{O_2}$ and length of the major axis as $r_1 + r_2$.
+\begin{align}
+    \norm{\vec{x} - \vec{O_1}} + \norm{\vec{x} - \vec{O_2}} = K, \ K=r_1+r_2
+\end{align}
+To eliminate square roots from the norms, we rearrange and square the equation.
+\begin{align}
+ \norm{\vec{x} - \vec{O_1}} = K - \norm{\vec{x} - \vec{O_2}}
+\end{align}
+Squaring both sides and using the property $\norm{\vec{v}}^2 = \vec{v}^{\top}\vec{v}$:
+\begin{align}
+ \norm{\vec{x} - \vec{O_1}}^2 = \brak{K - \norm{\vec{x} - \vec{O_2}}}^2
+\end{align}
+\begin{align}
+ \brak{\vec{x} - \vec{O_1}}^{\top}\brak{\vec{x} - \vec{O_1}} = K^2 - 2K\norm{\vec{x} - \vec{O_2}} + \norm{\vec{x} - \vec{O_2}}^2
+\end{align}
+Expanding the terms and simplifying gives the following.
+\begin{align}
+ \norm{\vec{x}}^2 - 2\vec{O_1}^{\top}\vec{x} + \norm{\vec{O_1}}^2 = K^2 - 2K\norm{\vec{x} - \vec{O_2}} + \norm{\vec{x}}^2 - 2\vec{O_2}^{\top}\vec{x} + \norm{\vec{O_2}}^2
+\end{align}
+Rearrange the equation to isolate the remaining norm term:
+\begin{align}
+ 2K\norm{\vec{x} - \vec{O_2}} = (K^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2) + 2\brak{\vec{O_1} - \vec{O_2}}^{\top}\vec{x}
+\end{align}
+Let $S = K^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2$ and $\vec{v} = 2\brak{\vec{O_1} - \vec{O_2}}$. The equation becomes:
+\begin{align}
+ 2K\norm{\vec{x} - \vec{O_2}} = S + \vec{v}^{\top}\vec{x}
+\end{align}
+Squaring both sides again:
+\begin{align}
+ 4K^2\norm{\vec{x} - \vec{O_2}}^2 = (S + \vec{v}^{\top}\vec{x})^2
+\end{align}
+\begin{align}
+ 4K^2\brak{\vec{x}^{\top}\vec{x} - 2\vec{O_2}^{\top}\vec{x} + \norm{\vec{O_2}}^2} = S^2 + 2S\brak{\vec{v}^{\top}\vec{x}} + \brak{\vec{v}^{\top}\vec{x}}^2
+\end{align}
+Using the identity $\brak{\vec{v}^{\top}\vec{x}}^2 = \vec{x}^{\top}\brak{\vec{v}\vec{v}^{\top}}\vec{x}$, we group all terms to one side to match the form $\vec{x}^{\top}V\vec{x} + 2\vec{u}^{\top}\vec{x} + f = 0$.
+\begin{align}
+ \vec{x}^{\top}\brak{4K^2I - \vec{v}\vec{v}^{\top}}\vec{x} + 2\brak{-4K^2\vec{O_2} - S\vec{v}}^{\top}\vec{x} + \brak{4K^2\norm{\vec{O_2}}^2 - S^2}= 0
+\end{align}
+Compared with the general conic equation, we identify the matrix $V$, the vector $\vec{u}$, and the scalar $f$:
+\begin{align}
+    \vec{V} &= 4K^2I - \vec{v}\vec{v}^{\top} = 4\brak{r_1 + r_2}^2I - 4\brak{\vec{O_1}-\vec{O_2}}\brak{\vec{O_1}-\vec{O_2}}^{\top} \\
+    \vec{u} &= -4K^2\vec{O_2} - S\vec{v} = -4\brak{r_1 + r_2}^2\vec{O_2} - \brak{\brak{r_1 + r_2}^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2 }\cdot 2\brak{\vec{O_1}-\vec{O_2}} \\
+    f &= 4K^2\norm{\vec{O_2}}^2 - S^2 = 4\brak{r_1 + r_2}^2\norm{\vec{O_2}}^2 - \brak{\brak{r_1 + r_2}^2 + \norm{\vec{O_2}}^2 - \norm{\vec{O_1}}^2}^2
+\end{align}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\columnwidth]{figs/1.png}
-    \caption{Graph for 10.7.86}
+    \caption{Caption}
     \label{fig:placeholder}
 \end{figure}
 \end{document}
-
 

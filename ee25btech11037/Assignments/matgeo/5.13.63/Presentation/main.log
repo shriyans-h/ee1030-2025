@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.9)  2 OCT 2025 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.9)  3 OCT 2025 13:40
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -1129,9 +1130,7 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 61.
 \c@lstlisting=\count394
-
-No file main.nav.
-
+ (./main.nav)
 
 [1
 
@@ -1178,6 +1177,38 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 [5
 
 ]
+<figs/alpha.png, id=58, 578.16pt x 361.35pt>
+File: figs/alpha.png Graphic file (type png)
+<use figs/alpha.png>
+Package pdftex.def Info: figs/alpha.png  used on input line 127.
+(pdftex.def)             Requested size: 171.14764pt x 106.96674pt.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 127.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 127.
+
+
+
+[6
+
+ <./figs/alpha.png>]
+<figs/beta.png, id=67, 578.16pt x 361.35pt>
+File: figs/beta.png Graphic file (type png)
+<use figs/beta.png>
+Package pdftex.def Info: figs/beta.png  used on input line 135.
+(pdftex.def)             Requested size: 171.14764pt x 106.96674pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:placehold
+er}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.135 \end{frame}
+                 
+
+[7
+
+ <./figs/beta.png>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1194,36 +1225,34 @@ L3 programming layer <2025-01-18>
  ***********
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  26E49DCAEF513F9017B62323394D36ED;161.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 26E49DCAEF513F9017B62323394D36ED;161.
  ) 
 Here is how much of TeX's memory you used:
- 29073 strings out of 473190
- 599214 string characters out of 5715801
- 945175 words of memory out of 5000000
- 51782 multiletter control sequences out of 15000+600000
- 568103 words of font info for 69 fonts, out of 8000000 for 9000
+ 29160 strings out of 473190
+ 600613 string characters out of 5715801
+ 945171 words of memory out of 5000000
+ 51862 multiletter control sequences out of 15000+600000
+ 571145 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,123p,399b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,17n,123p,399b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (5 pages, 100586 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on main.pdf (7 pages, 200329 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
