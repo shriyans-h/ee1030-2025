@@ -1,0 +1,107 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin =  10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks =  true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2.8.17}
+\author{EE25BTECH11034 - Kishora Karthik}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\setlength{\intextsep}{10pt} % Space between text and floats
+\textbf{Question:}\\
+Show that the straight lines whose direction cosines $(l, m, n)$ are given by the equations $2l + 2m - n = 0$ and $mn + nl + lm = 0$ are at right angles.\\
+\textbf{Solution:}\\
+Let the direction cosines be represented by the column vector,
+\begin{align}
+    \vec{v}=\myvec{l \\ m \\ n}
+\end{align}
+The linear equation $2l + 2m - n = 0$ can be written as,
+\begin{align}
+    \vec{c}^\top\vec{v}=0
+\end{align}
+Where,
+\begin{align}
+    \vec{c}=\myvec{2\\2\\-1}
+\end{align}
+The quadratic equation $mn + nl + lm = 0$ is equivalent to $2mn + 2nl + 2lm = 0$. This can be written as a quadratic form $\vec{v}^T A \vec{v} = 0$, where $A$ is the symmetric matrix:
+\begin{align}
+     A = \myvec{ 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0} 
+\end{align}
+For a system defined by $\vec{c}^\top \vec{v} = 0$ and $\vec{v}^\top A \vec{v} = 0$, the two solution vectors are orthogonal if and only if the following algebraic condition is met:
+\begin{align}
+     \vec{c}^\top \brak{\text{Tr}(A)I - A}\vec{c} = 0
+\end{align}
+\begin{align}
+    \text{Tr}(A) = 0 + 0 + 0 = 0
+\end{align}
+Substituting this into the condition, it simplifies to:
+\begin{align}
+    \vec{c}^T (0 \cdot I - A) \vec{c} = -\vec{c}^\top A \vec{c} = 0
+\end{align}
+We therefore only need to verify that $\vec{c}^\top A \vec{c} = 0$. 
+\begin{align}
+   \vec{c}^\top A \vec{c} &= \myvec{ 2 & 2 & -1} \myvec{0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0} \myvec{2 \\ 2 \\ -1} 
+\end{align}
+\begin{align}
+    \vec{c}^\top A \vec{c}&= \myvec{(2 \cdot 0 + 2 \cdot 1 - 1 \cdot 1) & (2 \cdot 1 + 2 \cdot 0 - 1 \cdot 1) & (2 \cdot 1 + 2 \cdot 1 - 1 \cdot 0)}   \myvec{2 \\ 2 \\ -1} 
+\end{align}
+\begin{align}
+    \vec{c}^\top A \vec{c}&= \myvec{1 & 1 & 4} \myvec{2 \\ 2 \\ -1} 
+\end{align}
+\begin{align}
+    \vec{c}^\top A \vec{c}&= (1)(2) + (1)(2) + (4)(-1) 
+\end{align}
+\begin{align}
+    \vec{c}^\top A \vec{c}&= 2 + 2 - 4 
+\end{align}
+\begin{align} 
+    \vec{c}^\top A \vec{c}&= 0
+\end{align}
+Since the condition is satisfied, the given lines are at right angles.\\\\
+
+    \centering   \includegraphics[width=\columnwidth, height=1\textheight, keepaspectratio]{figs/fig1.png} 
+
+\end{document}
