@@ -1,0 +1,144 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.11.14}
+\author{EE25BTECH11036 - M Chanakya Srinivas}
+\maketitle
+
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\renewcommand\theequation{\arabic{equation}}
+
+
+\section*{Question}
+Find the value of \(\lambda\) for which the following lines are perpendicular to each other.
+Hence determine whether the lines intersect or not.
+\begin{align}
+\frac{x-5}{5\lambda+2} &= \frac{2-y}{5} = \frac{1-z}{-1}, \label{eq:l1}\\
+\frac{x}{1} &= \frac{y+\tfrac{1}{2}}{2\lambda} = \frac{z-1}{3}. \label{eq:l2}
+\end{align}
+
+\section*{Solution }
+
+\subsection*{Step 1: Write lines in vector form}
+Choose points and direction vectors:
+\begin{align}
+\vec A_1 &= \myvec{5\\2\\1}, & \vec m_1 &= \myvec{5\lambda+2\\-5\\1}, \label{A1m1}\\
+\vec A_2 &= \myvec{0\\-1/2\\1}, & \vec m_2 &= \myvec{1\\2\lambda\\3}. \label{A2m2}
+\end{align}
+Then the lines are
+\begin{align}
+\vec r_1 &= \vec A_1 + \kappa_1 \vec m_1, \\
+\vec r_2 &= \vec A_2 + \kappa_2 \vec m_2.
+\end{align}
+
+\subsection*{Step 2: Perpendicularity condition}
+Lines are perpendicular if
+\[
+\vec m_1^{\top}\vec m_2 = 0.
+\]
+Compute the dot product:
+\begin{align}
+\vec m_1^{\top}\vec m_2
+&= \myvec{5\lambda+2 & -5 & 1} \myvec{1\\2\lambda\\3} \\
+&= (5\lambda+2)(1) + (-5)(2\lambda) + (1)(3) \\
+&= 5\lambda + 2 - 10\lambda + 3 \\
+&= -5\lambda + 5.
+\end{align}
+Hence
+\[
+-5\lambda + 5 = 0 \quad \Longrightarrow \quad \boxed{\lambda=1}.
+\]
+
+\subsection*{Step 3: Intersection condition}
+Lines intersect if
+\[
+\vec r_1 = \vec r_2 \quad \Longrightarrow \quad \kappa_1 \vec m_1 - \kappa_2 \vec m_2 = \vec A_2 - \vec A_1.
+\]
+Define
+\begin{align}
+M(\lambda) &= \myvec{ \vec m_1 & -\vec m_2 } 
+= \myvec{5\lambda+2 & -1 \\ -5 & -2\lambda \\ 1 & -3}, \\
+\vec z &= \myvec{\kappa_1\\\kappa_2}, \qquad 
+\vec b = \vec A_2 - \vec A_1 = \myvec{-5\\-5/2\\0}.
+\end{align}
+Then
+\[
+M(\lambda) \vec z = \vec b.
+\]
+
+\subsection*{Step 4: Form augmented matrix and do row reduction}
+\[
+\left[\begin{array}{cc|c}
+5\lambda+2 & -1 & -5 \\
+-5 & -2\lambda & -5/2 \\
+1 & -3 & 0
+\end{array}\right]
+\]
+Use row 3 to eliminate \(\kappa_1\):
+\[
+R_3: 1\cdot \kappa_1 - 3\cdot \kappa_2 = 0 \quad \Rightarrow \quad \kappa_1 = 3\kappa_2.
+\]
+
+Substitute \(\kappa_1 = 3\kappa_2\) into row 1 and row 2:
+\begin{align}
+\text{Row 1: } & (5\lambda+2)(3\kappa_2) - 1\cdot\kappa_2 = -5 
+\quad \Rightarrow \quad (15\lambda + 5)\kappa_2 = -5, \\
+\text{Row 2: } & -5(3\kappa_2) - 2\lambda \kappa_2 = -5/2 
+\quad \Rightarrow \quad (-15-2\lambda)\kappa_2 = -5/2.
+\end{align}
+
+\subsection*{Step 5: Solve for consistency}
+The system is consistent if
+\[
+\frac{-5}{15\lambda+5} = \frac{-5/2}{-15-2\lambda} \quad \Longrightarrow \quad -\frac{1}{3\lambda+1} = \frac{5}{30+4\lambda}.
+\]
+Solve:
+\begin{align}
+-(30+4\lambda) &= 5(3\lambda+1) \\
+-30-4\lambda &= 15\lambda + 5 \\
+19\lambda &= -35 \\
+\boxed{\lambda} &= -\frac{35}{19}.
+\end{align}
+
+\subsection*{Step 6: conclusions}
+\begin{itemize}
+\item Perpendicularity occurs at \(\lambda=1\). At this value, rank\([M(1)\mid \vec b] > \text{rank}(M(1))\), so lines are \emph{skew}.
+\item Intersection occurs at \(\lambda=-35/19\). At this value, rank\([M(\lambda)\mid \vec b] = \text{rank}(M(\lambda))\), so lines intersect (but are not perpendicular).
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig71.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig72.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
