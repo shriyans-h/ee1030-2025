@@ -146,6 +146,32 @@ For the eigenvectors in 3), let $\vec{v}$ be an eigenvector of $\vec{A}$ with ei
 This shows that if $\vec{v}$ is an eigenvector of $\vec{A}$, then $\vec{P}^{-1}\vec{v}$ is the eigenvector of $\vec{B}$. Since $\vec{v} \neq \vec{P}^{-1}\vec{v}$ in general, the statement is not true.
 \end{frame}
 
+\begin{frame}{Theoretical Solution}
+\textbf{Example:} Let
+\begin{align}
+    \vec{A} = \myvec{1 & 1 \\ 0 & 2}, \quad \vec{P} = \myvec{1 & 1 \\ 0 & 1} \implies \vec{P}^{-1} = \myvec{1 & -1 \\ 0 & 1}
+\end{align}
+The matrix $\vec{A}$ has an eigenvalue $\lambda=2$ with corresponding eigenvector 
+\begin{align}
+	\vec{v} = \myvec{1 \\ 1}
+\end{align}
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+The similar matrix $\vec{B}$ is
+\begin{align}
+    \vec{B} = \vec{P}^{-1}\vec{A}\vec{P} = \myvec{1 & -1 \\ 0 & 1}\myvec{1 & 1 \\ 0 & 2}\myvec{1 & 1 \\ 0 & 1} = \myvec{1 & 0 \\ 0 & 2}
+\end{align}
+The corresponding eigenvector of $\vec{B}$ for the eigenvalue $\lambda=2$ is 
+\begin{align}
+	\vec{w} = \vec{P}^{-1}\vec{v}
+\end{align}
+\begin{align}
+    \vec{w} = \myvec{1 & -1 \\ 0 & 1}\myvec{1 \\ 1} = \myvec{0 \\ 1}
+\end{align}
+Clearly, $\vec{v} \neq \vec{w}$.
+\end{frame}
+
 \begin{frame}{Conclusion}
 The statement that is NOT TRUE is \textbf{3) $\vec{A}$ and $\vec{B}$ have the same eigenvectors}.
 \end{frame}
