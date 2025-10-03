@@ -14,7 +14,10 @@ void solve(double a , double b , double c , double *real , double *img)
 	}
 	else
 	{
-
+		for(int i = 0 ; i< 2 ; i++)
+		{
+			real[i] = -b/2;
+			img[i] = pow((-1),i)*sqrt(-temp)/2;
+		}
 	}
-
 }
