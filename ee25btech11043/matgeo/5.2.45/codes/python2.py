@@ -52,9 +52,9 @@ if x_solution is not None and y_solution is not None:
     plt.axis('equal') # Ensures equal scaling for x and y axes
     plt.xlim(-5, 5)
     plt.ylim(-5, 5)
-    plt.savefig("linear_system_solution.png")
+    plt.savefig("fig2.png")
     plt.show()
 
-    print("Figure saved as linear_system_solution.png")
+    print("Figure saved as fig2.png")
 else:
     print("The system has no unique solution (lines are parallel or coincident).")
