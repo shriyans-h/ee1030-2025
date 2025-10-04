@@ -1,0 +1,204 @@
+\documentclass{article}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{color}    
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+\usepackage{lscape}     
+\usepackage{chngcntr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[a4paper, left = 1.5cm, right = 1.5cm]{geometry}
+
+\begin{document}
+
+\begin{center}
+\large
+    \textbf{Samyak Gondane-AI25BTECH11029}
+\end{center}
+\date{}
+
+\section*{Question}
+Consider a circle with its centre lying on focus of the parabola $y^2 = 2px$ such that it touches the directrix of the parabola. Then a point of intersection of the circle and the parabola is
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $(\frac{p}{2}, p)$ or $(\frac{p}{2}, -p)$
+    \item $(\frac{p}{2}, -\frac{p}{2})$
+    \item $(-\frac{p}{2}, p)$
+    \item $(-\frac{p}{2}, -\frac{p}{2})$
+\end{enumerate}
+\end{multicols}
+
+\section*{Solution}
+
+\subsection*{General Conic Form}
+
+Any conic can be represented as:
+
+
+\begin{align}
+\vec{x}^T A \vec{x} + \vec{b}^T \vec{x} + c = 0
+\end{align}
+
+
+
+\subsection*{Parabola: $y^2 = 2px$}
+
+Rewriting:
+
+
+\begin{align}
+y^2 - 2px = 0
+\end{align}
+
+
+
+Matrix representation:
+
+
+\begin{align}
+\vec{A}_p = \myvec{0 & 0 \\ 0 & 1}, \quad
+\vec{b}_p = \myvec{-2p \\ 0}, \quad
+c_p = 0
+\end{align}
+
+
+
+So the parabola becomes:
+
+
+\begin{align}
+\vec{x}^T A_p \vec{x} + \vec{b}_p^T \vec{x} = 0
+\end{align}
+
+
+
+\subsection*{Circle: Center at $(\frac{p}{2}, 0)$, Radius $p$}
+
+Circle equation:
+
+
+\begin{align}
+(x - \frac{p}{2})^2 + y^2 = p^2
+\Rightarrow x^2 - px + \frac{p^2}{4} + y^2 = p^2
+\Rightarrow x^2 + y^2 - px - \frac{3p^2}{4} = 0
+\end{align}
+
+
+
+Matrix representation:
+
+
+\begin{align}
+\vec{A}_c = \myvec{1 & 0 \\ 0 & 1}, \quad
+\vec{b}_c = \myvec{-p \\ 0}, \quad
+c_c = -\frac{3p^2}{4}
+\end{align}
+
+
+
+So the circle becomes:
+
+
+\begin{align}
+\vec{x}^T A_c \vec{x} + \vec{b}_c^T \vec{x} + c_c = 0
+\end{align}
+
+
+
+\subsection*{Solving the System}
+
+From the parabola:
+
+\begin{align}
+y^2 = 2px
+\end{align}
+
+
+Substitute into the circle:
+
+\begin{align}
+x^2 + y^2 - px - \frac{3p^2}{4} = 0
+\Rightarrow x^2 + 2px - px - \frac{3p^2}{4} = 0
+\Rightarrow x^2 + px - \frac{3p^2}{4} = 0
+\end{align}
+
+
+
+Solve the quadratic:
+
+
+\begin{align}
+x = \frac{-p \pm \sqrt{p^2 + 4 \cdot \frac{3p^2}{4}}}{2}
+= \frac{-p \pm \sqrt{4p^2}}{2}
+= \frac{-p \pm 2p}{2}
+\Rightarrow x = \frac{p}{2},\ -\frac{3p}{2}
+\end{align}
+
+
+
+Now find $y$ using $y^2 = 2px$:
+
+For $x = \frac{p}{2}$:
+
+
+\begin{align}
+y^2 = p^2 \Rightarrow y = \pm p
+\end{align}
+
+
+
+\subsection*{Final Answer}
+
+Intersection points:
+
+
+\begin{align}
+(\frac{p}{2}, p), \quad (\frac{p}{2}, -p)
+\end{align}
+
+
+\textbf{Correct Option: (a)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{./figs/Figure_1.png}
+    \caption{Caption}
+    \label{fig:placeholder}
+\end{figure}
+
+
+
+
+
+\end{document}
