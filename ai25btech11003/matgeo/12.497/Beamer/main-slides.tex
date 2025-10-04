@@ -73,8 +73,8 @@
 %------------------------------------------------------------
 
 \title
-{12.601}
-\date{September 28, 2025}
+{12.497}
+\date{September 30, 2025}
 \author 
 {AI25BTECH11003 - Bhavesh Gaikwad}
 
@@ -85,39 +85,52 @@
 
 \frame{\titlepage}
 \begin{frame}{Question}
-The matrix $\myvec{1 & 1 & 2 \\ 0 & 1 & 0 \\ 1 & 2 & 1}$, one of the eigen values is 1. The eigen vectors corresponding to the eigne value 1 are:
-\hfill{(CS 2016)}\\
+Consider the following simultaneous equations (with $c_1$ and $c_2$ being constants)
+$$3x_1 + 2x_2 = c_1$$
+$$4x_1 + x_2 = c_2$$
+The characteristic equation for these simultaneous equations is
 
+\hfill{(CE 2017)}
 \begin{itemize}
-    \item[a)] $\alpha\myvec{4 & -2 & 1}, \, \alpha \neq 0, \; \alpha \epsilon \mathbb{R}$
-    \item[b)] $\alpha\myvec{-4 & 2 & 1}, \, \alpha \neq 0, \; \alpha \epsilon \mathbb{R}$
-    \item[c)]$\alpha\myvec{-2 & 0 & 1}, \, \alpha \neq 0, \; \alpha \epsilon \mathbb{R}$
-    \item[d)]$\alpha\myvec{2 & 0 & 1}, \, \alpha \neq 0, \; \alpha \epsilon \mathbb{R}$
+    \item[a)]$\lambda^2 - 4\lambda - 5 =0$
+    \item[b)] $\lambda^2 - 4\lambda + 5 =0$
+    \item[c)]$\lambda^2 + 4\lambda - 5 =0$
+    \item[d)]$\lambda^2 + 4\lambda + 5 =0$
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}[fragile]
     \frametitle{Theoretical Solution}
-Given: $\lambda = 1$, $Let \; \vec{A} = \myvec{1 & 1 & 2 \\ 0 & 1 & 0 \\ 1 & 2 & 1}$
-
-Let $\vec{v}$ be the corresponding eigenvector.
-
+Given:
 \begin{align}
-    \Rightarrow \; \vec{A}\vec{v} &= (1)\vec{v} \\ 
-    (\vec{A} - \vec{I})\vec{v} &= \myvec{0 & 0 & 0}
+   3x_1 + 2x_2 &= c_1\\
+4x_1 + x_2 &= c_2 
 \end{align}
 
+Let $\vec{A} = \myvec{3 & 2 \\ 4 & 1}$, $\vec{x} = \myvec{x_1 \\ x_2}$
+and $\vec{c} = \myvec{c_1 \\ c_2}$
+
+From Equation 0.1 and 0.2,
 \begin{equation}
-\myvec{0 & 1 & 2 \\ 0 & 0 & 0 \\ 1 & 2 & 0}\vec{v} = \myvec{0 & 0 & 0}    
+    \vec{A}\vec{x} = \vec{c}
 \end{equation}
 
+The characteristic equation is given by,
+\begin{align}
+|\vec{A} - \lambda\vec{I}| &= 0 \\
+\left| \myvec{3-\lambda & 2 \\ 4 & 1-\lambda} \right| &= 0 \\
+\end{align}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Theoretical Solution}
 \begin{equation}
-    \therefore \; \vec{v} = \alpha \myvec{4 & -2 & 1} 
+    \boxed{\lambda^2 - 4\lambda - 5 =0}
 \end{equation}
 
 \begin{align*}
-    \boxed{\text{Thus, Option-A is correct. }}
+    \boxed{\text{Thus, Option-A is correct.}}
 \end{align*}
 \end{frame}
 
