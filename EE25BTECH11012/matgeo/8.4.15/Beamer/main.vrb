@@ -1,0 +1,10 @@
+\frametitle{Python and C Code}
+\begin{lstlisting}
+    print("5. Since 'a' is a fixed length, '2a' is a constant value.\n")
+    print("This is the geometric definition of an ellipse:")
+    print("The set of all points (A) for which the sum of the distances to two fixed points (the foci, B and C) is a constant (2a).\n")
+    print("Conclusion: The locus of point A is an ellipse.\n")
+
+if __name__ == "__main__":
+    main()
+\end{lstlisting}

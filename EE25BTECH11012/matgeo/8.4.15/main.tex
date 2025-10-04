@@ -1,0 +1,118 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{multicol}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{8.4.15}
+\author{EE25BTECH11012-BEERAM MADHURI}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:\\
+In a triangle $ABC$ with fixed base $BC$, the vertex A moves such that
+\[\cos B + \cos C = 4 \sin^2 \frac{A}{2}.\]
+
+If $a, b$ and $c$ denote the lengths of the sides of the triangle opposite to the angles $A, B$ and $C$, respectively, then
+
+\begin{enumerate}
+    \item[a)] $b + c = 4a$
+    \item[b)] $b + c = 2a$
+    \item[c)] locus of the point A is an ellipse
+    \item[d)] locus of the point A is a pair of straight lines
+\end{enumerate}
+\textbf{Solution:}\\
+Given,
+\begin{align}
+\cos B + \cos C = 4 \sin^2 \frac{A}{2}\\
+\cos B + \cos C = 4 \frac{(1 - \cos A)}{2}\\
+2 \cos A + \cos B + \cos C = 2
+\end{align}
+By Projection rule:
+\begin{align}c \cos B + b \cos C &= a \\c \cos A + a \cos C &= b \\b \cos A + a \cos B &= c\end{align}
+
+Combining all these into a Matrix:
+\begin{align}\begin{bmatrix}2 & 1 & 1 \\0 & c & b \\c & 0 & a \\b & a & 0\end{bmatrix}\begin{bmatrix}\cos A \\\cos B \\\cos C\end{bmatrix}=\begin{bmatrix}2 \\a \\b \\c\end{bmatrix}\\
+AX = b
+\end{align}
+for this system to be consistent
+\begin{align}
+\text{rank}(A) = \text{rank}([A|b]) \leq 3
+\end{align}
+if $\text{rank}([A|b]) \leq 3$\\ its columns are linearly dependent.\\
+$\therefore \det([A|b]) = 0$
+\begin{align}
+(2a - b - c)(-a^2 + (b-c)a + (b-c)^2) = 0\\
+\text{as, a, b, c are sides of triangle}\\
+-a^2 + (b-c)a + (b-c)^2 \neq 0\\
+\therefore 2a - b - c &= 0 \\
+\therefore b + c &= 2a
+\end{align}
+\begin{align}
+b + c = 2a\\
+\| A - C \| + \| A - B \| = 2 \| B - C \|
+\end{align}
+given $B$ and $C$ are fixed.
+
+$\therefore$ Locus of `A' is an ellipse,
+
+as, the sum of its distances from 2 fixed points is constant (represents an ellipse).\\
+$\therefore$ Options b and c are correct.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\columnwidth]{figs/graph15.png}
+    \caption{8.4.15}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
