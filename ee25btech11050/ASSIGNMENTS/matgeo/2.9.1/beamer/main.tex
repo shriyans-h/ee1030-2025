@@ -1,0 +1,415 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{gvv}
+\usepackage{lmodern}
+\usepackage{circuitikz}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+\usepackage{tcolorbox}
+\tcbuselibrary{minted,breakable,xparse,skins}
+
+
+
+\definecolor{bg}{gray}{0.95}
+\DeclareTCBListing{mintedbox}{O{}m!O{}}{%
+	breakable=true,
+	listing engine=minted,
+	listing only,
+	minted language=#2,
+	minted style=default,
+	minted options={%
+		linenos,
+		gobble=0,
+		breaklines=true,
+		breakafter=,,
+		fontsize=\small,
+		numbersep=8pt,
+		#1},
+	boxsep=0pt,
+	left skip=0pt,
+	right skip=0pt,
+	left=25pt,
+	right=0pt,
+	top=3pt,
+	bottom=3pt,
+	arc=5pt,
+	leftrule=0pt,
+	rightrule=0pt,
+	bottomrule=2pt,
+	toprule=2pt,
+	colback=bg,
+	colframe=orange!70,
+	enhanced,
+	overlay={%
+		\begin{tcbclipinterior}
+			\fill[orange!20!white] (frame.south west) rectangle ([xshift=20pt]frame.north west);
+	\end{tcbclipinterior}},
+	#3,
+}
+\lstset{
+	language=C,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	stringstyle=\color{orange},
+	commentstyle=\color{green!60!black},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	breaklines=true,
+	showstringspaces=false,
+}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title %optional
+{2.9.1}
+%\subtitle{A short story}
+
+\author % (optional)
+{Hema Havil - EE25BTECH11050}
+
+
+
+\begin{document}
+	
+	\frame{\titlepage}
+	\begin{frame}{Question}
+		Jagdish has a field which is in the shape of a right-angled triangle AQC. He wants to leave a space in the form of a square PQRS inside the field for growing wheat and the remaining space for growing vegetables. In the field, there is a pole marked as O. Based on the above information, answer the following equations
+        \begin{enumerate}[label=\alph*)]
+            \item Taking O as the origin, P = (-200, 0) and Q = (200, 0). PQRS being a square, what are the coordinates of R and S?
+            \item 
+            \begin{enumerate}[label=\roman*)]
+                \item What is the area of square PQRS ?
+                \item What is the length of diagonal PR in PQRS ?
+            \end{enumerate}
+            \item If S divides CA in the ratio K : 1, what is the value of K, where A = (200, 800)?
+        \end{enumerate}
+	\end{frame}
+
+	
+\begin{frame}{Theoretical Solution}
+         Given that,\\ AQC is a right angled triangle at point Q and PQRS is a square inside the $\Delta$AQC,\\ 
+          (a)
+             We were given two points 
+            \begin{align}
+                P=(-200,0),Q=(200,0)
+            \end{align}
+            Let,\\ X be the vector along the side PQ,\\ Y be the vector along the side QR,\\Z be the vector along the side PS then, \\
+            \begin{align}
+                \vec{X}=\vec{Q}-\vec{P}=\myvec{200\\0}-\myvec{-200\\0}
+            \end{align}
+            \begin{align}
+                \vec{X}=\myvec{400\\0}
+            \end{align}
+            
+            
+\end{frame}
+\begin{frame}{Theoretical Solution}
+        Rotation vector for 2x2 matrix is 
+            \begin{align}
+                \vec{R_\theta}=\myvec{cos \theta \; -sin \theta\\sin \theta\;\;\;cos \theta}
+            \end{align}
+            Rotate the vector $\vec{X}$ by $90^{\circ}$ anticlockwise to get Y
+            \begin{align}
+                \vec{Y}=\vec{R_{90}}\vec{X}
+            \end{align}
+            \begin{align}
+                \vec{Y}=\myvec{0\;-1\\1\;\;\;\;0}\myvec{400\\0}
+            \end{align}
+            \begin{align}
+                \vec{Y}=\myvec{0\\400}
+            \end{align}
+            So the vector along the side QR is $\vec{Y}=\myvec{0\\400}$ then,
+            \begin{align}
+                \vec{Y}=\vec{R}-\vec{Q}
+            \end{align}
+            
+	\end{frame}
+    \begin{frame}{Theoretical Solution}
+        \begin{align}
+                \vec{R}=\vec{Y}+\vec{Q}
+            \end{align}
+            \begin{align}
+                \vec{R}=\myvec{0\\400}+\myvec{200\\0}
+            \end{align}
+            \begin{align}
+                \vec{R}=\myvec{200\\400}
+            \end{align}
+            Since the sides QR and PS are parallel, vectors $\vec{Y}=\vec{Z}$ then
+            \begin{align}
+                \vec{Z}=\vec{S}-\vec{P}
+            \end{align}
+            \begin{align}
+                \vec{S}=\vec{Z}+\vec{P}
+            \end{align}
+            \begin{align}
+                \vec{S}=\myvec{0\\400}+\myvec{-200\\0}
+            \end{align}
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
+        \begin{align}
+                \vec{S}=\myvec{-200\\400}
+            \end{align}
+            Therefore the coordinates of the points R and S are (200,400) and (-200,400)
+            (b)
+            \begin{enumerate}[label=(\roman*)]
+                \item We know the points P(-200,0) and Q(200,0)\\
+                   Let length of the side of the square PQRS be x then,
+                   \begin{align}
+                       x=\norm{\vec{Q}-\vec{P}}
+                   \end{align}
+                   \begin{align}
+                       x=\norm{\myvec{400\\0}}=400
+                   \end{align}\\
+                
+                Area of the square = $x^2$ = $(400)^2$ = 160000 sq units\\
+                \item Length of diagnol of the square = $x\sqrt{2}$ = $400\sqrt{2}$ units\\
+            \end{enumerate}
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
+        (c) Given the point A=(200,800)\\
+            Since it was given that point S divides CA in the ratio K:1, this shows that points A,C and S are collinear. Since AQC is a right angled triangle, from this we can say that point C lies on X axis\\
+            Let point C be (t,0), Consider the matrix M\\
+            \begin{align}
+                M = \myvec{200\;800\;\;1\\-200\;400\;1\\t\;\;\;\;\;0\;\;\;\;\;\;1}
+            \end{align}
+            {\large$R_1\rightarrow{}\frac{1}{200}R_1$}
+            \begin{align}
+                 M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\-200\;400\;1\\t\;\;\;\;\;0\;\;\;\;\;\;1}
+            \end{align}
+            {\large$R_2\rightarrow{}R_2 + 200R_1$}\hspace{2cm}
+            {\large$R_3\rightarrow{R_3 - tR_1}$}
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
+        \begin{align}
+                 M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1200\;\;\;\;\;2\\0\;\;\;-4t\;\;\;1-\frac{t}{200}}
+            \end{align}
+            {\large$R_2\rightarrow{\frac{1}{200}R_2}$}
+            \begin{align}
+                M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1\;\;\;\;\;\frac{1}{600}\\0\;\;\;-4t\;\;\;1-\frac{t}{200}}
+            \end{align}
+            {\large$R_3\rightarrow{R_3 + 4tR_2}$}
+            \begin{align}
+                M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1\;\;\;\;\;\frac{1}{600}\\0\;\;\;0\;\;\;\;1-\frac{t}{200}+\frac{4t}{600}}
+            \end{align}
+            Since the three points A,S and C are collinear,\\
+            Rank of M = 2
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
+        \begin{align}
+                1-\frac{t}{200}+\frac{4t}{600} = 0
+            \end{align}
+            \begin{align}
+                1 + \frac{t}{600} = 0
+            \end{align}
+            \begin{align}
+                \frac{t}{600}=-1
+            \end{align}
+            \begin{align}
+                t= -600
+            \end{align}
+            Therefore point C=(-600,0), Now S divides CA in the ratio K:1,
+            \begin{align}
+                S = \frac{KA+C}{K+1}
+            \end{align}
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
+            \begin{align}
+                K=\frac{(S-A)^T(C-S)}{\norm{S-A}^2}
+            \end{align}
+        \begin{align}
+                K=\frac{1}{(400)^2+(400)^2}\myvec{-400\;-400}\myvec{-400\\-400}
+            \end{align}
+            By solving ((c).12) we get K=1
+    \end{frame}
+    
+	
+	\begin{frame}[fragile]
+	\frametitle{C Code- Ploting the given vectors}
+	
+	\begin{lstlisting}
+
+#include <stdio.h>
+
+typedef struct {
+    int x, y;
+} Point;
+
+void get_triangle(Point* pts) {
+    pts[0].x = 200; pts[0].y = 800;     // A
+    pts[1].x = 200; pts[1].y = 0;       // Q
+    pts[2].x = -600; pts[2].y = 0;      // C
+}
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\frametitle{C Code- Ploting the given vectors}
+    \begin{lstlisting}
+    void get_square(Point* pts) {
+    pts[0].x = -200; pts[0].y = 0;      // P
+    pts[1].x = 200;  pts[1].y = 0;    // Q
+    pts[2].x = 200; pts[2].y = 400;    // R
+    pts[3].x = -200;  pts[3].y = 400;      // S (shared corner, so Q again)
+}
+
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Python Code using shared output}
+	\begin{lstlisting}
+		from ctypes import * 
+import matplotlib.pyplot as plt
+
+# Load the C shared library
+lib = CDLL("./2.9.1.so")  # Ensure path matches your compiled output
+
+class Point(Structure):
+    _fields_ = [("x", c_int), ("y", c_int)]
+
+triangle = (Point * 3)()
+square = (Point * 4)()
+
+lib.get_triangle(triangle)
+lib.get_square(square)
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Python Code using shared output}
+	\begin{lstlisting}	
+    tri_x = [triangle[i].x for i in range(3)] + [triangle[0].x]
+    tri_y = [triangle[i].y for i in range(3)] + [triangle[0].y]
+     sqr_x = [square[i].x for i in range(4)] + [square[0].x]
+sqr_y = [square[i].y for i in range(4)] + [square[0].y]
+
+plt.figure(figsize=(8, 8))
+plt.plot(tri_x, tri_y, 'r-', label='Triangle')
+plt.plot(sqr_x, sqr_y, 'b-', label='Square')
+
+# Annotate triangle points
+labels_tri = ['A', 'Q', 'C']
+for i in range(3):
+    plt.text(triangle[i].x, triangle[i].y, labels_tri[i])
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+	\frametitle{Python Code using shared output}
+	\begin{lstlisting}
+# Annotate square points
+labels_sqr = ['P', 'Q', 'R', 'S']
+for i in range(4):
+    plt.text(square[i].x, square[i].y, labels_sqr[i])
+
+plt.scatter([0], [0], marker='x', color='black')
+plt.text(0, 0, 'O', fontsize=12)
+plt.xlim(-700, 300)
+plt.ylim(-100, 900)
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Solution plot')
+plt.grid(True)
+plt.legend()
+plt.show()
+	\end{lstlisting}
+\end{frame}
+\begin{frame}{Plot by python using shared output}
+	\begin{center}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width = 0.7\columnwidth]{figs/fig1.png}
+		\caption{Plot of the vectors when y=3}
+		\label{fig1}
+	\end{figure}
+	\end{center}
+\end{frame}
+\begin{frame}[fragile]
+     \frametitle{Python code for the plot}
+\begin{lstlisting}
+    import matplotlib.pyplot as plt
+
+# Triangle points
+A = (200, 800)
+Q = (200, 0)
+C = (-600, 0)
+
+# Square points
+P = (-200, 0)
+R = (200, 400)
+S = (-200, 400)
+
+# Lists for triangle
+triangle_x = [A[0], Q[0], C[0], A[0]]
+triangle_y = [A[1], Q[1], C[1], A[1]]
+
+
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+   \frametitle{Python code for the plot}
+    \begin{lstlisting}
+# Lists for square
+square_x = [P[0], Q[0], R[0], S[0], P[0]]
+square_y = [P[1], Q[1], R[1], S[1], P[1]]
+
+plt.figure(figsize=(8, 8))
+
+# Plot triangle
+plt.plot(triangle_x, triangle_y, 'r-', label='Triangle')
+
+# Plot square
+plt.plot(square_x, square_y, 'b-', label='Square')
+
+# Label triangle points
+plt.text(A[0], A[1], 'A')
+plt.text(Q[0], Q[1], 'Q')
+plt.text(C[0], C[1], 'C')
+
+
+
+ \end{lstlisting}
+\end{frame}
+ \begin{frame}[fragile]
+       \frametitle{Python code for plot}
+       \begin{lstlisting}
+      # Label square points
+plt.text(P[0], P[1], 'P')
+plt.text(R[0], R[1], 'R')
+plt.text(S[0], S[1], 'S')
+
+# Mark and label the origin
+plt.scatter([0], [0], marker='x', color='black')
+plt.text(0, 0, 'O')
+
+# To match axes and layout
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Solution plot')
+plt.xlim(-700, 300)
+plt.ylim(-100, 900)
+plt.grid(True)
+plt.legend()
+plt.show()
+    \end{lstlisting}
+ \end{frame}
+     \begin{frame}{Plot of triangle and square}
+       \begin{figure}
+           \centering
+           \includegraphics[width=0.7\linewidth]{figs/fig1.png}
+           \caption{Plot of the points}
+           \label{fig:placeholder}
+       \end{figure}
+         
+     \end{frame}
+\end{document}
