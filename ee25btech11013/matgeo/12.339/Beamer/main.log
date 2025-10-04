@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  2 OCT 2025 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  4 OCT 2025 05:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1883,7 +1883,7 @@ Package rerunfilecheck Info: Checksums for `main.out':
 Here is how much of TeX's memory you used:
  57544 strings out of 474222
  1367839 string characters out of 5748733
- 2358252 words of memory out of 5000000
+ 2358251 words of memory out of 5000000
  78787 multiletter control sequences out of 15000+600000
  600555 words of font info for 80 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1892,13 +1892,13 @@ Here is how much of TeX's memory you used:
 pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya
-.pfb>
-Output written on main.pdf (7 pages, 142670 bytes).
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
+Output written on main.pdf (7 pages, 159216 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 285 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
  15 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

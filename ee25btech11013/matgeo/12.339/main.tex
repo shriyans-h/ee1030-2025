@@ -75,19 +75,29 @@ then
 \end{align}
 is \\ \\
 \solution \\
-\begin{align}
-\det{\brak{\vec{A}}} = 3, \Tr{\brak{\vec{A}}} = 3 + 4 = 7
-\end{align}
-(where $\Tr{\brak{\vec{A}}}$ represents the trace of matrix $\vec{A}$, i.e. the sum of the diagonal entries of $\vec{A}$) \\ \\ 
 
-The determinant of the expression can be found out by using the Cayley-Hamilton theorem.\\
+The characteristic equation of matrix $\vec{A}$ is
 \begin{align}
-\vec{A}^2 - \brak{\Tr{\brak{\vec{A}}}}\vec{A} + \det{\brak{\vec{A}}}\vec{I} = 0 
+f(\lambda) = \abs{\vec{A} - \lambda\vec{I}} = 0
 \end{align}
 \begin{align}
-\vec{A}^2 - 7\vec{A} + 3\vec{I} = 0 \implies -\vec{A}^2 + 7\vec{A} - 3\vec{I} = 0
+\abs{\myvec{3-\lambda & -3 \\ -3 & 4-\lambda}} = 0
 \end{align}
 \begin{align}
-\therefore \det{\brak{-\vec{A}^2 + 7\vec{A} - 3\vec{I}}} = 0
+\implies \brak{3-\lambda}\brak{4-\lambda} - 9 = 0
+\end{align}
+\begin{align}
+-\lambda^2 + 7\lambda -3 = 0
+\end{align}
+
+According to Cayley-Hamilton Theorem:
+\begin{align}
+f(\lambda) = f(\vec{A})
+\end{align}
+\begin{align}
+\therefore -\vec{A}^2 + 7\vec{A} - 3\vec{I} = 0
+\end{align}
+\begin{align}
+\therefore \abs{-\vec{A}^2 + 7\vec{A} - 3\vec{I}} = 0
 \end{align}
 \end{document}
