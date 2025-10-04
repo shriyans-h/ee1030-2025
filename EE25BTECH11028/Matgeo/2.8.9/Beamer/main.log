@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  1 OCT 2025 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  4 OCT 2025 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1767,16 +1767,17 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
  [2
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathsy.enc}]
-! Undefined control sequence.
-l.92 \bigski
-            
-? 
-[3
+dvips/lm/lm-mathsy.enc}] [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [4
+] [4
 
 ] [5
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
+Overfull \vbox (12.97134pt too high) detected at line 202
+ []
+
+[6
 
 ]
 \openout4 = `main.vrb'.
@@ -1784,8 +1785,7 @@ l.92 \bigski
  (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
@@ -1793,43 +1793,38 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [6
+)) [7
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-[7
+[8
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [8
+ (./main.vrb) [9
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 238
+Overfull \vbox (1.72923pt too high) detected at line 284
  []
 
-[9
+[10
 
 ]
-<fig4.png, id=288, 578.16pt x 433.62pt>
+<fig4.png, id=329, 578.16pt x 433.62pt>
 File: fig4.png Graphic file (type png)
 <use fig4.png>
-Package pdftex.def Info: fig4.png  used on input line 244.
+Package pdftex.def Info: fig4.png  used on input line 290.
 (pdftex.def)             Requested size: 277.84888pt x 208.38666pt.
- [10
+ [11
 
  <./fig4.png>]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [11
-
-]
 \openout4 = `main.vrb'.
 
  (./main.vrb) [12
@@ -1840,13 +1835,18 @@ Package pdftex.def Info: fig4.png  used on input line 244.
  (./main.vrb) [13
 
 ]
-<figs/fig4.1.png, id=404, 578.16pt x 433.62pt>
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+[14
+
+]
+<figs/fig4.1.png, id=445, 578.16pt x 433.62pt>
 File: figs/fig4.1.png Graphic file (type png)
 <use figs/fig4.1.png>
-Package pdftex.def Info: figs/fig4.1.png  used on input line 309.
+Package pdftex.def Info: figs/fig4.1.png  used on input line 355.
 (pdftex.def)             Requested size: 277.84888pt x 208.38666pt.
-
-[14
+ [15
 
  <./figs/fig4.1.png>]
 \tf@nav=\write8
@@ -1865,6 +1865,9 @@ L3 programming layer <2020/03/25>
  ***********
 
 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
 Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
@@ -1874,10 +1877,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56960 strings out of 474222
- 1356258 string characters out of 5748733
+ 56994 strings out of 474222
+ 1356573 string characters out of 5748733
  2372967 words of memory out of 5000000
- 78199 multiletter control sequences out of 15000+600000
+ 78218 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1520s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1886,11 +1889,12 @@ pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (14 pages, 325428 bytes).
+ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (15 pages, 337301 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 409 compressed objects within 5 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 44 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

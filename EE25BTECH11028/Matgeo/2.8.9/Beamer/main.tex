@@ -89,72 +89,118 @@ Let $\vec{a}, \vec{b}, \vec{c}$ be three vectors such that
 $|\vec{a}|=3,\; |\vec{b}|=4,\; |\vec{c}|=5$, and each one of them is perpendicular to the sum of the other two. 
 Find $|\vec{a}+\vec{b}+\vec{c}|$.
 \end{frame}
-\bigski
-\begin{frame}{Solution}
-Let the Gram matrix $G$ of the three vectors $(a), (b), (c)$ be
-\begin{equation}
-G = 
-\myvec{
-(a,a) & (a,b) & (a,c) \\
-(b,a) & (b,b) & (b,c) \\
-(c,a) & (c,b) & (c,c)
-}
+
+
+\begin{frame}{Solution:}
+From the identity:
+\begin{equation} \label{eq1}
+a^\top(b + c) = 0,
+\end{equation}
+we expand:
+\begin{equation} \label{eq2}
+a^\top b + a^\top c = 0.
+\end{equation}
+
+Similarly, from the symmetry of dot products:
+\begin{align}
+b^\top c + b^\top a &= 0, \label{eq3} \\
+c^\top a + c^\top b &= 0. \label{eq4}
+\end{align}
+\end{frame}
+\begin{frame}{Solution:}
+Let
+\begin{equation} \label{eq5}
+x = a^\top b, \quad y = b^\top c, \quad z = c^\top a.
+\end{equation}
+
+Then equations (2), (3), and (4) become:
+\begin{align}
+x + z &= 0, \label{eq6} \\
+x + y &= 0, \label{eq7} \\
+y + z &= 0. \label{eq8}
+\end{align}
+
+From equation (7):
+\[
+y = -x,
+\]
+\end{frame}
+\begin{frame}{Solution:}
+and from equation (6):
+\[
+z = -x.
+\]
+Substitute into equation (8):
+\[
+y + z = -x + (-x) = -2x = 0 \Rightarrow x = 0.
+\]
+
+Therefore:
+\begin{equation} \label{eq9}
+x = y = z = 0,
+\end{equation}
+so \( a, b, c \) are \textbf{pairwise orthogonal}.
+
+\bigskip
+
+The \textbf{Gram matrix} of \( (a, b, c) \) is:
+\begin{equation} \label{eq10}
+G =
+\begin{bmatrix}
+a^\top a & a^\top b & a^\top c \\
+b^\top a & b^\top b & b^\top c \\
+c^\top a & c^\top b & c^\top c
+\end{bmatrix}
+=
+\begin{bmatrix}
+\|a\|^2 & 0 & 0 \\
+0 & \|b\|^2 & 0 \\
+0 & 0 & \|c\|^2
+\end{bmatrix}
 =
 \myvec{
-9 & x & z \\
-x & 16 & y \\
-z & y & 25
+9 & 0 & 0 \\
+0 & 16 & 0 \\
+0 & 0 & 25
+}.
+\end{equation}
+\end{frame}
+\begin{frame}{Solution:}
+Let
+\[
+u = \myvec{1 \\ 1 \\ 1}.
+\]
+Then
+\begin{equation} \label{eq11}
+\|a + b + c\|^2 = (a + b + c)^\top (a + b + c) = u^\top G u.
+\end{equation}
+
+Now compute:
+\begin{align}
+u^\top G u 
+&= \myvec{1 & 1 & 1}
+\myvec{
+9 & 0 & 0 \\
+0 & 16 & 0 \\
+0 & 0 & 25
 }
-\end{equation}
-where
-\begin{equation}
-x = (a,b), \quad y = (b,c), \quad z = (c,a).
-\end{equation}
-
-The conditions ``each vector is perpendicular to the sum of the other two'' give
-\begin{align}
-(a,(b)+(c)) &= 0, \\
-(b,(c)+(a)) &= 0, \\
-(c,(a)+(b)) &= 0.
-\end{align}
-\end{frame}
-
-\begin{frame}{Solution}
-In terms of $x,y,z$, equations (3)--(5) become
-\begin{align}
-x+z &= 0, \\
-x+y &= 0, \\
-y+z &= 0.
+\myvec{1 \\ 1 \\ 1} \nonumber \\
+&= 9 + 16 + 25 = 50. \label{eq12}
 \end{align}
 
-From (6) we get $z=-x$, and from (7) we get $y=-x$. Substituting into (8) gives
-\begin{equation}
-(-x)+(-x) = 0 \quad \Rightarrow \quad x=0.
+Therefore:
+\begin{equation} \label{eq13}
+\|a + b + c\| = \sqrt{50} = 5\sqrt{2}.
 \end{equation}
 
-Hence
-\begin{equation}
-x=y=z=0.
-\end{equation}
+\bigskip
 
-So $(a),(b),(c)$ are pairwise orthogonal.  
+\textbf{Final Answer:}
+\[
+\boxed{5\sqrt{2}}
+\]
 \end{frame}
 
-\begin{frame}{Solution}
-Therefore
-\begin{align}
-|(a)+(b)+(c)|^2 &= (a+b+c)\cdot(a+b+c) \\
-&= (a,a) + (b,b) + (c,c) \\
-&= |a|^2 + |b|^2 + |c|^2 \\
-&= 9 + 16 + 25 \\
-&= 50.
-\end{align}
-
-Thus
-\begin{equation}
-|(a)+(b)+(c)| = \sqrt{50} = 5\sqrt{2}.
-\end{equation}
-\end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Python Code}

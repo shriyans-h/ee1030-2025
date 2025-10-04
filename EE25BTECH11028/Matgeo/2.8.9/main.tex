@@ -57,103 +57,116 @@ Find $|\vec{a}+\vec{b}+\vec{c}|$.
 \bigskip
 
 \textbf{Solution:} \\
-Let the Gram matrix $G$ of the three vectors $(a), (b), (c)$ be
-\begin{equation}
-G = 
-\myvec{
-(a,a) & (a,b) & (a,c) \\
-(b,a) & (b,b) & (b,c) \\
-(c,a) & (c,b) & (c,c)
-}
+From the identity:
+\begin{equation} \label{eq1}
+a^\top(b + c) = 0,
+\end{equation}
+we expand:
+\begin{equation} \label{eq2}
+a^\top b + a^\top c = 0.
+\end{equation}
+
+Similarly, from the symmetry of dot products:
+\begin{align}
+b^\top c + b^\top a &= 0, \label{eq3} \\
+c^\top a + c^\top b &= 0. \label{eq4}
+\end{align}
+
+Let
+\begin{equation} \label{eq5}
+x = a^\top b, \quad y = b^\top c, \quad z = c^\top a.
+\end{equation}
+
+Then equations (2), (3), and (4) become:
+\begin{align}
+x + z &= 0, \label{eq6} \\
+x + y &= 0, \label{eq7} \\
+y + z &= 0. \label{eq8}
+\end{align}
+
+From equation (7):
+\[
+y = -x,
+\]
+and from equation (6):
+\[
+z = -x.
+\]
+Substitute into equation (8):
+\[
+y + z = -x + (-x) = -2x = 0 \Rightarrow x = 0.
+\]
+
+Therefore:
+\begin{equation} \label{eq9}
+x = y = z = 0,
+\end{equation}
+so \( a, b, c \) are \textbf{pairwise orthogonal}.
+
+\bigskip
+
+The \textbf{Gram matrix} of \( (a, b, c) \) is:
+\begin{equation} \label{eq10}
+G =
+\begin{bmatrix}
+a^\top a & a^\top b & a^\top c \\
+b^\top a & b^\top b & b^\top c \\
+c^\top a & c^\top b & c^\top c
+\end{bmatrix}
+=
+\begin{bmatrix}
+\|a\|^2 & 0 & 0 \\
+0 & \|b\|^2 & 0 \\
+0 & 0 & \|c\|^2
+\end{bmatrix}
 =
 \myvec{
-9 & x & z \\
-x & 16 & y \\
-z & y & 25
+9 & 0 & 0 \\
+0 & 16 & 0 \\
+0 & 0 & 25
+}.
+\end{equation}
+
+Let
+\[
+u = \myvec{1 \\ 1 \\ 1}.
+\]
+Then
+\begin{equation} \label{eq11}
+\|a + b + c\|^2 = (a + b + c)^\top (a + b + c) = u^\top G u.
+\end{equation}
+
+Now compute:
+\begin{align}
+u^\top G u 
+&= \myvec{1 & 1 & 1}
+\myvec{
+9 & 0 & 0 \\
+0 & 16 & 0 \\
+0 & 0 & 25
 }
-\end{equation}
-where
-\begin{equation}
-x = (a,b), \quad y = (b,c), \quad z = (c,a).
-\end{equation}
-
-The conditions ``each vector is perpendicular to the sum of the other two'' give
-\begin{align}
-(a,(b)+(c)) &= 0, \\
-(b,(c)+(a)) &= 0, \\
-(c,(a)+(b)) &= 0.
+\myvec{1 \\ 1 \\ 1} \nonumber \\
+&= 9 + 16 + 25 = 50. \label{eq12}
 \end{align}
 
-In terms of $x,y,z$, equations (3)--(5) become
-\begin{align}
-x+z &= 0, \\
-x+y &= 0, \\
-y+z &= 0.
-\end{align}
-
-From (6) we get $z=-x$, and from (7) we get $y=-x$. Substituting into (8) gives
-\begin{equation}
-(-x)+(-x) = 0 \quad \Rightarrow \quad x=0.
+Therefore:
+\begin{equation} \label{eq13}
+\|a + b + c\| = \sqrt{50} = 5\sqrt{2}.
 \end{equation}
 
-Hence
-\begin{equation}
-x=y=z=0.
-\end{equation}
+\bigskip
 
-So $(a),(b),(c)$ are pairwise orthogonal.  
+\textbf{Final Answer:}
+\[
+\boxed{5\sqrt{2}}
+\]
 
-Therefore
-\begin{align}
-|(a)+(b)+(c)|^2 &= (a+b+c)\cdot(a+b+c) \\
-&= (a,a) + (b,b) + (c,c) \\
-&= |a|^2 + |b|^2 + |c|^2 \\
-&= 9 + 16 + 25 \\
-&= 50.
-\end{align}
-
-Thus
-\begin{equation}
-|(a)+(b)+(c)| = \sqrt{50} = 5\sqrt{2}.
-\end{equation}
-
-\textbf{Graphical Representation:}
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}[tdplot_main_coords, scale=0.9]
-
-  % axes
-  \draw[->] (0,0,0) -- (6.5,0,0) node[anchor=north east]{$x$};
-  \draw[->] (0,0,0) -- (0,6.5,0) node[anchor=north west]{$y$};
-  \draw[->] (0,0,0) -- (0,0,6.5) node[anchor=south]{$z$};
-
-  % vector lengths: |a|=3, |b|=4, |c|=5
-  \coordinate (O) at (0,0,0);
-  \coordinate (A) at (3,0,0);
-  \coordinate (B) at (0,4,0);
-  \coordinate (C) at (0,0,5);
-
-  % resultant a+b+c
-  \coordinate (R) at (3,4,5);
-
-  % draw vectors
-  \draw[->, line width=1pt] (O) -- (A) node[midway, below right] {$\vec a$};
-  \draw[->, line width=1pt] (O) -- (B) node[midway, above left] {$\vec b$};
-  \draw[->, line width=1pt] (O) -- (C) node[midway, right] {$\vec c$};
-
-  % resultant
-  \draw[->, very thick, red] (O) -- (R) node[pos=0.85, above right] {$\vec a+\vec b+\vec c$};
-
-  % dashed parallelepiped edges
-  \draw[dashed] (A) -- (3,4,0) -- (B);
-  \draw[dashed] (A) -- (3,0,5) -- (C);
-  \draw[dashed] (B) -- (0,4,5) -- (C);
-  \draw[dashed] (3,4,0) -- (3,4,5);
-
-\end{tikzpicture}
-        % Add "Fig. 4" text down the figure
-    \vspace{0.5cm}% space between figure and text
-\centerline{\textbf{Fig. 4}}
-\end{figure}
+\textbf{Graph presentation:}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\columnwidth]{figs/fig4.png}
+\end{center}
+\caption{}
+\label{fig:Fig}
+\end{figure}    
 \end{document}
