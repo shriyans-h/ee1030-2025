@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  5 OCT 2025 17:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  5 OCT 2025 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1425,6 +1425,41 @@ x) (/usr/local/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-02-27 v3.4.6 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count387
+\l__siunitx_number_exponent_fixed_int=\count388
+\l__siunitx_number_min_decimal_int=\count389
+\l__siunitx_number_min_integer_int=\count390
+\l__siunitx_number_round_precision_int=\count391
+\l__siunitx_number_lower_threshold_int=\count392
+\l__siunitx_number_upper_threshold_int=\count393
+\l__siunitx_number_group_first_int=\count394
+\l__siunitx_number_group_size_int=\count395
+\l__siunitx_number_group_minimum_int=\count396
+\l__siunitx_angle_tmp_dim=\dimen385
+\l__siunitx_angle_marker_box=\box141
+\l__siunitx_angle_unit_box=\box142
+\l__siunitx_compound_count_int=\count397
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_table_tmp_box=\box143
+\l__siunitx_table_tmp_dim=\dimen386
+\l__siunitx_table_column_width_dim=\dimen387
+\l__siunitx_table_integer_box=\box144
+\l__siunitx_table_decimal_box=\box145
+\l__siunitx_table_uncert_box=\box146
+\l__siunitx_table_before_box=\box147
+\l__siunitx_table_after_box=\box148
+\l__siunitx_table_before_dim=\dimen388
+\l__siunitx_table_carry_dim=\dimen389
+\l__siunitx_unit_tmp_int=\count398
+\l__siunitx_unit_position_int=\count399
+\l__siunitx_unit_total_int=\count400
+)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2024/10/22 version 6.4.1 text color boxes
 
@@ -1440,19 +1475,19 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box141
-\tcb@upperbox=\box142
-\tcb@lowerbox=\box143
-\tcb@phantombox=\box144
-\c@tcbbreakpart=\count387
-\c@tcblayer=\count388
-\c@tcolorbox@number=\count389
-\l__tcobox_tmpa_box=\box145
-\l__tcobox_tmpa_dim=\dimen385
-\tcb@temp=\box146
-\tcb@temp=\box147
-\tcb@temp=\box148
-\tcb@temp=\box149
+\tcb@titlebox=\box149
+\tcb@upperbox=\box150
+\tcb@lowerbox=\box151
+\tcb@phantombox=\box152
+\c@tcbbreakpart=\count401
+\c@tcblayer=\count402
+\c@tcolorbox@number=\count403
+\l__tcobox_tmpa_box=\box153
+\l__tcobox_tmpa_dim=\dimen390
+\tcb@temp=\box154
+\tcb@temp=\box155
+\tcb@temp=\box156
+\tcb@temp=\box157
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
 Library (tcolorbox): 'tcbminted.code.tex' version '6.4.1'
@@ -1471,11 +1506,11 @@ rb
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count390
+\FV@CodeLineNo=\count404
 \FV@InFile=\read4
-\FV@TabBox=\box150
-\c@FancyVerbLine=\count391
-\FV@StepNumber=\count392
+\FV@TabBox=\box158
+\c@FancyVerbLine=\count405
+\FV@StepNumber=\count406
 \FV@OutFile=\write5
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
@@ -1487,49 +1522,49 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2025/01/29 line numbers on paragraphs v5.4
-\linenopenalty=\count393
+\linenopenalty=\count407
 \output=\toks58
-\linenoprevgraf=\count394
-\linenumbersep=\dimen386
-\linenumberwidth=\dimen387
-\c@linenumber=\count395
-\c@pagewiselinenumber=\count396
-\c@LN@truepage=\count397
-\c@internallinenumber=\count398
-\c@internallinenumbers=\count399
-\quotelinenumbersep=\dimen388
-\bframerule=\dimen389
-\bframesep=\dimen390
-\bframebox=\box151
-\@LN@amsmath@ams@eqpen=\count400
+\linenoprevgraf=\count408
+\linenumbersep=\dimen391
+\linenumberwidth=\dimen392
+\c@linenumber=\count409
+\c@pagewiselinenumber=\count410
+\c@LN@truepage=\count411
+\c@internallinenumber=\count412
+\c@internallinenumbers=\count413
+\quotelinenumbersep=\dimen393
+\bframerule=\dimen394
+\bframesep=\dimen395
+\bframebox=\box159
+\@LN@amsmath@ams@eqpen=\count414
 LaTeX Info: Redefining \\ on input line 3187.
 )
-\c@FancyVerbWriteLine=\count401
-\c@FancyVerbBufferLine=\count402
-\c@FV@TrueTabGroupLevel=\count403
-\c@FV@TrueTabCounter=\count404
-\FV@TabBox@Group=\box152
-\FV@bgcolorstructbox=\box153
+\c@FancyVerbWriteLine=\count415
+\c@FancyVerbBufferLine=\count416
+\c@FV@TrueTabGroupLevel=\count417
+\c@FV@TrueTabCounter=\count418
+\FV@TabBox@Group=\box160
+\FV@bgcolorstructbox=\box161
 \FV@TmpLength=\skip70
-\c@FV@HighlightLinesStart=\count405
-\c@FV@HighlightLinesStop=\count406
-\FV@LoopCount=\count407
-\FV@NCharsBox=\box154
-\FV@BreakIndent=\dimen391
-\FV@BreakIndentNChars=\count408
-\FV@BreakSymbolSepLeft=\dimen392
-\FV@BreakSymbolSepLeftNChars=\count409
-\FV@BreakSymbolSepRight=\dimen393
-\FV@BreakSymbolSepRightNChars=\count410
-\FV@BreakSymbolIndentLeft=\dimen394
-\FV@BreakSymbolIndentLeftNChars=\count411
-\FV@BreakSymbolIndentRight=\dimen395
-\FV@BreakSymbolIndentRightNChars=\count412
-\c@FancyVerbLineBreakLast=\count413
-\FV@LineBox=\box155
-\FV@LineIndentBox=\box156
-\c@FV@BreakBufferDepth=\count414
-\FV@LineWidth=\dimen396
+\c@FV@HighlightLinesStart=\count419
+\c@FV@HighlightLinesStop=\count420
+\FV@LoopCount=\count421
+\FV@NCharsBox=\box162
+\FV@BreakIndent=\dimen396
+\FV@BreakIndentNChars=\count422
+\FV@BreakSymbolSepLeft=\dimen397
+\FV@BreakSymbolSepLeftNChars=\count423
+\FV@BreakSymbolSepRight=\dimen398
+\FV@BreakSymbolSepRightNChars=\count424
+\FV@BreakSymbolIndentLeft=\dimen399
+\FV@BreakSymbolIndentLeftNChars=\count425
+\FV@BreakSymbolIndentRight=\dimen400
+\FV@BreakSymbolIndentRightNChars=\count426
+\c@FancyVerbLineBreakLast=\count427
+\FV@LineBox=\box163
+\FV@LineIndentBox=\box164
+\c@FV@BreakBufferDepth=\count428
+\FV@LineWidth=\dimen401
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
 Package: latex2pydata 2025/03/03 v0.5.0 latex2pydata - write data to file in Py
@@ -1546,15 +1581,15 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count415
+\c@float@type=\count429
 \float@exts=\toks61
-\float@box=\box157
+\float@box=\box165
 \@float@everytoks=\toks62
-\@floatcapt=\box158
+\@floatcapt=\box166
 )
-\c@minted@FancyVerbLineTemp=\count416
+\c@minted@FancyVerbLineTemp=\count430
 \@float@every@listing=\toks63
-\c@listing=\count417
+\c@listing=\count431
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
 x
@@ -1562,7 +1597,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.4.1'
 )
-\c@tcblisting=\count418
+\c@tcblisting=\count432
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.4.1'
@@ -1570,9 +1605,9 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.4.1'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box159
-\tcb@totalupperbox=\box160
-\tcb@totallowerbox=\box161
+\tcb@testbox=\box167
+\tcb@totalupperbox=\box168
+\tcb@totallowerbox=\box169
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '6.4.1'
@@ -1587,7 +1622,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.co
 de.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box162
+\l__tikzfill_img_box=\box170
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.4.1'
@@ -1597,56 +1632,58 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 )
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 89.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-88.
+89.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 88.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 89.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-88.
+89.
+
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 89.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-88.
+89.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 89.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-88.
+89.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 89.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 8
-8.
+9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1684,16 +1721,16 @@ LaTeX Font Info:    ... okay on input line 88.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count419
-\scratchdimen=\dimen397
-\scratchbox=\box163
-\nofMPsegments=\count420
-\nofMParguments=\count421
+\scratchcounter=\count433
+\scratchdimen=\dimen402
+\scratchbox=\box171
+\nofMPsegments=\count434
+\nofMParguments=\count435
 \everyMPshowfont=\toks64
-\MPscratchCnt=\count422
-\MPscratchDim=\dimen398
-\MPnumerator=\count423
-\makeMPintoPDFobject=\count424
+\MPscratchCnt=\count436
+\MPscratchDim=\dimen403
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
 \everyMPtoPDFconversion=\toks65
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1704,56 +1741,58 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 88.
+Package hyperref Info: Link coloring OFF on input line 89.
+
+(./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 88.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 88.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 88.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 88.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 89.
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 88.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 88.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 89.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 88.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 88.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 88.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/b/n on input line 89.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 88.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 88.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 88.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 89.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 88.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 88.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 88.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 89.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 88.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 88.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 88.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 89.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 88.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 88.
+(Font)                  OT1/lmss/b/n --> OT1/lmr/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 88.
+(Font)                  OT1/lmss/b/n --> OT1/lmss/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 88.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/b/n on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 88.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/b/it on input line 89.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 88.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 89.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1779,86 +1818,92 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count425
+\c@lstlisting=\count439
 
-No file main.nav.
-
+(/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 89.
+ (./main.nav)
 
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-03.
+04.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-103.
+104.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-103.
+104.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 103.
+(Font)              <10.95> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 103.
+(Font)              <8> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 103.
+(Font)              <6> on input line 104.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-03.
+04.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-03.
+04.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-03.
+04.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-03.
+04.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-03.
+04.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 104.
 
 LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 104.
 
 
 
@@ -1878,53 +1923,137 @@ l/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 
  (./main.vrb
 ! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 225\degree 
-                                           & -\sin 225\degree \\ \sin 225\de...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> ...}\cos 225\degree & -\sin 225\degree 
-                                                  \\ \sin 225\degree & \cos ...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> ...-\sin 225\degree \\ \sin 225\degree 
-                                                  & \cos 225\degree \end {pm...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> ...\ \sin 225\degree & \cos 225\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 225\degree 
-                                           & -\sin 225\degree \\ \sin 225\de...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> ...}\cos 225\degree & -\sin 225\degree 
-                                                  \\ \sin 225\degree & \cos ...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> ...-\sin 225\degree \\ \sin 225\degree 
-                                                  & \cos 225\degree \end {pm...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
 ! Undefined control sequence.
-<argument> ...\ \sin 225\degree & \cos 225\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
 ? 
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+? R
+OK, entering \nonstopmode...
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 )
 
 [4
@@ -1934,53 +2063,181 @@ l.6 \end{align}
 
  (./main.vrb
 ! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 135\degree 
-                                           & -\sin 135\degree \\ \sin 135\de...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...}\cos 135\degree & -\sin 135\degree 
-                                                  \\ \sin 135\degree & \cos ...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...-\sin 135\degree \\ \sin 135\degree 
-                                                  & \cos 135\degree \end {pm...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...\ \sin 135\degree & \cos 135\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 135\degree 
-                                           & -\sin 135\degree \\ \sin 135\de...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...}\cos 135\degree & -\sin 135\degree 
-                                                  \\ \sin 135\degree & \cos ...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...-\sin 135\degree \\ \sin 135\degree 
-                                                  & \cos 135\degree \end {pm...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...\ \sin 135\degree & \cos 135\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\degree ->\ERROR 
+                 
+l.9 \end{align}
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 )
 
 [5
@@ -1990,53 +2247,93 @@ l.6 \end{align}
 
  (./main.vrb
 ! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 180\degree 
-                                           & -\sin 180\degree \\ \sin 180\de...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...}\cos 180\degree & -\sin 180\degree 
-                                                  \\ \sin 180\degree & \cos ...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...-\sin 180\degree \\ \sin 180\degree 
-                                                  & \cos 180\degree \end {pm...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...\ \sin 180\degree & \cos 180\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 180\degree 
-                                           & -\sin 180\degree \\ \sin 180\de...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...}\cos 180\degree & -\sin 180\degree 
-                                                  \\ \sin 180\degree & \cos ...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...-\sin 180\degree \\ \sin 180\degree 
-                                                  & \cos 180\degree \end {pm...
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Undefined control sequence.
-<argument> ...\ \sin 180\degree & \cos 180\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
+\degree ->\ERROR 
+                 
+l.5 \end{align}
                \\
-? 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 )
 
 [6
@@ -2044,142 +2341,33 @@ l.6 \end{align}
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb
-! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 270\degree 
-                                           & -\sin 270\degree \\ \sin 270\de...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...}\cos 270\degree & -\sin 270\degree 
-                                                  \\ \sin 270\degree & \cos ...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...-\sin 270\degree \\ \sin 270\degree 
-                                                  & \cos 270\degree \end {pm...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...\ \sin 270\degree & \cos 270\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 270\degree 
-                                           & -\sin 270\degree \\ \sin 270\de...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...}\cos 270\degree & -\sin 270\degree 
-                                                  \\ \sin 270\degree & \cos ...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...-\sin 270\degree \\ \sin 270\degree 
-                                                  & \cos 270\degree \end {pm...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...\ \sin 270\degree & \cos 270\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
-               \\
-? 
-)
+ (./main.vrb)
 
 [7
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb
-! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 0\degree 
-                                         & -\sin 0\degree \\ \sin 0\degree &...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...trix}\cos 0\degree & -\sin 0\degree 
-                                                  \\ \sin 0\degree & \cos 0\...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...e & -\sin 0\degree \\ \sin 0\degree 
-                                                  & \cos 0\degree \end {pmat...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...ee \\ \sin 0\degree & \cos 0\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> \begin {pmatrix}\cos 0\degree 
-                                         & -\sin 0\degree \\ \sin 0\degree &...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...trix}\cos 0\degree & -\sin 0\degree 
-                                                  \\ \sin 0\degree & \cos 0\...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...e & -\sin 0\degree \\ \sin 0\degree 
-                                                  & \cos 0\degree \end {pmat...
-l.6 \end{align}
-               \\
-? 
-! Undefined control sequence.
-<argument> ...ee \\ \sin 0\degree & \cos 0\degree 
-                                                  \end {pmatrix}
-l.6 \end{align}
-               \\
-? 
-)
-Overfull \vbox (14.63373pt too high) detected at line 166
- []
-
-
+ (./main.vrb)
 
 [8
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb)
-
-[9
-
-]
-\openout4 = `main.vrb'.
-
  (./main.vrb
-<Figs/1218.png, id=293, 709.65125pt x 720.6925pt>
+<Figs/1218.png, id=265, 709.65125pt x 720.6925pt>
 File: Figs/1218.png Graphic file (type png)
 <use Figs/1218.png>
 Package pdftex.def Info: Figs/1218.png  used on input line 4.
 (pdftex.def)             Requested size: 205.37926pt x 208.56659pt.
 )
-Overfull \vbox (17.04027pt too high) detected at line 181
+Overfull \vbox (17.04027pt too high) detected at line 174
  []
 
 
 
-[10
+[9
 
  <./Figs/1218.png>]
 \tf@nav=\write7
@@ -2191,6 +2379,9 @@ Overfull \vbox (17.04027pt too high) detected at line 181
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
+runsystem(latexminted cleantemp  --timestamp 20251005173606 FAD58DE7366495DB465
+0CFEFAC2FCD61)...executed safely (allowed).
+
  (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
@@ -2200,23 +2391,17 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58728 strings out of 473190
- 1435700 string characters out of 5715800
- 2347074 words of memory out of 5000000
- 80983 multiletter control sequences out of 15000+600000
+ 62569 strings out of 473190
+ 1556188 string characters out of 5715800
+ 2422746 words of memory out of 5000000
+ 84808 multiletter control sequences out of 15000+600000
  599577 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,19n,123p,1172b,727s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,1172b,1059s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/tex
@@ -2225,10 +2410,10 @@ nts/type1/public/lm/lmss8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/p
 ublic/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm
 /lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 >
-Output written on main.pdf (10 pages, 300166 bytes).
+Output written on main.pdf (9 pages, 297788 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 303 compressed objects within 4 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
+ 20 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
