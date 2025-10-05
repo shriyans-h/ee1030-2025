@@ -1,0 +1,103 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{5.8.8}
+\author{EE25BTECH11010 - Arsh Dhoke}
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\parindent 0px
+\textbf{Question}:\\
+Places A and B are 100km apart on a highway. One car starts from A and another from B at the same time. If the car travel in the same direction at different speeds, they meet in 5hrs. If they travel towards each other, they meet in 1hr. What are the speeds of the two cars?
+
+\solution \\
+Cars meet in 1 hr when moving towards each other:
+\begin{align}
+v_1 + v_2 &= \frac{100}{1} 
+\end{align}
+Cars meet in 5 hr when moving in the same direction:
+\begin{align}
+v_1 - v_2 &= \frac{100}{5} 
+\end{align}
+\begin{align}
+\myvec{1 & 1 \\ 1 & -1} \myvec{v_1 \\ v_2} &= \myvec{100 \\ 20} \\
+\myvec{v_1 \\ v_2} &=\myvec{1 & 1 \\ 1 & -1}^{-1} \myvec{100 \\ 20} 
+\end{align}
+The augmented matrix for the given matrix will be
+\begin{align}
+\augvec{2}{4}{1 & 1 & 1 & 0 \\ 1 & -1 & 0 & 1}
+&\xleftrightarrow[R_2\to R_2-R_1]{}
+\augvec{2}{4}{1 & 1 & 1 & 0 \\ 0 & -2 & -1 & 1} \\
+&\xleftrightarrow[R_2\to -\frac{1}{2} R_2]{}
+\augvec{2}{4}{1 & 1 & 1 & 0 \\ 0 & 1 & \frac{1}{2} & -\frac{1}{2}} \\
+&\xleftrightarrow[R_1\to R_1-R_2]{}
+\augvec{2}{4}{1 & 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 1 & \frac{1}{2} & -\frac{1}{2}}
+\end{align}
+
+\begin{align}
+\therefore \quad 
+\myvec{1 & 1 \\ 1 & -1}^{-1} &= \myvec{\frac{1}{2} & \frac{1}{2} \\[2mm] \frac{1}{2} & -\frac{1}{2}}
+\end{align}
+
+\begin{align}
+\myvec{v_1 \\ v_2} &= \myvec{\frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & -\frac{1}{2}} \myvec{100 \\ 20} 
+\end{align}
+\begin{align}
+\myvec{v_1 \\ v_2} &= \myvec{60 \\ 40}
+\end{align}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[height=0.6\textheight, keepaspectratio]{figs/speed.png}
+\captionof{figure}{Graph}
+\end{figure}
+
+
+\end{document}
