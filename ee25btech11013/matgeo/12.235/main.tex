@@ -83,10 +83,35 @@ This can be represented as an augmented matrix and can be solved by using Gaussi
 \xleftrightarrow[R_3 \leftarrow R_3 - 4R_2]{R_2 \leftarrow \frac{R_2}{3}} \augvec{3}{1}{1 & -1 & 2 & 4\\ 0 & 1 & 0 & \frac{y-8}{3} \\ 0 & 0 & -1 & \frac{29-4y}{3}} \xleftrightarrow[R_1 \leftarrow R_1 - 2R_3]{R_3 \leftarrow -R_3}
 \end{align}
 \begin{align}
-\augvec{3}{1}{1 & -1 & 0 & \frac{41- 8y}{3} \\ 0 & 1 & 0 & \frac{y-8}{3}\\ 0 & 0 & 1 & \frac{4y-29}{3}} \xleftrightarrow{R_1 \leftarrow R_1 + R_2} \augvec{3}{1}{1 & 0 & 0 & \frac{33 - 7y}{3} \\ 0 & 1 & 0 & \frac{y-8}{3} \\ 0 & 0 & 1 & \frac{4y - 29}{3}}
+\augvec{3}{1}{1 & -1 & 0 & \frac{70- 8y}{3} \\ 0 & 1 & 0 & \frac{y-8}{3}\\ 0 & 0 & 1 & \frac{4y-29}{3}} \xleftrightarrow{R_1 \leftarrow R_1 + R_2} \augvec{3}{1}{1 & 0 & 0 & \frac{62 - 7y}{3} \\ 0 & 1 & 0 & \frac{y-8}{3} \\ 0 & 0 & 1 & \frac{4y - 29}{3}}
 \end{align}
-
+\begin{align}
+\myvec{x_1 \\ x_2 \\ x_3} = \myvec{\frac{62 - 7y}{3} \\ \frac{y-8}{3} \\ \frac{4y - 29}{3}}
+\end{align}
 Since $y  \in \mathbf{R}$, we can conclude that there exists a unique solution and the system of equations is consistent. \\
 
-Option (1) is the correct answer
+Option (1) is the correct answer \\ \\ 
+
+This can be verified by finding the point of intersection of 3 planes:\\
+As an example, take $y = 8$
+\begin{align}
+x_1 - x_2 + 2x_3 = 4
+\end{align}
+\begin{align}
+2x_1 + x_2 + 4x_3 = 8
+\end{align}
+\begin{align}
+x_1 + 3x_2 + x_3 = 3
+\end{align}
+
+The point of intersection of the planes from \brak{4.4} is
+\begin{align}
+\myvec{x_1 \\ x_2 \\ x_3} = \myvec{2 \\ 0 \\ 1}
+\end{align}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.5\textheight, keepaspectratio]{figs/Figure_1.png}
+    \label{figure_1}
+\end{figure}
 \end{document}
