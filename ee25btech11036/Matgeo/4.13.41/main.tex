@@ -1,0 +1,121 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern}
+
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{4.13.41}
+\author{EE25BTECH11036 - M Chanakya Srinivas}
+\maketitle
+
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt}
+\renewcommand\theequation{\arabic{equation}}
+
+
+\section*{Problem}
+Find the area of the parallelogram formed by the lines
+\[
+y = m x, \quad y = m x + 1, \quad y = n x, \quad y = n x + 1
+\]
+.
+
+\section*{Solution }
+
+\subsection*{Step 1: Represent lines in parametric vector form}
+
+\begin{align}
+\vec{r}_1 &= \kappa_1 \myvec{1\\m}, & 
+\vec{r}_2 &= \myvec{0\\1} + \kappa_2 \myvec{1\\m}, \\
+\vec{r}_3 &= \mu_1 \myvec{1\\n}, & 
+\vec{r}_4 &= \myvec{0\\1} + \mu_2 \myvec{1\\n}.
+\end{align}
+
+Here, \(\vec{r}_1, \vec{r}_2\) represent the pair of lines with slope \(m\), and
+\(\vec{r}_3, \vec{r}_4\) represent the pair of lines with slope \(n\).
+
+\subsection*{Step 2: Compute vertices of parallelogram using intersection}
+
+Intersection of \(\vec{r}_1\) and \(\vec{r}_3\):
+\[
+\vec{P} : \kappa_1 \myvec{1\\m} = \mu_1 \myvec{1\\n} \quad \Rightarrow \quad \vec{P} = \myvec{0\\0}
+\]
+
+Intersection of \(\vec{r}_2\) and \(\vec{r}_3\):
+\[
+\vec{Q} : \myvec{0\\1} + \kappa_2 \myvec{1\\m} = \mu_1 \myvec{1\\n} \quad \Rightarrow 
+\myvec{ \kappa_2 \\ 1 + m \kappa_2 } = 
+\myvec{ \mu_1 \\ n \mu_1 }
+\]
+
+Solve augmented matrix form :
+\[
+\underbrace{\myvec{ 1 & -1 \\ m & -n }}_{M} 
+\underbrace{\myvec{\kappa_2 \\ \mu_1}}_{\vec{z}} = 
+\underbrace{\myvec{0 \\ -1}}_{\vec{b}}
+\]
+
+\subsection*{Step 3: Row-reduction / consistency}
+
+\begin{align*}
+R_2 &\to R_2 - m R_1: & (m - n) \mu_1 &= m - 1 \quad \Rightarrow \quad \mu_1 = \frac{1}{m-n} \\
+R_1 &\to R_1: & \kappa_2 - \mu_1 &= 0 \quad \Rightarrow \quad \kappa_2 = \frac{1}{m-n}
+\end{align*}
+
+Hence
+\[
+\vec{Q} = \myvec{-1/(m-n)\\-m/(m-n)}
+\]
+
+Similarly, intersections give the other vertices
+\[
+\vec{R} = \myvec{1/(m-n)\\m/(m-n)}, \quad \vec{S} = \myvec{0\\1}
+\]
+
+\subsection*{Step 4: Area using vector cross product (Chapter 4 vector style)}
+
+\begin{align}
+\vec{PQ} &= \vec{Q} - \vec{P} = \myvec{-1/(m-n)\\-m/(m-n)}, \\
+\vec{PR} &= \vec{R} - \vec{P} = \myvec{1/(m-n)\\ m/(m-n)}, \\
+\text{Area} &= \big\| \vec{PQ} \times \vec{PR} \big\| \\
+&= \left| \left(-\frac{1}{m-n}\right)\left(\frac{m}{m-n}\right) - \left(-\frac{m}{m-n}\right) \left(\frac{1}{m-n}\right) \right| \\
+&= \frac{1}{|m-n|}
+\end{align}
+
+\subsection*{Answer}
+\[
+\boxed{\text{Area of the parallelogram} = \frac{1}{|m-n|}}
+\]
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/Figure_81.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{figs/fig82.png}
+    \caption{}
+    \label{fig:placeholder}
+\end{figure}
+\end{document}
