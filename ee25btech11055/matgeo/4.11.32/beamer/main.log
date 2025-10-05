@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.23)  1 OCT 2025 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.8.23)  5 OCT 2025 09:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1163,10 +1163,10 @@ Overfull \vbox (9.12254pt too high) detected at line 139
 <../figs/plot.png, id=125, 578.16pt x 433.62pt>
 File: ../figs/plot.png Graphic file (type png)
 <use ../figs/plot.png>
-Package pdftex.def Info: ../figs/plot.png  used on input line 162.
+Package pdftex.def Info: ../figs/plot.png  used on input line 157.
 (pdftex.def)             Requested size: 273.83728pt x 205.37614pt.
 
-Overfull \vbox (2.76965pt too high) detected at line 162
+Overfull \vbox (2.76965pt too high) detected at line 157
  []
 
 [9
@@ -1231,7 +1231,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 
 
 (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 256
+Overfull \vbox (0.11983pt too high) detected at line 251
  []
 
 [14
@@ -1240,7 +1240,7 @@ Overfull \vbox (0.11983pt too high) detected at line 256
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 278
+Overfull \vbox (0.11983pt too high) detected at line 273
  []
 
 [15
@@ -1249,7 +1249,7 @@ Overfull \vbox (0.11983pt too high) detected at line 278
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (0.11983pt too high) detected at line 300
+Overfull \vbox (0.11983pt too high) detected at line 295
  []
 
 [16
@@ -1257,16 +1257,16 @@ Overfull \vbox (0.11983pt too high) detected at line 300
 ]
 File: ../figs/plot.png Graphic file (type png)
 <use ../figs/plot.png>
-Package pdftex.def Info: ../figs/plot.png  used on input line 309.
+Package pdftex.def Info: ../figs/plot.png  used on input line 304.
 (pdftex.def)             Requested size: 273.83728pt x 205.37614pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:plot}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.309 \end{frame}
+l.304 \end{frame}
                  
-Overfull \vbox (2.76965pt too high) detected at line 309
+Overfull \vbox (2.76965pt too high) detected at line 304
  []
 
 [17
@@ -1285,16 +1285,16 @@ Overfull \vbox (2.76965pt too high) detected at line 309
 <../figs/python.png, id=184, 578.16pt x 578.16pt>
 File: ../figs/python.png Graphic file (type png)
 <use ../figs/python.png>
-Package pdftex.def Info: ../figs/python.png  used on input line 359.
+Package pdftex.def Info: ../figs/python.png  used on input line 354.
 (pdftex.def)             Requested size: 256.72147pt x 256.72018pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:plot}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.359 \end{frame}
+l.354 \end{frame}
                  
-Overfull \vbox (54.1137pt too high) detected at line 359
+Overfull \vbox (54.1137pt too high) detected at line 354
  []
 
 [20
@@ -1339,7 +1339,7 @@ blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfss1
 095.pfb>
-Output written on main.pdf (20 pages, 458795 bytes).
+Output written on main.pdf (20 pages, 458876 bytes).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  197 compressed objects within 2 object streams

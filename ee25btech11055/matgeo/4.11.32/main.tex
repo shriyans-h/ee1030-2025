@@ -80,7 +80,11 @@ We know, for line $\vec{x} = \vec{h} +k\vec{m}$ and plane $\vec{n}^\top\vec{y}=1
 \begin{align}
  \vec{h} &= \vec{A} \\
  \vec{m} &= \vec{B-A} \\
- \myvec{P & Q & R}^\top\vec{n} &= \myvec{1\\1\\1}
+ \myvec{P & Q & R}^\top\vec{n} &= \myvec{1\\1\\1} \\
+ \text{Also, for intersection}\\
+ \vec{x}=\vec{y} \implies \vec{n}^\top\brak{\vec{h}+k\vec{m}} = 1\\
+ k = \frac{1-\vec{n}^\top\vec{h}}{\vec{n}^\top\vec{m}} \\
+ \vec{x} = \vec{h} + \brak{\frac{1-\vec{n}^\top\vec{h}}{\vec{n}^\top\vec{m}}}\vec{m}
 \end{align}
 Thus
 \begin{align}
@@ -97,15 +101,10 @@ Thus
 \end{align}
 So we have:
 \begin{align}
- \vec{x} = \myvec{2\\-1\\2} +k\myvec{3\\4\\2} &= \myvec{2+3k \\ -1+4k \\ 2+2k} \\
- \myvec{1&-3&2}\vec{y}&=8
-\end{align}
-At point of intersection,
-\begin{align}
- \vec{x}&=\vec{y}=\vec{S} \\
- \myvec{1&-3&2}&\myvec{2+3k\\-1+4k\\2+2k}=8 \\
- k &= 1/5 \\
- \vec{S} &= \myvec{13/5 \\ -1/5 \\ 12/5}
+\vec{n}^\top\vec{h}= \frac{1}{8}\myvec{1&-3&2}\myvec{2\\-1\\2} = \frac{9}{8}\\
+\vec{n}^\top\vec{m} = \frac{1}{8}\myvec{1&-3&2}\myvec{3\\4\\2} = -\frac{5}{8} \\
+\vec{x} = \myvec{2\\-1\\2} + \brak{\frac{1-9/8}{-5/8}}
+\myvec{3\\4\\2} = \myvec{13/5\\-1/5\\12/5 }
 \end{align}
 \begin{figure}[H]
     \centering
