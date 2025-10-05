@@ -2,7 +2,7 @@
 \begin{lstlisting}
 # Plot parabola
 plt.figure(figsize=(6,6))
-plt.plot(x_vals, y_vals, 'b.', markersize=2, label=r"$y^2=-8x$")
+plt.scatter(x, y, s=5, c='b', label=r"$y^2=-8x$")
 plt.axhline(0, color='k', linewidth=0.8)
 plt.axvline(0, color='k', linewidth=0.8)
 plt.xlabel("x-axis")
