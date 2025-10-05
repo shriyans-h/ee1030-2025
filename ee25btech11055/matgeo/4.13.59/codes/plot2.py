@@ -13,10 +13,15 @@ for i in range(1, 4):
     y = (eval(f"c{i}") - eval(f"n{i}")[0] * x) / eval(f"n{i}")[1]
     plt.plot(x, y)
 
-xx = np.concatenate((np.linspace(-1.5, -1, 100), np.linspace(1 / 3, 1, 100)))
+xx = np.linspace(-1.5, -1, 100)
 yy = xx**2
 
-plt.plot(xx, yy)
+plt.plot(xx, yy,color='red')
+
+xx = np.linspace(1 / 2, 1, 100)
+yy = xx**2
+
+plt.plot(xx, yy,color='red')
 
 plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
