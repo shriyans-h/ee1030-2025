@@ -39,18 +39,18 @@ Let the fraction be $\frac{x}{y}$.
 Augmented matrix:
 
 \begin{align}
-\myvec{3 & -1 & 3 \\ 4 & -1 & 8}
+\augvec{2}{1}{3 & -1 & 3 \\ 4 & -1 & 8}
 \end{align}
 
 RREF using row operations:
 
 \begin{align}
 R_2 &\to R_2 - \frac{4}{3} R_1 \implies 
-\myvec{3 & -1 & 3 \\ 0 & 1/3 & 4} \implies
-\myvec{3 & -1 & 3 \\ 0 & 1 & 12}, \\
+\augvec{2}{1}{3 & -1 & 3 \\ 0 & 1/3 & 4} \implies
+\augvec{2}{1}{3 & -1 & 3 \\ 0 & 1 & 12}, \\
 R_1 &\to R_1 + R_2 \implies 
-\myvec{3 & 0 & 15 \\ 0 & 1 & 12} \implies
-\myvec{1 & 0 & 5 \\ 0 & 1 & 12}
+\augvec{2}{1}{3 & 0 & 15 \\ 0 & 1 & 12} \implies
+\augvec{2}{1}{1 & 0 & 5 \\ 0 & 1 & 12}
 \end{align}
 
 \begin{align}

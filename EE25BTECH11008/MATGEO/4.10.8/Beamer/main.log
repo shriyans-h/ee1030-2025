@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  3 OCT 2025 04:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.5)  6 OCT 2025 02:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,8 +739,7 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 \c@rem=\count345
 \c@matchleft=\count346
 \c@matchright=\count347
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -761,6 +760,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -818,6 +818,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 11.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -899,15 +901,12 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count354
-
-No file main.nav.
-[1
+ (./main.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
@@ -927,11 +926,11 @@ thkerncmss.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 47.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 47.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 47.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 41.
  [3
 
 ] [4
@@ -978,13 +977,13 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 \openout4 = `main.vrb'.
 
  (./main.vrb
-<figs/plt.png, id=253, 433.62pt x 433.62pt>
+<figs/plt.png, id=255, 433.62pt x 433.62pt>
 File: figs/plt.png Graphic file (type png)
 <use figs/plt.png>
 Package pdftex.def Info: figs/plt.png  used on input line 3.
 (pdftex.def)             Requested size: 245.83282pt x 245.83604pt.
 )
-Overfull \vbox (38.10738pt too high) detected at line 146
+Overfull \vbox (38.10738pt too high) detected at line 140
  []
 
 [10
@@ -1008,7 +1007,7 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (0.72672pt too high) detected at line 182
+Overfull \vbox (0.72672pt too high) detected at line 176
  []
 
 [12
@@ -1037,23 +1036,14 @@ L3 programming layer <2024-01-22>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23526 strings out of 474222
- 438766 string characters out of 5748734
+ 23570 strings out of 474222
+ 439198 string characters out of 5748734
  2122975 words of memory out of 5000000
- 45280 multiletter control sequences out of 15000+600000
+ 45316 multiletter control sequences out of 15000+600000
  566351 words of font info for 65 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,19n,123p,426b,1540s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1068,7 +1058,7 @@ ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pf
 b>
-Output written on main.pdf (13 pages, 145995 bytes).
+Output written on main.pdf (13 pages, 145952 bytes).
 PDF statistics:
  414 PDF objects out of 1000 (max. 8388607)
  365 compressed objects within 4 object streams

@@ -27,18 +27,13 @@ Vertices:
 
 Intersection of the two lines (RREF):
 \begin{align}
-\left[\begin{array}{cc|c}
- m_1 & -1 & -c_1 \\
- m_2 & -1 & -c_2
-\end{array}\right]
+\augvec{2}{1}{m_1 & -1 & -c_1 \\ m_2 & -1 & -c_2}
 &\xrightarrow{R_2 \leftarrow R_2 - R_1}
-\left[\begin{array}{cc|c}
- m_1 & -1 & -c_1 \\
- m_2-m_1 & 0 & -(c_2-c_1)
-\end{array}\right] \\
-&\Rightarrow (m_2-m_1)x = -(c_2-c_1) \nonumber \\
-&\Rightarrow x^* = \frac{c_2-c_1}{m_1-m_2}, \quad y^* = m_1 x^* + c_1.
+\augvec{2}{1}{m_1 & -1 & -c_1 \\ m_2 - m_1 & 0 & -(c_2 - c_1)} \\
+&\Rightarrow (m_2 - m_1)x = -(c_2 - c_1) \nonumber \\
+&\Rightarrow x^* = \frac{c_2 - c_1}{m_1 - m_2}, \quad y^* = m_1 x^* + c_1.
 \end{align}
+
 
 Vectors:
 \[
