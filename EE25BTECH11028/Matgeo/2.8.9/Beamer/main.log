@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  4 OCT 2025 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  5 OCT 2025 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1773,11 +1773,10 @@ dvips/lm/lm-mathsy.enc}] [3
 
 ] [5
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \vbox (12.97134pt too high) detected at line 202
- []
+] [6
 
-[6
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
+[7
 
 ]
 \openout4 = `main.vrb'.
@@ -1793,43 +1792,38 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
+)) [8
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-[8
+[9
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [9
+ (./main.vrb) [10
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (1.72923pt too high) detected at line 284
+Overfull \vbox (1.72923pt too high) detected at line 286
  []
 
-[10
+[11
 
 ]
-<fig4.png, id=329, 578.16pt x 433.62pt>
+<fig4.png, id=356, 578.16pt x 433.62pt>
 File: fig4.png Graphic file (type png)
 <use fig4.png>
-Package pdftex.def Info: fig4.png  used on input line 290.
+Package pdftex.def Info: fig4.png  used on input line 292.
 (pdftex.def)             Requested size: 277.84888pt x 208.38666pt.
- [11
+ [12
 
  <./fig4.png>]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [12
-
-]
 \openout4 = `main.vrb'.
 
  (./main.vrb) [13
@@ -1837,16 +1831,21 @@ Package pdftex.def Info: fig4.png  used on input line 290.
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb)
-[14
+ (./main.vrb) [14
 
 ]
-<figs/fig4.1.png, id=445, 578.16pt x 433.62pt>
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+[15
+
+]
+<figs/fig4.1.png, id=472, 578.16pt x 433.62pt>
 File: figs/fig4.1.png Graphic file (type png)
 <use figs/fig4.1.png>
-Package pdftex.def Info: figs/fig4.1.png  used on input line 355.
+Package pdftex.def Info: figs/fig4.1.png  used on input line 357.
 (pdftex.def)             Requested size: 277.84888pt x 208.38666pt.
- [15
+ [16
 
  <./figs/fig4.1.png>]
 \tf@nav=\write8
@@ -1877,8 +1876,8 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56994 strings out of 474222
- 1356573 string characters out of 5748733
+ 56996 strings out of 474222
+ 1356592 string characters out of 5748733
  2372967 words of memory out of 5000000
  78218 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
@@ -1891,10 +1890,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (15 pages, 337301 bytes).
+Output written on main.pdf (16 pages, 337490 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 564 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 46 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
