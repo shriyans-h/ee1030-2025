@@ -64,7 +64,7 @@ plt.xlim(-700, 300)
 plt.ylim(-100, 900)
 plt.grid(True)
 plt.legend()
-plt.title('Triangle AQC & Square PQRS (PDF method, pure Python)')
+plt.title('Triangle AQC & Square PQRS ')
 plt.tight_layout()
 plt.show()
 
