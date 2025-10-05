@@ -242,87 +242,150 @@
 	\begin{lstlisting}
 
 #include <stdio.h>
+#include <math.h>
 
-typedef struct {
-    int x, y;
-} Point;
+// Output: out[0]=Rx, out[1]=Ry, out[2]=Sx, out[3]=Sy, out[4]=area, out[5]=diagonal, out[6]=Cx, out[7]=Cy, out[8]=K
+void solve_from_pdf(double* out) {
+    // Points from PDF
+    double P[2] = {-200, 0};
+    double Q[2] = {200, 0};
+    double A[2] = {200, 800};
 
-void get_triangle(Point* pts) {
-    pts[0].x = 200; pts[0].y = 800;     // A
-    pts[1].x = 200; pts[1].y = 0;       // Q
-    pts[2].x = -600; pts[2].y = 0;      // C
-}
+    // Side vector PQ
+    double X[2] = {Q[0] - P[0], Q[1] - P[1]}; // [400, 0]
+    // Rotate X by 90 deg anticlockwise to get Y (QR)
+    double Y[2] = {0 - X[1], X[0]};           // [0, 400]
+
+    // R = Q + Y = [200 + 0, 0 + 400] = [200, 400]
+    
 	\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{C Code- Ploting the given vectors}
     \begin{lstlisting}
-    void get_square(Point* pts) {
-    pts[0].x = -200; pts[0].y = 0;      // P
-    pts[1].x = 200;  pts[1].y = 0;    // Q
-    pts[2].x = 200; pts[2].y = 400;    // R
-    pts[3].x = -200;  pts[3].y = 400;      // S (shared corner, so Q again)
-}
+    double R[2] = {Q[0] + Y[0], Q[1] + Y[1]};
 
+    // Z = Y, PS parallel to QR, so Z = [0, 400]
+    // S = P + Z = [-200, 0 + 400] = [-200, 400]
+    double S[2] = {P[0] + Y[0], P[1] + Y[1]};
+
+    // Area and diagonal
+    double x = sqrt(X[0]*X[0] + X[1]*X[1]);   // 400
+    double area = x * x;
+    double diag = x * sqrt(2);
+
+    // Point C from PDF, lying on x-axis, with collinearity
+    double C[2] = {-600, 0}; // from matrix rank/collinearity in PDF
+    \end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+   \frametitle{C Code- Ploting the given vectors}
+    \begin{lstlisting}
+        // K for S dividing CA in K:1
+    // S = (K*A + C)/(K+1) --> solve for K using x or y (use y)
+    double K = (S[1] - C[1]) / (A[1] - S[1]);
+
+    out[0] = R[0];
+    out[1] = R[1];
+    out[2] = S[0];
+    out[3] = S[1];
+    out[4] = area;
+    out[5] = diag;
+    out[6] = C[0];
+    out[7] = C[1];
+    out[8] = K;
+}
     \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Python Code using shared output}
 	\begin{lstlisting}
-		from ctypes import * 
+		import ctypes
+import numpy as np
 import matplotlib.pyplot as plt
 
-# Load the C shared library
-lib = CDLL("./2.9.1.so")  # Ensure path matches your compiled output
+# Load the compiled shared C lib (use correct path if needed)
+lib = ctypes.CDLL('./2.9.1.so')
 
-class Point(Structure):
-    _fields_ = [("x", c_int), ("y", c_int)]
+# Set up output variables
+outputs = (ctypes.c_double * 9)()
+lib.solve_from_pdf(outputs)
 
-triangle = (Point * 3)()
-square = (Point * 4)()
+# Extract variables (variable names as in C and PDF)
+R = (outputs[0], outputs[1])
+S = (outputs[2], outputs[3])
+area = outputs[4]
+diagonal = outputs[5]
+C = (outputs[6], outputs[7])
+K = outputs[8]
 
-lib.get_triangle(triangle)
-lib.get_square(square)
+
+
 	\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 	\frametitle{Python Code using shared output}
 	\begin{lstlisting}	
-    tri_x = [triangle[i].x for i in range(3)] + [triangle[0].x]
-    tri_y = [triangle[i].y for i in range(3)] + [triangle[0].y]
-     sqr_x = [square[i].x for i in range(4)] + [square[0].x]
-sqr_y = [square[i].y for i in range(4)] + [square[0].y]
+    P = (-200, 0)
+Q = (200, 0)
+A = (200, 800)
+O = (0, 0)
 
-plt.figure(figsize=(8, 8))
-plt.plot(tri_x, tri_y, 'r-', label='Triangle')
-plt.plot(sqr_x, sqr_y, 'b-', label='Square')
+# --- Print for verification ---
+print("Coordinates of R:", R)
+print("Coordinates of S:", S)
+print("Area of PQRS:", area)
+print("Length of diagonal PR:", diagonal)
+print("Coordinates of C:", C)
+print("Value of K:", K)
 
-# Annotate triangle points
-labels_tri = ['A', 'Q', 'C']
-for i in range(3):
-    plt.text(triangle[i].x, triangle[i].y, labels_tri[i])
+# --- Plot as in the PDF ---
+plt.figure(figsize=(9,9))
+# Triangle AQC (A,Q,C)
+triangle_x = [A[0], Q[0], C[0], A[0]]
+triangle_y = [A[1], Q[1], C[1], A[1]]
+
 	\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
 	\frametitle{Python Code using shared output}
 	\begin{lstlisting}
-# Annotate square points
-labels_sqr = ['P', 'Q', 'R', 'S']
-for i in range(4):
-    plt.text(square[i].x, square[i].y, labels_sqr[i])
+plt.plot(triangle_x, triangle_y, 'k-', label='Triangle AQC', linewidth=2)
 
-plt.scatter([0], [0], marker='x', color='black')
-plt.text(0, 0, 'O', fontsize=12)
+# Square PQRS
+square_x = [P[0], Q[0], R[0], S[0], P[0]]
+square_y = [P[1], Q[1], R[1], S[1], P[1]]
+plt.plot(square_x, square_y, 'b-', label='Square PQRS', linewidth=2)
+
+plt.scatter([O[0], P[0], Q[0], A[0], R[0], S[0], C[0]],
+            [O[1], P[1], Q[1], A[1], R[1], S[1], C[1]], color='red')
+for pt, name in zip([O, P, Q, A, R, S, C], ['O', 'P', 'Q', 'A', 'R', 'S', 'C']):
+    plt.text(pt[0]+10, pt[1]+20, name, fontsize=13)
+
+# Diagonal PR in square
+plt.plot([P[0], R[0]], [P[1], R[1]], 'r--', label='Diagonal PR')
+
+
+	\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+        \frametitle{Python Code using shared output}
+      \begin{lstlisting}
+          # Annotate area & diagonal
+plt.text(-350, 200, f'Area = {area:.0f}', fontsize=13, color='blue', bbox=dict(facecolor='white', alpha=0.7))
+plt.text(-350, 120, f'Diagonal = {diagonal:.1f}', fontsize=13, color='purple', bbox=dict(facecolor='white', alpha=0.7))
+
+plt.xlabel('x')
+plt.ylabel('y')
 plt.xlim(-700, 300)
 plt.ylim(-100, 900)
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Solution plot')
 plt.grid(True)
 plt.legend()
+plt.title('Triangle AQC & Square PQRS (as per PDF solution)')
+plt.tight_layout()
 plt.show()
-	\end{lstlisting}
+      \end{lstlisting}
 \end{frame}
 \begin{frame}{Plot by python using shared output}
 	\begin{center}
@@ -337,21 +400,24 @@ plt.show()
 \begin{frame}[fragile]
      \frametitle{Python code for the plot}
 \begin{lstlisting}
-    import matplotlib.pyplot as plt
+   import numpy as np
+import matplotlib.pyplot as plt
 
-# Triangle points
-A = (200, 800)
-Q = (200, 0)
-C = (-600, 0)
+# Given points (from solution and problem statement)
+P = np.array([-200, 0])
+Q = np.array([200, 0])
+A = np.array([200, 800])
+O = np.array([0, 0])
 
-# Square points
-P = (-200, 0)
-R = (200, 400)
-S = (-200, 400)
+# Step 1: Vector from P to Q
+X = Q - P  # [400, 0]
 
-# Lists for triangle
-triangle_x = [A[0], Q[0], C[0], A[0]]
-triangle_y = [A[1], Q[1], C[1], A[1]]
+# Step 2: Rotate X by 90 degrees anticlockwise to get Y (QR)
+Y = np.array([0 - X[1], X[0]])  # [0, 400]
+
+# Step 3: Find R and S using vector addition as in PDF
+R = Q + Y     # [200, 400]
+S = P + Y     # [-200, 400]
 
 
 \end{lstlisting}
@@ -381,27 +447,86 @@ plt.text(C[0], C[1], 'C')
  \end{lstlisting}
 \end{frame}
  \begin{frame}[fragile]
-       \frametitle{Python code for plot}
+       \frametitle{Python code for the plot}
        \begin{lstlisting}
-      # Label square points
-plt.text(P[0], P[1], 'P')
-plt.text(R[0], R[1], 'R')
-plt.text(S[0], S[1], 'S')
+      # Step 4: Area and diagonal of the square
+side = np.linalg.norm(X)         # 400
+area = side ** 2                 # 160000
+diagonal = side * np.sqrt(2)     # 400*sqrt(2) ≈ 565.69
 
-# Mark and label the origin
-plt.scatter([0], [0], marker='x', color='black')
-plt.text(0, 0, 'O')
+# Step 5: Find C as in PDF by solving with collinearity (x-axis, so y=0)
+# Using determinant as in PDF: |A-Q| |C-Q| = 0 for being collinear with Q as origin
+# But given in PDF as C = (-600, 0)
+C = np.array([-600, 0])
 
-# To match axes and layout
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Solution plot')
+# Step 6: Find K for S dividing CA in K:1, S = (K*A + C)/(K+1)
+# Solve for K using y-coordinates
+S_y = S[1]
+K = (S_y - C[1]) / (A[1] - S_y)
+
+
+    \end{lstlisting}
+ \end{frame}
+ \begin{frame}[fragile]
+     \frametitle{Python code for the plot}
+     \begin{lstlisting}
+         # ---- Plot as in the PDF ----
+plt.figure(figsize=(9,9))
+# Triangle AQC (A->Q->C->A)
+triangle_x = [A[0], Q[0], C[0], A[0]]
+triangle_y = [A[1], Q[1], C[1], A[1]]
+plt.plot(triangle_x, triangle_y, 'k-', label='Triangle AQC', linewidth=2)
+
+# Square PQRS
+square_x = [P[0], Q[0], R[0], S[0], P[0]]
+square_y = [P[1], Q[1], R[1], S[1], P[1]]
+plt.plot(square_x, square_y, 'b-', label='Square PQRS', linewidth=2)
+
+# Points O, P, Q, A, R, S, C
+pts = [O, P, Q, A, R, S, C]
+lbls = ['O', 'P', 'Q', 'A', 'R', 'S', 'C']
+for pt, name in zip(pts, lbls):
+    
+
+     \end{lstlisting}
+ \end{frame}
+ \begin{frame}[fragile]
+   \frametitle{Python code for the plot}
+     \begin{lstlisting}
+         plt.scatter(pt[0], pt[1], color='red')
+    plt.text(pt[0]+10, pt[1]+20, name, fontsize=13)
+
+# Diagonal PR
+plt.plot([P[0], R[0]], [P[1], R[1]], 'r--', label='Diagonal PR')
+
+# Area, Diagonal annotations
+plt.text(-350, 200, f'Area = {area:.0f}', fontsize=13, color='blue', bbox=dict(facecolor='white', alpha=0.7))
+plt.text(-350, 120, f'Diagonal = {diagonal:.2f}', fontsize=13, color='purple', bbox=dict(facecolor='white', alpha=0.7))
+
+plt.xlabel('x')
+plt.ylabel('y')
 plt.xlim(-700, 300)
 plt.ylim(-100, 900)
 plt.grid(True)
-plt.legend()
+
+     \end{lstlisting}
+ \end{frame}
+ \begin{frame}[fragile]
+      \frametitle{Python code for the plot}
+     \begin{lstlisting}
+         plt.legend()
+plt.title('Triangle AQC & Square PQRS (PDF method, pure Python)')
+plt.tight_layout()
 plt.show()
-    \end{lstlisting}
+
+# For verification
+print("Coordinates of R:", tuple(R))
+print("Coordinates of S:", tuple(S))
+print("Area of PQRS:", area)
+print("Length of diagonal PR:", diagonal)
+print("Coordinates of C:", tuple(C))
+print("Value of K:", K)
+     \end{lstlisting}
  \end{frame}
      \begin{frame}{Plot of triangle and square}
        \begin{figure}
