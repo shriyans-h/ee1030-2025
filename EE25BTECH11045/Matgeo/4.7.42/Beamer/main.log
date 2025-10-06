@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  6 OCT 2025 08:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  6 OCT 2025 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1528,13 +1528,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 76.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 76.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 76.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1631,6 +1631,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 76.
+
+(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1709,8 +1711,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-No file main.nav.
+ (./main.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 83.
@@ -1939,24 +1940,14 @@ Overfull \vbox (4.0141pt too high) detected at line 316
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 58329 strings out of 476139
- 1380519 string characters out of 5794454
+ 58375 strings out of 476139
+ 1380925 string characters out of 5794454
  2398823 words of memory out of 5000000
- 79317 multiletter control sequences out of 15000+600000
+ 79355 multiletter control sequences out of 15000+600000
  628755 words of font info for 110 fonts, out of 8000000 for 9000
  39 hyphenation exceptions out of 8191
  101i,18n,117p,1172b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1968,7 +1959,8 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-Output written on main.pdf (15 pages, 204089 bytes).
+
+Output written on main.pdf (15 pages, 204320 bytes).
 PDF statistics:
  527 PDF objects out of 1000 (max. 8388607)
  444 compressed objects within 5 object streams
