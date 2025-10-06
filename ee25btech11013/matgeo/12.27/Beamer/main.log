@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  30 SEP 2025 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  6 OCT 2025 09:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1758,136 +1758,218 @@ No file main.nav.
 dvips/lm/lm-rm.enc}] [2
 
 ]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-02.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
+8.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-102.
+98.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-102.
+98.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 102.
+(Font)              <10.95> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 102.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 102.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-02.
+(Font)              <6> on input line 98.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 9
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-02.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 9
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-02.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 9
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-02.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 9
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-02.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 9
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
-
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
-
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 102.
-
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 98.
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-102.
+98.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [4
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 120.
 
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathit.enc}]
-<figs/Figure_1.png, id=147, 505.89pt x 433.62pt>
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 120.
+
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 120.
+
+ [4
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvi
+ps/lm/lm-mathex.enc}] [5
+
+] [6
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+Overfull \hbox (28.59213pt too wide) detected at line 160
+[]
+ []
+
+[7
+
+] [8
+
+] [9
+
+] [10
+
+]
+<figs/Figure_1.png, id=315, 650.43pt x 505.89pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 133.
-(pdftex.def)             Requested size: 151.94571pt x 130.24007pt.
- [5
+Package pdftex.def Info: figs/Figure_1.png  used on input line 212.
+(pdftex.def)             Requested size: 167.45038pt x 130.24007pt.
+ [11
 
  <./figs/Figure_1.png>]
 \openout4 = `main.vrb'.
 
-
-(./main.vrb
+ (./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
- (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [6
+)) [12
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [7
+ (./main.vrb)
+Overfull \vbox (13.72923pt too high) detected at line 256
+ []
+
+[13
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [8
+ (./main.vrb)
+Overfull \vbox (1.72923pt too high) detected at line 281
+ []
+
+[14
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-7.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+5.
+ (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (37.72923pt too high) detected at line 230
+Overfull \vbox (25.72923pt too high) detected at line 306
  []
 
-[9
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-\openout4 = `main.vrb'.
-
- (./main.vrb) [10
+[15
 
 ]
 \openout4 = `main.vrb'.
 
+ (./main.vrb) [16
 
-(./main.vrb)
-Overfull \vbox (49.72923pt too high) detected at line 281
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+Overfull \vbox (25.72923pt too high) detected at line 358
  []
 
-[11
+[17
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+
+! LaTeX Error: Invalid UTF-8 byte sequence (‚\lst@ECÇ\lst@ECÅ).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...text(center1[0]+50, center1[1]+80, f"C‚ÇÅ(
+                                                  {center1[0]}, {center1[1]}...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)
+Overfull \vbox (25.72923pt too high) detected at line 382
+ []
+
+[18
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb
+
+! LaTeX Error: Invalid UTF-8 byte sequence (‚\lst@ECÇ\lst@ECÇ).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 plt.text(center2[0]+50, center2[1]+80, f"C‚ÇÇ(
+                                                  {center2[0]}, {center2[1]}...
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+)
+Overfull \vbox (37.72923pt too high) detected at line 408
+ []
+
+[19
 
 ]
 \tf@nav=\write8
@@ -1918,25 +2000,25 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57667 strings out of 474222
- 1369560 string characters out of 5748733
- 2437239 words of memory out of 5000000
- 78890 multiletter control sequences out of 15000+600000
- 595430 words of font info for 79 fonts, out of 8000000 for 9000
+ 57781 strings out of 474222
+ 1370795 string characters out of 5748733
+ 2442239 words of memory out of 5000000
+ 78981 multiletter control sequences out of 15000+600000
+ 600860 words of font info for 81 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,19n,123p,1172b,1477s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,1172b,1475s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mtt10.pfb>
-Output written on main.pdf (11 pages, 227655 bytes).
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmtt10.pfb>
+Output written on main.pdf (19 pages, 270500 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 339 compressed objects within 4 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 552 compressed objects within 6 object streams
+ 43 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,52 +2,70 @@ import numpy as np
 import matplotlib.pyplot as plt
 import ctypes
 
-
 lib = ctypes.CDLL("./libcode.so")
+lib.determinant3.restype = ctypes.c_double
 
-lib.solve_2x2.argtypes = [ctypes.POINTER(ctypes.c_double),
-                          ctypes.POINTER(ctypes.c_double),
-                          ctypes.POINTER(ctypes.c_double)]
-lib.solve_2x2.restype = ctypes.c_int
+# Example use of determinant from C
+A = ((ctypes.c_double * 3) * 3)()
+data = [
+    [1, 2, 3],
+    [0, 1, 4],
+    [5, 6, 0]
+]
+for i in range(3):
+    for j in range(3):
+        A[i][j] = data[i][j]
 
+det_val = lib.determinant3(A)
+print("Determinant (computed in C):", det_val)
+def hyperbola1(x):
+    return (1000 * x) / (x - 2400)
 
-A = np.array([[1200, 500],
-              [900, 250]], dtype=np.float64)
-b = np.array([0.5, 1/3], dtype=np.float64)
+def hyperbola2(x):
+    return (750 * x) / (x - 2700)
 
+center1 = (2400, 1000)
+center2 = (2700, 750)
+intersection = (3600, 3000)
 
-x = np.zeros(2, dtype=np.float64)
+# Plot both branches
+x_vals = np.linspace(-6000, 6000, 2000)
+x_vals1 = x_vals[x_vals != 2400]
+x_vals2 = x_vals[x_vals != 2700]
 
-status = lib.solve_2x2(A.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-                       b.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-                       x.ctypes.data_as(ctypes.POINTER(ctypes.c_double)))
+y1 = hyperbola1(x_vals1)
+y2 = hyperbola2(x_vals2)
 
-if status == 0:
-    u, v = x
-    man_weeks, woman_weeks = 1/u, 1/v
-    men_required = round(man_weeks)
+plt.figure(figsize=(9, 7))
 
-    print(f"One man finishes in {man_weeks:.0f} weeks")
-    print(f"One woman finishes in {woman_weeks:.0f} weeks")
-    print(f"Men required in 1 week: {men_required}")
+plt.plot(x_vals1, y1, 'b', label='Hyperbola 1: xy - 1000x - 2400y = 0')
+plt.plot(x_vals2, y2, 'r', label='Hyperbola 2: xy - 750x - 2700y = 0')
 
-    u_vals = np.linspace(0, u*2, 400)
-    v1 = (0.5 - 1200*u_vals) / 500
-    v2 = ((1/3) - 900*u_vals) / 250
+# Centers and asymptotes
+plt.scatter(*center1, color='blue', s=70)
+plt.scatter(*center2, color='red', s=70)
+plt.axvline(x=2400, color='b', linestyle='--', alpha=0.6)
+plt.axhline(y=1000, color='b', linestyle='--', alpha=0.6)
+plt.axvline(x=2700, color='r', linestyle='--', alpha=0.6)
+plt.axhline(y=750, color='r', linestyle='--', alpha=0.6)
 
-    plt.plot(u_vals, v1, label='1200u + 500v = 1/2')
-    plt.plot(u_vals, v2, label='900u + 250v = 1/3')
+# Intersection
+plt.scatter(*intersection, color='black', s=90, label='Intersection (3600,3000)')
+plt.text(intersection[0]+80, intersection[1]+80, f"({intersection[0]}, {intersection[1]})", fontsize=10)
 
-    plt.plot(u, v, 'ro', label=f'({u:.6f}, {v:.6f})')
-    plt.annotate(f'({u:.6f}, {v:.6f})', xy=(u, v), xytext=(u*1.1, v*1.1))
-    plt.legend(); plt.grid(True)
-    plt.xlabel("u = 1/x"); plt.ylabel("v = 1/y")
+# Formatting
+plt.title("Hyperbolas in Original Coordinates (1st & 3rd Quadrants)", fontsize=13)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.axhline(0, color='k', linewidth=0.8)
+plt.axvline(0, color='k', linewidth=0.8)
+plt.axis('equal')
+plt.xlim(-6000, 6000)
+plt.ylim(-6000, 6000)
+plt.legend(fontsize=9, loc='upper left')
+plt.tight_layout()
+plt.savefig("/mnt/c/Users/bharg/Documents/backupmatrix/ee25btech11013/matgeo/12.27/figs/Figure_1.png")
 
-    plt.title("Bridge Work Problem")
-
-    plt.savefig("/mnt/c/Users/bharg/Documents/backupmatrix/ee25btech11013/matgeo/12.27/figs/Figure_1.png")
-    plt.show()
-
-else:
-    print("No unique solution.")
+plt.show()
 

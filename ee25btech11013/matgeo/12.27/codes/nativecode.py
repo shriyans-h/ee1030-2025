@@ -1,40 +1,61 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-A = np.array([[1200, 500],
-              [900, 250]], dtype=float)
+def hyperbola1(x):
+    # From: xy - 1000x - 2400y = 0  =>  y = 1000x / (x - 2400)
+    return (1000 * x) / (x - 2400)
 
-b = np.array([0.5, 1/3], dtype=float)
+def hyperbola2(x):
+    # From: xy - 750x - 2700y = 0  =>  y = 750x / (x - 2700)
+    return (750 * x) / (x - 2700)
 
-u, v = np.linalg.solve(A, b)
+# Centers (from completing the product form)
+center1 = (2400, 1000)
+center2 = (2700, 750)
 
-man_weeks = 1 / u
-woman_weeks = 1 / v
-men_required = round(man_weeks)
+x1 = np.linspace(-6000, 6000, 2000)
 
-print(f"One man finishes in {man_weeks:.0f} weeks")
-print(f"One woman finishes in {woman_weeks:.0f} weeks")
-print(f"Men required in 1 week: {men_required}")
+# Avoid division by zero at vertical asymptotes
+x1 = x1[x1 != 2400]
+x2 = x1[x1 != 2700]
 
+y1 = hyperbola1(x1)
+y2 = hyperbola2(x1)
 
-u_vals = np.linspace(0, u*2, 400)
-v1 = (0.5 - 1200*u_vals) / 500
-v2 = ((1/3) - 900*u_vals) / 250
+plt.figure(figsize=(9, 7))
 
-plt.figure(figsize=(7,6))
-plt.plot(u_vals, v1, label='1200u + 500v = 1/2')
-plt.plot(u_vals, v2, label='900u + 250v = 1/3')
+# Plot both hyperbolas
+plt.plot(x1, y1, 'b', label='Hyperbola 1: xy - 1000x - 2400y = 0')
+plt.plot(x1, y2, 'r', label='Hyperbola 2: xy - 750x - 2700y = 0')
 
+# Plot asymptotes for each hyperbola
+plt.axvline(x=2400, color='b', linestyle='--', alpha=0.6)
+plt.axhline(y=1000, color='b', linestyle='--', alpha=0.6)
+plt.axvline(x=2700, color='r', linestyle='--', alpha=0.6)
+plt.axhline(y=750, color='r', linestyle='--', alpha=0.6)
 
-plt.plot(u, v, 'ro', markersize=8, label=f'Solution ({u:.6f}, {v:.6f})')
-plt.annotate(f'({u:.6f}, {v:.6f})', xy=(u, v), xytext=(u*1.1, v*1.1))
+# Plot centers
+plt.scatter(*center1, color='blue', s=80, zorder=10)
+plt.text(center1[0]+50, center1[1]+80, f"C₁({center1[0]}, {center1[1]})", fontsize=10, color='blue')
 
-plt.xlabel("u = 1/x")
-plt.ylabel("v = 1/y")
-plt.title("Bridge Work Problem")
-plt.legend()
-plt.grid(True)
+plt.scatter(*center2, color='red', s=80, zorder=10)
+plt.text(center2[0]+50, center2[1]+80, f"C₂({center2[0]}, {center2[1]})", fontsize=10, color='red')
+
+# Intersection point (from matrix solution)
+intersection = (3600, 3000)
+plt.scatter(*intersection, color='black', s=90, label=f'Intersection {intersection}')
+
+plt.title("Both Branches of the Hyperbolas (1st & 3rd Quadrants)", fontsize=13)
+plt.xlabel("x", fontsize=12)
+plt.ylabel("y", fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.axhline(0, color='k', linewidth=0.8)
+plt.axvline(0, color='k', linewidth=0.8)
+plt.legend(fontsize=9, loc='upper left')
+plt.axis('equal')
+plt.xlim(-6000, 6000)
+plt.ylim(-6000, 6000)
+plt.tight_layout()
 plt.savefig("/mnt/c/Users/bharg/Documents/backupmatrix/ee25btech11013/matgeo/12.27/figs/Figure_1.png")
 plt.show()
-
 
