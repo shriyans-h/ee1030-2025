@@ -1,0 +1,133 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+
+%\usepackage[a5paper, top=10mm, bottom=10mm, left=10mm, right=10mm]{geometry}
+
+%
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\makeindex
+
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{xparse}
+\usepackage{gvv}
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                               
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{ar}
+\usepackage[version=4]{mhchem}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+
+\theoremstyle{remark}
+
+
+\begin{document}
+\bibliographystyle{IEEEtran}
+\onecolumn
+
+\title{10.7.76}
+\author{INDHIRESH S- EE25BTECH11027}
+\maketitle
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}.The number of common tangents to the circles $x^2 +y^2 = 4$ and $x^2 +y^2 -6x-8y = 24$ is
+\begin{enumerate}
+    \item 0
+    \item 1
+    \item 2
+    \item 3
+\end{enumerate}
+\textbf{Solution}:\\
+Let us solve the given equation theoretically and then verify the solution computationally. \\
+Let the equation of 1st circle be:
+\begin{align}
+ \norm{\Vec{x}}^2+2\Vec{u_1}^T\Vec{x}+f_1=0
+\end{align}
+Let the equation of 2nd circle be 
+
+\begin{align}
+  \norm{\Vec{x}}^2+2\Vec{u_2}^T\Vec{x}+f_2=0
+\end{align}
+Let $\Vec{c_1}$ and $\Vec{c_2}$ be the center of circles 1 and 2.\\
+From the given information:
+\begin{align}
+\Vec{u_1}=\myvec{0\\0}\;\;,f_1=-4\;\;and\;\;\Vec{c_1}=\myvec{0\\0}
+\end{align}
+\begin{align}
+\Vec{u_2}=\myvec{-3\\-4}\;\;,f_2=-24\;\;and\;\;\Vec{c_2}=\myvec{3\\4}
+\end{align}
+
+\begin{align}
+ r_1=\sqrt{\norm{\Vec{u_1}}^2-f_1}=\sqrt{0+4}=2
+\end{align}
+\begin{align}
+    r_2=\sqrt{\norm{\Vec{u_2}}^2-f_2}=\sqrt{25+24}=7
+\end{align}
+Now calculating the distance between $\Vec{c_1}$ and $\Vec{c_2}$ :
+\begin{align}
+  \norm{\Vec{c_2}-\Vec{c_1}}=\norm{\myvec{3\\4}-\myvec{0\\0}}=5
+\end{align}
+We also have:
+\begin{align}
+  |r_2-r_1|=5
+\end{align}
+Here we can observe that  the distance between the centers of two circles is equal to the absolute difference of their radii . So the two circles touch each other internally at one point\\
+Therefore the number of common tangents to the given two circles is 1
+
+
+
+
+From the figure it is clearly verified that the theoretical solution matches with the computational solution.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[height=0.5\textheight, keepaspectratio]{figs/figure1.png}
+    \label{figure_1}
+\end{figure}
+
+\end{document}
