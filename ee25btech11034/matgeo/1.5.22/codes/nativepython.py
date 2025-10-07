@@ -1,4 +1,4 @@
-iimport numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
 
 def find_external_dividing_point(X, Y, k):

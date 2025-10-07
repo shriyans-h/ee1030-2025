@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  31 AUG 2025 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  17 SEP 2025 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2063,24 +2063,42 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb)
-Overfull \vbox (73.72923pt too high) detected at line 247
- []
-
-[12
+ (main.vrb) [12
 
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb) [13
+
+(main.vrb) [13
 
 ]
-<Fig.png, id=399, 513.92pt x 385.44pt>
+\openout4 = `main.vrb'.
+
+ (main.vrb) [14
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [15
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [16
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb)
+[17
+
+]
+<Fig.png, id=511, 513.92pt x 385.44pt>
 File: Fig.png Graphic file (type png)
 <use Fig.png>
-Package pdftex.def Info: Fig.png  used on input line 270.
+Package pdftex.def Info: Fig.png  used on input line 316.
 (pdftex.def)             Requested size: 239.60567pt x 179.70413pt.
- [14
+ [18
 
  <./Fig.png>]
 \tf@nav=\write7
@@ -2111,10 +2129,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59364 strings out of 474486
- 1460555 string characters out of 5739471
- 2537082 words of memory out of 5000000
- 80626 multiletter control sequences out of 15000+600000
+ 59445 strings out of 474486
+ 1461181 string characters out of 5739471
+ 2491082 words of memory out of 5000000
+ 80691 multiletter control sequences out of 15000+600000
  602451 words of font info for 79 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,16n,123p,1174b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2130,9 +2148,9 @@ dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
 /Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
 .pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 lm/lmtt10.pfb>
-Output written on main.pdf (14 pages, 264145 bytes).
+Output written on main.pdf (18 pages, 289533 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
+ 599 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
  84 words of extra memory for PDF output out of 10000 (max. 10000000)
 
