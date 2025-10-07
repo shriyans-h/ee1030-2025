@@ -7,6 +7,7 @@
 % Packages
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
+\usepackage{gvv}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{tkz-euclide}
@@ -23,15 +24,6 @@
     showstringspaces=false,
     breaklines=true
 }
-
-
-
-% Custom macros
-\newcommand{\myvec}[1]{\begin{pmatrix}#1\end{pmatrix}}
-\newcommand{\brak}[1]{\left( #1 \right)}
-
-% Redefine \vec to bold letters only (no arrow)
-\renewcommand{\vec}[1]{\mathbf{#1}}
 
 \title{4.2.22}
 \author{EE25BTECH11019 -- Darji Vivek M.}
@@ -60,46 +52,53 @@ where $b_1 b_2 \neq 0$ are parallel if
 
 \begin{frame}{Solution}
 
-Form the $2\times2$ coefficient matrix of normals:
-
+First form the matrix equation
 \begin{align}
-\vec{M} = \myvec{a_1 & a_2 \\ b_1 & b_2}.
+\myvec{a_1 & b_1\\ a_2 & b_2}\myvec{x\\y} 
+= -\myvec{c_1\\c_2}.
+\end{align}
+
+Augmented matrix:
+\begin{align}
+\augvec{2}{1}{
+a_1 & b_1 & -c_1\\
+a_2 & b_2 & -c_2
+}.
 \end{align}
 
 Assume 
-\[
-\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}.
-\]
-
-Then there exists \(k \in \mathbb{R}\) such that
-\begin{align}
-a_2 = k a_1, 
-\qquad 
-b_2 = k b_1.
-\end{align}
+\(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\Rightarrow a_2=ka_1,\; b_2=kb_1\).
 \end{frame}
 
 
 \begin{frame}{Solution}
-Write the rows of \textbf{M} as row vectors:
+Row reduction:
 \begin{align}
-\text{R}_1 &= \myvec{a_1 & a_2} = \myvec{a_1 & k a_1} = a_1\myvec{1 & k}.\\
-\text{R}_2 &= \myvec{b_1 & b_2} = \myvec{b_1 & k b_1} = b_1\myvec{1 & k}.
-\end{align}
-\begin{align}
-\text{R}_2 &\mapsto \text{R}_2 - \frac{b_1}{a_1}\text{R}_1 ,\qquad \text{R}_2 = (0,0).
-\end{align}
-
-\end{frame}
-
-
-\begin{frame}{Solution}
-Thus the row-echelon form of \textbf{M} has exactly one nonzero row, so
-\begin{align}
-\operatorname{rank}(\vec{M})=1.
+\augvec{2}{1}{
+a_1 & b_1 & -c_1\\
+ka_1 & kb_1 & -c_2
+}
+\xrightarrow{R_2\to R_2 - kR_1}
+\augvec{2}{1}{
+a_1 & b_1 & -c_1\\
+0 & 0 & -c_2+k c_1
+}.
 \end{align}
 
-if \(\operatorname{rank}(\vec{M})=1\) then the two rows (or columns) are proportional, therefore \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
+\(\operatorname{rank}(\vec{M})=1\) since only one nonzero row.
+
+Conversely, if the lines are parallel,
+\begin{align}
+\mydet{a_1 & b_1\\ a_2 & b_2}=0
+\;\Rightarrow\;
+a_1b_2 - a_2b_1 = 0
+\;\Rightarrow\;
+\frac{a_1}{b_1}=\frac{a_2}{b_2}.
+\end{align}
+
+\(\therefore\) The two lines are parallel iff 
+\(\displaystyle \frac{a_1}{b_1}=\frac{a_2}{b_2}\).
+
 \end{frame}
 
 

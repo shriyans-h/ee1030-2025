@@ -58,32 +58,49 @@ with \(b_1 b_2\neq 0\) are parallel iff \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
 \\
 \solution
 
+First form the matrix equation
 \begin{align}
-&\text{Form the $2\times2$ coefficient matrix of normals: } 
-\vec{M}=\myvec{a_1 & a_2\\ b_1 & b_2}.
+\myvec{a_1 & b_1\\ a_2 & b_2}\myvec{x\\y} 
+= -\myvec{c_1\\c_2}.
 \end{align}
 
-Assume \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\). Then there exists \(k\in\mathbb{R}\) such that
+Augmented matrix:
 \begin{align}
-a_2 = k\,a_1,\qquad b_2 = k\,b_1.
+\augvec{2}{1}{
+a_1 & b_1 & -c_1\\
+a_2 & b_2 & -c_2
+}.
 \end{align}
 
-Write the rows of \textbf{M} as row vectors:
+Assume 
+\(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\Rightarrow a_2=ka_1,\; b_2=kb_1\).
+
+Row reduction:
 \begin{align}
-\text{R}_1 &= \myvec{a_1 & a_2} = \myvec{a_1 & k a_1} = a_1\myvec{1 & k}.\\
-\text{R}_2 &= \myvec{b_1 & b_2} = \myvec{b_1 & k b_1} = b_1\myvec{1 & k}.
+\augvec{2}{1}{
+a_1 & b_1 & -c_1\\
+ka_1 & kb_1 & -c_2
+}
+\xrightarrow{R_2\to R_2 - kR_1}
+\augvec{2}{1}{
+a_1 & b_1 & -c_1\\
+0 & 0 & -c_2+k c_1
+}.
 \end{align}
 
+\(\operatorname{rank}(\vec{M})=1\) since only one nonzero row.
+
+Conversely, if the lines are parallel,
 \begin{align}
-\text{R}_2 &\mapsto \text{R}_2 - \frac{b_1}{a_1}\text{R}_1 ,\qquad \text{R}_2 = (0,0).
+\mydet{a_1 & b_1\\ a_2 & b_2}=0
+\;\Rightarrow\;
+a_1b_2 - a_2b_1 = 0
+\;\Rightarrow\;
+\frac{a_1}{b_1}=\frac{a_2}{b_2}.
 \end{align}
 
-Thus the row-echelon form of \textbf{M} has exactly one nonzero row, so
-\begin{align}
-\operatorname{rank}(\vec{M})=1.
-\end{align}
-
-if \(\operatorname{rank}(\vec{M})=1\) then the two rows (or columns) are proportional, therefore \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
+\(\therefore\) The two lines are parallel iff 
+\(\displaystyle \frac{a_1}{b_1}=\frac{a_2}{b_2}\).
 
 \begin{figure}[H]
 \centering
