@@ -107,12 +107,22 @@ We know:
 \end{align}
 \end{frame}
 
-\begin{frame}{Solving}
+\begin{frame}{Formulae}
 Thus
 \begin{align}
- \vec{x} = \myvec{5-2k \\ 1+3k \\ 6-5k} \\
-  \vec{e_3}^\top\vec{x} = 0 \implies k = 6/5 \\
-  \vec{x} = \myvec{13/5 \\ 23/5 \\ 0}
+ \vec{e_3}^\top\vec{A} + &k\vec{e_3}^\top\brak{\vec{B-A}} = 0 \\
+ k &= \frac{\vec{e_3}^\top\vec{A}}{\vec{e_3}^\top\vec{A}-\vec{e_3}^\top\vec{B}} \\
+ \vec{x} &= \vec{A} + \frac{\vec{e_3}^\top\vec{A}}{\vec{e_3}^\top\vec{A}-\vec{e_3}^\top\vec{B}}\brak{\vec{B-A}}
+\end{align}
+\end{frame}
+
+\begin{frame}{Solving}
+Solving
+\begin{align}
+\vec{e_3}^\top\vec{A} &= 6 \\
+\vec{e_3}^\top\vec{B} &= 1 \\
+ \vec{x} &= \myvec{5-2\times\dfrac{6}{5} \\ 1+3\times\dfrac{6}{5} \\ 6-5\times\dfrac{6}{5}} \\
+  \vec{x} &= \myvec{13/5 \\ 23/5 \\ 0}
 \end{align}
 \end{frame}
 
