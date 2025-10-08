@@ -1,10 +1,4 @@
 \frametitle{Theoretical Solution}
-\begin{align}
-    Row-1 \rightarrow \; v_2 + 2v_2 &= 0\\
-    Row-2 \rightarrow \; v_1 + 2v_3 &= 0\\
-    Row-3 \rightarrow \; 0 + 0 + 0 &= 0 \text{ (Always true)}
-\end{align}
-
 Let $v_3 = \alpha$ (Free parameter)\\
 Substituting value of $v_3$ in Equations 8 and 9
 \begin{equation}
@@ -12,7 +6,7 @@ Substituting value of $v_3$ in Equations 8 and 9
 \end{equation}
 
 \begin{equation}
-    \therefore \; \vec{v} = \alpha \myvec{4 & -2 & 1}
+    \therefore \; \vec{v} = \alpha \myvec{4 \\ -2 \\ 1}
 \end{equation}
 
 \begin{align*}
