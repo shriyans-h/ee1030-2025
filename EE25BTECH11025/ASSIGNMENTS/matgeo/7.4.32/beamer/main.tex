@@ -123,31 +123,31 @@ Given:
 
 \begin{frame}{1st question}
 Let $\vec{P}$ be any point on incircle and $\vec{Q}$ be any point on circumcircle.\\
-$X\epsilon \cbrak{\vec{A,B,C,D}}$
+$\vec{X}\epsilon \cbrak{\vec{A,B,C,D}}$
 \begin{align}
-    |\vec{X}-\vec{P}|^2 = |\vec{X}|^2 + |\vec{P}|^2 - 2\vec{P}.\vec{X}\\
+    \norm{\vec{X}-\vec{P}}^2 = \norm{\vec{X}}^2 + \norm{\vec{P}}^2 - 2\vec{P}.\vec{X}\\
 \end{align}
 Summation over all $\vec{X}|\vec{X}\epsilon \cbrak{\vec{A,B,C,D}}$:
 \begin{align}
-    \sum |\vec{X}-\vec{P}|^2 = \sum |\vec{X}|^2 + 4.|\vec{P}|^2 -2\vec{P}\sum \vec{X}\\
+    \sum \norm{\vec{X}-\vec{P}}^2 = \sum \norm{\vec{X}}^2 + 4.\norm{\vec{P}}^2 -2\vec{P}\sum \vec{X}\\
 \end{align}
 \end{frame}
 
 \begin{frame}{1st question}
 For, $\vec{P}$ = $\vec{P}$
 \begin{align}
-    \sum |\vec{X}-\vec{P}|^2 = \sum |\vec{X}|^2 + 4.|\vec{P}|^2 -2\vec{P}\sum \vec{X}\\
+    \sum \norm{\vec{X}-\vec{P}}^2 = \sum \norm{\vec{X}}^2 + 4.\norm{\vec{P}}^2 -2\vec{P}\sum \vec{X}\\
     4\brak{1^2+1^2} + 4\brak{1}-2\vec{P}\brak{\myvec{1\\1}+\myvec{1\\-1}+\myvec{-1\\1}+\myvec{-1\\-1}}\\
-    \therefore |\vec{A}-\vec{P}|^2+|\vec{B}-\vec{P}|^2+|\vec{C}-\vec{P}|^2+|\vec{D}-\vec{P}|^2 = 12
+    \therefore \norm{\vec{A}-\vec{P}}^2+\norm{\vec{B}-\vec{P}}^2+\norm{\vec{C}-\vec{P}}^2+\norm{\vec{D}-\vec{P}}^2 = 12
 \end{align}
 \end{frame}
 
 \begin{frame}{1st question}
-    For, $\vec{P}$ = $\vec{Q}$
+For, $\vec{P}$ = $\vec{Q}$
 \begin{align}
-    \sum |\vec{X}-\vec{Q}|^2 = \sum |\vec{X}|^2 + 4.|\vec{Q}|^2 -2\vec{Q}\sum \vec{X}\\
+    \sum \norm{\vec{X}-\vec{Q}}^2 = \sum \norm{\vec{X}}^2 + 4.\norm{\vec{Q}}^2 -2\vec{Q}\sum \vec{X}\\
     4\brak{1^2+1^2} + 4\brak{2}-2\vec{Q}\brak{\myvec{1\\1}+\myvec{1\\-1}+\myvec{-1\\1}+\myvec{-1\\-1}}\\
-    \therefore |\vec{A}-\vec{Q}|^2+|\vec{B}-\vec{Q}|^2+|\vec{C}-\vec{Q}|^2+|\vec{D}-\vec{Q}|^2 = 12
+    \therefore \norm{\vec{A}-\vec{Q}}^2+\norm{\vec{B}-\vec{Q}}^2+|\norm{\vec{C}-\vec{Q}}^2+norm{\vec{D}-\vec{Q}}^2 = 12
 \end{align}
 \end{frame}
 
@@ -225,7 +225,7 @@ Substituting equation (30) in (24) we get $\lambda=\frac{1}{2}$:
 \end{align}
 Now, finding area of the triangle:
 \begin{align}
-    \triangle T_1T_2T_3=\frac{1}{2}|\myvec{\vec{T_2}-\vec{T_1}&\vec{T_3}-\vec{T_2}}|\\
+    \triangle T_1T_2T_3=\frac{1}{2}\norm{\myvec{\vec{T_2}-\vec{T_1}&\vec{T_3}-\vec{T_2}}}\\
     \triangle T_1T_2T_3 = 1
 \end{align}
 Option (c) is correct.
