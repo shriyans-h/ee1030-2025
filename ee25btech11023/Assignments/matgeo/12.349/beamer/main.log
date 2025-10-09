@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  9 OCT 2025 23:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.9.19)  9 OCT 2025 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,7 +1819,7 @@ Overfull \vbox (7.87346pt too high) detected at line 158
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20251009230609 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20251009231900 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1844,7 +1844,7 @@ t/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf-dist/fonts/type1
 /public/lm/lmsso8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb>
-Output written on main.pdf (5 pages, 108052 bytes).
+Output written on main.pdf (5 pages, 108048 bytes).
 PDF statistics:
  219 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams
