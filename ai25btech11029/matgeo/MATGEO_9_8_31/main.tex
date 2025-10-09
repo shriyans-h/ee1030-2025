@@ -61,134 +61,118 @@ Consider a circle with its centre lying on focus of the parabola $y^2 = 2px$ suc
 
 \section*{Solution}
 
-\subsection*{General Conic Form}
+\subsection*{Conic Representation}
 
-Any conic can be represented as:
+Any conic can be expressed as:
 
 
 \begin{align}
-\vec{x}^T A \vec{x} + \vec{b}^T \vec{x} + c = 0
+\vec{x}^T V \vec{x} + 2 \vec{u}^T \vec{x} + f = 0
+\quad \text{where } \vec{x} = \myvec{x_1 \\ x_2}
 \end{align}
 
 
 
-\subsection*{Parabola: $y^2 = 2px$}
+\subsection*{Parabola: $x_2^2 = 2p x_1$}
 
-Rewriting:
+Matrix form:
 
 
 \begin{align}
-y^2 - 2px = 0
+V_1 = \myvec{0 & 0 \\ 0 & 1}, \quad
+\vec{u}_1 = \myvec{-p \\ 0}, \quad
+f_1 = 0
 \end{align}
 
 
 
-Matrix representation:
+\subsection*{Circle: Center $(\frac{p}{2}, 0)$, Radius $p$}
+
+Expanded form:
 
 
 \begin{align}
-\vec{A}_p = \myvec{0 & 0 \\ 0 & 1}, \quad
-\vec{b}_p = \myvec{-2p \\ 0}, \quad
-c_p = 0
+(x_1 - \frac{p}{2})^2 + x_2^2 = p^2
+\Rightarrow x_1^2 + x_2^2 - p x_1 - \frac{3p^2}{4} = 0
 \end{align}
 
 
 
-So the parabola becomes:
+Matrix form:
 
 
 \begin{align}
-\vec{x}^T A_p \vec{x} + \vec{b}_p^T \vec{x} = 0
+V_2 = \myvec{1 & 0 \\ 0 & 1}, \quad
+\vec{u}_2 = \myvec{-\frac{p}{2} \\ 0}, \quad
+f_2 = -\frac{3p^2}{4}
 \end{align}
 
 
 
-\subsection*{Circle: Center at $(\frac{p}{2}, 0)$, Radius $p$}
+\subsection*{Parametric Line of Intersection}
 
-Circle equation:
+Let the line be:
 
 
 \begin{align}
-(x - \frac{p}{2})^2 + y^2 = p^2
-\Rightarrow x^2 - px + \frac{p^2}{4} + y^2 = p^2
-\Rightarrow x^2 + y^2 - px - \frac{3p^2}{4} = 0
+\vec{x}(\mu) = \vec{h} + \mu \vec{m}
+\quad \text{where } \vec{h} = \myvec{\frac{p}{2} \\ 0}, \quad
+\vec{m} = \myvec{0 \\ 1}
 \end{align}
 
 
 
-Matrix representation:
+\subsection*{Substitute into Parabola Equation}
+
+We evaluate:
 
 
 \begin{align}
-\vec{A}_c = \myvec{1 & 0 \\ 0 & 1}, \quad
-\vec{b}_c = \myvec{-p \\ 0}, \quad
-c_c = -\frac{3p^2}{4}
+\vec{x}(\mu)^T V_1 \vec{x}(\mu) + 2 \vec{u}_1^T \vec{x}(\mu) + f_1 = 0
 \end{align}
 
 
 
-So the circle becomes:
+Compute:
 
 
 \begin{align}
-\vec{x}^T A_c \vec{x} + \vec{b}_c^T \vec{x} + c_c = 0
+\vec{x}(\mu)^T V_1 \vec{x}(\mu) = \mu^2, \quad
+2 \vec{u}_1^T \vec{x}(\mu) = 2(-p)(\frac{p}{2}) = -p^2
 \end{align}
 
 
 
-\subsection*{Solving the System}
+So:
 
-From the parabola:
 
 \begin{align}
-y^2 = 2px
-\end{align}
-
-
-Substitute into the circle:
-
-\begin{align}
-x^2 + y^2 - px - \frac{3p^2}{4} = 0
-\Rightarrow x^2 + 2px - px - \frac{3p^2}{4} = 0
-\Rightarrow x^2 + px - \frac{3p^2}{4} = 0
+\mu^2 - p^2 = 0 \Rightarrow \mu = \pm p
 \end{align}
 
 
 
-Solve the quadratic:
+\subsection*{Final Intersection Points}
+
+Substitute back:
 
 
 \begin{align}
-x = \frac{-p \pm \sqrt{p^2 + 4 \cdot \frac{3p^2}{4}}}{2}
-= \frac{-p \pm \sqrt{4p^2}}{2}
-= \frac{-p \pm 2p}{2}
-\Rightarrow x = \frac{p}{2},\ -\frac{3p}{2}
+\vec{x}(\mu) = \myvec{\frac{p}{2} \\ \pm p}
 \end{align}
 
 
 
-Now find $y$ using $y^2 = 2px$:
-
-For $x = \frac{p}{2}$:
+\textbf{Intersection points:}
 
 
 \begin{align}
-y^2 = p^2 \Rightarrow y = \pm p
+\vec{a}_1 = \myvec{\frac{p}{2} \\ p}, \quad
+\vec{a}_2 = \myvec{\frac{p}{2} \\ -p}
 \end{align}
 
 
 
-\subsection*{Final Answer}
-
-Intersection points:
-
-
-\begin{align}
-(\frac{p}{2}, p), \quad (\frac{p}{2}, -p)
-\end{align}
-
-
-\textbf{Correct Option: (a)}
 
 \begin{figure}[H]
     \centering
