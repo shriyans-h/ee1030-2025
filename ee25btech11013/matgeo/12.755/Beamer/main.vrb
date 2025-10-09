@@ -1,0 +1,24 @@
+\frametitle{Python Code}
+    \begin{lstlisting}
+# Plane 3: -x = 0
+Y3, Z3 = np.meshgrid(d, d)
+X3 = np.zeros_like(Y3)
+surf3 = ax.plot_surface(X3, Y3, Z3, alpha=0.5, color='b')
+surf3._facecolors2d = surf3._facecolor3d
+surf3._edgecolors2d = surf3._edgecolor3d
+
+ax.scatter([0], [0], [0], color='black', s=100, label='Intersection (0,0,0)')
+
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('Z-axis')
+ax.set_title('Intersection of Planes for (A-I)x = 0')
+
+ax.legend([surf1, surf2, surf3], ['-y = 0', 'x - 2y + z = 0', '-x = 0'])
+
+ax.view_init(elev=20, azim=-65)
+plt.savefig("/mnt/c/Users/bharg/Documents/backupmatrix/ee25btech11013/matgeo/12.755/figs/Figure_1.png")
+plt.show()
+
+
+    \end{lstlisting}
