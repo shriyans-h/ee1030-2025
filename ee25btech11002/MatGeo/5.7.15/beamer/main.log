@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  5 OCT 2025 04:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.30)  9 OCT 2025 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1536,13 +1536,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 87.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 87.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 87.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1639,6 +1639,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 87.
+
+(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1714,15 +1716,12 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count410
-
-No file main.nav.
-[1
+ (./main.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
 7.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -1787,17 +1786,9 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 (Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 97.
  [2
 
-]
+] [3
 
-LaTeX Warning: Reference `eq:0.2' on page 3 undefined on input line 109.
-
-[3
-
-]
-
-LaTeX Warning: Reference `eq:0.5' on page 4 undefined on input line 128.
-
-[4
+] [4
 
 ]
 \tf@nav=\write8
@@ -1809,27 +1800,16 @@ LaTeX Warning: Reference `eq:0.5' on page 4 undefined on input line 128.
 \tf@snm=\write10
 \openout10 = `main.snm'.
 
- (./main.aux)
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+(./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 56206 strings out of 476091
- 1343414 string characters out of 5794081
- 2123999 words of memory out of 5000000
- 75618 multiletter control sequences out of 15000+600000
+ 56227 strings out of 476091
+ 1343581 string characters out of 5794081
+ 2124000 words of memory out of 5000000
+ 75631 multiletter control sequences out of 15000+600000
  550307 words of font info for 70 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,122p,1172b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1841,7 +1821,7 @@ texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 o10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (4 pages, 115234 bytes).
+Output written on main.pdf (4 pages, 113591 bytes).
 PDF statistics:
  186 PDF objects out of 1000 (max. 8388607)
  149 compressed objects within 2 object streams
