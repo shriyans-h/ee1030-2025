@@ -73,7 +73,7 @@ plt.ylim(y_plot_min, y_plot_max)
     
 plt.gca().set_aspect('auto', adjustable='box') # 'auto' for potentially different scales on axes
     
-plt.savefig("income_equations_plot.png")
+plt.savefig("fig2.png")
 plt.show()
 
-print("Figure saved as income_equations_plot.png")
+print("Figure saved as fig2.png")
