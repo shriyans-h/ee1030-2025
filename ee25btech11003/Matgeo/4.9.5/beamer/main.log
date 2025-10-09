@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.11)  9 OCT 2025 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.11)  9 OCT 2025 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,19 +1505,19 @@ Package gensymb Warning: Not defining \micro.
 
 No file main.nav.
 
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 28--28
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 28--28
  [][]  
  []
 
 
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 31--31
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 31--31
  [][]  
  []
 
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
@@ -1525,7 +1525,7 @@ Overfull \hbox (25.22601pt too wide) has occurred while \output is active
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 36--36
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 36--36
  [][]  
  []
 
@@ -1591,7 +1591,7 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
@@ -1599,7 +1599,7 @@ Overfull \hbox (25.22601pt too wide) has occurred while \output is active
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc}]
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 53--53
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 53--53
  [][]  
  []
 
@@ -1616,56 +1616,56 @@ Overfull \vbox (8.46376pt too high) detected at line 53
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
 [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 70--70
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 70--70
  [][]  
  []
 
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
 [4
 
 ]
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 89--89
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 89--89
  [][]  
  []
 
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
 [5
 
 ]
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 106--106
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 106--106
  [][]  
  []
 
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
 [6
 
 ]
-Overfull \hbox (25.22601pt too wide) in paragraph at lines 116--116
+Overfull \hbox (52.22221pt too wide) in paragraph at lines 116--116
  [][]  
  []
 
@@ -1705,7 +1705,7 @@ Overfull \vbox (50.64856pt too high) detected at line 116
 
 
 
-Overfull \hbox (25.22601pt too wide) has occurred while \output is active
+Overfull \hbox (52.22221pt too wide) has occurred while \output is active
  [][]  
  []
 
@@ -1751,7 +1751,7 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (7 pages, 179439 bytes).
+Output written on main.pdf (7 pages, 179366 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  230 compressed objects within 3 object streams
