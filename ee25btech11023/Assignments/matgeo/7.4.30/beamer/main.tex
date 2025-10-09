@@ -245,8 +245,7 @@ def find_locus_equation():
 \frametitle{Python Code for Solving}
 \begin{lstlisting}[language=Python]
    rhs = (r + r1)**2
-    equation = sympy.Eq(lhs, rhs)
-    locus_eq = sympy.simplify(equation.lhs - equation.rhs)
+    locus_eq = sympy.simplify(lhs - rhs)
     x, y = sympy.symbols('x y')
     final_locus = locus_eq.subs([(h, x), (k, y)])
     
