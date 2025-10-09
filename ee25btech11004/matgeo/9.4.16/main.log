@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  4 OCT 2025 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  9 OCT 2025 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1541,11 +1541,11 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <17.28> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 38.
-<Figs/9416.png, id=31, 533.995pt x 530.98375pt>
+<Figs/9416.png, id=31, 556.0775pt x 550.055pt>
 File: Figs/9416.png Graphic file (type png)
 <use Figs/9416.png>
 Package pdftex.def Info: Figs/9416.png  used on input line 42.
-(pdftex.def)             Requested size: 350.99762pt x 349.03247pt.
+(pdftex.def)             Requested size: 350.99762pt x 347.19954pt.
 
 
 [1
@@ -1576,7 +1576,7 @@ e/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 175959 bytes).
+Output written on main.pdf (2 pages, 211309 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
