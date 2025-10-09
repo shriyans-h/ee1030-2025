@@ -108,8 +108,46 @@ Given ,
 \end{frame}
 
 \begin{frame}{Theoretical Solution}
-we know, 
+Let,
 
+\begin{align}
+    \vec{z_1}=x_1+jy_1 \longrightarrow{} \myvec{x_1 & -y_1 \\ y_1 & x_1 }\\ 
+    \vec{z_2}=x_2+jy_2 \longrightarrow{} \myvec{x_2 & -y_2 \\ y_2 & x_2 } 
+\end{align}
+
+Look at 
+
+\begin{align} 
+    \vec{z_1} + \vec{z_2} = \brak{x_1+x_2} + j \brak{y_1 + y_2}
+\end{align}
+
+   
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+Which is equivalent to 
+\begin{align}
+    \myvec{x_1 & -y_1 \\ y_1 & x_1 } + \myvec{x_2 & -y_2 \\ y_2 & x_2 } = \myvec{x_1+x_2 & -y_1-y_2 \\ y_1+y_2 & x_1+x_1}
+\end{align}
+
+Also, 
+
+\begin{align}
+    \vec{z_1}\vec{z_2} = \brak{x_1x_2 - y_1y_2} + j\brak{x_1y_2 + x_2y_1}
+\end{align}
+
+This is equivalent to 
+
+\begin{align}
+    \myvec{x_1 & -y_1 \\ y_1 & x_1}\myvec{x_2 & -y_2 \\ y_2 & x_2 } = \myvec{\brak{x_1x_2 - y_1y_2} & -\brak{x_1y_2 + x_2y_1} \\ \brak{x_1y_2 + x_2y_1} & \brak{x_1x_2 - y_1y_2}}
+\end{align}
+ 
+\end{frame}
+
+\begin{frame}{Theoretical Solution}
+
+$\therefore$ Complex Numbers can be represented as this matrix form since it satisfies Addition and Multiplication properties. 
+ 
 \begin{align}
     x+jy \longrightarrow{} \myvec{x & -y \\ y & x }
 \end{align}
