@@ -94,35 +94,44 @@ Let the equation of 2nd circle be
 \begin{align}
   \norm{\Vec{x}}^2+2\Vec{u_2}^T\Vec{x}+f_2=0
 \end{align}
-Let $\Vec{c_1}$ and $\Vec{c_2}$ be the center of circles 1 and 2.\\
 From the given information:
 \begin{align}
-\Vec{u_1}=\myvec{0\\0}\;\;,f_1=-4\;\;and\;\;\Vec{c_1}=\myvec{0\\0}
+\Vec{u_1}=\myvec{0\\0}\;\;and\;\;f_1=-4
 \end{align}
 \begin{align}
-\Vec{u_2}=\myvec{-3\\-4}\;\;,f_2=-24\;\;and\;\;\Vec{c_2}=\myvec{3\\4}
+\Vec{u_2}=\myvec{-3\\-4}\;\;and\;\;f_2=-24
 \end{align}
-
+The intersection of two curves can be given as :
 \begin{align}
- r_1=\sqrt{\norm{\Vec{u_1}}^2-f_1}=\sqrt{0+4}=2
+\Vec{x}^T(\Vec{V_1+\mu\Vec{V_2}})\Vec{x}+2(\Vec{u_1+\mu\Vec{u_2}})^T\Vec{x}+(f_1+\mu f_2)=0
+\end{align}
+Given conic is a circle. So,
+\begin{align}
+    \Vec{V_1}=\Vec{V_2}=\Vec{I}
+\end{align}
+Now subdtituitng the given values:
+\begin{align}
+    (\mu +1)\Vec{x}^T\Vec{x}+2\mu\myvec{-3\\-4}^T\Vec{x}+(-4-24\mu)=0
 \end{align}
 \begin{align}
-    r_2=\sqrt{\norm{\Vec{u_2}}^2-f_2}=\sqrt{25+24}=7
+    (\mu+1)\norm{\Vec{x}}^2-2\mu\myvec{3\\4}^T\Vec{x}-4(1+6\mu)=0
 \end{align}
-Now calculating the distance between $\Vec{c_1}$ and $\Vec{c_2}$ :
+$\Vec{x}$ lies on the circle 1. So,
 \begin{align}
-  \norm{\Vec{c_2}-\Vec{c_1}}=\norm{\myvec{3\\4}-\myvec{0\\0}}=5
+    \norm{\Vec{x}}^2=4
 \end{align}
-We also have:
 \begin{align}
-  |r_2-r_1|=5
+    4(\mu +1)-2\mu\myvec{3\\4}^T\Vec{x}-4(1+6\mu)=0
 \end{align}
-Here we can observe that  the distance between the centers of two circles is equal to the absolute difference of their radii . So the two circles touch each other internally at one point\\
-Therefore the number of common tangents to the given two circles is 1
+\begin{align}
+    4\mu-2\mu\myvec{3\\4}^T\Vec{x}-24\mu=0;
+\end{align}
+\begin{align}
+    \myvec{3\\4}^T\Vec{x}=-10
+    \end{align}
 
-
-
-
+Which is the equation of a single line\\
+So the number of common tangents is 1\\\\
 From the figure it is clearly verified that the theoretical solution matches with the computational solution.\\
 \begin{figure}[h]
     \centering
