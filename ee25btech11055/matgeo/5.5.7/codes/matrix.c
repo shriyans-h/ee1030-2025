@@ -50,7 +50,7 @@ int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
         for (j = 0; j < n; ++j) {
             if (i != j) {
                 double factor = augmented[j * width + i];
-                for (k = i; k < width; ++k) {
+                for (k = 0; k < width; ++k) {
                     augmented[j * width + k] -= factor * augmented[i * width + k];
                 }
             }
@@ -66,4 +66,16 @@ int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
     
     free(augmented);
     return 1;
+}
+
+void mul(const double *a, const double *b, double *c, int m, int n, int p) {
+    for (int i = 0; i < m; i++) {
+        for (int k = 0; k < p; k++) {
+            double temp = 0.0;
+            for (int j = 0; j < n; j++) {
+                temp += a[i * n + j] * b[j * p + k];
+            }
+            c[i * p + k] = temp;
+        }
+    }
 }

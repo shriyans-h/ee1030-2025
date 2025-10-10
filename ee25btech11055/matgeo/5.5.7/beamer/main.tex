@@ -76,7 +76,7 @@ showstringspaces=false
 
 \numberwithin{equation}{section}
 
-\title{MATGEO Presentation: 5.2.57}
+\title{MATGEO Presentation: 5.5.7}
 \author{Subhodeep Chakraborty \\ ee25btech11055,\\IIT Hyderabad.}
 
 \date{\today}
@@ -95,49 +95,39 @@ showstringspaces=false
 \begin{frame}
 \frametitle{Problem Statement}
 
-Solve the following system of linear equations.
-\begin{align*}
- 2x+y+z&=1\\
- x-2y-z&=\frac{3}{2}\\
- 3y-5z&=9
-\end{align*}
-
+Find the inverse of the following matrix, using elementary transformations\hfill\brak{12, 2019}
+$$\myvec{2&3&1\\2&4&1\\3&7&2}$$
 \end{frame}
 
 \section{Solution}
 \begin{frame}{Given data}
 Given:
 \begin{align}
- \vec{n_1}^\top\vec{x}&=c_1 &\vec{n_1} = \myvec{2\\1\\1} c_1 = 1\\
- \vec{n_2}^\top\vec{x}&=c_2 &\vec{n_2} = \myvec{1\\-2\\-1} c_2 = 3/2\\
- \vec{n_3}^\top\vec{x}&=c_3 &\vec{n_3} = \myvec{0 \\3 \\ -5} c_3 = 9
+ \vec{A} = \myvec{2&3&1\\2&4&1\\3&7&2}
 \end{align}
 \end{frame}
 
 \begin{frame}{Formulae}
-Thus
-\begin{align}
-  \myvec{\vec{n_1} & \vec{n_2} & \vec{n_3}}^\top\vec{x} = \myvec{c_1\\c_2\\c_3}
-\end{align}
-On forming augmented matrix and applying Gaussian elimination, we can solve for $\vec{x}$
+Let $\vec{A^{-1}}$ be inverse of $\vec{A}$
+We know \begin{align}\vec{A}\vec{A^{-1}} = \vec{I}\end{align}
+Thus augmented matrix to find $\vec{A^{-1}}$ is given by: $\augvec{1}{1}{\vec{A}&\vec{I}}$
 \end{frame}
 
 \begin{frame}{Solving}
 \begin{align}
- \implies \augvec{3}{1}{2&1&1&1\\1&-2&-1&3/2\\0&3&-5&9} \xleftrightarrow[]{R_2=2R_2-R_1} \\
- \augvec{3}{1}{2&1&1&1\\0&-5&-3&2\\0&3&-5&9} \xleftrightarrow[]{R_3=5R_3+3R_2}
- \augvec{3}{1}{2&1&1&1\\0&-5&-3&2\\0&0&-34&51} \\
- \xleftrightarrow[]{R_3=-R_3/34; R_2=R_2+3R_3}
- \augvec{3}{1}{2&1&1&1\\0&-5&0&-5/2\\0&0&1&-3/2} \xleftrightarrow[]{R_2=-R_2/5; R_1=R_1-R_2-R_3}\\
- \augvec{3}{1}{2&0&0&2\\0&1&0&1/2\\0&0&1&-3/2}
- \xleftrightarrow[]{R_1=R_1/2}
- \augvec{3}{1}{1&0&0&1\\0&1&0&1/2\\0&0&1&-3/2}
+\augvec{3}{3}{2&3&1&1&0&0\\2&4&1&0&1&0\\3&7&2&0&0&1} \xleftrightarrow[]{R1 \xleftrightarrow[]{} R3; R1 = R1/3}& \\
+\augvec{3}{3}{1&7/3&2/3&0&0&1/3\\2&4&1&0&1&0\\2&3&1&1&0&0} \xleftrightarrow[]{R2=R2-2R1;R3=R3-2R1}& \\
+\augvec{3}{3}{1&7/3&2/3&0&0&1/3\\0&-2/3&-1/3&0&1&-2/3\\0&-5/3&-1/3&1&0&-2/3} \xleftrightarrow[]{R3=-5/3R3}& \\
+\augvec{3}{3}{1&7/3&2/3&0&0&1/3\\0&-2/3&-1/3&0&1&-2/3\\0&1&1/5&-3/5&0&2/5} \xleftrightarrow[]{R1 = R1-7/3R3; R2 = 2/3R3}& \\
+\augvec{3}{3}{1&0&1/5&7/5&0&-3/5\\0&0&-1/5&-2/5&1&-2/5\\0&1&1/5&-3/5&0&2/5} \xleftrightarrow[]{R2\xleftrightarrow[]{}R3}& \\
+\augvec{3}{3}{1&0&1/5&7/5&0&-3/5\\0&1&1/5&-3/5&0&2/5\\0&0&-1/5&-2/5&1&-2/5} \xleftrightarrow[]{R1=R1+R3;R2=R2-R3}&
+\augvec{3}{3}{1&0&0&1&1&-1\\0&1&0&-1&1&0\\0&0&1&2&-5&2}
 \end{align}
 \end{frame}
 \begin{frame}{Result}
- So we have:
+So we have:
 \begin{align}
- \vec{x}=\myvec{x\\y\\z}=\myvec{1\\1/2\\-3/2}
+ \vec{A^{-1}}=\myvec{1&1&-1\\-1&1&0\\2&-5&2}
 \end{align}
 \end{frame}
 \subsection{Plot}
@@ -152,41 +142,115 @@ On forming augmented matrix and applying Gaussian elimination, we can solve for 
 
 \section{C Code}
 
-\begin{frame}[fragile]{C code for generating points on plane}
+\begin{frame}[fragile]{C code for generating points on line}
 \begin{lstlisting}[language=C]
- void generate_plane_points(
-    // Output params
-    double* x_coords, double* y_coords, double* z_coords,
-    // Grid params
-    double x_min, double x_max, int x_steps,
-    double y_min, double y_max, int y_steps,
-    // Plane stuff
-    double n1, double n2, double n3, double c) {
-    double x_step_val = (x_max - x_min) / (x_steps - 1);
-    double y_step_val = (y_max - y_min) / (y_steps - 1);
-    int index = 0;
-    for (int i = 0; i < x_steps; i++) {
-        for (int j = 0; j < y_steps; j++) {
-            double current_x = x_min + i * x_step_val;
-            double current_y = y_min + j * y_step_val;
-            double current_z;
+void point_gen(const double* P1, const double* P2, double t, double* result_point) {
+    result_point[0] = P1[0] + t * (P2[0] - P1[0]);
+    result_point[1] = P1[1] + t * (P2[1] - P1[1]);
+    result_point[2] = P1[2] + t * (P2[2] - P1[2]);
+}
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]{C Code for matrix functions}
+ \begin{lstlisting}[language=C]
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
+    // Read up on memory
+    double *augmented = (double *)malloc(n * 2 * n * sizeof(double));
+
+    int i, j, k;
+    const int width = 2 * n;
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
- \begin{lstlisting}[language=C]
-            // Vertical plane check
-            if ((c < 1e-9)&&(c > -1e-9)) {
-                current_z = 0.0;
-            } else {
-                current_z = (-n1 * current_x - n2 * current_y + c) / n3;
+\begin{lstlisting}[language=C]
+    for (i = 0; i < n; ++i) {
+        for (j = 0; j < n; ++j) {
+            augmented[i * width + j] = input_matrix[i * n + j];
+        }
+        for (j = n; j < width; ++j) {
+            augmented[i * width + j] = (i == (j - n)) ? 1.0 : 0.0;
+        }
+    }
+
+    for (i = 0; i < n; ++i) {
+        // check why this matters. smtg to do with errors sir said iirc
+        int max_row = i;
+        for (k = i + 1; k < n; ++k) {
+            if (fabs(augmented[k * width + i]) > fabs(augmented[max_row * width + i])) {
+                max_row = k;
             }
-            x_coords[index] = current_x;
-            y_coords[index] = current_y;
-            z_coords[index] = current_z;
-            index++;
+        }
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=C]
+        if (max_row != i) {
+            for (k = 0; k < width; ++k) {
+                double temp = augmented[i * width + k];
+                augmented[i * width + k] = augmented[max_row * width + k];
+                augmented[max_row * width + k] = temp;
+            }
+        }
+
+        // check singular
+        if (fabs(augmented[i * width + i]) < 1e-9) {
+            free(augmented);
+            return 0;
+        }
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=C]
+        // -make 1
+        double pivot = augmented[i * width + i];
+        for (j = i; j < width; ++j) {
+            augmented[i * width + j] /= pivot;
+        }
+
+        // make zero
+        for (j = 0; j < n; ++j) {
+            if (i != j) {
+                double factor = augmented[j * width + i];
+                for (k = 0; k < width; ++k) {
+                    augmented[j * width + k] -= factor * augmented[i * width + k];
+                }
+            }
+        }
+    }
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=C]
+    // Output inverse
+    for (i = 0; i < n; ++i) {
+        for (j = 0; j < n; ++j) {
+            inverse_matrix[i * n + j] = augmented[i * width + (j + n)];
+        }
+    }
+
+    free(augmented);
+    return 1;
+}
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=C]
+void mul(const double *a, const double *b, double *c, int m, int n, int p) {
+    for (int i = 0; i < m; i++) {
+        for (int k = 0; k < p; k++) {
+            double temp = 0.0;
+            for (int j = 0; j < n; j++) {
+                temp += a[i * n + j] * b[j * p + k];
+            }
+            c[i * p + k] = temp;
         }
     }
 }
+
  \end{lstlisting}
 \end{frame}
 
@@ -198,90 +262,182 @@ import ctypes
 import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+import sys
 
-e1 = np.array([2, 1, 1, 1])
-e2 = np.array([1, -2, -1, 3 / 2])
-e3 = np.array([0, 3, -5, 9])
-
-
-cols = ["red", "blue", "green"]
+libline = ctypes.CDLL("./line.so")
+get_point = libline.point_gen
+get_point.argtypes = [
+    ctypes.POINTER(ctypes.c_double),  # P1
+    ctypes.POINTER(ctypes.c_double),  # P2
+    ctypes.c_double,  # t
+    ctypes.POINTER(ctypes.c_double),  # result_point
+]
+get_point.restype = None
 \end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
- \begin{lstlisting}[language=Python]
-lib = ctypes.CDLL("./plane.so")
-
-lib.generate_plane_points.argtypes = [
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.POINTER(ctypes.c_double),
-    ctypes.c_double,
-    ctypes.c_double,
+\begin{lstlisting}[language=Python]
+libmatrix = ctypes.CDLL("./matrix.so")
+libmatrix.find_inverse.argtypes = [
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags="C_CONTIGUOUS"),
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags="C_CONTIGUOUS"),
     ctypes.c_int,
-    ctypes.c_double,
-    ctypes.c_double,
-    ctypes.c_int,
-    ctypes.c_double,
-    ctypes.c_double,
-    ctypes.c_double,
-    ctypes.c_double,
 ]
-lib.generate_plane_points.restype = None
- \end{lstlisting}
+libmatrix.find_inverse.restype = ctypes.c_int
+find_inv = libmatrix.find_inverse
+\end{lstlisting}
 \end{frame}
 \begin{frame}[fragile]
- \begin{lstlisting}[language=Python]
-fig = plt.figure(figsize=(8, 6))
-ax = fig.add_subplot(111, projection="3d")
+\begin{lstlisting}[language=Python]
+libmatrix.mul.argtypes = [
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags="C_CONTIGUOUS"),
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags="C_CONTIGUOUS"),
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags="C_CONTIGUOUS"),
+    ctypes.c_int,
+    ctypes.c_int,
+    ctypes.c_int,
+]
+libmatrix.mul.restype = None
+matmul = libmatrix.mul
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+DoubleArray3 = ctypes.c_double * 3
+a = DoubleArray3(0,0,0)
+x = np.array([1,1,1],dtype=np.float64)
 
-x_steps, y_steps = 100, 100
-total_points = x_steps * y_steps
-x_plane = np.zeros(total_points, dtype=np.double)
-y_plane = np.zeros(total_points, dtype=np.double)
-z_plane = np.zeros(total_points, dtype=np.double)
- \end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]
- \begin{lstlisting}[language=Python]
-for i in range(1, 4):
-    lib.generate_plane_points(
-        x_plane.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-        y_plane.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-        z_plane.ctypes.data_as(ctypes.POINTER(ctypes.c_double)),
-        -5.0,
-        5.0,
-        x_steps,
-        -5.0,
-        5.0,
-        y_steps,
-        eval(f"e{i}")[0],
-        eval(f"e{i}")[1],
-        eval(f"e{i}")[2],
-        eval(f"e{i}")[3],
-    )
-    ax.scatter(x_plane, y_plane, z_plane, alpha=0.03, color=cols[i - 1])
- \end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]
- \begin{lstlisting}[language=Python]
-ax.scatter(1, 1 / 2, -3 / 2, color="yellow", label="Point")
-ax.text(1, 1 / 2, -3 / 2, " Point")
+A = np.array([[3, 0, -1], [2, 3, 0], [0, 4, 1]],dtype=np.float64)
+A_flat = A.flatten()
+# flatten() passes a COPY! matrix isn't stored
+inv = np.empty_like(A_flat)
+if not find_inv(A_flat,inv,3):
+    print("Matrix is singular")
+    sys.exit()
 
-ax.set_xlabel("X Axis")
-ax.set_ylabel("Y Axis")
-ax.set_zlabel("Z Axis")
-ax.set_title("4.11.32")
-ax.set_xlim([-5, 5])
-ax.set_ylim([-5, 5])
-ax.set_zlim([-5, 5])
+inv = inv.reshape(A.shape)
+b = np.empty_like(x)
+c = np.empty_like(x)
+matmul(A.flatten(),x,b,3,3,1)
+matmul(inv.flatten(),b,c,3,3,1)
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(121, projection="3d")
+
+t_values = np.linspace(0, 1, 100)
+line_points_x, line_points_y, line_points_z = [], [], []
+for t in t_values:
+    result_arr = DoubleArray3()
+    get_point(a, DoubleArray3(x[0], x[1], x[2]), t, result_arr)
+    line_points_x.append(result_arr[0])
+    line_points_y.append(result_arr[1])
+    line_points_z.append(result_arr[2])
+ax.plot(
+    line_points_x,
+    line_points_y,
+    line_points_z,
+    color="red",
+    label="Original Vector"
+)
+ax.text(x[0], x[1], x[2], " V1")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+t_values = np.linspace(0, 1, 100)
+line_points_x, line_points_y, line_points_z = [], [], []
+
+for t in t_values:
+    result_arr = DoubleArray3()
+
+    get_point(a, DoubleArray3(b[0], b[1], b[2]), t, result_arr)
+
+    line_points_x.append(result_arr[0])
+    line_points_y.append(result_arr[1])
+    line_points_z.append(result_arr[2])
+ax.plot(
+    line_points_x,
+    line_points_y,
+    line_points_z,
+    color="blue",
+    label="Modified Vector"
+)
+ax.text(b[0], b[1], b[2], " V2")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+ax2 = fig.add_subplot(122, projection="3d")
+
+t_values = np.linspace(0, 1, 100)
+line_points_x, line_points_y, line_points_z = [], [], []
+for t in t_values:
+    result_arr = DoubleArray3()
+    get_point(a, DoubleArray3(b[0], b[1], b[2]), t, result_arr)
+    line_points_x.append(result_arr[0])
+    line_points_y.append(result_arr[1])
+    line_points_z.append(result_arr[2])
+ax2.plot(
+    line_points_x,
+    line_points_y,
+    line_points_z,
+    color="blue",
+    label="Modified Vector"
+)
+ax2.text(b[0], b[1], b[2], " V2")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+t_values = np.linspace(0, 1, 100)
+line_points_x, line_points_y, line_points_z = [], [], []
+
+for t in t_values:
+    result_arr = DoubleArray3()
+
+    get_point(a, DoubleArray3(c[0], c[1], c[2]), t, result_arr)
+
+    line_points_x.append(result_arr[0])
+    line_points_y.append(result_arr[1])
+    line_points_z.append(result_arr[2])
+ax2.plot(
+    line_points_x,
+    line_points_y,
+    line_points_z,
+    color="green",
+    label="Reverted Vector"
+)
+ax2.text(c[0], c[1], c[2], " V3")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_zlabel("Z-axis")
+ax.set_title("5.5.7")
+ax.set_xlim([-10, 10])
+ax.set_ylim([-10, 10])
+ax.set_zlim([-10, 10])
 ax.legend()
 ax.grid(True)
-
+ax2.set_xlabel("X-axis")
+ax2.set_ylabel("Y-axis")
+ax2.set_zlabel("Z-axis")
+ax2.set_title("5.5.7")
+ax2.set_xlim([-10, 10])
+ax2.set_ylim([-10, 10])
+ax2.set_zlim([-10, 10])
+ax2.legend()
+ax2.grid(True)
 plt.savefig("../figs/plot.png")
 plt.show()
- \end{lstlisting}
+\end{lstlisting}
 \end{frame}
+
 \subsection{Plot}
 \begin{frame}{Plot}
  \begin{figure}[H]
@@ -297,40 +453,58 @@ plt.show()
 import numpy as np
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-e1 = np.array([2, 1, 1, 1])
-e2 = np.array([1, -2, -1, 3 / 2])
-e3 = np.array([0, 3, -5, 9])
-cols = ["", "red", "blue", "green"]
-fig = plt.figure(figsize=(8, 8))
-ax = fig.add_subplot(111, projection="3d")
-x, y = np.meshgrid(range(-10, 10), range(-10, 10))
-for i in range(1, 4):
-    z = (
-        -(eval(f"e{i}")[0] * x + eval(f"e{i}")[1] * y - eval(f"e{i}")[3])
-        / eval(f"e{i}")[2]
-    )
-    ax.plot_surface(x, y, z, alpha=0.35, color=cols[i])
- \end{lstlisting}
-\end{frame}
-\begin{frame}[fragile]{Pure Python code}
- \begin{lstlisting}[language=Python]
-ax.scatter(1, 1 / 2, -3 / 2, color="yellow", label="Point")
-ax.text(1, 1 / 2, -3 / 2, " Point")
 
+A = np.array([[3, 0, -1], [2, 3, 0], [0, 4, 1]])
+
+x = np.array([1, 1, 1])
+b = A @ x
+c = LA.inv(A) @ b
+print(x,A,b,c,sep='\n')
+
+
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(121, projection="3d")
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+ax.quiver(0, 0, 0, x[0], x[1], x[2], color="red", label="Original Vector")
+ax.text(x[0], x[1], x[2], " V1")
+ax.quiver(0, 0, 0, b[0], b[1], b[2], color="blue", label="Modified Vector")
+ax.text(b[0], b[1], b[2], " V2")
+
+ax2 = fig.add_subplot(122, projection="3d")
+
+ax2.quiver(0, 0, 0, b[0], b[1], b[2], color="blue", label="Modified Vector")
+ax2.text(b[0], b[1], b[2], " V2")
+ax2.quiver(0, 0, 0, c[0], c[1], c[2], color="green", label="Reverted Vector")
+ax2.text(c[0], c[1], c[2], " V3")
+
+\end{lstlisting}
+\end{frame}
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
 ax.set_xlabel("X-axis")
 ax.set_ylabel("Y-axis")
 ax.set_zlabel("Z-axis")
-ax.set_title("5.2.57")
+ax.set_title("5.5.7")
 ax.set_xlim([-10, 10])
 ax.set_ylim([-10, 10])
 ax.set_zlim([-10, 10])
 ax.legend()
 ax.grid(True)
-
+ax2.set_xlabel("X-axis")
+ax2.set_ylabel("Y-axis")
+ax2.set_zlabel("Z-axis")
+ax2.set_title("5.5.7")
+ax2.set_xlim([-10, 10])
+ax2.set_ylim([-10, 10])
+ax2.set_zlim([-10, 10])
+ax2.legend()
+ax2.grid(True)
 plt.savefig("../figs/python.png")
 plt.show()
- \end{lstlisting}
+\end{lstlisting}
 \end{frame}
 \subsection{Plot}
 \begin{frame}{Plot}
