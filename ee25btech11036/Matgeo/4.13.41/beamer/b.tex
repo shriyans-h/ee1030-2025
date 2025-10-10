@@ -97,86 +97,92 @@ y = m x, \quad y = m x + 1, \quad y = n x, \quad y = n x + 1.
 \]
 \end{frame}
 
-\begin{frame}{Step 1: Represent lines in parametric vector form}
-\[
-\begin{aligned}
-\vec{r}_1 &= \kappa_1 \myvec{1 \\ m}, \quad & 
-\vec{r}_2 &= \myvec{0 \\ 1} + \kappa_2 \myvec{1 \\ m}, \\
-\vec{r}_3 &= \mu_1 \myvec{1 \\ n}, \quad & 
-\vec{r}_4 &= \myvec{0 \\ 1} + \mu_2 \myvec{1 \\ n}.
-\end{aligned}
-\]
-\pause
-Here, \(\vec{r}_1, \vec{r}_2\) represent the pair of lines with slope \(m\), and
-\(\vec{r}_3, \vec{r}_4\) represent the pair of lines with slope \(n\).
+%------------------------------------------
+\begin{frame}{Normal Form of Lines}
+The general equation of a line is
+\begin{align}
+\vec{n}^\top\vec{x} = c
+\end{align}
+where \(\vec{n}\) is the normal vector.
+
+\begin{align}
+y - m x &= 0 &\Rightarrow& \quad \vec{n}_1^\top\vec{x} = 0,\\
+y - m x - 1 &= 0 &\Rightarrow& \quad \vec{n}_2^\top\vec{x} = 1,\\
+y - n x &= 0 &\Rightarrow& \quad \vec{n}_3^\top\vec{x} = 0,\\
+y - n x - 1 &= 0 &\Rightarrow& \quad \vec{n}_4^\top\vec{x} = 1.
+\end{align}
+
+\begin{align}
+\vec{n}_1 = \vec{n}_2 = \myvec{-m \\ 1}, \quad 
+\vec{n}_3 = \vec{n}_4 = \myvec{-n \\ 1}.
+\end{align}
 \end{frame}
 
-\begin{frame}{Step 2: Compute vertices by intersection}
-\[
-\begin{aligned}
-\text{Intersection of } \vec{r}_1 \text{ and } \vec{r}_3 &: \quad
-\kappa_1 \myvec{1 \\ m} = \mu_1 \myvec{1 \\ n}
-\quad \Rightarrow \quad \vec{P} = \myvec{0 \\ 0}
-\\[12pt]
-\text{Intersection of } \vec{r}_2 \text{ and } \vec{r}_3 &: \quad
-\myvec{0 \\ 1} + \kappa_2 \myvec{1 \\ m} = \mu_1 \myvec{1 \\ n}
-\end{aligned}
-\]
-
-Expressed as matrix equation:
-\[
-\underbrace{\myvec{1 & -1 \\ m & -n}}_{M}
-\underbrace{\myvec{ \kappa_2 \\ \mu_1 }}_{\vec{z}} = 
-\underbrace{\myvec{0 \\ -1}}_{\vec{b}}
-\]
-\end{frame}
-
-\begin{frame}{Step 3: Solve system for \(\kappa_2, \mu_1\)}
-Row operations:
-\[
-\begin{aligned}
-R_2 &\to R_2 - m R_1: & (m - n) \mu_1 &= m - 1 \quad \Rightarrow \quad \mu_1 = \frac{1}{m-n} \\
-R_1 &\to R_1: & \kappa_2 - \mu_1 &= 0 \quad \Rightarrow \quad \kappa_2 = \frac{1}{m-n}
-\end{aligned}
-\]
-
+%------------------------------------------
+\begin{frame}{Intersection of Two Lines}
+For two lines 
+\(\vec{n}_1^\top\vec{x} = c_1\), 
+\(\vec{n}_2^\top\vec{x} = c_2\),
+\begin{align}
+\myvec{\vec{n}_1^\top \\ \vec{n}_2^\top}\vec{x} = \myvec{c_1 \\ c_2}.
+\end{align}
 Hence,
-\[
-\vec{Q} = \myvec{ \kappa_2 \\ 1 + m \kappa_2 } = \myvec{ \frac{1}{m-n} \\ 1 + \frac{m}{m-n} }
-\]
+\begin{align}
+\vec{x} = 
+\myvec{\vec{n}_1^\top \\ \vec{n}_2^\top}^{-1}\myvec{c_1 \\ c_2}.
+\end{align}
 
-Other vertices:
-\[
-\vec{R} = \myvec{ \frac{1}{m-n} \\ \frac{m}{m-n} }, \quad
-\vec{S} = \myvec{0 \\ 1}
+\begin{align}
+\vec{N} = \myvec{-m & 1 \\ -n & 1}, \quad
+\vec{N}^{-1} = \frac{1}{n - m}\myvec{1 & -1 \\ n & -m}.
+\end{align}
+\end{frame}
+
+%------------------------------------------
+\begin{frame}{Vertices of Parallelogram}
+\begin{align}
+\vec{A} &= \vec{N}^{-1}\myvec{0 \\ 0} 
+= \myvec{0 \\ 0},\\[4pt]
+\vec{B} &= \vec{N}^{-1}\myvec{1 \\ 0} 
+= \frac{1}{n-m}\myvec{1 \\ n},\\[4pt]
+\vec{C} &= \vec{N}^{-1}\myvec{1 \\ 1} 
+= \myvec{0 \\ 1},\\[4pt]
+\vec{D} &= \vec{N}^{-1}\myvec{0 \\ 1} 
+= \frac{1}{n-m}\myvec{-1 \\ -m}.
+\end{align}
+
+Thus,
+\begin{align}
+\vec{A} = \myvec{0 \\ 0}, \quad
+\vec{B} = \frac{1}{n-m}\myvec{1 \\ n}, \quad
+\vec{C} = \myvec{0 \\ 1}, \quad
+\vec{D} = \frac{1}{n-m}\myvec{-1 \\ -m}.
+\end{align}
+\end{frame}
+
+%------------------------------------------
+\begin{frame}{Area of Parallelogram}
+Two adjacent sides:
+\begin{align}
+\vec{B}-\vec{A} &= \frac{1}{n-m}\myvec{1 \\ n},\\
+\vec{D}-\vec{A} &= \frac{1}{n-m}\myvec{-1 \\ -m}.
+\end{align}
+
+Area:
+\begin{align}
+\text{Area} 
+&= \abs{(\vec{B}-\vec{A}) \times (\vec{D}-\vec{A})} \\
+&= \left|\frac{1}{(n-m)^2}
+\det\myvec{1 & -1 \\ n & -m}\right|\\
+&= \frac{1}{|m - n|}.
+\end{align}
+\end{frame}
+\begin{frame}{FINAL ANSWER}
+    \[
+\boxed{\text{Area of the parallelogram} = \frac{1}{|m - n|}}
 \]
 \end{frame}
 
-\begin{frame}{Step 4: Area of the parallelogram}
-\[
-\begin{aligned}
-\vec{PQ} &= \vec{Q} - \vec{P} = \myvec{ \frac{1}{m-n} \\ 1 + \frac{m}{m-n} } - \myvec{0 \\ 0} = \myvec{ \frac{1}{m-n} \\ 1 + \frac{m}{m-n} } \\
-\vec{PR} &= \vec{R} - \vec{P} = \myvec{ \frac{1}{m-n} \\ \frac{m}{m-n} } - \myvec{0 \\ 0} = \myvec{ \frac{1}{m-n} \\ \frac{m}{m-n} }
-\end{aligned}
-\]
-
-Area is magnitude of the vector cross product:
-\[
-\begin{aligned}
-\text{Area} &= \big|\vec{PQ} \times \vec{PR}\big| \\
-&= \left| \frac{1}{m-n} \left(\frac{m}{m-n}\right) - \left(1 + \frac{m}{m-n}\right) \left(\frac{1}{m-n}\right) \right| \\
-&= \frac{1}{|m-n|}
-\end{aligned}
-\]
-\end{frame}
-
-\begin{frame}{Answer}
-\[
-\boxed{
-\text{Area of the parallelogram} = \frac{1}{|m-n|}
-}
-\]
-\end{frame}
 
   \begin{frame}[fragile]{C code}
 \begin{lstlisting}

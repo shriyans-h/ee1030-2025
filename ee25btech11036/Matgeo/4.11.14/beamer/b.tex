@@ -90,109 +90,123 @@
 \frame{\titlepage}
 
 
-\begin{frame}{Problem Statement}
-Find the value of \(\lambda\) for which the following lines are perpendicular.\\
-Determine whether the lines intersect or not.
-\begin{align}
-\frac{x-5}{5\lambda+2} &= \frac{2-y}{5} = \frac{1-z}{-1}, \\
-\frac{x}{1} &= \frac{y+\tfrac{1}{2}}{2\lambda} = \frac{z-1}{3}.
-\end{align}
+
+\begin{frame}{Problem}
+Find \(\lambda\) so that
+\[
+\frac{x-5}{5\lambda+2}=\frac{2-y}{5}=\frac{1-z}{-1},\qquad
+\frac{x}{1}=\frac{y+\tfrac12}{2\lambda}=\frac{z-1}{3}
+\]
+are perpendicular; determine intersection condition.
 \end{frame}
 
-\begin{frame}{Step 1: Vector form of lines}
-Choose points and direction vectors:
-\begin{align}
-\vec A_1 &= \myvec{5\\2\\1}, & \vec m_1 &= \myvec{5\lambda+2\\-5\\1},\\
-\vec A_2 &= \myvec{0\\-1/2\\1}, & \vec m_2 &= \myvec{1\\2\lambda\\3}.
-\end{align}
-
-Lines in parametric form:
-\begin{align}
-\vec r_1 &= \vec A_1 + \kappa_1 \vec m_1, \\
-\vec r_2 &= \vec A_2 + \kappa_2 \vec m_2.
-\end{align}
+\begin{frame}{Vector form \& perpendicularity}
+Choose
+\[
+\vec{A}_1=\myvec{5\\2\\1},\ \vec{m}_1=\myvec{5\lambda+2\\-5\\1},\qquad
+\vec{A}_2=\myvec{0\\-\tfrac12\\1},\ \vec{m}_2=\myvec{1\\2\lambda\\3}.
+\]
+Compute
+\[
+\vec{m}_1^\top\vec{m}_2 = (5\lambda+2)-10\lambda+3 = -5\lambda+5.
+\]
+Hence \(\boxed{\lambda=1}\) for perpendicular directions.
 \end{frame}
 
-\begin{frame}{Step 2: Perpendicularity condition}
+\begin{frame}{Set up augmented matrix}
+Intersection needs \(\kappa_1,\kappa_2\) solving
+\(\kappa_1\vec{m}_1-\kappa_2\vec{m}_2=\vec{A}_2-\vec{A}_1\).
+Write the augmented matrix:
 \[
-\vec m_1^{\top} \vec m_2 = 0
-\]
-
-Compute dot product:
-\begin{align}
-\vec m_1^{\top} \vec m_2
-&= \myvec{5\lambda+2 & -5 & 1} \myvec{1\\2\lambda\\3} \\
-&= 5\lambda+2 - 10\lambda +3 \\
-&= -5\lambda +5
-\end{align}
-\[
--5\lambda+5=0 \quad \Rightarrow \quad \boxed{\lambda=1}
-\]
-\end{frame}
-
-\begin{frame}{Step 3: Intersection condition}
-Lines intersect if
-\[
-\vec r_1 = \vec r_2 \quad \Rightarrow \quad \kappa_1 \vec m_1 - \kappa_2 \vec m_2 = \vec A_2 - \vec A_1
-\]
-
-Define
-\begin{align}
-M(\lambda) &= \begin{bmatrix}\vec m_1 & -\vec m_2\end{bmatrix} 
-= \myvec{5\lambda+2 & -1\\ -5 & -2\lambda\\ 1 & -3},\\
-\vec z &= \myvec{\kappa_1\\\kappa_2}, \quad
-\vec b = \vec A_2 - \vec A_1 = \myvec{-5\\-5/2\\0}.
-\end{align}
-Then
-\[
-M(\lambda)\vec z = \vec b
-\]
-\end{frame}
-
-\begin{frame}{Step 4: Augmented matrix and row reduction}
-Augmented matrix:
-\[
+\mathcal{M}_0 =
 \left[\begin{array}{cc|c}
-5\lambda+2 & -1 & -5 \\
--5 & -2\lambda & -5/2 \\
+5\lambda+2 & -1 & -5 \\[2pt]
+-5 & -2\lambda & -\tfrac{5}{2} \\[2pt]
 1 & -3 & 0
-\end{array}\right]
+\end{array}\right].
 \]
-
-Use row 3 to eliminate \(\kappa_1\):
-\[
-1\cdot \kappa_1 - 3\cdot \kappa_2 = 0 \quad \Rightarrow \quad \kappa_1 = 3 \kappa_2
-\]
-
-Substitute \(\kappa_1 = 3 \kappa_2\):
-\begin{align}
-(15\lambda+5)\kappa_2 &= -5,\\
-(-15-2\lambda)\kappa_2 &= -5/2
-\end{align}
+We reduce \(\mathcal{M}_0\) to RREF using explicit row operations.
 \end{frame}
 
-\begin{frame}{Step 5: Consistency condition}
-System consistent if:
+\begin{frame}{RREF — Step 1 (swap)}
+Swap \(R_1\leftrightarrow R_3\):
 \[
-\frac{-5}{15\lambda+5} = \frac{-5/2}{-15-2\lambda} 
-\quad \Rightarrow \quad -\frac{1}{3\lambda+1} = \frac{5}{30+4\lambda}
+\mathcal{M}_1 =
+\left[\begin{array}{cc|c}
+1 & -3 & 0 \\
+-5 & -2\lambda & -\tfrac{5}{2} \\
+5\lambda+2 & -1 & -5
+\end{array}\right].
 \]
-
-Solve:
-\begin{align}
--(30+4\lambda) &= 5(3\lambda+1) \\
--30-4\lambda &= 15\lambda + 5 \\
-19\lambda &= -35 \\
-\boxed{\lambda} &= -\frac{35}{19}
-\end{align}
 \end{frame}
 
-\begin{frame}{Step 6: Conclusions (Chapter 4 style)}
+\begin{frame}{RREF — Step 2 (eliminate col 1)}
+Eliminate first column using \(R_1\):
+\[
+R_2\leftarrow R_2+5R_1,\qquad R_3\leftarrow R_3-(5\lambda+2)R_1,
+\]
+giving
+\[
+\mathcal{M}_2 =
+\left[\begin{array}{cc|c}
+1 & -3 & 0 \\
+0 & -2\lambda-15 & -\tfrac{5}{2} \\
+0 & 15\lambda+5 & -5
+\end{array}\right].
+\]
+\end{frame}
+
+\begin{frame}{RREF — Step 3 (scale R2 and eliminate)}
+Scale \(R_2\) by \(1/(-2\lambda-15)\) (if nonzero) and eliminate column~2:
+\[
+R_2\leftarrow \frac{1}{-2\lambda-15}R_2,\quad
+R_1\leftarrow R_1+3R_2,\quad
+R_3\leftarrow R_3-(15\lambda+5)R_2.
+\]
+Resulting matrix has form
+\[
+\mathcal{M}_4 =
+\left[\begin{array}{cc|c}
+1 & 0 & * \\
+0 & 1 & * \\
+0 & 0 & r
+\end{array}\right],
+\]
+where \(r\) is the residual determining consistency.
+\end{frame}
+
+\begin{frame}{Consistency condition (RREF read-off)}
+From \(\mathcal{M}_2\) the two scalar rows give
+\[
+(-2\lambda-15)\kappa_2=-\tfrac{5}{2},\qquad (15\lambda+5)\kappa_2=-5.
+\]
+So
+\[
+\kappa_2=\frac{5}{30+4\lambda} \quad\text{and}\quad
+\kappa_2=-\frac{1}{3\lambda+1}.
+\]
+Equate them:
+\[
+-\frac{1}{3\lambda+1}=\frac{5}{30+4\lambda}
+\]
+which yields \(\boxed{\lambda=-\tfrac{35}{19}}\) (intersection case).
+\end{frame}
+
+\begin{frame}{Check \(\lambda=1\)}
+At \(\lambda=1\) the two equations give
+\[
+\kappa_2=\tfrac{5}{34}\quad\text{and}\quad \kappa_2=-\tfrac{1}{4},
+\]
+a contradiction. Thus augmented system inconsistent \(\Rightarrow\) lines are skew for \(\lambda=1\).
+\end{frame}
+
+\begin{frame}{Summary}
 \begin{itemize}
-\item Perpendicularity occurs at \(\lambda=1\). At this value, rank\([M(1)\mid \vec b] > \text{rank}(M(1))\), so lines are \emph{skew}.
-\item Intersection occurs at \(\lambda=-35/19\). At this value, rank\([M(\lambda)\mid \vec b] = \text{rank}(M(\lambda))\), so lines intersect (but are not perpendicular).
+\item \(\lambda=1\) : direction vectors perpendicular; lines do not intersect (skew).
+\item \(\lambda=-\dfrac{35}{19}\) : RREF consistent; lines intersect (not perpendicular).
 \end{itemize}
 \end{frame}
+
 
 \begin{frame}[fragile]{C code}
 \begin{lstlisting}
