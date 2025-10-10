@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  9 OCT 2025 18:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  10 OCT 2025 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1561,13 +1561,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 80.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 80.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 80.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1664,6 +1664,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 80.
+
+(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1750,15 +1752,14 @@ erthousand on input line 80.
 LaTeX Info: Redefining \ohm on input line 80.
 Package gensymb Info: Using \textohm for \ohm on input line 80.
 Package gensymb Info: Using \textmu for \micro on input line 80.
-
-No file main.nav.
-[1
+ (./main.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
 7.
- (/usr/share/texmf/tex/latex/lm/omllmm.fd
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -1830,28 +1831,24 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
  [2
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathit.enc}]
-Overfull \vbox (3.35162pt too high) detected at line 105
- []
-
-[3
+dvips/lm/lm-mathit.enc}] [3
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [4
 
 ] [5
 
 ]
-<figs/Figure_1.png, id=173, 505.89pt x 433.62pt>
+<figs/Figure_1.png, id=175, 505.89pt x 433.62pt>
 File: figs/Figure_1.png Graphic file (type png)
 <use figs/Figure_1.png>
-Package pdftex.def Info: figs/Figure_1.png  used on input line 144.
+Package pdftex.def Info: figs/Figure_1.png  used on input line 142.
 (pdftex.def)             Requested size: 151.94571pt x 130.24007pt.
  [6
 
  <./figs/Figure_1.png>]
 \openout4 = `main.vrb'.
 
- (./main.vrb
+(./main.vrb
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 2.
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
@@ -1871,14 +1868,14 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
-
-(./main.vrb
+ (./main.vrb
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
 20.
- (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-Overfull \vbox (1.72923pt too high) detected at line 233
+Overfull \vbox (1.72923pt too high) detected at line 231
  []
 
 [10
@@ -1898,7 +1895,7 @@ Overfull \vbox (1.72923pt too high) detected at line 233
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (13.72923pt too high) detected at line 303
+Overfull \vbox (13.72923pt too high) detected at line 301
  []
 
 [13
@@ -1923,24 +1920,14 @@ Overfull \vbox (13.72923pt too high) detected at line 303
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57748 strings out of 474222
- 1370331 string characters out of 5748733
+ 57792 strings out of 474222
+ 1370721 string characters out of 5748733
  2408239 words of memory out of 5000000
- 78961 multiletter control sequences out of 15000+600000
+ 78997 multiletter control sequences out of 15000+600000
  600860 words of font info for 81 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1475s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1951,7 +1938,7 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (14 pages, 255694 bytes).
+Output written on main.pdf (14 pages, 255746 bytes).
 PDF statistics:
  492 PDF objects out of 1000 (max. 8388607)
  413 compressed objects within 5 object streams
