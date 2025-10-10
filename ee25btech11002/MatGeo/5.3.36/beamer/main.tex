@@ -99,7 +99,20 @@ Solve the system of equations
 \begin{frame}{Solution}
 The above equation can be written as
 \begin{align}
-    \myvec{\frac{b}{a} & -\frac{a}{b}\\ b & -a} \vec{x} = \myvec{-a-b\\-2ab}
+    \vec{n_1}^\top \vec{x} &= c_1 \\
+    \vec{n_2}^\top \vec{x} &= c_2 \\
+    \myvec{\vec{n_1}\\ \vec{n_2}}^\top \vec{x} &= \myvec{c_1\\c_2}
+\end{align}
+ \begin{align}   
+     \vec{A} = \myvec{\vec{n_1}\\ \vec{n_2}}^\top \quad
+     \vec{b} = \myvec{c_1\\c_2} 
+\end{align}
+    \begin{align}
+    \vec{A} \vec{x} &= \vec{b}\\
+    \myvec{\frac{b}{a} & -\frac{a}{b}\\ b & -a} \vec{x} &= \myvec{-a-b\\-2ab}
+\end{align}
+    \begin{align}
+    \vec{A}^\top \vec{A} \neq \vec{I}
 \end{align}    
 \end{frame}
 

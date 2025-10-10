@@ -38,7 +38,7 @@
 \usepackage{lscape}
 \begin{document}
 \bibliographystyle{IEEEtran}
-\title{5.3.36}
+\title{4.2.5}
 \author{EE25BTECH11002 - Achat Parth Kalpesh }
 {\let\newpage\relax\maketitle}
 \renewcommand{\thefigure}{\theenumi}
@@ -50,49 +50,48 @@
 \parindent 0px
 
 
-
 \textbf{Question:}\\
-Solve the system of equations
+Find the direction and normal vector for the line;
 \begin{align}
-    \frac{bx}{a} - \frac{ay}{b} + a + b = 0\\
-    bx - ay + 2ab = 0 
+    2x=-5y
+    \label{eq:ref}
 \end{align}
+
 \textbf{Solution:}\\
-The above equation can be written as
+Let $\vec{n}$ and $\vec{m}$ are the Normal and Direction vectors of the 
+line
 \begin{align}
-    \vec{n_1}^\top \vec{x} &= c_1 \\
-    \vec{n_2}^\top \vec{x} &= c_2 \\
-    \myvec{\vec{n_1}\\ \vec{n_2}}^\top \vec{x} &= \myvec{c_1\\c_2}
+    \vec{n_1}^\top\vec{x}=c
 \end{align}
- \begin{align}   
-     \vec{A} = \myvec{\vec{n_1}\\ \vec{n_2}}^\top \quad
-     \vec{b} = \myvec{c_1\\c_2} 
-\end{align}
-    \begin{align}
-    \vec{A} \vec{x} &= \vec{b}\\
-    \myvec{\frac{b}{a} & -\frac{a}{b}\\ b & -a} \vec{x} &= \myvec{-a-b\\-2ab}
-\end{align}
-    \begin{align}
-    \vec{A}^\top \vec{A} \neq \vec{I}
-\end{align}
-Performing row operations:
+where ,
 \begin{align}
-\augvec{2}{1}{\frac{b}{a} & -\frac{a}{b} &-a-b\\ b & -a &-2ab}
-&\xleftrightarrow[]{R_1 \leftarrow R_1-\frac{R_2}{b}}
-\augvec{2}{1}{\frac{b-a}{a} & 0 & a-b\\ b & -a &-2ab}\\
-\augvec{2}{1}{\frac{b-a}{a} & 0 & a-b \\ b & -a &-2ab}
-&\xleftrightarrow[]{R_2 \leftarrow -\frac{ab}{b-a} R_1 + R_2}
-\augvec{2}{1}{\frac{b-a}{a} & 0 & a-b \\ 0 & -a & -ab}\\
-\augvec{2}{1}{\frac{b-a}{a} & 0 & a-b \\ 0 & -a & -ab}
-&\xleftrightarrow[]{R_2 \leftarrow -\frac{R_2}{a}}
-\augvec{2}{1}{\frac{b-a}{a} & 0 & a-b \\ 0 & 1 &  b}\\
-\augvec{2}{1}{\frac{b-a}{a} & 0 & a-b \\ 0 & 1 & - b}
-&\xleftrightarrow[]{R_1 \leftarrow \frac{a}{b-a} R_1}
-\augvec{2}{1}{1 & 0 & -a \\ 0 & 1 &  b}
+    \vec{n_1} &= \myvec{2 \\ 5}\\
+    c &= 0
 \end{align}
-Thus,
+The $\vec{n}$ can be represented as,
 \begin{align}
-    \vec{x} = \myvec{-a\\b}
+    \vec{n} = \myvec{-m \\ 1}
+\end{align}
+Where $m$ is the slope of the line,
+\begin{align}
+    m &= \frac{-2}{5}\\
+    \vec{n} &= \myvec{\frac{2}{5} \\ 1}
+\end{align}
+
+\eqref{eq:ref} can be represented as,
+\begin{align}
+    \implies \myvec{x \\ y} &= \myvec{x \\ \frac{-2}{5}x} =\myvec{0 \\ 0} + x\myvec{1 \\ \frac{-2}{5}}\\
+    \implies \myvec{x \\ y} &=\myvec{0 \\ 0} + x\myvec{1 \\ \frac{-2}{5}}
+\end{align}
+Comparing it with ,
+\begin{align}
+\label{eq:geo-param}
+	\vec{x} = \vec{h} + \kappa \vec{m}
+\end{align}
+We get,
+\begin{align}
+			\label{eq:line-school-dir}
+\vec{m} = \myvec{1 \\ \frac{-2}{5}}
 \end{align}
 
 \begin{figure}[h]
@@ -101,4 +100,5 @@ Thus,
     \caption{Graph}
     \label{fig:fig}
  \end{figure}
+
 \end{document}
