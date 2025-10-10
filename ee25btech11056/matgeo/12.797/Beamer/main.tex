@@ -167,4 +167,157 @@ Therefore, statement (\textbf{II}) is also \textbf{true}.
 
 \end{frame}
 
+\begin{frame}{Solution}
+
+\textbf{Examples}\\
+
+\textbf{Example a for (I)}
+
+\begin{align}
+\vec{A} &= \myvec{0 & 1\\ 1 & 0}
+\end{align}
+
+To find eigenvalues, evaluate:
+
+\begin{align}
+\mydet{\vec{A}-\lambda \vec{I}}=0\\
+\mydet{-\lambda & 1\\1 & -\lambda} &= 0\\
+\mydet{-\lambda & 1\\1 & -\lambda} 
+\xleftrightarrow{R_2 \to R_2 + \tfrac{1}{\lambda}R_1}
+\mydet{-\lambda & 1\\0 & \tfrac{1-\lambda^2}{\lambda}} &= 0\\
+\lambda^2 - 1 &= 0\\
+\lambda = \pm1\\
+\lambda_1=1, \lambda_2=-1
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+The minimum eigenvalue $\lambda_{\min}=-1$. Choose $c=2$. Then:
+\begin{align}
+\lambda_1+c=3,\quad \lambda_2+c=1
+\end{align}
+
+All eigenvalues are positive, so $\vec{A}+2\vec{I}$ is symmetric positive definite.
+
+\textbf{Example b for (I)}
+\begin{align}
+\vec{A} &= \myvec{-2 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 3}
+\end{align}
+
+Compute eigenvalues from $\mydet{\vec{A}-\lambda\vec{I}}=0$:
+\begin{align}
+\mydet{-2-\lambda & 0 & 0\\0 & 1-\lambda & 0\\0 & 0 & 3-\lambda} &= 0
+\end{align}
+\begin{align}
+(-2-\lambda)(1-\lambda)(3-\lambda)&=0
+\end{align}
+Hence
+\begin{align}
+\lambda_1=-2,\quad \lambda_2=1,\quad \lambda_3=3
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+Choose $c=3$ so $c>-\lambda_{\min}=2$.  
+Then $\lambda_i+c>0$ for all $i$.  
+Thus $\vec{A}+3\vec{I}$ is symmetric positive definite.
+
+\textbf{Example a for (II)}
+\begin{align}
+\vec{A} &= \myvec{5 & 2\\2 & 5}
+\end{align}
+Find eigenvalues from $\mydet{\vec{A}-\lambda \vec{I}}=0$:
+\begin{align}
+\mydet{5-\lambda & 2\\2 & 5-\lambda} &= 0
+\end{align}
+\begin{align}
+\mydet{5-\lambda & 2\\2 & 5-\lambda} 
+\xleftrightarrow{R_2 \to R_2 - \tfrac{2}{5-\lambda}R_1}
+\mydet{5-\lambda & 2\\0 & (5-\lambda)-\tfrac{4}{5-\lambda}} &= 0
+\end{align}
+\begin{align}
+(5-\lambda)^2 - 4 &= 0\\
+\lambda^2 - 10\lambda + 21 &= 0\\
+\lambda_1 = 7,\ \lambda_2 = 3 
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+For eigenvectors:
+\begin{align}
+(\vec{A}-7\vec{I})\vec{v}=0,\quad(\vec{A}-3\vec{I})\vec{v}=0
+\end{align}
+
+They correspond to $\vec{v}_1=\myvec{1\\1}$ and $\vec{v}_2=\myvec{1\\-1}$.  
+Form $\vec{P}$ and $\vec{D}$:
+
+\begin{align}
+\vec{P} &= \frac{1}{\sqrt{2}}\myvec{1 & 1\\1 & -1},\quad
+\vec{D} = \myvec{7 & 0\\0 & 3}
+\end{align}
+
+Then
+\begin{align}
+\vec{B} = \vec{P}\vec{D}^{1/2}\vec{P}^\top,\quad
+\vec{B}^2 = \vec{A}
+\end{align}
+
+Hence verified for $2\times2$.
+
+\textbf{Example b for (II)}
+
+\begin{align}
+\vec{A} &= \myvec{2 & 0 & 0\\0 & 3 & 0\\0 & 0 & 4}
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+Compute $\mydet{\vec{A}-\lambda\vec{I}}=0$:
+
+\begin{align}
+\mydet{2-\lambda & 0 & 0\\0 & 3-\lambda & 0\\0 & 0 & 4-\lambda} &= 0
+\end{align}
+
+\begin{align}
+(2-\lambda)(3-\lambda)(4-\lambda) = 0\\
+\lambda_1=2,\ \lambda_2=3,\ \lambda_3=4
+\end{align}
+
+Diagonalization:
+
+\begin{align}
+\vec{A} = \vec{P}\vec{D}\vec{P}^\top,\quad \vec{P}=\vec{I},\quad
+\vec{D}=\myvec{2 & 0 & 0\\0 & 3 & 0\\0 & 0 & 4}
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Solution}
+
+Define
+\begin{align}
+\vec{B} = \vec{P}\vec{D}^{1/2}\vec{P}^\top
+= \myvec{\sqrt{2} & 0 & 0\\0 & \sqrt{3} & 0\\0 & 0 & 2}
+\end{align}
+
+Then
+\begin{align}
+\vec{B}^2 = \vec{A}
+\end{align}
+
+Hence $\vec{B}$ is symmetric positive definite.
+
+\textbf{Conclusion:}  
+In all four examples, both statements (I) and (II) hold true.
+
+\end{frame}
+
 \end{document}
