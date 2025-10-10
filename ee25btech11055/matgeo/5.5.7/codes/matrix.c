@@ -20,6 +20,7 @@ int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
 
     for (i = 0; i < n; ++i) {
         // check why this matters. smtg to do with errors sir said iirc
+        // numerical stability. Basically I don't want to divide by really small numbers, cuz that blows stuff up
         int max_row = i;
         for (k = i + 1; k < n; ++k) {
             if (fabs(augmented[k * width + i]) > fabs(augmented[max_row * width + i])) {
@@ -40,7 +41,7 @@ int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
             return 0;
         }
 
-        // -make 1
+        // make 1
         double pivot = augmented[i * width + i];
         for (j = i; j < width; ++j) {
             augmented[i * width + j] /= pivot;
@@ -50,6 +51,7 @@ int find_inverse(const double *input_matrix, double *inverse_matrix, int n) {
         for (j = 0; j < n; ++j) {
             if (i != j) {
                 double factor = augmented[j * width + i];
+                // need to start k = 0 se, cuz right side is not dealt with, only left is
                 for (k = 0; k < width; ++k) {
                     augmented[j * width + k] -= factor * augmented[i * width + k];
                 }
