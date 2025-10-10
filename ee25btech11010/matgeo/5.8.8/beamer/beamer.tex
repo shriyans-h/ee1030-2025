@@ -85,46 +85,68 @@
   \titlepage
 \end{frame}
 \begin{frame}{Question}
-Places A and B are 100km apart on a highway. One car starts from A and another from B at the same time. If the cars travel in the same direction at different speeds, they meet in 5 hrs. If they travel towards each other, they meet in 1 hr. What are the speeds of the two cars?
+Places A and B are 100km apart on a highway. One car starts from A and another from B at the same time. 
+If the cars travel in the same direction at different speeds, they meet in 5 hrs. 
+If they travel towards each other, they meet in 1 hr. 
+Find the speeds of the two cars.
 \end{frame}
 
 \begin{frame}{Solution: Step 1}
 Cars meet in 1 hr when moving towards each other:
 \begin{align}
-v_1 + v_2 &= \frac{100}{1} 
+v_1 + v_2 &= \frac{100}{1} = 100
 \end{align}
 
 Cars meet in 5 hr when moving in the same direction:
 \begin{align}
-v_1 - v_2 &= \frac{100}{5} 
+v_1 - v_2 &= \frac{100}{5} = 20
 \end{align}
 \end{frame}
 
-\begin{frame}{Solution: Matrix Form}
+\begin{frame}{Solution: Vector Form}
+The equations can be expressed as
 \begin{align}
-\myvec{1 & 1 \\ 1 & -1} \myvec{v_1 \\ v_2} &= \myvec{100 \\ 20} \\
-\myvec{v_1 \\ v_2} &=\myvec{1 & 1 \\ 1 & -1}^{-1} \myvec{100 \\ 20} 
+\myvec{1 & 1}\myvec{v_1 \\ v_2} &= 100, \\
+\myvec{1 & -1}\myvec{v_1 \\ v_2} &= 20.
+\end{align}
+
+Let 
+\begin{align}
+\vec{r_1} = \myvec{1 & 1}, \quad \vec{r_2} = \myvec{1 & -1}.
+\end{align}
+Then $\vec{r_1} \cdot \vec{r_2} = 0$, showing that the two rows are orthogonal.
+\end{frame}
+
+\begin{frame}{Solution: Using Orthogonality}
+Let
+\begin{align}
+\myvec{v_1 \\ v_2} = c_1\,\vec{r_1}^{T} + c_2\,\vec{r_2}^{T}.
+\end{align}
+
+Taking dot products with $\vec{r_1}$ and $\vec{r_2}$,
+\begin{align}
+\vec{r_1}\cdot\myvec{v_1 \\ v_2} &= c_1\,\vec{r_1}\cdot\vec{r_1} = 100, \\
+\vec{r_2}\cdot\myvec{v_1 \\ v_2} &= c_2\,\vec{r_2}\cdot\vec{r_2} = 20.
 \end{align}
 \end{frame}
 
-\begin{frame}{Solution: Augmented Matrix Steps}
+\begin{frame}{Solution: Compute Coefficients}
+Since $\|\vec{r_1}\|^2 = \|\vec{r_2}\|^2 = 2$,
 \begin{align}
-\augvec{2}{4}{1 & 1 & 1 & 0 \\ 1 & -1 & 0 & 1}
-\xleftrightarrow[R_2\to R_2-R_1]{}
-\augvec{2}{4}{1 & 1 & 1 & 0 \\ 0 & -2 & -1 & 1} \\
-\xleftrightarrow[R_2\to -\frac{1}{2} R_2]{}
-\augvec{2}{4}{1 & 1 & 1 & 0 \\ 0 & 1 & \frac{1}{2} & -\frac{1}{2}} \\
-\xleftrightarrow[R_1\to R_1-R_2]{}
-\augvec{2}{4}{1 & 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 1 & \frac{1}{2} & -\frac{1}{2}}
+c_1 = \frac{100}{2} = 50, \quad c_2 = \frac{20}{2} = 10.
+\end{align}
+
+Therefore,
+\begin{align}
+\myvec{v_1 \\ v_2} &= 50\,\vec{r_1}^{T} + 10\,\vec{r_2}^{T} \\
+&= 50\myvec{1 \\ 1} + 10\myvec{1 \\ -1} \\
+&= \myvec{60 \\ 40}.
 \end{align}
 \end{frame}
 
-\begin{frame}{Solution: Inverse Matrix}
+\begin{frame}{Final Answer}
 \begin{align}
-\therefore \quad 
-\myvec{1 & 1 \\ 1 & -1}^{-1} &= \myvec{\frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & -\frac{1}{2}} \\
-\myvec{v_1 \\ v_2} &= \myvec{\frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & -\frac{1}{2}} \myvec{100 \\ 20} \\
-\myvec{v_1 \\ v_2} &= \myvec{60 \\ 40}
+\boxed{v_1 = 60~\text{km/h}}, \quad \boxed{v_2 = 40~\text{km/h}}
 \end{align}
 \end{frame}
 

@@ -3,11 +3,10 @@
 
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
-\usepackage{tfrupee} % Include tfrupee package
+\usepackage{tfrupee}
 
-\setlength{\headheight}{1cm} % Set the height of the header box
-\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0mm}
 
 \usepackage{gvv-book}
 \usepackage{gvv}
@@ -26,7 +25,6 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-% \usepackage{gvv}                                        
 \def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
@@ -55,42 +53,52 @@
 
 \parindent 0px
 \textbf{Question}:\\
-Places A and B are 100km apart on a highway. One car starts from A and another from B at the same time. If the car travel in the same direction at different speeds, they meet in 5hrs. If they travel towards each other, they meet in 1hr. What are the speeds of the two cars?
+Places A and B are 100km apart on a highway. One car starts from A and another from B at the same time. If the cars travel in the same direction at different speeds, they meet in 5hrs. If they travel towards each other, they meet in 1hr. What are the speeds of the two cars?
 
 \solution \\
-Cars meet in 1 hr when moving towards each other:
+Let the speeds be $v_1$ and $v_2$ (in km/h). From the two cases,
 \begin{align}
-v_1 + v_2 &= \frac{100}{1} 
+\label{eq:sys1} v_1 + v_2 &= 100, \\
+\label{eq:sys2} v_1 - v_2 &= 20.
 \end{align}
-Cars meet in 5 hr when moving in the same direction:
+
+These can be written in vector form as
 \begin{align}
-v_1 - v_2 &= \frac{100}{5} 
+\myvec{1 & 1} \myvec{v_1 \\ v_2} &= 100, \\
+\myvec{1 & -1} \myvec{v_1 \\ v_2} &= 20.
 \end{align}
+
+Let 
 \begin{align}
-\myvec{1 & 1 \\ 1 & -1} \myvec{v_1 \\ v_2} &= \myvec{100 \\ 20} \\
-\myvec{v_1 \\ v_2} &=\myvec{1 & 1 \\ 1 & -1}^{-1} \myvec{100 \\ 20} 
+\vec{r_1} = \myvec{1 & 1}, \quad \vec{r_2} = \myvec{1 & -1}.
 \end{align}
-The augmented matrix for the given matrix will be
+Then \(\vec{r_1}\cdot\vec{r_2}=0\), so the rows are orthogonal.
+
+Let
 \begin{align}
-\augvec{2}{4}{1 & 1 & 1 & 0 \\ 1 & -1 & 0 & 1}
-&\xleftrightarrow[R_2\to R_2-R_1]{}
-\augvec{2}{4}{1 & 1 & 1 & 0 \\ 0 & -2 & -1 & 1} \\
-&\xleftrightarrow[R_2\to -\frac{1}{2} R_2]{}
-\augvec{2}{4}{1 & 1 & 1 & 0 \\ 0 & 1 & \frac{1}{2} & -\frac{1}{2}} \\
-&\xleftrightarrow[R_1\to R_1-R_2]{}
-\augvec{2}{4}{1 & 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 1 & \frac{1}{2} & -\frac{1}{2}}
+\myvec{v_1 \\ v_2} = c_1\,\vec{r_1}^{T} + c_2\,\vec{r_2}^{T}.
+\end{align}
+
+Taking dot products of both sides with \(\vec{r_1}\) and \(\vec{r_2}\):
+\begin{align}
+\vec{r_1}\cdot\myvec{v_1 \\ v_2} &= c_1\,\vec{r_1}\cdot\vec{r_1} = 100, \\
+\vec{r_2}\cdot\myvec{v_1 \\ v_2} &= c_2\,\vec{r_2}\cdot\vec{r_2} = 20.
+\end{align}
+
+Since \(\|\vec{r_1}\|^2 = \|\vec{r_2}\|^2 = 2\), we have
+\begin{align}
+c_1 = \frac{100}{2} = 50, \quad c_2 = \frac{20}{2} = 10.
+\end{align}
+
+Thus,
+\begin{align}
+\myvec{v_1 \\ v_2} &= 50\,\vec{r_1}^{T} + 10\,\vec{r_2}^{T} \\
+&= 50\myvec{1 \\ 1} + 10\myvec{1 \\ -1} \\
+&= \myvec{60 \\ 40}.
 \end{align}
 
 \begin{align}
-\therefore \quad 
-\myvec{1 & 1 \\ 1 & -1}^{-1} &= \myvec{\frac{1}{2} & \frac{1}{2} \\[2mm] \frac{1}{2} & -\frac{1}{2}}
-\end{align}
-
-\begin{align}
-\myvec{v_1 \\ v_2} &= \myvec{\frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & -\frac{1}{2}} \myvec{100 \\ 20} 
-\end{align}
-\begin{align}
-\myvec{v_1 \\ v_2} &= \myvec{60 \\ 40}
+\therefore \quad v_1 = 60~\text{km/h}, \quad v_2 = 40~\text{km/h}.
 \end{align}
 
 \begin{figure}[ht!]
@@ -98,6 +106,5 @@ The augmented matrix for the given matrix will be
 \includegraphics[height=0.6\textheight, keepaspectratio]{figs/speed.png}
 \captionof{figure}{Graph}
 \end{figure}
-
 
 \end{document}
