@@ -58,7 +58,7 @@ with \(b_1 b_2\neq 0\) are parallel iff \(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\).
 \\
 \solution
 
-First form the matrix equation
+Matrix form:
 \begin{align}
 \myvec{a_1 & b_1\\ a_2 & b_2}\myvec{x\\y} 
 = -\myvec{c_1\\c_2}.
@@ -72,35 +72,27 @@ a_2 & b_2 & -c_2
 }.
 \end{align}
 
-Assume 
-\(\dfrac{a_1}{b_1}=\dfrac{a_2}{b_2}\Rightarrow a_2=ka_1,\; b_2=kb_1\).
-
-Row reduction:
+Perform row-reduction:
 \begin{align}
+R_2 \to R_2 - \frac{a_2}{a_1}R_1
+\implies
 \augvec{2}{1}{
 a_1 & b_1 & -c_1\\
-ka_1 & kb_1 & -c_2
-}
-\xrightarrow{R_2\to R_2 - kR_1}
-\augvec{2}{1}{
-a_1 & b_1 & -c_1\\
-0 & 0 & -c_2+k c_1
+0 & \frac{a_1b_2 - a_2b_1}{a_1} & -c_2 + \frac{a_2c_1}{a_1}
 }.
 \end{align}
 
-\(\operatorname{rank}(\vec{M})=1\) since only one nonzero row.
+For two lines to be parallel, the coefficient matrix must have rank 1 and the augmented matrix must have rank 2.
 
-Conversely, if the lines are parallel,
+Thus,
 \begin{align}
-\mydet{a_1 & b_1\\ a_2 & b_2}=0
-\;\Rightarrow\;
-a_1b_2 - a_2b_1 = 0
-\;\Rightarrow\;
-\frac{a_1}{b_1}=\frac{a_2}{b_2}.
+a_1b_2 - a_2b_1 = 0.
 \end{align}
 
-\(\therefore\) The two lines are parallel iff 
-\(\displaystyle \frac{a_1}{b_1}=\frac{a_2}{b_2}\).
+\(\therefore\) The two lines are parallel if
+\begin{align}
+\frac{a_1}{b_1} = \frac{a_2}{b_2}, \quad \text{where } b_1b_2 \neq 0.
+\end{align}
 
 \begin{figure}[H]
 \centering

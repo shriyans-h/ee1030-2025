@@ -6,6 +6,7 @@
 
 % Packages
 \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{gvv}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -23,13 +24,6 @@
     showstringspaces=false,
     breaklines=true
 }
-
-
-
-% Custom macros
-\newcommand{\myvec}[1]{\begin{pmatrix}#1\end{pmatrix}}
-\newcommand{\brak}[1]{\left( #1 \right)}
-
 % Redefine \vec to bold letters only (no arrow)
 \renewcommand{\vec}[1]{\mathbf{#1}}
 
@@ -67,17 +61,35 @@ Prove that the line through $A(0,-1,-1)$ and $B(4,5,1)$ intersects the line thro
 \end{frame}
 
 \begin{frame}{Solution}
-
-Component form:
+\textbf{Formulating as a Matrix Equation:}
 \begin{align}
-4\lambda+7\mu&=3, \quad
-6\lambda+5\mu=10, \quad
-2\lambda=5.
+\myvec{\vec{d}_1 & -\vec{d}_2}\myvec{\lambda\\\mu}=\vec{C}-\vec{A}.
 \end{align}
 
-Solving:
+Substituting the values,
 \begin{align}
-\lambda=\tfrac{5}{2},\quad \mu=-1.
+\myvec{4 & 7\\6 & 5\\2 & 0}\myvec{\lambda\\\mu}=\myvec{3\\10\\5}.
+\end{align}
+\end{frame}
+
+\begin{frame}{Solution}
+Augmented matrix and row-reduction: 
+\begin{equation}
+\resizebox{1\textwidth}{!}{$
+\augvec{2}{3}{4 & 7 & 3\\ 6 & 5 & 10\\ 2 & 0 & 5}
+\xrightarrow{R_1 \leftrightarrow R_3,\ R_3 \rightarrow R_3 - 2R_1}
+\augvec{2}{3}{2 & 0 & 5\\ 6 & 5 & 10\\ 4 & 7 & 3}
+\xrightarrow{R_1 \rightarrow \tfrac{1}{2}R_1,\ R_2 \rightarrow R_2 - 6R_1,\ R_3 \rightarrow R_3 - 4R_1}
+\augvec{2}{3}{1 & 0 & \tfrac{5}{2}\\ 0 & 5 & -5\\ 0 & 7 & -7}
+\xrightarrow{R_2 \rightarrow \tfrac{1}{5}R_2,\ R_3 \rightarrow R_3 - \tfrac{7}{5}R_2}
+\augvec{2}{3}{1 & 0 & \tfrac{5}{2}\\ 0 & 1 & -1\\ 0 & 0 & 0}
+$}
+
+\end{equation}
+From the reduced system we read off
+\begin{align}
+\lambda &= \tfrac{5}{2},\\
+\mu     &= -1.
 \end{align}
 \end{frame}
 
