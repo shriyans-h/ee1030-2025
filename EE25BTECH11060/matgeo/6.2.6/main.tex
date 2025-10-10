@@ -37,11 +37,10 @@
 \usepackage{ifthen}                                           
 \usepackage{lscape}
 \begin{document}
-
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{2.9.11}
+\title{6.2.6}
 \author{EE25BTECH11060 - V.Namaswi}
 % \maketitle
 % \newpage
@@ -50,22 +49,68 @@
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \setlength{\intextsep}{10pt} % Space between text and floats
-\textbf{Question}\\If $\Bar{a} \;$ and \;$ \Bar{b} $ are unit vectors and $\theta$ is angle between them then prove that $\sin\frac{\theta}{2}=\frac{1}{2}$ $| {\Bar{a}-\Bar{b}}|$\\
-\textbf{Solution}\\Squaring on both sides,
+\textbf{Question}\\
+Find matrix X such that\\
 \begin{align*}
-    \sin^2\frac{\theta}{2}=\frac{1}{4}| {\Vec{a}}-\Vec{b}|^2\\
-    \end{align*}
-  consider RHS,\\
+   X \begin{pmatrix}
+        1 & 2 & 3\\
+        4 & 5 & 6
+    \end{pmatrix}= \begin{pmatrix}
+        -7 & -8 & -9 \\ 2 & 4 & 6
+    \end{pmatrix}
+    \end{align*}\\
+\textbf{Solution}\\
+Form the augmented matrix  
 \begin{align}
- \implies \frac{1}{4} \|\Vec{a}-\Vec{b}\|^2 \\
- = \frac{1}{4}(\Vec{a}-\Vec{b})^\top  (\Vec{a}-\Vec{b})\\
- = \frac{1}{4} \brak{\Vec{a} ^\top \Vec{a} - 2 \Vec{a} ^\top \Vec{b} + \Vec{b} ^\top \Vec{b}}\\
-  =\frac{1}{4} \brak{  1 - 2 \Vec{a} ^\top \Vec{b} + 1 }\\
-  = \frac{1}{2} (1 - \Vec{a} ^\top \Vec{b})\\
-  =\frac{1}{2}\brak{1-\cos \theta}\\
-  =\sin^2{\frac{\theta}{2}}\\
-=LHS
+   \begin{pmatrix}
+1 & 4 & | & -7 & -8 & -9 \\
+2 & 5 & | & 2 & 4 & 6 \\
+3 & 6 & | & 0 & 0 & 0
+\end{pmatrix} \\ 
 \end{align}
-Hence, $\sin\frac{\theta}{2}=\frac{1}{2}$  $| {\Bar{a}-\Bar{b}}|
-$ 
+Replace $R_2 \to R_2-2R_1 $ and $R_3 \to R_3-3R_1$
+\begin{align}
+\begin{pmatrix}
+1 & 4 & | & -7 & -8 & -9 \\
+0 & -3 & | & 16 & 20 & 27 \\
+0 & -6 & | & 21 & 24 & 27
+\end{pmatrix} 
+\end{align}
+Replace $R_2 \to \frac{-1}{3}R_2$ and $R_3 \to R_3-2R_2$
+\begin{align}
+\begin{pmatrix}
+1 & 4 & | & -7 & -8 & -9 \\
+0 & 1 & | & -16/3 & -20/3 & -9 \\
+0 & 0 & | & -11/3 & -16/3 & 9
+\end{pmatrix}
+\end{align}
+Hence,
+\begin{align}
+    \Vec{X}=\begin{pmatrix}
+    1 & 2\\
+    -2 &  0
+\end{pmatrix}
+\end{align} 
+
+ Pseudoinverse verification\\
+Let,
+\begin{align}
+\Vec{A} = \begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6\end{pmatrix}\\
+\Vec{B} = \begin{pmatrix}-7 & 2 \\ -8 & 4 \\ -9 & 6\end{pmatrix} \\
+\Vec{A}^+ &= \Vec{A}^\top (\Vec{A}\Vec{A}^\top)^{-1} \\  
+= \begin{pmatrix}
+-17/18 & 4/9 \\
+-1/9 & 1/9 \\
+13/18 & -2/9
+\end{pmatrix} 
+\end{align}
+ \begin{align}
+\Vec{X} &= \Vec{B}\Vec{A}^+ \\  
+= \begin{pmatrix}-7 & 2 \\ -8 & 4 \\ -9 & 6\end{pmatrix} 
+\begin{pmatrix}-17/18 & 4/9 \\ -1/9 & 1/9 \\ 13/18 & -2/9\end{pmatrix} \\ 
+=\begin{pmatrix}1 & 2 \\ -2 & 0\end{pmatrix} 
+\end{align}
+
+    \centering
+    \includegraphics[width=\columnwidth, height=0.8\textheight, keepaspectratio]{figs/Figure_13.png}  
 \end{document}

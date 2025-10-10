@@ -81,21 +81,22 @@
 If $\Bar{a} \;$ and \;$ \Bar{b} $ are unit vectors and $\theta$ is angle between them then prove that $\sin\frac{\theta}{2}=\frac{1}{2}$ $| {\Bar{a}-\Bar{b}}|$
 \end{frame}
 \begin{frame}{solution}
-Squaring on both sides,\\
-\begin{align*}
+  \begin{align*}
     \sin^2\frac{\theta}{2}=\frac{1}{4}| {\Bar{a}-\Bar{b}}|^2\\
     \end{align*}
   consider RHS,\\
 \begin{align}
- \implies \frac{1}{4}| {\Bar{a}-\Bar{b}}|^2\\
-  =\frac{1}{4}( |\Bar{a}|^2+|\Bar{b}|^2-2\Bar{a}^\top\Bar{b})\\
-  =\frac{1}{4}(2-2\cos \theta)\\
-  =\frac{1}{2}(2\sin^2{\frac{\theta}{2}})\\
-  \end{align}
-  \end{frame}
-  \begin{frame}{Solution}
+ \implies \frac{1}{4} \|a-b\|^2
+ \end{align}
+\end{frame}
+\begin{frame}{solution}
   \begin{align}
-=\sin^2\frac{\theta}{2}\\
+       = \frac{1}{4}(a-b)^\top  (a-b)\\
+ = \frac{1}{4} \brak{a ^\top a - 2 a ^\top b + b ^\top b}\\
+  =\frac{1}{4} \brak{  1 - 2 a ^\top b + 1 }\\
+  = \frac{1}{2} (1 - a ^\top b)\\
+  =\frac{1}{2}\brak{1-\cos \theta}\\
+  =\sin^2{\frac{\theta}{2}}\\
 =LHS
 \end{align}
 Hence, $\sin\frac{\theta}{2}=\frac{1}{2}$  $| {\Bar{a}-\Bar{b}}|
