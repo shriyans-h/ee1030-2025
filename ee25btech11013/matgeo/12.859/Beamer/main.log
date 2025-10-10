@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  9 OCT 2025 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  10 OCT 2025 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1561,13 +1561,13 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 81.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 81.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 81.
+
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
@@ -1664,6 +1664,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 81.
+
+(./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
@@ -1750,15 +1752,14 @@ erthousand on input line 81.
 LaTeX Info: Redefining \ohm on input line 81.
 Package gensymb Info: Using \textohm for \ohm on input line 81.
 Package gensymb Info: Using \textmu for \micro on input line 81.
-
-No file main.nav.
-[1
+ (./main.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
 6.
- (/usr/share/texmf/tex/latex/lm/omllmm.fd
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -1836,7 +1837,7 @@ dvips/lm/lm-mathit.enc}] [3
 [4
 
 ]
-Overfull \vbox (12.98842pt too high) detected at line 137
+Overfull \vbox (12.98842pt too high) detected at line 139
  []
 
 [5
@@ -1856,7 +1857,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (37.72923pt too high) detected at line 192
+Overfull \vbox (37.72923pt too high) detected at line 194
  []
 
 [7
@@ -1916,21 +1917,14 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57716 strings out of 474222
- 1370502 string characters out of 5748733
+ 57758 strings out of 474222
+ 1370860 string characters out of 5748733
  2385239 words of memory out of 5000000
- 78941 multiletter control sequences out of 15000+600000
+ 78973 multiletter control sequences out of 15000+600000
  630698 words of font info for 115 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1313s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1941,10 +1935,10 @@ ublic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (11 pages, 183692 bytes).
+Output written on main.pdf (11 pages, 183952 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 331 compressed objects within 4 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
+ 25 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

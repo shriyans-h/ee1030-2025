@@ -81,16 +81,19 @@ Let $\vec{v}$ be the eigenvector corresponding to the eigenvalue $\lambda$.
 \end{align}
 Since orthogonal transformations preserve the length of vectors  ($\abs{\vec{P}} = 1$)
 \begin{align}
-\norm{\vec{P}\vec{v}}=\norm{\vec{v}} 
+\norm{\vec{P}\vec{v}}=\norm{\vec{v}} \label{eq1}
 \end{align}
 
 \begin{align}
-\norm{\vec{P}\vec{v}} = \abs{\lambda}\norm{\vec{v}}
+\norm{\vec{P}\vec{v}} = \abs{\lambda}\norm{\vec{v}} \label{eq2}
 \end{align}
 
-Using the above equations,
+Using the equations \eqref{eq1} and \eqref{eq2},
 \begin{align}
-\norm{\vec{v}} = \abs{\lambda}\norm{\vec{v}}
+\norm{\vec{P}\vec{v}} = \norm{\vec{v}} = \abs{\lambda}\norm{\vec{v}}
+\end{align}
+\begin{align}
+\implies \norm{\vec{v}} = \abs{\lambda}\norm{\vec{v}}
 \end{align}
 Thus, $\abs{\lambda} = 1$
 
