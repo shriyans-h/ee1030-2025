@@ -30,7 +30,7 @@
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
-\usepackage{longtable}                                       
+\usepackage{longtable}                                        
 \usepackage{calc}                                             
 \usepackage{multirow}                                         
 \usepackage{hhline}                                           
@@ -55,8 +55,7 @@
 	\renewcommand{\thetable}{\theenumi}
 	
 	\textbf{Question}:\\
-	If $\mathbf{a} = \hat{i} + \hat{j} + \hat{k}$, $\mathbf{a} \cdot \mathbf{b} = 1$, and $\mathbf{a} \times \mathbf{b} = \hat{j} - \hat{k}$, then find $|\mathbf{b}|$.
-	\hfill{(12, 2022)}
+	If $\mathbf{a} = \hat{i} + \hat{j} + \hat{k}$, $\mathbf{a} \cdot \mathbf{b} = 1$, and $\mathbf{a} \times \mathbf{b} = \hat{j} - \hat{k}$, then find $|\mathbf{b}|$. \hfill{(12, 2022)}
 	
 	\solution	
 	\begin{align}
@@ -71,39 +70,29 @@
 		\begin{pmatrix}\mathbf{a}^\top \\ (\mathbf{a} \times \mathbf{b})^\top\end{pmatrix}\mathbf{b} = \myvec{1\\0}\\
 		\myvec{1 & 1 & 1\\0 & 1 & -1}\mathbf{b} = \myvec{1\\0}
 	\end{align}
-	
-	Let $\mathbf{b} = \myvec{b_1\\b_2\\b_3}$.
-	
-	From the two equations:
+Forming augmented matrix and find its Reduced Row Echelon Form (RREF).
 	\begin{align}
-		b_1 + b_2 + b_3 &= 1\\
+		\left[ \begin{array}{ccc|c} 1 & 1 & 1 & 1 \\ 0 & 1 & -1 & 0 \end{array} \right]
+		\xrightarrow{R_1 \rightarrow R_1 - R_2}
+		\left[ \begin{array}{ccc|c} 1 & 0 & 2 & 1 \\ 0 & 1 & -1 & 0 \end{array} \right]
+	\end{align}
+From the RREF, we get the equations:
+	\begin{align}
+		b_1 + 2b_3 &= 1\\
 		b_2 - b_3 &= 0 \implies b_2 = b_3
 	\end{align}
-	
-	Substituting $b_2 = b_3$ into the first equation:
+Let $b_2 = \lambda$,
 	\begin{align}
-		b_1 + b_2 + b_2 &= 1\\
-		b_1 + 2b_2 &= 1\\
-		b_1 &= 1 - 2b_2
+	b_1 = 1 - 2\lambda
 	\end{align}
-	
-	\subsection*{Step 4: Express $\mathbf{b}$ in parametric form}
+	Thus, the vector $\mathbf{b}$ is:
 	\begin{align}
 		\mathbf{b} = \myvec{1 - 2\lambda\\\lambda\\\lambda}
 	\end{align}
-	where $\lambda = b_2$.
-	
-	Therefore:
 	\begin{align}
 		|\mathbf{b}|^2 &= (1 - 2\lambda)^2 + \lambda^2 + \lambda^2\\
-		&= 1 - 4\lambda + 4\lambda^2 + \lambda^2 + \lambda^2\\
-		&= 1 - 4\lambda + 6\lambda^2
+		|\mathbf{b}| &= \sqrt{1 - 4\lambda + 6\lambda^2}
 	\end{align}
-	
-	\begin{align}
-		|\mathbf{b}| = \sqrt{1 - 4\lambda + 6\lambda^2}
-	\end{align}
-	
-	\textbf{Answer:} $|\mathbf{b}| = \sqrt{1 - 4\lambda + 6\lambda^2}$ where $\lambda$ is a parameter.
+
 	
 \end{document}
