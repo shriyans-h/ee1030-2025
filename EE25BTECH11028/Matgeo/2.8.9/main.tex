@@ -82,18 +82,26 @@ x + y &= 0, \label{eq7} \\
 y + z &= 0. \label{eq8}
 \end{align}
 
-From equation (7):
+\bigskip
+
+\noindent
+\textbf{Matrix Form:}  
+Equations (6), (8) can be written compactly as
 \[
-y = -x,
+\myvec{
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+0 & 1 & 1
+}
+\myvec{
+x \\ y \\ z
+}
+=
+\myvec{
+0 \\ 0 \\ 0
+}.
 \]
-and from equation (6):
-\[
-z = -x.
-\]
-Substitute into equation (8):
-\[
-y + z = -x + (-x) = -2x = 0 \Rightarrow x = 0.
-\]
+
 
 Therefore:
 \begin{equation} \label{eq9}
@@ -106,17 +114,17 @@ so $\mathbf{a}, \mathbf{b}, \mathbf{c}$ are \textbf{pairwise orthogonal}.
 The \textbf{Gram matrix} of $ (\mathbf{a}, \mathbf{b}, \mathbf{c}) $ is:
 \begin{equation} \label{eq10}
 G =
-\begin{bmatrix}
+\myvec{
 \mathbf{a}^\top \mathbf{a} & \mathbf{a}^\top \mathbf{b} & \mathbf{a}^\top \mathbf{c} \\
 \mathbf{b}^\top \mathbf{a} & \mathbf{b}^\top \mathbf{b} & \mathbf{b}^\top \mathbf{c} \\
 \mathbf{c}^\top \mathbf{a} & \mathbf{c}^\top \mathbf{b} & \mathbf{c}^\top \mathbf{c}
-\end{bmatrix}
+}
 =
-\begin{bmatrix}
+\myvec{
 \|\mathbf{a}\|^2 & 0 & 0 \\
 0 & \|\mathbf{b}\|^2 & 0 \\
 0 & 0 & \|\mathbf{c}\|^2
-\end{bmatrix}
+}
 =
 \myvec{
 9 & 0 & 0 \\
@@ -136,7 +144,7 @@ Then
 
 Now compute:
 \begin{align}
-\mathbf{u}^\top G \mathbf{u} 
+\mathbf{u}^\top G \mathbf{u} 
 &= \myvec{1 & 1 & 1}
 \myvec{
 9 & 0 & 0 \\
@@ -158,8 +166,6 @@ Therefore:
 \[
 \boxed{5\sqrt{2}}
 \]
-
-
 
 \textbf{Graph presentation:}
 \begin{figure}[H]
