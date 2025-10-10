@@ -86,16 +86,12 @@
 	
 	\frame{\titlepage}
 	\begin{frame}{Question}
-		Jagdish has a field which is in the shape of a right-angled triangle AQC. He wants to leave a space in the form of a square PQRS inside the field for growing wheat and the remaining space for growing vegetables. In the field, there is a pole marked as O. Based on the above information, answer the following equations
-        \begin{enumerate}[label=\alph*)]
-            \item Taking O as the origin, P = (-200, 0) and Q = (200, 0). PQRS being a square, what are the coordinates of R and S?
-            \item 
-            \begin{enumerate}[label=\roman*)]
-                \item What is the area of square PQRS ?
-                \item What is the length of diagonal PR in PQRS ?
-            \end{enumerate}
-            \item If S divides CA in the ratio K : 1, what is the value of K, where A = (200, 800)?
-        \end{enumerate}
+		Jagdish has a field which is in the shape of a right-angled triangle AQC. He wants to leave a space in the form of a square PQRS inside the field for growing wheat and the remaining space for growing vegetables. In the field, there is a pole marked as O. Based on the above information, answer the following equations\\
+            (a) Taking O as the origin, P = (-200, 0) and Q = (200, 0). PQRS being a square, what are the coordinates of R and S?\\
+            (b)\\  
+              (i) What is the area of square PQRS ?\\
+              (ii) What is the length of diagonal PR in PQRS ?\\
+            (c) If S divides CA in the ratio K : 1, what is the value of K, where A = (200, 800)?
 	\end{frame}
 
 	
@@ -163,9 +159,8 @@
                 \vec{S}=\myvec{-200\\400}
             \end{align}
             Therefore the coordinates of the points R and S are (200,400) and (-200,400)
-            (b)
-            \begin{enumerate}[label=(\roman*)]
-                \item We know the points P(-200,0) and Q(200,0)\\
+            (b)\\
+                (i)) We know the points P(-200,0) and Q(200,0)\\
                    Let length of the side of the square PQRS be x then,
                    \begin{align}
                        x=\norm{\vec{Q}-\vec{P}}
@@ -173,30 +168,37 @@
                    \begin{align}
                        x=\norm{\myvec{400\\0}}=400
                    \end{align}\\
-                
                 Area of the square = $x^2$ = $(400)^2$ = 160000 sq units\\
-                \item Length of diagnol of the square = $x\sqrt{2}$ = $400\sqrt{2}$ units\\
-            \end{enumerate}
+                
+                (ii) Length of diagnol of the square = $x\sqrt{2}$ = $400\sqrt{2}$ units\\
     \end{frame}
     \begin{frame}{Theoretical Solution}
         (c) Given the point A=(200,800)\\
             Since it was given that point S divides CA in the ratio K:1, this shows that points A,C and S are collinear. Since AQC is a right angled triangle, from this we can say that point C lies on X axis\\
             Let point C be (t,0), Consider the matrix M\\
             \begin{align}
+                M = \myvec{x_1\;\;y_1\;\;1\\x_2\;\;y_2\;\;1\\x_3\;\;y_3\;\;1}
+            \end{align}
+            Where the points in the matrix are A(200,800),S(-200,400) and C(t,0) then,\\ substitute in equation 18
+            
+            
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
+           \begin{align}
                 M = \myvec{200\;800\;\;1\\-200\;400\;1\\t\;\;\;\;\;0\;\;\;\;\;\;1}
             \end{align}
-            {\large$R_1\rightarrow{}\frac{1}{200}R_1$}
+           {\large$R_1\rightarrow{}\frac{1}{200}R_1$}
             \begin{align}
                  M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\-200\;400\;1\\t\;\;\;\;\;0\;\;\;\;\;\;1}
             \end{align}
             {\large$R_2\rightarrow{}R_2 + 200R_1$}\hspace{2cm}
             {\large$R_3\rightarrow{R_3 - tR_1}$}
-    \end{frame}
-    \begin{frame}{Theoretical Solution}
-        \begin{align}
+            \begin{align}
                  M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1200\;\;\;\;\;2\\0\;\;\;-4t\;\;\;1-\frac{t}{200}}
             \end{align}
             {\large$R_2\rightarrow{\frac{1}{200}R_2}$}
+    \end{frame}
+    \begin{frame}{Theoretical Solution}
             \begin{align}
                 M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1\;\;\;\;\;\frac{1}{600}\\0\;\;\;-4t\;\;\;1-\frac{t}{200}}
             \end{align}
@@ -204,8 +206,7 @@
             \begin{align}
                 M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1\;\;\;\;\;\frac{1}{600}\\0\;\;\;0\;\;\;\;1-\frac{t}{200}+\frac{4t}{600}}
             \end{align}
-            Since the three points A,S and C are collinear,\\
-            Rank of M = 2
+            Since the rank of matrix M is 2,
     \end{frame}
     \begin{frame}{Theoretical Solution}
         \begin{align}
@@ -232,7 +233,7 @@
         \begin{align}
                 K=\frac{1}{(400)^2+(400)^2}\myvec{-400\;-400}\myvec{-400\\-400}
             \end{align}
-            By solving ((c).12) we get K=1
+            By solving (30) we get K=1
     \end{frame}
     
 	

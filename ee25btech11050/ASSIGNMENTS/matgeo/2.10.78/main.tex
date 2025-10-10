@@ -96,29 +96,22 @@ text width=4em, text centered, rounded corners, minimum height=3em]
              \begin{align}
                  \vec{P_1}=\myvec{1\\4}
              \end{align}
-             \item Convert P' into homogeneous form,
+             \item Translate point $P_1=(1,4)$, 2 units along the positive direction of x axis,
              \begin{align}
-                 \vec{P_1^h}=\myvec{1\\4\\1}
+                 \vec{P_2} = \vec{P_1} + \vec{X}
              \end{align}
-             The translation matrix along the x direction is given as,
+             where X=(2,0)
              \begin{align}
-                 \vec{T}=\myvec{1\;0\;2\\0\;1\;0\\0\;0\;1}
-             \end{align}
-             then the translated vector is,
-             \begin{align}
-                 \vec{P_2^h}=\vec{T}\vec{P_1^h}
+                 \vec{P_2} = \myvec{1\\4}+\myvec{2\\0}
              \end{align}
              \begin{align}
-                 \vec{P_2^h}=\myvec{3\\4\\1}
-             \end{align}
-             \begin{align}
-                 \vec{P_2}=\myvec{3\\4}
+                 \vec{P_2} = \myvec{3\\4}
              \end{align}
              \item Rotation matrix is given as,
              \begin{align}
                  \vec{R}=\myvec{cos\theta\;-sin\theta\\sin\theta\;\;\;\;\;cos\theta}
              \end{align}
-             Rotation of $P_2$ by an angle $\frac{\pi}{4}$ about the origin in the counter clockwise direction,
+             Rotation of $P_2$ by an angle $\frac{\pi}{4}$ about the origin in the counter clockwise direction, substitute $\frac{\pi}{4}$ in R
              \begin{align}
                  \vec{P_3}=\vec{R}\vec{P_2}
              \end{align}

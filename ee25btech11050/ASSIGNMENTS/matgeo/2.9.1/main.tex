@@ -145,8 +145,14 @@ text width=4em, text centered, rounded corners, minimum height=3em]
             Since it was given that point S divides CA in the ratio K:1, this shows that points A,C and S are collinear. Since AQC is a right angled triangle, from this we can say that point C lies on X axis\\
             Let point C be (t,0), Consider the matrix M\\
             \begin{align}
+                M = \myvec{x_1\;\;y_1\;\;1\\x_2\;\;y_2\;\;1\\x_3\;\;y_3\;\;1}
+            \end{align}
+            Where the points in the matrix are A(200,800),S(-200,400) and C(t,0) then,\\ substitute in ((c).1)
+            \begin{align}
                 M = \myvec{200\;800\;\;1\\-200\;400\;1\\t\;\;\;\;\;0\;\;\;\;\;\;1}
             \end{align}
+            For the points to be collinear rank of matrix M should be equal to 2,\\
+            By applying row transformations,\\\\
             {\large$R_1\rightarrow{}\frac{1}{200}R_1$}
             \begin{align}
                  M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\-200\;400\;1\\t\;\;\;\;\;0\;\;\;\;\;\;1}
@@ -164,8 +170,7 @@ text width=4em, text centered, rounded corners, minimum height=3em]
             \begin{align}
                 M = \myvec{1\;\;\;\;\;\;4\;\;\;\;\;\frac{1}{200}\\0\;\;\;\;\;1\;\;\;\;\;\frac{1}{600}\\0\;\;\;0\;\;\;\;1-\frac{t}{200}+\frac{4t}{600}}
             \end{align}
-            Since the three points A,S and C are collinear,\\
-            Rank of M = 2
+            Since the rank of matrix is 2,
             \begin{align}
                 1-\frac{t}{200}+\frac{4t}{600} = 0
             \end{align}
@@ -188,7 +193,7 @@ text width=4em, text centered, rounded corners, minimum height=3em]
             \begin{align}
                 K=\frac{1}{(400)^2+(400)^2}\myvec{-400\;-400}\myvec{-400\\-400}
             \end{align}
-            By solving ((c).12) we get K=1
+            By solving ((c).13) we get K=1
         \end{enumerate}
         \begin{figure}[h]
             \centering
