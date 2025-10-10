@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.10)  10 OCT 2025 22:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.10)  10 OCT 2025 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1848,9 +1848,24 @@ Overfull \vbox (7.49457pt too high) detected at line 146
 [5
 
 ]
+<figs/fig1.png, id=195, 1378.1889pt x 709.6914pt>
+File: figs/fig1.png Graphic file (type png)
+<use figs/fig1.png>
+Package pdftex.def Info: figs/fig1.png  used on input line 156.
+(pdftex.def)             Requested size: 342.2953pt x 176.2637pt.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 156.
+
+
+
+[6
+
+ <./figs/fig1.png>]
 \openout4 = `main.vrb'.
 
- (./main.vrb (/opt/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+ (./main.vrb
+(/opt/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 (/opt/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
@@ -1863,7 +1878,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[6
+[7
 
 {/opt/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout4 = `main.vrb'.
@@ -1876,25 +1891,21 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-[7
+[8
 
 {/opt/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (6.19333pt too high) detected at line 205
- []
 
-
-
-[8
+[9
 
 ]
 \openout4 = `main.vrb'.
 
  (./main.vrb)
 
-[9
+[10
 
 ]
 \tf@nav=\write7
@@ -1906,7 +1917,7 @@ Overfull \vbox (6.19333pt too high) detected at line 205
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-runsystem(latexminted cleantemp  --timestamp 20251010224107 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20251010231436 FAD58DE7366495DB465
 0CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
@@ -1915,13 +1926,13 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B10BBA64A339DE5CAAEC22A0D6C3D3AB;615.
+(rerunfilecheck)             Checksum: 9160989C5C7D021255E32ED7A90B8935;678.
  ) 
 Here is how much of TeX's memory you used:
- 60280 strings out of 467748
- 1456620 string characters out of 5403519
- 2611213 words of memory out of 5000000
- 87946 multiletter control sequences out of 15000+600000
+ 60324 strings out of 467748
+ 1457482 string characters out of 5403519
+ 2583213 words of memory out of 5000000
+ 87987 multiletter control sequences out of 15000+600000
  669388 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  128i,15n,123p,1172b,1675s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1933,10 +1944,10 @@ ic/lm/lmss12.pfb></opt/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss8.pfb>
 2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/texlive/2025/texmf-dist/
 fonts/type1/public/lm/lmsy8.pfb></opt/texlive/2025/texmf-dist/fonts/type1/publi
 c/lm/lmtt10.pfb>
-Output written on main.pdf (9 pages, 147644 bytes).
+Output written on main.pdf (10 pages, 275244 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
- 26 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

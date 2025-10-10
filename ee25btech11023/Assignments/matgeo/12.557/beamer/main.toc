@@ -4,4 +4,5 @@
 \beamer@subsectionintoc {3}{2}{Finding eigen values}{5}{0}{2}
 \beamer@subsectionintoc {3}{3}{Formula}{6}{0}{2}
 \beamer@subsectionintoc {3}{4}{Conclusion}{7}{0}{2}
-\beamer@sectionintoc {4}{Pyton code}{8}{0}{3}
+\beamer@sectionintoc {4}{C code}{8}{0}{3}
+\beamer@sectionintoc {5}{Python code}{9}{0}{4}
