@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  11 OCT 2025 11:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.13)  11 OCT 2025 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1557,7 +1557,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.47 \begin
-           {align} min(\vec{PP_1}, \vec{QQ_1}) = \vec{PP_i}\end{align}
+           {align} min(\vec{PP_1}, \vec{QQ_1}) = \vec{PP_i}\\
 ? 
 
 
@@ -1584,9 +1584,9 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52738 strings out of 473190
- 1265560 string characters out of 5715800
- 1848732 words of memory out of 5000000
+ 52736 strings out of 473190
+ 1265538 string characters out of 5715800
+ 1847732 words of memory out of 5000000
  75198 multiletter control sequences out of 15000+600000
  605393 words of font info for 151 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1598,10 +1598,10 @@ e/2025/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 223891 bytes).
+Output written on main.pdf (4 pages, 223802 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 30 named destinations out of 1000 (max. 500000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
