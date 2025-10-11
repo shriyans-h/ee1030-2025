@@ -47,7 +47,7 @@ Find the point at which the line $y=x+1$ is a tangent to the curve $y^2=4x$.\\
 \solution
 The given conic can be expressed as
 \begin{align}
-\vec{x}^\top V\vec{x} + 2\vec{u}^\top\vec{x} + f = 0
+	\vec{x}^\top \vec{V}\vec{x} + 2\vec{u}^\top\vec{x} + f = 0
 \end{align}
 where
 \begin{align}
@@ -55,60 +55,41 @@ V = \myvec{0 & 0 \\ 0 & 1}, \quad
 \vec{u} = \myvec{-2 \\ 0}, \quad
 f = 0
 \end{align}
-and $\vec{x} = \myvec{x \\ y}$.
 
 The given line is 
 \begin{align}
-y = x + 1
-\end{align}
-which can be parameterized as
-\begin{align}
-\vec{x} = \vec{h} + t\vec{m}
+	\vec{n}^\top\vec{x}=C
 \end{align}
 where
 \begin{align}
-\vec{h} = \myvec{0 \\ 1}, \quad
-\vec{m} = \myvec{1 \\ 1}.
+	\vec{n}=\myvec{-1\\1}, C=1
 \end{align}
-
-Substituting $\vec{x} = \vec{h} + t\vec{m}$ in the conic equation,
+The eigenvector corresponding to the zero eigenvalue is
 \begin{align}
-(\vec{h} + t\vec{m})^\top V (\vec{h} + t\vec{m})
-+ 2\vec{u}^\top (\vec{h} + t\vec{m}) + f = 0
+	\vec{p_1}=\myvec{1\\0}
 \end{align}
-
-Expanding,
 \begin{align}
-t^2\brak{\vec{m}^\top V\vec{m}} 
-+ 2t\brak{\vec{m}^\top V\vec{h} + \vec{u}^\top\vec{m}} 
-+ \brak{\vec{h}^\top V\vec{h} + 2\vec{u}^\top\vec{h} + f} = 0
+	\myvec{\brak{\vec{u}+\kappa\vec{n}}^\top\\\vec{V}}\vec{q}=\myvec{-f\\\kappa\vec{n}-\vec{u}}
 \end{align}
-
-Compute each term:
 \begin{align}
-\vec{m}^\top V\vec{m} &= 1, &
-\vec{m}^\top V\vec{h} &= 1, &
-\vec{u}^\top\vec{m} &= -2, \\
-\vec{h}^\top V\vec{h} &= 1, &
-\vec{u}^\top\vec{h} &= 0
+	\kappa=\frac{\vec{p_1}^\top\vec{u}}{\vec{p_1}^\top\vec{n}}=\frac{\myvec{1&0}\myvec{-2\\0}}{\myvec{1&0}\myvec{-1\\1}}=2
 \end{align}
-
-Substituting,
 \begin{align}
-t^2 - 2t + 1 = 0
+	\myvec{\brak{\myvec{-2\\0}+2\myvec{-1\\1}}^\top\\\myvec{0&0\\0&1}}\vec{q}=\myvec{0\\2\myvec{-1\\1}-\myvec{-2\\0}}
 \end{align}
-
 \begin{align}
-\Rightarrow (t - 1)^2 = 0 \implies t = 1
+	\myvec{-4&2\\0&0\\0&1}\vec{q}=\myvec{0\\0\\2}
 \end{align}
-
-Hence, the point of contact is
+Using augmented matrix,
 \begin{align}
-\vec{q} = \vec{h} + t\vec{m} 
+	\augvec{2}{1}{-4&2&0\\0&1&2}
 \end{align}
-
+$R_1=\frac{R_1-2R_2}{-4}$
 \begin{align}
- \vec{q} = \myvec{1 \\ 2}.
+	\augvec{2}{1}{1&0&1\\0&1&2}
+\end{align}
+\begin{align}
+	\vec{q}=\myvec{1\\2}
 \end{align}
 Plot using C libraries:
 \begin{figure}[H]

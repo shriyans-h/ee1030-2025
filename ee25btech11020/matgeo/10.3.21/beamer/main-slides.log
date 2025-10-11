@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.13)  11 OCT 2025 17:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.13)  12 OCT 2025 01:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -938,7 +938,7 @@ Package: xparse 2023-10-10 L3 Experimental document command parser
 \c@matchleft=\count369
 \c@matchright=\count370
 )
-No file main-slides.aux.
+(./main-slides.aux)
 \openout1 = `main-slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -959,6 +959,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1016,6 +1017,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 41.
+
+(./main-slides.out) (./main-slides.out)
 \@outlinefile=\write5
 \openout5 = `main-slides.out'.
 
@@ -1100,8 +1103,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count377
-
-No file main-slides.nav.
+ (./main-slides.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 44.
@@ -1143,16 +1145,13 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 <../figs/img1.png, id=38, 408.3255pt x 311.7246pt>
 File: ../figs/img1.png Graphic file (type png)
 <use ../figs/img1.png>
-Package pdftex.def Info: ../figs/img1.png  used on input line 125.
+Package pdftex.def Info: ../figs/img1.png  used on input line 105.
 (pdftex.def)             Requested size: 204.16225pt x 155.86191pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [4]
-<../figs/img2.png, id=45, 408.3255pt x 311.7246pt>
+<../figs/img2.png, id=46, 408.3255pt x 311.7246pt>
 File: ../figs/img2.png Graphic file (type png)
 <use ../figs/img2.png>
-Package pdftex.def Info: ../figs/img2.png  used on input line 131.
+Package pdftex.def Info: ../figs/img2.png  used on input line 111.
 (pdftex.def)             Requested size: 204.16225pt x 155.86191pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1172,27 +1171,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main-slides.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main-slides.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `main-slides.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26636 strings out of 474222
- 504630 string characters out of 5748733
- 1934975 words of memory out of 5000000
- 48350 multiletter control sequences out of 15000+600000
+ 26658 strings out of 474222
+ 505003 string characters out of 5748733
+ 1936975 words of memory out of 5000000
+ 48364 multiletter control sequences out of 15000+600000
  566006 words of font info for 64 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,15n,131p,405b,642s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,21n,131p,405b,642s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
@@ -1200,12 +1189,13 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb>
-Output written on main-slides.pdf (6 pages, 187619 bytes).
+ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb>
+Output written on main-slides.pdf (6 pages, 196861 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  13 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
