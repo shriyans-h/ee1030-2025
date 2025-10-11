@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  10 OCT 2025 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.28)  11 OCT 2025 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1837,7 +1837,7 @@ dvips/lm/lm-mathit.enc}] [3
 [4
 
 ]
-Overfull \vbox (12.98842pt too high) detected at line 151
+Overfull \vbox (12.98842pt too high) detected at line 152
  []
 
 [5
@@ -1857,7 +1857,7 @@ File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout4 = `main.vrb'.
 
  (./main.vrb)
-Overfull \vbox (37.72923pt too high) detected at line 206
+Overfull \vbox (37.72923pt too high) detected at line 207
  []
 
 [7
@@ -1936,7 +1936,7 @@ hare/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (11 pages, 188161 bytes).
+Output written on main.pdf (11 pages, 188169 bytes).
 PDF statistics:
  410 PDF objects out of 1000 (max. 8388607)
  341 compressed objects within 4 object streams
