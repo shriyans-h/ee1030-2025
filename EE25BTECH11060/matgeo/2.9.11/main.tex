@@ -51,19 +51,19 @@
 \renewcommand{\thetable}{\theenumi}
 \setlength{\intextsep}{10pt} % Space between text and floats
 \textbf{Question}\\If $\Bar{a} \;$ and \;$ \Bar{b} $ are unit vectors and $\theta$ is angle between them then prove that $\sin\frac{\theta}{2}=\frac{1}{2}$ $| {\Bar{a}-\Bar{b}}|$\\
-\textbf{Solution}\\Squaring on both sides,\\
+\textbf{Solution}\\Squaring on both sides,
 \begin{align*}
-    \sin^2\frac{\theta}{2}=\frac{1}{4}| {\Bar{a}-\Bar{b}}|^2\\
+    \sin^2\frac{\theta}{2}=\frac{1}{4}| {\Vec{a}}-\Vec{b}|^2\\
     \end{align*}
   consider RHS,\\
 \begin{align}
- \implies \frac{1}{4}| {\Bar{a}-\Bar{b}}|^2\\
-  =\frac{1}{4}( |\Bar{a}|^2+|\Bar{b}|^2-2\Bar{a}^\top\Bar{b})\\
-  =\frac{1}{4}(2-2\cos \theta)\\
-  =\frac{1}{2}(2\sin^2{\frac{\theta}{2}})\\
-  \end{align}
-  \begin{align}
-=\sin^2\frac{\theta}{2}\\
+ \implies \frac{1}{4} \|\Vec{a}-\Vec{b}\|^2 \\
+ = \frac{1}{4}(\Vec{a}-\Vec{b})^\top  (\Vec{a}-\Vec{b})\\
+ = \frac{1}{4} \brak{\Vec{a} ^\top \Vec{a} - 2 \Vec{a} ^\top \Vec{b} + \Vec{b} ^\top \Vec{b}}\\
+  =\frac{1}{4} \brak{  1 - 2 \Vec{a} ^\top \Vec{b} + 1 }\\
+  = \frac{1}{2} (1 - \Vec{a} ^\top \Vec{b})\\
+  =\frac{1}{2}\brak{1-\cos \theta}\\
+  =\sin^2{\frac{\theta}{2}}\\
 =LHS
 \end{align}
 Hence, $\sin\frac{\theta}{2}=\frac{1}{2}$  $| {\Bar{a}-\Bar{b}}|
