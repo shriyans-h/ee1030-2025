@@ -1,0 +1,137 @@
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{advdate}
+\usepackage{graphicx}
+\graphicspath{{../figs/}}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+\let\solution\relax
+\usepackage{gvv}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\numberwithin{equation}{section}
+
+
+
+\begin{document}
+
+\title{10.3.21}
+\author{EE25BTECH11020 - Darsh Pankaj Gajare}
+% \maketitle
+% \newpage
+% \bigskip
+%\begin{document}
+{\let\newpage\relax\maketitle}
+%\renewcommand{\thefigure}{\theenumi}
+%\renewcommand{\thetable}{\theenumi}
+
+
+Question:\\
+Find the point at which the line $y=x+1$ is a tangent to the curve $y^2=4x$.\\
+\solution
+The given conic can be expressed as
+\begin{align}
+\vec{x}^\top V\vec{x} + 2\vec{u}^\top\vec{x} + f = 0
+\end{align}
+where
+\begin{align}
+V = \myvec{0 & 0 \\ 0 & 1}, \quad
+\vec{u} = \myvec{-2 \\ 0}, \quad
+f = 0
+\end{align}
+and $\vec{x} = \myvec{x \\ y}$.
+
+The given line is 
+\begin{align}
+y = x + 1
+\end{align}
+which can be parameterized as
+\begin{align}
+\vec{x} = \vec{h} + t\vec{m}
+\end{align}
+where
+\begin{align}
+\vec{h} = \myvec{0 \\ 1}, \quad
+\vec{m} = \myvec{1 \\ 1}.
+\end{align}
+
+Substituting $\vec{x} = \vec{h} + t\vec{m}$ in the conic equation,
+\begin{align}
+(\vec{h} + t\vec{m})^\top V (\vec{h} + t\vec{m})
++ 2\vec{u}^\top (\vec{h} + t\vec{m}) + f = 0
+\end{align}
+
+Expanding,
+\begin{align}
+t^2\brak{\vec{m}^\top V\vec{m}} 
++ 2t\brak{\vec{m}^\top V\vec{h} + \vec{u}^\top\vec{m}} 
++ \brak{\vec{h}^\top V\vec{h} + 2\vec{u}^\top\vec{h} + f} = 0
+\end{align}
+
+Compute each term:
+\begin{align}
+\vec{m}^\top V\vec{m} &= 1, &
+\vec{m}^\top V\vec{h} &= 1, &
+\vec{u}^\top\vec{m} &= -2, \\
+\vec{h}^\top V\vec{h} &= 1, &
+\vec{u}^\top\vec{h} &= 0
+\end{align}
+
+Substituting,
+\begin{align}
+t^2 - 2t + 1 = 0
+\end{align}
+
+\begin{align}
+\Rightarrow (t - 1)^2 = 0 \implies t = 1
+\end{align}
+
+Hence, the point of contact is
+\begin{align}
+\vec{q} = \vec{h} + t\vec{m} 
+\end{align}
+
+\begin{align}
+ \vec{q} = \myvec{1 \\ 2}.
+\end{align}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img1}
+	\caption*{Plot using C libraries:}
+	\label{img1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img2}
+	\caption*{
+		Plot using Python:}
+	\label{img2}
+\end{figure}
+\end{document}
+
