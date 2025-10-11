@@ -59,6 +59,19 @@
 	\begin{equation}
 		\vec{V} = \vec{I}, \quad \vec{u} = \vec{0}, \quad f = -16
 	\end{equation}
+	
+	Let the point of contact be $\vec{q}$ and
+	\begin{align}
+		\vec{q}^\top\vec{q} = 16
+	\end{align}
+	
+	From the condition of tangency we get:
+	\begin{align}
+		\vec{q}^\top(\vec{q} - P) &= 0\\
+		P^\top\vec{q} &= \vec{q}^\top\vec{q}\\
+		P^\top\vec{q} &= 16
+	\end{align}
+	
 	Let the tangent equation passing through $P$ be:
 	\begin{align}
 		\vec{x} = P + k\vec{m}
@@ -73,79 +86,87 @@
 		k^2\vec{m}^\top\vec{m} + 2kP^\top\vec{m} + g(P) &= 0
 	\end{align}
 	
-	For tangency, the discriminant must be zero:
+	As the tangent intersects the conic at only one point (the point of contact), the discriminant for the quadratic in $k$ is equal to 0:
 	\begin{align}
 		4(P^\top\vec{m})^2 - 4\vec{m}^\top\vec{m} \cdot g(P) &= 0\\
 		(P^\top\vec{m})^2 - g(P)\vec{m}^\top\vec{m} &= 0
 	\end{align}
 	
-	Since $P = \myvec{6\\0}$, we have $g(P) = 36 - 16 = 20$.
+	Since $P = \myvec{6\\0}$:
+	\begin{align}
+		g(P) = P^\top P - 16 = 36 - 16 = 20
+	\end{align}
 	
-	This can be written as:
+	The discriminant condition becomes:
 	\begin{align}
 		\vec{m}^\top Q\vec{m} = 0
 	\end{align}
 	where
 	\begin{align}
-		Q = \myvec{-g(P) & 0\\0 & (P^\top P)} = \myvec{-20 & 0\\0 & 36}
+		Q = \myvec{-(P^\top P) & 0\\0 & g(P)} = \myvec{-36 & 0\\0 & 20}
 	\end{align}
 	
 	\textbf{Eigenvalue Decomposition of Q:}\\
-	Since $Q$ is diagonal, the eigenvalues are:
+	As $Q$ is a diagonal matrix, the eigenvalues are the diagonal entries:
 	\begin{equation}
-		\lambda_1 = -20, \quad \lambda_2 = 36
+		\lambda_1 = -36, \quad \lambda_2 = 20
 	\end{equation}
 	
-	The eigenvector matrix is:
+	Applying eigenvalue decomposition for $Q$:
+	\begin{align}
+		Q = XDX^\top
+	\end{align}
+	where
+	\begin{align}
+		D = \myvec{-36 & 0\\0 & 20}
+	\end{align}
+	
+	$X$ is an orthogonal matrix whose columns are the corresponding normalized eigenvectors of $Q$. As $Q$ is a diagonal matrix:
 	\begin{equation}
-		X = \vec{I} = \myvec{1 & 0\\0 & 1}
+		X = \vec{I}
 	\end{equation}
 	
-	Let $\vec{z} = X^\top\vec{m} = \vec{m}$. Then:
+	From $\vec{m}^\top Q\vec{m} = 0$:
 	\begin{align}
-		\vec{z}^\top Q\vec{z} &= 0\\
-		-20z_1^2 + 36z_2^2 &= 0\\
-		\frac{z_1^2}{z_2^2} &= \frac{36}{20} = \frac{9}{5}\\
-		\frac{z_1}{z_2} &= \pm\frac{3}{\sqrt{5}}
+		\vec{m}^\top XDX^\top\vec{m} &= 0
 	\end{align}
 	
-	The direction vectors for the tangents are:
+	Let $\vec{z} = X^\top\vec{m}$. Then:
 	\begin{align}
-		\vec{m}_1 = \myvec{3\\\sqrt{5}}, \quad \vec{m}_2 = \myvec{3\\-\sqrt{5}}
+		\vec{z}^\top D\vec{z} &= 0\\
+		\myvec{z_1 & z_2}\myvec{-36 & 0\\0 & 20}\myvec{z_1\\z_2} &= 0\\
+		-36z_1^2 + 20z_2^2 &= 0\\
+		\frac{z_1^2}{z_2^2} &= \frac{20}{36} = \frac{5}{9}\\
+		\frac{z_1}{z_2} &= \pm\frac{\sqrt{5}}{3}
 	\end{align}
 	
-	The normal vectors are:
+	Solving for $\vec{m}$:
 	\begin{align}
-		\vec{n}_1 = \myvec{-\sqrt{5}\\3}, \quad \vec{n}_2 = \myvec{\sqrt{5}\\3}
+		\vec{I}\vec{m} &= \vec{z}\\
+		\vec{m} &= \myvec{z_1\\z_2}
 	\end{align}
 	
-	The points of contact are given by:
+	From $z_1/z_2 = \pm\sqrt{5}/3$, the direction vectors for the tangents can be expressed as:
 	\begin{align}
-		\vec{q}_i = r\frac{\vec{n}_i}{\norm{\vec{n}_i}}
+		\vec{m}_1 = \myvec{\sqrt{5}\\3}, \quad \vec{m}_2 = \myvec{\sqrt{5}\\-3}
 	\end{align}
 	
-	Since $\norm{\vec{n}_i} = \sqrt{5 + 9} = \sqrt{14}$ and $r = 4$:
+	\textbf{Finding Points of Contact:}\\
+	Using $P^\top\vec{q} = 16$:
 	\begin{align}
-		\vec{q}_1 &= 4\frac{1}{\sqrt{14}}\myvec{-\sqrt{5}\\3} = \myvec{\frac{-4\sqrt{5}}{\sqrt{14}}\\\frac{12}{\sqrt{14}}}\\
-		\vec{q}_2 &= 4\frac{1}{\sqrt{14}}\myvec{\sqrt{5}\\3} = \myvec{\frac{4\sqrt{5}}{\sqrt{14}}\\\frac{12}{\sqrt{14}}}
-	\end{align}
-	
-	However, we need $P^\top\vec{q} = 16$ (from tangency condition). Let's verify and correct:
-	
-	From the tangency condition $\vec{q}^\top(\vec{q} - P) = 0$ and $\vec{q}^\top\vec{q} = 16$:
-	\begin{align}
-		P^\top\vec{q} &= 16\\
+		\myvec{6 & 0}\myvec{q_1\\q_2} &= 16\\
 		6q_1 &= 16\\
 		q_1 &= \frac{8}{3}
 	\end{align}
 	
 	From $q_1^2 + q_2^2 = 16$:
 	\begin{align}
+		\brak{\frac{8}{3}}^2 + q_2^2 &= 16\\
 		q_2^2 &= 16 - \frac{64}{9} = \frac{80}{9}\\
 		q_2 &= \pm\frac{4\sqrt{5}}{3}
 	\end{align}
 	
-	Therefore, the contact points are:
+	Therefore, the points of contact are:
 	\begin{align}
 		\vec{q}_1 = \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}, \quad \vec{q}_2 = \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
 	\end{align}
