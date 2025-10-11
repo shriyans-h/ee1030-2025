@@ -1,6 +1,8 @@
+
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
+
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -16,46 +18,33 @@
 \usepackage{comment}
 \usepackage{caption}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
+\usepackage{tkz-euclide}
 \usepackage{listings}
-\usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}     
+\usepackage{gvv}
+\usepackage[latin1]{inputenc}
 \usepackage{xparse}
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
 \usepackage{multirow}
 \usepackage{multicol}
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
+\usepackage{hhline}
+\usepackage{ifthen}
 \usepackage{lscape}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{float}
-%\newtheorem{theorem}{Theorem}[section]
-%\newtheorem{theorem}{Theorem}[section]
-%\newtheorem{problem}{Problem}
-%\newtheorem{proposition}{Proposition}[section]
-%\newtheorem{lemma}{Lemma}[section]
-%\newtheorem{corollary}[theorem]{Corollary}
-%\newtheorem{example}{Example}[section]
-%\newtheorem{definition}[problem]{Definition}
 
 \begin{document}
 
 \title{8.4.23}
 \author{EE25BTECH11020 - Darsh Pankaj Gajare}
-% \maketitle
-% \newpage
-% \bigskip
-%\begin{document}
 {\let\newpage\relax\maketitle}
-%\renewcommand{\thefigure}{\theenumi}
-%\renewcommand{\thetable}{\theenumi}
+
 Question:\\
-The curve described parametrically by $x = t^2 + t + 1$ and $y = t^2 - t + 1$ represents:
+The curve described parametrically by $x=t^2+t+1$ and $y=t^2-t+1$ represents:
+
 \begin{multicols}{4}
 \begin{enumerate}
 \item a pair of straight lines
@@ -64,7 +53,6 @@ The curve described parametrically by $x = t^2 + t + 1$ and $y = t^2 - t + 1$ re
 \item a hyperbola
 \end{enumerate}
 \end{multicols}
-
 
 \solution
 \begin{table}[H]
@@ -82,67 +70,80 @@ The parametric form can be written as
 	\vec{x}=\myvec{\vec{a}\\\vec{b}}^\top\myvec{t^2\\t}+\vec{c}
 \end{align}
 \begin{align}
-\myvec{x\\y}
-&= 
-\myvec{1 & 1\\[4pt]1 & -1}
-\myvec{t^2\\t} + \myvec{1\\1}.
-\end{align}
-
-Solving for $\myvec{t^2\\t}$ using the inverse matrix,
-\begin{align}
-\myvec{t^2\\t}
-&= 
-\frac{1}{2}
-\myvec{1 & 1\\[4pt]1 & -1}
-^{-1}
-\brak{\myvec{x\\y}-\myvec{1\\1}}\\
-&= 
-\frac{1}{2}
-\myvec{1 & 1\\[4pt]1 & -1}
-\brak{\myvec{x\\y}-\myvec{1\\1}}.
-\end{align}
-
-Multiplying,
-\begin{align}
-\myvec{t^2\\t}
-&= 
-\frac{1}{2}
-\myvec{x+y-2\\[4pt]x-y}.
-\end{align}
-
-\text{Eliminating } t:
-\begin{align}
-\myvec{t^2\\t}
-= \frac{1}{2}\myvec{x+y-2\\x-y}
-\implies
-\frac{1}{2}(x+y-2)
-= \brak{\frac{1}{2}(x-y)}^2
-\end{align}
-\begin{align}
-\Rightarrow (x-y)^2 = 2(x+y-2)
+\vec{x}=\myvec{1 & 1\\ 1 & -1}\myvec{t^2\\ t}+\vec{c}
 \end{align}
 
 \begin{align}
-\text{Write as quadratic form:}\quad
-\vec{x}^\top \, \vec{V}\, \vec{x} + 2\vec{u}^\top\vec{x} + f &= 0
+\myvec{t^2\\ t}=\frac{1}{2}\myvec{1 & 1\\ 1 & -1}
+\brak{\vec{x}-\vec{c}}
 \end{align}
 
 \begin{align}
-\vec{V} &= \myvec{1 & -1\\[4pt]-1 & 1}, &
-\vec{u} &= \myvec{-1\\[4pt]-1}, &
-f = 4
+\text{Let } \vec{e}_1=\myvec{1\\ 0},\ \vec{e}_2=\myvec{0\\ 1},\ 
+\end{align}
+\begin{align}
+	\vec{M}=\frac{1}{2}\myvec{1 & 1\\ 1 & -1},\ 
+\vec{z}=\vec{x}-\vec{c}. 
 \end{align}
 
-Extract quadratic coefficients:
 \begin{align}
-A &= V_{11} = 1, & B &= 2V_{12} = -2, & C &= V_{22} = 1
-\end{align}
-Discriminant:
-\begin{align}
-\Delta &= B^2 - 4AC = (-2)^2 - 4(1)(1) = 0
+	\text{Then } \myvec{t^2\\ t}=\vec{M}\vec{z},\quad
+	t^2=\vec{e}_1^\top \vec{M}\vec{z},\quad
+	t=\vec{e}_2^\top \vec{M}\vec{z}.
 \end{align}
 
-Since $\Delta=0$ the conic is a parabola.
+\begin{align}
+\text{Eliminate } t:\quad
+	\vec{e}_1^\top \vec{M}\vec{z}
+=
+	\brak{\vec{e}_2^\top \vec{M}\vec{z}}^{2}.
+\end{align}
+
+\begin{align}
+	\text{Define } \vec{w}=\vec{M}\vec{z}\ \Rightarrow\
+\vec{e}_1^\top\vec{w}=\brak{\vec{e}_2^\top\vec{w}}^{2}.
+\end{align}
+
+\begin{align}
+\text{In matrix form: }\
+	\vec{z}^\top \vec{M}^\top \vec{e}_1\vec{e}_1^\top \vec{M} \vec{z}
+-
+	\vec{z}^\top \vec{M}^\top \vec{e}_2\vec{e}_2^\top \vec{M} \vec{z}
+=0.
+\end{align}
+
+\begin{align}
+	\text{Let } \vec{E}=\vec{e}_1\vec{e}_1^\top-\vec{e}_2\vec{e}_2^\top=\myvec{1&0\\ 0&-1},\
+	\vec{Q}=\vec{M}^\top \vec{E} \vec{M}.
+\end{align}
+
+\begin{align}
+	\vec{Q}
+=
+	\brak{\frac{1}{2}\myvec{1&1\\ 1&-1}}^\top
+\myvec{1&0\\ 0&-1}
+	\brak{\frac{1}{2}\myvec{1&1\\ 1&-1}}
+=
+\frac{1}{2}\myvec{0&1\\ 1&0}.
+\end{align}
+
+\begin{align}
+	\vec{z}^\top \vec{Q} \vec{z}=0,\quad
+\vec{z}=\myvec{x\\ y}-\myvec{1\\ 1}.
+\end{align}
+
+\begin{align}
+\brak{x-1}\brak{y-1}
+=
+\frac{1}{2}\brak{y-x}^{2}
+\ \Longleftrightarrow\
+\brak{x-y}^{2}=2\brak{x+y-2}.
+\end{align}
+
+\begin{align}
+\text{Thus the conic is a parabola.}
+\end{align}
+
 Plot using C libraries:
 \begin{figure}[H]
 	\centering
