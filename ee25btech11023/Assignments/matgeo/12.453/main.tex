@@ -23,18 +23,18 @@
 \usepackage{gensymb}
 \usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
+\usepackage{tkz-euclide}
 \usepackage{listings}
-% \usepackage{gvv}                                        
-\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}                                
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow}                                         
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
+% \usepackage{gvv}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
 \usepackage{lscape}
 \begin{document}
 
@@ -45,7 +45,7 @@
 % \maketitle
 % \newpage
 % \bigskip
-\maketitle 
+\maketitle
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \setlength{\intextsep}{10pt} % Space between text and floats
@@ -57,34 +57,28 @@
 \textbf{Question:}  \\
 A 3 $\times$ 3 matrix $\vec{P}$ is such that, $\vec{P}^3$ = $\vec{P}$. Then the eigenvalues of $\vec{P}$ are\\
 \textbf{Solution:}  \\
-  \begin{align}
-     \vec{P}&=\vec{Q}\vec{D}\vec{Q}^{-1} \\
-      \vec{P}^2&=\brak{\vec{Q}\vec{D}\vec{Q}^{-1}}^2 \\
-      &=\vec{Q}\vec{D}\vec{Q}^{-1}\vec{Q}\vec{D}\vec{Q}^{-1}\\
-      &=\vec{Q}\vec{D}\vec{I}\vec{D}\vec{Q}^{-1}\\
-      &=\vec{Q}\vec{D}^2\vec{Q}^{-1}
- \end{align}
- where $\vec{D}$ is the Diagonal matrix containing eigen values
+ Let $\lambda$ be the eigen value of the matrix $\vec{P}$ and $\vec{v}$ be the corresponding eigen vector
  \begin{align}
-     \vec{P}^k&=\vec{Q}\vec{D}^k\vec{Q}^{-1} \\
-     \vec{P}^3&=\vec{Q}\vec{D}^3\vec{Q}^{-1} 
-     \end{align}
-Given 
-\begin{align}
-    \vec{P}^3 &= \vec{P} \\
-      \vec{P}^{3}& - \vec{P} = 0
-      \end{align}
-From \brak{1} and \brak{7}
-      \begin{align}
-   \vec{Q}\vec{D}^{3}\vec{Q}^{-1}-\vec{Q}\vec{D}\vec{Q}^{-1}=0 \\
-   \vec{Q}\brak{\vec{D}^{3}-\vec{D}^{}}\vec{Q}^{-1}=0 \\
-   \implies \brak{\vec{D}^{3}-\vec{D}^{}}=0\\
-   \implies \brak{\vec{\lambda}^{3}-\vec{\lambda}^{}}=0 
-\end{align}
-where $\lambda$ are the eigen values
-\begin{align}
-    \lambda^{}\brak{\lambda^2-1}=0&\implies
-    \lambda^{}=0\ \text{or}\ \lambda^{2}-1=0 \\
-     \lambda=0\ &\text{or}\ \lambda=\pm1
-\end{align}
+     \vec{P}\vec{v}=\lambda\vec{v} \\
+ \end{align}
+ Multiplying both sides with vector $\vec{P}$
+ \begin{align}
+     \vec{P}\brak{\vec{P}\vec{v}}&=\vec{P}\brak{\lambda\vec{v}} \\
+     \vec{P}^{2}\vec{v}&=\lambda\brak{\vec{P}\vec{v}}\\
+     \implies \vec{P}^{2}\vec{v}&=\lambda\brak{\lambda\vec{v}} =\lambda^2\vec{v}
+ \end{align}
+ Hence
+ \begin{align}
+     \vec{P}^{n}\vec{v}=\lambda^n\vec{v} \\
+     \vec{P}^{3}\vec{v}=\lambda^3\vec{v}
+ \end{align}
+ \begin{align}
+     \vec{P}^3&=\vec{P} \\
+     \vec{P}^3&-\vec{P}=0 \\
+     \lambda^3\vec{v}-\lambda\vec{v}=0  &\implies \brak{\lambda^3-\lambda}\vec{v}=0 \\
+     \lambda^3-\lambda=0 &\implies \lambda\brak{\lambda^2-1}=0 \\
+     \lambda=0\ &\text{and}\ \lambda^2-1=0 \\
+     \lambda=0\ &\text{and}\ \lambda=\pm1
+ \end{align}
+ Hence the eigen values of $\vec{P} = 0,1,-1$
  \end{document}
