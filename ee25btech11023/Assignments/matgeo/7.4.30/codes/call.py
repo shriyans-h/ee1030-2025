@@ -11,7 +11,8 @@ def find_locus_equation():
     lib.get_circle_params(out_data_c)
      
     c1_x, c1_y, r1 = list(out_data_c)
-    c1_center = (c1_x, c1_y)
+    c1_center = [c1_x, c1_y]
+    print(c1_center)
  
     h, k = sympy.symbols('h k', real=True)
  
@@ -20,9 +21,7 @@ def find_locus_equation():
     lhs = (h - c1_center[0])**2 + (k - c1_center[1])**2
     rhs = (r + r1)**2
     
-    equation = sympy.Eq(lhs, rhs)
-    locus_eq = sympy.simplify(equation.lhs - equation.rhs)
-   
+    locus_eq = sympy.simplify(lhs - rhs)
     x, y = sympy.symbols('x y')
     final_locus = locus_eq.subs([(h, x), (k, y)])
     
