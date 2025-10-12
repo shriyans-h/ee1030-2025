@@ -111,7 +111,7 @@ Substituting equation \eqref{eq3} in \eqref{eq1}
 
 Substituting the values, we get
 \begin{align}
-    \lambda_1 \ = \ \frac{-2}{2+m_1}
+    \lambda_1 \ = \ \frac{-2}{2+m_1} \label{eq9}
 \end{align}
 
 Similarly, substituting equation \eqref{eq4} in \eqref{eq1}
@@ -121,17 +121,48 @@ Similarly, substituting equation \eqref{eq4} in \eqref{eq1}
 
 Substituting values,
 \begin{align}
-    \lambda_2 \ =&\ \frac{-2}{2+m_2}\\
-    \implies \lambda_2 \ =& \ \frac{-2m_1}{2m_1-1}
+    \lambda_2 \ =&\ \frac{-2}{2+m_2}
+\end{align}
+
+\begin{align}
+    \implies \lambda_2 \ =& \ \frac{-2m_1}{2m_1-1} \label{eq12}
 \end{align}\\
 
-Given that the triangle is isosceles,
+
+Let $\vec{M}$ be the midpoint of $\vec{Q-R}$:
 \begin{align}
-  \norm{\vec{Q}-\vec{P}}=&\norm{\vec{R-P}}\\
-  \implies \abs{\lambda_1}\norm{\vec{m_1}} =& \abs{\lambda_2}\norm{\vec{m_2}}\\
-  \implies \abs{ \frac{-2}{2+m_1}}\sqrt{1+m_1^2} \ =&\  \abs{\frac{-2m_1}{2m_1-1}}\sqrt{1+\brak{\frac{-1}{m_1}}^2} \\
-  \implies  \abs{ \frac{2}{2+m_1}} =& \abs{\frac{2}{2m_1-1}}
+    \vec{M} = \frac{\vec{Q+R}}{2}
+\end{align}
+
+Since $\triangle PQR$ is isosceles,
+\begin{align}
+    \vec{P}-\vec{M} \perp \vec{Q}-\vec{R}\\
+    \implies \brak{\vec{P}-\frac{\vec{Q+R}}{2}}^\top \brak{\vec{Q}-\vec{R}} = 0
 \end{align}\\
+
+Substituting values from \eqref{eq3}, \eqref{eq4}, we get
+\begin{align}
+    \brak{\lambda_1\vec{m_1}+\lambda_2\vec{m_2}}^\top\brak{\lambda_1\vec{m_1}-\lambda_2\vec{m_2}} =& 0\\
+    \lambda_1^2\vec{m_1}^\top\vec{m_1} =& \lambda_2\vec{m_2}^\top\vec{m_2}\\
+    \lambda_1^2\brak{1+m_1^2} =& \lambda_2\brak{1+\frac{1}{m_1^2}}\\
+    \abs{\lambda_1}=& \abs{\frac{\lambda_2}{m_1}}
+\end{align}\\
+
+Substituting values of $\lambda_1$ and $\lambda_2$ from \eqref{eq9} and \eqref{eq12}
+
+\begin{align}
+    \abs{ \frac{2}{2+m_1}} =& \abs{\frac{2}{2m_1-1}}
+\end{align}
+
+% Given that the triangle is isosceles,
+% \begin{align}
+%   \norm{\vec{Q}-\vec{P}}=&\norm{\vec{R-P}}\\
+%   \implies \abs{\lambda_1}\norm{\vec{m_1}} =& \abs{\lambda_2}\norm{\vec{m_2}}\\
+%   \implies \abs{ \frac{-2}{2+m_1}}\sqrt{1+m_1^2} \ =&\  \abs{\frac{-2m_1}{2m_1-1}}\sqrt{1+\brak{\frac{-1}{m_1}}^2} \\
+%   \implies  \abs{ \frac{2}{2+m_1}} =& \abs{\frac{2}{2m_1-1}}
+% \end{align}\\
+
+ 
 
 Solving the above, we get
 \begin{align}
@@ -153,7 +184,7 @@ $\therefore$ Multiplying the above two equations, we get the pair of straight li
    $3x^2 - 3y^2 + 8xy - 20x - 10y + 25 = 0$
 \end{center} 
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{Figs/plot(py).png}
 \end{figure}
