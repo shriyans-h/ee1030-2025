@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the shared library
-lib_quadratic = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code16.so")
+lib_quadratic = ctypes.CDLL("./code16.so")
 
 # Define the argument types and return type for the C function
 lib_quadratic.calculateRootsInfo.argtypes = [
