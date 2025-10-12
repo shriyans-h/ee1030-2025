@@ -75,7 +75,7 @@
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-\textbf{Question} Two adjacent sides of a parallelogram $\vec{ABCD}$ are given by $\vec{AB}=\myvec{2\\10\\11}$ and $\vec{AD}=\myvec{-1\\2\\2}$. The side $\vec{AD}$ is rotated by an acute angle $\alpha$ in the plane of the parallelogram so that $\vec{AD}$ becomes $\vec{AD}^1$. If $\vec{AD}^1$ makes a right angle with the side $\vec{AB}$ then the cosine of the angle $\alpha$ is given by\\
+\textbf{Question} Two adjacent sides of a parallelogram ABCD are given by $\vec{B-A}=\myvec{2\\10\\11}$ and $\vec{D-A}=\myvec{-1\\2\\2}$. The side $\vec{D-A}$ is rotated by an acute angle $\alpha$ in the plane of the parallelogram so that $\vec{D-A}$ becomes $(\vec{D-A})^|$. If $(\vec{D-A})^|$ makes a right angle with the side $\vec{B-A}$ then the cosine of the angle $\alpha$ is given by\\
 \begin{enumerate}
 \begin{multicols}{2}
     \item $\frac{8}{9}$
@@ -85,20 +85,20 @@
 \end{multicols}
 \end{enumerate}
 \textbf{Solution :} Given details:
-$\vec{ABCD}$ is a parallelogram.
+ABCD is a parallelogram.
 \begin{align}
-   AB=\myvec{2\\10\\11}\\
-   AD=\myvec{-1\\2\\2}
+   \vec{B-A}=\myvec{2\\10\\11}\\
+   \vec{D-A}=\myvec{-1\\2\\2}
 \end{align}
-The side $\vec{AD^1}$ is perpendicular to $\vec{AB}$.\\
+The side $\vec{(D-A)}^|$ is perpendicular to $\vec{B-A}$.\\
 \textbf{Property:} The cosine of the angle between vector 1 and vector 2 is given by $\dfrac{{n_1}^\top n_2}{\norm{n_1}\norm{n_2}} $.\\
-Since $AD^1$ is perpendicular to $AB$,\\
+Since $(\vec{D-A})^|$ is perpendicular to $\vec{B-A}$,\\
 
 
 Let the angle between the vectors be $\theta$.
 $$\alpha+\theta=\frac{\pi}{2}$$
 \begin{align}
-  \cos\theta=\frac{\vec{AB}^\top\vec{AD}}{\norm{AB}\norm {AD}}\\
+  \cos\theta=\frac{\vec{B-A}^\top\vec{D-A}}{\norm{B-A}\norm {D-A}}\\
   \cos\theta=\frac{\myvec{2&10&11}\myvec{-1\\2\\2}}{\sqrt{225}\sqrt{9}}\\
   \cos\theta=\frac{40}{45}=\frac{8}{9}\brak{\because\sin\theta=\sqrt{1-\cos^2\theta}}\\
   \sin\theta=\sqrt{1-\frac{64}{81}}\\
