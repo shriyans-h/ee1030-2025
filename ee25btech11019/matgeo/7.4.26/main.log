@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  11 OCT 2025 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  12 OCT 2025 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1908,11 +1908,11 @@ File: ts1txr.fd 2000/12/15 v3.1
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<figs/14.png, id=55, 462.528pt x 346.896pt>
+<figs/14.png, id=55, 433.62pt x 433.62pt>
 File: figs/14.png Graphic file (type png)
 <use figs/14.png>
 Package pdftex.def Info: figs/14.png  used on input line 119.
-(pdftex.def)             Requested size: 291.35735pt x 218.52974pt.
+(pdftex.def)             Requested size: 291.35735pt x 291.3708pt.
  [2 <./figs/14.png>] (./main.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1942,7 +1942,7 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 76009 bytes).
+Output written on main.pdf (2 pages, 77487 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream

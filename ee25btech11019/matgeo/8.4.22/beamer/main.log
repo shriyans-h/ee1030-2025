@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.1)  11 OCT 2025 21:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.1)  12 OCT 2025 11:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1302,11 +1302,11 @@ thkerncmss.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 81.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 81.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 81.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 85.
 
 
 [3
@@ -1314,6 +1314,10 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 ]
 
 [4
+
+]
+
+[5
 
 ]
 \openout4 = `main.vrb'.
@@ -1351,7 +1355,7 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 )
 
-[5
+[6
 
 ]
 \openout4 = `main.vrb'.
@@ -1360,13 +1364,6 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ))
-
-[6
-
-]
-\openout4 = `main.vrb'.
-
- (./main.vrb)
 
 [7
 
@@ -1378,18 +1375,25 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 [8
 
 ]
-<figs/15.png, id=264, 462.528pt x 346.896pt>
+\openout4 = `main.vrb'.
+
+ (./main.vrb)
+
+[9
+
+]
+<figs/15.png, id=291, 462.528pt x 346.896pt>
 File: figs/15.png Graphic file (type png)
 <use figs/15.png>
-Package pdftex.def Info: figs/15.png  used on input line 183.
+Package pdftex.def Info: figs/15.png  used on input line 199.
 (pdftex.def)             Requested size: 256.72147pt x 192.55072pt.
 
-Overfull \vbox (1.02458pt too high) detected at line 183
+Overfull \vbox (1.02458pt too high) detected at line 199
  []
 
 
 
-[9
+[10
 
  <./figs/15.png>]
 \tf@nav=\write6
@@ -1410,10 +1414,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32279 strings out of 467800
- 669107 string characters out of 5431888
- 1346714 words of memory out of 8000000
- 60165 multiletter control sequences out of 15000+600000
+ 32283 strings out of 467800
+ 669142 string characters out of 5431888
+ 1346710 words of memory out of 8000000
+ 60167 multiletter control sequences out of 15000+600000
  635098 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,1169b,1380s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1427,10 +1431,10 @@ sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
 sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
 local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (9 pages, 156410 bytes).
+Output written on main.pdf (10 pages, 159471 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 304 compressed objects within 4 object streams
+ 22 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

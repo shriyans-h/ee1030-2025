@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  11 OCT 2025 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  12 OCT 2025 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1091,7 +1091,8 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (./main.aux)
+
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -1112,7 +1113,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1170,8 +1170,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 44.
-
-(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1253,12 +1251,15 @@ ry-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count372
- (./main.nav) [1
+
+No file main.nav.
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
@@ -1336,13 +1337,13 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )) [7
 
 ]
-<figs/14.png, id=225, 462.528pt x 346.896pt>
+<figs/14.png, id=224, 433.62pt x 433.62pt>
 File: figs/14.png Graphic file (type png)
 <use figs/14.png>
 Package pdftex.def Info: figs/14.png  used on input line 150.
-(pdftex.def)             Requested size: 256.72147pt x 192.55072pt.
+(pdftex.def)             Requested size: 256.72147pt x 256.73343pt.
 
-Overfull \vbox (1.02458pt too high) detected at line 150
+Overfull \vbox (65.20729pt too high) detected at line 150
  []
 
 [8
@@ -1361,14 +1362,20 @@ Overfull \vbox (1.02458pt too high) detected at line 150
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32937 strings out of 476091
- 685132 string characters out of 5794081
+ 32908 strings out of 476091
+ 684901 string characters out of 5794081
  1872330 words of memory out of 5000000
- 52555 multiletter control sequences out of 15000+600000
+ 52534 multiletter control sequences out of 15000+600000
  520728 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1169b,1320s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1383,7 +1390,7 @@ ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmtt8.pfb>
-Output written on main.pdf (8 pages, 155747 bytes).
+Output written on main.pdf (8 pages, 157110 bytes).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
  256 compressed objects within 3 object streams

@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include <math.h>
 
-// Function to get circle center (cx, cy) and radius r for given p, q
-void circle_params(float p, float q, float *cx, float *cy, float *r) {
-    // Equation: x^2 + y^2 = px + qy
-    // Rewrite: (x - p/2)^2 + (y - q/2)^2 = (p^2 + q^2)/4
-    *cx = p / 2.0;
-    *cy = q / 2.0;
-    *r = sqrt((p*p + q*q) / 4.0);
+// Function to check the condition for circle chords
+double check_condition(double p, double q) {
+    // If chords from (p,q) are bisected by x-axis,
+    // then p^2 = 8q^2 must hold.
+    return p*p - 8*q*q;
 }
 
-// Function to compare p^2 and 8q^2
-int compare_pq(float p, float q) {
-    float left = p*p;
-    float right = 8*q*q;
+int main() {
+    double p, q;
+    printf("Enter p and q: ");
+    scanf("%lf %lf", &p, &q);
 
-    if (fabs(left - right) < 1e-3)
-        return 0;   // equal
-    else if (left < right)
-        return -1;  // p^2 < 8q^2
+    double result = check_condition(p, q);
+
+    if (fabs(result) < 1e-6)
+        printf("Condition satisfied: p^2 = 8q^2\n");
+    else if (result > 0)
+        printf("p^2 > 8q^2\n");
     else
-        return 1;   // p^2 > 8q^2
+        printf("p^2 < 8q^2\n");
+
+    return 0;
 }

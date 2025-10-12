@@ -1,65 +1,72 @@
 import ctypes
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Load the C library
-lib = ctypes.CDLL("./circle_ops.so")
+# Load C shared library
+lib = ctypes.CDLL("./14.so")
+lib.check_condition.argtypes = [ctypes.c_double, ctypes.c_double]
+lib.check_condition.restype = ctypes.c_double
 
-# Define function argument and return types
-lib.circle_params.argtypes = [ctypes.c_float, ctypes.c_float,
-                              ctypes.POINTER(ctypes.c_float),
-                              ctypes.POINTER(ctypes.c_float),
-                              ctypes.POINTER(ctypes.c_float)]
+# Example satisfying p^2 = 8q^2
+q = 1
+p = np.sqrt(8)*q
 
-lib.compare_pq.argtypes = [ctypes.c_float, ctypes.c_float]
-lib.compare_pq.restype = ctypes.c_int
+# Check condition
+result = lib.check_condition(p, q)
+print("Condition (p^2 - 8q^2):", result)
 
-# Ask for simple values of p, q
-p = float(input("Enter p: "))
-q = float(input("Enter q: "))
+# Circle parameters
+center = (p/2, q/2)
+r = np.sqrt(p**2 + q**2) / 2
 
-# Variables to store results
-cx = ctypes.c_float()
-cy = ctypes.c_float()
-r = ctypes.c_float()
+# Circle points
+theta = np.linspace(0, 2*np.pi, 400)
+x = center[0] + r*np.cos(theta)
+y = center[1] + r*np.sin(theta)
 
-# Call the C function
-lib.circle_params(ctypes.c_float(p), ctypes.c_float(q),
-                  ctypes.byref(cx), ctypes.byref(cy), ctypes.byref(r))
+# Equation of circle: x^2 + y^2 = px + qy
+# Chord bisected by x-axis => midpoint (a,0)
+# Use geometry: intersection points satisfy y = m(x - a)
+# Here we directly choose two bisecting chords manually
 
-print(f"Circle center = ({cx.value:.2f}, {cy.value:.2f})")
-print(f"Circle radius = {r.value:.2f}")
+# Two chords bisected by x-axis when p^2 = 8q^2
+# Their midpoints are symmetric about the y-axis
+a1 = p/4
+a2 = -p/4
 
-# Compare p^2 and 8q^2
-cmp_result = lib.compare_pq(ctypes.c_float(p), ctypes.c_float(q))
-if cmp_result == 0:
-    print("p^2 = 8q^2")
-elif cmp_result < 0:
-    print("p^2 < 8q^2")
-else:
-    print("p^2 > 8q^2")
+def chord_points(a):
+    """Return intersection points of chord with circle."""
+    # Substitute y = m(x - a), but since midpoint is (a,0), chord is vertical reflection
+    # Equation of chord perpendicular to y=0 at (a,0)
+    # So x = a ± sqrt(r^2 - (a - p/2)^2)
+    dy = np.sqrt(r**2 - (a - p/2)**2)
+    x1, x2 = a, a
+    y1, y2 = dy, -dy
+    return np.array([[x1, y1], [x2, y2]])
 
-# ---------------- PLOTTING ---------------- #
-# Circle equation: (x - cx)^2 + (y - cy)^2 = r^2
-theta = np.linspace(0, 2*np.pi, 200)
-x_circle = cx.value + r.value * np.cos(theta)
-y_circle = cy.value + r.value * np.sin(theta)
+# Compute chord endpoints
+chord1 = chord_points(a1)
+chord2 = chord_points(a2)
 
-# Plot circle
-plt.plot(x_circle, y_circle, label='Circle', color='blue')
+# Plot setup
+plt.figure(figsize=(6,6))
+plt.plot(x, y, 'b', label='Circle')
+plt.scatter(p, q, color='r', label='Point (p,q)')
+plt.scatter(center[0], center[1], color='g', label='Center (p/2,q/2)')
+plt.axhline(0, color='k', linestyle='--', label='X-axis')
 
-# Mark center and given point (p, q)
-plt.scatter(cx.value, cy.value, color='red', label=f'Center ({cx.value:.2f},{cy.value:.2f})')
-plt.scatter(p, q, color='green', label=f'Point ({p},{q})')
+# Draw the two chords
+plt.plot(chord1[:,0], chord1[:,1], 'm', linewidth=2, label='Chord 1')
+plt.plot(chord2[:,0], chord2[:,1], 'orange', linewidth=2, label='Chord 2')
 
-# X-axis (for chord bisection visualization)
-plt.axhline(0, color='black', linestyle='--')
+# Annotations
+plt.text(p, q, f'({p:.2f},{q:.2f})', fontsize=10, ha='left')
+plt.text(center[0], center[1], 'C', fontsize=10, ha='left')
 
-# Setup plot
-plt.gca().set_aspect('equal', adjustable='box')
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Circle x² + y² = px + qy')
+plt.title('Two distinct chords bisected by X-axis')
 plt.legend()
+plt.axis('equal')
 plt.grid(True)
 plt.show()

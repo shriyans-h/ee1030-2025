@@ -66,6 +66,70 @@ and having its centre at $(0,3)$ is -\\[6pt]
 \end{multicols}
 
 \solution\\[-2mm]
+
+\solution\\[4pt]
+Let \(\vec x=\myvec{x\\[2pt]y}\). The given ellipse is
+\[
+\frac{x^2}{16}+\frac{y^2}{9}=1
+\qquad\Longleftrightarrow\qquad
+\vec x^\top\vec V\vec x=1,\qquad
+\vec V=\myvec{\frac{1}{16} & 0\\[2pt]0 & \frac{1}{9}}.
+\]
+
+The eigenvalues (principal values) of \(\vec V\) are its diagonal entries; take them in increasing order
+\[
+\lambda_1=\frac{1}{16},\qquad \lambda_2=\frac{1}{9}.
+\]
+Hence the squared semi-axes (principal-form relations) are
+\[
+a^2=\frac{1}{\lambda_1}=16,\qquad b^2=\frac{1}{\lambda_2}=9,
+\]
+so \(a=4,\ b=3\).
+
+Using the formula for eccentricity.
+\[
+e=\sqrt{1-\frac{\lambda_1}{\lambda_2}}
+=\sqrt{1-\frac{1/16}{1/9}}
+=\sqrt{1-\frac{9}{16}}
+=\sqrt{\frac{7}{16}}
+=\frac{\sqrt7}{4}.
+\]
+The focal distance (from the centre) is \(c = a e\), therefore
+\[
+c = 4\cdot\frac{\sqrt7}{4}=\sqrt7.
+\]
+Since \(\vec V\) is diagonal with \(\lambda_1\) along the x-direction, the principal axis unit vector is.
+
+\[
+\vec n=\myvec{1\\[2pt]0}.
+\]
+Thus the foci (in vector form) are
+\[
+\vec F_1 = c\vec n = \myvec{\sqrt7\\[2pt]0},\qquad
+\vec F_2 = -c\vec n = \myvec{-\sqrt7\\[2pt]0}.
+\]
+
+The required circle has centre \(C=\myvec{0\\[2pt]3}\) and passes through either focus, so the radius is
+\[
+R=\norm{\vec F_1-\vec C}
+=\sqrt{(\sqrt7-0)^2+(0-3)^2}
+=\sqrt{7+9}
+=\sqrt{16}=4.
+\]
+
+Therefore the radius of the required circle is
+\(
+\boxed{4}.
+\)
+
+
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=0.8\columnwidth]{figs/15.png}
+     \label{fig:1}
+ \end{figure}
+
+\end{document}
 Use the matrix form (matrix method). Let $\vec{x}=\myvec{x\\[2pt]y}$. The ellipse is
 \[
 \vec{x}^\top \vec{V}\,\vec{x}=1,\qquad
@@ -95,12 +159,3 @@ R=\norm{F_1-C}
 =\sqrt{16}
 =\boxed{4}.
 \]
-\begin{frame}{Pyhton plot}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/15.png}
-    \caption{plot if p=2,q=2}
-    \label{fig:example_image}
-\end{figure}
-\end{frame}
-\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  11 OCT 2025 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.7.29)  12 OCT 2025 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1910,17 +1910,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
  []
 
-<figs/15.png, id=31, 462.528pt x 346.896pt>
-File: figs/15.png Graphic file (type png)
-<use figs/15.png>
-Package pdftex.def Info: figs/15.png  used on input line 101.
-(pdftex.def)             Requested size: 273.14647pt x 204.868pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2 <./figs/15.png>]
+]
+<figs/15.png, id=47, 462.528pt x 346.896pt>
+File: figs/15.png Graphic file (type png)
+<use figs/15.png>
+Package pdftex.def Info: figs/15.png  used on input line 128.
+(pdftex.def)             Requested size: 291.35735pt x 218.52974pt.
+ [2 <./figs/15.png>]
 (./main.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1935,13 +1938,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52203 strings out of 476091
- 1233566 string characters out of 5794081
- 1869330 words of memory out of 5000000
- 71770 multiletter control sequences out of 15000+600000
+ 52200 strings out of 476091
+ 1233500 string characters out of 5794081
+ 1868330 words of memory out of 5000000
+ 71767 multiletter control sequences out of 15000+600000
  576125 words of font info for 163 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,10n,107p,1194b,883s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,10n,107p,1194b,890s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1949,7 +1952,7 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 74596 bytes).
+Output written on main.pdf (2 pages, 76089 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1760219359.08562 "main.tex" "main.pdf" "main" 1760219360.10621 2
+["pdflatex"] 1760267898.98146 "main.tex" "main.pdf" "main" 1760267900.02811 2
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -286,12 +286,12 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1756620994 5528033 0c358b2aae4aa21399659c485f38b4ac ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1759293747 3605217 ef7c199f3df6d908ed20673b258fe1ce ""
   "/usr/local/texlive/2025/texmf.cnf" 1759293735.82265 478 d1579473af9bd3a375183595f4489bd4 ""
-  "figs/15.png" 1760219258.55556 34610 241e4d44fd662efdc470d08a9246d868 ""
-  "main.aux" 1760219360.00777 1702 1d1149aad5c2e393bdab0d5602c9bd0e "pdflatex"
-  "main.nav" 1760219360.00877 1011 83c4ff004b77303d878240d0bcc95e05 "pdflatex"
-  "main.out" 1760219359.64977 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1760219223.08014 4601 1d9e5a21153417d6e5bc604a2dcd30a7 ""
-  "main.vrb" 1760219359.93277 425 96a53c73a6a65ebf14eca9dccd93a766 "pdflatex"
+  "figs/15.png" 1760266791.68758 34610 241e4d44fd662efdc470d08a9246d868 ""
+  "main.aux" 1760267899.93163 1839 6d253e8a44ddfaa768fa58431ea43a07 "pdflatex"
+  "main.nav" 1760267899.93163 1109 07396102f9d82bf25877ba7d82798efb "pdflatex"
+  "main.out" 1760267899.55062 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1760267896.79856 5030 42a1a8a9f837e86c9bf14e64f6b28eed ""
+  "main.vrb" 1760267899.85563 425 96a53c73a6a65ebf14eca9dccd93a766 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
