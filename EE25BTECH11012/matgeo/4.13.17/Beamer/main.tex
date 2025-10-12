@@ -111,39 +111,51 @@ Three distinct points $A$, $B$ and $C$ are given in the 2-dimensional coordinate
 
 \begin{frame}{solution}
     \frametitle{finding the Circumcenter of the triangle formed by A,B and C}
-Let P $\myvec{x\\y}$ be any point in the plane of A,B,C.\\
+Let $\vec{P}$ be any vector in the plane of $\vec{A}$,$\vec{B}$,$\vec{C}$.\\
   given,
 \begin{align}
-\frac{\| PF_1 \|}{\| PF_2 \|} = \frac{1}{3}\\
-\frac{\sqrt{(P-F_1)^T (P-F_1)}}{\sqrt{(P-F_2)^T (P-F_2)}} = \frac{1}{3}
-\end{align}
-
-By Substituting Values and Simplifying:
-\begin{align}
-2x^2 + 2y^2 - 5x + 2 = 0\\
-\left\lVert
-\begin{pmatrix} x \\ y \end{pmatrix}
--
-\begin{pmatrix} \tfrac{5}{4} \\ 0 \end{pmatrix}
-\right\lVert
-= \sqrt{\tfrac{21}{4}}
+\frac{\| \vec{PF_1} \|}{\| \vec{PF_2} \|} = \frac{1}{3}\\
+\frac{\sqrt{(\vec{P}-\vec{F_1})^\top (\vec{P}-\vec{F_1})}}{\sqrt{(\vec{P}-\vec{F_2})^\top (\vec{P}-\vec{F_2})}} = \frac{1}{3}
 \end{align}
 \end{frame}
 \begin{frame}
-On comparing the equation with general form:-
+Squaring on both sides
 \begin{align}
-||P - C|| = r\\
+9 (\vec{P}-\vec{F_1})^\top (\vec{P}-\vec{F_1}) = (\vec{P}-\vec{F_2})^\top (\vec{P}-\vec{F_2})\\
+9 (\vec{P^\top} \vec{P} - \vec{P^\top} \vec{F_1} - \vec{F_1^\top} \vec{P} + \vec{F_1^\top} \vec{F_1}) = \vec{P^\top} \vec{P} - \vec{P^\top} \vec{F_2} - \vec{F_2^\top} \vec{P} + \vec{F_2^\top} \vec{F_2}
+\end{align}
+\begin{align}
+\text{as } \vec{P^\top} \vec{F_1} = \vec{F_1}^\top \vec{P} \\
+\text{and } \vec{P^\top} \vec{F_2} = \vec{F_2^\top} \vec{P}
+\end{align}
+\begin{align}
+9 (\vec{P^\top} \vec{P} - 2\vec{P^\top} \vec{F_1} + \vec{F_1^\top} \vec{F_1}) = \vec{P^\top} \vec{P} - 2\vec{P^\top} \vec{F_2} + \vec{F_2^\top} \vec{F_2}\\
+8 \vec{P^\top} \vec{P} - 2\vec{P^\top} (9\vec{F_1}-\vec{F_2}) +9\vec{F_1^\top} \vec{F_1} - \vec{F_2^\top} \vec{F_2} = 0\\
+\vec{P^\top} \vec{P} - \frac{1}{4} \vec{P^\top} (9\vec{F_1}-\vec{F_2}) + \frac{9}{8} \vec{F_1^\top} \vec{F_1} - \frac{1}{8} \vec{F_2^\top} \vec{F_2} = 0
+\end{align}
+\end{frame}
+\begin{frame}
+This can be compared with general equation of circle :
+\begin{align}
+||\vec{P} - \vec{C}|| = r\\
+\end{align}
 \text{
 where ,}
 \text{
-P = any point on the circle}\\
-\text{C = Center of circle}\\
+$\vec{P}$ = any point on the circle}\\
+\text{$\vec{C}$ = Center of circle}\\
 \text{
-r = radius of circle}\\
-\text{
-Center of circle =  } (\frac{5}{4}, 0)
+r = radius of circle}
+\end{frame}
+\begin{frame}
+\begin{align}
+(\vec{P}-\vec{C})^\top(\vec{P}-\vec{C}) = r^2\\
+\vec{P}^\top\vec{P} -2\vec{P}^\top\vec{C}+\vec{C}^\top\vec{C}=r^2
 \end{align}
-Hence, the circumcenter of the triangle is $(\frac{5}{4}, 0)$
+Substituting $\Vec{P}$, $\vec{F_1}$ and $\vec{F_2}$\\
+Center of circle =  $\left(\frac{5}{4}, 0\right)$
+
+Hence, the circumcenter of the triangle is $\left(\frac{5}{4}, 0\right)$
 \end{frame}
 
 

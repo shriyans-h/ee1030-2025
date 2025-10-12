@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  28 SEP 2025 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  2 OCT 2025 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2135,17 +2135,21 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\ts1txr
 .fd
 File: ts1txr.fd 2000/12/15 v3.1
-) (tables/tables.tex)
-<figs/graph9.png, id=30, 722.7pt x 578.16pt>
+) (tables/tables.tex) [1{C:/Users/Madhuri beeram/AppData/Local/MiKTeX/fonts/map
+/pdftex/pdftex.map}{C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts
+/enc/dvips/base/8r.enc}
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 103--111
+
+ []
+
+<figs/graph9.png, id=56, 722.7pt x 578.16pt>
 File: figs/graph9.png Graphic file (type png)
 <use figs/graph9.png>
-Package pdftex.def Info: figs/graph9.png  used on input line 112.
+Package pdftex.def Info: figs/graph9.png  used on input line 121.
 (pdftex.def)             Requested size: 309.56822pt x 247.65117pt.
- [1{C:/Users/Madhuri beeram/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C
-:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.en
-c}
-
-] [2 <./figs/graph9.png>] (main.aux)
+[2 <./figs/graph9.png>] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2164,13 +2168,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 54516 strings out of 474486
- 1314677 string characters out of 5739471
- 1951542 words of memory out of 5000000
+ 54518 strings out of 474486
+ 1314716 string characters out of 5739471
+ 1952542 words of memory out of 5000000
  75961 multiletter control sequences out of 15000+600000
- 624633 words of font info for 171 fonts, out of 8000000 for 9000
+ 623257 words of font info for 169 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,16n,109p,1196b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,16n,109p,1196b,1035s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/txf
 onts/rtxmi.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/txfonts/rtxr.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKT
@@ -2179,9 +2183,10 @@ rograms/MiKTeX/fonts/type1/public/txfonts/txsy.pfb><C:/Users/Madhuri beeram/App
 Data/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Madhuri b
 eeram/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/
 Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 102455 bytes).
+
+Output written on main.pdf (2 pages, 102341 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

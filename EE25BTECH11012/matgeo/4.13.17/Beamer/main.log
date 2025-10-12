@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  28 SEP 2025 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.29)  2 OCT 2025 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2100,6 +2100,11 @@ LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
 
 ] [5
 
+] [6
+
+]
+[7
+
 ]
 \openout4 = `main.vrb'.
 
@@ -2109,7 +2114,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [6
+)) [8
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm
 tt.enc}]
@@ -2121,20 +2126,10 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 
 (C:\Users\Madhuri beeram\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [7
+)) [9
 
 {C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts
 1.enc}]
-\openout4 = `main.vrb'.
-
- (main.vrb) [8
-
-]
-\openout4 = `main.vrb'.
-
- (main.vrb) [9
-
-]
 \openout4 = `main.vrb'.
 
  (main.vrb) [10
@@ -2147,8 +2142,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
-
-(main.vrb) [12
+ (main.vrb) [12
 
 ]
 \openout4 = `main.vrb'.
@@ -2158,7 +2152,8 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb) [14
+
+(main.vrb) [14
 
 ]
 \openout4 = `main.vrb'.
@@ -2168,8 +2163,7 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb)
-[16
+ (main.vrb) [16
 
 ]
 \openout4 = `main.vrb'.
@@ -2179,7 +2173,8 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]
 \openout4 = `main.vrb'.
 
- (main.vrb) [18
+ (main.vrb)
+[18
 
 ]
 \openout4 = `main.vrb'.
@@ -2187,12 +2182,22 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
  (main.vrb) [19
 
 ]
-<graph9.png, id=571, 722.7pt x 578.16pt>
+\openout4 = `main.vrb'.
+
+ (main.vrb) [20
+
+]
+\openout4 = `main.vrb'.
+
+ (main.vrb) [21
+
+]
+<graph9.png, id=625, 722.7pt x 578.16pt>
 File: graph9.png Graphic file (type png)
 <use graph9.png>
-Package pdftex.def Info: graph9.png  used on input line 371.
+Package pdftex.def Info: graph9.png  used on input line 383.
 (pdftex.def)             Requested size: 256.72147pt x 205.37614pt.
- [20
+ [22
 
  <./graph9.png>]
 \tf@nav=\write7
@@ -2224,13 +2229,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 59721 strings out of 474486
- 1466568 string characters out of 5739471
+ 59725 strings out of 474486
+ 1466606 string characters out of 5739471
  2533084 words of memory out of 5000000
  80954 multiletter control sequences out of 15000+600000
  599736 words of font info for 78 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 128i,17n,123p,1174b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,1174b,1476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmex10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmmi10.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/font
@@ -2239,13 +2244,13 @@ KTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Madhuri beeram/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Madhuri beeram/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Madhuri beer
 am/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Ma
-dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso8.pfb><C:
-/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy1
-0.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmtt10.pfb>
-Output written on main.pdf (20 pages, 340115 bytes).
+dhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:
+/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
+.pfb><C:/Users/Madhuri beeram/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmtt10.pfb>
+Output written on main.pdf (22 pages, 339240 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
