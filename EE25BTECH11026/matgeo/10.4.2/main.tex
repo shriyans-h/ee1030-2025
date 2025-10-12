@@ -49,7 +49,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{12.872}
+\title{10.4.2}
 \author{EE25BTECH11026-Harsha}
  \maketitle
 % \newpage
@@ -66,52 +66,67 @@
 \renewcommand{\thetable}{\theenumi}
 
 \textbf{Question}:\\
-Let $\vec{A}=\myvec{1&&1\\1&&3\\-2&&-3}$ and $\vec{b}=\myvec{b_1\\b_2\\b_3}$. For $\vec{A}\vec{x}=\vec{b}$ to be solvable, which one of the following options is the correct condition on $b_1,b_2,\,and\,b_3$.
-\begin{enumerate}
-\begin{multicols}{2}
-    \item $b_1+b_2+b_3=1$
-    \item $3b_1+b_2+2b_3=0$
-    \item $b_1+3b_2+b_3=2$
-    \item $b_1+b_2+b_3=2$
-\end{multicols}
-\end{enumerate}
-
+Find the equations of tangent and normal to the curve $y=\frac{x-7}{\brak{x-2}\brak{x-3}}$ at the point where it cuts the X axis.\\
 \solution \\
 Let us solve the given question theoretically and then verify the solution computationally.\\
 \\
-Given,
+It is given that the tangents and normal are drawn at the point where the curve intersects the X axis i.e, at $\vec{P}=\myvec{7\\0}$ 
+Let the equations of tangent be,
 \begin{align}
-    \vec{A}\vec{x}=\vec{b} \label{eq:1}
+    \vec{n_1}^{\top}\vec{x}=c_1 \label{eq:1}
 \end{align}
-Multiplying $\vec{A}^{\top}$ on both sides,
+And equation of normal be,
 \begin{align}
-    \myvec{1&&1&&-2\\1&&3&&-3}\myvec{1&&1\\1&&3\\-2&&-3}\vec{x}=\myvec{1&&1&&-2\\1&&3&&-3}\myvec{b_1\\b_2\\b_3}
+    \vec{n_2}^{\top}\vec{x}=c_2 \label{eq:2}
 \end{align}
+To solve for their direction vectors, we can use he Jacobian technique.
+It states that,
 \begin{align}
-    \implies \myvec{6&&10\\10&&19}\vec{x}=\myvec{b_1+b_2-2b_3\\b_1+3b_2-3b_3}
+    \vec{n}=\myvec{\frac{\partial{F}}{\partial{x}}\\\frac{\partial{F}}{\partial{y}}}_{\text{at point of tangency}}
 \end{align}
-Forming the augmented matrix,
+where,
+\begin{align*}
+    \vec{n}:\text{Direction vector of tangent}\\
+    \vec{F(x,y)}:\text{Function of the curve}
+\end{align*}
+Equation of the curve can be modified and written as,
 \begin{align}
-    \augvec{2}{1}{6&10&b_1+b_2-2b_3\\10&19&b_1+3b_2-3b_3}
-    \xleftrightarrow{\, R_2 \gets R_2-\frac{5}{3}R_1}
-    \augvec{2}{1}{6&10&b_1+b_2-2b_3\\0&\frac{7}{3}&-\frac{2}{3}b_1+\frac{4}{3}b_2+\frac{1}{3}b_3}
-    \xleftrightarrow[\, R_1 \gets R_1-10R_2]{\, R_2 \gets \frac{3}{7}R_2}
-\end{align}
-\begin{align}
-    \augvec{2}{1}{6&0&\frac{27}{7}b_1-\frac{33}{7}b_2-\frac{24}{7}b_3\\0&1&-\frac{2}{7}b_1+\frac{4}{7}b_2+\frac{1}{7}b_3}
-    \xleftrightarrow{\, R_1 \gets \frac{1}{6}R_1}
-    \augvec{2}{1}{1&0&\frac{9}{14}b_1-\frac{11}{14}b_2-\frac{4}{7}b_3\\0&1&-\frac{2}{7}b_1+\frac{4}{7}b_2+\frac{1}{7}b_3}
-\end{align}
-\begin{align}
-    \therefore \vec{x}=\myvec{x_1\\x_2}=\myvec{\frac{9}{14}b_1-\frac{11}{14}b_2-\frac{4}{7}b_3\\-\frac{2}{7}b_1+\frac{4}{7}b_2+\frac{1}{7}b_3} 
-\end{align}
-From ~\eqref{eq:1},
-\begin{align}
-    x_1+x_2=b_1 \Rightarrow \; \frac{9}{14}b_1-\frac{11}{14}b_2-\frac{4}{7}b_3\, +\, \brak{-\frac{2}{7}b_1+\frac{4}{7}b_2+\frac{1}{7}b_3} =b_1
+    yx^2-5xy+6y-x+7=0
 \end{align}
 \begin{align}
-    \therefore 3b_1+b_2+2b_3=0 
+    \implies \vec{n}=\myvec{2xy-5y-1\\x^2-5x+6}
+\end{align}
+Substituting the point $\vec{P}$,
+\begin{align}
+    \therefore \vec{n_1}=\myvec{-1\\20} \label{eq:3}
+\end{align}
+\begin{align}
+    \implies \vec{n_2}=\myvec{20\\1} \label{eq:4}
+\end{align}
+\newpage
+\vspace*{0.25cm}
+Substituing ~\eqref{eq:3} and ~\eqref{eq:4} in ~\eqref{eq:1} and ~\eqref{eq:2} respectively yields,
+\begin{align}
+    \myvec{-1&&20}\vec{x}=c_1 \label{eq:5} \\
+    \myvec{20&&1}\vec{x}=c_2 \label{eq:6}
+\end{align}
+Substituting $\vec{P}$ in ~\eqref{eq:5} and ~\eqref{eq:6},
+\begin{align}
+    \implies c_1=-7 \quad and \quad c_2=140
+\end{align}
+\begin{align}
+    \therefore \text{Equation of tangent:} \myvec{-1&&20}\vec{x}=-7
+\end{align}
+\begin{align}
+    \therefore \text{Equation of normal:} \myvec{20&&1}\vec{x}=140
 \end{align}
 
+From the figure, it is clearly verified that the theoretical solution matches with the computational solution.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/Figure_1.png}
+    \label{fig:1}
+\end{figure}
 
 \end{document}
