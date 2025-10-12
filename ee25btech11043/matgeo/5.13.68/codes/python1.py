@@ -2,7 +2,7 @@ import ctypes
 import numpy as np
 
 # Load the shared library
-lib_code = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code13.so")
+lib_code = ctypes.CDLL("./code13.so")
 
 # --- Part 1: Find k for non-trivial solution ---
 
