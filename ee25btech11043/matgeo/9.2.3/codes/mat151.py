@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
 # Load the shared library
-lib_area = ctypes.CDLL("/Users/nishidkhandagre/matgeo/venv/bin/code15.so")
+lib_area = ctypes.CDLL("./code15.so")
 
 # Define the argument types and return type for the C function
 lib_area.calculate_integral.argtypes = [
