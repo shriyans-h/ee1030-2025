@@ -98,16 +98,28 @@ Let $\vec{O} = \{\vec{P} : \vec{P} \text{ is a } 3 \times 3 \text{ real matrix w
 \begin{frame}{Solution}
 Let $\vec{v}$ be the eigenvector corresponding to the eigenvalue $\lambda$.
 \begin{align}
-\vec{P}\vec{v} = \lambda\vec{v}
+\vec{P}\vec{v} = \lambda\vec{v} \label{eqq}
 \end{align}
-Since orthogonal transformations preserve the length of vectors  ($\abs{\vec{P}} = 1$)
+Orthogonal transformations preserve the length of vectors  ($\abs{\vec{P}} = 1$)
 \begin{align}
 \norm{\vec{P}\vec{v}}=\norm{\vec{v}} \label{eq1}
 \end{align}
-
+This can be proved in this way:
+\begin{align}
+\norm{\vec{P}\vec{v}}^2 = \brak{\vec{P}\vec{v}}^\top\brak{\vec{P}\vec{v}}=\vec{v}^\top\vec{P}^\top\vec{P}\vec{v}
+\end{align}
+Since $\vec{P}^\top \vec{P} = \vec{I}$
+\begin{align}
+\norm{\vec{P}\vec{v}}^2 = \vec{v}^\top\vec{v} = \norm{\vec{v}}^2
+\end{align}
+\begin{align}
+\implies \norm{\vec{P}\vec{v}} = \norm{\vec{v}}
+\end{align}
+From \eqref{eqq},
 \begin{align}
 \norm{\vec{P}\vec{v}} = \abs{\lambda}\norm{\vec{v}} \label{eq2}
 \end{align}
+
 
 \end{frame}
 
@@ -121,7 +133,8 @@ Using the equations \eqref{eq1} and \eqref{eq2},
 \end{align}
 Thus, $\abs{\lambda} = 1$
 
-Eigenvalues can be either -1 or 1 or both. \\
+So, eigenvalue satisfies the condition that $\abs{\lambda}=1$\\
+
 
 Thus, options (c) and (d) are correct. \\ \\ \\
 \end{frame}
