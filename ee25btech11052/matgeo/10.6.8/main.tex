@@ -48,145 +48,167 @@
 	\textbf{Solution}\\
 	Let the center of the circle be at origin and point P be at distance 6 from center along x-axis.
 	\begin{align}
-		O &= \myvec{0\\0}\\
-		P &= \myvec{6\\0}
+		\vec{O} &= \myvec{0\\0}\\
+		\vec{h} &= \myvec{6\\0}
 	\end{align}
-	The equation of the circle $x^2 + y^2 = 16$ can be written as:
+	
+	The equation of the circle $x^2 + y^2 = 16$ can be written in the general conic form (8.1.2.1):
 	\begin{align}
-		\vec{x}^\top \vec{x} - 16 &= 0
+		\vec{x}^\top \vec{V}\vec{x} + 2\vec{u}^\top\vec{x} + f &= 0
 	\end{align}
+	
 	The parameters of the circle are:
-	\begin{equation}
-		\vec{V} = \vec{I}, \quad \vec{u} = \vec{0}, \quad f = -16
-	\end{equation}
-	
-	Let the point of contact be $\vec{q}$ and
 	\begin{align}
-		\vec{q}^\top\vec{q} = 16
+		\vec{V} &= \vec{I} = \myvec{1 & 0\\0 & 1}\\
+		\vec{u} &= \myvec{0\\0}\\
+		f &= -16
 	\end{align}
 	
-	From the condition of tangency we get:
+	The center and radius of the circle are:
 	\begin{align}
-		\vec{q}^\top(\vec{q} - P) &= 0\\
-		P^\top\vec{q} &= \vec{q}^\top\vec{q}\\
-		P^\top\vec{q} &= 16
+		\vec{c} &= -\vec{u} = \myvec{0\\0}\\
+		r &= \sqrt{\norm{\vec{u}}^2 - f} = \sqrt{0 - (-16)} = 4
 	\end{align}
 	
-	Let the tangent equation passing through $P$ be:
+	\textbf{Finding Direction Vectors using Eigenvalue Decomposition:}\\
+	A point $\vec{h}$ lies on a tangent to the conic if it satisfies formula (10.1.10.1):
 	\begin{align}
-		\vec{x} = P + k\vec{m}
-	\end{align}
-	where $\vec{m}$ is the direction vector of the tangent.
-	
-	Substituting into the circle equation:
-	\begin{align}
-		g(\vec{x}) &= \vec{x}^\top\vec{x} - 16\\
-		(P + k\vec{m})^\top(P + k\vec{m}) - 16 &= 0\\
-		k^2\vec{m}^\top\vec{m} + 2kP^\top\vec{m} + P^\top P - 16 &= 0\\
-		k^2\vec{m}^\top\vec{m} + 2kP^\top\vec{m} + g(P) &= 0
+		\vec{m}^\top\brak{\brak{\vec{V}\vec{h} + \vec{u}}\brak{\vec{V}\vec{h} + \vec{u}}^\top - \vec{V}g(\vec{h})}\vec{m} = 0
 	\end{align}
 	
-	As the tangent intersects the conic at only one point (the point of contact), the discriminant for the quadratic in $k$ is equal to 0:
+	First, calculate $g(\vec{h})$:
 	\begin{align}
-		4(P^\top\vec{m})^2 - 4\vec{m}^\top\vec{m} \cdot g(P) &= 0\\
-		(P^\top\vec{m})^2 - g(P)\vec{m}^\top\vec{m} &= 0
+		g(\vec{h}) &= \vec{h}^\top\vec{V}\vec{h} + 2\vec{u}^\top\vec{h} + f\\
+		&= \myvec{6 & 0}\myvec{1 & 0\\0 & 1}\myvec{6\\0} + 0 - 16\\
+		&= 36 - 16 = 20
 	\end{align}
 	
-	Since $P = \myvec{6\\0}$:
+	Calculate $\vec{V}\vec{h} + \vec{u}$:
 	\begin{align}
-		g(P) = P^\top P - 16 = 36 - 16 = 20
+		\vec{V}\vec{h} + \vec{u} &= \myvec{1 & 0\\0 & 1}\myvec{6\\0} + \myvec{0\\0} = \myvec{6\\0}
 	\end{align}
 	
-	The discriminant condition becomes:
+	Define matrix $\vec{Q}$:
 	\begin{align}
-		\vec{m}^\top Q\vec{m} = 0
-	\end{align}
-	where
-	\begin{align}
-		Q = \myvec{-(P^\top P) & 0\\0 & g(P)} = \myvec{-36 & 0\\0 & 20}
+		\vec{Q} &= \brak{\vec{V}\vec{h} + \vec{u}}\brak{\vec{V}\vec{h} + \vec{u}}^\top - \vec{V}g(\vec{h})\\
+		&= \myvec{6\\0}\myvec{6 & 0} - 20\myvec{1 & 0\\0 & 1}\\
+		&= \myvec{36 & 0\\0 & 0} - \myvec{20 & 0\\0 & 20}\\
+		&= \myvec{16 & 0\\0 & -20}
 	\end{align}
 	
 	\textbf{Eigenvalue Decomposition of Q:}\\
-	As $Q$ is a diagonal matrix, the eigenvalues are the diagonal entries:
-	\begin{equation}
-		\lambda_1 = -36, \quad \lambda_2 = 20
-	\end{equation}
-	
-	Applying eigenvalue decomposition for $Q$:
+	The matrix $\vec{Q}$ is diagonal, so the eigenvalues are:
 	\begin{align}
-		Q = XDX^\top
-	\end{align}
-	where
-	\begin{align}
-		D = \myvec{-36 & 0\\0 & 20}
+		\lambda_1 &= 16\\
+		\lambda_2 &= -20
 	\end{align}
 	
-	$X$ is an orthogonal matrix whose columns are the corresponding normalized eigenvectors of $Q$. As $Q$ is a diagonal matrix:
-	\begin{equation}
-		X = \vec{I}
-	\end{equation}
-	
-	From $\vec{m}^\top Q\vec{m} = 0$:
+	The eigenvector matrix is:
 	\begin{align}
-		\vec{m}^\top XDX^\top\vec{m} &= 0
+		\vec{P} = \vec{I} = \myvec{1 & 0\\0 & 1}
 	\end{align}
 	
-	Let $\vec{z} = X^\top\vec{m}$. Then:
+	From the condition $\vec{m}^\top\vec{Q}\vec{m} = 0$:
 	\begin{align}
-		\vec{z}^\top D\vec{z} &= 0\\
-		\myvec{z_1 & z_2}\myvec{-36 & 0\\0 & 20}\myvec{z_1\\z_2} &= 0\\
-		-36z_1^2 + 20z_2^2 &= 0\\
-		\frac{z_1^2}{z_2^2} &= \frac{20}{36} = \frac{5}{9}\\
-		\frac{z_1}{z_2} &= \pm\frac{\sqrt{5}}{3}
+		16m_1^2 - 20m_2^2 &= 0\\
+		\frac{m_1^2}{m_2^2} &= \frac{20}{16} = \frac{5}{4}\\
+		\frac{m_1}{m_2} &= \pm\frac{\sqrt{5}}{2}
 	\end{align}
 	
-	Solving for $\vec{m}$:
+	The two direction vectors are:
 	\begin{align}
-		\vec{I}\vec{m} &= \vec{z}\\
-		\vec{m} &= \myvec{z_1\\z_2}
+		\vec{m}_1 &= \myvec{\sqrt{5}\\2}\\
+		\vec{m}_2 &= \myvec{\sqrt{5}\\-2}
 	\end{align}
 	
-	From $z_1/z_2 = \pm\sqrt{5}/3$, the direction vectors for the tangents can be expressed as:
+	The corresponding normal vectors (perpendicular to direction vectors):
 	\begin{align}
-		\vec{m}_1 = \myvec{\sqrt{5}\\3}, \quad \vec{m}_2 = \myvec{\sqrt{5}\\-3}
+		\vec{n}_1 &= \myvec{-2\\\sqrt{5}} = -\myvec{2\\-\sqrt{5}}\\
+		\vec{n}_2 &= \myvec{2\\\sqrt{5}}
 	\end{align}
 	
-	\textbf{Finding Points of Contact:}\\
-	Using $P^\top\vec{q} = 16$:
+	Choosing proper signs:
 	\begin{align}
-		\myvec{6 & 0}\myvec{q_1\\q_2} &= 16\\
-		6q_1 &= 16\\
-		q_1 &= \frac{8}{3}
+		\vec{n}_1 &= \myvec{2\\-\sqrt{5}}\\
+		\vec{n}_2 &= \myvec{2\\\sqrt{5}}
 	\end{align}
 	
-	From $q_1^2 + q_2^2 = 16$:
+	\textbf{Finding Points of Contact using Formula (10.1.8.1):}\\
+	For a circle, the points of contact are given by:
 	\begin{align}
-		\brak{\frac{8}{3}}^2 + q_2^2 &= 16\\
-		q_2^2 &= 16 - \frac{64}{9} = \frac{80}{9}\\
-		q_2 &= \pm\frac{4\sqrt{5}}{3}
+		\vec{q}_{ij} = \pm r\frac{\vec{n}_j}{\norm{\vec{n}_j}} - \vec{u}, \quad i,j = 1,2
+	\end{align}
+	
+	For $\vec{n}_1 = \myvec{2\\-\sqrt{5}}$:
+	\begin{align}
+		\norm{\vec{n}_1} &= \sqrt{4 + 5} = 3\\
+		\vec{q}_1 &= r\frac{\vec{n}_1}{\norm{\vec{n}_1}} - \vec{u}\\
+		&= 4 \cdot \frac{1}{3}\myvec{2\\-\sqrt{5}} - \myvec{0\\0}\\
+		&= \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
+	\end{align}
+	
+	For $\vec{n}_2 = \myvec{2\\\sqrt{5}}$:
+	\begin{align}
+		\norm{\vec{n}_2} &= 3\\
+		\vec{q}_2 &= 4 \cdot \frac{1}{3}\myvec{2\\\sqrt{5}} - \myvec{0\\0}\\
+		&= \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}
 	\end{align}
 	
 	Therefore, the points of contact are:
 	\begin{align}
-		\vec{q}_1 = \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}, \quad \vec{q}_2 = \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}
+		\vec{q}_1 &= \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}\\
+		\vec{q}_2 &= \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}
 	\end{align}
 	
-	\textbf{Equations of Tangents:}\\
-	The tangent at $\vec{q}$ is given by: $\vec{q}^\top\vec{x} = 16$.\\
-	\textbf{Tangent 1} at $\vec{q}_1$:
+	\textbf{Verification:}\\
+	Check if points lie on circle:
 	\begin{align}
-		\myvec{\frac{8}{3} & \frac{4\sqrt{5}}{3}}\myvec{x\\y} &= 16\\
-		\frac{8}{3}x + \frac{4\sqrt{5}}{3}y &= 16\\
-		2x + \sqrt{5}y &= 12
-	\end{align}	
-	\textbf{Tangent 2} at $\vec{q}_2$:
+		\norm{\vec{q}_1}^2 &= \brak{\frac{8}{3}}^2 + \brak{-\frac{4\sqrt{5}}{3}}^2\\
+		&= \frac{64}{9} + \frac{80}{9} = \frac{144}{9} = 16 \quad \checkmark
+	\end{align}
+	
+	Check if tangent from $\vec{h}$:
+	\begin{align}
+		\brak{\vec{h} - \vec{q}_1}^\top\vec{q}_1 &= \myvec{6 - \frac{8}{3} & 0 + \frac{4\sqrt{5}}{3}}\myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}\\
+		&= \frac{10}{3} \cdot \frac{8}{3} + \frac{4\sqrt{5}}{3} \cdot \brak{-\frac{4\sqrt{5}}{3}}\\
+		&= \frac{80}{9} - \frac{80}{9} = 0 \quad \checkmark
+	\end{align}
+	
+	\textbf{Equations of Tangents using Formula (10.1.2.1):}\\
+	The equation of tangent at point $\vec{q}$ is:
+	\begin{align}
+		\brak{\vec{V}\vec{q} + \vec{u}}^\top\vec{x} + \vec{u}^\top\vec{q} + f = 0
+	\end{align}
+	
+	For our circle with $\vec{V} = \vec{I}$ and $\vec{u} = \vec{0}$:
+	\begin{align}
+		\vec{q}^\top\vec{x} + f = 0\\
+		\vec{q}^\top\vec{x} = 16
+	\end{align}
+	
+	\textbf{Tangent 1} at $\vec{q}_1 = \myvec{\frac{8}{3}\\-\frac{4\sqrt{5}}{3}}$:
 	\begin{align}
 		\myvec{\frac{8}{3} & -\frac{4\sqrt{5}}{3}}\myvec{x\\y} &= 16\\
+		\frac{8}{3}x - \frac{4\sqrt{5}}{3}y &= 16\\
+		8x - 4\sqrt{5}y &= 48\\
 		2x - \sqrt{5}y &= 12
 	\end{align}
+	
+	\textbf{Tangent 2} at $\vec{q}_2 = \myvec{\frac{8}{3}\\\frac{4\sqrt{5}}{3}}$:
+	\begin{align}
+		\myvec{\frac{8}{3} & \frac{4\sqrt{5}}{3}}\myvec{x\\y} &= 16\\
+		2x + \sqrt{5}y &= 12
+	\end{align}
+	
 	The equations of the pair of tangents are:
 	\begin{align}
-		\boxed{2x + \sqrt{5}y = 12 \quad \text{and} \quad 2x - \sqrt{5}y = 12}
+		\boxed{2x - \sqrt{5}y = 12 \quad \text{and} \quad 2x + \sqrt{5}y = 12}
+	\end{align}
+	
+	\textbf{Verification - Tangents pass through P:}
+	\begin{align}
+		2(6) - \sqrt{5}(0) &= 12 \quad \checkmark\\
+		2(6) + \sqrt{5}(0) &= 12 \quad \checkmark
 	\end{align}
 	
 	\begin{figure}[H]
